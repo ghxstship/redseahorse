@@ -59,3 +59,13 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
   .gx-flap.flipping{animation:none}
   .gx-loading img{animation:none}
 }
+
+/* ---- MOBILE: defensive overflow + wrap eyebrows -------------------------- */
+@media (max-width: 48rem) {
+  html, body { overflow-x: clip; max-width: 100vw; }
+  /* The kit's eyebrows force nowrap on long vertical-name lists; allow wrap on phones. */
+  .eyebrow { white-space: normal !important; flex-wrap: wrap !important; }
+  .site-foot .foot-ports { white-space: normal !important; flex-wrap: wrap !important; }
+  /* The marquee container already clips; harden in case any page omits overflow:hidden. */
+  .trust .marquee, .trust .track { max-width: 100vw; }
+}

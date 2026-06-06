@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Gallery \u2014 Photo & Video \u2014 GHXSTSHIP",
+  title: "The Gallery \u2014 Photo & Video",
   description: "The GHXSTSHIP Gallery \u2014 photography and video from festivals, concerts and tours, brand activations, immersive experiences, and sporting events produced by GHXSTSHIP.",
   alternates: { canonical: "https://ghxstship.tours/gallery" },
 };

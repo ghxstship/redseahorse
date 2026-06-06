@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Start a Project \u2014 Contact \u2014 GHXSTSHIP",
+  title: "Start a Project \u2014 Contact",
   description: "Start an experiential production project with GHXSTSHIP \u2014 the general contractor, foreman, and Procore of experiential project management. Tell us the destination and we will build, crew, and launch it.",
   alternates: { canonical: "https://ghxstship.tours/contact" },
 };

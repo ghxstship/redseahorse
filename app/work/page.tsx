@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Selected Work \u2014 The Archives \u2014 GHXSTSHIP",
+  title: "Selected Work \u2014 The Archives",
   description: "The Archives are the GHXSTSHIP record of selected work \u2014 festivals, concerts and tours, brand activations, immersive experiences, and sporting events designed, built, crewed, and launched end to end.",
   alternates: { canonical: "https://ghxstship.tours/work/" },
 };
@@ -112,7 +112,7 @@ export default function Page() {
 <section className="pad"><div className="wrap">
   <div className="wgrid"><a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"/></div><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival &middot; Insomniac, Las Vegas &middot; 2025&ndash;26</p></div></a>
   <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy"/></div><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concerts &amp; Tours &middot; Club Space Miami &middot; 2026</p></div></a>
-  <Link href="/salvage-city-supper-club" className="wc"><div className="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop" alt="Salvage City Supper Club" loading="lazy"/></div><div className="body"><h3>Salvage City Supper Club</h3><p className="meta">Immersive &middot; Club Space Miami &middot; 2025</p></div></Link>
+  <Link href="/work/salvage-city-supper-club" className="wc"><div className="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop" alt="Salvage City Supper Club" loading="lazy"/></div><div className="body"><h3>Salvage City Supper Club</h3><p className="meta">Immersive &middot; Club Space Miami &middot; 2025</p></div></Link>
   <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Polymarket Grocery Store" loading="lazy"/></div><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation &middot; 2026</p></div></a>
   <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80&auto=format&fit=crop" alt="PATRÓN Cristalino x Becky G" loading="lazy"/></div><div className="body"><h3>PATR&Oacute;N Cristalino x Becky G</h3><p className="meta">Product Launch &middot; Los Angeles &middot; 2024</p></div></a>
   <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80&auto=format&fit=crop" alt="Heineken Turn 4 Nightclub" loading="lazy"/></div><div className="body"><h3>Heineken Turn 4 Nightclub</h3><p className="meta">Motorsports &middot; F1 Las Vegas &middot; 2024</p></div></a>

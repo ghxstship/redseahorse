@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What an Experiential General Contractor Does \u2014 GHXSTSHIP",
+  title: "What an Experiential General Contractor Does",
   description: "An experiential general contractor is one accountable partner that owns scope, schedule, budget, crew, and technology for a live experience \u2014 here is how the GC model works for experiential and entertainment production.",
   alternates: { canonical: "https://ghxstship.tours/resources/the-experiential-gc" },
 };
@@ -87,7 +87,7 @@ export default function Page() {
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/blog">Captain’s Log</Link> / <span style={{color: 'var(--brass)'}}>The Experiential GC</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/blog">Captain’s Log</Link> / <span style={{color: 'var(--brass)'}}>The Experiential GC</span></p></div>
 <main>
 <article className="pad"><div className="wrap">
   <p className="eyebrow">Field Notes</p>
@@ -105,7 +105,7 @@ export default function Page() {
     <p>The Procore gives the yard its instruments: ATLVS for production and resource management, COMPVSS for workforce and crew, and GVTEWAY for ticketing and fans &mdash; plus the integrations, installs, and analytics that keep the whole build coordinated and measurable.</p>
     <h2>Why it matters</h2>
     <p>For general contractors, venue operators, brands, and promoters, the result is one partner to hold accountable, one schedule to track, and one standard to hold &mdash; on time, on budget, beyond the scenes.</p>
-    <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', margin: '34px 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>
+    <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', margin: '34px 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/resources/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>
   </div>
 </div></article>
 </main>

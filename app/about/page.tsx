@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Story \u2014 GHXSTSHIP",
+  title: "The Story",
   description: "GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management \u2014 a full-service experiential production, operations, and technology company in Miami, Las Vegas, Chicago, New York, and Los Angeles.",
   alternates: { canonical: "https://ghxstship.tours/about" },
 };

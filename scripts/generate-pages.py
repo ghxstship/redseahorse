@@ -29,6 +29,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "ui_kits" / "website"
 APP = ROOT / "app"
 
+# Routes available to the site (populated in main from SRC tree). Used to
+# down-grade dangling `<a>` links to plain anchors that we can clean up later.
+VALID_ROUTES: set[str] = set()
+
 # Elements that must be emitted self-closed in JSX.
 VOID_ELEMENTS = {
     "area", "base", "br", "col", "embed", "hr", "img", "input",
@@ -50,8 +54,13 @@ def src_to_route(rel: Path) -> tuple[str, Path]:
     return url, sub
 
 
-def html_path_to_route(href: str) -> str | None:
-    """`destinations/foo.html` / `../index.html#x` -> Next.js route, or None."""
+def html_path_to_route(href: str, base_dir: tuple[str, ...] = ()) -> str | None:
+    """Resolve an in-kit href to a Next.js route.
+
+    `base_dir` is the source file's directory inside `ui_kits/website/` as a
+    tuple of path parts. A relative href like `apply.html` from
+    `careers/index.html` (base_dir=('careers',)) resolves to `/careers/apply`.
+    """
     if not href or href.startswith(("http://", "https://", "mailto:", "tel:", "javascript:")):
         return None
     if href.startswith("#"):
@@ -66,7 +75,8 @@ def html_path_to_route(href: str) -> str | None:
     if not rest:
         return None
 
-    segments: list[str] = []
+    # Start from base_dir, then walk the href's segments resolving `..` / `.`.
+    segments: list[str] = list(base_dir)
     for seg in rest.split("/"):
         if seg in ("", "."):
             continue
@@ -307,6 +317,9 @@ class EmitContext:
     inline_style_blocks: list[str] = field(default_factory=list)
     # id -> name (derived from label-for) for form fields, set per <form>.
     field_names: dict[str, str] = field(default_factory=dict)
+    # Source page's parent directory under ui_kits/website/, for resolving
+    # relative hrefs in `<a>` tags.
+    base_dir: tuple[str, ...] = ()
 
 
 def _slug_label(text: str) -> str:
@@ -410,8 +423,14 @@ def emit_attrs(tag: str, attrs: list[tuple[str, str | None]], *, internal_link: 
     return (" " + " ".join(parts)) if parts else ""
 
 
-def is_internal_anchor(attrs: list[tuple[str, str | None]]) -> tuple[bool, str | None]:
-    """Return (is_internal, route) for an <a> element."""
+def is_internal_anchor(attrs: list[tuple[str, str | None]], base_dir: tuple[str, ...]) -> tuple[bool, str | None]:
+    """Return (is_internal, route) for an <a> element.
+
+    A route is considered internal only if it maps to a page we actually
+    generate. A relative href that escapes the site (e.g. into the brand
+    kit) is *not* a valid internal link and is rejected so the caller can
+    drop or rewrite it.
+    """
     href = None
     for k, v in attrs:
         if k.lower() == "href":
@@ -420,11 +439,15 @@ def is_internal_anchor(attrs: list[tuple[str, str | None]]) -> tuple[bool, str |
     if not href:
         return False, None
     if href.startswith("/") and not href.startswith("//"):
-        return True, href
-    route = html_path_to_route(href)
-    if route is not None:
-        return True, route
-    return False, None
+        base = href.split("#", 1)[0].split("?", 1)[0]
+        return (base in VALID_ROUTES, href) if VALID_ROUTES else (True, href)
+    route = html_path_to_route(href, base_dir)
+    if route is None:
+        return False, None
+    base = route.split("#", 1)[0].split("?", 1)[0]
+    if VALID_ROUTES and base not in VALID_ROUTES:
+        return False, None
+    return True, route
 
 
 def emit_node(node: Node, ctx: EmitContext, depth: int = 0) -> str:
@@ -477,12 +500,21 @@ def emit_node(node: Node, ctx: EmitContext, depth: int = 0) -> str:
 
     # Map internal anchors to <Link>.
     if tag == "a":
-        internal, route = is_internal_anchor(node.attrs)
+        internal, route = is_internal_anchor(node.attrs, ctx.base_dir)
         if internal and route is not None:
             ctx.needs_link = True
             inner = "".join(emit_node(c, ctx, depth + 1) for c in node.children)
             attrs_str = emit_attrs(tag, node.attrs, internal_link=True)
             return f'<Link href="{route}"{attrs_str}>{inner}</Link>'
+        # Catch in-kit links that point at pages we don't ship (e.g. the
+        # internal brand kit's retail-kit.html). Drop the link element and
+        # render only its children so the page stays clean.
+        href_val = next((v for k, v in node.attrs if k.lower() == "href" and v), None)
+        if href_val and not href_val.startswith((
+            "http://", "https://", "mailto:", "tel:", "javascript:", "#",
+        )):
+            inner = "".join(emit_node(c, ctx, depth + 1) for c in node.children)
+            return f"<span>{inner}</span>"
 
     # <form>: collect field-name mappings then emit normally.
     if tag == "form":
@@ -557,6 +589,9 @@ def emit_page(src_rel: Path) -> None:
 
     title_m = TITLE_RE.search(head)
     title = html_lib.unescape(title_m.group(1).strip()) if title_m else None
+    if title:
+        # Strip trailing brand suffix; root layout's metadata template adds it.
+        title = re.sub(r"\s*[—\-|·]\s*G\s?H\s?X\s?S\s?T\s?S\s?H\s?I\s?P\s*$", "", title, flags=re.IGNORECASE).strip()
     meta = parse_meta(head)
     description = meta.get("description")
     keywords = meta.get("keywords")
@@ -565,7 +600,7 @@ def emit_page(src_rel: Path) -> None:
     if can_m:
         canonical = can_m.group(1)
 
-    ctx = EmitContext()
+    ctx = EmitContext(base_dir=tuple(src_rel.parent.parts))
 
     # Head: keep only <style> blocks (rendered inline in the page body) and
     # extract <script type="application/ld+json"> via emit_node's context side-effects.
@@ -649,7 +684,15 @@ def main() -> None:
     APP.mkdir(parents=True, exist_ok=True)
 
     html_files = sorted(SRC.rglob("*.html"))
-    print(f"Generating {len(html_files)} pages…")
+    # Build the route allow-list before emitting so emit_node can validate.
+    VALID_ROUTES.clear()
+    for f in html_files:
+        if f.name == "404.html":
+            continue
+        rel = f.relative_to(SRC)
+        url, _ = src_to_route(rel)
+        VALID_ROUTES.add(url)
+    print(f"Generating {len(html_files)} pages ({len(VALID_ROUTES)} routes)…")
     for f in html_files:
         emit_page(f.relative_to(SRC))
 

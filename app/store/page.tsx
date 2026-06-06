@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Museum \u2014 Merch & Gear \u2014 GHXSTSHIP",
+  title: "The Museum \u2014 Merch & Gear",
   description: "The GHXSTSHIP Ship's Store \u2014 branded apparel, prints, and gear from the experiential production company. Checkout runs on GVTEWAY.",
   alternates: { canonical: "https://ghxstship.tours/store" },
 };
@@ -105,7 +105,7 @@ export default function Page() {
   <p className="eyebrow">The Museum</p>
   <h1>Fly the <span className="pop">Colors.</span></h1>
   <p className="lede">Branded apparel and gear from the GHXSTSHIP yard across three lines &mdash; <span style={{color: 'var(--brass)'}}>Sitewear</span>, <span style={{color: 'var(--plasma)'}}>Streetwear</span>, and <span style={{color: 'var(--nebula)'}}>Performancewear</span>. Crew-grade goods, built to the same standard as the work. Checkout runs on GVTEWAY.</p>
-  <p style={{fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', margin: '16px 0 0'}}><Link href="/brand/retail-kit" style={{color: 'var(--brass)', textDecoration: 'none'}}>See the full retail kit &#8599;</Link></p>
+  <p style={{fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', margin: '16px 0 0'}}><span>See the full retail kit &#8599;</span></p>
 </div></section>
 <section className="pad"><div className="wrap">
   <div className="grid" id="grid">

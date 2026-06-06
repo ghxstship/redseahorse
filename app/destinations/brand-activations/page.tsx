@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brand Activations \u2014 GHXSTSHIP",
+  title: "Brand Activations",
   description: "GHXSTSHIP is a brand activation agency in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, agencies &amp; creative directors \u2014 experiential marketing, pop-ups &amp; brand environments that convert, via our 8-phase lifecycle.",
   alternates: { canonical: "https://ghxstship.tours/destinations/brand-activations" },
 };

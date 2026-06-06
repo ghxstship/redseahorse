@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TV, Film & Broadcast \u2014 GHXSTSHIP",
+  title: "TV, Film & Broadcast",
   description: "GHXSTSHIP is a broadcast &amp; film production company in Miami \u2014 Las Vegas, Chicago, NY, LA for networks, studios, streamers &amp; brands \u2014 live broadcast, content capture &amp; on-air activations, via our 8-phase lifecycle.",
   alternates: { canonical: "https://ghxstship.tours/destinations/tv-film-broadcast" },
 };

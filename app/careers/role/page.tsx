@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Production Manager \u2014 Careers \u2014 GHXSTSHIP",
+  title: "Production Manager \u2014 Careers",
   description: "Production Manager role at GHXSTSHIP \u2014 own on-site load-in, build, crew calls, and the day-of standard for experiential and entertainment productions. Miami, full-time.",
   alternates: { canonical: "https://ghxstship.tours/careers/role" },
 };
@@ -58,7 +58,7 @@ export default function Page() {
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/">Careers</Link> / <span style={{color: 'var(--brass)'}}>Production Manager</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/careers">Careers</Link> / <span style={{color: 'var(--brass)'}}>Production Manager</span></p></div>
 <main><section className="hero"><div className="wrap">
   <span className="badge">Production &middot; Full-time</span>
   <p className="eyebrow">Open Role</p>
@@ -77,7 +77,7 @@ export default function Page() {
     <ul><li>OSHA / safety certification</li><li>Experience across multiple verticals &mdash; festivals, activations, sporting</li><li>A network of trusted freelance crew</li></ul>
     <h2>About GHXSTSHIP</h2>
     <p>GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management &mdash; a full-service experiential production, operations, and technology company headquartered in Miami, with crews in Las Vegas, Chicago, New York, and Los Angeles. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
-    <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '24px'}}><Link href="/apply" className="gx-btn gx-btn--lg">Apply for This Role</Link><Link href="/" className="gx-btn gx-btn--ghost gx-btn--lg">All Open Roles</Link></div>
+    <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '24px'}}><Link href="/careers/apply" className="gx-btn gx-btn--lg">Apply for This Role</Link><Link href="/careers" className="gx-btn gx-btn--ghost gx-btn--lg">All Open Roles</Link></div>
   </div>
   <aside><div className="meta-card">
     <div className="r"><span className="k">Department</span><span className="v">Production</span></div>
@@ -85,7 +85,7 @@ export default function Page() {
     <div className="r"><span className="k">Location</span><span className="v">Miami, FL</span></div>
     <div className="r"><span className="k">Travel</span><span className="v">Frequent</span></div>
     <div className="r"><span className="k">Reports To</span><span className="v">Production Director</span></div>
-    <div style={{marginTop: '16px'}}><Link href="/apply" className="gx-btn gx-btn--sm" style={{width: '100%', justifyContent: 'center'}}>Apply Now</Link></div>
+    <div style={{marginTop: '16px'}}><Link href="/careers/apply" className="gx-btn gx-btn--sm" style={{width: '100%', justifyContent: 'center'}}>Apply Now</Link></div>
   </div></aside>
 </div></div></section></main><footer className="site-foot"><div className="wrap">
   <div className="foot-grid">
@@ -94,7 +94,7 @@ export default function Page() {
       <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
       <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div></div>
     <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link></nav>
-    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/">Careers</Link><Link href="/locations">Home Ports</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/careers">Careers</Link><Link href="/locations">Home Ports</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
     <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
   <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>

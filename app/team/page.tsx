@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Crew \u2014 Leadership & Team \u2014 GHXSTSHIP",
+  title: "The Crew \u2014 Leadership & Team",
   description: "Meet the GHXSTSHIP crew \u2014 the senior management team of executive producers, production directors, project managers, logistics and operations leads, and technical directors who deliver every experiential project.",
   alternates: { canonical: "https://ghxstship.tours/team" },
 };

@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sporting Events \u2014 GHXSTSHIP",
+  title: "Sporting Events",
   description: "GHXSTSHIP is a sporting event production company in Miami \u2014 Las Vegas, Chicago, NY, LA for leagues, teams, brands &amp; venues \u2014 stadium activations, fan experiences &amp; game-day production, via our 8-phase lifecycle.",
   alternates: { canonical: "https://ghxstship.tours/destinations/sporting-events" },
 };

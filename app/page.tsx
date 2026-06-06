@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiential Production & Operations Management \u2014 GHXSTSHIP",
+  title: "Experiential Production & Operations Management",
   description: "GHXSTSHIP is the general contractor and project management partner for experiential production and venue operations \u2014 managing scope, schedule, budget, crew, and technology for festivals, brand activations, immersive experiences, and live events.",
   keywords: ["experiential production management", "event general contractor", "production management company", "venue operations management", "event project management", "brand activation contractor", "festival production management", "live event operations"],
   alternates: { canonical: "https://ghxstship.tours/" },

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Captain\u2019s Log \u2014 Dispatches on Experiential Production \u2014 GHXSTSHIP",
+  title: "Captain\u2019s Log \u2014 Dispatches on Experiential Production",
   description: "The GHXSTSHIP Captain\u2019s Log \u2014 field notes on experiential production management, venue operations, event technology, and the 8-phase production lifecycle.",
   alternates: { canonical: "https://ghxstship.tours/resources/blog" },
 };
@@ -89,7 +89,7 @@ export default function Page() {
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/glossary">Resources</Link> / <span style={{color: 'var(--brass)'}}>Captain’s Log</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/glossary">Resources</Link> / <span style={{color: 'var(--brass)'}}>Captain’s Log</span></p></div>
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Log &middot; Dispatches</p>
@@ -99,7 +99,7 @@ export default function Page() {
 <section className="pad"><div className="wrap">
   <p className="eyebrow">Latest Dispatches</p>
   <h2 className="sec">From the Log.</h2>
-  <div className="bgrid"><Link href="/the-experiential-gc" className="bp"><p className="cat">Field Notes</p><h3>What an Experiential General Contractor Actually Does</h3><p>One accountable partner for scope, schedule, budget, crew, and tech — and why the GC model beats a vendor chain for live experiences.</p><p className="d">Jun 2026</p></Link>
+  <div className="bgrid"><Link href="/resources/the-experiential-gc" className="bp"><p className="cat">Field Notes</p><h3>What an Experiential General Contractor Actually Does</h3><p>One accountable partner for scope, schedule, budget, crew, and tech — and why the GC model beats a vendor chain for live experiences.</p><p className="d">Jun 2026</p></Link>
   <a className="bp" href="#"><p className="cat">Operations</p><h3>The 8-Phase Production Lifecycle, Explained</h3><p>Discovery to Close — how the Course keeps a build on schedule, on budget, and on standard.</p><p className="d">May 2026</p></a>
   <a className="bp" href="#"><p className="cat">Technology</p><h3>ATLVS, COMPVSS &amp; GVTEWAY: The Instruments</h3><p>How proprietary production, crew, and ticketing software coordinate an entire experiential build.</p><p className="d">May 2026</p></a>
   <a className="bp" href="#"><p className="cat">Venue Ops</p><h3>Running a Venue to One Standard</h3><p>Programming, staffing, compliance, and day-of operations across every date — the foreman&rsquo;s playbook.</p><p className="d">Apr 2026</p></a>

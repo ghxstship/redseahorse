@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Locations \u2014 Miami \u00b7 Las Vegas \u00b7 Chicago \u00b7 New York \u00b7 Los Angeles \u2014 GHXSTSHIP",
+  title: "Locations \u2014 Miami \u00b7 Las Vegas \u00b7 Chicago \u00b7 New York \u00b7 Los Angeles",
   description: "GHXSTSHIP is an experiential production company with offices in Miami (HQ), Las Vegas, Chicago, New York, and Los Angeles \u2014 producing festivals, brand activations, and immersive experiences nationwide.",
   alternates: { canonical: "https://ghxstship.tours/locations" },
 };

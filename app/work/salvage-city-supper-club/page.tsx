@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Salvage City Supper Club \u2014 Immersive Experience Case Study \u2014 GHXSTSHIP",
+  title: "Salvage City Supper Club \u2014 Immersive Experience Case Study",
   description: "How GHXSTSHIP designed, built, and ran Salvage City Supper Club \u2014 an immersive supper-club experience at Club Space, Miami. The challenge, the 8-phase approach, and the results.",
   alternates: { canonical: "https://ghxstship.tours/work/salvage-city-supper-club" },
 };

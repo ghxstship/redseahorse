@@ -3,7 +3,7 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Immersive Experiences \u2014 GHXSTSHIP",
+  title: "Immersive Experiences",
   description: "GHXSTSHIP is an immersive experience design studio in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, museums &amp; cultural institutions \u2014 narrative installations and worlds audiences step inside, via our 8-phase lifecycle.",
   alternates: { canonical: "https://ghxstship.tours/destinations/immersive-experiences" },
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiential Production Glossary \u2014 GHXSTSHIP",
+  title: "Experiential Production Glossary",
   description: "The definitive glossary of experiential production, operations, and event technology terms \u2014 by GHXSTSHIP. Plain-language definitions of festival production, the production lifecycle, load-in, run of show, and more.",
   alternates: { canonical: "https://ghxstship.tours/resources/glossary" },
 };
