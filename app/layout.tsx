@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <script src="/site-form.js" defer />
         <script src="/journey.js" defer />
+        <script src="/motion.js" defer />
       </head>
       <body>{children}</body>
     </html>
