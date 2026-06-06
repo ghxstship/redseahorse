@@ -1,0 +1,98 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Apply \u2014 Careers \u2014 GHXSTSHIP",
+  description: "Apply to join the GHXSTSHIP crew \u2014 production, operations, project, hospitality, and crew roles in experiential and entertainment production. Apprenticeships available.",
+  alternates: { canonical: "https://ghxstship.tours/careers/apply" },
+};
+
+const __html = `<style>*{box-sizing:border-box}html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .crumbs{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:20px 0 0}.crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
+  .eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 14px;display:flex;align-items:center;gap:10px}.eyebrow::before{content:"\\25C6";color:var(--nebula)}
+  .hero{padding:40px 0 44px;border-bottom:var(--stroke-2) solid var(--ink-3)}
+  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6.5vw,76px);line-height:.88;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 16px}h1 .pop{color:var(--brass)}
+  .lede{font-size:18px;line-height:1.6;color:var(--fg-on-dark-2);max-width:760px;margin:0}
+  .answer{font-size:19px;line-height:1.55;color:var(--fg-on-dark-1);max-width:820px;margin:0;font-weight:500}
+  .pad{padding:54px 0}h2.sec{font-family:var(--font-display);font-weight:900;font-size:clamp(28px,4vw,44px);line-height:.96;text-transform:uppercase;margin:0 0 14px}
+  .cta{padding:74px 0;text-align:center;border-top:var(--stroke-2) solid var(--ink-3)}.cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(36px,6vw,72px);line-height:.9;text-transform:uppercase;margin:0 0 22px}.cta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;padding:36px 0 0}@media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:560px){.frow{grid-template-columns:1fr}}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .field label{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-2)}
+  .field input,.field select,.field textarea{font-family:var(--font-body);font-size:15px;background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);color:var(--bone);padding:12px 14px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass)}
+  .field input[type=file]{padding:9px;cursor:pointer}
+  .rail .blk{margin-bottom:22px}.rail .lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 8px}
+  .rail ol{margin:0;padding-left:18px}.rail li,.rail p{font-size:14px;line-height:1.6;color:var(--fg-on-dark-2);margin:0 0 7px}
+/*__nf__*/
+  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:10px 0}
+  .nav-inner .brand{display:flex;align-items:center;gap:12px;text-decoration:none}.nav-inner .brand img{width:34px;height:34px;image-rendering:pixelated}
+  .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:21px;text-transform:uppercase;white-space:nowrap;color:var(--bone)}
+  .navlinks{display:flex;gap:17px;align-items:center}
+  .navlinks a{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
+  .navlinks a:hover{color:var(--brass)}.navlinks a.gx-btn{color:var(--on-brass)}
+  @media(max-width:1100px){.navlinks a:not(.gx-btn){display:none}}
+  .site-foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:46px 0 26px}
+  .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:30px}
+  @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
+  .site-foot .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:14px}
+  .site-foot .brand img{width:30px;height:30px;image-rendering:pixelated}
+  .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:18px;text-transform:uppercase;white-space:nowrap;color:var(--bone)}
+  .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:17px;line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 12px;max-width:22rem}
+  .site-foot .foot-ports{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 14px;display:flex;flex-wrap:nowrap;white-space:nowrap}
+  .site-foot .foot-ports span:not(:first-child)::before{content:"\\00b7";margin:0 7px;color:var(--fg-on-dark-3)}
+  @media(max-width:560px){.site-foot .foot-ports{flex-direction:column}.site-foot .foot-ports span:not(:first-child)::before{display:none}}
+  .site-foot .foot-social{display:flex;gap:14px}.site-foot .foot-social a{color:var(--fg-on-dark-2);font-size:20px;text-decoration:none}.site-foot .foot-social a:hover{color:var(--brass)}
+  .site-foot .foot-col h5{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 12px}
+  .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}.site-foot .foot-col a:hover{color:var(--bone)}
+  .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}</style>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
+  <nav class="navlinks" aria-label="Primary">
+    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
+    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+  </nav>
+</div></header>
+<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <a href="/">Careers</a> / <span style="color:var(--brass)">Apply</span></p></div>
+<main><section class="hero"><div class="wrap">
+  <p class="eyebrow">Apply</p>
+  <h1>Apply to the <span class="pop">Crew.</span></h1>
+  <p class="answer">Tell us who you are and what you&rsquo;ve built. Every application is read by a human on the crew &mdash; not just a bot.</p>
+</div></section>
+<section class="pad"><div class="wrap"><div class="cgrid">
+  <form onsubmit="return false">
+    <div class="frow"><div class="field"><label for="fn">First Name</label><input id="fn" type="text"></div><div class="field"><label for="ln">Last Name</label><input id="ln" type="text"></div></div>
+    <div class="frow"><div class="field"><label for="em">Email</label><input id="em" type="email"></div><div class="field"><label for="ph">Phone</label><input id="ph" type="tel"></div></div>
+    <div class="frow"><div class="field"><label for="ro">Role</label><select id="ro"><option>Production Manager</option><option>Project Coordinator</option><option>Logistics Manager</option><option>Technical Director</option><option>Production Crew</option><option>Production Assistant</option><option>Operations Director</option><option>Hospitality Manager</option><option>General Application</option></select></div><div class="field"><label for="lo">Based In</label><input id="lo" type="text" placeholder="City, State"></div></div>
+    <div class="field"><label for="pf">Portfolio / LinkedIn URL</label><input id="pf" type="url" placeholder="https://"></div>
+    <div class="field"><label for="rs">R&eacute;sum&eacute; / CV</label><input id="rs" type="file" accept=".pdf,.doc,.docx"></div>
+    <div class="field"><label for="cv">Why GHXSTSHIP?</label><textarea id="cv" rows="5" placeholder="Tell us what you want to build."></textarea></div>
+    <div class="field"><label style="display:flex;flex-direction:row;gap:9px;align-items:flex-start;font-family:var(--font-body);font-size:13px;letter-spacing:0;text-transform:none;color:var(--fg-on-dark-2)"><input type="checkbox" style="width:auto;margin-top:3px">I&rsquo;m authorized to work in the US and consent to GHXSTSHIP storing this application.</label></div>
+    <a class="gx-btn gx-btn--lg" href="#">Submit Application</a>
+  </form>
+  <aside class="rail">
+    <div class="blk"><p class="lbl">What Happens Next</p><ol><li>A human on the crew reviews your application.</li><li>If it&rsquo;s a fit, a 20-minute intro call.</li><li>A practical conversation with the department lead.</li><li>Reference check and offer.</li></ol></div>
+    <div class="blk"><p class="lbl">Apprenticeships</p><p>No experience? We train the next generation. Apply to Production Assistant and learn the ropes on real voyages.</p></div>
+    <div class="blk"><p class="lbl">Equal Opportunity</p><p>GHXSTSHIP is an equal-opportunity employer. We crew on merit, and we don&rsquo;t gatekeep talent.</p></div>
+  </aside>
+</div></div></section></main><footer class="site-foot"><div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand"><a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
+      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
+      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div></div>
+    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a></nav>
+    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/">Careers</a><a href="/locations">Home Ports</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
+    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+  </div>
+  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+</div></footer>`;
+
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html }} />
+    </>
+  );
+}

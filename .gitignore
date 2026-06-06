@@ -1,5 +1,8 @@
+node_modules/
+.next/
+out/
 dist/
 .DS_Store
 .thumbnail
-node_modules/
 *.log
+next-env.d.ts
