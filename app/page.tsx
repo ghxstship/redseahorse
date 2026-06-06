@@ -206,7 +206,7 @@ export default function Page() {
   </div></div>
 </div></div></section>
 
-<div className="band"><div className="band-in wrap" style={{paddingLeft: '0', paddingRight: '0'}}>
+<div className="band"><div className="band-in wrap">
   <div className="stat"><div className="v">14+</div><div className="k">Years</div></div>
   <div className="stat"><div className="v">250+</div><div className="k">Experiences</div></div>
   <div className="stat"><div className="v">5</div><div className="k">Home Ports</div></div>

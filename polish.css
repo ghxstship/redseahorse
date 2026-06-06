@@ -69,3 +69,28 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
   /* The marquee container already clips; harden in case any page omits overflow:hidden. */
   .trust .marquee, .trust .track { max-width: 100vw; }
 }
+
+/* ---- KIT FIX: restore horizontal padding on wraps that get overridden ---- */
+/* The kit's `.nav-inner{padding:10px 0}` zeroes the horizontal padding that
+   `.wrap` would otherwise supply, pushing the brand + nav flush to the viewport
+   edges at narrow widths. (The homepage numbers band had the same issue via an
+   inline `padding-left/right:0`, fixed at source.) Reapply the standard
+   horizontal inset to every `.wrap` regardless of co-classes, as a safety net. */
+.wrap,
+.wrap.nav-inner,
+.band-in.wrap,
+.band .band-in,
+.foot-bot,
+.foot-grid {
+  padding-left: var(--sp-6, 32px);
+  padding-right: var(--sp-6, 32px);
+}
+
+/* ---- MOBILE: shrink nav brand to keep header + CTA on one line ---------- */
+@media (max-width: 30rem) {
+  .nav-inner .brand b,
+  header.nav .brand b { font-size: 16px; letter-spacing: .04em; }
+  .nav-inner .gx-btn { padding: 8px 12px; font-size: 11px; white-space: nowrap; }
+  /* Tighten the wrap padding a touch so both fit. */
+  .wrap.nav-inner { padding-left: var(--sp-4, 16px); padding-right: var(--sp-4, 16px); }
+}
