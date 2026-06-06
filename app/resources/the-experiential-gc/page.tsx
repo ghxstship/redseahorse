@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/resources/the-experiential-gc" },
 };
 
-const __html = `<style>*{box-sizing:border-box}
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `*{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
@@ -74,23 +78,23 @@ const __html = `<style>*{box-sizing:border-box}
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <a href="/blog">Captain’s Log</a> / <span style="color:var(--brass)">The Experiential GC</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/blog">Captain’s Log</Link> / <span style={{color: 'var(--brass)'}}>The Experiential GC</span></p></div>
 <main>
-<article class="pad"><div class="wrap">
-  <p class="eyebrow">Field Notes</p>
-  <h1 style="max-width:880px">What an Experiential<br><span class="pop">General Contractor</span> Does.</h1>
-  <div class="prose">
-    <p class="meta">By the GHXSTSHIP Crew &middot; June 2026 &middot; 5 min read</p>
-    <p class="lead">An experiential general contractor is a single accountable partner that owns a live experience the way a construction GC owns a building &mdash; scope, schedule, budget, crew, and the technology that runs it, from first line to launch.</p>
+<article className="pad"><div className="wrap">
+  <p className="eyebrow">Field Notes</p>
+  <h1 style={{maxWidth: '880px'}}>What an Experiential<br/><span className="pop">General Contractor</span> Does.</h1>
+  <div className="prose">
+    <p className="meta">By the GHXSTSHIP Crew &middot; June 2026 &middot; 5 min read</p>
+    <p className="lead">An experiential general contractor is a single accountable partner that owns a live experience the way a construction GC owns a building &mdash; scope, schedule, budget, crew, and the technology that runs it, from first line to launch.</p>
     <p>Most experiential and brand-activation work is bought as a chain of vendors: a creative shop, a fabricator, a staging company, a staffing agency, and a stack of disconnected software. Each is accountable for a slice. No one is accountable for the whole. When the schedule slips or the budget moves, the seams show.</p>
     <p>The general-contractor model collapses that chain into one yard. GHXSTSHIP carries three integrated disciplines &mdash; Production Management, Operations Leadership, and Technology Innovations &mdash; under one accountable crew, governed by a single eight-phase production lifecycle from Discovery to Close.</p>
     <h2>Production: the build</h2>
@@ -101,36 +105,26 @@ const __html = `<style>*{box-sizing:border-box}
     <p>The Procore gives the yard its instruments: ATLVS for production and resource management, COMPVSS for workforce and crew, and GVTEWAY for ticketing and fans &mdash; plus the integrations, installs, and analytics that keep the whole build coordinated and measurable.</p>
     <h2>Why it matters</h2>
     <p>For general contractors, venue operators, brands, and promoters, the result is one partner to hold accountable, one schedule to track, and one standard to hold &mdash; on time, on budget, beyond the scenes.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;margin:34px 0 0"><a class="gx-btn" href="/contact">Start a Project</a><a class="gx-btn gx-btn--ghost" href="/blog">Back to the Log</a></div>
+    <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', margin: '34px 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>
   </div>
 </div></article>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"Article","headline":"What an Experiential General Contractor Does","datePublished":"2026-06-06","author":{"@type":"Organization","name":"GHXSTSHIP"},"publisher":{"@type":"Organization","name":"GHXSTSHIP"},"mainEntityOfPage":"https://ghxstship.tours/resources/the-experiential-gc"}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Article","headline":"What an Experiential General Contractor Does","datePublished":"2026-06-06","author":{"@type":"Organization","name":"GHXSTSHIP"},"publisher":{"@type":"Organization","name":"GHXSTSHIP"},"mainEntityOfPage":"https://ghxstship.tours/resources/the-experiential-gc"}` }} />
     </>
   );
 }

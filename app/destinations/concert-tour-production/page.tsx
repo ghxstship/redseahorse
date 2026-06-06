@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -7,7 +8,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/destinations/concert-tour-production" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}
@@ -97,148 +101,138 @@ const __html = `<style>
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
+` }} />
+      
 
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
 
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <a href="/destinations">Destinations</a> / <span style="color:var(--brass)">Concert &amp; Tour Production</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/destinations">Destinations</Link> / <span style={{color: 'var(--brass)'}}>Concert &amp; Tour Production</span></p></div>
 
 <main>
-<section class="hero"><div class="wrap"><div class="hero-grid">
-  <div class="hero-copy">
-    <p class="eyebrow">Destinations · Concerts &amp; Tours</p>
-    <h1>Concerts<br><span class="pop">&amp; Tours</span></h1>
-    <p class="answer">GHXSTSHIP is a full-service <strong>concert and tour production company</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our eight-phase production lifecycle.</p>
-    <div class="hero-cta">
-      <a class="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <a class="gx-btn gx-btn--ghost" href="/destinations">All Destinations &#8599;</a>
+<section className="hero"><div className="wrap"><div className="hero-grid">
+  <div className="hero-copy">
+    <p className="eyebrow">Destinations · Concerts &amp; Tours</p>
+    <h1>Concerts<br/><span className="pop">&amp; Tours</span></h1>
+    <p className="answer">GHXSTSHIP is a full-service <strong>concert and tour production company</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our eight-phase production lifecycle.</p>
+    <div className="hero-cta">
+      <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
+      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations &#8599;</Link>
     </div>
   </div>
-  <figure class="hero-fig"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=900&q=80&auto=format&fit=crop" alt="Concert & Tour Production" loading="lazy"><figcaption>Concert & Tour Production</figcaption></figure>
+  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=900&q=80&auto=format&fit=crop" alt="Concert & Tour Production" loading="lazy"/><figcaption>Concert & Tour Production</figcaption></figure>
 </div></div></section>
 
-<section class="pad alt"><div class="wrap">
-  <p class="eyebrow">What We Build</p>
-  <h2 class="sec">Everything a Tour Needs.</h2>
-  <div class="caps">
-    <div class="cap"><i class="ph-bold ph-cube"></i>Show design &amp; staging</div>
-    <div class="cap"><i class="ph-bold ph-path"></i>Routing &amp; advancing</div>
-    <div class="cap"><i class="ph-bold ph-waveform"></i>Audio, lighting, video &amp; rigging</div>
-    <div class="cap"><i class="ph-bold ph-truck"></i>Trucking &amp; backline</div>
-    <div class="cap"><i class="ph-bold ph-users-three"></i>Crew &amp; tour management</div>
-    <div class="cap"><i class="ph-bold ph-currency-circle-dollar"></i>Budgets &amp; settlements</div>
+<section className="pad alt"><div className="wrap">
+  <p className="eyebrow">What We Build</p>
+  <h2 className="sec">Everything a Tour Needs.</h2>
+  <div className="caps">
+    <div className="cap"><i className="ph-bold ph-cube"></i>Show design &amp; staging</div>
+    <div className="cap"><i className="ph-bold ph-path"></i>Routing &amp; advancing</div>
+    <div className="cap"><i className="ph-bold ph-waveform"></i>Audio, lighting, video &amp; rigging</div>
+    <div className="cap"><i className="ph-bold ph-truck"></i>Trucking &amp; backline</div>
+    <div className="cap"><i className="ph-bold ph-users-three"></i>Crew &amp; tour management</div>
+    <div className="cap"><i className="ph-bold ph-currency-circle-dollar"></i>Budgets &amp; settlements</div>
   </div>
 </div></section>
 
-<section class="pad"><div class="wrap">
-  <p class="eyebrow">The Course</p>
-  <h2 class="sec">Touring, Eight Phases.</h2>
-  <p class="lede">Every project follows the same proven course — eight phases, Discovery to Close.</p>
-  <div class="gx-smap" style="margin-top:40px"><div class="gx-smap__line">
-    <div class="gx-smap__stop is-terminus"><div class="gx-smap__dot">01</div><div class="gx-smap__name">Discovery</div><div class="gx-smap__sub">Consult</div></div>
-    <div class="gx-smap__stop"><div class="gx-smap__dot">02</div><div class="gx-smap__name">Design</div><div class="gx-smap__sub">Concept</div></div>
-    <div class="gx-smap__stop"><div class="gx-smap__dot">03</div><div class="gx-smap__name">Advance</div><div class="gx-smap__sub">Advance</div></div>
-    <div class="gx-smap__stop"><div class="gx-smap__dot">04</div><div class="gx-smap__name">Procurement</div><div class="gx-smap__sub">Procure</div></div>
-    <div class="gx-smap__stop"><div class="gx-smap__dot">05</div><div class="gx-smap__name">Build</div><div class="gx-smap__sub">Fabricate</div></div>
-    <div class="gx-smap__stop"><div class="gx-smap__dot">06</div><div class="gx-smap__name">Install</div><div class="gx-smap__sub">Install</div></div>
-    <div class="gx-smap__stop"><div class="gx-smap__dot">07</div><div class="gx-smap__name">Operate</div><div class="gx-smap__sub">Live</div></div>
-    <div class="gx-smap__stop is-terminus"><div class="gx-smap__dot">08</div><div class="gx-smap__name">Close</div><div class="gx-smap__sub">Close-out</div></div>
+<section className="pad"><div className="wrap">
+  <p className="eyebrow">The Course</p>
+  <h2 className="sec">Touring, Eight Phases.</h2>
+  <p className="lede">Every project follows the same proven course — eight phases, Discovery to Close.</p>
+  <div className="gx-smap" style={{marginTop: '40px'}}><div className="gx-smap__line">
+    <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
+    <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
+    <div className="gx-smap__stop"><div className="gx-smap__dot">03</div><div className="gx-smap__name">Advance</div><div className="gx-smap__sub">Advance</div></div>
+    <div className="gx-smap__stop"><div className="gx-smap__dot">04</div><div className="gx-smap__name">Procurement</div><div className="gx-smap__sub">Procure</div></div>
+    <div className="gx-smap__stop"><div className="gx-smap__dot">05</div><div className="gx-smap__name">Build</div><div className="gx-smap__sub">Fabricate</div></div>
+    <div className="gx-smap__stop"><div className="gx-smap__dot">06</div><div className="gx-smap__name">Install</div><div className="gx-smap__sub">Install</div></div>
+    <div className="gx-smap__stop"><div className="gx-smap__dot">07</div><div className="gx-smap__name">Operate</div><div className="gx-smap__sub">Live</div></div>
+    <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">08</div><div className="gx-smap__name">Close</div><div className="gx-smap__sub">Close-out</div></div>
   </div></div>
 </div></section>
 
-<section class="pad alt"><div class="wrap">
-  <p class="eyebrow">Who We Build For</p>
-  <h2 class="sec">Built for the People Behind the Tour.</h2>
-  <p class="answer">Tour production at GHXSTSHIP is built for the partners accountable for the run.</p>
-  <div class="aud"><span class="gx-tag">Artists &amp; Management</span><span class="gx-tag">Tour Managers</span><span class="gx-tag">Promoters</span><span class="gx-tag">Record Labels</span><span class="gx-tag">Venues</span></div>
+<section className="pad alt"><div className="wrap">
+  <p className="eyebrow">Who We Build For</p>
+  <h2 className="sec">Built for the People Behind the Tour.</h2>
+  <p className="answer">Tour production at GHXSTSHIP is built for the partners accountable for the run.</p>
+  <div className="aud"><span className="gx-tag">Artists &amp; Management</span><span className="gx-tag">Tour Managers</span><span className="gx-tag">Promoters</span><span className="gx-tag">Record Labels</span><span className="gx-tag">Venues</span></div>
 </div></section>
 
-<section class="pad"><div class="wrap">
-  <p class="eyebrow">The Archives</p>
-  <h2 class="sec">Tours, Charted.</h2>
-  <div class="mu-grid">
-    <article class="mu"><div class="media" style="background:repeating-linear-gradient(45deg,#18262A 0 14px,#101A1B 14px 28px)"><span class="gx-chip-pixel px">RRR 312</span><i class="ph-bold ph-music-notes" style="font-size:44px;color:var(--brass)"></i></div><div class="body"><h3>Black Coffee at the Race Track</h3><p class="meta">Concert Experience · Miami Music Week · Club Space · 2026</p></div></article>
+<section className="pad"><div className="wrap">
+  <p className="eyebrow">The Archives</p>
+  <h2 className="sec">Tours, Charted.</h2>
+  <div className="mu-grid">
+    <article className="mu"><div className="media" style={{background: 'repeating-linear-gradient(45deg,#18262A 0 14px,#101A1B 14px 28px)'}}><span className="gx-chip-pixel px">RRR 312</span><i className="ph-bold ph-music-notes" style={{fontSize: '44px', color: 'var(--brass)'}}></i></div><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concert Experience · Miami Music Week · Club Space · 2026</p></div></article>
   </div>
 </div></section>
 
-<!-- THE DIFFERENCE -->
-<section class="pad" id="difference" aria-labelledby="diff-h"><div class="wrap">
-  <p class="eyebrow">Why GHXSTSHIP</p>
-  <h2 class="sec">The Difference.</h2>
-  <p class="answer">Most experiential and brand-activation agencies stop at creative and hand you to a chain of vendors. GHXSTSHIP owns the entire voyage — and builds the technology that powers it.</p>
-  <div class="caps" style="margin-top:34px">
-    <div class="cap"><i class="ph-bold ph-path"></i><b style="color:var(--bone)">End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
-    <div class="cap"><i class="ph-bold ph-compass-tool"></i><b style="color:var(--bone)">We implement the tech</b> — ATLVS, COMPVSS &amp; GVTEWAY, in-house.</div>
-    <div class="cap"><i class="ph-bold ph-shield-check"></i><b style="color:var(--bone)">Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+{/* THE DIFFERENCE */}
+<section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
+  <p className="eyebrow">Why GHXSTSHIP</p>
+  <h2 className="sec">The Difference.</h2>
+  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you to a chain of vendors. GHXSTSHIP owns the entire voyage — and builds the technology that powers it.</p>
+  <div className="caps" style={{marginTop: '34px'}}>
+    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — ATLVS, COMPVSS &amp; GVTEWAY, in-house.</div>
+    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
   </div>
 </div></section>
 
-<section class="pad alt faq"><div class="wrap">
-  <p class="eyebrow">Answers</p>
-  <h2 class="sec">Touring FAQ.</h2>
-  <div class="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span class="ic">+</span></summary><p class="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
-    <details><summary>What does GHXSTSHIP do for tours?<span class="ic">+</span></summary><p class="a">End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management — on our eight-phase lifecycle.</p></details>
-    <details><summary>Who is tour production for?<span class="ic">+</span></summary><p class="a">Artists and management, tour managers, promoters, and labels who need one accountable production partner across every city.</p></details>
-    <details><summary>How many cities can you route?<span class="ic">+</span></summary><p class="a">From single-market runs to multi-continent routings, with full logistics, advancing, and settlements.</p></details>
+<section className="pad alt faq"><div className="wrap">
+  <p className="eyebrow">Answers</p>
+  <h2 className="sec">Touring FAQ.</h2>
+  <div className="faq-list">
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
+    <details><summary>What does GHXSTSHIP do for tours?<span className="ic">+</span></summary><p className="a">End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management — on our eight-phase lifecycle.</p></details>
+    <details><summary>Who is tour production for?<span className="ic">+</span></summary><p className="a">Artists and management, tour managers, promoters, and labels who need one accountable production partner across every city.</p></details>
+    <details><summary>How many cities can you route?<span className="ic">+</span></summary><p className="a">From single-market runs to multi-continent routings, with full logistics, advancing, and settlements.</p></details>
   </div>
 </div></section>
 
-<section class="cta"><div class="wrap">
-  <p class="eyebrow" style="justify-content:center">Ready When You Are</p>
-  <h2>Chart Your<br>Tour.</h2>
-  <div class="hero-cta" style="justify-content:center">
-    <a class="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
-    <a class="gx-btn gx-btn--ghost gx-btn--lg" href="/#work">See the Archives</a>
+<section className="cta"><div className="wrap">
+  <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
+  <h2>Chart Your<br/>Tour.</h2>
+  <div className="hero-cta" style={{justifyContent: 'center'}}>
+    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
+    <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>
   </div>
 </div></section>
 </main>
 
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
 
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"Service","name":"Concert &amp; Tour Production","serviceType":"Concert touring production","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Concert touring, show production, and multi-city routing for live music, delivered through the GHXSTSHIP eight-phase production lifecycle.","audience":{"@type":"Audience","audienceType":"Artists, tour managers, and promoters"},"url":"https://ghxstship.tours/destinations/concert-tour-production"}`,
-  `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Concert &amp; Tour Production","serviceType":"Concert touring production","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Concert touring, show production, and multi-city routing for live music, delivered through the GHXSTSHIP eight-phase production lifecycle.","audience":{"@type":"Audience","audienceType":"Artists, tour managers, and promoters"},"url":"https://ghxstship.tours/destinations/concert-tour-production"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},
  {"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/#destinations"},
  {"@type":"ListItem","position":3,"name":"Concert &amp; Tour Production","item":"https://ghxstship.tours/destinations/concert-tour-production"}
-]}`,
-  `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical rather than an afterthought."}},
  {"@type":"Question","name":"What does GHXSTSHIP do for tours?","acceptedAnswer":{"@type":"Answer","text":"End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management — on our eight-phase lifecycle."}},
  {"@type":"Question","name":"Who is tour production for?","acceptedAnswer":{"@type":"Answer","text":"Artists and management, tour managers, promoters, and labels who need one accountable production partner across every city."}},
  {"@type":"Question","name":"How many cities can you route?","acceptedAnswer":{"@type":"Answer","text":"From single-market runs to multi-continent routings, with full logistics, advancing, and settlements."}}
-]}`,
-];
-
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+]}` }} />
       <Script src="/phase-detail.js" strategy="afterInteractive" />
     </>
   );

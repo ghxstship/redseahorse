@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/about" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}
@@ -85,72 +89,62 @@ const __html = `<style>
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <span style="color:var(--brass)">The Story</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>The Story</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">The Story &middot; Beyond the Scenes</p>
-  <h1>We Build the<br><span class="pop">Whole Ship.</span></h1>
-  <p class="answer">GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with home ports in Las Vegas, Chicago, New York, and Los Angeles. We are the general contractor, foreman, and Procore of experiential project management &mdash; one accountable partner owning scope, schedule, budget, crew, and technology from first line to launch.</p>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">The Story &middot; Beyond the Scenes</p>
+  <h1>We Build the<br/><span className="pop">Whole Ship.</span></h1>
+  <p className="answer">GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with home ports in Las Vegas, Chicago, New York, and Los Angeles. We are the general contractor, foreman, and Procore of experiential project management &mdash; one accountable partner owning scope, schedule, budget, crew, and technology from first line to launch.</p>
 </div></section>
-<section class="pad alt"><div class="wrap">
-  <p class="eyebrow">How We're Built</p>
-  <h2 class="sec">Three Roles. One Yard.</h2>
-  <p class="lede">Production = Operations + Technology. The general contractor builds it, the foreman runs it, the platform coordinates it.</p>
-  <div class="pgrid">
-    <div class="pc"><div class="bar"></div><p class="role">The General Contractor</p><h3>Production</h3><p>We build the ship &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
-    <div class="pc"><div class="bar"></div><p class="role">The Foreman</p><h3>Operations</h3><p>We crew it and run it &mdash; logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
-    <div class="pc"><div class="bar"></div><p class="role">The Procore</p><h3>Technology</h3><p>We give the yard its instruments &mdash; ATLVS, COMPVSS &amp; GVTEWAY, the platforms the project runs on.</p></div>
+<section className="pad alt"><div className="wrap">
+  <p className="eyebrow">How We're Built</p>
+  <h2 className="sec">Three Roles. One Yard.</h2>
+  <p className="lede">Production = Operations + Technology. The general contractor builds it, the foreman runs it, the platform coordinates it.</p>
+  <div className="pgrid">
+    <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Production</h3><p>We build the ship &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Operations</h3><p>We crew it and run it &mdash; logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Technology</h3><p>We give the yard its instruments &mdash; ATLVS, COMPVSS &amp; GVTEWAY, the platforms the project runs on.</p></div>
   </div>
 </div></section>
-<section class="pad"><div class="wrap">
-  <p class="eyebrow">The Track Record</p>
-  <h2 class="sec">Receipts, Not Promises.</h2>
-  <div class="band">
-    <div class="st"><div class="v">14+</div><div class="k">Years</div></div>
-    <div class="st"><div class="v">250+</div><div class="k">Experiences</div></div>
-    <div class="st"><div class="v">5M+</div><div class="k">Memories</div></div>
-    <div class="st"><div class="v">5</div><div class="k">Home Ports</div></div>
+<section className="pad"><div className="wrap">
+  <p className="eyebrow">The Track Record</p>
+  <h2 className="sec">Receipts, Not Promises.</h2>
+  <div className="band">
+    <div className="st"><div className="v">14+</div><div className="k">Years</div></div>
+    <div className="st"><div className="v">250+</div><div className="k">Experiences</div></div>
+    <div className="st"><div className="v">5M+</div><div className="k">Memories</div></div>
+    <div className="st"><div className="v">5</div><div className="k">Home Ports</div></div>
   </div>
 </div></section>
-<section class="cta"><div class="wrap"><h2>Venture<br>Beyond.</h2>
-  <div class="row"><a class="gx-btn gx-btn--lg" href="/contact">Start a Project</a><a class="gx-btn gx-btn--ghost gx-btn--lg" href="/work">See the Archives</a></div>
+<section className="cta"><div className="wrap"><h2>Venture<br/>Beyond.</h2>
+  <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link></div>
 </div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/about"}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/about"}` }} />
     </>
   );
 }

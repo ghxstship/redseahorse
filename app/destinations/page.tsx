@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/destinations" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
@@ -57,65 +61,55 @@ const __html = `<style>
   .site-foot .foot-col h5{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 12px}
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}.site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <span style="color:var(--brass)">Destinations</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Destinations</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">Destinations</p>
-  <h1>Where We <span class="pop">Sail.</span></h1>
-  <p class="answer">GHXSTSHIP produces experiential and entertainment work across the industries below — each a destination on the board. Pick where you're headed; we bring the right ship from the Fleet and crew the build end to end.</p>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">Destinations</p>
+  <h1>Where We <span className="pop">Sail.</span></h1>
+  <p className="answer">GHXSTSHIP produces experiential and entertainment work across the industries below — each a destination on the board. Pick where you're headed; we bring the right ship from the Fleet and crew the build end to end.</p>
 </div></section>
-<section class="pad"><div class="wrap">
-  <div class="dgrid">
-    <a class="dc" href="/festival-production"><i class="ph-bold ph-confetti"></i><h2>Festivals &amp; Cultural Moments</h2><p>Multi-stage festival production, infrastructure, and headliner experiences at scale.</p><span class="go">View destination &#8599;</span></a>
-    <a class="dc" href="/concert-tour-production"><i class="ph-bold ph-music-notes"></i><h2>Concerts &amp; Tours</h2><p>Concert touring, show production, and multi-city routing for live music.</p><span class="go">View destination &#8599;</span></a>
-    <a class="dc" href="/brand-activations"><i class="ph-bold ph-storefront"></i><h2>Brand Activations</h2><p>Experiential marketing, pop-ups, and brand environments that convert.</p><span class="go">View destination &#8599;</span></a>
-    <a class="dc" href="/immersive-experiences"><i class="ph-bold ph-planet"></i><h2>Immersive Environments</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span class="go">View destination &#8599;</span></a>
-    <a class="dc" href="/sporting-events"><i class="ph-bold ph-flag-checkered"></i><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span class="go">View destination &#8599;</span></a>
-    <a class="dc" href="/tv-film-broadcast"><i class="ph-bold ph-television-simple"></i><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span class="go">View destination &#8599;</span></a>
+<section className="pad"><div className="wrap">
+  <div className="dgrid">
+    <Link href="/festival-production" className="dc"><i className="ph-bold ph-confetti"></i><h2>Festivals &amp; Cultural Moments</h2><p>Multi-stage festival production, infrastructure, and headliner experiences at scale.</p><span className="go">View destination &#8599;</span></Link>
+    <Link href="/concert-tour-production" className="dc"><i className="ph-bold ph-music-notes"></i><h2>Concerts &amp; Tours</h2><p>Concert touring, show production, and multi-city routing for live music.</p><span className="go">View destination &#8599;</span></Link>
+    <Link href="/brand-activations" className="dc"><i className="ph-bold ph-storefront"></i><h2>Brand Activations</h2><p>Experiential marketing, pop-ups, and brand environments that convert.</p><span className="go">View destination &#8599;</span></Link>
+    <Link href="/immersive-experiences" className="dc"><i className="ph-bold ph-planet"></i><h2>Immersive Environments</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span className="go">View destination &#8599;</span></Link>
+    <Link href="/sporting-events" className="dc"><i className="ph-bold ph-flag-checkered"></i><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span className="go">View destination &#8599;</span></Link>
+    <Link href="/tv-film-broadcast" className="dc"><i className="ph-bold ph-television-simple"></i><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span className="go">View destination &#8599;</span></Link>
   </div>
-  <div class="more">
-    <p class="l">Also on the board</p>
-    <div class="tags"><span>Health &amp; Wellness</span><span>Premium Hospitality</span><span>Luxury Retail</span><span>Water &amp; Motorsports</span><span>Corporate &amp; Private</span></div>
+  <div className="more">
+    <p className="l">Also on the board</p>
+    <div className="tags"><span>Health &amp; Wellness</span><span>Premium Hospitality</span><span>Luxury Retail</span><span>Water &amp; Motorsports</span><span>Corporate &amp; Private</span></div>
   </div>
 </div></section>
-<section class="cta"><div class="wrap"><h2>Pick Your<br>Destination.</h2>
-  <div class="row"><a class="gx-btn gx-btn--lg" href="/contact">Start a Project</a><a class="gx-btn gx-btn--ghost gx-btn--lg" href="/solutions">See the Fleet</a></div>
+<section className="cta"><div className="wrap"><h2>Pick Your<br/>Destination.</h2>
+  <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">See the Fleet</Link></div>
 </div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand"><a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div></div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/careers">Careers</a><a href="/locations">Home Ports</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand"><Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div></div>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/careers">Careers</Link><Link href="/locations">Home Ports</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Destinations","url":"https://ghxstship.tours/destinations","about":"Industries and experience types GHXSTSHIP produces."}`,
-  `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/destinations"}]}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Destinations","url":"https://ghxstship.tours/destinations","about":"Industries and experience types GHXSTSHIP produces."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/destinations"}]}` }} />
     </>
   );
 }

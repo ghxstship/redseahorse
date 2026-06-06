@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/team" },
 };
 
-const __html = `<style>*{box-sizing:border-box}
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `*{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
@@ -78,68 +82,58 @@ const __html = `<style>*{box-sizing:border-box}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
   .tier{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--nebula);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
   .tier::before{content:"";width:18px;height:3px;background:var(--nebula)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <span style="color:var(--brass)">The Crew</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>The Crew</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">The Crew &middot; Leadership</p>
-  <h1>The Crew That<br>Runs the <span class="pop">Build.</span></h1>
-  <p class="answer">Every voyage is led by a senior crew that stays with you from first consultation to strike. Ranks map to roles &mdash; the accountable management team for your production, operations, and technology. Headshots and full bios drop in as the roster is confirmed.</p>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">The Crew &middot; Leadership</p>
+  <h1>The Crew That<br/>Runs the <span className="pop">Build.</span></h1>
+  <p className="answer">Every voyage is led by a senior crew that stays with you from first consultation to strike. Ranks map to roles &mdash; the accountable management team for your production, operations, and technology. Headshots and full bios drop in as the roster is confirmed.</p>
 </div></section>
-<section class="pad"><div class="wrap">
-  <p class="eyebrow">Ranks &amp; Roles</p>
-  <h2 class="sec">Who&rsquo;s Aboard.</h2>
-  <p class="tier">Level 01 &middot; Command</p>
-  <div class="tgrid"><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Production</p><h3>Executive Producer</h3><p>Owns the voyage end to end &mdash; vision, budget, and the standard the whole build holds to.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Production</p><h3>Senior Producer</h3><p>Leads the production day to day &mdash; scope, schedule, vendors, and the build.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Production</p><h3>Associate Producer</h3><p>Supports the production across phases &mdash; coordination, tracking, and delivery.</p></div></article></div>
-  <p class="tier">Level 02 &middot; Direction</p>
-  <div class="tgrid"><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Production</p><h3>Production Director</h3><p>Runs the build &mdash; creative, scenic, staging, and technical production.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Operations</p><h3>Operations Director</h3><p>Runs the day-of &mdash; logistics, crew, safety, and compliance.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Hospitality</p><h3>Hospitality Director</h3><p>Owns guest experience, VIP, and hospitality operations.</p></div></article></div>
-  <p class="tier">Level 03 &middot; Management</p>
-  <div class="tgrid"><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Project</p><h3>Project Manager</h3><p>Charts the course &mdash; scope, schedule, deliverables, and owners.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Project</p><h3>Project Coordinator</h3><p>Keeps the plan moving &mdash; documents, comms, and tracking.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Logistics</p><h3>Logistics Manager</h3><p>Moves freight and crew &mdash; load-in and out, transport, and vendors.</p></div></article></div>
-  <p class="tier">Level 04 &middot; On Deck</p>
-  <div class="tgrid"><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Production</p><h3>Production Manager</h3><p>Runs the floor build and the technical package on site.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Crew</p><h3>Production Crew</h3><p>The hands that build, rig, run, and strike.</p></div></article><article class="tm"><div class="av"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="rk">Support</p><h3>Production Assistant</h3><p>Supports every department &mdash; and learns the ropes.</p></div></article></div>
+<section className="pad"><div className="wrap">
+  <p className="eyebrow">Ranks &amp; Roles</p>
+  <h2 className="sec">Who&rsquo;s Aboard.</h2>
+  <p className="tier">Level 01 &middot; Command</p>
+  <div className="tgrid"><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Production</p><h3>Executive Producer</h3><p>Owns the voyage end to end &mdash; vision, budget, and the standard the whole build holds to.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Production</p><h3>Senior Producer</h3><p>Leads the production day to day &mdash; scope, schedule, vendors, and the build.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Production</p><h3>Associate Producer</h3><p>Supports the production across phases &mdash; coordination, tracking, and delivery.</p></div></article></div>
+  <p className="tier">Level 02 &middot; Direction</p>
+  <div className="tgrid"><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Production</p><h3>Production Director</h3><p>Runs the build &mdash; creative, scenic, staging, and technical production.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Operations</p><h3>Operations Director</h3><p>Runs the day-of &mdash; logistics, crew, safety, and compliance.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Hospitality</p><h3>Hospitality Director</h3><p>Owns guest experience, VIP, and hospitality operations.</p></div></article></div>
+  <p className="tier">Level 03 &middot; Management</p>
+  <div className="tgrid"><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Project</p><h3>Project Manager</h3><p>Charts the course &mdash; scope, schedule, deliverables, and owners.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Project</p><h3>Project Coordinator</h3><p>Keeps the plan moving &mdash; documents, comms, and tracking.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Logistics</p><h3>Logistics Manager</h3><p>Moves freight and crew &mdash; load-in and out, transport, and vendors.</p></div></article></div>
+  <p className="tier">Level 04 &middot; On Deck</p>
+  <div className="tgrid"><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Production</p><h3>Production Manager</h3><p>Runs the floor build and the technical package on site.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Crew</p><h3>Production Crew</h3><p>The hands that build, rig, run, and strike.</p></div></article><article className="tm"><div className="av"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="rk">Support</p><h3>Production Assistant</h3><p>Supports every department &mdash; and learns the ropes.</p></div></article></div>
 </div></section>
-<section class="pad alt"><div class="wrap">
-  <p class="eyebrow">Join the Crew</p>
-  <h2 class="sec">Learn the Ropes.</h2>
-  <p class="answer">We train the next generation of experiential producers &mdash; no experience gatekept. Apprentice on real voyages, manned by the people who&rsquo;ve built them. Bring the hunger; we&rsquo;ll teach the ropes.</p>
-  <div style="display:flex;gap:14px;margin-top:24px"><a class="gx-btn" href="/careers">Join the Crew</a><a class="gx-btn gx-btn--ghost" href="/solutions">See What We Run</a></div>
+<section className="pad alt"><div className="wrap">
+  <p className="eyebrow">Join the Crew</p>
+  <h2 className="sec">Learn the Ropes.</h2>
+  <p className="answer">We train the next generation of experiential producers &mdash; no experience gatekept. Apprentice on real voyages, manned by the people who&rsquo;ve built them. Bring the hunger; we&rsquo;ll teach the ropes.</p>
+  <div style={{display: 'flex', gap: '14px', marginTop: '24px'}}><Link href="/careers" className="gx-btn">Join the Crew</Link><Link href="/solutions" className="gx-btn gx-btn--ghost">See What We Run</Link></div>
 </div></section>
-<section class="cta"><div class="wrap"><h2>Build With<br>the Crew.</h2><div class="row"><a class="gx-btn gx-btn--lg" href="/careers">See Open Roles</a></div></div></section>
+<section className="cta"><div className="wrap"><h2>Build With<br/>the Crew.</h2><div className="row"><Link href="/careers" className="gx-btn gx-btn--lg">See Open Roles</Link></div></div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"AboutPage","name":"The Crew \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/team"}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Crew \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/team"}` }} />
     </>
   );
 }

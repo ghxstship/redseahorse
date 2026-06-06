@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/work/" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}
@@ -89,64 +93,54 @@ const __html = `<style>
   .wgrid .wc:nth-child(6){grid-column:span 2}
   @media(max-width:880px){.wgrid{grid-template-columns:1fr 1fr}.wgrid .wc:first-child,.wgrid .wc:nth-child(6){grid-column:span 2}.wgrid .wc:first-child .media{height:200px}}
   @media(max-width:560px){.wgrid{grid-template-columns:1fr}.wgrid .wc:first-child,.wgrid .wc:nth-child(6){grid-column:span 1}}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <span style="color:var(--brass)">The Archives</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>The Archives</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">The Archives</p>
-  <h1>Every Voyage,<br><span class="pop">Logged.</span></h1>
-  <p class="answer">The Archives are our case studies &mdash; featured past projects we designed, built, crewed, and launched end to end. Real outcomes, no vanity metrics.</p>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">The Archives</p>
+  <h1>Every Voyage,<br/><span className="pop">Logged.</span></h1>
+  <p className="answer">The Archives are our case studies &mdash; featured past projects we designed, built, crewed, and launched end to end. Real outcomes, no vanity metrics.</p>
 </div></section>
-<section class="pad"><div class="wrap">
-  <div class="wgrid"><a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"></div><div class="body"><h3>EDC Las Vegas</h3><p class="meta">Festival &middot; Insomniac, Las Vegas &middot; 2025&ndash;26</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy"></div><div class="body"><h3>Black Coffee at the Race Track</h3><p class="meta">Concerts &amp; Tours &middot; Club Space Miami &middot; 2026</p></div></a>
-  <a class="wc" href="/salvage-city-supper-club"><div class="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop" alt="Salvage City Supper Club" loading="lazy"></div><div class="body"><h3>Salvage City Supper Club</h3><p class="meta">Immersive &middot; Club Space Miami &middot; 2025</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Polymarket Grocery Store" loading="lazy"></div><div class="body"><h3>Polymarket Grocery Store</h3><p class="meta">Brand Activation &middot; 2026</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80&auto=format&fit=crop" alt="PATR&Oacute;N Cristalino x Becky G" loading="lazy"></div><div class="body"><h3>PATR&Oacute;N Cristalino x Becky G</h3><p class="meta">Product Launch &middot; Los Angeles &middot; 2024</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80&auto=format&fit=crop" alt="Heineken Turn 4 Nightclub" loading="lazy"></div><div class="body"><h3>Heineken Turn 4 Nightclub</h3><p class="meta">Motorsports &middot; F1 Las Vegas &middot; 2024</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80&auto=format&fit=crop" alt="Formula 1 Las Vegas Grand Prix" loading="lazy"></div><div class="body"><h3>Formula 1 Las Vegas Grand Prix</h3><p class="meta">Motorsports &middot; Las Vegas &middot; 2023</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop" alt="Factory Town" loading="lazy"></div><div class="body"><h3>Factory Town</h3><p class="meta">Venue Operations &middot; Miami &middot; 2023</p></div></a>
-  <a class="wc" href="#" aria-disabled="true"><div class="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Red Bull Unforeseen Motel" loading="lazy"></div><div class="body"><h3>Red Bull Unforeseen Motel</h3><p class="meta">Brand Activation &middot; III Points Miami &middot; 2023</p></div></a></div>
+<section className="pad"><div className="wrap">
+  <div className="wgrid"><a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"/></div><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival &middot; Insomniac, Las Vegas &middot; 2025&ndash;26</p></div></a>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy"/></div><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concerts &amp; Tours &middot; Club Space Miami &middot; 2026</p></div></a>
+  <Link href="/salvage-city-supper-club" className="wc"><div className="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop" alt="Salvage City Supper Club" loading="lazy"/></div><div className="body"><h3>Salvage City Supper Club</h3><p className="meta">Immersive &middot; Club Space Miami &middot; 2025</p></div></Link>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Polymarket Grocery Store" loading="lazy"/></div><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation &middot; 2026</p></div></a>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80&auto=format&fit=crop" alt="PATRÓN Cristalino x Becky G" loading="lazy"/></div><div className="body"><h3>PATR&Oacute;N Cristalino x Becky G</h3><p className="meta">Product Launch &middot; Los Angeles &middot; 2024</p></div></a>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80&auto=format&fit=crop" alt="Heineken Turn 4 Nightclub" loading="lazy"/></div><div className="body"><h3>Heineken Turn 4 Nightclub</h3><p className="meta">Motorsports &middot; F1 Las Vegas &middot; 2024</p></div></a>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80&auto=format&fit=crop" alt="Formula 1 Las Vegas Grand Prix" loading="lazy"/></div><div className="body"><h3>Formula 1 Las Vegas Grand Prix</h3><p className="meta">Motorsports &middot; Las Vegas &middot; 2023</p></div></a>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop" alt="Factory Town" loading="lazy"/></div><div className="body"><h3>Factory Town</h3><p className="meta">Venue Operations &middot; Miami &middot; 2023</p></div></a>
+  <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Red Bull Unforeseen Motel" loading="lazy"/></div><div className="body"><h3>Red Bull Unforeseen Motel</h3><p className="meta">Brand Activation &middot; III Points Miami &middot; 2023</p></div></a></div>
 </div></section>
-<section class="cta"><div class="wrap">
-  <h2>Add Your Voyage<br>to the Archives.</h2>
-  <div class="row"><a class="gx-btn gx-btn--lg" href="/contact">Start a Project</a><a class="gx-btn gx-btn--ghost gx-btn--lg" href="/destinations">See the Destinations</a></div>
+<section className="cta"><div className="wrap">
+  <h2>Add Your Voyage<br/>to the Archives.</h2>
+  <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/destinations" className="gx-btn gx-btn--ghost gx-btn--lg">See the Destinations</Link></div>
 </div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Selected Work","url":"https://ghxstship.tours/work/"}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Selected Work","url":"https://ghxstship.tours/work/"}` }} />
     </>
   );
 }

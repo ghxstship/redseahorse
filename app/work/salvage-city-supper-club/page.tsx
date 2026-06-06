@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/work/salvage-city-supper-club" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   .wrap{max-width:1000px;margin:0 auto;padding:0 32px}
@@ -71,80 +75,70 @@ const __html = `<style>
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <a href="/#work">Work</a> / <span style="color:var(--brass)">Salvage City Supper Club</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/#work">Work</Link> / <span style={{color: 'var(--brass)'}}>Salvage City Supper Club</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">Case Study · Immersive Experience</p>
-  <h1>Salvage City<br>Supper Club</h1>
-  <div class="meta"><span>Client <b>Insomniac</b></span><span>Venue <b>Club Space, Miami</b></span><span>Year <b>2025</b></span><span>Scope <b>Full Voyage · 8 Phases</b></span></div>
-  <div class="coverimg"><i class="ph-fill ph-confetti"></i><span class="ph">[ Hero image — drop production photography here ]</span></div>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">Case Study · Immersive Experience</p>
+  <h1>Salvage City<br/>Supper Club</h1>
+  <div className="meta"><span>Client <b>Insomniac</b></span><span>Venue <b>Club Space, Miami</b></span><span>Year <b>2025</b></span><span>Scope <b>Full Voyage · 8 Phases</b></span></div>
+  <div className="coverimg"><i className="ph-fill ph-confetti"></i><span className="ph">[ Hero image — drop production photography here ]</span></div>
 </div></section>
-<div class="wrap">
-  <div class="results">
-    <div class="res"><div class="v">[00K]</div><div class="k">Guests Hosted</div></div>
-    <div class="res"><div class="v">[00M]</div><div class="k">Social Impressions</div></div>
-    <div class="res"><div class="v">[00%]</div><div class="k">Capacity Sell-Through</div></div>
-    <div class="res"><div class="v">[00]</div><div class="k">Days Concept-to-Live</div></div>
+<div className="wrap">
+  <div className="results">
+    <div className="res"><div className="v">[00K]</div><div className="k">Guests Hosted</div></div>
+    <div className="res"><div className="v">[00M]</div><div className="k">Social Impressions</div></div>
+    <div className="res"><div className="v">[00%]</div><div className="k">Capacity Sell-Through</div></div>
+    <div className="res"><div className="v">[00]</div><div className="k">Days Concept-to-Live</div></div>
   </div>
-  <div class="block"><h2>The Challenge</h2>
+  <div className="block"><h2>The Challenge</h2>
     <p>[Client] needed an immersive supper-club experience that could live inside <strong>Club Space, Miami</strong> — a venue with its own identity, technical constraints, and an audience that has seen everything. The brief: a fully-realized world that felt discovered, not built, and that could be installed, run, and struck without disrupting the venue's ongoing programming.</p>
     <p>The constraints were real: a fixed footprint, a hard load-in window, and a guest experience that had to feel intimate at scale.</p>
   </div>
-  <div class="block"><h2>The Approach</h2>
+  <div className="block"><h2>The Approach</h2>
     <p>GHXSTSHIP ran the full <strong>eight-phase production lifecycle</strong>. Discovery and R&amp;D defined the narrative world and tested it against the venue. Creative Design delivered the scenic language; Compliance &amp; Risk cleared the build against venue and fire-code requirements.</p>
     <p>Production &amp; Build fabricated a modular scenic package designed for the load-in window. Operations &amp; Logistics sequenced crew and freight around the venue's calendar. Live Activation ran the room nightly; Strike returned the space clean — with a full reconciliation and analytics report.</p>
-    <p class="pull">"A world that felt discovered, not built — installed, run, and struck on the venue's clock."</p>
+    <p className="pull">"A world that felt discovered, not built — installed, run, and struck on the venue's clock."</p>
   </div>
-  <div class="block"><h2>The Result</h2>
+  <div className="block"><h2>The Result</h2>
     <p>[Outcome paragraph — what it drove for the client: attendance, social reach, earned media, repeat booking. Replace bracketed metrics above with real figures.]</p>
     <p>Salvage City is now a repeatable GHXSTSHIP format — proof that an immersive world can be delivered to a working venue without compromise.</p>
   </div>
 </div>
-<section class="cta"><div class="wrap">
+<section className="cta"><div className="wrap">
   <h3>Chart Your Experience.</h3>
-  <a class="gx-btn" href="/#close">Start a Project</a>
+  <Link href="/#close" className="gx-btn">Start a Project</Link>
 </div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"CreativeWork","name":"Salvage City Supper Club","creator":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"about":"Immersive experience production","locationCreated":{"@type":"Place","name":"Club Space, Miami"},"datePublished":"2025-05","genre":"Immersive Experience","keywords":"immersive experience, experiential production, supper club, Miami, Club Space","url":"https://ghxstship.tours/work/salvage-city-supper-club"}`,
-  `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CreativeWork","name":"Salvage City Supper Club","creator":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"about":"Immersive experience production","locationCreated":{"@type":"Place","name":"Club Space, Miami"},"datePublished":"2025-05","genre":"Immersive Experience","keywords":"immersive experience, experiential production, supper club, Miami, Club Space","url":"https://ghxstship.tours/work/salvage-city-supper-club"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},
  {"@type":"ListItem","position":2,"name":"Work","item":"https://ghxstship.tours/work"},
  {"@type":"ListItem","position":3,"name":"Salvage City Supper Club","item":"https://ghxstship.tours/work/salvage-city-supper-club"}
-]}`,
-];
-
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+]}` }} />
     </>
   );
 }

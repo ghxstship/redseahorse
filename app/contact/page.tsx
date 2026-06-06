@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,7 +7,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/contact" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}
@@ -82,65 +86,55 @@ const __html = `<style>
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <span style="color:var(--brass)">Start a Project</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Start a Project</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">Set Your Course</p>
-  <h1>Start a<br><span class="pop">Project.</span></h1>
-  <p class="answer">Tell us the destination &mdash; the experience worth building. We'll build the ship, crew it, chart the course, and launch. Every voyage starts with a consultation.</p>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">Set Your Course</p>
+  <h1>Start a<br/><span className="pop">Project.</span></h1>
+  <p className="answer">Tell us the destination &mdash; the experience worth building. We'll build the ship, crew it, chart the course, and launch. Every voyage starts with a consultation.</p>
 </div></section>
-<section class="pad"><div class="wrap"><div class="cgrid">
-  <form class="form" onsubmit="return false">
-    <div class="field"><label for="n">Name</label><input id="n" type="text" placeholder="Your name"></div>
-    <div class="field"><label for="co">Company</label><input id="co" type="text" placeholder="Company / organization"></div>
-    <div class="field"><label for="e">Email</label><input id="e" type="email" placeholder="you@company.com"></div>
-    <div class="field"><label for="t">Destination</label><select id="t"><option>Festival</option><option>Concert / Tour</option><option>Brand Activation</option><option>Immersive Experience</option><option>Sporting Event</option><option>TV, Film &amp; Broadcast</option><option>Other</option></select></div>
-    <div class="field"><label for="m">The Brief</label><textarea id="m" rows="5" placeholder="Tell us about the experience you want to build."></textarea></div>
-    <a class="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Send the Brief</a>
+<section className="pad"><div className="wrap"><div className="cgrid">
+  <form className="form">
+    <div className="field"><label htmlFor="n">Name</label><input id="n" type="text" placeholder="Your name" name="name"/></div>
+    <div className="field"><label htmlFor="co">Company</label><input id="co" type="text" placeholder="Company / organization" name="company"/></div>
+    <div className="field"><label htmlFor="e">Email</label><input id="e" type="email" placeholder="you@company.com" name="email"/></div>
+    <div className="field"><label htmlFor="t">Destination</label><select id="t" name="destination"><option>Festival</option><option>Concert / Tour</option><option>Brand Activation</option><option>Immersive Experience</option><option>Sporting Event</option><option>TV, Film &amp; Broadcast</option><option>Other</option></select></div>
+    <div className="field"><label htmlFor="m">The Brief</label><textarea id="m" rows={5} placeholder="Tell us about the experience you want to build." name="the-brief"></textarea></div>
+    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Send the Brief</a>
   </form>
-  <aside class="rail">
-    <div class="blk"><p class="lbl">Hail the Bridge</p><a href="mailto:hello@ghxstship.tours">hello@ghxstship.tours</a></div>
-    <div class="blk"><p class="lbl">Home Ports</p><p>Miami HQ &middot; Las Vegas &middot; Chicago &middot; New York &middot; Los Angeles</p></div>
-    <div class="blk"><p class="lbl">The Archives</p><a href="/work">See selected work &#8599;</a></div>
-    <div class="blk"><p class="lbl">Join the Crew</p><a href="/team">Learn the ropes &#8599;</a></div>
+  <aside className="rail">
+    <div className="blk"><p className="lbl">Hail the Bridge</p><a href="mailto:hello@ghxstship.tours">hello@ghxstship.tours</a></div>
+    <div className="blk"><p className="lbl">Home Ports</p><p>Miami HQ &middot; Las Vegas &middot; Chicago &middot; New York &middot; Los Angeles</p></div>
+    <div className="blk"><p className="lbl">The Archives</p><Link href="/work">See selected work &#8599;</Link></div>
+    <div className="blk"><p className="lbl">Join the Crew</p><Link href="/team">Learn the ropes &#8599;</Link></div>
   </aside>
 </div></div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"ContactPage","name":"Start a Project \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/contact"}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ContactPage","name":"Start a Project \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/contact"}` }} />
     </>
   );
 }

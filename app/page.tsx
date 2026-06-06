@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -8,7 +9,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   /* PREVIEW PAGE STYLES — every value reads a kit token (var(--*)); no hardcoded design literals. */
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--fg-on-dark-1);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
@@ -170,148 +174,147 @@ const __html = `<style>
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
+` }} />
+      
 
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
 
 <main>
-<section class="hero"><div class="wrap"><div class="hero-grid">
+<section className="hero"><div className="wrap"><div className="hero-grid">
   <div>
-    <p class="eyebrow">Production Management &nbsp;·&nbsp; Operations Leadership &nbsp;·&nbsp; Technology Innovations</p>
-    <h1>Beyond<br>the <span class="a">Scenes.</span></h1>
-    <p class="sub">GHXSTSHIP is the general contractor and project management partner for experiential production and
+    <p className="eyebrow">Production Management &nbsp;·&nbsp; Operations Leadership &nbsp;·&nbsp; Technology Innovations</p>
+    <h1>Beyond<br/>the <span className="a">Scenes.</span></h1>
+    <p className="sub">GHXSTSHIP is the general contractor and project management partner for experiential production and
       venue operations. We manage scope, schedule, budget, crew, and technology end to end — for brands,
       agencies, and venues producing festivals, activations, immersive experiences, and live events.</p>
-    <div class="cta-row">
-      <a class="gx-btn" href="#close">Start a Project</a>
-      <a class="gx-btn gx-btn--ghost" href="#work">See the Archives</a>
+    <div className="cta-row">
+      <a className="gx-btn" href="#close">Start a Project</a>
+      <a className="gx-btn gx-btn--ghost" href="#work">See the Archives</a>
     </div>
   </div>
-  <div class="hero-art"><div class="porthole" id="porthole">
-    <img class="on" alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop">
-    <img alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop">
-    <img alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop">
-    <img alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80&auto=format&fit=crop">
+  <div className="hero-art"><div className="porthole" id="porthole">
+    <img className="on" alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop"/>
+    <img alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop"/>
+    <img alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80&auto=format&fit=crop"/>
+    <img alt="GHXSTSHIP work" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80&auto=format&fit=crop"/>
   </div></div>
 </div></div></section>
 
-<div class="band"><div class="band-in wrap" style="padding-left:0;padding-right:0">
-  <div class="stat"><div class="v">14+</div><div class="k">Years</div></div>
-  <div class="stat"><div class="v">250+</div><div class="k">Experiences</div></div>
-  <div class="stat"><div class="v">5</div><div class="k">Home Ports</div></div>
-  <div class="stat"><div class="v">3</div><div class="k">In-House Platforms</div></div>
+<div className="band"><div className="band-in wrap" style={{paddingLeft: '0', paddingRight: '0'}}>
+  <div className="stat"><div className="v">14+</div><div className="k">Years</div></div>
+  <div className="stat"><div className="v">250+</div><div className="k">Experiences</div></div>
+  <div className="stat"><div className="v">5</div><div className="k">Home Ports</div></div>
+  <div className="stat"><div className="v">3</div><div className="k">In-House Platforms</div></div>
 </div></div>
 
-<section class="trust"><div class="wrap">
-  <p class="lbl">Trusted by the brands behind the moments</p>
-  <div class="marquee"><div class="track" aria-label="Trusted by Red Bull, Heineken, Formula 1, Insomniac, Patrón, Polymarket, Club Space, III Points, Factory Town and EDC">
+<section className="trust"><div className="wrap">
+  <p className="lbl">Trusted by the brands behind the moments</p>
+  <div className="marquee"><div className="track" aria-label="Trusted by Red Bull, Heineken, Formula 1, Insomniac, Patrón, Polymarket, Club Space, III Points, Factory Town and EDC">
     <span>Red Bull</span><span>Heineken</span><span>Formula 1</span><span>Insomniac</span><span>Patrón</span><span>Polymarket</span><span>Club Space</span><span>III Points</span><span>Factory Town</span><span>EDC</span>
     <span aria-hidden="true">Red Bull</span><span aria-hidden="true">Heineken</span><span aria-hidden="true">Formula 1</span><span aria-hidden="true">Insomniac</span><span aria-hidden="true">Patrón</span><span aria-hidden="true">Polymarket</span><span aria-hidden="true">Club Space</span><span aria-hidden="true">III Points</span><span aria-hidden="true">Factory Town</span><span aria-hidden="true">EDC</span>
   </div></div>
 </div></section>
 
-<section class="pos"><div class="wrap"><div class="grid">
-  <h2>The <span class="a">General Contractor</span>, <span class="b">Foreman</span>, and <span class="c">Procore</span> of experiential project management.</h2>
-  <p class="lede">GHXSTSHIP manages experiential production and venue operations the way a general
+<section className="pos"><div className="wrap"><div className="grid">
+  <h2>The <span className="a">General Contractor</span>, <span className="b">Foreman</span>, and <span className="c">Procore</span> of experiential project management.</h2>
+  <p className="lede">GHXSTSHIP manages experiential production and venue operations the way a general
     contractor manages a build — one accountable partner owning scope, schedule, budget, crew, and
     technology. Not a vendor chain: production management, operations leadership, and the platforms that
     run them, start to launch.</p>
 </div></div></section>
 
-<section class="journey" id="journey"><div class="wrap"><div class="j-grid">
-  <div class="rail">
-    <div class="rl on"><span class="n">1</span>The Destination</div>
-    <div class="rl"><span class="n">2</span>The Ship</div>
-    <div class="rl"><span class="n">3</span>The Course</div>
-    <div class="rl"><span class="n">4</span>The Crew</div>
-    <div class="rl"><span class="n">5</span>The Manifest</div>
-    <div class="rl"><span class="n">6</span>Launch</div>
+<section className="journey" id="journey"><div className="wrap"><div className="j-grid">
+  <div className="rail">
+    <div className="rl on"><span className="n">1</span>The Destination</div>
+    <div className="rl"><span className="n">2</span>The Ship</div>
+    <div className="rl"><span className="n">3</span>The Course</div>
+    <div className="rl"><span className="n">4</span>The Crew</div>
+    <div className="rl"><span className="n">5</span>The Manifest</div>
+    <div className="rl"><span className="n">6</span>Launch</div>
   </div>
-  <div class="j-steps">
-    <div class="step"><p class="sn">Step 01 · The Destination</p><h3>Share Your Vision.</h3><p>Start with the vision — the project goal, the experience worth building. That's the destination, and everything we build is sized to reach it.</p></div>
-    <div class="step"><p class="sn">Step 02 · The Ship</p><h3>Build Your Vessel.</h3><p>Pick the hull and the fit-out: a full build, a single discipline, or by the phase. The scope, customized to the destination you're reaching for.</p></div>
-    <div class="step"><p class="sn">Step 03 · The Course</p><h3>Chart the Course.</h3><p>Eight phases from first line to launch — Discovery to Close. The route we build to, with deliverables and owners at every stop.</p></div>
-    <div class="step"><p class="sn">Step 04 · The Crew</p><h3>Meet the Team.</h3><p>With the course charted, we assign the producers, operations leads, and technologists your build needs — the accountable crew, matched to the route.</p></div>
-    <div class="step"><p class="sn">Step 05 · The Manifest</p><h3>Pack Your Bags.</h3><p>Onboarding, approvals, and the know-before-you-go — everything settled and signed off before we go live.</p></div>
-    <div class="step"><p class="sn">Step 06 · Launch</p><h3>Anchors Away.</h3><p>The experience goes live. We run the show, hold the standard, and strike clean — then log the build.</p></div>
+  <div className="j-steps">
+    <div className="step"><p className="sn">Step 01 · The Destination</p><h3>Share Your Vision.</h3><p>Start with the vision — the project goal, the experience worth building. That's the destination, and everything we build is sized to reach it.</p></div>
+    <div className="step"><p className="sn">Step 02 · The Ship</p><h3>Build Your Vessel.</h3><p>Pick the hull and the fit-out: a full build, a single discipline, or by the phase. The scope, customized to the destination you're reaching for.</p></div>
+    <div className="step"><p className="sn">Step 03 · The Course</p><h3>Chart the Course.</h3><p>Eight phases from first line to launch — Discovery to Close. The route we build to, with deliverables and owners at every stop.</p></div>
+    <div className="step"><p className="sn">Step 04 · The Crew</p><h3>Meet the Team.</h3><p>With the course charted, we assign the producers, operations leads, and technologists your build needs — the accountable crew, matched to the route.</p></div>
+    <div className="step"><p className="sn">Step 05 · The Manifest</p><h3>Pack Your Bags.</h3><p>Onboarding, approvals, and the know-before-you-go — everything settled and signed off before we go live.</p></div>
+    <div className="step"><p className="sn">Step 06 · Launch</p><h3>Anchors Away.</h3><p>The experience goes live. We run the show, hold the standard, and strike clean — then log the build.</p></div>
   </div>
 </div></div></section>
 
-<section class="cap" id="cap"><div class="wrap">
-  <p class="eyebrow">The Fleet</p>
-  <h2 class="sec">Three Roles. One Yard.</h2>
-  <p class="lede">Production = Operations + Technology. The general contractor builds it, the foreman runs it, the platform coordinates it.</p>
-  <div class="cap-grid">
-    <div class="ccard p"><div class="bar"></div><p class="role">The General Contractor</p><h3>Production Management</h3><p>We build the ship. Scope, schedule, budget, fabrication, staging, and the finish — owned end to end.</p></div>
-    <div class="ccard o"><div class="bar"></div><p class="role">The Foreman</p><h3>Operations Leadership</h3><p>We crew it and run it. Logistics, staffing, safety, and the day-of call — clockwork at any scale.</p></div>
-    <div class="ccard t"><div class="bar"></div><p class="role">The Procore</p><h3>Technology Innovations</h3><p>We give the yard its instruments. ATLVS, COMPVSS &amp; GVTEWAY — chart the course, point the crew, open the gate.</p></div>
+<section className="cap" id="cap"><div className="wrap">
+  <p className="eyebrow">The Fleet</p>
+  <h2 className="sec">Three Roles. One Yard.</h2>
+  <p className="lede">Production = Operations + Technology. The general contractor builds it, the foreman runs it, the platform coordinates it.</p>
+  <div className="cap-grid">
+    <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Production Management</h3><p>We build the ship. Scope, schedule, budget, fabrication, staging, and the finish — owned end to end.</p></div>
+    <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Operations Leadership</h3><p>We crew it and run it. Logistics, staffing, safety, and the day-of call — clockwork at any scale.</p></div>
+    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Technology Innovations</h3><p>We give the yard its instruments. ATLVS, COMPVSS &amp; GVTEWAY — chart the course, point the crew, open the gate.</p></div>
   </div>
 </div></section>
 
-<section class="course" id="course"><div class="wrap">
-  <p class="eyebrow">The Course</p>
-  <h2 class="sec">Eight Phases, First Line to Launch.</h2>
-  <div class="smap">
-    <div class="stop done"><div class="dot">1</div><div class="nm">Discovery</div></div>
-    <div class="stop done"><div class="dot">2</div><div class="nm">Design</div></div>
-    <div class="stop done"><div class="dot">3</div><div class="nm">Advance</div></div>
-    <div class="stop done"><div class="dot">4</div><div class="nm">Procurement</div></div>
-    <div class="stop"><div class="dot">5</div><div class="nm">Build</div></div>
-    <div class="stop"><div class="dot">6</div><div class="nm">Install</div></div>
-    <div class="stop"><div class="dot">7</div><div class="nm">Operate</div></div>
-    <div class="stop"><div class="dot">8</div><div class="nm">Close</div></div>
+<section className="course" id="course"><div className="wrap">
+  <p className="eyebrow">The Course</p>
+  <h2 className="sec">Eight Phases, First Line to Launch.</h2>
+  <div className="smap">
+    <div className="stop done"><div className="dot">1</div><div className="nm">Discovery</div></div>
+    <div className="stop done"><div className="dot">2</div><div className="nm">Design</div></div>
+    <div className="stop done"><div className="dot">3</div><div className="nm">Advance</div></div>
+    <div className="stop done"><div className="dot">4</div><div className="nm">Procurement</div></div>
+    <div className="stop"><div className="dot">5</div><div className="nm">Build</div></div>
+    <div className="stop"><div className="dot">6</div><div className="nm">Install</div></div>
+    <div className="stop"><div className="dot">7</div><div className="nm">Operate</div></div>
+    <div className="stop"><div className="dot">8</div><div className="nm">Close</div></div>
   </div>
 </div></section>
 
-<section class="work" id="work"><div class="wrap">
-  <p class="eyebrow">The Archives</p>
-  <h2 class="sec">Selected Work.</h2>
-  <p class="lede">Case studies from the Archives — experiential project management we designed, built, crewed, and launched end to end.</p>
-  <div class="work-grid">
-    <article class="wcard"><div class="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"></div><div class="body"><h3>EDC Las Vegas</h3><p class="meta">Festival · Insomniac, Las Vegas · 2025–26</p></div></article>
-    <article class="wcard"><div class="media"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy"></div><div class="body"><h3>Black Coffee at the Race Track</h3><p class="meta">Concerts &amp; Tours · Club Space Miami · 2026</p></div></article>
-    <article class="wcard"><div class="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80&auto=format&fit=crop" alt="Polymarket Grocery" loading="lazy"></div><div class="body"><h3>Polymarket Grocery Store</h3><p class="meta">Brand Activation · 2026</p></div></article>
+<section className="work" id="work"><div className="wrap">
+  <p className="eyebrow">The Archives</p>
+  <h2 className="sec">Selected Work.</h2>
+  <p className="lede">Case studies from the Archives — experiential project management we designed, built, crewed, and launched end to end.</p>
+  <div className="work-grid">
+    <article className="wcard"><div className="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"/></div><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival · Insomniac, Las Vegas · 2025–26</p></div></article>
+    <article className="wcard"><div className="media"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy"/></div><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concerts &amp; Tours · Club Space Miami · 2026</p></div></article>
+    <article className="wcard"><div className="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80&auto=format&fit=crop" alt="Polymarket Grocery" loading="lazy"/></div><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation · 2026</p></div></article>
   </div>
 </div></section>
 
-<section class="close" id="close"><div class="wrap">
-  <p class="eyebrow" style="justify-content:center">Ready When You Are</p>
-  <h2>Start Your <span class="a">Project.</span></h2>
-  <p class="sub lede">Tell us the destination. We build the ship, crew it, chart the course, and launch — on time, on budget, beyond the scene.</p>
-  <div class="cta-row" style="justify-content:center">
-    <a class="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
-    <a class="gx-btn gx-btn--ghost gx-btn--lg" href="#work">See the Archives</a>
+<section className="close" id="close"><div className="wrap">
+  <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
+  <h2>Start Your <span className="a">Project.</span></h2>
+  <p className="sub lede">Tell us the destination. We build the ship, crew it, chart the course, and launch — on time, on budget, beyond the scene.</p>
+  <div className="cta-row" style={{justifyContent: 'center'}}>
+    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
+    <a className="gx-btn gx-btn--ghost gx-btn--lg" href="#work">See the Archives</a>
   </div>
 </div></section>
 </main>
 
 
 
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
 
-`;
-const __jsonLd: string[] = [
-  `{
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
   "@context":"https://schema.org","@type":"Organization","name":"GHXSTSHIP","alternateName":"G H X S T S H I P","legalName":"G H X S T S H I P Industries LLC",
   "url":"https://ghxstship.tours/","logo":"https://ghxstship.tours/logo.svg",
   "description":"GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We produce festivals, concerts and tours, brand activations, immersive experiences, and sporting events for brands, producers, creative directors, and production directors — through three verticals: Production, Operations, and Technology.",
@@ -340,8 +343,8 @@ const __jsonLd: string[] = [
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Luxury Retail Activations"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Water &amp; Motorsports Production"}}
     ]}
-}`,
-  `{"@context":"https://schema.org","@type":"HowTo","name":"The GHXSTSHIP Production Lifecycle",
+}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"HowTo","name":"The GHXSTSHIP Production Lifecycle",
  "description":"GHXSTSHIP's eight-phase methodology for delivering live experiences, from discovery to strike.",
  "step":[
   {"@type":"HowToStep","position":1,"name":"Project Discovery (Consultation)","text":"Goals, scope, and vision — the consultation that sets the route."},
@@ -352,21 +355,21 @@ const __jsonLd: string[] = [
   {"@type":"HowToStep","position":6,"name":"Operations &amp; Logistics","text":"Logistics, crew, vendors, scheduling, and load-in."},
   {"@type":"HowToStep","position":7,"name":"Live Activation","text":"Show calling and live execution — the experience itself."},
   {"@type":"HowToStep","position":8,"name":"Strike &amp; Post-Production","text":"Load-out, reconciliation, analytics, and the debrief."}
- ]}`,
-  `{"@context":"https://schema.org","@graph":[
+ ]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@graph":[
  {"@type":"SoftwareApplication","name":"ATLVS","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Production and resource management platform for experiential production teams.","publisher":{"@type":"Organization","name":"GHXSTSHIP"}},
  {"@type":"SoftwareApplication","name":"COMPVSS","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Enterprise workforce and crew management software for live event production.","publisher":{"@type":"Organization","name":"GHXSTSHIP"}},
  {"@type":"SoftwareApplication","name":"GVTEWAY","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Event ticketing, fan engagement, and community platform.","publisher":{"@type":"Organization","name":"GHXSTSHIP"}}
-]}`,
-  `{"@context":"https://schema.org","@graph":[
+]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@graph":[
  {"@type":"Service","name":"Festival Production","serviceType":"Festival production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Multi-stage festival production, infrastructure, staging, and headliner experiences at scale.","audience":{"@type":"Audience","audienceType":"Festival promoters, brands, and production directors"}},
  {"@type":"Service","name":"Concert &amp; Tour Production","serviceType":"Concert touring production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Concert touring, show production, and multi-city routing for live music.","audience":{"@type":"Audience","audienceType":"Artists, tour managers, and promoters"}},
  {"@type":"Service","name":"Brand Activations","serviceType":"Brand activation &amp; experiential marketing","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Experiential marketing, pop-ups, and brand environments that convert attention.","audience":{"@type":"Audience","audienceType":"Brands, agencies, and creative directors"}},
  {"@type":"Service","name":"Immersive Experiences","serviceType":"Immersive experience design","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Narrative installations and immersive worlds audiences step inside.","audience":{"@type":"Audience","audienceType":"Brands, museums, and cultural institutions"}},
  {"@type":"Service","name":"Sporting Events","serviceType":"Sporting event production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Stadium activations, fan experiences, and game-day production.","audience":{"@type":"Audience","audienceType":"Leagues, teams, brands, and venues"}},
  {"@type":"Service","name":"TV, Film &amp; Broadcast","serviceType":"Broadcast, film and television production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Live broadcast, film and TV content capture, and on-air activations.","audience":{"@type":"Audience","audienceType":"Networks, studios, streamers, and brands"}}
-]}`,
-  `{"@context":"https://schema.org","@type":"ItemList","name":"GHXSTSHIP Selected Work","itemListElement":[
+]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ItemList","name":"GHXSTSHIP Selected Work","itemListElement":[
  {"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"Black Coffee at the Race Track","about":"Concert experience production","locationCreated":"Club Space, Miami","datePublished":"2026-03"}},
  {"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"Polymarket Grocery Store","about":"Brand activation","datePublished":"2026-02"}},
  {"@type":"ListItem","position":3,"item":{"@type":"CreativeWork","name":"Salvage City Supper Club","about":"Immersive experience","locationCreated":"Club Space, Miami","datePublished":"2025-05"}},
@@ -376,8 +379,8 @@ const __jsonLd: string[] = [
  {"@type":"ListItem","position":7,"item":{"@type":"CreativeWork","name":"Factory Town","about":"Venue operations","locationCreated":"Miami","datePublished":"2023-12"}},
  {"@type":"ListItem","position":8,"item":{"@type":"CreativeWork","name":"Formula 1 Las Vegas Grand Prix","about":"Motorsports production","locationCreated":"Las Vegas","datePublished":"2023-11"}},
  {"@type":"ListItem","position":9,"item":{"@type":"CreativeWork","name":"Red Bull Unforeseen Motel","about":"Brand activation","locationCreated":"III Points, Miami","datePublished":"2023"}}
-]}`,
-  `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"What does GHXSTSHIP do?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We produce festivals, concerts and tours, brand activations, immersive experiences, and sporting events through three verticals: Production, Operations, and Technology."}},
  {"@type":"Question","name":"How do I work with GHXSTSHIP?","acceptedAnswer":{"@type":"Answer","text":"Working with GHXSTSHIP is a six-step journey: share your vision (the destination), build your vessel (the scope), chart the course (the eight-phase production lifecycle), meet your crew, pack the manifest, and launch. It starts with a consultation."}},
  {"@type":"Question","name":"What is the GHXSTSHIP production lifecycle?","acceptedAnswer":{"@type":"Answer","text":"An eight-phase methodology: Project Discovery, Research and Development, Creative Design, Compliance and Risk Management, Production and Build, Operations and Logistics, Live Activation, and Strike and Post-Production."}},
@@ -388,16 +391,7 @@ const __jsonLd: string[] = [
  {"@type":"Question","name":"What are ATLVS, COMPVSS, and GVTEWAY?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP's proprietary software: ATLVS (the Atlas) for production and resource management, COMPVSS (the Compass) for workforce and crew management, and GVTEWAY (the Gateway) for ticketing, fan engagement, and community."}},
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical rather than an afterthought."}},
  {"@type":"Question","name":"Where is GHXSTSHIP based?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP is headquartered in Miami, Florida, with offices in Las Vegas, Chicago, New York, and Los Angeles, and produces experiences worldwide."}}
-]}`,
-];
-
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+]}` }} />
       <Script id="inline-index-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
   (function(){
     var imgs=[].slice.call(document.querySelectorAll('#porthole img'));

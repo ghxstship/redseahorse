@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -7,7 +8,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://ghxstship.tours/store" },
 };
 
-const __html = `<style>
+export default function Page() {
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
   a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
@@ -85,65 +89,55 @@ const __html = `<style>
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
-</style>
-
-<header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="/" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"><b>G H X S T S H I P</b></a>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/resources/blog">Logs</a><a href="/store">Museum</a><a href="/gallery">Gallery</a><a href="/work">Archives</a>
-    <span class="cart" aria-live="polite"><i class="ph-bold ph-shopping-cart-simple"></i><span class="n" id="cartN">0</span></span>
-    <a class="gx-btn gx-btn--sm" href="/contact">Start a Project</a>
+` }} />
+      
+<header className="nav"><div className="wrap nav-inner">
+  <Link href="/" className="brand" aria-label="GHXSTSHIP home"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"/><b>G H X S T S H I P</b></Link>
+  <nav className="navlinks" aria-label="Primary">
+    <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
+    <span className="cart" aria-live="polite"><i className="ph-bold ph-shopping-cart-simple"></i><span className="n" id="cartN">0</span></span>
+    <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div class="wrap"><p class="crumbs"><a href="/">Home</a> / <span style="color:var(--brass)">The Museum</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>The Museum</span></p></div>
 <main>
-<section class="hero"><div class="wrap">
-  <p class="eyebrow">The Museum</p>
-  <h1>Fly the <span class="pop">Colors.</span></h1>
-  <p class="lede">Branded apparel and gear from the GHXSTSHIP yard across three lines &mdash; <span style="color:var(--brass)">Sitewear</span>, <span style="color:var(--plasma)">Streetwear</span>, and <span style="color:var(--nebula)">Performancewear</span>. Crew-grade goods, built to the same standard as the work. Checkout runs on GVTEWAY.</p>
-  <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin:16px 0 0"><a href="/brand/retail-kit" style="color:var(--brass);text-decoration:none">See the full retail kit &#8599;</a></p>
+<section className="hero"><div className="wrap">
+  <p className="eyebrow">The Museum</p>
+  <h1>Fly the <span className="pop">Colors.</span></h1>
+  <p className="lede">Branded apparel and gear from the GHXSTSHIP yard across three lines &mdash; <span style={{color: 'var(--brass)'}}>Sitewear</span>, <span style={{color: 'var(--plasma)'}}>Streetwear</span>, and <span style={{color: 'var(--nebula)'}}>Performancewear</span>. Crew-grade goods, built to the same standard as the work. Checkout runs on GVTEWAY.</p>
+  <p style={{fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', margin: '16px 0 0'}}><Link href="/brand/retail-kit" style={{color: 'var(--brass)', textDecoration: 'none'}}>See the full retail kit &#8599;</Link></p>
 </div></section>
-<section class="pad"><div class="wrap">
-  <div class="grid" id="grid">
-    <article class="pc a"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Sitewear &middot; GX-SW-AP-001</p><h3>Site Coverall</h3><div class="row"><span class="price">$148</span><button class="add" data-name="Site Coverall">Add</button></div></div></article>
-    <article class="pc a"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Sitewear &middot; GX-SW-AP-002</p><h3>Hi-Vis Crew Tee</h3><div class="row"><span class="price">$44</span><button class="add" data-name="Hi-Vis Crew Tee">Add</button></div></div></article>
-    <article class="pc b"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Streetwear &middot; GX-ST-AP-001</p><h3>Skull Flag Tee</h3><div class="row"><span class="price">$38</span><button class="add" data-name="Skull Flag Tee">Add</button></div></div></article>
-    <article class="pc b"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Streetwear &middot; GX-ST-AP-002</p><h3>Reef Night Hoodie</h3><div class="row"><span class="price">$74</span><button class="add" data-name="Reef Night Hoodie">Add</button></div></div></article>
-    <article class="pc b"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Streetwear &middot; GX-ST-AP-004</p><h3>Voyage Dad Cap</h3><div class="row"><span class="price">$32</span><button class="add" data-name="Voyage Dad Cap">Add</button></div></div></article>
-    <article class="pc c"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Performance &middot; GX-PW-AP-001</p><h3>Performance Tee</h3><div class="row"><span class="price">$42</span><button class="add" data-name="Performance Tee">Add</button></div></div></article>
-    <article class="pc c"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Performance &middot; GX-PW-AP-003</p><h3>Track Jacket</h3><div class="row"><span class="price">$88</span><button class="add" data-name="Track Jacket">Add</button></div></div></article>
-    <article class="pc b"><div class="media"><img src="/assets/skull-bone.svg" alt=""></div><div class="body"><p class="cat">Streetwear &middot; GX-ST-AC-002</p><h3>Enamel Skull Pin</h3><div class="row"><span class="price">$14</span><button class="add" data-name="Enamel Skull Pin">Add</button></div></div></article>
+<section className="pad"><div className="wrap">
+  <div className="grid" id="grid">
+    <article className="pc a"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Sitewear &middot; GX-SW-AP-001</p><h3>Site Coverall</h3><div className="row"><span className="price">$148</span><button className="add" data-name="Site Coverall">Add</button></div></div></article>
+    <article className="pc a"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Sitewear &middot; GX-SW-AP-002</p><h3>Hi-Vis Crew Tee</h3><div className="row"><span className="price">$44</span><button className="add" data-name="Hi-Vis Crew Tee">Add</button></div></div></article>
+    <article className="pc b"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Streetwear &middot; GX-ST-AP-001</p><h3>Skull Flag Tee</h3><div className="row"><span className="price">$38</span><button className="add" data-name="Skull Flag Tee">Add</button></div></div></article>
+    <article className="pc b"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Streetwear &middot; GX-ST-AP-002</p><h3>Reef Night Hoodie</h3><div className="row"><span className="price">$74</span><button className="add" data-name="Reef Night Hoodie">Add</button></div></div></article>
+    <article className="pc b"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Streetwear &middot; GX-ST-AP-004</p><h3>Voyage Dad Cap</h3><div className="row"><span className="price">$32</span><button className="add" data-name="Voyage Dad Cap">Add</button></div></div></article>
+    <article className="pc c"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Performance &middot; GX-PW-AP-001</p><h3>Performance Tee</h3><div className="row"><span className="price">$42</span><button className="add" data-name="Performance Tee">Add</button></div></div></article>
+    <article className="pc c"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Performance &middot; GX-PW-AP-003</p><h3>Track Jacket</h3><div className="row"><span className="price">$88</span><button className="add" data-name="Track Jacket">Add</button></div></div></article>
+    <article className="pc b"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Streetwear &middot; GX-ST-AC-002</p><h3>Enamel Skull Pin</h3><div className="row"><span className="price">$14</span><button className="add" data-name="Enamel Skull Pin">Add</button></div></div></article>
   </div>
-  <p class="note">Secure checkout powered by <b>GVTEWAY</b> &middot; Free crew shipping over $100 &middot; Product photography drops in as the line ships</p>
+  <p className="note">Secure checkout powered by <b>GVTEWAY</b> &middot; Free crew shipping over $100 &middot; Product photography drops in as the line ships</p>
 </div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <a class="brand" href="/"><img src="/assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></a>
-      <p class="foot-tag" style="color:var(--bone)">The <span style="color:var(--brass)">General Contractor</span>, <span style="color:var(--nebula)">Foreman</span> &amp; <span style="color:var(--plasma)">Procore</span> of experiential project management.</p>
-      <p class="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
-      <div class="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i class="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i class="ph-bold ph-x-logo"></i></a></div>
+<footer className="site-foot"><div className="wrap">
+  <div className="foot-grid">
+    <div className="foot-brand">
+      <Link href="/" className="brand"><img src="/assets/skull-bone.svg" alt=""/><b>G H X S T S H I P</b></Link>
+      <p className="foot-tag" style={{color: 'var(--bone)'}}>The <span style={{color: 'var(--brass)'}}>General Contractor</span>, <span style={{color: 'var(--nebula)'}}>Foreman</span> &amp; <span style={{color: 'var(--plasma)'}}>Procore</span> of experiential project management.</p>
+      <p className="foot-ports"><span>Miami</span><span>Las Vegas</span><span>Chicago</span><span>New York</span><span>Los Angeles</span></p>
+      <div className="foot-social"><a href="https://instagram.com/ghxstship" aria-label="Instagram"><i className="ph-bold ph-instagram-logo"></i></a><a href="https://linkedin.com/company/ghxstship" aria-label="LinkedIn"><i className="ph-bold ph-linkedin-logo"></i></a><a href="https://youtube.com/@ghxstship" aria-label="YouTube"><i className="ph-bold ph-youtube-logo"></i></a><a href="https://tiktok.com/@ghxstship" aria-label="TikTok"><i className="ph-bold ph-tiktok-logo"></i></a><a href="https://x.com/ghxstship" aria-label="X"><i className="ph-bold ph-x-logo"></i></a></div>
     </div>
-    <nav class="foot-col"><h5>Explore</h5><a href="/destinations">Destinations</a><a href="/solutions">Fleet</a><a href="/team">Crew</a><a href="/#course">Course</a><a href="/work">Archives</a><a href="/resources/blog">Logs</a><a href="/gallery">Gallery</a><a href="/store">Museum</a></nav>
-    <nav class="foot-col"><h5>Company</h5><a href="/about">The Story</a><a href="/locations">Home Ports</a><a href="/resources/glossary">Glossary</a><a href="/careers">Careers</a><a href="/contact">Contact</a><a href="/contact">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="/solutions">ATLVS</a><a href="/solutions">COMPVSS</a><a href="/solutions">GVTEWAY</a></nav>
+    <nav className="foot-col"><h5>Explore</h5><Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/#course">Course</Link><Link href="/work">Archives</Link><Link href="/resources/blog">Logs</Link><Link href="/gallery">Gallery</Link><Link href="/store">Museum</Link></nav>
+    <nav className="foot-col"><h5>Company</h5><Link href="/about">The Story</Link><Link href="/locations">Home Ports</Link><Link href="/resources/glossary">Glossary</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><Link href="/contact">Start a Project</Link></nav>
+    <nav className="foot-col"><h5>Platforms</h5><Link href="/solutions">ATLVS</Link><Link href="/solutions">COMPVSS</Link><Link href="/solutions">GVTEWAY</Link></nav>
   </div>
-  <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
+  <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
 
-`;
-const __jsonLd: string[] = [
-  `{"@context":"https://schema.org","@type":"Store","name":"The GHXSTSHIP Ship's Store","url":"https://ghxstship.tours/store","description":"Branded apparel, prints, and gear from GHXSTSHIP.","brand":{"@type":"Brand","name":"GHXSTSHIP"}}`,
-];
 
-export default function Page() {
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html }} />
-      {__jsonLd.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: d }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Store","name":"The GHXSTSHIP Ship's Store","url":"https://ghxstship.tours/store","description":"Branded apparel, prints, and gear from GHXSTSHIP.","brand":{"@type":"Brand","name":"GHXSTSHIP"}}` }} />
       <Script id="inline-store-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
   (function(){var n=0;var el=document.getElementById('cartN');
    document.getElementById('grid').addEventListener('click',function(e){
