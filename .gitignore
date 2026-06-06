@@ -1,0 +1,5 @@
+dist/
+.DS_Store
+.thumbnail
+node_modules/
+*.log
