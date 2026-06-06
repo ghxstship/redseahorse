@@ -1,0 +1,23 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{margin:0}.stage{width:700px;background:var(--ink);padding:28px 30px;box-sizing:border-box}
+.eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;color:var(--brass);text-transform:uppercase;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.t{height:96px;border:2px solid rgba(255,255,255,.15);border-radius:4px}
+.l{font-family:var(--font-mono);font-size:10px;color:var(--fg-on-dark-2);margin-top:7px;letter-spacing:.06em}
+.dots-ink{background:radial-gradient(#101A1B 22%,transparent 23%) 0 0/10px 10px,#EDF1EF}
+.dots-brass{background:radial-gradient(#E9A23B 24%,transparent 25%) 0 0/12px 12px,#101A1B}
+.dots-fade{background:radial-gradient(rgba(251,250,246,.9) 22%,transparent 23%) 0 0/9px 9px;-webkit-mask:linear-gradient(180deg,#000,transparent);mask:linear-gradient(180deg,#000,transparent);background-color:transparent}
+.stripe{background:repeating-linear-gradient(45deg,#E9A23B 0 12px,#101A1B 12px 24px)}
+</style></head>
+<body><div class="stage">
+  <p class="eb">Pop textures · CSS-only, no images</p>
+  <div class="grid">
+    <div><div class="t dots-ink"></div><div class="l">HALFTONE / INK</div></div>
+    <div><div class="t dots-brass"></div><div class="l">HALFTONE / BRASS</div></div>
+    <div><div class="t dots-fade" style="background-color:#18262A"></div><div class="l">HALFTONE / FADE</div></div>
+    <div><div class="t stripe"></div><div class="l">RIGGING STRIPE 45°</div></div>
+  </div>
+</div></body></html>

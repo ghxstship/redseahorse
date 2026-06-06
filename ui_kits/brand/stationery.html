@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Stationery & Collateral</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0c0e16;color:var(--bone);font-family:var(--font-body)}
+  .page{max-width:1180px;margin:0 auto;padding:44px 40px 90px}
+  .head .eb{font-family:var(--font-mono);font-size:13px;letter-spacing:.24em;color:var(--brass);text-transform:uppercase;margin:0 0 10px}
+  .head h1{font-family:var(--font-display);font-weight:900;font-size:50px;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+  .head p{font-size:14px;color:var(--fg-on-dark-2);margin:10px 0 0;max-width:720px;line-height:1.55}
+  .grp{margin-top:44px}.grp h2{font-family:var(--font-mono);font-size:12px;letter-spacing:.2em;color:var(--fg-on-dark-3);text-transform:uppercase;border-bottom:var(--stroke-2) solid #1d2233;padding-bottom:12px;margin:0 0 24px}
+  .row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  .cap{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase;margin-top:12px}
+  .wm-nowrap{white-space:nowrap}
+  /* business cards */
+  .card{width:340px;height:200px;border-radius:8px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5);position:relative}
+  .card.front{background:var(--void);border:var(--stroke-2) solid var(--ink-3);padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+  .card.front .top{display:flex;align-items:center;gap:10px}
+  .card.front .top img{width:30px;height:30px;image-rendering:pixelated}
+  .card.front .top b{font-family:var(--font-display);font-weight:900;font-size:17px;letter-spacing:.04em;text-transform:uppercase}
+  .card .nm{font-family:var(--font-display);font-weight:900;font-size:22px;text-transform:uppercase;margin:0;line-height:1}
+  .card .rank{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin-top:4px}
+  .card .ct{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;color:var(--fg-on-dark-3);margin-top:10px;line-height:1.7;text-transform:uppercase}
+  .card.back{background:var(--brass);display:grid;place-items:center}
+  .card.back .bk{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .card.back img{width:56px;height:56px;image-rendering:pixelated}
+  .card.back .vb{font-family:var(--font-display);font-weight:900;font-size:20px;text-transform:uppercase;color:var(--ink);letter-spacing:.04em}
+  .card.back .stripe{position:absolute;left:0;right:0;bottom:0;height:12px;background:repeating-linear-gradient(45deg,var(--ink) 0 10px,var(--brass) 10px 20px)}
+  /* letterhead */
+  .letter{width:480px;background:var(--bone);color:var(--ink);border-radius:var(--r-1);overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+  .letter .lh{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:var(--stroke-3) solid var(--ink)}
+  .letter .lh .b{display:flex;align-items:center;gap:9px}
+  .letter .lh img{width:24px;height:24px;image-rendering:pixelated}
+  .letter .lh b{font-family:var(--font-display);font-weight:900;font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+  .letter .lh .st{font-family:var(--font-mono);font-size:8px;letter-spacing:.1em;color:var(--brass-deep);text-transform:uppercase}
+  .letter .body{padding:22px 24px;font-size:11px;line-height:1.7;color:var(--fg-on-light-2)}
+  .letter .body .m{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;color:var(--fg-on-light-3);text-transform:uppercase;margin-bottom:14px}
+  .letter .lf{padding:12px 24px;border-top:var(--stroke-2) solid var(--parchment-2);font-family:var(--font-mono);font-size:8px;letter-spacing:.08em;color:var(--fg-on-light-3);text-transform:uppercase;display:flex;justify-content:space-between}
+  /* email signature */
+  .sig{background:#fff;border-radius:var(--r-2);padding:18px 20px;display:flex;gap:16px;align-items:center;box-shadow:0 14px 40px rgba(0,0,0,.5);max-width:420px}
+  .sig .lz{width:54px;height:54px;background:var(--ink);display:grid;place-items:center;border-radius:var(--r-2);flex:none}
+  .sig .lz img{width:38px;height:38px;image-rendering:pixelated}
+  .sig .nm{font-family:var(--font-display);font-weight:900;font-size:18px;text-transform:uppercase;color:var(--ink);line-height:1}
+  .sig .rk{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep);margin-top:3px}
+  .sig .ct{font-family:var(--font-mono);font-size:9px;color:#667099;margin-top:8px;line-height:1.6;letter-spacing:.04em}
+  .sig .ct b{color:var(--ink)}
+  /* invoice */
+  .inv{width:480px;background:var(--bone);color:var(--ink);border-radius:var(--r-1);overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+  .inv .ih{background:var(--void);color:var(--bone);padding:20px 24px;display:flex;justify-content:space-between;align-items:flex-start}
+  .inv .ih .b{display:flex;align-items:center;gap:9px}.inv .ih img{width:24px;height:24px;image-rendering:pixelated}
+  .inv .ih b{font-family:var(--font-display);font-weight:900;font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+  .inv .ih .t{text-align:right}.inv .ih .t .big{font-family:var(--font-display);font-weight:900;font-size:24px;text-transform:uppercase;color:var(--brass)}
+  .inv .ih .t .no{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:var(--fg-on-dark-3);margin-top:3px}
+  .inv table{width:100%;border-collapse:collapse}
+  .inv th{font-family:var(--font-mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-light-3);text-align:left;padding:10px 24px;border-bottom:var(--stroke-2) solid var(--ink)}
+  .inv td{padding:10px 24px;border-bottom:1px solid var(--parchment-2);font-size:12px;color:var(--fg-on-light-2)}
+  .inv td.r,.inv th.r{text-align:right}
+  .inv tr.tot td{font-family:var(--font-display);font-weight:900;font-size:16px;text-transform:uppercase;color:var(--ink);border-bottom:0;border-top:var(--stroke-2) solid var(--ink)}
+  .inv tr.tot td.r{color:var(--brass-deep)}
+</style></head>
+<body><div class="page">
+  <div class="head">
+    <p class="eb">Brand System · Stationery &amp; Collateral</p>
+    <h1>The Paper Trail</h1>
+    <p>Business cards, letterhead, email signature, and invoice — the everyday brand touchpoints, on-system. Wordmark spaced, white-skull mark, brass-on-ink.</p>
+  </div>
+
+  <div class="grp"><h2>Business Card</h2>
+    <div class="row">
+      <div><div class="card front">
+        <div class="top"><img src="../../assets/skull-bone.svg" alt=""><b class="wm-nowrap">G H X S T S H I P</b></div>
+        <div><p class="nm">J. Roker</p><p class="rank">Captain · Executive Producer</p>
+          <p class="ct">hello@ghxstship.tours · +1 [000] 000 0000<br>Miami // Las Vegas // Chicago // NY // LA</p></div>
+      </div><p class="cap">Front</p></div>
+      <div><div class="card back"><div class="bk"><img src="../../assets/skull-bone.svg" alt=""><span class="vb">Venture Beyond</span></div><div class="stripe"></div></div><p class="cap">Back</p></div>
+    </div>
+  </div>
+
+  <div class="grp"><h2>Letterhead</h2>
+    <div class="row">
+      <div><div class="letter">
+        <div class="lh"><div class="b"><img src="../../assets/logo-ghostship-skull.svg" alt=""><b class="wm-nowrap">G H X S T S H I P</b></div><span class="st">Miami HQ</span></div>
+        <div class="body"><p class="m">Project RRR 052 · [Date]</p>
+          <p>Dear [Client],</p>
+          <p>Thank you for coming aboard. This letter confirms the scope and schedule for your project, produced end to end by the GHXSTSHIP team across our eight-phase production lifecycle…</p>
+          <p style="margin-top:14px">Venture Beyond,<br><b style="color:var(--ink)">The Crew</b></p>
+        </div>
+        <div class="lf"><span>G H X S T S H I P Industries LLC</span><span>ghxstship.tours</span></div>
+      </div><p class="cap">Letterhead · A4 / Letter</p></div>
+
+      <div><div class="sig">
+        <div class="lz"><img src="../../assets/skull-bone.svg" alt=""></div>
+        <div><p class="nm">J. Roker</p><p class="rk">Captain · Executive Producer</p>
+          <p class="ct"><b>G H X S T S H I P</b><br>hello@ghxstship.tours · ghxstship.tours<br>Miami // Las Vegas // Chicago // NY // LA</p></div>
+      </div><p class="cap">Email signature</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grp"><h2>Invoice</h2>
+    <div class="row">
+      <div><div class="inv">
+        <div class="ih"><div class="b"><img src="../../assets/skull-bone.svg" alt=""><b class="wm-nowrap">G H X S T S H I P</b></div>
+          <div class="t"><div class="big">Invoice</div><div class="no">No. GX-2026-052 · Project RRR 052</div></div></div>
+        <table>
+          <thead><tr><th>Phase / Workstream</th><th class="r">Amount</th></tr></thead>
+          <tbody>
+            <tr><td>Discovery &amp; Creative Design (01–03)</td><td class="r">$[00,000]</td></tr>
+            <tr><td>Production &amp; Build (05)</td><td class="r">$[000,000]</td></tr>
+            <tr><td>Operations &amp; Logistics (06)</td><td class="r">$[00,000]</td></tr>
+            <tr><td>Live Activation (07)</td><td class="r">$[00,000]</td></tr>
+            <tr class="tot"><td>Total Due</td><td class="r">$[000,000]</td></tr>
+          </tbody>
+        </table>
+        <div class="lf" style="padding:12px 24px;border-top:var(--stroke-2) solid var(--parchment-2);font-family:var(--font-mono);font-size:8px;letter-spacing:.08em;color:var(--fg-on-light-3);text-transform:uppercase;display:flex;justify-content:space-between"><span>Net 30 · Wire / ACH</span><span>hello@ghxstship.tours</span></div>
+      </div><p class="cap">Invoice</p></div>
+    </div>
+  </div>
+
+</div></body></html>

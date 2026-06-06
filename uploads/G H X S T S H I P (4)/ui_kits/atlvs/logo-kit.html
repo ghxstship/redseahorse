@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLVS — Logo Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono&display=swap">
+<style>
+  :root{--pink:#FF2E88;--amber:#E9A23B;--cyan:#21D4D4;--ink:#181B23;--bg:#F7F8FA;--surface:#fff;--border:#E4E7EC;--muted:#8C95A3;--text2:#5B6472;}
+  *{box-sizing:border-box}
+  html,body{margin:0;font-family:"Space Grotesk",sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 32px 80px}
+  .head .eb{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  .head h1{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:0}
+  .head p{font-size:15px;color:var(--text2);margin:10px 0 0;max-width:680px;line-height:1.55}
+  .wm{font-weight:700;letter-spacing:.18em;white-space:nowrap}
+  .mono{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  section{margin-top:40px}
+  h2{font-size:12px;font-family:"Space Mono",monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:12px;margin:0 0 22px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 1px 2px rgba(16,20,30,.05)}
+  .row{display:flex;gap:18px;flex-wrap:wrap}
+  .lockup{display:flex;align-items:center;gap:18px;padding:28px}
+  .lockup img{width:64px;height:64px}
+  .lockup .wm{font-size:32px}
+  .lockup .lk{display:flex;flex-direction:column}
+  .lockup .sub{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;width:100%;display:flex;justify-content:space-between}
+  .cap{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:10px}
+  .icons{display:flex;gap:20px;flex-wrap:wrap}
+  .iconcell{text-align:center}
+  .iconcell img{width:88px;height:88px;border-radius:20px;box-shadow:0 2px 8px rgba(16,20,30,.1)}
+  .sizes{display:flex;align-items:flex-end;gap:20px}
+  .sizes img{display:block}
+  .dark{background:#111318;border-color:#23262e}
+  .dark .wm{color:#F2F4F8}.dark .sub{color:#6E7682}
+  .clearbox{position:relative;padding:36px;display:inline-block;background:repeating-linear-gradient(45deg,#eef0f3 0 8px,transparent 8px 16px);border-radius:10px}
+  .clearbox .inner{background:var(--surface);border:1px dashed var(--pink);padding:24px;display:flex;align-items:center;gap:16px}
+  .clearbox img{width:54px;height:54px}
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:720px){.dd{grid-template-columns:1fr}}
+  .do,.dont{padding:18px 20px;border-radius:10px;font-size:13px;line-height:1.6;color:var(--text2)}
+  .do{background:rgba(47,169,104,.08);border:1px solid rgba(47,169,104,.3)}
+  .dont{background:rgba(229,72,77,.07);border:1px solid rgba(229,72,77,.3)}
+  .do b{color:#1f8a55}.dont b{color:#c2333a}
+  .do ul,.dont ul{margin:8px 0 0;padding-left:18px}
+  .endorse{display:flex;align-items:center;gap:16px;padding:22px 26px}
+  .endorse .div{width:1px;height:38px;background:var(--border)}
+  .endorse img{image-rendering:pixelated}
+</style></head>
+<body><div class="wrap">
+  <div class="head">
+    <p class="eb">ATLVS Technologies · Brand</p>
+    <h1>The Logo Kit</h1>
+    <p>The ATLVS mark is a <b>waypoint</b> — an eight-point navigational star with a center void, the navigation system rendered as one geometric glyph. Neutral SaaS register; recolors per product. Distinct from the cosmic GHXSTSHIP ghost-ship skull (the parent-company mark).</p>
+  </div>
+
+  <section>
+    <h2>Primary Lockup</h2>
+    <div class="row">
+      <div class="card lockup"><img src="../../assets/atlvs-mark.svg" alt="ATLVS mark"><div class="lk"><div class="wm" style="color:var(--ink)">A T L V S</div><div class="sub"><span>T</span><span>E</span><span>C</span><span>H</span><span>N</span><span>O</span><span>L</span><span>O</span><span>G</span><span>I</span><span>E</span><span>S</span></div></div></div>
+      <div class="card lockup dark"><img src="../../assets/atlvs-mark-white.svg" alt="ATLVS mark white"><div class="lk"><div class="wm">A T L V S</div><div class="sub"><span>T</span><span>E</span><span>C</span><span>H</span><span>N</span><span>O</span><span>L</span><span>O</span><span>G</span><span>I</span><span>E</span><span>S</span></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Product App-Icons — one mark, three accents</h2>
+    <div class="card" style="padding:28px"><div class="icons">
+      <div class="iconcell"><img src="../../assets/atlvs-icon-atlvs.svg" alt="ATLVS icon"><div class="cap">ATLVS · pink<br>Producer / Internal</div></div>
+      <div class="iconcell"><img src="../../assets/atlvs-icon-compvss.svg" alt="COMPVSS icon"><div class="cap">COMPVSS · amber<br>Crew / Vendor / Talent</div></div>
+      <div class="iconcell"><img src="../../assets/atlvs-icon-gvteway.svg" alt="GVTEWAY icon"><div class="cap">GVTEWAY · cyan<br>Guest / Client</div></div>
+      <div class="iconcell"><img src="../../assets/atlvs-icon-ink.svg" alt="Neutral icon"><div class="cap">Ink<br>Neutral / Suite</div></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2>Favicon / Min-size — the mark holds at every scale</h2>
+    <div class="card" style="padding:28px"><div class="sizes">
+      <div class="iconcell"><img src="../../assets/atlvs-icon-atlvs.svg" style="width:64px;height:64px;border-radius:14px"><div class="cap">64</div></div>
+      <div class="iconcell"><img src="../../assets/atlvs-icon-atlvs.svg" style="width:48px;height:48px;border-radius:11px"><div class="cap">48</div></div>
+      <div class="iconcell"><img src="../../assets/atlvs-icon-atlvs.svg" style="width:32px;height:32px;border-radius:8px"><div class="cap">32</div></div>
+      <div class="iconcell"><img src="../../assets/atlvs-mark.svg" style="width:16px;height:16px"><div class="cap">16 · bare mark</div></div>
+    </div></div>
+  </section>
+
+  <section>
+    <h2>Clearspace — keep margin = ½ mark height on all sides</h2>
+    <div class="clearbox"><div class="inner"><img src="../../assets/atlvs-mark.svg"><div class="wm" style="font-size:22px">A T L V S</div></div></div>
+  </section>
+
+  <section>
+    <h2>Endorsement — ATLVS + GHXSTSHIP parent</h2>
+    <div class="card endorse"><img src="../../assets/atlvs-mark.svg" style="width:44px;height:44px"><div class="wm" style="font-size:22px">A T L V S</div><div class="div"></div><img src="../../assets/logo-ghostship-skull.svg" style="width:30px;height:30px"><div class="mono" style="line-height:1.6">a G H X S T S H I P<br>Industries company</div></div>
+  </section>
+
+  <section>
+    <h2>Do · Don't</h2>
+    <div class="dd">
+      <div class="do"><b>Do</b><ul><li>Recolor the tile to the product accent; keep the mark white (or ink on light).</li><li>Maintain clearspace = ½ mark height.</li><li>Use the bare mark at ≤16px; the tiled icon at ≥32px.</li><li>Pair with the spaced <b>A&nbsp;T&nbsp;L&nbsp;V&nbsp;S</b> wordmark, nowrap.</li></ul></div>
+      <div class="dont"><b>Don't</b><ul><li>Recolor or gradient the star itself — only the tile carries color.</li><li>Rotate, stretch, or add the cosmic halftone/skull to it.</li><li>Set the wordmark unspaced or lowercase.</li><li>Place the mark on a busy photo without the solid tile.</li></ul></div>
+    </div>
+  </section>
+</div></body></html>

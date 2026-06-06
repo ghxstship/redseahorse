@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Post-Event Recap Template</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0c0e16;font-family:var(--font-body)}
+  .wrap{max-width:900px;margin:0 auto;padding:30px 20px 80px}
+  .note{font-family:var(--font-mono);font-size:10px;color:#667099;text-align:center;margin:0 0 16px;letter-spacing:.06em}
+  .doc{background:var(--void);color:var(--bone);box-shadow:0 24px 60px rgba(0,0,0,.5);overflow:hidden;border:var(--stroke-3) solid var(--ink-3);border-radius:var(--r-2)}
+  .cover{padding:52px 54px;border-bottom:var(--stroke-3) solid var(--brass);position:relative;overflow:hidden}
+  .cover::before{content:"";position:absolute;inset:0;background:radial-gradient(var(--ink-3) 1.4px,transparent 1.5px) 0 0/26px 26px;opacity:.5;-webkit-mask:radial-gradient(120% 90% at 85% 0%,#000,transparent);mask:radial-gradient(120% 90% at 85% 0%,#000,transparent)}
+  .brand{display:flex;align-items:center;gap:11px;position:relative}
+  .brand img{width:30px;height:30px;image-rendering:pixelated}
+  .brand b{font-family:var(--font-display);font-weight:900;font-size:18px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .dt{position:relative;font-family:var(--font-mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin:40px 0 12px}
+  .cover h1{position:relative;font-family:var(--font-display);font-weight:900;font-size:54px;line-height:.9;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 10px}
+  .cover .meta{position:relative;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-2)}
+  .cover .meta .vy{color:var(--brass);font-weight:700}
+  .sec{padding:40px 54px;border-bottom:1px solid var(--ink-3)}
+  .eb{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 14px}
+  .sec h2{font-family:var(--font-display);font-weight:900;font-size:30px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 16px}
+  .sec p{font-size:15px;line-height:1.65;color:var(--fg-on-dark-2);margin:0 0 12px}
+  /* results */
+  .results{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:680px){.results{grid-template-columns:repeat(2,1fr)}}
+  .res{border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:18px;background:var(--ink)}
+  .res .v{font-family:var(--font-display);font-weight:900;font-size:42px;line-height:.85;color:var(--brass)}
+  .res:nth-child(2) .v{color:var(--nebula)}.res:nth-child(3) .v{color:var(--plasma)}.res:nth-child(4) .v{color:var(--bone)}
+  .res .k{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin-top:8px}
+  /* gallery */
+  .gal{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;grid-auto-rows:120px}
+  .ph{border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);position:relative;display:grid;place-items:center;color:var(--fg-on-dark-3);overflow:hidden}
+  .ph:first-child{grid-row:span 2}
+  .ph i{font-size:30px;opacity:.4}
+  .ph span{position:absolute;left:10px;bottom:8px;font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .ph.a{background:repeating-linear-gradient(45deg,#18262A 0 14px,#101A1B 14px 28px)}
+  .ph.b{background:radial-gradient(var(--nebula) 14%,transparent 15%) 0 0/16px 16px,var(--ink)}
+  .ph.c{background:repeating-linear-gradient(-45deg,#21D4D4 0 3px,#101A1B 3px 18px)}
+  .ph.d{background:radial-gradient(var(--brass) 14%,transparent 15%) 0 0/15px 15px,var(--ink)}
+  /* delivered list */
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  @media(max-width:680px){.deliv{grid-template-columns:1fr}}
+  .dl{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--fg-on-dark-2);padding:8px 0}
+  .dl i{color:var(--success);font-size:16px}
+  /* quote */
+  .quote{border-left:var(--stroke-4) solid var(--brass);padding:6px 0 6px 20px;margin-top:6px}
+  .quote p{font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.2;text-transform:uppercase;color:var(--bone);margin:0 0 10px}
+  .quote .who{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+  /* cta */
+  .cta{padding:46px 54px;text-align:center;background:var(--ink);position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:0;background:var(--halftone-brass);background-size:18px 18px;opacity:.1}
+  .cta h2{position:relative;font-family:var(--font-display);font-weight:900;font-size:40px;text-transform:uppercase;margin:0 0 16px}
+  .ft{padding:16px 54px;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase;text-align:center;border-top:var(--stroke-2) solid var(--ink-3)}
+  @media print{body{background:#fff}.wrap{padding:0;max-width:none}.note{display:none}.doc{border:0;box-shadow:none}}
+</style></head>
+<body><div class="wrap">
+<p class="note">Post-event recap template — replace bracketed fields + drop in real photography. Print/PDF (Cmd/Ctrl+P).</p>
+<div class="doc">
+  <div class="cover">
+    <div class="brand"><img src="../../assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></div>
+    <p class="dt">◆ Project Recap · Phase 08 Strike &amp; Post</p>
+    <h1>Salvage City<br>Supper Club</h1>
+    <p class="meta">Project <span class="vy">RRR 052</span> &nbsp;·&nbsp; Club Space · Miami &nbsp;·&nbsp; [Dates] &nbsp;·&nbsp; Arrived</p>
+  </div>
+
+  <div class="sec">
+    <p class="eb">01 · The Numbers</p>
+    <h2>Destination Reached.</h2>
+    <div class="results">
+      <div class="res"><div class="v">[00K]</div><div class="k">Guests</div></div>
+      <div class="res"><div class="v">[00M]</div><div class="k">Impressions</div></div>
+      <div class="res"><div class="v">[00%]</div><div class="k">Sell-Through</div></div>
+      <div class="res"><div class="v">[00]</div><div class="k">Days On Site</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="eb">02 · The Project</p>
+    <h2>Highlights.</h2>
+    <p>[Two or three sentences on what made this one unforgettable — the signature moment, the scale, the
+      reaction. Keep it punchy and specific; let the photography carry the rest.]</p>
+    <div class="gal" style="margin-top:16px">
+      <div class="ph a"><i class="ph-bold ph-image"></i><span>Hero · full-bleed</span></div>
+      <div class="ph b"><i class="ph-bold ph-image"></i><span>Crowd</span></div>
+      <div class="ph c"><i class="ph-bold ph-image"></i><span>Stage</span></div>
+      <div class="ph d"><i class="ph-bold ph-image"></i><span>Detail</span></div>
+      <div class="ph a"><i class="ph-bold ph-image"></i><span>Activation</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="eb">03 · What We Delivered</p>
+    <h2>The Full Eight.</h2>
+    <div class="deliv">
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Discovery &amp; creative direction</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> R&amp;D &amp; feasibility</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Creative design &amp; renders</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Compliance, permits &amp; safety</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Production &amp; scenic build</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Operations, crew &amp; logistics</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Live activation &amp; show calling</div>
+      <div class="dl"><i class="ph-bold ph-check-circle"></i> Strike, reconciliation &amp; analytics</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="eb">04 · In Their Words</p>
+    <div class="quote"><p>"[Client testimonial — one sharp line about the result.]"</p><span class="who">— [Name, Title, Client]</span></div>
+  </div>
+
+  <div class="cta">
+    <h2>Where To Next?</h2>
+    <a class="gx-btn" href="mailto:hello@ghxstship.tours">Chart the Next Project</a>
+  </div>
+  <div class="ft">G H X S T S H I P · Project Recap · RRR 052 · Miami // Las Vegas // Chicago // NY // LA · Venture Beyond</div>
+</div>
+</div></body></html>

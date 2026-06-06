@@ -1,0 +1,187 @@
+/* ============================================================================
+   GHXSTSHIP DESIGN SYSTEM — colors_and_type.css
+   "Vintage Reef" — premium vintage-tropical system
+   GC, Foreman & Procore of experiential projects · jade/pineapple/sapphire
+   ----------------------------------------------------------------------------
+   Single source of truth for color + type tokens. Import this in any artifact:
+     <link rel="stylesheet" href="colors_and_type.css">
+   Fonts load from Google Fonts CDN below; to ship offline, drop the .woff2
+   files in fonts/ and swap the @import for @font-face (see README).
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+  /* ---------------------------------------------------------------------
+     CORE PALETTE — "Vintage Reef" (lead world)
+     Premium vintage-tropical. Charcoal-graphite reef night, jade, pineapple,
+     sapphire. Vertical color logic: Jade = Production, Pineapple = Operations,
+     Blue = Technology  (green = yellow + blue ⇒ Production = Ops + Tech).
+     Token NAMES are retained from the prior cosmic system so every artifact
+     keeps working; only the values changed.
+     --------------------------------------------------------------------- */
+  --void:        #0B1314;  /* deepest reef night — primary dark ground       */
+  --ink:         #101A1B;  /* charcoal-graphite — base dark surface          */
+  --ink-2:       #18262A;  /* raised reef surface                            */
+  --ink-3:       #243234;  /* hairlines / muted strokes on dark             */
+
+  --bone:        #EDF1EF;  /* pearl — primary light ground / text on dark    */
+  --parchment:   #EDF1EC;  /* soft pearl-mist — light surface                */
+  --parchment-2: #DCE3DE;  /* dividers / aged edge on light                  */
+
+  /* SIGNALS — mapped to the three verticals (use with intent) */
+  --brass:       #22B083;  /* JADE · Production — primary brand accent        */
+  --on-brass:    #06140E;  /* text on jade                                    */
+  --brass-deep:  #14835F;  /* deep jade — shadow/hover of primary             */
+  --nebula:      #FFC24A;  /* PINEAPPLE · Operations — energy, highlights      */
+  --plasma:      #2E84D4;  /* SAPPHIRE · Technology — links, data, secondary   */
+  --flare:       #F2603A;  /* vintage coral — alerts, accents                 */
+  --aurora:      #1E6FA3;  /* deep harbor — cosmic-depth blue accent          */
+
+  /* JADE-on-light variants (text-safe) */
+  --jade-ink:    #18855F;  /* jade for text/UI on light grounds              */
+  --pineapple-deep:#C9931F;/* pineapple for text/UI on light                 */
+  --sapphire-ink:#205FB0;  /* sapphire for text/UI on light                  */
+
+  /* TEXT RAMPS — on dark / on light */
+  --fg-on-dark-1: #EDF1EF; /* primary text on dark                           */
+  --fg-on-dark-2: #A6B4B1; /* secondary text on dark                         */
+  --fg-on-dark-3: #76847F; /* tertiary / captions on dark                    */
+  --fg-on-light-1:#13201B; /* primary text on light                          */
+  --fg-on-light-2:#475650; /* secondary text on light                        */
+  --fg-on-light-3:#76837D; /* tertiary on light                              */
+
+  /* SEMANTIC */
+  --success:   #22B083;
+  --warning:   #FFC24A;
+  --danger:    #F2603A;
+  --info:      #2E84D4;
+
+  /* ---------------------------------------------------------------------
+     ALT COLOR WORLDS (see preview/colors-*.html). Swap by overriding the
+     pop signals on :root, e.g. add class .world-comic to <body>.
+     --------------------------------------------------------------------- */
+
+  /* ---------------------------------------------------------------------
+     TYPE FAMILIES
+     --------------------------------------------------------------------- */
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif; /* posters, hero, headlines */
+  --font-body:    "Space Grotesk", "Helvetica Neue", Arial, sans-serif; /* UI + body copy          */
+  --font-pixel:   "Silkscreen", "Space Mono", monospace;               /* 8-bit labels, ghost-ship */
+  --font-mono:    "Space Mono", "SF Mono", ui-monospace, monospace;    /* coordinates, specs, data */
+
+  /* TYPE SCALE — modular, ratio 1.25 (major third) anchored at 16px body.
+     Poster-led; display is condensed so it can run large. Override per artifact.
+     16 · 20 · 24 · 31 · 39 · 49 · 78 · 112 — one ratio = one consistent system. */
+  --fs-display-xl: 112px;  --lh-display-xl: 0.90; /* hero splash            */
+  --fs-display-l:  78px;   --lh-display-l:  0.92;
+  --fs-display-m:  49px;   --lh-display-m:  0.95;
+  --fs-h1:         39px;   --lh-h1: 1.0;
+  --fs-h2:         31px;   --lh-h2: 1.05;
+  --fs-h3:         24px;   --lh-h3: 1.1;
+  --fs-body-l:     20px;   --lh-body-l: 1.55;
+  --fs-body:       16px;   --lh-body: 1.6;
+  --fs-small:      14px;   --lh-small: 1.5;
+  --fs-label:      12px;   --lh-label: 1.3;   /* pixel/mono eyebrows        */
+
+  --tracking-display: -0.01em;  /* condensed display: slight negative       */
+  --tracking-eyebrow: 0.22em;   /* mono/pixel eyebrows: wide                 */
+  --tracking-body:    0.005em;
+
+  /* ---------------------------------------------------------------------
+     SPACING — 4px base grid
+     --------------------------------------------------------------------- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
+  --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px;
+
+  /* ---------------------------------------------------------------------
+     RADII — Vintage Reef is SOFT-premium. Gentle rounding; pills for tags.
+     --------------------------------------------------------------------- */
+  --r-0: 0px;   --r-1: 4px;   --r-2: 8px;   --r-3: 12px;  --r-pill: 999px;
+
+  /* ---------------------------------------------------------------------
+     STROKES + REFINED ELEVATION (premium vintage-tropical)
+     Soft, blurred shadows tinted with reef-night ink. Hairline borders.
+     --------------------------------------------------------------------- */
+  --stroke-1: 1px;  --stroke-2: 1px;  --stroke-3: 1px;
+  --shadow-pop-sm: 0 1px 2px rgba(6,12,12,0.18), 0 1px 3px rgba(6,12,12,0.12);
+  --shadow-pop:    0 2px 6px rgba(6,12,12,0.22), 0 6px 16px rgba(6,12,12,0.16);
+  --shadow-pop-lg: 0 8px 28px rgba(6,12,12,0.30);
+  --shadow-pop-brass: 0 6px 18px rgba(20,131,95,0.30);
+  --shadow-pop-nebula: 0 6px 18px rgba(201,147,31,0.28);
+  /* soft glow for dark surfaces (use rarely) */
+  --glow-plasma: 0 0 24px rgba(46,132,212,0.42);
+  --glow-nebula: 0 0 24px rgba(255,194,74,0.42);
+
+  /* ---------------------------------------------------------------------
+     HALFTONE / BEN-DAY DOT TEXTURES (CSS-only, no images)
+     Apply via background on a layer; tune --dot-size / colors per use.
+     --------------------------------------------------------------------- */
+  --dot-size: 14px;
+  --halftone-ink:
+    radial-gradient(var(--ink) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
+  --halftone-brass:
+    radial-gradient(var(--brass) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
+  --halftone-nebula:
+    radial-gradient(var(--nebula) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
+  --halftone-bone:
+    radial-gradient(rgba(237,241,239,0.7) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
+
+  /* Thin reef-stripe accent motif (premium, not caution-tape) */
+  --stripe-brass: repeating-linear-gradient(45deg, var(--brass) 0 2px, transparent 2px 14px);
+}
+
+/* ============================================================================
+   SEMANTIC TYPE CLASSES — apply directly or copy the rules.
+   Defaults assume DARK ground (the GHXSTSHIP default). Use .on-light to flip.
+   ========================================================================== */
+.gx-display-xl, .gx-display-l, .gx-display-m, .gx-h1, .gx-h2, .gx-h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--fg-on-dark-1);
+  text-wrap: balance;
+}
+.gx-display-xl { font-size: var(--fs-display-xl); line-height: var(--lh-display-xl); font-weight: 800; }
+.gx-display-l  { font-size: var(--fs-display-l);  line-height: var(--lh-display-l);  font-weight: 800; }
+.gx-display-m  { font-size: var(--fs-display-m);  line-height: var(--lh-display-m); }
+.gx-h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.gx-h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); }
+.gx-h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 700; }
+
+.gx-eyebrow {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0;
+}
+.gx-eyebrow-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--plasma);
+  margin: 0;
+}
+
+.gx-body-l { font-family: var(--font-body); font-size: var(--fs-body-l); line-height: var(--lh-body-l); color: var(--fg-on-dark-2); margin: 0; }
+.gx-body   { font-family: var(--font-body); font-size: var(--fs-body);   line-height: var(--lh-body);   color: var(--fg-on-dark-2); margin: 0; }
+.gx-small  { font-family: var(--font-body); font-size: var(--fs-small);  line-height: var(--lh-small);  color: var(--fg-on-dark-3); margin: 0; }
+.gx-mono   { font-family: var(--font-mono); font-size: var(--fs-small);  letter-spacing: 0.02em; color: var(--fg-on-dark-2); }
+
+/* Flip text colors for light/parchment grounds */
+.on-light .gx-display-xl, .on-light .gx-display-l, .on-light .gx-display-m,
+.on-light .gx-h1, .on-light .gx-h2, .on-light .gx-h3 { color: var(--fg-on-light-1); }
+.on-light .gx-body-l, .on-light .gx-body { color: var(--fg-on-light-2); }
+.on-light .gx-small { color: var(--fg-on-light-3); }
+
+/* Accent text helpers */
+.t-brass  { color: var(--brass)  !important; }
+.t-nebula { color: var(--nebula) !important; }
+.t-plasma { color: var(--plasma) !important; }
+.t-flare  { color: var(--flare)  !important; }
+.t-bone   { color: var(--bone)   !important; }

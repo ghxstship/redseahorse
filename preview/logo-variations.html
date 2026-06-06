@@ -1,0 +1,30 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}.stage{width:700px;background:var(--ink);padding:26px 30px;box-sizing:border-box}
+  .eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;color:var(--brass);text-transform:uppercase;margin:0 0 4px}
+  .sub{font-family:var(--font-mono);font-size:10px;color:var(--fg-on-dark-3);letter-spacing:.04em;margin:0 0 18px}
+  .row{display:flex;gap:16px}
+  .cell{flex:1;text-align:center}
+  .box{height:104px;display:grid;place-items:center;border-radius:3px}
+  .on-dark{background:var(--void);border:2px solid var(--ink-3)}
+  .on-light{background:var(--brass)}
+  .lozenge{width:74px;height:74px;background:#000;display:grid;place-items:center}
+  .box img{image-rendering:pixelated}
+  .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);margin-top:9px}
+  .ok{color:var(--success)} .no{color:var(--flare)}
+  .rule{font-family:var(--font-body);font-size:12px;color:var(--fg-on-dark-2);margin:16px 0 0;line-height:1.5}
+  .rule b{color:var(--bone)}
+</style></head>
+<body><div class="stage">
+  <p class="eb">Logo — Usage (locked)</p>
+  <p class="sub">White flag · black skull · never recolored</p>
+  <div class="row">
+    <div class="cell"><div class="box on-dark"><img src="../assets/skull-bone.svg" style="width:72px;height:72px"></div><div class="lbl"><span class="ok">✓</span> White glyph on dark</div></div>
+    <div class="cell"><div class="box on-light"><div class="lozenge"><img src="../assets/skull-bone.svg" style="width:56px;height:56px"></div></div><div class="lbl"><span class="ok">✓</span> Black lozenge on light</div></div>
+    <div class="cell"><div class="box on-dark"><img src="../assets/logo-ghostship-skull.svg" style="width:74px;height:74px"></div><div class="lbl"><span class="ok">✓</span> Original tile (as submitted)</div></div>
+  </div>
+  <p class="rule"><b>Always:</b> flag = bone/white, skull = black (negative space on a dark field). On light grounds, place the mark in a black square lozenge so the skull stays black. <b>Never</b> tint the mark brass, nebula, or any brand color.</p>
+</div></body></html>

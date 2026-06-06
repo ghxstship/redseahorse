@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G H X S T S H I P — Brand Kit</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="terminal.css">
+<link rel="stylesheet" href="polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  /* hero */
+  .hero{padding:64px 0 40px;position:relative;overflow:hidden;border-bottom:3px solid var(--ink-3)}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(var(--ink-3) 1.4px,transparent 1.5px) 0 0/26px 26px;opacity:.4;-webkit-mask:radial-gradient(120% 90% at 80% 0%,#000,transparent);mask:radial-gradient(120% 90% at 80% 0%,#000,transparent)}
+  .hero-in{position:relative;display:flex;align-items:center;gap:26px}
+  .hero .mark{width:96px;height:96px;border-radius:50%;background:var(--ink);border:5px solid var(--brass);box-shadow:8px 8px 0 var(--brass-deep);display:grid;place-items:center;flex:none}
+  .hero .mark img{width:62px;height:62px;image-rendering:pixelated}
+  .hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(40px,7vw,76px);line-height:.86;text-transform:uppercase;letter-spacing:.02em;margin:0;white-space:nowrap}
+  .hero .tag{font-family:var(--font-mono);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin:8px 0 0}
+  .hero .def{font-size:16px;line-height:1.6;color:var(--fg-on-dark-2);max-width:720px;margin:22px 0 0;position:relative}
+  /* section */
+  section{padding:48px 0;border-bottom:2px solid var(--ink-3)}
+  .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 6px;display:flex;align-items:center;gap:9px}
+  .eyebrow::before{content:"◆";color:var(--nebula)}
+  h2{font-family:var(--font-display);font-weight:900;font-size:34px;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 22px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:840px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{display:flex;flex-direction:column;gap:4px;background:var(--ink-2);border:2px solid var(--ink-3);border-radius:6px;padding:20px;text-decoration:none;color:inherit;transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease}
+  .card:hover{transform:translate(-3px,-3px);border-color:var(--brass);box-shadow:7px 7px 0 var(--ink)}
+  .card .ic{font-size:24px;color:var(--brass);margin-bottom:8px}
+  .card h3{font-family:var(--font-display);font-weight:800;font-size:19px;text-transform:uppercase;margin:0;line-height:1.05}
+  .card p{font-size:12.5px;line-height:1.5;color:var(--fg-on-dark-2);margin:2px 0 0}
+  .card .meta{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin-top:8px}
+  .card.doc{background:var(--ink)}
+  .card.doc .ic{color:var(--plasma)}
+  .foot{padding:40px 0;text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .chip{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-2);border:1px solid var(--ink-3);border-radius:999px;padding:3px 9px}
+</style></head>
+<body>
+
+<header class="hero"><div class="wrap hero-in">
+  <div class="mark"><img src="assets/skull-bone.svg" alt="GHXSTSHIP ghost-ship logo"></div>
+  <div>
+    <h1>G H X S T S H I P</h1>
+    <p class="tag">Brand &amp; Product System · Venture Beyond</p>
+  </div>
+</div>
+<div class="wrap"><p class="def">GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. This is the complete brand kit — foundations, marketing site, product UI, documents, and handoff. Every tile is live; click to open.</p>
+<div class="chips wrap" style="padding:0;margin-top:16px"><span class="chip">14+ Years</span><span class="chip">250+ Experiences</span><span class="chip">5M+ Memories</span><span class="chip">3 Verticals</span><span class="chip">10 Destinations</span></div>
+</div></header>
+
+<main>
+<section><div class="wrap">
+  <p class="eyebrow">Marketing Site</p>
+  <h2>The Spaceport</h2>
+  <div class="grid">
+    <a class="card" href="ui_kits/website/index.html"><i class="ph-bold ph-globe-hemisphere-west ic"></i><h3>Homepage</h3><p>Full marketing site — booking-sequence IA, departures ticker, 8-phase strip-map, hero-mode toggle.</p><span class="meta">ui_kits/website</span></a>
+    <a class="card" href="ui_kits/website/destinations/festival-production.html"><i class="ph-bold ph-music-notes ic"></i><h3>Festival Production</h3><p>Per-vertical SEO/GEO landing page model.</p><span class="meta">+ 5 more verticals</span></a>
+    <a class="card" href="ui_kits/website/destinations/tv-film-broadcast.html"><i class="ph-bold ph-television ic"></i><h3>TV, Film &amp; Broadcast</h3><p>Vertical landing page — Service + FAQ + Breadcrumb schema.</p><span class="meta">destinations/</span></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Product UI · ATLVS · COMPVSS · GVTEWAY</p>
+  <h2>The Instruments</h2>
+  <div class="grid">
+    <a class="card" href="ui_kits/products/index.html"><i class="ph-bold ph-squares-four ic"></i><h3>App Dashboard</h3><p>Switchable shell across all three instruments.</p><span class="meta">products/index</span></a>
+    <a class="card" href="ui_kits/products/components.html"><i class="ph-bold ph-cards ic"></i><h3>Bridge Kit I</h3><p>Buttons, forms, tables, modals, command palette, auth, 404.</p></a>
+    <a class="card" href="ui_kits/products/components-atomic.html"><i class="ph-bold ph-chart-bar ic"></i><h3>Bridge Kit II</h3><p>Charts, mobile, notifications, detail, chat, prose, signature.</p></a>
+    <a class="card" href="ui_kits/products/components-complete.html"><i class="ph-bold ph-atom ic"></i><h3>Bridge Kit III</h3><p>Atomic gaps — tooltip, slider, calendar, gallery, funnel, heatmap.</p></a>
+    <a class="card" href="ui_kits/products/atlvs-gantt.html"><i class="ph-bold ph-chart-line ic"></i><h3>ATLVS · Gantt</h3><p>Production timeline, 8-phase columns.</p></a>
+    <a class="card" href="ui_kits/products/compvss-certifications.html"><i class="ph-bold ph-identification-badge ic"></i><h3>COMPVSS · Certs</h3><p>Crew compliance &amp; expiry.</p></a>
+    <a class="card" href="ui_kits/products/gvteway-checkout.html"><i class="ph-bold ph-ticket ic"></i><h3>GVTEWAY · Checkout</h3><p>Fan ticketing + boarding-pass QR.</p></a>
+    <a class="card" href="ui_kits/products/mobile.html"><i class="ph-bold ph-device-mobile ic"></i><h3>Mobile UI</h3><p>Phone screens — board, detail, wallet, sheet, auth.</p></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">ATLVS Technologies · SaaS Product Kit</p>
+  <h2>The Product System</h2>
+  <div class="grid">
+    <a class="card" href="ui_kits/atlvs/index.html"><i class="ph-bold ph-app-window ic"></i><h3>ATLVS Product Kit</h3><p>Neutral light/dark SaaS theme — dashboard, screens, per-product accent. Distinct from the cosmic brand.</p><span class="meta">ui_kits/atlvs</span></a>
+    <a class="card" href="ui_kits/atlvs/dashboard.html"><i class="ph-bold ph-squares-four ic"></i><h3>SaaS Dashboard</h3><p>Light/dark + ATLVS/COMPVSS/GVTEWAY accent toggle.</p></a>
+    <a class="card" href="ui_kits/atlvs/screens.html"><i class="ph-bold ph-stack ic"></i><h3>SaaS Screens</h3><p>Gantt, certifications, checkout — skinned.</p></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Documents · Email · Social</p>
+  <h2>Collateral</h2>
+  <div class="grid">
+    <a class="card" href="ui_kits/documents/proposal.html"><i class="ph-bold ph-file-text ic"></i><h3>Proposal / SOW</h3><p>Contract-grade: manifest, schedule, manning, systems, investment.</p></a>
+    <a class="card" href="ui_kits/documents/run-of-show.html"><i class="ph-bold ph-list-checks ic"></i><h3>Run of Show</h3><p>Live cue sheet, department-coded.</p></a>
+    <a class="card" href="ui_kits/documents/recap.html"><i class="ph-bold ph-chart-pie-slice ic"></i><h3>Post-Event Recap</h3><p>Results, gallery, delivered checklist.</p></a>
+    <a class="card" href="ui_kits/email/index.html"><i class="ph-bold ph-envelope-simple ic"></i><h3>Email Templates</h3><p>Brand + ATLVS/COMPVSS/GVTEWAY notifications.</p></a>
+    <a class="card" href="social/index.html"><i class="ph-bold ph-instagram-logo ic"></i><h3>Social Templates</h3><p>Instagram + LinkedIn.</p></a>
+    <a class="card" href="ui_kits/brand/stationery.html"><i class="ph-bold ph-cards-three ic"></i><h3>Stationery</h3><p>Business card, letterhead, signature, invoice.</p></a>
+    <a class="card" href="slides/index.html"><i class="ph-bold ph-presentation ic"></i><h3>Pitch Deck</h3><p>9 slide types on the system.</p></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Foundations &amp; Handoff</p>
+  <h2>The Docs</h2>
+  <div class="grid">
+    <a class="card doc" href="README.md"><i class="ph-bold ph-book-open ic"></i><h3>README</h3><p>Brand brain — voice, visual foundations, index.</p></a>
+    <a class="card doc" href="BRAND_ARCHITECTURE.md"><i class="ph-bold ph-tree-structure ic"></i><h3>Brand Architecture</h3><p>3 verticals, the metaphor, surface register, locks.</p></a>
+    <a class="card doc" href="tokens.json"><i class="ph-bold ph-palette ic"></i><h3>tokens.json</h3><p>Machine-readable design tokens for engineering.</p></a>
+    <a class="card doc" href="HANDOFF.md"><i class="ph-bold ph-handshake ic"></i><h3>Handoff</h3><p>Claude Code brief — file map, rules, build order.</p></a>
+    <a class="card doc" href="SEO_GEO.md"><i class="ph-bold ph-magnifying-glass ic"></i><h3>SEO / GEO</h3><p>Playbook + per-vertical page template.</p></a>
+    <a class="card doc" href="PROPRIETARY_IP.md"><i class="ph-bold ph-strategy ic"></i><h3>Proprietary IP</h3><p>8-Phase Lifecycle locked; XPMS pending input.</p></a>
+    <a class="card doc" href="COMPETITIVE.md"><i class="ph-bold ph-crosshair ic"></i><h3>Competitive</h3><p>Positioning vs. industry leaders.</p></a>
+    <a class="card doc" href="TEMPLATES.md"><i class="ph-bold ph-stack ic"></i><h3>Templates Map</h3><p>Lifecycle collateral + UI inventory roadmap.</p></a>
+    <a class="card doc" href="ICONOGRAPHY.md"><i class="ph-bold ph-shapes ic"></i><h3>Iconography</h3><p>Phosphor system + skull glyph rules.</p></a>
+    <a class="card doc" href="PHOTOGRAPHY.md"><i class="ph-bold ph-image ic"></i><h3>Photography</h3><p>Duotone / grade treatment guidelines.</p></a>
+  </div>
+</div></section>
+</main>
+
+<p class="foot">G H X S T S H I P Industries LLC · Miami Headquarters · New York · Chicago · Los Angeles · Venture Beyond</p>
+</body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Run of Show Template</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0c0e16;font-family:var(--font-body);color:var(--bone)}
+  .wrap{max-width:980px;margin:0 auto;padding:30px 20px 80px}
+  .note{font-family:var(--font-mono);font-size:10px;color:#667099;text-align:center;margin:0 0 16px;letter-spacing:.06em}
+  .doc{background:var(--void);border:3px solid var(--ink-3);border-radius:6px;overflow:hidden}
+  /* header */
+  .hd{background:var(--ink);padding:24px 28px;border-bottom:3px solid var(--brass);display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  .hd .brand{display:flex;align-items:center;gap:11px}
+  .hd .brand img{width:28px;height:28px;image-rendering:pixelated}
+  .hd .brand b{font-family:var(--font-display);font-weight:900;font-size:17px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .hd .dt{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-top:8px}
+  .hd h1{font-family:var(--font-display);font-weight:900;font-size:34px;text-transform:uppercase;line-height:.92;margin:4px 0 0;letter-spacing:-.01em}
+  .hd .meta{text-align:right;font-family:var(--font-mono);font-size:11px;color:var(--fg-on-dark-2);letter-spacing:.06em;line-height:1.7;text-transform:uppercase}
+  .hd .meta .vy{color:var(--brass);font-weight:700}
+  /* key times */
+  .keys{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-bottom:2px solid var(--ink-3)}
+  .key{padding:14px 18px;border-right:1px solid var(--ink-3);text-align:center}
+  .key:last-child{border-right:0}
+  .key .k{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .key .v{font-family:var(--font-display);font-weight:900;font-size:24px;color:var(--bone);margin-top:4px}
+  .key .v.hot{color:var(--nebula)}
+  /* cue table */
+  table{width:100%;border-collapse:collapse}
+  thead th{position:sticky;top:0;background:var(--ink);font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);text-align:left;padding:11px 12px;border-bottom:2px solid var(--brass)}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--ink-3);font-size:13px;color:var(--fg-on-dark-2);vertical-align:top}
+  tbody tr:hover{background:var(--ink-2)}
+  .tm{font-family:var(--font-mono);font-weight:700;color:var(--bone);white-space:nowrap}
+  .cue{font-family:var(--font-mono);font-weight:700;color:var(--brass)}
+  .act b{color:var(--bone);font-weight:600}
+  .dept{font-family:var(--font-mono);font-weight:700;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:3px;white-space:nowrap}
+  .d-aud{background:rgba(46,132,212,.16);color:var(--plasma);border:1px solid rgba(46,132,212,.4)}
+  .d-lx{background:rgba(233,162,59,.16);color:var(--brass);border:1px solid rgba(233,162,59,.4)}
+  .d-vid{background:rgba(123,91,255,.18);color:#a892ff;border:1px solid rgba(123,91,255,.4)}
+  .d-stg{background:rgba(255,194,74,.16);color:var(--nebula);border:1px solid rgba(255,194,74,.4)}
+  .d-all{background:var(--ink-2);color:var(--fg-on-dark-2);border:1px solid var(--ink-3)}
+  .hl{background:rgba(255,194,74,.07)}
+  .ft{padding:16px 28px;border-top:2px solid var(--ink-3);font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media print{body{background:#fff}.wrap{padding:0;max-width:none}.note{display:none}.doc{border:0}}
+</style></head>
+<body><div class="wrap">
+<p class="note">Run-of-Show / cue sheet template — replace fields. Print or export to PDF (Cmd/Ctrl+P).</p>
+<div class="doc">
+  <div class="hd">
+    <div>
+      <div class="brand"><img src="../../assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></div>
+      <p class="dt">◆ Run of Show · Phase 07 Live Activation</p>
+      <h1>Salvage City Supper Club</h1>
+    </div>
+    <div class="meta">
+      <div>Project <span class="vy">RRR 052</span></div>
+      <div>EDC Las Vegas</div>
+      <div>[Date]</div>
+      <div>Rev. 3 · Show Caller: J. Roker</div>
+    </div>
+  </div>
+  <div class="keys">
+    <div class="key"><div class="k">Crew Call</div><div class="v">14:00</div></div>
+    <div class="key"><div class="k">Soundcheck</div><div class="v">18:30</div></div>
+    <div class="key"><div class="k">House Open</div><div class="v">20:00</div></div>
+    <div class="key"><div class="k">Showtime</div><div class="v hot">21:00</div></div>
+    <div class="key"><div class="k">Curtain</div><div class="v">23:30</div></div>
+  </div>
+  <table>
+    <thead><tr><th style="width:78px">Time</th><th style="width:64px">Cue</th><th style="width:96px">Dept</th><th>Action</th><th style="width:90px">Lead</th></tr></thead>
+    <tbody>
+      <tr><td class="tm">20:00:00</td><td class="cue">Q1</td><td><span class="dept d-all">All</span></td><td class="act"><b>House open.</b> Walk-in playlist, house wash to 40%, doors to public.</td><td>SM</td></tr>
+      <tr><td class="tm">20:45:00</td><td class="cue">Q2</td><td><span class="dept d-aud">Audio</span></td><td class="act">Walk-in music fade under. Standby announce VO.</td><td>A1</td></tr>
+      <tr><td class="tm">20:58:00</td><td class="cue">Q3</td><td><span class="dept d-all">All</span></td><td class="act"><b>Standby top of show.</b> Hold the room, LX to preset 1, VID to bumper loop.</td><td>SM</td></tr>
+      <tr class="hl"><td class="tm">21:00:00</td><td class="cue">Q4</td><td><span class="dept d-stg">Stage</span></td><td class="act"><b>GO — Showtime.</b> Blackout, sting, reveal. Host enters SL.</td><td>SM</td></tr>
+      <tr><td class="tm">21:00:30</td><td class="cue">Q5</td><td><span class="dept d-lx">Lighting</span></td><td class="act">Reveal look — brass key, nebula backwash. Followspot pickup host.</td><td>LD</td></tr>
+      <tr><td class="tm">21:01:00</td><td class="cue">Q6</td><td><span class="dept d-vid">Video</span></td><td class="act">IMAG live to side screens. Lower-third: host name.</td><td>V1</td></tr>
+      <tr><td class="tm">21:06:00</td><td class="cue">Q7</td><td><span class="dept d-aud">Audio</span></td><td class="act">Playback track 1 (DJ set). Confirm timecode lock.</td><td>A1</td></tr>
+      <tr><td class="tm">21:45:00</td><td class="cue">Q8</td><td><span class="dept d-stg">Stage</span></td><td class="act">Headliner changeover. Clear stage, reset risers, confetti load check.</td><td>SM</td></tr>
+      <tr class="hl"><td class="tm">22:00:00</td><td class="cue">Q9</td><td><span class="dept d-all">All</span></td><td class="act"><b>GO — Headliner.</b> Intro VT, full rig, pyro standby per the safety plan.</td><td>SM</td></tr>
+      <tr><td class="tm">23:25:00</td><td class="cue">Q10</td><td><span class="dept d-stg">Stage</span></td><td class="act">Encore + confetti GO on final drop.</td><td>SM</td></tr>
+      <tr><td class="tm">23:30:00</td><td class="cue">Q11</td><td><span class="dept d-all">All</span></td><td class="act"><b>Curtain.</b> House music up, house lights to 100%, begin egress.</td><td>SM</td></tr>
+    </tbody>
+  </table>
+  <div class="ft"><span>G H X S T S H I P · Run of Show · RRR 052</span><span>Page 1 of 1 · Venture Beyond</span></div>
+</div>
+</div></body></html>

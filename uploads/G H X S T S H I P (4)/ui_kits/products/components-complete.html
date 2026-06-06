@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Atomic Completeness (Gaps)</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body)}
+  .page{max-width:1200px;margin:0 auto;padding:44px 40px 100px}
+  .head .eb{font-family:var(--font-mono);font-size:13px;letter-spacing:.24em;color:var(--brass);text-transform:uppercase;margin:0 0 10px}
+  .head h1{font-family:var(--font-display);font-weight:900;font-size:48px;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+  .head p{font-size:14px;color:var(--fg-on-dark-2);margin:10px 0 0;max-width:780px;line-height:1.55}
+  .grp{margin-top:42px}
+  .grp > h2{font-family:var(--font-mono);font-size:12px;letter-spacing:.2em;color:var(--fg-on-dark-3);text-transform:uppercase;border-bottom:2px solid var(--ink-3);padding-bottom:12px;margin:0 0 22px}
+  .demo{background:var(--ink);border:2px solid var(--ink-3);border-radius:6px;padding:22px;margin-bottom:16px}
+  .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;color:var(--fg-on-dark-3);text-transform:uppercase;margin:0 0 14px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+  @media(max-width:860px){.cols,.cols3{grid-template-columns:1fr}}
+  .rowf{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+  /* ATOMS */
+  .tip{position:relative;display:inline-block}
+  .tip .bub{position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:var(--bone);color:var(--ink);font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;padding:5px 9px;border-radius:3px;white-space:nowrap;box-shadow:2px 2px 0 var(--ink)}
+  .tip .bub::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--bone)}
+  .range{appearance:none;width:100%;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--brass) 60%,var(--ink-3) 60%);outline:none}
+  .range::-webkit-slider-thumb{appearance:none;width:20px;height:20px;border-radius:50%;background:var(--brass);border:3px solid var(--ink);cursor:pointer}
+  .brd{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .brd a{color:var(--fg-on-dark-2);text-decoration:none}.brd a:hover{color:var(--brass)}.brd .sep{color:var(--ink-3)}
+  .divider{height:2px;background:var(--ink-3);border:0;margin:0}
+  .divider-lbl{display:flex;align-items:center;gap:14px;font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .divider-lbl::before,.divider-lbl::after{content:"";flex:1;height:2px;background:var(--ink-3)}
+  .spinner{width:30px;height:30px;border:3px solid var(--ink-3);border-top-color:var(--brass);border-radius:50%;animation:spin .7s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media(prefers-reduced-motion:reduce){.spinner{animation:none}}
+  .ndot{position:relative;display:inline-grid;place-items:center;width:40px;height:40px;border:2px solid var(--ink-3);border-radius:6px;font-size:18px;color:var(--fg-on-dark-2)}
+  .ndot .b{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;border-radius:999px;background:var(--nebula);color:#fff;font-family:var(--font-mono);font-size:9px;font-weight:700;display:grid;place-items:center;padding:0 4px;border:2px solid var(--void)}
+  .stars{display:inline-flex;gap:3px;color:var(--brass);font-size:18px}
+  .stars .o{color:var(--ink-3)}
+
+  /* MOLECULES */
+  .menu{background:var(--ink-2);border:2px solid var(--ink-3);border-radius:6px;overflow:hidden;max-width:220px;box-shadow:5px 5px 0 var(--ink)}
+  .menu .mi{display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:13px;color:var(--fg-on-dark-2)}
+  .menu .mi:hover{background:var(--ink);color:var(--bone)}.menu .mi i{color:var(--brass)}
+  .menu .sep{height:1px;background:var(--ink-3)}
+  .menu .danger{color:#ff6a60}.menu .danger i{color:#ff6a60}
+  .segc{display:inline-flex;background:var(--ink);border:2px solid var(--ink-3);border-radius:var(--r-pill);padding:3px}
+  .segc span{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:var(--r-pill);color:var(--fg-on-dark-3);cursor:pointer}
+  .segc span.on{background:var(--brass);color:var(--ink)}
+  .dropz{border:2px dashed var(--ink-3);border-radius:6px;padding:28px;text-align:center;color:var(--fg-on-dark-3)}
+  .dropz i{font-size:30px;color:var(--brass)}
+  .dropz p{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin:10px 0 0}
+  .banner{display:flex;align-items:center;gap:12px;border-radius:6px;padding:12px 16px;font-size:13px}
+  .banner.warn{background:rgba(233,162,59,.12);border:2px solid rgba(233,162,59,.4);color:var(--brass)}
+  .banner.info{background:rgba(46,132,212,.1);border:2px solid rgba(46,132,212,.4);color:var(--plasma)}
+  .banner i{font-size:18px}
+  .stepper{display:flex;align-items:center;gap:0}
+  .stepper .s{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .stepper .n{width:26px;height:26px;border-radius:50%;border:2px solid var(--ink-3);display:grid;place-items:center;font-weight:700}
+  .stepper .s.done .n{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+  .stepper .s.on .n{border-color:var(--brass);color:var(--brass)}
+  .stepper .bar{width:40px;height:2px;background:var(--ink-3);margin:0 10px}
+  .datepick{background:var(--ink-2);border:2px solid var(--ink-3);border-radius:6px;padding:16px;max-width:280px}
+  .datepick .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:var(--font-display);font-weight:800;font-size:15px;text-transform:uppercase}
+  .datepick .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+  .datepick .dn{font-family:var(--font-mono);font-size:8px;color:var(--fg-on-dark-3);padding:4px 0}
+  .datepick .d{font-family:var(--font-mono);font-size:11px;color:var(--fg-on-dark-2);padding:6px 0;border-radius:4px;cursor:pointer}
+  .datepick .d:hover{background:var(--ink)}.datepick .d.on{background:var(--brass);color:var(--ink);font-weight:700}.datepick .d.mut{color:var(--ink-3)}
+
+  /* DATA VIEWS */
+  .cal{border:2px solid var(--ink-3);border-radius:6px;overflow:hidden}
+  .cal .ch{display:grid;grid-template-columns:repeat(7,1fr);background:var(--ink);font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .cal .ch span{padding:8px;text-align:center;border-right:1px solid var(--ink-3)}
+  .cal .cb{display:grid;grid-template-columns:repeat(7,1fr)}
+  .cal .cell{min-height:64px;border-right:1px solid var(--ink-3);border-top:1px solid var(--ink-3);padding:6px;font-family:var(--font-mono);font-size:10px;color:var(--fg-on-dark-3)}
+  .cal .ev{font-family:var(--font-mono);font-size:8px;letter-spacing:.02em;text-transform:uppercase;border-radius:3px;padding:2px 5px;margin-top:4px;color:var(--ink);font-weight:700}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .gcard{border:2px solid var(--ink-3);border-radius:6px;overflow:hidden}
+  .gcard .m{height:80px}.gcard .b{padding:10px}
+  .gcard h4{font-family:var(--font-display);font-weight:700;font-size:14px;text-transform:uppercase;margin:0;color:var(--bone)}
+  .gcard p{font-family:var(--font-mono);font-size:9px;color:var(--fg-on-dark-3);margin:3px 0 0;letter-spacing:.04em;text-transform:uppercase}
+  .activity{position:relative;padding-left:24px}
+  .activity::before{content:"";position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:var(--ink-3)}
+  .act{position:relative;padding:0 0 16px}
+  .act::before{content:"";position:absolute;left:-21px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--brass);border:2px solid var(--void)}
+  .act .t{font-size:13px;color:var(--fg-on-dark-1)}.act .t b{color:var(--bone)}
+  .act .tm{font-family:var(--font-mono);font-size:9px;color:var(--fg-on-dark-3);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+
+  /* VISUALIZATIONS */
+  .sbar{display:flex;align-items:flex-end;gap:12px;height:150px;padding-top:10px}
+  .sbar .col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+  .sbar .col span{position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-family:var(--font-mono);font-size:9px;color:var(--fg-on-dark-3)}
+  .sbar .seg{width:100%}
+  .ring{transform:rotate(-90deg)}
+  .funnel{display:flex;flex-direction:column;gap:5px;align-items:center}
+  .funnel .f{height:26px;display:grid;place-items:center;font-family:var(--font-mono);font-size:10px;font-weight:700;color:var(--ink);border-radius:3px;background:var(--brass)}
+  .legend{display:flex;gap:16px;margin-top:24px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3);flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+  .heat{display:grid;grid-template-columns:repeat(12,1fr);gap:3px}
+  .heat i{aspect-ratio:1;border-radius:2px;background:var(--ink-3)}
+</style></head>
+<body><div class="page">
+  <div class="head">
+    <p class="eb">Product System · Atomic Completeness</p>
+    <h1>The Bridge Kit, Pt. III</h1>
+    <p>The audited gaps — atoms, molecules, data-view types, and visualizations not yet in Pt. I/II. With these, the kit spans the full atomic ladder from smallest control to every common view. Built on GHXSTSHIP tokens.</p>
+  </div>
+
+  <div class="grp"><h2>Atoms</h2>
+    <div class="cols3">
+      <div class="demo"><p class="lbl">Tooltip</p><div class="tip"><a class="gx-btn gx-btn--sm">Hover</a><span class="bub">Voyage RRR 052</span></div></div>
+      <div class="demo"><p class="lbl">Slider / Range</p><input type="range" class="range" value="60"></div>
+      <div class="demo"><p class="lbl">Breadcrumb</p><nav class="brd"><a href="#">Projects</a><span class="sep">/</span><a href="#">RRR 052</a><span class="sep">/</span><span style="color:var(--brass)">Timeline</span></nav></div>
+      <div class="demo"><p class="lbl">Spinner</p><div class="spinner"></div></div>
+      <div class="demo"><p class="lbl">Notification badge</p><span class="ndot"><i class="ph-bold ph-bell"></i><span class="b">3</span></span></div>
+      <div class="demo"><p class="lbl">Rating</p><span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star o"></i></span></div>
+      <div class="demo"><p class="lbl">Divider</p><hr class="divider"></div>
+      <div class="demo"><p class="lbl">Divider + label</p><div class="divider-lbl">Or</div></div>
+      <div class="demo"><p class="lbl">Inline banner</p><div class="banner info"><i class="ph-fill ph-info"></i>Phase 05 starts Monday.</div></div>
+    </div>
+  </div>
+
+  <div class="grp"><h2>Molecules</h2>
+    <div class="cols3">
+      <div class="demo"><p class="lbl">Dropdown menu</p><div class="menu"><div class="mi"><i class="ph-bold ph-pencil-simple"></i>Edit</div><div class="mi"><i class="ph-bold ph-copy"></i>Duplicate</div><div class="sep"></div><div class="mi danger"><i class="ph-bold ph-trash"></i>Delete</div></div></div>
+      <div class="demo"><p class="lbl">Segmented control</p><div class="segc"><span class="on">Day</span><span>Week</span><span>Month</span></div></div>
+      <div class="demo"><p class="lbl">File dropzone</p><div class="dropz"><i class="ph-bold ph-upload-simple"></i><p>Drop files or browse</p></div></div>
+      <div class="demo"><p class="lbl">Stepper</p><div class="stepper"><div class="s done"><span class="n">✓</span></div><div class="bar"></div><div class="s on"><span class="n">2</span></div><div class="bar"></div><div class="s"><span class="n">3</span></div></div></div>
+      <div class="demo"><p class="lbl">Banner — warning</p><div class="banner warn"><i class="ph-fill ph-warning"></i>Permit packet overdue.</div></div>
+      <div class="demo"><p class="lbl">Date picker</p><div class="datepick"><div class="dh"><i class="ph-bold ph-caret-left"></i>Dec 2026<i class="ph-bold ph-caret-right"></i></div><div class="grid"><span class="dn">S</span><span class="dn">M</span><span class="dn">T</span><span class="dn">W</span><span class="dn">T</span><span class="dn">F</span><span class="dn">S</span><span class="d mut">29</span><span class="d mut">30</span><span class="d">1</span><span class="d">2</span><span class="d">3</span><span class="d">4</span><span class="d">5</span><span class="d">6</span><span class="d">7</span><span class="d">8</span><span class="d">9</span><span class="d">10</span><span class="d">11</span><span class="d">12</span><span class="d">13</span><span class="d">14</span><span class="d">15</span><span class="d">16</span><span class="d">17</span><span class="d">18</span><span class="d">19</span><span class="d">20</span><span class="d">21</span><span class="d">22</span><span class="d">23</span><span class="d">24</span><span class="d">25</span><span class="d">26</span><span class="d">27</span><span class="d">28</span><span class="d">29</span><span class="d">30</span><span class="d on">31</span></div></div></div>
+    </div>
+  </div>
+
+  <div class="grp"><h2>Data Views</h2>
+    <div class="demo"><p class="lbl">Calendar — month</p>
+      <div class="cal"><div class="ch"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+      <div class="cb">
+        <div class="cell">1</div><div class="cell">2<div class="ev" style="background:var(--nebula);color:#fff">RRR 052 Build</div></div><div class="cell">3</div><div class="cell">4</div><div class="cell">5<div class="ev" style="background:var(--brass)">Load-in</div></div><div class="cell">6</div><div class="cell">7</div>
+        <div class="cell">8</div><div class="cell">9</div><div class="cell">10<div class="ev" style="background:var(--plasma)">Show</div></div><div class="cell">11</div><div class="cell">12</div><div class="cell">13</div><div class="cell">14</div>
+      </div></div>
+    </div>
+    <div class="cols">
+      <div class="demo"><p class="lbl">Gallery / card grid</p><div class="gallery">
+        <div class="gcard"><div class="m" style="background:repeating-linear-gradient(45deg,#18262A 0 10px,#101A1B 10px 20px)"></div><div class="b"><h4>Black Coffee</h4><p>RRR 312</p></div></div>
+        <div class="gcard"><div class="m" style="background:radial-gradient(var(--nebula) 14%,transparent 15%) 0 0/14px 14px,var(--ink)"></div><div class="b"><h4>Polymarket</h4><p>RRR 226</p></div></div>
+        <div class="gcard"><div class="m" style="background:repeating-linear-gradient(-45deg,#21D4D4 0 3px,#101A1B 3px 14px)"></div><div class="b"><h4>Salvage City</h4><p>RRR 052</p></div></div>
+      </div></div>
+      <div class="demo"><p class="lbl">Activity timeline</p><div class="activity">
+        <div class="act"><div class="t"><b>RRR 052</b> advanced to Live Activation</div><div class="tm">2m ago · J. Roker</div></div>
+        <div class="act"><div class="t">Crew call posted on COMPVSS</div><div class="tm">1h ago</div></div>
+        <div class="act"><div class="t">Permit packet uploaded</div><div class="tm">3h ago · K. Patel</div></div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="grp"><h2>Visualizations</h2>
+    <div class="cols3">
+      <div class="demo"><p class="lbl">Stacked bar</p><div class="sbar">
+        <div class="col"><div class="seg" style="height:40px;background:var(--brass)"></div><div class="seg" style="height:30px;background:var(--nebula)"></div><span>Q1</span></div>
+        <div class="col"><div class="seg" style="height:60px;background:var(--brass)"></div><div class="seg" style="height:40px;background:var(--nebula)"></div><span>Q2</span></div>
+        <div class="col"><div class="seg" style="height:50px;background:var(--brass)"></div><div class="seg" style="height:55px;background:var(--nebula)"></div><span>Q3</span></div>
+        <div class="col"><div class="seg" style="height:80px;background:var(--brass)"></div><div class="seg" style="height:40px;background:var(--nebula)"></div><span>Q4</span></div>
+      </div><div class="legend"><span><i style="background:var(--brass)"></i>Production</span><span><i style="background:var(--nebula)"></i>Tech</span></div></div>
+      <div class="demo"><p class="lbl">Progress ring</p><svg viewBox="0 0 42 42" class="ring" style="width:120px;height:120px;display:block;margin:6px auto"><circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--ink-3)" stroke-width="5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--brass)" stroke-width="5" stroke-dasharray="74 26" stroke-linecap="round"/></svg><p style="text-align:center;font-family:var(--font-mono);font-size:10px;color:var(--fg-on-dark-3);letter-spacing:.06em;text-transform:uppercase">74% · 6 of 8 phases</p></div>
+      <div class="demo"><p class="lbl">Funnel</p><div class="funnel"><div class="f" style="width:100%">Leads 1,200</div><div class="f" style="width:74%;background:var(--brass-deep);color:var(--bone)">Qualified 890</div><div class="f" style="width:48%;background:var(--nebula);color:#fff">Proposals 560</div><div class="f" style="width:24%;background:var(--flare);color:#fff">Booked 290</div></div></div>
+    </div>
+    <div class="demo"><p class="lbl">Activity heatmap — booking density</p><div class="heat" id="heat"></div></div>
+  </div>
+
+</div>
+<script>
+  const heat=document.getElementById('heat');
+  const cols=['var(--ink-3)','rgba(233,162,59,.35)','rgba(233,162,59,.6)','var(--brass)'];
+  for(let i=0;i<84;i++){const d=document.createElement('i');d.style.background=cols[Math.floor(Math.random()*4)];heat.appendChild(d);}
+</script>
+</body></html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Proposal / SOW Template</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="../../terminal.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0c0e16;font-family:var(--font-body)}
+  .wrap{max-width:860px;margin:0 auto;padding:30px 20px 80px}
+  .doc{background:var(--bone);box-shadow:0 24px 60px rgba(0,0,0,.5);overflow:hidden}
+  /* cover */
+  .cover{background:var(--void);color:var(--bone);padding:54px 56px;position:relative;overflow:hidden}
+  .cover::before{content:"";position:absolute;inset:0;background:radial-gradient(var(--ink-3) 1.4px,transparent 1.5px) 0 0/26px 26px;opacity:.5;-webkit-mask:radial-gradient(120% 90% at 90% 0%,#000,transparent);mask:radial-gradient(120% 90% at 90% 0%,#000,transparent)}
+  .cover .brand{display:flex;align-items:center;gap:12px;position:relative}
+  .cover .brand img{width:32px;height:32px;image-rendering:pixelated}
+  .cover .brand b{font-family:var(--font-display);font-weight:900;font-size:20px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .cover .doctype{position:relative;font-family:var(--font-mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin:46px 0 12px}
+  .cover h1{position:relative;font-family:var(--font-display);font-weight:900;font-size:56px;line-height:.9;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 8px}
+  .cover .sub{position:relative;font-family:var(--font-body);font-size:16px;color:var(--fg-on-dark-2);margin:0 0 30px;max-width:480px}
+  .cover .stamp{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:2px solid var(--ink-3);padding-top:18px}
+  .cover .stamp .k{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .cover .stamp .v{font-family:var(--font-body);font-weight:600;font-size:14px;color:var(--bone);margin-top:3px}
+  .cover .stamp .v.vy{font-family:var(--font-mono);color:var(--brass)}
+  /* content */
+  .sec{padding:40px 56px;border-bottom:1px solid var(--parchment-2);color:var(--fg-on-light-1)}
+  .eb{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);margin:0 0 12px}
+  .sec h2{font-family:var(--font-display);font-weight:900;font-size:30px;text-transform:uppercase;letter-spacing:-.01em;color:var(--ink);margin:0 0 14px}
+  .sec p{font-size:15px;line-height:1.65;color:var(--fg-on-light-2);margin:0 0 12px}
+  .sec p strong{color:var(--ink)}
+  /* scope phases */
+  .phase{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--parchment-2)}
+  .phase:last-child{border-bottom:0}
+  .phase .n{font-family:var(--font-mono);font-weight:700;font-size:13px;color:var(--brass-deep)}
+  .phase h4{font-family:var(--font-display);font-weight:800;font-size:17px;text-transform:uppercase;color:var(--ink);margin:0 0 4px}
+  .phase p{font-size:13px;line-height:1.5;color:var(--fg-on-light-2);margin:0}
+  /* table */
+  table{width:100%;border-collapse:collapse;margin-top:6px}
+  th{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-light-3);text-align:left;padding:9px 10px;border-bottom:2px solid var(--ink)}
+  th.r,td.r{text-align:right}
+  td{padding:11px 10px;border-bottom:1px solid var(--parchment-2);font-size:14px;color:var(--fg-on-light-2)}
+  td b{color:var(--ink)}
+  tr.total td{border-top:2px solid var(--ink);border-bottom:0;font-family:var(--font-display);font-weight:900;font-size:18px;color:var(--ink);text-transform:uppercase}
+  tr.total td.r{color:var(--brass-deep)}
+  /* crew */
+  .crew{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .cc{display:flex;align-items:center;gap:12px;border:2px solid var(--parchment-2);border-radius:5px;padding:12px 14px}
+  .cc .av{width:40px;height:40px;border-radius:50%;background:var(--ink);display:grid;place-items:center;flex:none}
+  .cc .av img{width:26px;height:26px;image-rendering:pixelated}
+  .cc .rank{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep)}
+  .cc h4{font-family:var(--font-display);font-weight:800;font-size:15px;text-transform:uppercase;color:var(--ink);margin:2px 0 0}
+  /* sign */
+  .sign{background:var(--parchment);padding:40px 56px}
+  .sign .row{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:18px}
+  .sigline{border-top:2px solid var(--ink);padding-top:8px;font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-light-3)}
+  .note{font-family:var(--font-mono);font-size:10px;color:#667099;text-align:center;margin:16px 0 0;letter-spacing:.06em}
+  @media print{body{background:#fff}.wrap{padding:0;max-width:none}.doc{box-shadow:none}.note{display:none}}
+</style></head>
+<body><div class="wrap">
+<p class="note">Proposal / SOW template — replace bracketed fields. Print or export to PDF (Cmd/Ctrl+P).</p>
+<div class="doc">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="brand"><img src="../../assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b></div>
+    <p class="doctype">◆ Proposal &amp; Statement of Work</p>
+    <h1>Salvage City<br>Supper Club</h1>
+    <p class="sub">An immersive supper-club experience for [Client], produced end to end by GHXSTSHIP.</p>
+    <div class="stamp">
+      <div><div class="k">Project ID</div><div class="v vy">RRR 052</div></div>
+      <div><div class="k">Client</div><div class="v">[Client Name]</div></div>
+      <div><div class="k">Project Type</div><div class="v">Immersive</div></div>
+      <div><div class="k">Tier</div><div class="v">[Headliner]</div></div>
+      <div><div class="k">Location</div><div class="v">[Venue · City]</div></div>
+      <div><div class="k">Date</div><div class="v">[MM / YYYY]</div></div>
+    </div>
+  </div>
+
+  <!-- THE PROJECT -->
+  <div class="sec">
+    <p class="eb">01 · The Project</p>
+    <h2>The Brief, Charted.</h2>
+    <p><strong>[Client]</strong> is bringing [objective] to [market]. GHXSTSHIP will design, build, operate,
+      and strike the full experience — one accountable crew, from first consultation to final celebration.
+      This document sets the scope, timeline, investment, and terms for the project.</p>
+    <p>Every GHXSTSHIP project runs our <strong>eight-phase production lifecycle</strong>. The scope below is
+      organized by those phases so you can see exactly what we deliver, and when.</p>
+  </div>
+
+  <!-- SCOPE -->
+  <div class="sec">
+    <p class="eb">02 · Production Manifest</p>
+    <h2>Deliverables by Phase.</h2>
+    <div class="phase"><div class="n">01</div><div><h4>Project Discovery</h4><p>Creative &amp; production brief, goals, and success metrics.</p></div></div>
+    <div class="phase"><div class="n">02</div><div><h4>Research &amp; Development</h4><p>Feasibility report, concept directions, and site assessment.</p></div></div>
+    <div class="phase"><div class="n">03</div><div><h4>Creative Design</h4><p>Design package, renders, storyboards, and scenic drawings.</p></div></div>
+    <div class="phase"><div class="n">04</div><div><h4>Compliance &amp; Risk Management</h4><p>Permit set, safety plan, risk register, engineering sign-off, and COIs.</p></div></div>
+    <div class="phase"><div class="n">05</div><div><h4>Production &amp; Build</h4><p>Fabricated scenic, staging, and the technical production package.</p></div></div>
+    <div class="phase"><div class="n">06</div><div><h4>Operations &amp; Logistics</h4><p>Logistics plan, load-in/out schedule, and run sheets.</p></div></div>
+    <div class="phase"><div class="n">07</div><div><h4>Live Activation</h4><p>The live experience, show files, and content capture.</p></div></div>
+    <div class="phase"><div class="n">08</div><div><h4>Strike &amp; Post-Production</h4><p>Load-out, reconciliation, analytics report, and recap deck.</p></div></div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="sec" style="background:var(--void)">
+    <p class="eb" style="color:var(--brass)">03 · Schedule</p>
+    <h2 style="color:var(--bone)">Production Schedule.</h2>
+    <div class="gx-smap" style="margin-top:24px"><div class="gx-smap__line">
+      <div class="gx-smap__stop is-terminus"><div class="gx-smap__dot">01</div><div class="gx-smap__name" style="font-size:12px">Discovery</div></div>
+      <div class="gx-smap__stop"><div class="gx-smap__dot">02</div><div class="gx-smap__name" style="font-size:12px">R&amp;D</div></div>
+      <div class="gx-smap__stop"><div class="gx-smap__dot">03</div><div class="gx-smap__name" style="font-size:12px">Design</div></div>
+      <div class="gx-smap__stop"><div class="gx-smap__dot">04</div><div class="gx-smap__name" style="font-size:12px">Compliance</div></div>
+      <div class="gx-smap__stop"><div class="gx-smap__dot">05</div><div class="gx-smap__name" style="font-size:12px">Build</div></div>
+      <div class="gx-smap__stop"><div class="gx-smap__dot">06</div><div class="gx-smap__name" style="font-size:12px">Operations</div></div>
+      <div class="gx-smap__stop"><div class="gx-smap__dot">07</div><div class="gx-smap__name" style="font-size:12px">Activation</div></div>
+      <div class="gx-smap__stop is-terminus"><div class="gx-smap__dot">08</div><div class="gx-smap__name" style="font-size:12px">Strike</div></div>
+    </div></div>
+    <p style="color:var(--fg-on-dark-2);font-size:13px;margin-top:26px">Estimated duration: <strong style="color:var(--bone)">[X weeks]</strong>, Discovery to Strike. Detailed dates issued at Phase 01.</p>
+  </div>
+
+  <!-- OPERATIONS MANNING LIST -->
+  <div class="sec">
+    <p class="eb">04 · Operations Manning</p>
+    <h2>Project Staffing.</h2>
+    <p>The crew assigned to this project, by role and vertical. Headcount and rate basis are confirmed at Phase 01 and managed in COMPVSS.</p>
+    <table style="margin-top:8px">
+      <thead><tr><th>Role</th><th>Vertical</th><th class="r">Headcount</th><th class="r">Basis</th></tr></thead>
+      <tbody>
+        <tr><td><b>Executive Producer</b></td><td>Production</td><td class="r">1</td><td class="r">Flat</td></tr>
+        <tr><td><b>Production Director</b></td><td>Production</td><td class="r">1</td><td class="r">Flat</td></tr>
+        <tr><td><b>Project Manager</b></td><td>Operations</td><td class="r">1</td><td class="r">Flat</td></tr>
+        <tr><td><b>Technical Director</b></td><td>Production</td><td class="r">1</td><td class="r">Daily</td></tr>
+        <tr><td><b>A/V/L Technicians</b></td><td>Production</td><td class="r">[8]</td><td class="r">Daily</td></tr>
+        <tr><td><b>Rigging Crew</b></td><td>Production</td><td class="r">[6]</td><td class="r">Daily</td></tr>
+        <tr><td><b>Logistics Coordinator</b></td><td>Operations</td><td class="r">[2]</td><td class="r">Daily</td></tr>
+        <tr><td><b>Stage Manager</b></td><td>Production</td><td class="r">1</td><td class="r">Daily</td></tr>
+        <tr class="total"><td>Total Crew</td><td></td><td class="r">[21]</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TECHNOLOGY SERVICES -->
+  <div class="sec">
+    <p class="eb">05 · Technology Systems</p>
+    <h2>Platform &amp; Implementation.</h2>
+    <table style="margin-top:8px">
+      <thead><tr><th>Service</th><th>Scope</th><th class="r">Basis</th></tr></thead>
+      <tbody>
+        <tr><td><b>App Access &amp; Subscription</b></td><td>ATLVS, COMPVSS &amp; GVTEWAY seats</td><td class="r">Annual / seat</td></tr>
+        <tr><td><b>Data Migration</b></td><td>Import existing project, crew &amp; ticketing data</td><td class="r">One-time</td></tr>
+        <tr><td><b>Implementation &amp; Onboarding</b></td><td>Configuration, setup &amp; team training</td><td class="r">One-time</td></tr>
+        <tr><td><b>Integration Services</b></td><td>APIs, SSO, accounting &amp; CRM connectors</td><td class="r">Scoped</td></tr>
+        <tr><td><b>Custom Development</b></td><td>Bespoke modules &amp; workflow automation</td><td class="r">Quoted</td></tr>
+        <tr><td><b>Support &amp; SLA</b></td><td>Tiered support &amp; service levels</td><td class="r">Annual</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- INVESTMENT -->
+  <div class="sec">
+    <p class="eb">06 · Investment</p>
+    <h2>Investment Summary.</h2>
+    <table>
+      <thead><tr><th>Phase / Workstream</th><th>Vertical</th><th class="r">Investment</th></tr></thead>
+      <tbody>
+        <tr><td><b>01 · Project Discovery</b></td><td>Production</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>02 · Research &amp; Development</b></td><td>Production</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>03 · Creative Design</b></td><td>Production</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>04 · Compliance &amp; Risk Management</b></td><td>Operations</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>05 · Production &amp; Build</b></td><td>Production</td><td class="r">$[000,000]</td></tr>
+        <tr><td><b>06 · Operations &amp; Logistics</b></td><td>Operations</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>07 · Live Activation</b></td><td>Production</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>08 · Strike &amp; Post-Production</b></td><td>Operations</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>Technology Systems</b></td><td>Technology</td><td class="r">$[00,000]</td></tr>
+        <tr><td><b>Subtotal</b></td><td></td><td class="r">$[000,000]</td></tr>
+        <tr><td>Contingency [10%]</td><td></td><td class="r">$[00,000]</td></tr>
+        <tr class="total"><td>Total Project</td><td></td><td class="r">$[000,000]</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;font-size:13px">Engagement options: <strong>Full Project</strong> — all phases · <strong>By Vertical</strong> — Production, Operations, or Technology · <strong>À La Carte</strong> — select phases. One-time fees shown; Technology Systems subscriptions are billed annually.</p>
+  </div>
+
+  <!-- ASSUMPTIONS -->
+  <div class="sec">
+    <p class="eb">07 · Assumptions &amp; Exclusions</p>
+    <h2>What's Not Included.</h2>
+    <p>This SOW assumes the client provides venue and site access, house power and rigging points, talent and artist fees, alcohol and F&amp;B licensing, and any third-party permits noted as by-others. Travel, lodging, and per diems are billed at cost. Anything not itemized in the Production Manifest is out of scope and quoted as a change order.</p>
+  </div>
+
+  <!-- ACCEPTANCE & MILESTONES -->
+  <div class="sec">
+    <p class="eb">08 · Acceptance &amp; Milestones</p>
+    <h2>Sign-Off &amp; Payment Schedule.</h2>
+    <p>Each phase is accepted against its Production Manifest deliverables. Payment is milestone-based:</p>
+    <table style="margin-top:8px">
+      <thead><tr><th>Milestone</th><th>Trigger</th><th class="r">Due</th></tr></thead>
+      <tbody>
+        <tr><td><b>Deposit</b></td><td>SOW signature</td><td class="r">[40%]</td></tr>
+        <tr><td><b>Build Release</b></td><td>Phase 05 — Production &amp; Build start</td><td class="r">[40%]</td></tr>
+        <tr><td><b>Final</b></td><td>Phase 08 — Strike &amp; reconciliation</td><td class="r">[20%]</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TERMS -->
+  <div class="sec">
+    <p class="eb">09 · Terms &amp; Conditions</p>
+    <h2>The Fine Print.</h2>
+    <p><strong>Payment:</strong> [50%] to begin, Phases 01–04; [50%] before Production &amp; Build, Phase 05.
+      <strong>Validity:</strong> This proposal is valid for [30] days. <strong>Change orders:</strong> Scope
+      changes are quoted as à-la-carte additions. <strong>Cancellation &amp; force majeure:</strong> per the
+      Master Services Agreement. Full terms in the accompanying agreements.</p>
+    <p style="margin-top:10px;font-size:13px">This engagement is governed by our <a href="#" style="color:var(--brass-deep);font-weight:600">Master Services Agreement</a>, <a href="#" style="color:var(--brass-deep);font-weight:600">Privacy Policy</a>, and <a href="#" style="color:var(--brass-deep);font-weight:600">Confidentiality Statement</a>.</p>
+  </div>
+
+  <!-- SIGN -->
+  <div class="sign">
+    <p class="eb">10 · Approval &amp; Authorization</p>
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:30px;text-transform:uppercase;color:var(--ink);margin:0 0 6px">Authorize the Work.</h2>
+    <p style="font-size:14px;color:var(--fg-on-light-2);margin:0">Sign below to authorize. Your producer begins Project Discovery within one business day.</p>
+    <p style="font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-light-3);margin:14px 0 0">Key contacts — Client: [Name · email] · GHXSTSHIP: [Producer · email]</p>
+    <div class="row">
+      <div class="sigline">[Client] — Signature / Date</div>
+      <div class="sigline">GHXSTSHIP — Signature / Date</div>
+    </div>
+  </div>
+
+</div>
+<p class="note">SOW v[1.0] · [Date] · Valid [30] days · Prepared by [Name] — G H X S T S H I P · hello@ghxstship.tours</p>
+</div></body></html>

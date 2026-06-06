@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — GVTEWAY Checkout</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body)}
+  .top{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;border-bottom:2px solid var(--ink-3)}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{width:28px;height:28px;image-rendering:pixelated}
+  .brand b{font-family:var(--font-display);font-weight:900;font-size:18px;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+  .brand .gw{font-family:var(--font-pixel);font-size:12px;color:var(--plasma);margin-left:4px}
+  .top .step{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .top .step b{color:var(--brass)}
+  .wrap{max-width:1080px;margin:0 auto;padding:30px 26px 70px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px}
+  @media(max-width:840px){.wrap{grid-template-columns:1fr}}
+  .eb{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--plasma);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .eb::before{content:"◆";color:var(--nebula)}
+  h1{font-family:var(--font-display);font-weight:900;font-size:40px;line-height:.9;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 6px}
+  .evmeta{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);margin:0 0 24px}
+  /* tiers */
+  .tier{display:flex;align-items:center;gap:16px;border:2px solid var(--ink-3);border-radius:6px;padding:16px 18px;margin-bottom:12px;cursor:pointer;transition:border-color .12s,background .12s}
+  .tier:hover{border-color:var(--brass)}
+  .tier.on{border-color:var(--brass);background:var(--ink-2);box-shadow:4px 4px 0 var(--ink)}
+  .tier .rd{width:22px;height:22px;border-radius:50%;border:2px solid var(--ink-3);flex:none;display:grid;place-items:center}
+  .tier.on .rd{border-color:var(--brass)}.tier.on .rd::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--brass)}
+  .tier .nm{font-family:var(--font-display);font-weight:800;font-size:20px;text-transform:uppercase;color:var(--bone);line-height:1}
+  .tier .ds{font-size:12px;color:var(--fg-on-dark-3);margin-top:3px}
+  .tier .pr{margin-left:auto;text-align:right}
+  .tier .pr .p{font-family:var(--font-display);font-weight:900;font-size:24px;color:var(--brass)}
+  .tier .pr .left{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .tier.soldout{opacity:.5}
+  .tag-px{font-family:var(--font-pixel);font-size:9px;color:var(--ink);background:var(--nebula);padding:3px 7px;margin-left:8px;text-transform:uppercase}
+  /* summary / boarding pass */
+  .panel{background:var(--ink);border:2px solid var(--ink-3);border-radius:6px;padding:20px;position:sticky;top:20px}
+  .sumrow{display:flex;justify-content:space-between;font-size:13px;color:var(--fg-on-dark-2);padding:8px 0;border-bottom:1px solid var(--ink-3)}
+  .sumrow b{color:var(--bone)}
+  .sumrow.tot{border-bottom:0;border-top:2px solid var(--ink-3);margin-top:6px;padding-top:12px;font-family:var(--font-display);font-weight:900;font-size:20px;text-transform:uppercase;color:var(--bone)}
+  .sumrow.tot .v{color:var(--brass)}
+  .pass{margin-top:18px;border:3px solid var(--brass);border-radius:6px;overflow:hidden;display:flex}
+  .pass .m{flex:1;background:var(--ink-2);padding:14px 16px}
+  .pass .route{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .pass .c{font-family:var(--font-display);font-weight:900;font-size:20px;color:var(--bone);text-transform:uppercase;line-height:.9}
+  .pass .c small{display:block;font-family:var(--font-mono);font-size:7px;letter-spacing:.1em;color:var(--fg-on-dark-3);font-weight:400;margin-top:2px}
+  .pass i.pl{color:var(--brass);font-size:15px}
+  .pass .row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .pass .f .k{font-family:var(--font-mono);font-size:7px;letter-spacing:.1em;color:var(--fg-on-dark-3);text-transform:uppercase}
+  .pass .f .v{font-family:var(--font-body);font-weight:600;font-size:12px;color:var(--bone);margin-top:2px}
+  .pass .stub{width:64px;background:var(--brass);color:var(--ink);display:flex;align-items:center;justify-content:center;padding:8px}
+  .pass .stub .qr{width:46px;height:46px;background:conic-gradient(var(--ink) 25%,transparent 0 50%,var(--ink) 0 75%,transparent 0) 0 0/8px 8px,var(--ink);border:2px solid var(--ink)}
+  .gx-btn.full{width:100%;justify-content:center;margin-top:16px}
+</style></head>
+<body>
+  <div class="top">
+    <div class="brand"><img src="../../assets/skull-bone.svg" alt=""><b>G H X S T S H I P</b><span class="gw">GVTEWAY</span></div>
+    <div class="step">Select <b>· Checkout</b> · Boarding Pass</div>
+  </div>
+  <div class="wrap">
+    <div>
+      <p class="eb">The Gateway · Now Boarding</p>
+      <h1>Salvage City — NYE</h1>
+      <p class="evmeta">Dec 31 · Miami, FL · 8,000 cap · Project RRR 052</p>
+
+      <div class="tier on"><div class="rd"></div><div><div class="nm">General Admission</div><div class="ds">Main deck · standing</div></div><div class="pr"><div class="p">$89</div><div class="left">640 left</div></div></div>
+      <div class="tier"><div class="rd"></div><div><div class="nm">Captain VIP <span class="tag-px">Tier</span></div><div class="ds">Skip the line · upper deck · open bar</div></div><div class="pr"><div class="p">$249</div><div class="left">120 left</div></div></div>
+      <div class="tier"><div class="rd"></div><div><div class="nm">The Bridge Table</div><div class="ds">Reserved booth · bottle service · 6 seats</div></div><div class="pr"><div class="p">$1,800</div><div class="left">8 left</div></div></div>
+      <div class="tier soldout"><div class="rd"></div><div><div class="nm">Stowaway Early-Bird</div><div class="ds">Sold out</div></div><div class="pr"><div class="p">$59</div><div class="left">0 left</div></div></div>
+    </div>
+
+    <div class="panel">
+      <p class="eb" style="color:var(--brass)">Your Order</p>
+      <div class="sumrow"><span>General Admission × 2</span><b>$178.00</b></div>
+      <div class="sumrow"><span>Service fee</span><b>$18.50</b></div>
+      <div class="sumrow"><span>Captain tier credit</span><b style="color:var(--success)">−$10.00</b></div>
+      <div class="sumrow tot"><span>Total</span><span class="v">$186.50</span></div>
+
+      <div class="pass">
+        <div class="m">
+          <div class="route"><div class="c">GA<small>Admit</small></div><i class="ph-bold ph-boat pl"></i><div class="c">NYE<small>Salvage City</small></div></div>
+          <div class="row2"><div class="f"><div class="k">Project</div><div class="v">RRR 052</div></div><div class="f"><div class="k">Qty</div><div class="v">2 · Main Deck</div></div></div>
+        </div>
+        <div class="stub"><div class="qr"></div></div>
+      </div>
+
+      <a class="gx-btn full">Complete Purchase · $186.50</a>
+    </div>
+  </div>
+</body></html>

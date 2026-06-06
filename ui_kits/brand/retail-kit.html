@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail &amp; Merchandising Kit — GHXSTSHIP</title>
+<meta name="description" content="GHXSTSHIP retail & merchandising kit — product image templates for apparel, equipment, and accessories across three lines: Sitewear, Streetwear, and Performancewear.">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .brand b{color:var(--bone)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  header.bar{position:sticky;top:0;z-index:20;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
+  .bar-in{display:flex;align-items:center;justify-content:space-between;min-height:66px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .brand img{width:30px;height:30px;image-rendering:pixelated}
+  .brand b{font-family:var(--font-display);font-weight:900;font-size:18px;text-transform:uppercase;white-space:nowrap}
+  .bar a.back{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);text-decoration:none}
+  .eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"\25C6";color:var(--nebula)}
+  .hero{padding:46px 0 36px;border-bottom:var(--stroke-2) solid var(--ink-3)}
+  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6vw,72px);line-height:.88;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 16px}
+  h1 .pop{color:var(--brass)}
+  .lede{font-size:17px;line-height:1.62;color:var(--fg-on-dark-2);max-width:780px;margin:0}
+  section.pad{padding:52px 0;border-bottom:var(--stroke-2) solid var(--ink-3)}
+  h2.sec{font-family:var(--font-display);font-weight:900;font-size:clamp(26px,3.6vw,40px);text-transform:uppercase;margin:0 0 6px;line-height:1}
+  .sub{font-size:15px;line-height:1.6;color:var(--fg-on-dark-2);max-width:760px;margin:0 0 8px}
+  /* PRODUCT IMAGE TEMPLATE */
+  .prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  @media(max-width:880px){.prodgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){.prodgrid{grid-template-columns:1fr}}
+  .prod{border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);overflow:hidden;background:var(--ink-2)}
+  .prod .shot{aspect-ratio:1/1;position:relative;display:grid;place-items:center;border-bottom:var(--stroke-2) solid var(--ink-3);overflow:hidden}
+  .prod .shot::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(251,250,246,.10) 1.4px,transparent 1.6px) 0 0/15px 15px}
+  .prod .shot .wm{position:absolute;width:46%;height:46%;object-fit:contain;opacity:.16;left:50%;top:50%;transform:translate(-50%,-50%);image-rendering:pixelated}
+  .prod .shot > i{font-size:64px;position:relative;z-index:1;color:var(--bone)}
+  .prod .shot .badge{position:absolute;left:10px;top:10px;z-index:2;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--bone);padding:4px 8px;border-radius:var(--r-1);border:var(--stroke-1) solid var(--ink-3)}
+  .prod .shot .sw{position:absolute;left:10px;bottom:10px;z-index:2;display:flex;gap:5px}
+  .prod .shot .sw span{width:13px;height:13px;border-radius:50%;border:1.5px solid rgba(6,12,12,.5)}
+  .prod .body{padding:14px}
+  .prod .ln{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+  .prod h3{font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;margin:5px 0 8px;line-height:1}
+  .prod .sku{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  /* line accents */
+  .line-sw .shot{background:linear-gradient(140deg,color-mix(in oklab,var(--brass) 30%,var(--ink-2)),var(--ink-2))}.line-sw .ln{color:var(--brass)}
+  .line-st .shot{background:linear-gradient(140deg,color-mix(in oklab,var(--plasma) 26%,var(--ink-2)),var(--ink-2))}.line-st .ln{color:var(--plasma)}
+  .line-aw .shot{background:linear-gradient(140deg,color-mix(in oklab,var(--nebula) 28%,var(--ink-2)),var(--ink-2))}.line-aw .ln{color:var(--nebula)}
+  /* line header */
+  .lh{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  .lh .tm{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .pal{display:flex;gap:8px;margin:14px 0 0}
+  .pal span{display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .pal i{width:16px;height:16px;border-radius:var(--r-1);border:var(--stroke-1) solid var(--ink-3);display:inline-block}
+  .owned{border-left:var(--stroke-4) solid var(--brass);background:var(--ink-2);border-radius:0 6px 6px 0;padding:14px 18px;margin:16px 0 0;font-size:14px;line-height:1.6;color:var(--fg-on-dark-1);max-width:760px}
+  /* template anatomy */
+  .anat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  @media(max-width:880px){.anat{grid-template-columns:1fr}}
+  .acard{border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);background:var(--ink-2);padding:22px}
+  .acard h3{font-family:var(--font-display);font-weight:800;font-size:20px;text-transform:uppercase;margin:0 0 4px}
+  .acard .r{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin:0 0 12px}
+  .acard ul{margin:0;padding-left:16px}.acard li{font-size:13px;line-height:1.6;color:var(--fg-on-dark-2);margin-bottom:6px}
+  footer{padding:34px 0;text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+</style></head>
+<body>
+<header class="bar"><div class="wrap bar-in">
+  <a class="brand" href="../../index.html"><img src="../../assets/skull-bone.svg" alt="GHXSTSHIP"><b>G H X S T S H I P</b></a>
+  <a class="back" href="../../index.html">← Brand Kit</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">Retail &amp; Merchandising Kit</p>
+  <h1>Goods Built to the<br><span class="pop">Same Standard.</span></h1>
+  <p class="lede">The GHXSTSHIP product system — reusable image templates for apparel, equipment, and accessories, organized into three lines: <strong style="color:var(--brass)">Sitewear</strong>, <strong style="color:var(--plasma)">Streetwear</strong>, and <strong style="color:var(--nebula)">Performancewear</strong>. Every tile is a template; real product photography drops straight in.</p>
+</div></section>
+
+<!-- TEMPLATE SYSTEM -->
+<section class="pad"><div class="wrap">
+  <p class="eyebrow">The Template System</p>
+  <h2 class="sec">One Shot, Three Categories.</h2>
+  <p class="sub">Every product photo follows the same frame: 1:1 crop, line-colorway ground, Ben-Day halftone, faint skull watermark (bottom-right, 10%), category badge (top-left), and colorway swatches (bottom-left). SKU format: <strong>GX-[LINE]-[CAT]-NNN</strong>.</p>
+  <div class="anat">
+    <div class="acard"><p class="r">Template A</p><h3>Apparel</h3><ul><li>Flat-lay or ghost-mannequin, front + back</li><li>1:1 hero, 4:5 detail crop</li><li>Colorway swatches required</li><li>Size run in product body, not image</li></ul></div>
+    <div class="acard"><p class="r">Template B</p><h3>Equipment</h3><ul><li>3/4 hero on seamless ground</li><li>Scale reference + in-use shot</li><li>Spec callouts as overlay labels</li><li>Durability / certification badge</li></ul></div>
+    <div class="acard"><p class="r">Template C</p><h3>Accessories</h3><ul><li>Tight 1:1 macro, single hero</li><li>Pairs/sets shown together</li><li>Material + dimension in body</li><li>Optional lifestyle alt</li></ul></div>
+  </div>
+</div></section>
+
+<!-- SITEWEAR -->
+<section class="pad line-sw"><div class="wrap">
+  <div class="lh"><p class="eyebrow" style="margin:0">Line 01</p><h2 class="sec">Sitewear&trade;</h2></div>
+  <p class="sub">Apparel and gear built for working an experiential production job site — load-in to strike. Hi-vis, durable, multi-pocket, rated for the floor.</p>
+  <div class="owned"><strong>Sitewear&trade;</strong> is a GHXSTSHIP-owned category: production-grade workwear for experiential and live-event crews. Treat it as a trademarkable brand term — capitalize, and pair with the GC/Foreman positioning.</div>
+  <div class="pal"><span><i style="background:var(--brass)"></i>Hi-Vis Pineapple</span><span><i style="background:var(--ink)"></i>Reef Charcoal</span><span><i style="background:var(--bone)"></i>Bone</span></div>
+  <div class="prodgrid">
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--brass)"></span><span style="background:var(--ink)"></span></div></div><div class="body"><p class="ln">Sitewear</p><h3>Site Coverall</h3><div class="sku"><span>GX-SW-AP-001</span><span>$148</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--brass)"></span><span style="background:var(--bone)"></span></div></div><div class="body"><p class="ln">Sitewear</p><h3>Hi-Vis Crew Tee</h3><div class="sku"><span>GX-SW-AP-002</span><span>$44</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--ink)"></span><span style="background:var(--brass)"></span></div></div><div class="body"><p class="ln">Sitewear</p><h3>Production Vest</h3><div class="sku"><span>GX-SW-AP-003</span><span>$96</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Equipment</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--brass)"></span><span style="background:var(--ink)"></span></div></div><div class="body"><p class="ln">Sitewear</p><h3>Production Hard Hat</h3><div class="sku"><span>GX-SW-EQ-001</span><span>$58</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Equipment</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--ink)"></span><span style="background:var(--bone)"></span></div></div><div class="body"><p class="ln">Sitewear</p><h3>Rigger Gloves</h3><div class="sku"><span>GX-SW-EQ-002</span><span>$36</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Accessory</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--brass)"></span><span style="background:var(--ink)"></span></div></div><div class="body"><p class="ln">Sitewear</p><h3>Credential Lanyard</h3><div class="sku"><span>GX-SW-AC-001</span><span>$18</span></div></div></article>
+  </div>
+</div></section>
+
+<!-- STREETWEAR -->
+<section class="pad line-st"><div class="wrap">
+  <div class="lh"><p class="eyebrow" style="margin:0">Line 02</p><h2 class="sec">Streetwear</h2></div>
+  <p class="sub">The off-site line — reef-night staples that carry the mark beyond the scenes. Heavyweight, vintage-tropical, fan-facing.</p>
+  <div class="pal"><span><i style="background:var(--plasma)"></i>Sapphire</span><span><i style="background:var(--void)"></i>Reef Night</span><span><i style="background:var(--bone)"></i>Bone</span></div>
+  <div class="prodgrid">
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--void)"></span><span style="background:var(--bone)"></span></div></div><div class="body"><p class="ln">Streetwear</p><h3>Skull Flag Tee</h3><div class="sku"><span>GX-ST-AP-001</span><span>$38</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--void)"></span><span style="background:var(--nebula)"></span></div></div><div class="body"><p class="ln">Streetwear</p><h3>Reef Night Hoodie</h3><div class="sku"><span>GX-ST-AP-002</span><span>$74</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--ink)"></span><span style="background:var(--bone)"></span></div></div><div class="body"><p class="ln">Streetwear</p><h3>Coaches Jacket</h3><div class="sku"><span>GX-ST-AP-003</span><span>$98</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--void)"></span><span style="background:var(--nebula)"></span></div></div><div class="body"><p class="ln">Streetwear</p><h3>Voyage Dad Cap</h3><div class="sku"><span>GX-ST-AP-004</span><span>$32</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Accessory</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--bone)"></span><span style="background:var(--void)"></span></div></div><div class="body"><p class="ln">Streetwear</p><h3>Crew Tote</h3><div class="sku"><span>GX-ST-AC-001</span><span>$24</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Accessory</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--brass)"></span><span style="background:var(--ink)"></span></div></div><div class="body"><p class="ln">Streetwear</p><h3>Enamel Skull Pin</h3><div class="sku"><span>GX-ST-AC-002</span><span>$14</span></div></div></article>
+  </div>
+</div></section>
+
+<!-- ATHLETIC-WEAR -->
+<section class="pad line-aw"><div class="wrap">
+  <div class="lh"><p class="eyebrow" style="margin:0">Line 03</p><h2 class="sec">Performancewear</h2></div>
+  <p class="sub">Performance line for crews who move — training, recovery, and game-day. Technical fabrics, pineapple-forward, built to sweat.</p>
+  <div class="pal"><span><i style="background:var(--nebula)"></i>Pineapple</span><span><i style="background:var(--ink)"></i>Reef Charcoal</span><span><i style="background:var(--bone)"></i>Bone</span></div>
+  <div class="prodgrid">
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--plasma)"></span><span style="background:var(--ink)"></span></div></div><div class="body"><p class="ln">Performance</p><h3>Performance Tee</h3><div class="sku"><span>GX-PW-AP-001</span><span>$42</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--ink)"></span><span style="background:var(--plasma)"></span></div></div><div class="body"><p class="ln">Performance</p><h3>Training Shorts</h3><div class="sku"><span>GX-PW-AP-002</span><span>$48</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Apparel</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--plasma)"></span><span style="background:var(--bone)"></span></div></div><div class="body"><p class="ln">Performance</p><h3>Track Jacket</h3><div class="sku"><span>GX-PW-AP-003</span><span>$88</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Equipment</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--ink)"></span><span style="background:var(--plasma)"></span></div></div><div class="body"><p class="ln">Performance</p><h3>Gym Duffel</h3><div class="sku"><span>GX-PW-EQ-001</span><span>$68</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Equipment</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--plasma)"></span><span style="background:var(--bone)"></span></div></div><div class="body"><p class="ln">Performance</p><h3>Insulated Bottle</h3><div class="sku"><span>GX-PW-EQ-002</span><span>$34</span></div></div></article>
+    <article class="prod"><div class="shot"><span class="badge">Accessory</span><img class="wm" src="../../assets/skull-bone.svg" alt=""><div class="sw"><span style="background:var(--bone)"></span><span style="background:var(--plasma)"></span></div></div><div class="body"><p class="ln">Performance</p><h3>Crew Socks 3-Pack</h3><div class="sku"><span>GX-PW-AC-001</span><span>$22</span></div></div></article>
+  </div>
+</div></section>
+
+<footer>G H X S T S H I P · Retail &amp; Merchandising Kit · Sitewear™ // Streetwear // Performancewear · Product imagery is template placeholder — real photography drops in</footer>
+</body></html>

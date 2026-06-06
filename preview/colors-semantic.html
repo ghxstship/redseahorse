@@ -1,0 +1,22 @@
+<!-- @dsCard group="Colors" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{margin:0}.stage{width:700px;background:var(--bone);padding:30px 34px;box-sizing:border-box}
+.eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;color:var(--brass-deep);text-transform:uppercase;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sw{border:2px solid var(--ink);border-radius:4px;overflow:hidden}
+.bar{height:54px;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:16px;text-transform:uppercase;color:#fff}
+.meta{padding:7px 10px;background:#fff}
+.nm{font-family:var(--font-body);font-weight:600;font-size:13px;color:var(--ink)}
+.hx{font-family:var(--font-mono);font-size:10px;color:var(--fg-on-light-3)}
+</style></head>
+<body><div class="stage">
+  <p class="eb">Semantic · status</p>
+  <div class="grid">
+    <div class="sw"><div class="bar" style="background:#2FBF71">OK</div><div class="meta"><div class="nm">Success</div><div class="hx">#2FBF71</div></div></div>
+    <div class="sw"><div class="bar" style="background:#E9A23B;color:#101A1B">!</div><div class="meta"><div class="nm">Warning</div><div class="hx">#E9A23B</div></div></div>
+    <div class="sw"><div class="bar" style="background:#F23A2F">×</div><div class="meta"><div class="nm">Danger</div><div class="hx">#F23A2F</div></div></div>
+    <div class="sw"><div class="bar" style="background:#21D4D4;color:#101A1B">i</div><div class="meta"><div class="nm">Info</div><div class="hx">#21D4D4</div></div></div>
+  </div>
+</div></body></html>

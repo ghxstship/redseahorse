@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Pitch Deck</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  deck-stage:not(:defined){visibility:hidden}
+  html,body{margin:0;background:#000}
+  section{background:var(--void);color:var(--bone);font-family:var(--font-body);overflow:hidden}
+  .pad{position:absolute;inset:0;padding:110px 130px;display:flex;flex-direction:column}
+  .eb{font-family:var(--font-mono);font-size:26px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin:0 0 28px;display:flex;align-items:center;gap:18px}
+  .eb::before{content:"◆";color:var(--nebula)}
+  .disp{font-family:var(--font-display);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.86;margin:0}
+  .stamp{font-family:var(--font-mono);font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .corner{position:absolute;bottom:54px;left:130px;right:130px;display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--font-mono);font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .corner img{width:34px;height:34px;image-rendering:pixelated;vertical-align:middle;margin-right:12px}
+  .halftone{position:absolute;inset:0;background:radial-gradient(var(--ink-3) 2px,transparent 2.5px) 0 0/40px 40px;opacity:.5}
+
+  /* TITLE */
+  .s-title{display:grid;grid-template-columns:1.3fr .8fr;align-items:center}
+  .s-title .skull{width:440px;height:440px;background:var(--ink);border:8px solid var(--brass);
+    box-shadow:24px 24px 0 var(--brass-deep);display:grid;place-items:center}
+  .s-title .skull img{width:320px;height:320px;image-rendering:pixelated}
+
+  /* SECTION */
+  .s-sec{justify-content:center}
+  .s-sec .num{font-family:var(--font-mono);font-size:30px;color:var(--plasma);letter-spacing:.2em}
+
+  /* STATEMENT */
+  .s-state{justify-content:center;background:var(--nebula)}
+  .s-state .disp{color:var(--void)}
+  .s-state .eb{color:var(--void)}.s-state .eb::before{color:var(--void)}
+
+  /* STATS */
+  .grid4{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:auto;margin-bottom:auto}
+  .statbox{border:5px solid var(--ink-3);border-radius:6px;padding:40px 34px;background:var(--ink-2)}
+  .statbox .big{font-family:var(--font-display);font-weight:900;font-size:128px;line-height:.82;color:var(--brass)}
+  .statbox:nth-child(2) .big{color:var(--plasma)}.statbox:nth-child(3) .big{color:var(--nebula)}.statbox:nth-child(4) .big{color:var(--bone)}
+  .statbox .lbl{font-family:var(--font-mono);font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-2);margin-top:18px}
+
+  /* PROCESS 7D */
+  .seven{display:flex;gap:14px;margin-top:auto;margin-bottom:auto}
+  .dstep{flex:1;border:5px solid var(--ink);border-radius:6px;background:var(--ink-2);padding:30px 18px;box-shadow:8px 8px 0 var(--ink-3)}
+  .dstep .n{font-family:var(--font-mono);font-size:20px;color:var(--brass);letter-spacing:.1em}
+  .dstep h3{font-family:var(--font-display);font-weight:900;font-size:38px;text-transform:uppercase;margin:14px 0 10px;line-height:.9}
+  .dstep p{font-family:var(--font-body);font-size:18px;color:var(--fg-on-dark-3);margin:0;line-height:1.3}
+  .dstep:nth-child(6){background:var(--nebula);border-color:var(--bone)}.dstep:nth-child(6) .n,.dstep:nth-child(6) p{color:var(--ink)}
+  .dstep:nth-child(7){background:var(--brass)}.dstep:nth-child(7) .n,.dstep:nth-child(7) p,.dstep:nth-child(7) h3{color:var(--ink)}
+
+  /* THREE-UP */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:auto;margin-bottom:auto}
+  .tcard{border:5px solid var(--bone);border-radius:6px;background:var(--ink);padding:44px 38px;box-shadow:12px 12px 0 var(--ink-3)}
+  .tcard .nm{font-family:var(--font-pixel);font-size:38px;color:var(--brass);margin-bottom:8px}
+  .tcard .tag{font-family:var(--font-mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--plasma)}
+  .tcard p{font-family:var(--font-body);font-size:24px;line-height:1.5;color:var(--fg-on-dark-2);margin:26px 0 0}
+
+  /* CASE STUDY */
+  .s-case{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0}
+  .s-case .media{background:repeating-linear-gradient(45deg,#18262A 0 30px,#101A1B 30px 60px);position:relative;display:grid;place-items:center}
+  .s-case .media i{font-size:200px;color:var(--brass)}
+  .s-case .media .chip{position:absolute;top:50px;left:50px;font-family:var(--font-pixel);font-size:22px;background:var(--ink);color:var(--brass);padding:14px 20px;box-shadow:6px 6px 0 var(--brass-deep)}
+  .s-case .info{padding:110px 100px;display:flex;flex-direction:column;justify-content:center}
+
+  /* CTA */
+  .s-cta{justify-content:center;align-items:flex-start;text-align:left;position:relative}
+  .s-cta .btnrow{display:flex;gap:24px;margin-top:48px}
+  .bigbtn{font-family:var(--font-display);font-weight:800;font-size:34px;text-transform:uppercase;padding:26px 50px;
+    border:6px solid var(--ink);border-radius:6px;background:var(--brass);color:var(--ink);box-shadow:8px 8px 0 var(--ink);text-decoration:none}
+  .bigbtn.ghost{background:transparent;color:var(--bone);border-color:var(--bone);box-shadow:8px 8px 0 var(--brass)}
+</style></head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- 1 · TITLE -->
+  <section data-label="Title">
+    <div class="halftone" style="-webkit-mask:radial-gradient(120% 90% at 80% 10%,#000,transparent);mask:radial-gradient(120% 90% at 80% 10%,#000,transparent)"></div>
+    <div class="pad s-title">
+      <div>
+        <p class="eb">Experiential Production &amp; Technology</p>
+        <h1 class="disp" style="font-size:200px;color:var(--bone)">GHXST<br><span style="color:var(--brass)">SHIP</span></h1>
+        <p class="stamp" style="margin-top:34px">MIAMI // LAS VEGAS // CHI // NY // LA &nbsp;◆&nbsp; EST. 2022</p>
+      </div>
+      <div class="skull"><img src="../assets/skull-bone.svg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- 2 · THREE VERTICALS -->
+  <section data-label="Three Verticals">
+    <div class="pad">
+      <p class="eb">One Company · Three Verticals</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">Three Verticals.</h2>
+      <div class="grid3">
+        <div class="tcard"><div class="nm" style="font-family:var(--font-display);font-weight:900;font-size:46px">01</div><div class="tag">Production Management · The General Contractor</div><p style="font-family:var(--font-display);font-weight:900;font-size:46px;color:var(--bone);text-transform:uppercase;margin-top:14px;line-height:.9">Production</p><p>Creative &amp; physical production of live events, festivals &amp; activations.</p></div>
+        <div class="tcard"><div class="nm" style="font-family:var(--font-display);font-weight:900;font-size:46px">02</div><div class="tag">Operations Leadership · The Foreman</div><p style="font-family:var(--font-display);font-weight:900;font-size:46px;color:var(--bone);text-transform:uppercase;margin-top:14px;line-height:.9">Operations</p><p>Logistics, crew, budgets, compliance &amp; analytics, at any scale.</p></div>
+        <div class="tcard"><div class="nm" style="font-family:var(--font-display);font-weight:900;font-size:46px">03</div><div class="tag">Technology Implementation · The Procore</div><p style="font-family:var(--font-display);font-weight:900;font-size:46px;color:var(--bone);text-transform:uppercase;margin-top:14px;line-height:.9">Technology</p><p>Proprietary event software: ATLVS, COMPVSS &amp; GVTEWAY.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · STATEMENT -->
+  <section data-label="Statement">
+    <div class="pad s-state">
+      <p class="eb">The GHXSTSHIP Mission</p>
+      <h2 class="disp" style="font-size:150px">We don't meet<br>the brief.<br>We redefine<br>what's possible.</h2>
+    </div>
+  </section>
+
+  <!-- 4 · STATS -->
+  <section data-label="Stats">
+    <div class="pad">
+      <p class="eb">The History</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">Thirteen Years of Receipts</h2>
+      <div class="grid4">
+        <div class="statbox"><div class="big">14+</div><div class="lbl">Years Experience</div></div>
+        <div class="statbox"><div class="big">250+</div><div class="lbl">Experiences Created</div></div>
+        <div class="statbox"><div class="big">5M+</div><div class="lbl">Memories Made</div></div>
+      </div>
+    </div>
+    <div class="corner"><span><img src="../assets/skull-bone.svg">G H X S T S H I P</span><span>THE GC, FOREMAN & PROCORE OF EXPERIENTIAL PROJECTS</span></div>
+  </section>
+
+  <!-- 5 · THE FLEET / CHOOSE YOUR SHIP -->
+  <section data-label="Destinations">
+    <div class="pad">
+      <p class="eb">Step 01 · Choose Your Destination</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">Destinations.</h2>
+      <div class="grid3" style="grid-template-columns:repeat(6,1fr);gap:14px">
+        <div class="tcard" style="padding:30px 22px"><div class="nm" style="font-size:21px">Festivals</div><p style="font-size:18px;margin-top:12px">Festival production at scale.</p></div>
+        <div class="tcard" style="padding:30px 22px"><div class="nm" style="font-size:21px">Concerts &amp; Tours</div><p style="font-size:18px;margin-top:12px">Concert touring &amp; live music.</p></div>
+        <div class="tcard" style="padding:30px 22px"><div class="nm" style="font-size:21px">Brand Activations</div><p style="font-size:18px;margin-top:12px">Experiential brand activations.</p></div>
+        <div class="tcard" style="padding:30px 22px"><div class="nm" style="font-size:21px">Immersive</div><p style="font-size:18px;margin-top:12px">Worlds audiences step inside.</p></div>
+        <div class="tcard" style="padding:30px 22px"><div class="nm" style="font-size:21px">Sporting</div><p style="font-size:18px;margin-top:12px">Stadium &amp; fan experiences.</p></div>
+        <div class="tcard" style="padding:30px 22px"><div class="nm" style="font-size:21px">TV &amp; Film</div><p style="font-size:18px;margin-top:12px">Broadcast, film &amp; on-air.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · FLIGHT PATH / 8-PHASE LIFECYCLE -->
+  <section data-label="Itinerary">
+    <div class="pad">
+      <p class="eb">The Itinerary · 8-Phase Production Lifecycle</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">Your Itinerary.</h2>
+      <div class="seven" style="gap:12px">
+        <div class="dstep" style="--h:30px"><div class="n">01</div><h3 style="font-size:30px">Discovery</h3><p>Brief &amp; goals</p></div>
+        <div class="dstep"><div class="n">02</div><h3 style="font-size:30px">Advance</h3><p>Plan &amp; perm</p></div>
+        <div class="dstep"><div class="n">03</div><h3 style="font-size:30px">Advance</h3><p>Plan &amp; perm</p></div>
+        <div class="dstep"><div class="n">04</div><h3 style="font-size:30px">Procurement</h3><p>Vendors</p></div>
+        <div class="dstep"><div class="n">05</div><h3 style="font-size:30px">Build</h3><p>Fabrication</p></div>
+        <div class="dstep"><div class="n">06</div><h3 style="font-size:30px">Install</h3><p>Load-in</p></div>
+        <div class="dstep"><div class="n">07</div><h3 style="font-size:30px">Operate</h3><p>Live show</p></div>
+        <div class="dstep"><div class="n">08</div><h3 style="font-size:30px">Close</h3><p>Strike &amp; data</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · TECHNOLOGY -->
+  <section data-label="The Bridge">
+    <div class="pad">
+      <p class="eb">Aboard Every Ship · The Bridge</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">The Bridge.</h2>
+      <div class="grid3">
+        <div class="tcard"><div class="nm">ATLVS</div><div class="tag">The Atlas · Internal</div><p>Production &amp; resource management — the maps and charts.</p></div>
+        <div class="tcard"><div class="nm">COMPVSS</div><div class="tag">The Compass · B2B</div><p>Workforce &amp; crew management — points the crew.</p></div>
+        <div class="tcard"><div class="nm">GVTEWAY</div><div class="tag">The Gateway · B2C</div><p>Ticketing, fans &amp; community — the gate they pass through.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · CASE STUDY -->
+  <section data-label="Museum">
+    <div class="s-case" style="position:absolute;inset:0">
+      <div class="media"><span class="chip">CLUB SPACE</span><i class="ph-fill ph-confetti"></i></div>
+      <div class="info">
+        <p class="eb">The Museum // Case File</p>
+        <h2 class="disp" style="font-size:88px;color:var(--bone)">Salvage City Supper Club</h2>
+        <p class="stamp" style="margin:30px 0 0">IMMERSIVE EXPERIENCE // CLUB SPACE // MIAMI // 2025</p>
+        <p class="gx-body-l" style="margin-top:34px;font-size:28px">A fully-realized immersive supper club staged inside Miami's Club Space — built, run, and struck on the festival's impossible clock.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · CTA -->
+  <section data-label="Venture Beyond">
+    <div class="halftone" style="background:radial-gradient(var(--brass) 2px,transparent 2.5px) 0 0/44px 44px;opacity:.14"></div>
+    <div class="pad s-cta">
+      <p class="eb">Where To Next?</p>
+      <h2 class="disp" style="font-size:200px;color:var(--bone)">Venture<br><span style="color:var(--brass)">Beyond.</span></h2>
+      <div class="btnrow">
+        <a class="bigbtn" href="#">Start a Project</a>
+        <a class="bigbtn ghost" href="#">View the Museum</a>
+      </div>
+    </div>
+    <div class="corner"><span><img src="../assets/skull-bone.svg">G H X S T S H I P</span><span>HELLO@GHXSTSHIP.TOURS // MIAMI</span></div>
+  </section>
+
+</deck-stage>
+<script src="deck-stage.js"></script>
+</body></html>

@@ -1,0 +1,148 @@
+/* ============================================================================
+   GHXSTSHIP DESIGN SYSTEM — terminal.css
+   "The Spaceport" — the transit terminal where our solar galleons
+   (flying pirate ships, Treasure Planet–style) dock. Transit signage as the brand's STRUCTURAL
+   layer. Requires colors_and_type.css. Pop art (components.css) stays the EXPRESSIVE layer.
+   Vessel = solar galleon (never a plane). Verbs: voyage / set sail / all aboard / anchors aweigh /
+   underway. Structural nouns stay clear: Terminal · Concourse · Gate · Departures.
+   ----------------------------------------------------------------------------
+   THE MAP
+     Destinations ........ industries we produce for (Festivals, Concerts &
+                           Tours, Brand Activations, Immersive, Sporting...)
+     Flight Path / Itinerary  the 8-Phase Production Lifecycle (Discovery→Strike)
+     Departures board .... live & upcoming projects (FIDS)
+     Concourses / Gates .. the 3 business verticals (Production/Operations/Tech)
+     Boarding pass ....... the client engagement
+   ========================================================================== */
+
+/* ---- FIDS DEPARTURES BOARD ----------------------------------------------- */
+.gx-fids{background:#080a12;border:3px solid #000;border-radius:6px;box-shadow:var(--shadow-pop);overflow:hidden}
+.gx-fids__head{display:flex;align-items:center;justify-content:space-between;background:var(--brass);
+  padding:12px 22px;border-bottom:3px solid #000}
+.gx-fids__head .ttl{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:900;
+  font-size:24px;text-transform:uppercase;color:var(--ink);letter-spacing:.02em}
+.gx-fids__head .clock{font-family:var(--font-mono);font-weight:700;font-size:18px;color:var(--ink);letter-spacing:.08em}
+.gx-fids__row{display:grid;grid-template-columns:84px 1fr 150px 168px;gap:14px;align-items:center;
+  padding:12px 22px;border-bottom:1px solid #161b28}
+.gx-fids__row--head{background:#0b0e18;border-bottom:2px solid #222a3d}
+.gx-fids__row--head span{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#667099}
+.gx-flap{font-family:var(--font-mono);font-weight:700;font-size:20px;letter-spacing:.06em;color:#F4C657;
+  background:#11141f;border-radius:3px;padding:7px 9px;display:inline-block;
+  box-shadow:inset 0 -2px 0 #000, inset 0 1px 0 #2a2f40;position:relative}
+.gx-flap::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55)}
+.gx-fids__dest{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;
+  color:var(--bone);letter-spacing:.01em;line-height:1}
+.gx-fids__dest small{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;
+  color:#667099;margin-top:3px;font-weight:400;text-transform:uppercase}
+.gx-fids__meta{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3c2}
+
+/* status pills */
+.gx-status{font-family:var(--font-mono);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 11px;border-radius:3px;text-align:center;display:inline-block}
+.gx-status--boarding{background:var(--nebula);color:#fff;animation:gx-blink 1.1s steps(1) infinite}
+.gx-status--ontime{background:rgba(47,191,113,.16);color:#3ee08a;border:1px solid rgba(47,191,113,.4)}
+.gx-status--final{background:rgba(233,162,59,.16);color:var(--brass);border:1px solid rgba(233,162,59,.45)}
+.gx-status--departed{background:#161b28;color:#667099;border:1px solid #222a3d}
+.gx-status--scheduled{background:rgba(46,132,212,.14);color:var(--plasma);border:1px solid rgba(46,132,212,.4)}
+@keyframes gx-blink{50%{opacity:.45}}
+
+/* ---- FLIGHT PATH — the 8-Phase Production Lifecycle tracker --------------- */
+/* Horizontal route line with 8 nodes. Add .is-done / .is-active to a node.   */
+.gx-flightpath{display:flex;align-items:flex-start;gap:0;position:relative}
+.gx-leg{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:34px}
+.gx-leg::before{content:"";position:absolute;top:13px;left:-50%;width:100%;height:3px;background:var(--ink-3);z-index:0}
+.gx-leg:first-child::before{display:none}
+.gx-leg__node{position:absolute;top:0;width:28px;height:28px;border-radius:50%;background:var(--ink);
+  border:3px solid var(--ink-3);z-index:1;display:grid;place-items:center;
+  font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--fg-on-dark-3)}
+.gx-leg.is-done   .gx-leg__node{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.gx-leg.is-done::before{background:var(--brass)}
+.gx-leg.is-active .gx-leg__node{background:var(--nebula);border-color:#fff;color:#fff;box-shadow:0 0 0 4px rgba(255,194,74,.25)}
+.gx-leg__n{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:var(--brass);text-transform:uppercase}
+.gx-leg__name{font-family:var(--font-display);font-weight:800;font-size:15px;line-height:1.02;text-transform:uppercase;
+  color:var(--bone);margin-top:5px;letter-spacing:.005em}
+.gx-leg__sub{font-family:var(--font-mono);font-size:9px;letter-spacing:.05em;color:var(--fg-on-dark-3);margin-top:5px;text-transform:uppercase}
+@media(max-width:880px){
+  .gx-flightpath{flex-direction:column;gap:0;align-items:stretch}
+  .gx-leg{flex-direction:row;text-align:left;gap:14px;padding:0 0 22px 0;align-items:flex-start}
+  .gx-leg::before{top:-50%;left:13px;width:3px;height:100%}
+  .gx-leg__node{position:static;flex:none}
+  .gx-leg__name{font-size:16px;margin-top:0}
+  .gx-leg__body{padding-top:3px}
+}
+
+/* ---- GATE PLACARD / SECTION HEADER --------------------------------------- */
+.gx-gate{background:var(--ink);border:3px solid var(--bone);border-radius:6px;overflow:hidden}
+.gx-gate__top{background:var(--bone);color:var(--ink);padding:10px 20px;font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px}
+.gx-gate__mid{padding:26px 24px;display:flex;align-items:center;gap:24px}
+.gx-gate__num{font-family:var(--font-display);font-weight:900;font-size:84px;line-height:.8;color:var(--brass);flex:none}
+.gx-gate__now{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--nebula);margin:0 0 6px;display:flex;align-items:center;gap:7px}
+.gx-gate__now::before{content:"●";animation:gx-blink 1.1s steps(1) infinite}
+.gx-gate h3{font-family:var(--font-display);font-weight:900;font-size:34px;text-transform:uppercase;color:var(--bone);margin:0;line-height:.9}
+.gx-gate__sub{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--fg-on-dark-3);margin:8px 0 0;text-transform:uppercase}
+
+/* ---- WAYFINDING NAV BAR -------------------------------------------------- */
+.gx-wayfind{display:flex;background:var(--ink);border:3px solid var(--ink-3);border-radius:5px;overflow:hidden}
+.gx-wayfind__seg{display:flex;align-items:center;gap:12px;padding:15px 20px;border-right:2px solid var(--ink-3);
+  color:var(--bone);text-decoration:none;transition:background .12s}
+.gx-wayfind__seg:hover{background:var(--ink-2)}
+.gx-wayfind__seg:last-child{border-right:0}
+.gx-wayfind__seg.is-cta{background:var(--brass);color:var(--ink);margin-left:auto}
+.gx-wayfind__seg i{font-size:22px}
+.gx-wayfind__seg .t{font-family:var(--font-display);font-weight:800;font-size:17px;text-transform:uppercase;line-height:1}
+.gx-wayfind__seg .n{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--fg-on-dark-3);text-transform:uppercase}
+.gx-wayfind__seg.is-cta .n{color:var(--brass-deep)}
+.gx-wayfind__seg .arr{font-size:18px;color:var(--brass)}
+.gx-wayfind__seg.is-cta .arr{color:var(--ink)}
+
+/* ---- BOARDING PASS ------------------------------------------------------- */
+.gx-pass{display:flex;background:var(--bone);border:3px solid var(--ink);border-radius:6px;
+  box-shadow:var(--shadow-pop);overflow:hidden;color:var(--ink);max-width:560px}
+.gx-pass__main{flex:1;padding:20px 22px}
+.gx-pass__brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:900;
+  font-size:18px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:16px}
+.gx-pass__brand img{width:24px;height:24px;image-rendering:pixelated}
+.gx-pass__route{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.gx-pass__code{font-family:var(--font-display);font-weight:900;font-size:34px;line-height:.9;text-transform:uppercase}
+.gx-pass__code small{display:block;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;color:var(--fg-on-light-3);font-weight:400;margin-top:3px}
+.gx-pass__plane{color:var(--brass-deep);font-size:20px}
+.gx-pass__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gx-pass__f .k{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-light-3)}
+.gx-pass__f .v{font-family:var(--font-body);font-weight:600;font-size:14px;color:var(--ink);margin-top:2px}
+.gx-pass__stub{width:150px;flex:none;background:var(--ink);color:var(--bone);padding:20px 16px;
+  border-left:3px dashed var(--ink);display:flex;flex-direction:column;justify-content:space-between;
+  background-image:radial-gradient(circle at 0 14px, transparent 6px, var(--ink) 7px);background-size:14px 14px;background-repeat:repeat-y}
+.gx-pass__stub .code{font-family:var(--font-display);font-weight:900;font-size:26px;text-transform:uppercase}
+.gx-pass__barcode{height:46px;background:repeating-linear-gradient(90deg,var(--bone) 0 2px,transparent 2px 4px,var(--bone) 4px 5px,transparent 5px 9px,var(--bone) 9px 12px,transparent 12px 14px);border-radius:2px}
+
+/* ---- WAYFINDING PICTOGRAMS ----------------------------------------------- */
+.gx-pict{display:inline-flex;flex-direction:column;align-items:center;gap:8px}
+.gx-pict__sq{width:64px;height:64px;background:var(--bone);border-radius:4px;display:grid;place-items:center;
+  color:var(--ink);font-size:30px}
+.gx-pict__sq--brass{background:var(--brass)}
+.gx-pict__sq--ink{background:var(--ink);color:var(--bone);border:2px solid var(--ink-3)}
+.gx-pict span{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);text-align:center}
+
+/* ---- ITINERARY STRIP-MAP (subway-style 8-phase line) -------------------- */
+.gx-smap__line{display:flex;gap:0}
+.gx-smap__stop{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:48px}
+.gx-smap__stop::before{content:"";position:absolute;top:18px;left:0;width:100%;height:6px;background:var(--brass)}
+.gx-smap__stop:first-child::before{left:50%;width:50%}
+.gx-smap__stop:last-child::before{width:50%}
+.gx-smap__dot{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:30px;height:30px;border-radius:50%;background:var(--void);border:5px solid var(--brass);z-index:2;display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;font-size:11px;color:var(--brass)}
+.gx-smap__stop.is-terminus .gx-smap__dot{background:var(--brass);color:var(--ink)}
+.gx-smap__name{font-family:var(--font-display);font-weight:800;font-size:15px;text-transform:uppercase;color:var(--bone);line-height:1.02;margin-top:2px}
+.gx-smap__sub{font-family:var(--font-mono);font-size:9px;letter-spacing:.05em;color:var(--fg-on-dark-3);margin-top:6px;text-transform:uppercase}
+@media(max-width:880px){
+  .gx-smap__line{flex-direction:column}
+  .gx-smap__stop{flex-direction:row;text-align:left;gap:16px;padding:0 0 26px 0;align-items:flex-start}
+  .gx-smap__stop::before{top:0;left:18px;width:6px;height:100%}
+  .gx-smap__stop:first-child::before{top:50%;height:50%}
+  .gx-smap__stop:last-child::before{height:50%}
+  .gx-smap__dot{position:static;transform:none;flex:none}
+  .gx-smap__name{margin-top:3px}
+}
+
+/* ---- SPLIT-FLAP JS HOOK -------------------------------------------------- */
+/* Add data-flap to any .gx-flap and call GXFlap() to animate the shuffle.    */

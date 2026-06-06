@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLVS — Logo Exploration</title>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono&display=swap">
+<style>
+  :root{--pink:#FF2E88;--amber:#E9A23B;--cyan:#21D4D4;--ink:#181B23;--bg:#F7F8FA;--surface:#fff;--border:#E4E7EC;--muted:#8C95A3;}
+  *{box-sizing:border-box}
+  html,body{margin:0;font-family:"Space Grotesk",sans-serif;background:var(--bg)}
+  .wm{font-weight:700;letter-spacing:.18em;white-space:nowrap}
+  .mono{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+</style></head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel">
+const {DesignCanvas, DCSection, DCArtboard} = window;
+
+/* ---- Reusable mark SVGs (geometric, SaaS-clean) ---- */
+// A) "Atlas Angle" — A built from a chart/route angle + waypoint dot
+const AtlasA = ({c="var(--ink)", s=64}) => (
+  <svg width={s} height={s} viewBox="0 0 64 64" fill="none">
+    <path d="M14 50 L32 14 L50 50" stroke={c} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M22 38 L42 38" stroke={c} strokeWidth="6" strokeLinecap="round"/>
+    <circle cx="32" cy="14" r="5" fill={c}/>
+  </svg>
+);
+// B) "Waypoint" — abstract star/compass-rose navigation mark
+const Waypoint = ({c="var(--ink)", s=64}) => (
+  <svg width={s} height={s} viewBox="0 0 64 64" fill="none">
+    <path d="M32 8 L38 26 L56 32 L38 38 L32 56 L26 38 L8 32 L26 26 Z" fill={c}/>
+    <circle cx="32" cy="32" r="4.5" fill="var(--surface)"/>
+  </svg>
+);
+// C) "Monogram Tile" — the V-for-U device, A T L V S compressed to AV ligature
+const MonoAV = ({c="var(--ink)", s=64}) => (
+  <svg width={s} height={s} viewBox="0 0 64 64" fill="none">
+    <path d="M12 14 L24 50 L32 28" stroke={c} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M32 28 L40 50 L52 14" stroke={c} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const Tile = ({mark:Mark, bg, fg, r=14, s=64, size=92}) => (
+  <div style={{width:size,height:size,borderRadius:r,background:bg,display:'grid',placeItems:'center',boxShadow:'0 1px 2px rgba(16,20,30,.08)'}}>
+    <Mark c={fg} s={s}/>
+  </div>
+);
+
+const Row = ({children, gap=16, style}) => <div style={{display:'flex',gap,alignItems:'center',...style}}>{children}</div>;
+const Lbl = ({children}) => <div className="mono" style={{marginTop:10}}>{children}</div>;
+
+// A full direction board: parent lockup + 3 product app-icons + favicon + dark
+const Direction = ({mark, name, desc}) => {
+  const M = mark;
+  return (
+    <div style={{padding:28,background:'var(--surface)',width:560}}>
+      <div style={{fontSize:11,fontFamily:'Space Mono',letterSpacing:'.14em',textTransform:'uppercase',color:'var(--muted)'}}>{name}</div>
+      <div style={{fontSize:13,color:'#5B6472',margin:'6px 0 22px',maxWidth:480,lineHeight:1.5}}>{desc}</div>
+
+      {/* Primary lockup */}
+      <Row gap={16} style={{paddingBottom:22,borderBottom:'1px solid var(--border)'}}>
+        <Tile mark={M} bg="var(--ink)" fg="#fff"/>
+        <div>
+          <div className="wm" style={{fontSize:30,color:'var(--ink)'}}>A T L V S</div>
+          <div className="mono" style={{marginTop:4}}>Technologies</div>
+        </div>
+      </Row>
+      <Lbl>Primary lockup</Lbl>
+
+      {/* Product family — accent app-icons */}
+      <Row gap={18} style={{marginTop:22}}>
+        <div style={{textAlign:'center'}}><Tile mark={M} bg="var(--pink)" fg="#fff"/><Lbl>ATLVS · pink</Lbl></div>
+        <div style={{textAlign:'center'}}><Tile mark={M} bg="var(--amber)" fg="#1B1305"/><Lbl>COMPVSS · amber</Lbl></div>
+        <div style={{textAlign:'center'}}><Tile mark={M} bg="var(--cyan)" fg="#062A2A"/><Lbl>GVTEWAY · cyan</Lbl></div>
+        <div style={{textAlign:'center'}}><Tile mark={M} bg="var(--surface)" fg="var(--ink)" r={10} size={44} s={30}/><Lbl>Favicon</Lbl></div>
+      </Row>
+
+      {/* Dark + endorsement */}
+      <Row gap={16} style={{marginTop:26,padding:'18px',background:'#111318',borderRadius:12}}>
+        <Tile mark={M} bg="#1A1D24" fg="#fff" r={12} size={56} s={40}/>
+        <div className="wm" style={{fontSize:22,color:'#F2F4F8'}}>A T L V S</div>
+        <div style={{marginLeft:'auto',fontFamily:'Space Mono',fontSize:9,letterSpacing:'.1em',textTransform:'uppercase',color:'#6E7682',textAlign:'right',lineHeight:1.6}}>a G H X S T S H I P<br/>Industries company</div>
+      </Row>
+      <Lbl>Dark + endorsement lockup</Lbl>
+    </div>
+  );
+};
+
+function App(){
+  return (
+    <DesignCanvas>
+      <DCSection id="logo" title="ATLVS — Logo Directions" subtitle="Parent lockup + 3 accent app-icons + favicon + dark/endorsement · pick one">
+        <DCArtboard id="a" label="A · Atlas Angle" width={560} height={560}>
+          <Direction mark={AtlasA} name="Direction A · Atlas Angle" desc="An 'A' built from a route/chart angle with a waypoint dot at the apex. Nods to ATLVS = Atlas (maps/charts) without cosmic texture. Confident, navigational, reads instantly at favicon size." />
+        </DCArtboard>
+        <DCArtboard id="b" label="B · Waypoint" width={560} height={560}>
+          <Direction mark={Waypoint} name="Direction B · Waypoint" desc="An abstract compass-rose / star marker — the navigation system as a single geometric glyph shared across the suite. Most icon-forward; strongest as a standalone app symbol." />
+        </DCArtboard>
+        <DCArtboard id="c" label="C · V-Ligature" width={560} height={560}>
+          <Direction mark={MonoAV} name="Direction C · V-Ligature Monogram" desc="Leans into the V-for-U brand device — interlocked strokes forming an A/V monogram. Most typographic and systematic; ties directly to the ATLVS / COMPVSS / GVTEWAY wordmark family." />
+        </DCArtboard>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body></html>

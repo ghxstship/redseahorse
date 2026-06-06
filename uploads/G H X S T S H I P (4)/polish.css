@@ -1,0 +1,61 @@
+/* ============================================================================
+   GHXSTSHIP — polish.css
+   Premium/intuitive enhancement layer: motion choreography (#2), interaction
+   state grammar (#4), and density/rhythm helpers (#5). Requires colors_and_type.css.
+   Load AFTER components.css/terminal.css. All motion respects prefers-reduced-motion.
+   ========================================================================== */
+
+/* ---- #2 MOTION: scroll-reveal (staggered fade-up) ----------------------- */
+.reveal{opacity:0;transform:translateY(12px);
+  transition:opacity .55s cubic-bezier(.2,.7,.2,1), transform .55s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-in{opacity:1 !important;transform:none !important}
+
+/* ---- #2 MOTION: split-flap flip (departures board) ---------------------- */
+@keyframes gx-flip{
+  0%{transform:rotateX(0);filter:none}
+  45%{transform:rotateX(-90deg);filter:brightness(1.6)}
+  55%{transform:rotateX(90deg)}
+  100%{transform:rotateX(0);filter:none}
+}
+.gx-flap.flipping{animation:gx-flip .18s ease-in-out}
+
+/* ---- #4 STATES: universal focus-visible ring ---------------------------- */
+a:focus-visible, button:focus-visible, .gx-btn:focus-visible,
+.dcard:focus-visible, [tabindex]:focus-visible, input:focus-visible,
+select:focus-visible, summary:focus-visible{
+  outline:3px solid var(--brass); outline-offset:2px; border-radius:var(--r-1);
+}
+/* keep mouse clicks clean — only show ring for keyboard nav */
+a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
+
+/* ---- #4 STATES: consistent interaction grammar -------------------------- */
+/* Cards: lift on hover, press into shadow on active — one grammar everywhere */
+.dcard, .vcard, .mu, .fcard{transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+.dcard:active, .vcard:active, .mu:active{transform:translate(-1px,-1px)}
+/* Tags become tappable affordances */
+.gx-tag{transition:transform .1s ease, box-shadow .1s ease}
+.gx-tag:hover{transform:translate(-1px,-1px)}
+/* Links: plasma→nebula jump (matches design system) */
+.gx-link, a.t-plasma{transition:color .15s ease, border-color .15s ease}
+/* Disabled */
+[disabled], .is-disabled{opacity:.45; pointer-events:none; filter:grayscale(.3)}
+
+/* ---- #5 DENSITY: 4px-rhythm table + list helpers ------------------------ */
+.gx-dense th{padding:10px 12px}
+.gx-dense td{padding:12px}            /* 12 = sp-3, consistent row rhythm */
+.gx-comfy td{padding:16px}            /* 16 = sp-4 */
+.gx-row-hover tbody tr{transition:background .12s ease}
+
+/* ---- #5 EMPTY / LOADING grammar (reusable) ------------------------------ */
+.gx-empty{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:48px 24px}
+.gx-empty img{width:56px;height:56px;image-rendering:pixelated;opacity:.55}
+.gx-empty h4{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;color:var(--bone);margin:0}
+.gx-empty p{font-family:var(--font-body);font-size:14px;color:var(--fg-on-dark-3);margin:0;max-width:340px;line-height:1.5}
+.gx-loading img{width:40px;height:40px;image-rendering:pixelated;animation:gx-pulse 1s steps(2) infinite}
+@keyframes gx-pulse{50%{opacity:.25}}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .gx-flap.flipping{animation:none}
+  .gx-loading img{animation:none}
+}

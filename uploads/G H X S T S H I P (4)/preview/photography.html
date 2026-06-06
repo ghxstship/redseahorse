@@ -1,0 +1,34 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{margin:0}.stage{width:700px;background:var(--ink);padding:26px 30px;box-sizing:border-box}
+.eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.22em;color:var(--brass);text-transform:uppercase;margin:0 0 6px}
+.note{font-family:var(--font-mono);font-size:10px;color:var(--fg-on-dark-3);letter-spacing:.04em;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cell{border:2px solid var(--ink-3);border-radius:4px;overflow:hidden}
+/* simulated stage-light photo base */
+.sim{height:110px;position:relative;
+  background:
+    radial-gradient(60% 80% at 30% 20%, rgba(255,200,120,.9), transparent 60%),
+    radial-gradient(50% 70% at 75% 60%, rgba(255,90,160,.85), transparent 60%),
+    radial-gradient(40% 60% at 60% 90%, rgba(80,200,220,.8), transparent 60%),
+    #1a1430;}
+.graded{filter:contrast(1.18) saturate(1.2) brightness(.98)}
+.duo-brass{filter:grayscale(1) contrast(1.2) brightness(1.05)}
+.duo-brass::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--brass),var(--ink));mix-blend-mode:lighten}
+.duo-neb{filter:grayscale(1) contrast(1.2)}
+.duo-neb::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--nebula),var(--ink));mix-blend-mode:lighten}
+.dots::before{content:"";position:absolute;inset:0;background:radial-gradient(#101A1B 30%,transparent 31%) 0 0/6px 6px;opacity:.3;mix-blend-mode:multiply}
+.lbl{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);padding:7px 8px;background:var(--ink-2)}
+</style></head>
+<body><div class="stage">
+  <p class="eb">Image Treatment</p>
+  <p class="note">Recipes applied to a simulated stage-light frame — drop in real production photos</p>
+  <div class="grid">
+    <div class="cell"><div class="sim graded dots"></div><div class="lbl">Graded · hero</div></div>
+    <div class="cell"><div class="sim graded"></div><div class="lbl">Warm contrast</div></div>
+    <div class="cell"><div class="sim duo-brass"></div><div class="lbl">Duotone · brass</div></div>
+    <div class="cell"><div class="sim duo-neb"></div><div class="lbl">Duotone · nebula</div></div>
+  </div>
+</div></body></html>

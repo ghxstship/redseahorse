@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLVS — Enterprise Page Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../product-theme.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0b0c10;font-family:"Inter",sans-serif}
+  .ctrl{display:flex;align-items:center;gap:14px;padding:14px 24px;background:#0b0c10;color:#fff;flex-wrap:wrap;border-bottom:1px solid #23262e;position:sticky;top:0;z-index:30}
+  .ctrl .t{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8C95A3}
+  .ctrl .grp{display:flex;gap:4px;background:#181b22;border:1px solid #2c313b;border-radius:8px;padding:3px}
+  .ctrl button{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#A6AEBC;background:none;border:0;padding:6px 12px;border-radius:6px;cursor:pointer}
+  .ctrl button.on{background:#2c313b;color:#fff}
+  .stage{padding:28px;background:var(--p-bg)}
+  .tpl{max-width:1080px;margin:0 auto 30px;background:var(--p-surface);border:1px solid var(--p-border);border-radius:var(--p-r-lg);box-shadow:var(--p-elev-1);overflow:hidden}
+  .tpl > h2{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--p-text-3);margin:0;padding:14px 22px;border-bottom:1px solid var(--p-border);background:var(--p-surface-2)}
+  .body{padding:22px}
+  .row{display:flex;gap:18px;flex-wrap:wrap}
+  .col{flex:1;min-width:240px}
+  h3{font-size:18px;font-weight:700;color:var(--p-text-1);margin:0 0 4px;letter-spacing:-.01em}
+  .sub{font-size:13px;color:var(--p-text-2);margin:0 0 14px}
+  .muted{color:var(--p-text-3)}
+  .ps-btn{font-family:inherit}
+  /* detail page */
+  .dhead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+  .dmeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--p-r-pill);background:var(--p-accent-weak);color:var(--p-accent-text)}
+  .tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:var(--p-r-sm);background:var(--p-surface-2);color:var(--p-text-2);border:1px solid var(--p-border)}
+  .tabs{display:flex;gap:2px;border-bottom:1px solid var(--p-border);margin-bottom:16px}
+  .tabs span{font-size:13px;font-weight:500;color:var(--p-text-3);padding:9px 14px;border-bottom:2px solid transparent;cursor:pointer}
+  .tabs span.on{color:var(--p-accent-text);border-bottom-color:var(--p-accent)}
+  .kv{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--p-border);font-size:13px}
+  .kv .k{color:var(--p-text-3)}.kv .v{color:var(--p-text-1);font-weight:500}
+  /* list / directory */
+  table{width:100%;border-collapse:collapse}
+  thead th{text-align:left;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--p-text-3);padding:10px 12px;border-bottom:1px solid var(--p-border);background:var(--p-surface-2)}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--p-border);font-size:13px;color:var(--p-text-2)}
+  tbody tr:hover{background:var(--p-surface-2)}
+  td b{color:var(--p-text-1)}
+  .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+  .chip{font-size:11px;font-weight:600;padding:5px 11px;border-radius:var(--p-r-pill);border:1px solid var(--p-border-2);color:var(--p-text-2);background:var(--p-surface);display:inline-flex;gap:6px;align-items:center}
+  .chip.on{border-color:var(--p-accent);color:var(--p-accent-text);background:var(--p-accent-weak)}
+  .dirgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:720px){.dirgrid{grid-template-columns:1fr 1fr}}
+  .dircard{border:1px solid var(--p-border);border-radius:var(--p-r);padding:16px;text-align:center;background:var(--p-surface);transition:box-shadow .14s ease,transform .14s ease}
+  .dircard:hover{box-shadow:var(--p-elev-2);transform:translateY(-2px)}
+  .av{width:48px;height:48px;border-radius:50%;background:var(--p-accent);color:var(--p-accent-contrast);display:grid;place-items:center;font-weight:700;font-size:16px;margin:0 auto 10px}
+  .av.sq{border-radius:10px}
+  .dircard h4{font-size:14px;font-weight:600;color:var(--p-text-1);margin:0}
+  .dircard p{font-size:11px;color:var(--p-text-3);margin:3px 0 0}
+  /* scanning / ticket */
+  .scan{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:720px){.scan{grid-template-columns:1fr}}
+  .scanbox{border:2px dashed var(--p-border-2);border-radius:var(--p-r-lg);padding:30px;text-align:center;position:relative;background:var(--p-surface)}
+  .qr{width:130px;height:130px;margin:0 auto;background:conic-gradient(var(--p-text-1) 25%,transparent 0 50%,var(--p-text-1) 0 75%,transparent 0) 0 0/18px 18px,var(--p-text-1);border:10px solid var(--p-surface);border-radius:8px}
+  .scanline{position:absolute;left:30px;right:30px;top:50%;height:2px;background:var(--p-accent);box-shadow:0 0 8px var(--p-accent)}
+  .barcode{height:60px;background:repeating-linear-gradient(90deg,var(--p-text-1) 0 2px,transparent 2px 4px,var(--p-text-1) 4px 5px,transparent 5px 9px,var(--p-text-1) 9px 12px,transparent 12px 14px);border-radius:3px}
+  .ticket{border:1px solid var(--p-border);border-radius:var(--p-r-lg);overflow:hidden;background:var(--p-surface)}
+  .ticket .tt{padding:16px;border-bottom:1px dashed var(--p-border-2);display:flex;justify-content:space-between;align-items:center}
+  .ticket .tt h4{margin:0;font-size:16px;font-weight:700;color:var(--p-text-1)}
+  .ticket .tb{padding:16px;display:flex;gap:14px;align-items:center}
+  .ticket .qr-sm{width:70px;height:70px;flex:none;background:conic-gradient(var(--p-text-1) 25%,transparent 0 50%,var(--p-text-1) 0 75%,transparent 0) 0 0/12px 12px,var(--p-text-1);border:5px solid var(--p-surface);border-radius:6px}
+  /* wallet / blockchain */
+  .wallet{background:linear-gradient(135deg,var(--p-accent),var(--p-accent-hover));border-radius:var(--p-r-lg);padding:20px;color:var(--p-accent-contrast);position:relative;overflow:hidden}
+  .wallet .bal{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:8px 0 0}
+  .wallet .addr{font-family:"Space Mono",monospace;font-size:11px;opacity:.85;margin-top:14px;display:flex;align-items:center;gap:8px}
+  .txn{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--p-border);font-size:13px}
+  .txn .ic{width:34px;height:34px;border-radius:50%;background:var(--p-surface-2);display:grid;place-items:center;color:var(--p-accent-text);flex:none}
+  .txn .amt{margin-left:auto;font-weight:600;font-family:"Space Mono",monospace}
+  .txn .amt.in{color:var(--p-success)}
+  .nft{border:1px solid var(--p-border);border-radius:var(--p-r);overflow:hidden;background:var(--p-surface)}
+  .nft .art{height:130px;background:linear-gradient(135deg,var(--p-accent),var(--p-accent-weak)),repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 8px,transparent 8px 16px);position:relative}
+  .nft .art .tok{position:absolute;left:10px;top:10px;font-family:"Space Mono",monospace;font-size:9px;background:rgba(0,0,0,.4);color:#fff;padding:3px 7px;border-radius:5px}
+  .nft .nb{padding:12px}
+  .nft h4{margin:0;font-size:14px;font-weight:700;color:var(--p-text-1)}
+  .nft p{margin:3px 0 0;font-size:11px;color:var(--p-text-3);font-family:"Space Mono",monospace}
+  .verified{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--p-success);font-weight:600}
+  /* settings / billing */
+  .settetab{display:flex;flex-direction:column;gap:2px}
+  .settetab a{font-size:13px;color:var(--p-text-2);padding:8px 11px;border-radius:var(--p-r-sm);text-decoration:none}
+  .settetab a.on{background:var(--p-accent-weak);color:var(--p-accent-text);font-weight:600}
+  .field{margin-bottom:14px}
+  .fl{font-size:12px;font-weight:500;color:var(--p-text-2);display:block;margin-bottom:6px}
+  .toggle{width:42px;height:24px;border-radius:999px;background:var(--p-border-2);position:relative;cursor:pointer}
+  .toggle.on{background:var(--p-accent)}
+  .toggle::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
+  .toggle.on::after{left:20px}
+  .plan{border:1px solid var(--p-border);border-radius:var(--p-r);padding:18px;text-align:center}
+  .plan.on{border-color:var(--p-accent);box-shadow:0 0 0 3px var(--p-accent-weak)}
+  .plan .pr{font-size:28px;font-weight:700;color:var(--p-text-1);margin:8px 0}
+  .pn{font-size:13px;font-weight:600;color:var(--p-text-1)}
+  /* onboarding */
+  .steps{display:flex;align-items:center;gap:0;margin-bottom:18px}
+  .steps .s{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--p-text-3);font-weight:500}
+  .steps .n{width:26px;height:26px;border-radius:50%;border:2px solid var(--p-border-2);display:grid;place-items:center;font-size:12px;font-weight:600}
+  .steps .s.done .n{background:var(--p-accent);border-color:var(--p-accent);color:var(--p-accent-contrast)}
+  .steps .s.on .n{border-color:var(--p-accent);color:var(--p-accent-text)}
+  .steps .ln{width:50px;height:2px;background:var(--p-border-2);margin:0 10px}
+</style></head>
+<body>
+  <div class="ctrl">
+    <span class="t">ATLVS · Enterprise Page Templates</span>
+    <div class="grp" id="prod"><button data-p="atlvs" class="on">ATLVS</button><button data-p="compvss">COMPVSS</button><button data-p="gvteway">GVTEWAY</button></div>
+    <div class="grp" id="mode"><button data-m="light" class="on">Light</button><button data-m="dark">Dark</button></div>
+  </div>
+  <div class="stage" id="app" data-ui="saas" data-product="atlvs" data-mode="light">
+
+    <!-- DETAIL PAGE -->
+    <div class="tpl"><h2>Record Detail Page</h2><div class="body">
+      <div class="dhead">
+        <div><h3>Salvage City Supper Club</h3><div class="dmeta"><span class="badge">Live</span><span class="tag">Immersive</span><span class="tag">RRR 052</span><span class="tag">Insomniac</span></div></div>
+        <div style="display:flex;gap:8px"><button class="ps-btn ps-btn--ghost">Edit</button><button class="ps-btn">Open</button></div>
+      </div>
+      <div class="tabs"><span class="on">Overview</span><span>Itinerary</span><span>Budget</span><span>Crew</span><span>Files</span><span>Activity</span></div>
+      <div class="row">
+        <div class="col">
+          <div class="kv"><span class="k">Client</span><span class="v">Insomniac</span></div>
+          <div class="kv"><span class="k">Venue</span><span class="v">Club Space, Miami</span></div>
+          <div class="kv"><span class="k">Phase</span><span class="v">07 · Activation</span></div>
+          <div class="kv"><span class="k">Producer</span><span class="v">J. Roker</span></div>
+        </div>
+        <div class="col">
+          <div class="kv"><span class="k">Budget</span><span class="v">$1.2M</span></div>
+          <div class="kv"><span class="k">Crew</span><span class="v">32 assigned</span></div>
+          <div class="kv"><span class="k">Start</span><span class="v">May 2025</span></div>
+          <div class="kv"><span class="k">Status</span><span class="v" style="color:var(--p-accent-text)">On track</span></div>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- LIST PAGE -->
+    <div class="tpl"><h2>List / Index Page (filters · sort · bulk)</h2><div class="body">
+      <div class="toolbar">
+        <span class="chip on"><i class="ph-bold ph-funnel"></i> Active</span><span class="chip">Type</span><span class="chip">Phase</span><span class="chip">Owner</span>
+        <span style="margin-left:auto;font-size:12px;color:var(--p-accent-text);font-weight:600">3 selected · Archive · Export</span>
+      </div>
+      <table><thead><tr><th style="width:30px"><input type="checkbox"></th><th>ID</th><th>Project</th><th>Type</th><th>Owner</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><input type="checkbox" checked></td><td><b style="font-family:'Space Mono',monospace;color:var(--p-accent-text)">RRR 052</b></td><td><b>Salvage City</b></td><td>Immersive</td><td>J. Roker</td><td><span class="badge">Live</span></td></tr>
+        <tr><td><input type="checkbox"></td><td><b style="font-family:'Space Mono',monospace;color:var(--p-accent-text)">RRR 226</b></td><td><b>Polymarket</b></td><td>Activation</td><td>K. Patel</td><td><span class="tag">Build</span></td></tr>
+        <tr><td><input type="checkbox"></td><td><b style="font-family:'Space Mono',monospace;color:var(--p-accent-text)">RRR 312</b></td><td><b>Black Coffee</b></td><td>Concert</td><td>R. Vega</td><td><span class="tag">Design</span></td></tr>
+      </tbody></table>
+    </div></div>
+
+    <!-- DIRECTORY -->
+    <div class="tpl"><h2>Directory Page (people / vendors)</h2><div class="body">
+      <div class="dirgrid">
+        <div class="dircard"><div class="av">DL</div><h4>Dana Lin</h4><p>Rigger L1</p></div>
+        <div class="dircard"><div class="av">RV</div><h4>R. Vega</h4><p>LD / Electrician</p></div>
+        <div class="dircard"><div class="av">KP</div><h4>K. Patel</h4><p>A1 Audio</p></div>
+        <div class="dircard"><div class="av sq"><i class="ph-bold ph-buildings"></i></div><h4>Stagecraft Co.</h4><p>Vendor · Scenic</p></div>
+        <div class="dircard"><div class="av sq"><i class="ph-bold ph-buildings"></i></div><h4>BrightRig</h4><p>Vendor · Lighting</p></div>
+        <div class="dircard"><div class="av">MA</div><h4>M. Adeyemi</h4><p>Stage Manager</p></div>
+      </div>
+    </div></div>
+
+    <!-- SCANNING / TICKETS -->
+    <div class="tpl"><h2>Scanning · QR / Barcode / Ticket</h2><div class="body">
+      <div class="scan">
+        <div class="scanbox"><div class="qr"></div><div class="scanline"></div><p class="sub" style="margin-top:16px">Point camera at code · GVTEWAY check-in</p></div>
+        <div>
+          <div class="ticket" style="margin-bottom:14px">
+            <div class="tt"><h4>Salvage City — NYE</h4><span class="badge">Valid</span></div>
+            <div class="tb"><div class="qr-sm"></div><div><div style="font-weight:600;color:var(--p-text-1)">GA × 2 · Main Floor</div><div class="sub" style="margin:4px 0 0">Dec 31 · Miami · RRR 052</div></div></div>
+          </div>
+          <div style="border:1px solid var(--p-border);border-radius:var(--p-r);padding:14px;background:var(--p-surface)">
+            <div class="sub" style="margin:0 0 10px">Barcode (PDF417 / Code128)</div><div class="barcode"></div>
+            <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--p-text-2);text-align:center;margin-top:8px">RRR-052-NYE-0001</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- WALLET + BLOCKCHAIN -->
+    <div class="tpl"><h2>Digital Wallet · NFT / Blockchain</h2><div class="body">
+      <div class="row">
+        <div class="col">
+          <div class="wallet"><div style="font-size:12px;opacity:.85">GVTEWAY Wallet</div><div class="bal">$1,284.50</div><div class="addr"><i class="ph-bold ph-wallet"></i>0x7a3f…9c2e <i class="ph-bold ph-copy"></i></div></div>
+          <div style="margin-top:14px">
+            <div class="txn"><div class="ic"><i class="ph-bold ph-arrow-down-left"></i></div><div><div style="color:var(--p-text-1);font-weight:500">Ticket refund</div><div class="muted" style="font-size:11px">RRR 052 · 2h ago</div></div><span class="amt in">+$89.00</span></div>
+            <div class="txn"><div class="ic"><i class="ph-bold ph-ticket"></i></div><div><div style="color:var(--p-text-1);font-weight:500">NYE GA × 2</div><div class="muted" style="font-size:11px">Mint · confirmed</div></div><span class="amt">−$196.50</span></div>
+            <div class="txn"><div class="ic"><i class="ph-bold ph-medal"></i></div><div><div style="color:var(--p-text-1);font-weight:500">Captain tier POAP</div><div class="muted" style="font-size:11px">Airdrop</div></div><span class="amt in">Free</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="sub">Collectibles · on-chain</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="nft"><div class="art"><span class="tok">#0042</span></div><div class="nb"><h4>Salvage City Pass</h4><p>RRR 052 · ERC-721</p><div class="verified" style="margin-top:6px"><i class="ph-fill ph-seal-check"></i>Verified</div></div></div>
+            <div class="nft"><div class="art" style="background:linear-gradient(135deg,var(--p-accent-hover),var(--p-accent-weak))"><span class="tok">#0108</span></div><div class="nb"><h4>Becky G Drop</h4><p>RRR 108 · ERC-1155</p><div class="verified" style="margin-top:6px"><i class="ph-fill ph-seal-check"></i>Verified</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- SETTINGS + BILLING -->
+    <div class="tpl"><h2>Settings · Billing / Plans</h2><div class="body">
+      <div class="row">
+        <div style="width:160px;flex:none"><div class="settetab"><a class="on">General</a><a>Members</a><a>Billing</a><a>Integrations</a><a>API Keys</a><a>Security</a></div></div>
+        <div class="col">
+          <div class="field"><label class="fl">Workspace name</label><input class="ps-input" value="GHXSTSHIP Production"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--p-border)"><div><div style="font-weight:600;color:var(--p-text-1);font-size:14px">Two-factor auth</div><div class="sub" style="margin:2px 0 0">Require 2FA for all members</div></div><div class="toggle on"></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0"><div><div style="font-weight:600;color:var(--p-text-1);font-size:14px">Email notifications</div><div class="sub" style="margin:2px 0 0">Project &amp; phase updates</div></div><div class="toggle on"></div></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px">
+            <div class="plan"><div class="pn">Starter</div><div class="pr">$0</div><button class="ps-btn ps-btn--ghost" style="width:100%;justify-content:center">Current</button></div>
+            <div class="plan on"><div class="pn">Pro</div><div class="pr">$49</div><button class="ps-btn" style="width:100%;justify-content:center">Upgrade</button></div>
+            <div class="plan"><div class="pn">Enterprise</div><div class="pr">Custom</div><button class="ps-btn ps-btn--ghost" style="width:100%;justify-content:center">Contact</button></div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- ONBOARDING WIZARD -->
+    <div class="tpl"><h2>Onboarding Wizard</h2><div class="body">
+      <div class="steps"><div class="s done"><span class="n">✓</span>Account</div><div class="ln"></div><div class="s on"><span class="n">2</span>Workspace</div><div class="ln"></div><div class="s"><span class="n">3</span>Invite</div><div class="ln"></div><div class="s"><span class="n">4</span>Done</div></div>
+      <h3>Name your workspace</h3><p class="sub">You can change this anytime in Settings.</p>
+      <div class="field" style="max-width:420px"><input class="ps-input" placeholder="e.g. GHXSTSHIP Production"></div>
+      <div style="display:flex;gap:10px"><button class="ps-btn ps-btn--ghost">Back</button><button class="ps-btn">Continue</button></div>
+    </div></div>
+
+  </div>
+<script>
+  const app=document.getElementById('app');
+  document.querySelectorAll('#prod button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#prod button').forEach(x=>x.classList.remove('on'));b.classList.add('on');app.dataset.product=b.dataset.p;});
+  document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#mode button').forEach(x=>x.classList.remove('on'));b.classList.add('on');app.dataset.mode=b.dataset.m;});
+</script>
+</body></html>

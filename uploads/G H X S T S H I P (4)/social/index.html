@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Social Templates</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0d1020;font-family:var(--font-body);color:var(--bone)}
+  .page{max-width:1180px;margin:0 auto;padding:48px 40px 90px}
+  .head{margin-bottom:40px}
+  .head .eb{font-family:var(--font-mono);font-size:13px;letter-spacing:.24em;color:var(--brass);text-transform:uppercase;margin:0 0 10px}
+  .head h1{font-family:var(--font-display);font-weight:900;font-size:54px;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+  .grp{margin-top:46px}
+  .grp h2{font-family:var(--font-mono);font-size:12px;letter-spacing:.2em;color:var(--fg-on-dark-3);text-transform:uppercase;
+    border-bottom:2px solid var(--ink-3);padding-bottom:12px;margin:0 0 26px}
+  .row{display:flex;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  .item .cap{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase;margin-top:12px}
+
+  /* shared template bits */
+  .tpl{position:relative;overflow:hidden;border:3px solid var(--ink)}
+  .brandbar{position:absolute;left:0;right:0;display:flex;align-items:center;gap:10px;font-family:var(--font-display);
+    font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+  .brandbar img{image-rendering:pixelated}
+  .stamp{font-family:var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+
+  /* IG SQUARE 1080 -> 470 */
+  .ig-sq{width:470px;height:470px}
+  /* IG STORY 1080x1920 -> 320x569 */
+  .ig-st{width:320px;height:569px}
+  /* LINKEDIN 1200x627 -> 540x282 */
+  .li{width:540px;height:282px}
+  /* LINKEDIN square 1200 -> 400 */
+  .li-sq{width:400px;height:400px}
+
+  .dots{position:absolute;inset:0;background:radial-gradient(var(--brass) 2px,transparent 2.5px) 0 0/26px 26px;opacity:.13}
+</style></head>
+<body>
+<div class="page">
+  <div class="head">
+    <p class="eb">Brand System · Social Templates</p>
+    <h1>Beyond the Scene, On Every Feed</h1>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div class="grp">
+    <h2>Instagram</h2>
+    <div class="row">
+
+      <!-- IG Square: statement -->
+      <div class="item">
+        <div class="tpl ig-sq" style="background:var(--nebula)">
+          <div class="brandbar" style="top:30px;left:34px;font-size:22px;color:var(--void)">
+            <img src="../assets/logo-ghostship-skull.svg" style="width:30px;height:30px;image-rendering:pixelated">G H X S T S H I P</div>
+          <div style="position:absolute;left:34px;right:34px;top:50%;transform:translateY(-50%)">
+            <p style="font-family:var(--font-mono);font-size:13px;letter-spacing:.2em;color:var(--void);text-transform:uppercase;margin:0 0 16px">◆ The Mission</p>
+            <p style="font-family:var(--font-display);font-weight:900;font-size:50px;line-height:.9;text-transform:uppercase;color:var(--void);margin:0">Redefine<br>what's<br>possible.</p>
+          </div>
+          <div class="stamp" style="position:absolute;bottom:30px;left:34px;color:var(--void)">EXPERIENTIAL PROJECTS // MIAMI</div>
+        </div>
+        <p class="cap">IG Post · 1080×1080 · Statement</p>
+      </div>
+
+      <!-- IG Square: stat -->
+      <div class="item">
+        <div class="tpl ig-sq" style="background:var(--void)">
+          <div class="dots"></div>
+          <div class="brandbar" style="top:30px;left:34px;font-size:20px;color:var(--bone)">
+            <img src="../assets/skull-bone.svg" style="width:28px;height:28px">G H X S T S H I P</div>
+          <div style="position:absolute;left:34px;right:34px;top:50%;transform:translateY(-50%);text-align:center">
+            <p style="font-family:var(--font-display);font-weight:900;font-size:150px;line-height:.8;color:var(--brass);margin:0">250+</p>
+            <p style="font-family:var(--font-display);font-weight:800;font-size:34px;text-transform:uppercase;color:var(--bone);margin:14px 0 0">Experiences.<br>One Crew.</p>
+          </div>
+          <div class="gx-burst" style="position:absolute;right:-20px;bottom:-20px;width:130px;height:130px;background:var(--plasma);font-size:13px;line-height:.9">
+            <span style="display:flex;flex-direction:column"><b style="font-size:26px">14+</b><span>YRS</span></span></div>
+        </div>
+        <p class="cap">IG Post · 1080×1080 · Stat flex</p>
+      </div>
+
+      <!-- IG Story: event -->
+      <div class="item">
+        <div class="tpl ig-st" style="background:repeating-linear-gradient(45deg,#18262A 0 18px,#101A1B 18px 36px)">
+          <div class="brandbar" style="top:34px;left:24px;font-size:18px;color:var(--bone)">
+            <img src="../assets/skull-bone.svg" style="width:26px;height:26px">G H X S T S H I P</div>
+          <div style="position:absolute;left:24px;right:24px;top:300px">
+            <span class="gx-chip-pixel" style="font-size:12px">NEW DROP</span>
+            <p style="font-family:var(--font-display);font-weight:900;font-size:62px;line-height:.86;text-transform:uppercase;color:var(--bone);margin:18px 0 0">Salvage<br>City<br><span style="color:var(--brass)">NYE</span></p>
+            <p class="stamp" style="margin-top:18px;color:var(--plasma)">DEC 31 // MIAMI, FL</p>
+          </div>
+          <div style="position:absolute;left:24px;right:24px;bottom:40px">
+            <div style="background:var(--brass);color:var(--ink);border:3px solid var(--bone);text-align:center;padding:14px;
+              font-family:var(--font-display);font-weight:800;font-size:20px;text-transform:uppercase;box-shadow:5px 5px 0 var(--ink)">Tickets ↗ Swipe Up</div>
+          </div>
+        </div>
+        <p class="cap">IG Story · 1080×1920 · Event</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LINKEDIN -->
+  <div class="grp">
+    <h2>LinkedIn</h2>
+    <div class="row">
+
+      <!-- LinkedIn wide: thought leadership -->
+      <div class="item">
+        <div class="tpl li" style="background:var(--ink)">
+          <div class="dots" style="opacity:.1"></div>
+          <div style="position:absolute;left:30px;top:28px;right:30px">
+            <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;color:var(--brass);text-transform:uppercase;margin:0 0 14px">◆ Field Notes</p>
+            <p style="font-family:var(--font-display);font-weight:900;font-size:42px;line-height:.92;text-transform:uppercase;color:var(--bone);margin:0;max-width:440px">We Came to<br>Redefine What's<br><span style="color:var(--brass)">Possible.</span></p>
+          </div>
+          <div class="brandbar" style="bottom:24px;left:30px;font-size:16px;color:var(--bone)">
+            <img src="../assets/skull-bone.svg" style="width:24px;height:24px">G H X S T S H I P<span class="stamp" style="font-weight:400;margin-left:8px">// EXPERIENTIAL PROJECTS</span></div>
+        </div>
+        <p class="cap">LinkedIn · 1200×627 · Thought leadership</p>
+      </div>
+
+      <!-- LinkedIn square: Join the Crew (education) -->
+      <div class="item">
+        <div class="tpl li-sq" style="background:var(--brass)">
+          <div class="brandbar" style="top:28px;left:30px;font-size:18px;color:var(--ink)">
+            <img src="../assets/logo-ghostship-skull.svg" style="width:26px;height:26px;image-rendering:pixelated">G H X S T S H I P</div>
+          <div style="position:absolute;left:30px;right:30px;top:50%;transform:translateY(-50%)">
+            <p style="font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;color:var(--ink);text-transform:uppercase;margin:0 0 14px">◆ Join the Crew</p>
+            <p style="font-family:var(--font-display);font-weight:900;font-size:60px;line-height:.86;text-transform:uppercase;color:var(--ink);margin:0">Learn the<br>Ropes.</p>
+            <p style="font-family:var(--font-body);font-size:16px;line-height:1.5;color:var(--void);margin:18px 0 0;max-width:300px">Apprenticeships for the next generation of experiential producers. No experience gatekept.</p>
+          </div>
+          <div style="position:absolute;bottom:30px;left:30px;background:var(--ink);color:var(--brass);
+            font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;padding:12px 22px;
+            box-shadow:5px 5px 0 var(--brass-deep)">View Open Roles ↗</div>
+        </div>
+        <p class="cap">LinkedIn · 1200×1200 · Join the Crew (education)</p>
+      </div>
+
+      <!-- LinkedIn wide: Three Verticals announcement -->
+      <div class="item">
+        <div class="tpl li" style="background:var(--void)">
+          <div class="dots" style="opacity:.1"></div>
+          <div style="position:absolute;left:30px;top:26px;right:30px">
+            <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;color:var(--brass);text-transform:uppercase;margin:0 0 12px">◆ One Company · Three Verticals</p>
+            <div style="display:flex;gap:12px">
+              <div style="flex:1;border:2px solid var(--ink-3);border-radius:4px;padding:14px 12px"><p style="font-family:var(--font-display);font-weight:900;font-size:26px;text-transform:uppercase;color:var(--bone);margin:0;line-height:.9">Produc&shy;tion</p><p style="font-family:var(--font-mono);font-size:9px;color:var(--brass);margin:8px 0 0;letter-spacing:.06em">BUILD THE SHOW</p></div>
+              <div style="flex:1;border:2px solid var(--ink-3);border-radius:4px;padding:14px 12px"><p style="font-family:var(--font-display);font-weight:900;font-size:26px;text-transform:uppercase;color:var(--bone);margin:0;line-height:.9">Opera&shy;tions</p><p style="font-family:var(--font-mono);font-size:9px;color:var(--plasma);margin:8px 0 0;letter-spacing:.06em">RUN THE MACHINE</p></div>
+              <div style="flex:1;border:2px solid var(--ink-3);border-radius:4px;padding:14px 12px"><p style="font-family:var(--font-display);font-weight:900;font-size:26px;text-transform:uppercase;color:var(--bone);margin:0;line-height:.9">Techno&shy;logy</p><p style="font-family:var(--font-mono);font-size:9px;color:var(--nebula);margin:8px 0 0;letter-spacing:.06em">BUILD THE TOOLS</p></div>
+            </div>
+          </div>
+          <div class="brandbar" style="bottom:22px;left:30px;font-size:16px;color:var(--bone)">
+            <img src="../assets/skull-bone.svg" style="width:24px;height:24px">G H X S T S H I P<span class="stamp" style="font-weight:400;margin-left:8px">// EXPERIENTIAL PROJECTS</span></div>
+        </div>
+        <p class="cap">LinkedIn · 1200×627 · Three Verticals</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body></html>

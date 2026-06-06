@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLVS Technologies — Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../product-theme.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0b0c10;font-family:"Space Grotesk",sans-serif}
+  .ctrl{display:flex;align-items:center;gap:14px;padding:14px 24px;background:#0b0c10;color:#fff;flex-wrap:wrap;border-bottom:1px solid #23262e;position:sticky;top:0;z-index:20}
+  .ctrl .t{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8C95A3}
+  .ctrl .grp{display:flex;gap:4px;background:#181b22;border:1px solid #2c313b;border-radius:8px;padding:3px}
+  .ctrl button{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#A6AEBC;background:none;border:0;padding:6px 12px;border-radius:6px;cursor:pointer}
+  .ctrl button.on{background:#2c313b;color:#fff}
+  .stage{padding:34px 24px;background:var(--p-bg);display:flex;gap:30px;flex-wrap:wrap;justify-content:center}
+  .item{width:300px}
+  .cap{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--p-text-3);text-transform:uppercase;margin-top:12px;text-align:center}
+  .phone{width:300px;border:8px solid #000;border-radius:38px;overflow:hidden;background:var(--p-bg);box-shadow:0 20px 50px rgba(0,0,0,.4);position:relative}
+  .stat{height:34px;background:var(--p-surface);display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-family:"Space Mono",monospace;font-size:10px;color:var(--p-text-3);border-bottom:1px solid var(--p-border)}
+  .scr{min-height:480px;position:relative;background:var(--p-bg)}
+  .pad{padding:18px}
+  .ph1{font-size:24px;font-weight:700;color:var(--p-text-1);margin:0 0 2px;letter-spacing:-.01em}
+  .psub{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--p-text-3);margin:0 0 16px}
+  .seg{display:flex;background:var(--p-surface-2);border:1px solid var(--p-border);border-radius:var(--p-r-pill);padding:3px;margin-bottom:14px}
+  .seg span{flex:1;text-align:center;font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.04em;text-transform:uppercase;padding:7px 0;border-radius:var(--p-r-pill);color:var(--p-text-3)}
+  .seg span.on{background:var(--p-accent);color:var(--p-accent-contrast)}
+  .mcard{background:var(--p-surface);border:1px solid var(--p-border);border-radius:var(--p-r);padding:14px;margin-bottom:10px;display:flex;align-items:center;gap:11px;box-shadow:var(--p-elev-1);transition:box-shadow .14s ease}
+  .mcard:active{box-shadow:var(--p-elev-2)}
+  .mcard .id{font-family:"Space Mono",monospace;font-size:10px;color:var(--p-accent-text);font-weight:700}
+  .mcard h4{font-size:14px;font-weight:600;color:var(--p-text-1);margin:3px 0 0}
+  .mcard .st{margin-left:auto;font-family:"Space Mono",monospace;font-weight:700;font-size:8px;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:var(--p-r-pill)}
+  .st-live{background:var(--p-accent-weak);color:var(--p-accent-text)}.st-ok{background:rgba(47,169,104,.16);color:var(--p-success)}
+  .tabbar{display:flex;background:var(--p-surface);border-top:1px solid var(--p-border);position:absolute;bottom:0;left:0;right:0}
+  .tabbar a{flex:1;text-align:center;padding:10px 0;color:var(--p-text-3);font-size:8px;font-family:"Space Mono",monospace;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+  .tabbar a i{display:block;font-size:18px;margin-bottom:3px}
+  .tabbar a.on{color:var(--p-accent-text)}
+  .fab{position:absolute;right:16px;bottom:64px;width:50px;height:50px;border-radius:50%;background:var(--p-accent);display:grid;place-items:center;font-size:22px;color:var(--p-accent-contrast);box-shadow:var(--p-shadow-lg)}
+  .dhero{height:120px;background:var(--p-accent-weak);position:relative;display:grid;place-items:center;border-bottom:1px solid var(--p-border)}
+  .dhero i{font-size:40px;color:var(--p-accent-text)}
+  .dhero .id{position:absolute;left:14px;top:14px;font-family:"Space Mono",monospace;font-size:9px;color:var(--p-accent-text);font-weight:700;background:var(--p-surface);padding:3px 8px;border-radius:5px}
+  .dmeta{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 14px}
+  .dmeta span{font-family:"Space Mono",monospace;font-size:8px;letter-spacing:.04em;text-transform:uppercase;color:var(--p-text-2);border:1px solid var(--p-border);border-radius:var(--p-r-pill);padding:3px 8px}
+  .prog{height:6px;background:var(--p-surface-2);border:1px solid var(--p-border);border-radius:999px;overflow:hidden;margin-bottom:16px}
+  .prog i{display:block;height:100%;background:var(--p-accent)}
+  .ticket{margin:26px 16px;border:1px solid var(--p-border);border-radius:var(--p-r-lg);overflow:hidden;background:var(--p-surface);box-shadow:var(--p-shadow)}
+  .ticket .tt{padding:16px;border-bottom:1px dashed var(--p-border-2)}
+  .ticket h3{font-size:18px;font-weight:700;color:var(--p-text-1);margin:0}
+  .ticket .m{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--p-text-3);margin-top:6px}
+  .ticket .qr{width:120px;height:120px;margin:18px auto;background:conic-gradient(var(--p-text-1) 25%,transparent 0 50%,var(--p-text-1) 0 75%,transparent 0) 0 0/16px 16px,var(--p-text-1);border:8px solid var(--p-surface);border-radius:8px}
+  .ticket .code{text-align:center;font-size:18px;font-weight:700;color:var(--p-text-1);padding-bottom:16px;letter-spacing:.06em}
+</style></head>
+<body>
+  <div class="ctrl">
+    <span class="t">ATLVS Technologies · Mobile</span>
+    <div class="grp" id="prod"><button data-p="atlvs" class="on">ATLVS</button><button data-p="compvss">COMPVSS</button><button data-p="gvteway">GVTEWAY</button></div>
+    <div class="grp" id="mode"><button data-m="light" class="on">Light</button><button data-m="dark">Dark</button></div>
+  </div>
+  <div class="stage" id="app" data-ui="saas" data-product="atlvs" data-mode="light">
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>● ▪ ▪ ▪</span></div>
+      <div class="scr">
+        <div class="pad" style="padding-bottom:64px">
+          <p class="ph1">Projects</p><p class="psub">ATLVS · 4 active</p>
+          <div class="seg"><span class="on">Active</span><span>Upcoming</span><span>Archive</span></div>
+          <div class="mcard"><div><span class="id">RRR 052</span><h4>Salvage City</h4></div><span class="st st-live">Live</span></div>
+          <div class="mcard"><div><span class="id">RRR 226</span><h4>Polymarket</h4></div><span class="st st-ok">Build</span></div>
+          <div class="mcard"><div><span class="id">RRR 312</span><h4>Black Coffee</h4></div><span class="st st-ok">Design</span></div>
+        </div>
+        <div class="fab"><i class="ph-bold ph-plus"></i></div>
+        <div class="tabbar"><a class="on"><i class="ph-fill ph-squares-four"></i>Board</a><a><i class="ph-bold ph-folders"></i>Projects</a><a><i class="ph-bold ph-users-three"></i>Crew</a><a><i class="ph-bold ph-bell"></i>Alerts</a></div>
+      </div>
+    </div><p class="cap">Board · list + tabs + FAB</p></div>
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>● ▪ ▪ ▪</span></div>
+      <div class="scr">
+        <div class="dhero"><span class="id">RRR 052</span><i class="ph-fill ph-confetti"></i></div>
+        <div class="pad" style="padding-bottom:64px">
+          <p class="ph1" style="font-size:20px">Salvage City Supper Club</p>
+          <div class="dmeta"><span>Immersive</span><span>Insomniac</span><span>Phase 07</span></div>
+          <div class="prog"><i style="width:78%"></i></div>
+          <div class="seg"><span class="on">Overview</span><span>Itinerary</span><span>Crew</span></div>
+          <div class="mcard"><i class="ph-bold ph-path" style="color:var(--p-accent-text);font-size:18px"></i><div><h4>Itinerary</h4><span class="id" style="color:var(--p-text-3)">6 of 8 phases</span></div></div>
+          <div class="mcard"><i class="ph-bold ph-users-three" style="color:var(--p-accent-text);font-size:18px"></i><div><h4>Crew · 32</h4><span class="id" style="color:var(--p-text-3)">All checked in</span></div></div>
+        </div>
+        <div class="tabbar"><a><i class="ph-bold ph-squares-four"></i>Board</a><a class="on"><i class="ph-fill ph-folders"></i>Projects</a><a><i class="ph-bold ph-users-three"></i>Crew</a><a><i class="ph-bold ph-bell"></i>Alerts</a></div>
+      </div>
+    </div><p class="cap">Project detail</p></div>
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>● ▪ ▪ ▪</span></div>
+      <div class="scr">
+        <div class="ticket">
+          <div class="tt"><h3>Salvage City — NYE</h3><div class="m">Dec 31 · Miami · GA × 2</div></div>
+          <div class="qr"></div>
+          <div class="code">RRR 052</div>
+        </div>
+        <p style="text-align:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--p-text-3)">Add to Wallet · GVTEWAY</p>
+      </div>
+    </div><p class="cap">GVTEWAY wallet ticket</p></div>
+
+  </div>
+<script>
+  const app=document.getElementById('app');
+  document.querySelectorAll('#prod button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#prod button').forEach(x=>x.classList.remove('on'));b.classList.add('on');app.dataset.product=b.dataset.p;});
+  document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#mode button').forEach(x=>x.classList.remove('on'));b.classList.add('on');app.dataset.mode=b.dataset.m;});
+</script>
+</body></html>

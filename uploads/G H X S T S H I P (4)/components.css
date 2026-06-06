@@ -1,0 +1,120 @@
+/* ============================================================================
+   GHXSTSHIP DESIGN SYSTEM — components.css
+   "Vintage Reef" — premium vintage-tropical building blocks. Requires
+   colors_and_type.css. Refined elevation, thin borders, soft corners.
+   Prefix: .gx-*  — copy rules freely into artifacts.
+   (Class names retained from the prior pop-art system so all artifacts keep
+   working; the register is now premium, not comic.)
+   ========================================================================== */
+
+/* ---- PANEL: refined bordered surface w/ soft elevation ------------------- */
+.gx-panel {
+  background: var(--bone);
+  border: 1px solid var(--parchment-2);
+  border-radius: var(--r-3);
+  box-shadow: var(--shadow-pop);
+  padding: var(--sp-6);
+  color: var(--fg-on-light-1);
+}
+.gx-panel--dark { background: var(--ink-2); color: var(--fg-on-dark-1); border-color: var(--ink-3); box-shadow: var(--shadow-pop); }
+.gx-panel--parchment { background: var(--parchment); }
+
+/* ---- BUTTONS — solid, refined, subtle lift ------------------------------- */
+.gx-btn {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; font-size: 17px; line-height: 1;
+  padding: 14px 26px; border: 1px solid transparent;
+  border-radius: var(--r-3); background: var(--brass); color: var(--on-brass, #06140E);
+  box-shadow: var(--shadow-pop-sm); cursor: pointer; text-decoration: none;
+  transition: transform .16s cubic-bezier(.2,.7,.2,1), box-shadow .16s ease, background .15s ease, filter .15s ease;
+  user-select: none;
+}
+.gx-btn:hover  { transform: translateY(-2px); box-shadow: var(--shadow-pop); filter: brightness(1.04); }
+.gx-btn:active { transform: translateY(0);    box-shadow: var(--shadow-pop-sm); }
+.gx-btn--nebula { background: var(--nebula); color: var(--ink); }
+.gx-btn--plasma { background: var(--plasma); color: var(--bone); }
+.gx-btn--ink    { background: var(--ink); color: var(--bone); }
+.gx-btn--ghost  { background: transparent; color: var(--bone); border-color: var(--ink-3); box-shadow: none; }
+.gx-btn--ghost:hover { border-color: var(--brass); background: rgba(34,176,131,0.08); }
+.gx-btn--sm { font-size: 14px; padding: 9px 16px; }
+.gx-btn--lg { font-size: 21px; padding: 18px 34px; }
+
+/* ---- TAGS / BADGES / CHIPS — soft pill, hairline -------------------------- */
+.gx-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 5px 12px; border: 1px solid var(--parchment-2);
+  border-radius: var(--r-pill); background: var(--bone); color: var(--ink);
+}
+.gx-tag--brass  { background: rgba(34,176,131,0.14);  color: var(--jade-ink); border-color: rgba(34,176,131,0.3); }
+.gx-tag--nebula { background: rgba(255,194,74,0.16); color: var(--pineapple-deep); border-color: rgba(255,194,74,0.35); }
+.gx-tag--plasma { background: rgba(46,132,212,0.14); color: var(--sapphire-ink); border-color: rgba(46,132,212,0.3); }
+.gx-tag--ghost  { background: transparent; color: var(--fg-on-dark-2); border-color: var(--ink-3); }
+
+/* Mono chip — replaces the old 8-bit pixel chip; vintage manifest tag */
+.gx-chip-pixel {
+  display: inline-block; font-family: var(--font-mono); font-weight: 700; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 6px 11px; background: var(--ink); color: var(--brass);
+  border: 1px solid var(--ink-3); border-radius: var(--r-2);
+}
+
+/* ---- SEAL BADGE — replaces the comic starburst; vintage emblem ----------- */
+.gx-burst {
+  display: grid; place-items: center; text-align: center;
+  width: 116px; height: 116px; color: var(--ink);
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  background: var(--brass); border-radius: 50%;
+  border: 3px double rgba(6,20,14,0.35);
+  box-shadow: var(--shadow-pop);
+}
+
+/* ---- TEXTURE LAYERS — subtle, premium ------------------------------------ */
+.gx-halftone { background-image: var(--halftone-ink); opacity: .5; }
+.gx-halftone-brass { background-image: var(--halftone-brass); opacity: .5; }
+.gx-halftone-fade {
+  background-image: var(--halftone-bone);
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent);
+          mask-image: linear-gradient(180deg, #000, transparent);
+}
+
+/* ---- INPUTS — clean, hairline, focus ring -------------------------------- */
+.gx-input {
+  font-family: var(--font-body); font-size: 16px; color: var(--ink);
+  background: var(--bone); border: 1px solid var(--parchment-2);
+  border-radius: var(--r-3); padding: 12px 14px; width: 100%;
+  transition: border-color .15s, box-shadow .15s;
+}
+.gx-input::placeholder { color: var(--fg-on-light-3); }
+.gx-input:focus { outline: none; border-color: var(--brass); box-shadow: 0 0 0 3px rgba(34,176,131,0.18); }
+.gx-field-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-on-dark-3); margin-bottom: 6px; display: block; }
+
+/* ---- DIVIDERS / RULES ---------------------------------------------------- */
+.gx-rule { height: 1px; background: var(--ink-3); border: 0; }
+.gx-rule--stripe { height: 3px; border: 0; background: var(--brass); border-radius: 2px; }
+.gx-rule--dotted { height: var(--dot-size); border: 0; background: var(--halftone-brass); opacity: .5; }
+
+/* ---- COORDINATE STAMP (nautical/vintage metadata) ------------------------ */
+.gx-coords {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--fg-on-dark-3);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.gx-coords::before { content: "◆"; color: var(--brass); }
+
+/* ---- CARD (case-study) — soft elevation, lift on hover ------------------- */
+.gx-card {
+  background: var(--ink-2); border: 1px solid var(--ink-3);
+  border-radius: var(--r-3); overflow: hidden; box-shadow: var(--shadow-pop);
+  transition: transform .16s cubic-bezier(.2,.7,.2,1), box-shadow .16s ease, border-color .16s ease;
+}
+.gx-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-pop-lg); border-color: var(--brass-deep); }
+.gx-card__media { aspect-ratio: 4/3; background: var(--ink-3); position: relative; }
+.gx-card__body { padding: var(--sp-5); }
+
+/* ---- LINK STYLE ---------------------------------------------------------- */
+.gx-link { color: var(--plasma); text-decoration: none; font-weight: 600;
+  border-bottom: 1px solid rgba(46,132,212,0.4); transition: color .15s, border-color .15s; }
+.gx-link:hover { color: var(--jade-ink); border-color: var(--brass); }

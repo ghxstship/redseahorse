@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Mobile UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../components.css">
+<link rel="stylesheet" href="../../polish.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0c0e16;color:var(--bone);font-family:var(--font-body)}
+  .page{max-width:1200px;margin:0 auto;padding:44px 40px 90px}
+  .head .eb{font-family:var(--font-mono);font-size:13px;letter-spacing:.24em;color:var(--brass);text-transform:uppercase;margin:0 0 10px}
+  .head h1{font-family:var(--font-display);font-weight:900;font-size:48px;text-transform:uppercase;margin:0;letter-spacing:-.01em}
+  .head p{font-size:14px;color:var(--fg-on-dark-2);margin:10px 0 0;max-width:760px;line-height:1.55}
+  .gal{display:flex;gap:30px;flex-wrap:wrap;margin-top:40px}
+  .item{width:300px}
+  .cap{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase;margin-top:12px;text-align:center}
+  .phone{width:300px;border:3px solid var(--ink);border-radius:30px;overflow:hidden;background:var(--void);box-shadow:8px 8px 0 var(--ink);position:relative}
+  .stat{height:32px;background:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font-family:var(--font-mono);font-size:10px;color:var(--fg-on-dark-3)}
+  .scr{min-height:430px;position:relative}
+  .pad{padding:18px}
+  .ph1{font-family:var(--font-display);font-weight:900;font-size:26px;text-transform:uppercase;margin:0 0 4px;line-height:.95}
+  .psub{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin:0 0 16px}
+  .mcard{background:var(--ink-2);border:2px solid var(--ink-3);border-radius:8px;padding:13px;margin-bottom:10px;display:flex;align-items:center;gap:11px}
+  .mcard .vy{font-family:var(--font-mono);font-size:10px;color:var(--brass);font-weight:700}
+  .mcard h4{font-family:var(--font-display);font-weight:700;font-size:14px;text-transform:uppercase;margin:2px 0 0;line-height:1}
+  .mcard .st{margin-left:auto;font-family:var(--font-mono);font-weight:700;font-size:8px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:3px}
+  .st-live{background:var(--nebula);color:#fff}.st-ok{background:rgba(47,191,113,.16);color:#3ee08a}
+  .tabbar{display:flex;background:var(--ink);border-top:2px solid var(--ink-3);position:absolute;bottom:0;left:0;right:0}
+  .tabbar a{flex:1;text-align:center;padding:9px 0;color:var(--fg-on-dark-3);font-size:8px;font-family:var(--font-mono);letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+  .tabbar a i{display:block;font-size:18px;margin-bottom:2px}
+  .tabbar a.on{color:var(--brass)}
+  .seg{display:flex;background:var(--ink);border:2px solid var(--ink-3);border-radius:999px;padding:3px;margin-bottom:14px}
+  .seg span{flex:1;text-align:center;font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:6px 0;border-radius:999px;color:var(--fg-on-dark-3)}
+  .seg span.on{background:var(--brass);color:var(--ink)}
+  .fab{position:absolute;right:16px;bottom:64px;width:50px;height:50px;border-radius:50%;background:var(--brass);border:3px solid var(--ink);display:grid;place-items:center;font-size:22px;color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+  /* detail */
+  .dhero{height:120px;background:repeating-linear-gradient(45deg,#18262A 0 14px,#101A1B 14px 28px);position:relative;display:grid;place-items:center}
+  .dhero .chip{position:absolute;left:14px;top:14px;font-family:var(--font-pixel);font-size:9px;color:var(--brass);background:var(--ink);padding:3px 7px}
+  .dmeta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+  .dmeta span{font-family:var(--font-mono);font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);border:1px solid var(--ink-3);border-radius:999px;padding:3px 8px}
+  .prog{height:7px;background:var(--ink-2);border:1px solid var(--ink-3);border-radius:999px;overflow:hidden;margin-bottom:14px}
+  .prog i{display:block;height:100%;background:var(--brass)}
+  /* ticket / wallet */
+  .ticket{margin:30px 16px;border:3px solid var(--brass);border-radius:12px;overflow:hidden;background:var(--ink-2)}
+  .ticket .tt{padding:14px 16px;border-bottom:2px dashed var(--ink-3)}
+  .ticket h3{font-family:var(--font-display);font-weight:900;font-size:22px;text-transform:uppercase;margin:0;line-height:.95}
+  .ticket .meta{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin-top:6px}
+  .ticket .qr{width:120px;height:120px;margin:18px auto;background:conic-gradient(var(--bone) 25%,transparent 0 50%,var(--bone) 0 75%,transparent 0) 0 0/16px 16px,var(--bone);border:8px solid var(--bone);border-radius:6px}
+  .ticket .code{text-align:center;font-family:var(--font-display);font-weight:900;font-size:20px;color:var(--bone);padding-bottom:16px;letter-spacing:.1em}
+  /* auth */
+  .mauth{padding:40px 22px;text-align:center}
+  .mauth img{width:44px;height:44px;image-rendering:pixelated;margin-bottom:14px}
+  .mauth h3{font-family:var(--font-display);font-weight:900;font-size:28px;text-transform:uppercase;margin:0 0 4px}
+  .mauth p{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 18px}
+  .minp{width:100%;background:var(--ink);border:2px solid var(--ink-3);border-radius:6px;color:var(--bone);padding:12px;font-family:var(--font-body);font-size:13px;text-align:center;margin-bottom:10px}
+  /* sheet */
+  .sheet{position:absolute;left:0;right:0;bottom:0;background:var(--ink-2);border-top:3px solid var(--brass);border-radius:16px 16px 0 0;padding:18px}
+  .sheet .grab{width:40px;height:4px;background:var(--ink-3);border-radius:999px;margin:0 auto 16px}
+  .sheet h4{font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;margin:0 0 12px}
+  .sheet .opt{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--ink-3);font-size:13px;color:var(--fg-on-dark-2)}
+  .sheet .opt i{color:var(--brass);font-size:18px}
+  .scrim{position:absolute;inset:0;background:rgba(6,8,21,.6)}
+</style></head>
+<body><div class="page">
+  <div class="head">
+    <p class="eb">Product System · Mobile UI Kit</p>
+    <h1>On Deck, On Mobile</h1>
+    <p>The GHXSTSHIP apps on phone. Bottom-tab shell, list + detail, segmented controls, FAB, bottom sheet, the GVTEWAY wallet ticket, and mobile auth — all on the shared token system.</p>
+  </div>
+  <div class="gal">
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>◆ ▪ ▪ ▪</span></div>
+      <div class="scr"><div class="pad" style="padding-bottom:60px">
+        <p class="ph1">Projects</p><p class="psub">ATLVS · 4 active projects</p>
+        <div class="seg"><span class="on">Active</span><span>Upcoming</span><span>Archive</span></div>
+        <div class="mcard"><div><span class="vy">RRR 052</span><h4>Salvage City</h4></div><span class="st st-live">Live</span></div>
+        <div class="mcard"><div><span class="vy">RRR 311</span><h4>Red Bull Motel</h4></div><span class="st st-ok">Build</span></div>
+        <div class="mcard"><div><span class="vy">RRR 108</span><h4>PATRÓN × Becky G</h4></div><span class="st st-ok">Design</span></div>
+      </div>
+      <div class="fab"><i class="ph-bold ph-plus"></i></div>
+      <div class="tabbar"><a class="on"><i class="ph-fill ph-monitor"></i>Sign In</a><a><i class="ph-bold ph-kanban"></i>Projects</a><a><i class="ph-bold ph-users-three"></i>Crew</a><a><i class="ph-bold ph-bell"></i>Alerts</a></div>
+      </div>
+    </div><p class="cap">Board · list + tabs + FAB</p></div>
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>◆ ▪ ▪ ▪</span></div>
+      <div class="scr"><div class="dhero"><span class="chip">RRR 052</span><i class="ph-fill ph-confetti" style="font-size:40px;color:var(--brass)"></i></div>
+      <div class="pad" style="padding-bottom:60px">
+        <p class="ph1" style="font-size:22px">Salvage City Supper Club</p>
+        <div class="dmeta"><span>Festival</span><span>Insomniac</span><span>Phase 07</span><span style="color:var(--nebula);border-color:var(--nebula)">Live</span></div>
+        <div class="prog"><i style="width:78%"></i></div>
+        <div class="seg"><span class="on">Overview</span><span>Itinerary</span><span>Crew</span></div>
+        <div class="mcard"><i class="ph-bold ph-path" style="color:var(--brass);font-size:18px"></i><div><h4>Itinerary</h4><span class="vy" style="color:var(--fg-on-dark-3)">6 of 8 phases</span></div></div>
+        <div class="mcard"><i class="ph-bold ph-users-three" style="color:var(--brass);font-size:18px"></i><div><h4>Crew · 32</h4><span class="vy" style="color:var(--fg-on-dark-3)">All checked in</span></div></div>
+      </div>
+      <div class="tabbar"><a><i class="ph-bold ph-monitor"></i>Sign In</a><a class="on"><i class="ph-fill ph-kanban"></i>Projects</a><a><i class="ph-bold ph-users-three"></i>Crew</a><a><i class="ph-bold ph-bell"></i>Alerts</a></div>
+      </div>
+    </div><p class="cap">Project detail</p></div>
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>◆ ▪ ▪ ▪</span></div>
+      <div class="scr" style="background:var(--void)">
+        <div class="ticket">
+          <div class="tt"><h3>Salvage City — NYE</h3><div class="meta">Dec 31 · Miami · GA × 2</div></div>
+          <div class="qr"></div>
+          <div class="code">RRR 052</div>
+        </div>
+        <p style="text-align:center;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3)">Add to Wallet · GVTEWAY</p>
+      </div>
+    </div><p class="cap">GVTEWAY wallet ticket</p></div>
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>◆ ▪ ▪ ▪</span></div>
+      <div class="scr" style="position:relative">
+        <div class="pad"><p class="ph1">Crew</p><p class="psub">COMPVSS · roster</p>
+          <div class="mcard"><div class="gx-tag gx-tag--ghost" style="width:34px;height:34px;border-radius:50%;display:grid;place-items:center;padding:0;color:var(--nebula);border-color:var(--nebula)">DL</div><div><h4>Dana Lin</h4><span class="vy" style="color:var(--fg-on-dark-3)">Rigger L1</span></div></div>
+          <div class="mcard"><div class="gx-tag gx-tag--ghost" style="width:34px;height:34px;border-radius:50%;display:grid;place-items:center;padding:0;color:var(--plasma);border-color:var(--plasma)">RV</div><div><h4>R. Vega</h4><span class="vy" style="color:var(--fg-on-dark-3)">LD / Elec</span></div></div>
+        </div>
+        <div class="scrim"></div>
+        <div class="sheet"><div class="grab"></div><h4>Quick Actions</h4>
+          <div class="opt"><i class="ph-bold ph-rocket-launch"></i> Launch project</div>
+          <div class="opt"><i class="ph-bold ph-megaphone-simple"></i> Post a crew call</div>
+          <div class="opt"><i class="ph-bold ph-ticket"></i> Create event</div>
+        </div>
+      </div>
+    </div><p class="cap">Bottom sheet + scrim</p></div>
+
+    <div class="item"><div class="phone">
+      <div class="stat"><span>9:41</span><span>◆ ▪ ▪ ▪</span></div>
+      <div class="scr" style="display:grid;place-items:center"><div class="mauth">
+        <img src="../../assets/skull-bone.svg" alt=""><h3>Sign In</h3><p>Sign in to your workspace</p>
+        <input class="minp" placeholder="Email"><input class="minp" type="password" value="••••••••">
+        <a class="gx-btn gx-btn--sm" style="width:100%;justify-content:center">Sign In</a>
+      </div></div>
+    </div><p class="cap">Mobile auth</p></div>
+
+  </div>
+</div></body></html>

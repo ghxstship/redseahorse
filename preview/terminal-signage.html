@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Terminal Signage System</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#0c0e16;font-family:var(--font-body)}
+  .head{padding:34px 40px 4px}
+  .head .eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin:0 0 8px}
+  .head h1{font-family:var(--font-display);font-weight:900;font-size:40px;text-transform:uppercase;letter-spacing:-.01em;color:#EDF1EF;margin:0}
+  .head p{font-family:var(--font-body);font-size:14px;color:#8b93b5;margin:8px 0 0;max-width:780px;line-height:1.5}
+  .wrap{padding:24px 40px 60px;display:flex;flex-direction:column;gap:26px}
+  .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#6E769E;margin:0 0 10px}
+
+  /* ===== WAYFINDING BAR (Vignelli-style) ===== */
+  .wayfind{display:flex;background:var(--ink);border:3px solid var(--ink-3);border-radius:5px;overflow:hidden}
+  .wayfind .seg{display:flex;align-items:center;gap:12px;padding:16px 22px;border-right:2px solid var(--ink-3);color:var(--bone)}
+  .wayfind .seg:last-child{border-right:0;margin-left:auto;background:var(--brass);color:var(--ink)}
+  .wayfind .seg i{font-size:24px}
+  .wayfind .seg .t{font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+  .wayfind .seg .n{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--fg-on-dark-3);text-transform:uppercase}
+  .wayfind .seg .arr{font-size:20px;color:var(--brass)}
+  .wayfind .seg:last-child .arr{color:var(--ink)}
+
+  /* ===== DEPARTURES BOARD (split-flap FIDS) ===== */
+  .board{background:#080a12;border:3px solid #000;border-radius:6px;box-shadow:7px 7px 0 #000;overflow:hidden}
+  .board .bh{display:flex;align-items:center;justify-content:space-between;background:var(--brass);padding:12px 22px;border-bottom:3px solid #000}
+  .board .bh .ttl{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:900;font-size:24px;text-transform:uppercase;color:var(--ink);letter-spacing:.02em}
+  .board .bh .ttl i{font-size:24px}
+  .board .bh .clock{font-family:var(--font-mono);font-weight:700;font-size:18px;color:var(--ink);letter-spacing:.08em}
+  .row{display:grid;grid-template-columns:78px 1fr 150px 168px;gap:14px;align-items:center;padding:12px 22px;border-bottom:1px solid #161b28}
+  .row.colhead{background:#0b0e18;border-bottom:2px solid #222a3d}
+  .row.colhead span{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#5d6party;color:#667099}
+  .flap{font-family:var(--font-mono);font-weight:700;font-size:20px;letter-spacing:.06em;color:#F4C657;
+    background:#11141f;border-radius:3px;padding:7px 9px;display:inline-block;box-shadow:inset 0 -2px 0 #000, inset 0 1px 0 #2a2f40;position:relative}
+  .flap::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55)}
+  .dest{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;color:#EDF1EF;letter-spacing:.01em;line-height:1}
+  .dest small{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;color:#667099;margin-top:3px;font-weight:400;text-transform:uppercase}
+  .vert{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3c2}
+  .status{font-family:var(--font-mono);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:3px;text-align:center}
+  .st-board{background:var(--nebula);color:#fff;animation:blink 1.1s steps(1) infinite}
+  .st-ontime{background:rgba(47,191,113,.16);color:#3ee08a;border:1px solid rgba(47,191,113,.4)}
+  .st-final{background:rgba(233,162,59,.16);color:var(--brass);border:1px solid rgba(233,162,59,.45)}
+  .st-departed{background:#161b28;color:#667099;border:1px solid #222a3d}
+  @keyframes blink{50%{opacity:.45}}
+
+  /* ===== GATE / PLACARD + PICTOGRAMS ===== */
+  .lower{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+  @media(max-width:900px){.lower{grid-template-columns:1fr}}
+  .gate{background:var(--ink);border:3px solid var(--bone);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+  .gate .top{background:var(--bone);color:var(--ink);padding:10px 20px;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:flex;justify-content:space-between}
+  .gate .mid{padding:26px 24px;display:flex;align-items:center;gap:22px}
+  .gate .gnum{font-family:var(--font-display);font-weight:900;font-size:96px;line-height:.8;color:var(--brass)}
+  .gate .ginfo .now{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--nebula);margin:0 0 6px}
+  .gate .ginfo h3{font-family:var(--font-display);font-weight:900;font-size:34px;text-transform:uppercase;color:var(--bone);margin:0;line-height:.9}
+  .gate .ginfo p{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--fg-on-dark-3);margin:8px 0 0;text-transform:uppercase}
+  .gate .strip{height:14px;background:repeating-linear-gradient(45deg,var(--brass) 0 12px,var(--ink) 12px 24px);margin-top:auto}
+
+  .picts{background:var(--ink);border:3px solid var(--ink-3);border-radius:6px;padding:20px}
+  .picts .pl{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#667099;margin:0 0 16px}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .pict{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .pict .sq{width:100%;aspect-ratio:1;background:var(--bone);border-radius:4px;display:grid;place-items:center;color:var(--ink);font-size:30px}
+  .pict .sq.inv{background:var(--brass)}
+  .pict span{font-family:var(--font-mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3c2;text-align:center}
+</style></head>
+<body>
+  <div class="head">
+    <p class="eb">Brand System · Influence Study</p>
+    <h1>The Spaceport — Now Boarding</h1>
+    <p>Terminal signage for a spaceport of flying galleons (Treasure Planet) as the brand&rsquo;s <b style="color:#cdd3ea">structural layer</b>: wayfinding, a split-flap departures board, gate placards, and pictograms — all built from existing tokens (brass-on-ink = a departures board already). Pop art stays the expressive layer; this is how you move through the world.</p>
+  </div>
+
+  <div class="wrap">
+    <!-- WAYFINDING -->
+    <div>
+      <p class="lbl">Wayfinding bar — concourse navigation</p>
+      <div class="wayfind">
+        <div class="seg"><i class="ph-bold ph-boat"></i><div><div class="t">Production</div><div class="n">Concourse A · Gates 1–5</div></div><span class="arr">→</span></div>
+        <div class="seg"><div><div class="t">Operations</div><div class="n">Concourse B</div></div><span class="arr">↗</span></div>
+        <div class="seg"><div><div class="t">Technology</div><div class="n">Concourse C</div></div><span class="arr">↗</span></div>
+        <div class="seg"><i class="ph-bold ph-ticket"></i><div><div class="t">Start a Project</div><div class="n">Check-in</div></div><span class="arr">→</span></div>
+      </div>
+    </div>
+
+    <!-- DEPARTURES BOARD -->
+    <div>
+      <p class="lbl">Departures board — case studies &amp; live events as flights</p>
+      <div class="board">
+        <div class="bh"><div class="ttl"><i class="ph-fill ph-monitor"></i>Departures</div><div class="clock" id="clk">22:47 EST</div></div>
+        <div class="row colhead"><span>Voyage</span><span>Destination</span><span>Vertical</span><span>Status</span></div>
+        <div class="row"><span class="flap">RRR 052</span><div class="dest">Salvage City Supper Club<small>Insomniac · EDC Las Vegas</small></div><span class="vert">Production</span><span class="status st-board">Now Boarding</span></div>
+        <div class="row"><span class="flap">RRR 023</span><div class="dest">Heineken Turn4 Nightclub<small>F1 Grand Prix · Las Vegas</small></div><span class="vert">Production</span><span class="status st-final">Final Call</span></div>
+        <div class="row"><span class="flap">RRR 311</span><div class="dest">Red Bull Unforeseen Motel<small>III Points · Miami</small></div><span class="vert">Operations</span><span class="status st-ontime">On Time</span></div>
+        <div class="row"><span class="flap">RRR 108</span><div class="dest">PATRÓN Cristalino × Becky G<small>Launch · Los Angeles</small></div><span class="vert">Technology</span><span class="status st-departed">Departed</span></div>
+      </div>
+    </div>
+
+    <!-- GATE + PICTOGRAMS -->
+    <div class="lower">
+      <div>
+        <p class="lbl">Gate placard</p>
+        <div class="gate">
+          <div class="top"><span>Concourse A · Gate 1</span><span>Miami // MIA</span></div>
+          <div class="mid">
+            <div class="gnum">G1</div>
+            <div class="ginfo">
+              <p class="now">● Now Boarding</p>
+              <h3>Venture<br>Beyond</h3>
+              <p>Cast off · All hands · Group GHXST</p>
+            </div>
+          </div>
+          <div class="strip"></div>
+        </div>
+      </div>
+      <div class="picts">
+        <p class="pl">Wayfinding pictograms</p>
+        <div class="pgrid">
+          <div class="pict"><div class="sq"><i class="ph-bold ph-boat"></i></div><span>Departures</span></div>
+          <div class="pict"><div class="sq inv"><i class="ph-bold ph-ticket"></i></div><span>Check-in</span></div>
+          <div class="pict"><div class="sq"><i class="ph-bold ph-suitcase-rolling"></i></div><span>Logistics</span></div>
+          <div class="pict"><div class="sq"><i class="ph-bold ph-users-three"></i></div><span>Crew</span></div>
+          <div class="pict"><div class="sq"><i class="ph-bold ph-anchor"></i></div><span>The Fleet</span></div>
+          <div class="pict"><div class="sq inv"><i class="ph-bold ph-path"></i></div><span>Itinerary</span></div>
+          <div class="pict"><div class="sq"><i class="ph-bold ph-broadcast"></i></div><span>Tech</span></div>
+          <div class="pict"><div class="sq"><i class="ph-bold ph-globe-hemisphere-west"></i></div><span>Global</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // split-flap shuffle on the flight codes, then settle
+  const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  document.querySelectorAll('.flap').forEach(el=>{
+    const final=el.textContent; let n=0;
+    const iv=setInterval(()=>{
+      el.textContent=final.split('').map((c,i)=> i<n||c===' '?c:chars[Math.floor(Math.random()*chars.length)]).join('');
+      if(n++>final.length){clearInterval(iv);el.textContent=final;}
+    },70);
+  });
+  // live-ish clock
+  const clk=document.getElementById('clk');
+  setInterval(()=>{const d=new Date();clk.textContent=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+' EST';},1000);
+</script>
+</body></html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHXSTSHIP — Pitch Deck</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  deck-stage:not(:defined){visibility:hidden}
+  html,body{margin:0;background:#000}
+  section{background:var(--void);color:var(--bone);font-family:var(--font-body);overflow:hidden}
+  .pad{position:absolute;inset:0;padding:110px 130px;display:flex;flex-direction:column}
+  .eb{font-family:var(--font-mono);font-size:26px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin:0 0 28px;display:flex;align-items:center;gap:18px}
+  .eb::before{content:"\25C6";color:var(--nebula)}
+  .disp{font-family:var(--font-display);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.86;margin:0}
+  .stamp{font-family:var(--font-mono);font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .lede{font-family:var(--font-body);font-size:30px;line-height:1.45;color:var(--fg-on-dark-2);max-width:1180px;margin:0}
+  .corner{position:absolute;bottom:54px;left:130px;right:130px;display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--font-mono);font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  .corner img{width:34px;height:34px;image-rendering:pixelated;vertical-align:middle;margin-right:12px}
+  .halftone{position:absolute;inset:0;background:radial-gradient(var(--ink-3) 2px,transparent 2.5px) 0 0/40px 40px;opacity:.5}
+
+  /* TITLE */
+  .s-title{display:grid;grid-template-columns:1.3fr .8fr;align-items:center}
+  .s-title .skull{width:440px;height:440px;background:var(--ink);border:8px solid var(--brass);
+    box-shadow:24px 24px 0 var(--brass-deep);display:grid;place-items:center}
+  .s-title .skull img{width:320px;height:320px;image-rendering:pixelated}
+
+  /* STATEMENT */
+  .s-state{justify-content:center;background:var(--nebula)}
+  .s-state .disp{color:var(--void)}
+  .s-state .eb{color:var(--void)}.s-state .eb::before{color:var(--void)}
+
+  /* STATS */
+  .grid3stat{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:auto;margin-bottom:auto}
+  .statbox{border:5px solid var(--ink-3);border-radius:var(--r-2);padding:40px 34px;background:var(--ink-2)}
+  .statbox .big{font-family:var(--font-display);font-weight:900;font-size:128px;line-height:.82;color:var(--brass)}
+  .statbox:nth-child(2) .big{color:var(--plasma)}.statbox:nth-child(3) .big{color:var(--nebula)}
+  .statbox .lbl{font-family:var(--font-mono);font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-2);margin-top:18px}
+
+  /* COURSE — 8 phase */
+  .seven{display:flex;gap:12px;margin-top:auto;margin-bottom:auto}
+  .dstep{flex:1;border:5px solid var(--ink);border-radius:var(--r-2);background:var(--ink-2);padding:30px 18px;box-shadow:8px 8px 0 var(--ink-3)}
+  .dstep .n{font-family:var(--font-mono);font-size:20px;color:var(--brass);letter-spacing:.1em}
+  .dstep h3{font-family:var(--font-display);font-weight:900;font-size:30px;text-transform:uppercase;margin:14px 0 10px;line-height:.9}
+  .dstep p{font-family:var(--font-body);font-size:18px;color:var(--fg-on-dark-3);margin:0;line-height:1.3}
+  .dstep:nth-child(7){background:var(--nebula);border-color:var(--bone)}.dstep:nth-child(7) .n,.dstep:nth-child(7) p{color:var(--ink)}
+  .dstep:nth-child(8){background:var(--brass)}.dstep:nth-child(8) .n,.dstep:nth-child(8) p,.dstep:nth-child(8) h3{color:var(--ink)}
+
+  /* THREE-UP cards */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:auto;margin-bottom:auto}
+  .tcard{border:5px solid var(--bone);border-radius:var(--r-2);background:var(--ink);padding:44px 38px;box-shadow:12px 12px 0 var(--ink-3)}
+  .tcard .bar{height:8px;width:64px;border-radius:2px;margin-bottom:24px;background:var(--brass)}
+  .tcard:nth-child(2) .bar{background:var(--nebula)}.tcard:nth-child(3) .bar{background:var(--plasma)}
+  .tcard .role{font-family:var(--font-mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+  .tcard:nth-child(2) .role{color:var(--nebula)}.tcard:nth-child(3) .role{color:var(--plasma)}
+  .tcard .nm{font-family:var(--font-display);font-weight:900;font-size:50px;color:var(--bone);text-transform:uppercase;line-height:.9;margin:10px 0 0}
+  .tcard .nm.mono{font-family:var(--font-pixel);font-size:40px;color:var(--brass)}
+  .tcard p{font-family:var(--font-body);font-size:23px;line-height:1.45;color:var(--fg-on-dark-2);margin:24px 0 0}
+
+  /* DESTINATIONS — 6 up */
+  .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:auto;margin-bottom:auto}
+  .dcard{border:var(--stroke-4) solid var(--ink-3);border-radius:var(--r-2);background:var(--ink-2);padding:34px 32px;display:flex;align-items:baseline;gap:18px}
+  .dcard i{font-size:40px;color:var(--brass);flex:none}
+  .dcard h3{font-family:var(--font-display);font-weight:900;font-size:38px;text-transform:uppercase;margin:0 0 6px;line-height:.92}
+  .dcard p{font-family:var(--font-body);font-size:19px;color:var(--fg-on-dark-3);margin:0;line-height:1.3}
+
+  /* JOURNEY — 6 step rail */
+  .jrail{display:flex;gap:0;margin-top:auto;margin-bottom:auto}
+  .jstep{flex:1;position:relative;padding:78px 24px 0 0}
+  .jstep::before{content:"";position:absolute;top:34px;left:0;width:100%;height:5px;background:var(--ink-3)}
+  .jstep:first-child::before{left:50%;width:50%}
+  .jstep .node{position:absolute;top:0;left:0;width:68px;height:68px;border-radius:50%;background:var(--ink-2);border:5px solid var(--brass);
+    display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;font-size:28px;color:var(--brass);z-index:2}
+  .jstep:nth-child(n+4) .node{border-color:var(--nebula);color:var(--nebula)}
+  .jstep:last-child .node{background:var(--brass);color:var(--ink);border-color:var(--brass)}
+  .jstep .sn{font-family:var(--font-mono);font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-on-dark-3);margin-bottom:8px}
+  .jstep h3{font-family:var(--font-display);font-weight:900;font-size:40px;text-transform:uppercase;margin:0 0 12px;line-height:.9}
+  .jstep p{font-family:var(--font-body);font-size:19px;color:var(--fg-on-dark-3);margin:0;line-height:1.32;padding-right:18px}
+
+  /* CASE STUDY */
+  .s-case{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0}
+  .s-case .media{position:relative;display:grid;place-items:center;overflow:hidden}
+  .s-case .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.05)}
+  .s-case .media .chip{position:absolute;top:50px;left:50px;z-index:2;font-family:var(--font-pixel);font-size:22px;background:var(--ink);color:var(--brass);padding:14px 20px;box-shadow:var(--shadow-hard-brass)}
+  .s-case .info{padding:110px 100px;display:flex;flex-direction:column;justify-content:center}
+
+  /* CTA */
+  .s-cta{justify-content:center;align-items:flex-start;text-align:left;position:relative}
+  .s-cta .btnrow{display:flex;gap:24px;margin-top:48px}
+  .bigbtn{font-family:var(--font-display);font-weight:800;font-size:34px;text-transform:uppercase;padding:26px 50px;
+    border:6px solid var(--ink);border-radius:var(--r-2);background:var(--brass);color:var(--ink);box-shadow:var(--shadow-hard-lg);text-decoration:none}
+  .bigbtn.ghost{background:transparent;color:var(--bone);border-color:var(--bone);box-shadow:8px 8px 0 var(--brass)}
+</style></head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- 1 · TITLE -->
+  <section data-label="Title">
+    <div class="halftone" style="-webkit-mask:radial-gradient(120% 90% at 80% 10%,#000,transparent);mask:radial-gradient(120% 90% at 80% 10%,#000,transparent)"></div>
+    <div class="pad s-title">
+      <div>
+        <p class="eb">Production &middot; Operations &middot; Technology</p>
+        <h1 class="disp" style="font-size:200px;color:var(--bone)">GHXST<br><span style="color:var(--brass)">SHIP</span></h1>
+        <p class="stamp" style="margin-top:34px">MIAMI // LAS VEGAS // CHI // NY // LA &nbsp;&#9670;&nbsp; EST. 2022</p>
+      </div>
+      <div class="skull"><img src="../assets/skull-bone.svg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- 2 · MISSION -->
+  <section data-label="Mission">
+    <div class="pad s-state">
+      <p class="eb">The GHXSTSHIP Mission</p>
+      <h2 class="disp" style="font-size:150px">We don't meet<br>the brief.<br>We redefine<br>what's possible.</h2>
+    </div>
+  </section>
+
+  <!-- 3 · POSITIONING / THREE ROLES -->
+  <section data-label="Positioning">
+    <div class="pad">
+      <p class="eb">How We're Built</p>
+      <h2 class="disp" style="font-size:84px;color:var(--bone)">The GC, Foreman &amp; Procore<br>of Experiential Project Management.</h2>
+      <div class="grid3">
+        <div class="tcard"><div class="bar"></div><p class="role">The General Contractor</p><div class="nm">Production</div><p>We build the ship &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
+        <div class="tcard"><div class="bar"></div><p class="role">The Foreman</p><div class="nm">Operations</div><p>We crew it and run it &mdash; logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
+        <div class="tcard"><div class="bar"></div><p class="role">The Procore</p><div class="nm">Technology</div><p>We give the yard its instruments &mdash; ATLVS, COMPVSS &amp; GVTEWAY, the platforms the project runs on.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · STATS -->
+  <section data-label="Track Record">
+    <div class="pad">
+      <p class="eb">The Track Record</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">Fourteen Years of Receipts.</h2>
+      <div class="grid3stat">
+        <div class="statbox"><div class="big">14+</div><div class="lbl">Years Experience</div></div>
+        <div class="statbox"><div class="big">250+</div><div class="lbl">Experiences Created</div></div>
+        <div class="statbox"><div class="big">5M+</div><div class="lbl">Memories Made</div></div>
+      </div>
+    </div>
+    <div class="corner"><span><img src="../assets/skull-bone.svg">G H X S T S H I P</span><span>THE GC, FOREMAN &amp; PROCORE OF EXPERIENTIAL PROJECT MANAGEMENT</span></div>
+  </section>
+
+  <!-- 5 · DESTINATIONS -->
+  <section data-label="Destinations">
+    <div class="pad">
+      <p class="eb">What We Produce &middot; Destinations</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">Destinations.</h2>
+      <div class="grid6">
+        <div class="dcard"><i class="ph-bold ph-confetti"></i><div><h3>Festivals</h3><p>Festival production at scale.</p></div></div>
+        <div class="dcard"><i class="ph-bold ph-music-notes"></i><div><h3>Concerts &amp; Tours</h3><p>Concert touring &amp; live music.</p></div></div>
+        <div class="dcard"><i class="ph-bold ph-storefront"></i><div><h3>Brand Activations</h3><p>Experiential brand activations.</p></div></div>
+        <div class="dcard"><i class="ph-bold ph-planet"></i><div><h3>Immersive</h3><p>Worlds audiences step inside.</p></div></div>
+        <div class="dcard"><i class="ph-bold ph-flag-checkered"></i><div><h3>Sporting</h3><p>Stadium &amp; fan experiences.</p></div></div>
+        <div class="dcard"><i class="ph-bold ph-television-simple"></i><div><h3>TV &amp; Film</h3><p>Broadcast, film &amp; on-air.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · THE JOURNEY -->
+  <section data-label="The Journey">
+    <div class="pad">
+      <p class="eb">How We Work &middot; Start to Launch</p>
+      <h2 class="disp" style="font-size:84px;color:var(--bone)">The Journey.</h2>
+      <div class="jrail">
+        <div class="jstep"><div class="node">1</div><div class="sn">The Destination</div><h3>Share Your Vision</h3><p>The goal, the experience worth building &mdash; everything is sized to reach it.</p></div>
+        <div class="jstep"><div class="node">2</div><div class="sn">The Ship</div><h3>Build Your Vessel</h3><p>Full build, a single discipline, or by the phase. The scope, customized.</p></div>
+        <div class="jstep"><div class="node">3</div><div class="sn">The Course</div><h3>Chart the Course</h3><p>Eight phases, Discovery to Close &mdash; deliverables and owners at every stop.</p></div>
+        <div class="jstep"><div class="node">4</div><div class="sn">The Crew</div><h3>Meet the Team</h3><p>Producers, ops leads &amp; technologists, matched to the charted route.</p></div>
+        <div class="jstep"><div class="node">5</div><div class="sn">The Manifest</div><h3>Pack Your Bags</h3><p>Onboarding, approvals &amp; sign-off &mdash; everything settled before we go live.</p></div>
+        <div class="jstep"><div class="node">6</div><div class="sn">Launch</div><h3>Anchors Away</h3><p>The experience goes live. We run it, hold the standard, strike clean.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · THE COURSE -->
+  <section data-label="The Course">
+    <div class="pad">
+      <p class="eb">The Course &middot; 8-Phase Production Lifecycle</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">First Line to Launch.</h2>
+      <div class="seven">
+        <div class="dstep"><div class="n">01</div><h3>Discovery</h3><p>Brief &amp; goals</p></div>
+        <div class="dstep"><div class="n">02</div><h3>Design</h3><p>Concept</p></div>
+        <div class="dstep"><div class="n">03</div><h3>Advance</h3><p>Plan &amp; permit</p></div>
+        <div class="dstep"><div class="n">04</div><h3>Procurement</h3><p>Vendors</p></div>
+        <div class="dstep"><div class="n">05</div><h3>Build</h3><p>Fabrication</p></div>
+        <div class="dstep"><div class="n">06</div><h3>Install</h3><p>Load-in</p></div>
+        <div class="dstep"><div class="n">07</div><h3>Operate</h3><p>Live show</p></div>
+        <div class="dstep"><div class="n">08</div><h3>Close</h3><p>Strike &amp; data</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · TECHNOLOGY -->
+  <section data-label="Technology">
+    <div class="pad">
+      <p class="eb">Technology &middot; The Instruments</p>
+      <h2 class="disp" style="font-size:96px;color:var(--bone)">The Platforms.</h2>
+      <div class="grid3">
+        <div class="tcard"><div class="bar"></div><div class="nm mono">ATLVS</div><p class="role" style="margin-top:14px">The Atlas &middot; Production &amp; Resource Mgmt</p><p>Chart the course &mdash; projects, resources, schedules &amp; budgets in one system.</p></div>
+        <div class="tcard"><div class="bar"></div><div class="nm mono">COMPVSS</div><p class="role" style="margin-top:14px">The Compass &middot; Workforce &amp; Crew</p><p>Point the crew &mdash; scheduling, certifications &amp; timesheets across every show.</p></div>
+        <div class="tcard"><div class="bar"></div><div class="nm mono">GVTEWAY</div><p class="role" style="margin-top:14px">The Gateway &middot; Ticketing &amp; Fans</p><p>Open the gate &mdash; ticketing, fan engagement &amp; community for the audience.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · THE LOG / CASE STUDY -->
+  <section data-label="The Log">
+    <div class="s-case" style="position:absolute;inset:0">
+      <div class="media"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1100&q=80&auto=format&fit=crop" alt="Immersive supper club"><span class="chip">CLUB SPACE</span></div>
+      <div class="info">
+        <p class="eb">The Log &middot; Case File</p>
+        <h2 class="disp" style="font-size:84px;color:var(--bone)">Salvage City Supper Club</h2>
+        <p class="stamp" style="margin:30px 0 0">IMMERSIVE EXPERIENCE // CLUB SPACE // MIAMI // 2025</p>
+        <p class="lede" style="margin-top:34px;font-size:28px">A fully-realized immersive supper club staged inside Miami's Club Space &mdash; designed, built, crewed, run, and struck end to end.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · CTA -->
+  <section data-label="Venture Beyond">
+    <div class="halftone" style="background:radial-gradient(var(--brass) 2px,transparent 2.5px) 0 0/44px 44px;opacity:.14"></div>
+    <div class="pad s-cta">
+      <p class="eb">Where To Next?</p>
+      <h2 class="disp" style="font-size:200px;color:var(--bone)">Venture<br><span style="color:var(--brass)">Beyond.</span></h2>
+      <div class="btnrow">
+        <a class="bigbtn" href="mailto:hello@ghxstship.tours">Start a Project</a>
+        <a class="bigbtn ghost" href="#">See the Log</a>
+      </div>
+    </div>
+    <div class="corner"><span><img src="../assets/skull-bone.svg">G H X S T S H I P</span><span>HELLO@GHXSTSHIP.TOURS // MIAMI</span></div>
+  </section>
+
+</deck-stage>
+<script src="deck-stage.js"></script>
+</body></html>
