@@ -6,3 +6,9 @@ dist/
 .thumbnail
 *.log
 next-env.d.ts
+
+# Secrets — never commit. Set RESEND_API_KEY in Vercel env vars instead.
+.env
+.env.*
+!.env.example
+.vercel

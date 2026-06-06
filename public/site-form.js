@@ -14,10 +14,17 @@
 (function () {
   "use strict";
 
+  // Default backend: the Vercel serverless function that emails via Resend.
+  // Overridable per-page via window.__GHXST_FORM_ENDPOINT or a
+  // <meta name="ghxst-form-endpoint"> tag. On hosts without the function
+  // (e.g. a static mirror) the POST fails and we fall back to mailto:.
+  var DEFAULT_ENDPOINT = "/api/contact";
+
   function getEndpoint() {
     if (window.__GHXST_FORM_ENDPOINT) return window.__GHXST_FORM_ENDPOINT;
     var m = document.querySelector('meta[name="ghxst-form-endpoint"]');
-    return m && m.getAttribute("content") ? m.getAttribute("content") : null;
+    if (m && m.getAttribute("content")) return m.getAttribute("content");
+    return DEFAULT_ENDPOINT;
   }
 
   function getMailto() {
@@ -37,6 +44,21 @@
 
   function slug(s) {
     return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+
+  // Inject a visually-hidden honeypot. Bots fill it; the server drops any
+  // submission where it's non-empty. Kept out of the tab order and a11y tree.
+  function addHoneypot(form) {
+    if (form.querySelector('input[name="company_website"]')) return;
+    var hp = document.createElement("input");
+    hp.type = "text";
+    hp.name = "company_website";
+    hp.tabIndex = -1;
+    hp.autocomplete = "off";
+    hp.setAttribute("aria-hidden", "true");
+    hp.style.cssText =
+      "position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none";
+    form.appendChild(hp);
   }
 
   function attachNames(form) {
@@ -137,6 +159,7 @@
     form.removeAttribute("onsubmit");
     attachNames(form);
     markImplicitRequireds(form);
+    addHoneypot(form);
 
     // The kit uses <a class="gx-btn"> as the "Submit" trigger. Treat it as submit.
     var fauxSubmit = form.querySelector("a.gx-btn, .gx-btn[role='button']");
@@ -173,11 +196,17 @@
           body: JSON.stringify(data),
         })
           .then(function (res) {
-            if (res.ok) done(true, "Sent. We'll be in touch.");
-            else done(false, "Couldn't send (server error). Try again or email " + getMailto() + ".");
+            if (res.ok) {
+              done(true, "Sent. We'll be in touch.");
+            } else {
+              // Server unreachable/misconfigured (e.g. a static mirror with no
+              // function) — degrade gracefully to the user's mail client.
+              done(false, "Opening your mail client…");
+              window.location.href = buildMailto(form, data);
+            }
           })
           .catch(function () {
-            done(false, "Network error. Falling back to email.");
+            done(false, "Opening your mail client…");
             window.location.href = buildMailto(form, data);
           });
       } else {
