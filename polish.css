@@ -94,3 +94,81 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
   /* Tighten the wrap padding a touch so both fit. */
   .wrap.nav-inner { padding-left: var(--sp-4, 16px); padding-right: var(--sp-4, 16px); }
 }
+
+/* ============================================================================
+   MOBILE: journey + course become horizontal scroll-snap carousels
+   ----------------------------------------------------------------------------
+   On phones/tablets the journey rail was a tall static list (only step 1 lit)
+   stacked above 6 full step cards — heavy redundant scrolling. The course
+   strip-map collapsed to an 8-item vertical column. Both now become compact
+   swipeable carousels: a sticky numbered progress strip + horizontally
+   snapping cards. journey.js syncs the active dot to scroll position and adds
+   the scroll-spy the sticky desktop rail never had. All degrade to plain
+   horizontal scroll without JS.
+   ========================================================================== */
+@media (max-width: 56rem) {
+  /* --- JOURNEY: numbered progress strip + swipeable step cards ----------- */
+  .journey .j-grid { gap: var(--sp-4); }
+  .journey .rail {
+    position: sticky; top: 4.25rem; z-index: 6; align-self: stretch;
+    display: flex; gap: var(--sp-3); align-items: center;
+    overflow-x: auto; scrollbar-width: none;
+    margin: 0 calc(-1 * var(--sp-6)); padding: var(--sp-3) var(--sp-6);
+    background: color-mix(in srgb, var(--ink) 90%, transparent);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    border-bottom: var(--stroke-1) solid var(--ink-3);
+  }
+  .journey .rail::-webkit-scrollbar { display: none; }
+  .journey .rail .rl {
+    flex: 0 0 auto; gap: 0; padding: 0; font-size: 0; /* hide long labels; dots carry wayfinding */
+  }
+  .journey .rail .rl .n {
+    width: 2rem; height: 2rem; font-size: var(--fs-label);
+    transition: background var(--dur-2) ease, border-color var(--dur-2) ease, color var(--dur-2) ease;
+  }
+  .journey .j-steps {
+    flex-direction: row; gap: var(--sp-4);
+    overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin: 0 calc(-1 * var(--sp-6)); padding: var(--sp-5) var(--sp-6) var(--sp-2);
+    overscroll-behavior-x: contain;
+  }
+  .journey .j-steps::-webkit-scrollbar { display: none; }
+  .journey .j-steps .step {
+    flex: 0 0 86%; scroll-snap-align: center;
+    display: flex; flex-direction: column;
+  }
+  .journey .j-steps .step p { max-width: none; }
+
+  /* --- COURSE: horizontal scroll-snap strip (override source vertical) --- */
+  .course .smap {
+    flex-direction: row; gap: var(--sp-5);
+    overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
+    margin: 0 calc(-1 * var(--sp-6)); padding: 0 var(--sp-6) var(--sp-3);
+    overscroll-behavior-x: contain;
+  }
+  .course .smap::-webkit-scrollbar { display: none; }
+  .course .smap .stop {
+    flex: 0 0 5.5rem; text-align: center; padding: var(--sp-7) 0 0;
+    scroll-snap-align: center;
+  }
+  .course .smap .stop::before { top: 0.6rem; left: 0; width: 100%; height: 3px; }
+  .course .smap .stop:first-child::before { left: 50%; width: 50%; }
+  .course .smap .stop:last-child::before { width: 50%; }
+  .course .smap .stop .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+}
+
+/* Swipe affordance hint for the carousels (mobile only). */
+@media (max-width: 56rem) {
+  .journey .j-steps, .course .smap { scroll-padding-left: var(--sp-6); }
+}
+
+/* ---- HERO: keep the fixed-width porthole from overflowing the 2-col grid -- */
+/* The homepage hero is a 1.5fr/.9fr grid that switches to one column only at
+   <=56rem. Between ~896px and ~1024px the right column can't shrink below the
+   fixed 18rem porthole, overflowing the page. Hold the single-column layout
+   until 64rem, let both columns shrink, and cap the porthole to its column. */
+@media (max-width: 64rem) {
+  .hero .hero-grid { grid-template-columns: 1fr; }
+}
+.hero .hero-grid > * { min-width: 0; }
+.hero .porthole { max-width: 100%; }
