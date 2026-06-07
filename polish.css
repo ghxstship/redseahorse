@@ -415,3 +415,35 @@ header.nav.is-scrolled {
   .nav-drawer, .nav-drawer-link, .nav-toggle-bars i { transition: none !important; }
   .nav-drawer-link { transform: none; opacity: 1; }
 }
+
+/* ============================================================================
+   SCROLL-DRIVEN HORIZONTAL PIN (hscroll.js sets the data attributes)
+   The track lays out as a horizontal row and is transform-driven; the stage
+   is pinned. These override the mobile carousel rules, hence !important.
+   ========================================================================== */
+[data-hscroll-stage] { overflow: hidden; }
+[data-hscroll-track] {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  scroll-snap-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: var(--sp-5) !important;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+[data-hscroll-track] > * { scroll-snap-align: none !important; }
+.journey .j-steps[data-hscroll-track] { padding: var(--sp-5) 0 !important; align-items: stretch; }
+.journey .j-steps[data-hscroll-track] .step {
+  flex: 0 0 clamp(19rem, 40vw, 30rem) !important;
+}
+.course .smap[data-hscroll-track] { padding: var(--sp-7) 0 var(--sp-3) !important; }
+.course .smap[data-hscroll-track] .stop { flex: 0 0 7rem !important; }
+
+/* A subtle hint that the pinned section scrolls horizontally. */
+@media (prefers-reduced-motion: reduce) {
+  [data-hscroll-track] { transform: none !important; }
+}

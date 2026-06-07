@@ -75,6 +75,8 @@
     var ticking = false;
     function update() {
       ticking = false;
+      // When the scroll-driven pin is active, hscroll.js owns the active dot.
+      if (stepsWrap.hasAttribute("data-hscroll-track")) return;
       var horizontal = getComputedStyle(stepsWrap).flexDirection === "row";
       setActive(horizontal ? nearestHorizontal() : nearestVertical());
     }
