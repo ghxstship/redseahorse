@@ -142,9 +142,9 @@
   <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
 <script>
-  (function(){var n=0;var el=document.getElementById('cartN');
-   document.getElementById('grid').addEventListener('click',function(e){
-     var b=e.target.closest('.add');if(!b)return;n++;el.textContent=n;
+  (function(){var n=0;var el=document.getElementById('cartN');var grid=document.getElementById('grid');if(!grid)return;
+   grid.addEventListener('click',function(e){
+     var b=e.target.closest('.add');if(!b)return;n++;if(el)el.textContent=n;
      b.textContent='Added';b.style.background='var(--nebula)';
      setTimeout(function(){b.textContent='Add';b.style.background='';},900);
    });})();

@@ -3,6 +3,8 @@ import "../colors_and_type.css";
 import "../components.css";
 import "../terminal.css";
 import "../polish.css";
+import Nav from "./_components/Nav";
+import Footer from "./_components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ghxstship.tours"),
@@ -28,13 +30,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
         />
-        <script src="/nav.js" defer />
         <script src="/site-form.js" defer />
         <script src="/journey.js" defer />
         <script src="/hscroll.js" defer />
         <script src="/motion.js" defer />
       </head>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

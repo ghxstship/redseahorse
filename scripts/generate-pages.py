@@ -577,6 +577,22 @@ def ts_metadata_object(title: str | None, description: str | None, canonical: st
     return "{\n" + "\n".join(parts) + "\n}"
 
 
+def _node_classes(node: Node) -> set[str]:
+    for k, v in node.attrs:
+        if k == "class" and v:
+            return set(v.split())
+    return set()
+
+
+def _is_site_chrome(node: Node) -> bool:
+    """The shared nav/footer now live in the root layout; drop them from pages."""
+    if node.kind != "element":
+        return False
+    tag = node.tag.lower()
+    cls = _node_classes(node)
+    return (tag == "header" and "nav" in cls) or (tag == "footer" and "site-foot" in cls)
+
+
 def emit_page(src_rel: Path) -> None:
     text = (SRC / src_rel).read_text(encoding="utf-8")
     head_m = HEAD_RE.search(text)
@@ -618,9 +634,10 @@ def emit_page(src_rel: Path) -> None:
             continue
         # Drop everything else (meta, link, title, doctype, whitespace).
 
-    # Body: full JSX.
+    # Body: full JSX. Drop the per-page nav/footer — the root layout renders a
+    # single shared <Nav>/<Footer> (persists across navigation, no flicker).
     body_tree = parse(body)
-    body_jsx_parts: list[str] = [emit_node(child, ctx) for child in body_tree.children]
+    body_jsx_parts: list[str] = [emit_node(child, ctx) for child in body_tree.children if not _is_site_chrome(child)]
     body_jsx = "".join(p for p in body_jsx_parts if p)
 
     url, sub = src_to_route(src_rel)
@@ -672,10 +689,11 @@ def emit_page(src_rel: Path) -> None:
 
 
 def main() -> None:
-    # Wipe stale routes so removed pages don't linger; keep layout/globals.
+    # Wipe stale routes so removed pages don't linger; keep hand-authored files
+    # (layout, globals, shared components).
     if APP.exists():
         for entry in APP.iterdir():
-            if entry.name in {"layout.tsx", "globals.css"}:
+            if entry.name in {"layout.tsx", "globals.css", "_components"}:
                 continue
             if entry.is_dir():
                 shutil.rmtree(entry)
