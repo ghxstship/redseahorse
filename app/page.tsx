@@ -251,7 +251,7 @@ export default function Page() {
 <section className="cap" id="cap"><div className="wrap">
   <p className="eyebrow">The Fleet</p>
   <h2 className="sec">Three Vessels. One Yard.</h2>
-  <p className="lede">Three disciplines, one accountable yard: Production builds it, Operations runs it, Technology coordinates it. Distinct crews, one standard.</p>
+  <p className="lede">Three disciplines, one accountable yard: Production builds it, Operations runs it, Technology streamlines it. Distinct crews, one standard.</p>
   <div className="cap-grid">
     <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Production Management</h3><p>We build the ship. Scope, schedule, budget, fabrication, staging, and the finish — owned end to end.</p></div>
     <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Operations Leadership</h3><p>We crew it and run it. Logistics, staffing, safety, and the day-of call — clockwork at any scale.</p></div>
