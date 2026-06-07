@@ -173,7 +173,7 @@ function receiptEmail(name) {
         return (
           "<tr>" +
           '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px">' +
-          '<span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:' + (done ? C.brass : "transparent") + ';border:2px solid ' + dotColor + ';font-family:' + FONT_MONO + ';font-size:12px;font-weight:700;color:' + dotText + '">' + (done ? "✓" : s[0]) + "</span></td>" +
+          '<span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:' + (done ? C.brass : "transparent") + ';border:2px solid ' + dotColor + ';font-family:' + FONT_MONO + ';font-size:12px;font-weight:700;color:' + dotText + '">' + s[0] + "</span></td>" +
           '<td style="padding:0 0 14px;vertical-align:top">' +
           '<div style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:.3px;color:' + C.bone + ';text-transform:uppercase">' + esc(s[1]) + (done ? ' <span style="font-family:' + FONT_MONO + ';font-size:10px;letter-spacing:1px;color:' + C.brass + '">· YOU ARE HERE</span>' : "") + "</div>" +
           '<div style="font-family:' + FONT_BODY + ';font-size:14px;line-height:1.55;color:' + C.fg2 + ';margin-top:3px">' + esc(s[2]) + "</div>" +

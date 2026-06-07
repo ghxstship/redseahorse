@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solutions \u2014 Experiential Production, Venue Operations & Technology",
-  description: "GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management \u2014 one accountable management team for experiential and entertainment production, venue operations, and event technology integration and installs, for GCs, venue operators, brands, and promoters worldwide.",
+  title: "Solutions \u2014 Experiential Production, Operations Leadership & Technology",
+  description: "GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management \u2014 one accountable management team for experiential and entertainment production, operations leadership, and event technology integration and installs, for GCs, venue operators, brands, and promoters worldwide.",
   alternates: { canonical: "https://ghxstship.tours/solutions" },
 };
 
@@ -11,11 +11,11 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `*{box-sizing:border-box}
-  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
   a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:10px 0}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand img{width:34px;height:34px;image-rendering:pixelated}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand img{width:34px;height:34px}
   .brand b{font-family:var(--font-display);font-weight:900;font-size:21px;text-transform:uppercase;white-space:nowrap}
   .navlinks{display:flex;gap:20px;align-items:center}
   .navlinks a{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
@@ -63,7 +63,7 @@ export default function Page() {
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:10px 0}
   .nav-inner .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .nav-inner .brand img{width:34px;height:34px;image-rendering:pixelated}
+  .nav-inner .brand img{width:34px;height:34px}
   .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:21px;text-transform:uppercase;white-space:nowrap;color:var(--bone)}
   .navlinks{display:flex;gap:17px;align-items:center}
   .navlinks a{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
@@ -76,7 +76,7 @@ export default function Page() {
   .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:30px}
   @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
   .site-foot .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:14px}
-  .site-foot .brand img{width:30px;height:30px;image-rendering:pixelated}
+  .site-foot .brand img{width:30px;height:30px}
   .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:18px;text-transform:uppercase;white-space:nowrap;color:var(--bone)}
   .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:17px;line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 12px;max-width:22rem}
   .site-foot .foot-ports{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 14px;display:flex;flex-wrap:nowrap;white-space:nowrap}
@@ -103,16 +103,16 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Fleet &middot; The Verticals We Serve</p>
   <h1>The Management Team<br/>Behind the <span className="pop">Build.</span></h1>
-  <p className="answer">GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management &mdash; the single accountable management team for experiential and entertainment production, venue operations, and technology integration. We own scope, schedule, budget, crew, and the platforms, from first line to launch, so owners, operators, and partners don't have to manage a chain of vendors.</p>
+  <p className="answer">GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management &mdash; the single accountable management team for experiential and entertainment production, operations leadership, and technology integration. We own scope, schedule, budget, crew, and the platforms, from first line to launch, so owners, operators, and partners don't have to manage a chain of vendors.</p>
   <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '26px'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost">See the Archives</Link></div>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Fleet &middot; What We Run</p>
   <h2 className="sec">Three Ships, One Yard.</h2>
-  <p className="lede">Experiential production management, venue operations leadership, and event technology integration &mdash; delivered as one system, not three vendors.</p>
+  <p className="lede">Experiential production management, operations leadership, and event technology integration &mdash; delivered as one system, not three vendors.</p>
   <div className="sgrid">
     <div className="scard"><i className="ph-bold ph-blueprint"></i><h3>Production Management</h3><p>The general contractor for live experiences: experiential design, scenic fabrication, staging, technical production, and show calling &mdash; scope, schedule, and budget owned end to end.</p></div>
-    <div className="scard"><i className="ph-bold ph-buildings"></i><h3>Venue Operations</h3><p>The foreman for venues and activations: logistics, crew and workforce, vendor management, health, safety and compliance, and day-of operations at any scale.</p></div>
+    <div className="scard"><i className="ph-bold ph-buildings"></i><h3>Operations Leadership</h3><p>The foreman for venues and activations: logistics, crew and workforce, vendor management, health, safety and compliance, and day-of operations at any scale.</p></div>
     <div className="scard"><i className="ph-bold ph-circuitry"></i><h3>Technology Integration</h3><p>The Procore for the project: ATLVS, COMPVSS, and GVTEWAY plus event-technology integrations, installs, and analytics &mdash; the platforms the whole build runs on.</p><p style={{margin: '14px 0 0'}}><a href="https://atlvs.pro" target="_blank" rel="noopener" style={{fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-label)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--plasma)', textDecoration: 'none'}}>Explore the platforms at ATLVS.pro &#8599;</a></p></div>
   </div>
 </div></section>
@@ -121,7 +121,7 @@ export default function Page() {
   <h2 className="sec">Built for the People Accountable for the Show.</h2>
   <div className="who">
     <div className="w"><h3>General Contractors &amp; Owner's Reps</h3><p>A specialist experiential management team you can subcontract for production, staging, and live-event scope &mdash; one accountable partner that plugs into your build.</p></div>
-    <div className="w"><h3>Venue &amp; Hospitality Operators</h3><p>Turnkey venue operations, programming, and technology installs for clubs, stadiums, arenas, and hospitality &mdash; run to a single standard across every date.</p></div>
+    <div className="w"><h3>Venue &amp; Hospitality Operators</h3><p>Turnkey operations leadership, programming, and technology installs for clubs, stadiums, arenas, and hospitality &mdash; run to a single standard across every date.</p></div>
     <div className="w"><h3>Brands, Promoters &amp; Producers</h3><p>End-to-end production and operations for festivals, tours, activations, immersive, sporting, and broadcast &mdash; with the platforms to coordinate it all.</p></div>
   </div>
 </div></section>
@@ -130,7 +130,7 @@ export default function Page() {
   <h2 className="sec">Solutions FAQ.</h2>
   <div className="faq">
     <details open><summary>Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?<span className="ic">+</span></summary><p className="a">Yes. GHXSTSHIP operates as the general contractor and accountable management team for experiential and entertainment production &mdash; owning scope, schedule, budget, crew, vendors, and technology across all eight phases, from discovery to close, the way a GC owns a build.</p></details>
-    <details><summary>Do you provide venue operations management?<span className="ic">+</span></summary><p className="a">Yes. We provide venue operations leadership &mdash; logistics, workforce and crew management, vendor and procurement coordination, health, safety and compliance, programming, and day-of operations for venues, clubs, stadiums, and hospitality environments.</p></details>
+    <details><summary>Do you provide operations leadership?<span className="ic">+</span></summary><p className="a">Yes. We provide operations leadership &mdash; logistics, workforce and crew management, vendor and procurement coordination, health, safety and compliance, programming, and day-of operations for venues, clubs, stadiums, and hospitality environments.</p></details>
     <details><summary>Do you handle event technology integrations and installs?<span className="ic">+</span></summary><p className="a">Yes. We implement and integrate event technology &mdash; production and resource management (ATLVS), workforce and crew management (COMPVSS), and ticketing and fan engagement (GVTEWAY) &mdash; alongside third-party integrations, on-site installs, data, and analytics.</p></details>
     <details><summary>Which industries and verticals do you serve?<span className="ic">+</span></summary><p className="a">Festivals, concerts and tours, brand activations, immersive experiences, sporting events, TV, film and broadcast, health and wellness, premium hospitality, luxury retail, and water and motorsports &mdash; for brands, promoters, venue operators, general contractors, and production directors worldwide.</p></details>
   </div>
@@ -156,9 +156,9 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/","sameAs":["https://instagram.com/ghxstship","https://linkedin.com/company/ghxstship","https://youtube.com/@ghxstship","https://x.com/ghxstship"]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Experiential production management","name":"Experiential Production Management","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"General contractor and management team for experiential and entertainment production \\u2014 design, fabrication, staging, technical production, and show calling.","audience":{"@type":"Audience","audienceType":"General contractors, venue operators, brands, promoters, and production directors"}}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Venue operations management","name":"Venue Operations Management","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Venue operations leadership \\u2014 logistics, crew and workforce, compliance, programming, and day-of operations for venues, stadiums, and hospitality."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Venue operations management","name":"Operations Leadership","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Operations leadership \\u2014 logistics, crew and workforce, compliance, programming, and day-of operations for venues, stadiums, and hospitality."}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Event technology integration","name":"Event Technology Integration","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Event technology integration and installs \\u2014 ATLVS, COMPVSS, and GVTEWAY plus third-party integrations, data, and analytics."}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?","acceptedAnswer":{"@type":"Answer","text":"Yes. GHXSTSHIP operates as the general contractor and accountable management team for experiential and entertainment production, owning scope, schedule, budget, crew, vendors, and technology across all eight phases."}},{"@type":"Question","name":"Do you provide venue operations management?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide venue operations leadership: logistics, workforce and crew management, vendor coordination, health, safety and compliance, programming, and day-of operations."}},{"@type":"Question","name":"Do you handle event technology integrations and installs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We implement and integrate event technology: ATLVS, COMPVSS, and GVTEWAY, plus third-party integrations, on-site installs, data, and analytics."}}]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?","acceptedAnswer":{"@type":"Answer","text":"Yes. GHXSTSHIP operates as the general contractor and accountable management team for experiential and entertainment production, owning scope, schedule, budget, crew, vendors, and technology across all eight phases."}},{"@type":"Question","name":"Do you provide operations leadership?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide operations leadership: logistics, workforce and crew management, vendor coordination, health, safety and compliance, programming, and day-of operations."}},{"@type":"Question","name":"Do you handle event technology integrations and installs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We implement and integrate event technology: ATLVS, COMPVSS, and GVTEWAY, plus third-party integrations, on-site installs, data, and analytics."}}]}` }} />
     </>
   );
 }

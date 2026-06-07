@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Careers \u2014 Open Roles",
-  description: "Open roles at GHXSTSHIP \u2014 production, operations, project management, hospitality, and crew positions for experiential and entertainment production in Miami, Las Vegas, New York, and Los Angeles.",
+  description: "Open roles at GHXSTSHIP \u2014 production, operations, and technology roles for experiential and entertainment production in Miami, Las Vegas, New York, and Los Angeles.",
   alternates: { canonical: "https://ghxstship.tours/careers" },
 };
 
 export default function Page() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `*{box-sizing:border-box}html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+      <style dangerouslySetInnerHTML={{ __html: `*{box-sizing:border-box}html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
   .crumbs{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:20px 0 0}.crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
   .eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 14px;display:flex;align-items:center;gap:10px}.eyebrow::before{content:"\\25C6";color:var(--nebula)}
   .hero{padding:40px 0 44px;border-bottom:var(--stroke-2) solid var(--ink-3)}
@@ -31,7 +31,7 @@ export default function Page() {
 /*__nf__*/
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:10px 0}
-  .nav-inner .brand{display:flex;align-items:center;gap:12px;text-decoration:none}.nav-inner .brand img{width:34px;height:34px;image-rendering:pixelated}
+  .nav-inner .brand{display:flex;align-items:center;gap:12px;text-decoration:none}.nav-inner .brand img{width:34px;height:34px}
   .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:21px;text-transform:uppercase;white-space:nowrap;color:var(--bone)}
   .navlinks{display:flex;gap:17px;align-items:center}
   .navlinks a{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
@@ -41,7 +41,7 @@ export default function Page() {
   .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:30px}
   @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
   .site-foot .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:14px}
-  .site-foot .brand img{width:30px;height:30px;image-rendering:pixelated}
+  .site-foot .brand img{width:30px;height:30px}
   .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:18px;text-transform:uppercase;white-space:nowrap;color:var(--bone)}
   .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:17px;line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 12px;max-width:22rem}
   .site-foot .foot-ports{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 14px;display:flex;flex-wrap:nowrap;white-space:nowrap}
@@ -63,12 +63,12 @@ export default function Page() {
   <p className="eyebrow">Join the Crew &middot; Careers</p>
   <h1>Open <span className="pop">Roles.</span></h1>
   <p className="answer">GHXSTSHIP hires producers, directors, managers, and crew who build experiential and entertainment productions end to end. Find an open role, read the brief, and apply. We train the next generation &mdash; no experience gatekept.</p>
-  <div className="filters"><button className="on">All</button><button>Production</button><button>Operations</button><button>Project</button><button>Hospitality</button><button>Support</button></div>
+  <div className="filters"><button className="on">All</button><button>Production</button><button>Operations</button><button>Technology</button></div>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">8 Open Positions</p>
   <h2 className="sec">On the Manifest.</h2>
-  <div className="jobs"><Link href="/careers/role" className="job"><h3>Production Manager</h3><span className="m">Production</span><span className="m loc">Miami, FL</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Project Coordinator</h3><span className="m">Project</span><span className="m loc">Las Vegas, NV</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Logistics Manager</h3><span className="m">Operations</span><span className="m loc">Miami, FL</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Technical Director</h3><span className="m">Production</span><span className="m loc">Los Angeles, CA</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Production Crew</h3><span className="m">Production</span><span className="m loc">Multiple</span><span className="go">Freelance &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Production Assistant</h3><span className="m">Support</span><span className="m loc">Miami, FL</span><span className="go">Internship &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Operations Director</h3><span className="m">Operations</span><span className="m loc">New York, NY</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Hospitality Manager</h3><span className="m">Hospitality</span><span className="m loc">Miami, FL</span><span className="go">Full-time &#8599;</span></Link></div>
+  <div className="jobs"><Link href="/careers/role" className="job"><h3>Production Manager</h3><span className="m">Production</span><span className="m loc">Miami, FL</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Project Coordinator</h3><span className="m">Operations</span><span className="m loc">Las Vegas, NV</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Logistics Manager</h3><span className="m">Operations</span><span className="m loc">Miami, FL</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Technical Director</h3><span className="m">Technology</span><span className="m loc">Los Angeles, CA</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Production Crew</h3><span className="m">Production</span><span className="m loc">Multiple</span><span className="go">Freelance &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Production Assistant</h3><span className="m">Production</span><span className="m loc">Miami, FL</span><span className="go">Internship &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Operations Director</h3><span className="m">Operations</span><span className="m loc">New York, NY</span><span className="go">Full-time &#8599;</span></Link><Link href="/careers/role" className="job"><h3>Hospitality Manager</h3><span className="m">Operations</span><span className="m loc">Miami, FL</span><span className="go">Full-time &#8599;</span></Link></div>
   <p className="lede" style={{marginTop: '24px'}}>Don&rsquo;t see your role? <Link href="/careers/apply" style={{color: 'var(--brass)', textDecoration: 'none'}}>Send a general application &#8599;</Link></p>
 </div></section>
 <section className="cta"><div className="wrap"><h2>Learn the Ropes.</h2><div className="row"><Link href="/careers/apply" className="gx-btn gx-btn--lg">Apply Now</Link><Link href="/team" className="gx-btn gx-btn--ghost gx-btn--lg">Meet the Crew</Link></div></div></section></main><footer className="site-foot"><div className="wrap">
@@ -86,9 +86,11 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Careers","url":"https://ghxstship.tours/careers"}` }} />
       <Script id="inline-careers-index-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
-(function(){var btns=[].slice.call(document.querySelectorAll(".filters button")),jobs=[].slice.call(document.querySelectorAll(".jobs .job"));
-btns.forEach(function(b){b.addEventListener("click",function(){btns.forEach(function(x){x.classList.remove("on")});b.classList.add("on");
-var k=b.textContent.trim().toLowerCase();jobs.forEach(function(j){var d=j.querySelector(".m")?j.querySelector(".m").textContent.trim().toLowerCase():"";j.style.display=(k==="all"||d===k)?"":"none";});});});})();
+/* Document-delegated so it survives React hydration replacing the buttons/jobs. */
+document.addEventListener("click",function(e){var b=e.target.closest(".filters button");if(!b)return;
+var f=b.closest(".filters");[].slice.call(f.querySelectorAll("button")).forEach(function(x){x.classList.toggle("on",x===b)});
+var k=b.textContent.trim().toLowerCase();
+[].slice.call(document.querySelectorAll(".jobs .job")).forEach(function(j){var m=j.querySelector(".m");var d=m?m.textContent.trim().toLowerCase():"";j.style.display=(k==="all"||d===k)?"":"none";});});
 ` }} />
     </>
   );
