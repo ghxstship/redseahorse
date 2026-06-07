@@ -115,8 +115,6 @@ export default function Page() {
   <aside className="rail">
     <div className="blk"><p className="lbl">Hail the Bridge</p><a href="mailto:hello@ghxstship.tours">hello@ghxstship.tours</a></div>
     <div className="blk"><p className="lbl">Home Ports</p><p>Miami HQ &middot; Las Vegas &middot; Chicago &middot; New York &middot; Los Angeles</p></div>
-    <div className="blk"><p className="lbl">The Archives</p><Link href="/work">See selected work</Link></div>
-    <div className="blk"><p className="lbl">Join the Crew</p><Link href="/team">Learn the ropes</Link></div>
   </aside>
 </div></div></section>
 </main>
