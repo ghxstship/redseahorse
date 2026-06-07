@@ -102,7 +102,7 @@ export default function Page() {
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Course &middot; The Production Lifecycle</p>
-  <h1>Eight Phases,<br/>First Line to <span className="pop">Launch.</span></h1>
+  <h1>8 Phases, from<br/>Launch to <span className="pop">Landing.</span></h1>
   <p className="answer">The Course is the GHXSTSHIP production lifecycle — eight phases that take an experiential or entertainment project from first consultation to strike. Every build follows the same charted route, with clear deliverables and an accountable owner at each stop, so scope, schedule, and budget stay on course from discovery to close.</p>
   <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '26px'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost">See the Archives</Link></div>
 </div></section>

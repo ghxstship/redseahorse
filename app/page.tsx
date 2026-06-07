@@ -261,7 +261,7 @@ export default function Page() {
 
 <section className="course" id="course"><div className="wrap">
   <p className="eyebrow">The Course</p>
-  <h2 className="sec">Eight Phases, First Line to Launch.</h2>
+  <h2 className="sec">8 Phases, from Launch to Landing.</h2>
   <div className="smap">
     <div className="stop done"><div className="dot">1</div><div className="nm">Discovery</div></div>
     <div className="stop done"><div className="dot">2</div><div className="nm">Design</div></div>

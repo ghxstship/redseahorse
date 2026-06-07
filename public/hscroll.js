@@ -24,6 +24,9 @@
   }
 
   var CONFIGS = [
+    // Only the journey is pinned — six rich step cards make the horizontal
+    // payoff worthwhile. The Course is a compact strip-map best read as an
+    // overview with tap-to-reveal detail, so it keeps its native behavior.
     {
       section: ".journey",
       stage: ".j-grid",
@@ -36,20 +39,6 @@
         p.prevIndex = idx;
         var rails = p.section.querySelectorAll(".rail .rl");
         for (var i = 0; i < rails.length; i++) rails[i].classList.toggle("on", i === idx);
-      },
-    },
-    {
-      section: ".course",
-      stage: ".wrap",
-      track: ".smap",
-      onProgress: function (p, prog) {
-        var stops = p.track.children, n = stops.length;
-        if (!n) return;
-        var idx = Math.round(prog * (n - 1));
-        if (idx === p.prevIndex) return;
-        p.prevIndex = idx;
-        // phase-detail.js listens for clicks → updates the detail card + active dot.
-        if (stops[idx]) stops[idx].click();
       },
     },
   ];
