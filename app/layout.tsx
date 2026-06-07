@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
         />
+        <script src="/nav.js" defer />
         <script src="/site-form.js" defer />
         <script src="/journey.js" defer />
         <script src="/motion.js" defer />

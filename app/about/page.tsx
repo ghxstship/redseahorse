@@ -107,7 +107,7 @@ export default function Page() {
 </div></section>
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">How We're Built</p>
-  <h2 className="sec">Three Roles. One Yard.</h2>
+  <h2 className="sec">Three Vessels. One Yard.</h2>
   <p className="lede">Production = Operations + Technology. The general contractor builds it, the foreman runs it, the platform coordinates it.</p>
   <div className="pgrid">
     <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Production</h3><p>We build the ship &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
