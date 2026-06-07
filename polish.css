@@ -447,6 +447,29 @@ header.nav.is-scrolled {
 }
 .journey .j-grid[data-hscroll-stage] .rail { align-self: start; }
 
+/* "Voyage line" — a scroll-synced route the cards sail along, filling the
+   pinned stage's lower band. Only during the pin, desktop only. */
+.j-voyage { display: none; }
+.journey .j-grid[data-hscroll-stage] .j-voyage {
+  display: block; grid-column: 1 / -1; padding-top: var(--space-40); margin-top: var(--space-8);
+}
+.j-voyage-line { position: relative; height: var(--stroke-2); background: var(--ink-3); margin: 0 var(--space-12); }
+.j-voyage-fill { position: absolute; left: 0; top: 0; height: 100%; width: 0; background: var(--brass); transition: width .12s linear; }
+.j-voyage-tick {
+  position: absolute; top: 50%; width: var(--space-10); height: var(--space-10);
+  border-radius: 50%; background: var(--ink); border: var(--stroke-2) solid var(--ink-3);
+  transform: translate(-50%, -50%); transition: background .25s ease, border-color .25s ease;
+}
+.j-voyage-tick.on { background: var(--brass); border-color: var(--brass); }
+.j-voyage-ship {
+  position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%);
+  color: var(--brass); font-size: var(--fs-h3); line-height: 1;
+  transition: left .12s linear;
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--brass) 45%, transparent));
+}
+@media (max-width: 56rem) { .journey .j-grid[data-hscroll-stage] .j-voyage { display: none; } }
+@media (prefers-reduced-motion: reduce) { .j-voyage-fill, .j-voyage-ship, .j-voyage-tick { transition: none !important; } }
+
 /* A subtle hint that the pinned section scrolls horizontally. */
 @media (prefers-reduced-motion: reduce) {
   [data-hscroll-track] { transform: none !important; }
