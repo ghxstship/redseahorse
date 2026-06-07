@@ -56,7 +56,7 @@ export default function Page() {
   <nav className="navlinks" aria-label="Primary">
     <Link href="/destinations">Destinations</Link><Link href="/solutions">Fleet</Link><Link href="/team">Crew</Link><Link href="/resources/blog">Logs</Link><Link href="/store">Museum</Link><Link href="/gallery">Gallery</Link><Link href="/work">Archives</Link>
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
-  </nav>
+  </nav><button className="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="gx-nav-drawer"><span className="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
 </div></header>
 <div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/careers">Careers</Link> / <span style={{color: 'var(--brass)'}}>Production Manager</span></p></div>
 <main><section className="hero"><div className="wrap">
