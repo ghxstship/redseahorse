@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Museum \u2014 Merch & Gear",
-  description: "The GHXSTSHIP Ship's Store \u2014 branded apparel, prints, and gear from the experiential production company. Checkout runs on GVTEWAY.",
+  description: "The GHXSTSHIP Museum \u2014 branded apparel, prints, and gear from the experiential production company. Checkout runs on GVTEWAY.",
   alternates: { canonical: "https://ghxstship.tours/store" },
 };
 
@@ -137,7 +137,7 @@ export default function Page() {
 </div></footer>
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Store","name":"The GHXSTSHIP Ship's Store","url":"https://ghxstship.tours/store","description":"Branded apparel, prints, and gear from GHXSTSHIP.","brand":{"@type":"Brand","name":"GHXSTSHIP"}}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Store","name":"The GHXSTSHIP Museum","url":"https://ghxstship.tours/store","description":"Branded apparel, prints, and gear from GHXSTSHIP.","brand":{"@type":"Brand","name":"GHXSTSHIP"}}` }} />
       <Script id="inline-store-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
   (function(){var n=0;var el=document.getElementById('cartN');
    document.getElementById('grid').addEventListener('click',function(e){

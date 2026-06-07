@@ -16,7 +16,11 @@
 (function () {
   "use strict";
 
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Checked live (not cached at load) so a transient bad read can't latch the
+  // pin off; layout() re-runs on load/resize and self-corrects.
+  function reduced() {
+    return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }
 
   function navHeight() {
     var n = document.querySelector("header.nav");
@@ -60,7 +64,7 @@
 
   function layout(p) {
     reset(p);
-    if (reduce) return;
+    if (reduced()) return;
     // All widths incl. mobile: vertical scroll drives the cards horizontally and
     // the rail dots stay synced (hscroll owns them). The rail is forced to
     // position:relative while pinned (polish.css) so there's no nested-sticky
@@ -84,6 +88,29 @@
     p.runway.style.height = stageH + dist + "px";
     p.prevIndex = -1;
     p.active = true;
+    bindDots(p);
+  }
+
+  // Make the rail dots jump to their step by scrolling the window to the
+  // matching point in the runway (the pin then settles the track there).
+  function bindDots(p) {
+    var dots = p.section.querySelectorAll(".rail .rl");
+    var n = p.track.children.length;
+    [].slice.call(dots).forEach(function (dot, i) {
+      if (dot.__hsDot) return;
+      dot.__hsDot = true;
+      dot.style.cursor = "pointer";
+      function jump() {
+        if (!p.active) return;
+        var prog = n > 1 ? i / (n - 1) : 0;
+        var absTop = p.section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: Math.round(absTop - p.top + prog * p.dist), behavior: "smooth" });
+      }
+      dot.addEventListener("click", jump);
+      dot.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jump(); }
+      });
+    });
   }
 
   var ticking = false;

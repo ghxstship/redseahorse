@@ -89,7 +89,7 @@ export default function NotFound() {
   <img src="/assets/skull-bone.svg" alt=""/>
   <p className="code">Error 404 &middot; Off Course</p>
   <h1 style={{margin: '14px 0 14px'}}>Off the Map.</h1>
-  <p className="lede" style={{margin: '0 auto', maxWidth: '540px'}}>This voyage isn't on the board. The page you're after has been struck, moved, or never set sail. Chart a new course below.</p>
+  <p className="lede" style={{margin: '0 auto', maxWidth: '540px'}}>This route isn't on the map. The page you're after was moved, struck, or never charted. Chart a new course below.</p>
   <div className="row"><Link href="/" className="gx-btn gx-btn--lg">Back to Home Port</Link><Link href="/work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link></div>
 </div></div></div></section>
 </main>

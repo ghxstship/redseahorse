@@ -30,7 +30,7 @@ var C = {
 var FONT_DISPLAY = "'Arial Black', 'Helvetica Neue', Impact, sans-serif";
 var FONT_MONO = "'Courier New', Courier, monospace";
 var FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
-var LOGO = SITE + "/assets/skull-bone.svg";
+var LOGO = SITE + "/assets/skull-bone.png"; // PNG, not SVG — most email clients don't render SVG
 
 function esc(s) {
   return String(s).replace(/[&<>"]/g, function (c) {
@@ -53,7 +53,7 @@ function shell(opts) {
     // header
     '<tr><td style="background:' + C.void + ';padding:22px 28px;border-bottom:3px solid ' + accent + '">' +
     '<table role="presentation" width="100%"><tr>' +
-    '<td style="vertical-align:middle"><img src="' + LOGO + '" width="26" height="26" alt="" style="vertical-align:middle">' +
+    '<td style="vertical-align:middle"><img src="' + LOGO + '" width="26" height="26" alt="GHXSTSHIP" style="vertical-align:middle;border:0;outline:none">' +
     '<span style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:2px;color:' + C.bone + ';text-transform:uppercase;vertical-align:middle;margin-left:10px">G H X S T S H I P</span></td>' +
     '<td align="right" style="font-family:' + FONT_MONO + ';font-size:9px;letter-spacing:2px;color:' + accent + ';text-transform:uppercase">' + esc(opts.stamp || "Dispatch") + "</td>" +
     "</tr></table></td></tr>" +
@@ -210,7 +210,7 @@ function receiptEmail(name) {
     social;
 
   return shell({
-    stamp: "Itinerary", eyebrow: "Prepare to Board", headline: "Prepare for Your <span style=\"color:" + C.brass + "\">Journey.</span>",
+    stamp: "Pre-Departure", eyebrow: "Prepare to Board", headline: "Prepare for Your <span style=\"color:" + C.brass + "\">Journey.</span>",
     preheader: "We've logged your brief — here's the journey ahead.", body: body,
     footer: "G H X S T S H I P · You're receiving this because you contacted us · Venture Beyond",
   });

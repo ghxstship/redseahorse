@@ -87,7 +87,7 @@ export default function Page() {
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/blog">Captain’s Log</Link> / <span style={{color: 'var(--brass)'}}>The Experiential GC</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/blog">The Log</Link> / <span style={{color: 'var(--brass)'}}>The Experiential GC</span></p></div>
 <main>
 <article className="pad"><div className="wrap">
   <p className="eyebrow">Field Notes</p>

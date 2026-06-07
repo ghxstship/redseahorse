@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Captain\u2019s Log \u2014 Dispatches on Experiential Production",
-  description: "The GHXSTSHIP Captain\u2019s Log \u2014 field notes on experiential production management, venue operations, event technology, and the 8-phase production lifecycle.",
+  title: "The Log \u2014 Dispatches on Experiential Production",
+  description: "The GHXSTSHIP Log \u2014 field notes on experiential production management, venue operations, event technology, and the 8-phase production lifecycle.",
   alternates: { canonical: "https://ghxstship.tours/resources/blog" },
 };
 
@@ -89,7 +89,7 @@ export default function Page() {
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/glossary">Resources</Link> / <span style={{color: 'var(--brass)'}}>Captain’s Log</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/glossary">Resources</Link> / <span style={{color: 'var(--brass)'}}>The Log</span></p></div>
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Log &middot; Dispatches</p>
@@ -104,7 +104,7 @@ export default function Page() {
   <a className="bp" href="#"><p className="cat">Technology</p><h3>ATLVS, COMPVSS &amp; GVTEWAY: The Instruments</h3><p>How proprietary production, crew, and ticketing software coordinate an entire experiential build.</p><p className="d">May 2026</p></a>
   <a className="bp" href="#"><p className="cat">Venue Ops</p><h3>Running a Venue to One Standard</h3><p>Programming, staffing, compliance, and day-of operations across every date — the foreman&rsquo;s playbook.</p><p className="d">Apr 2026</p></a>
   <a className="bp" href="#"><p className="cat">Press</p><h3>GHXSTSHIP Charts New Immersive Work in Miami</h3><p>A look at the latest voyage on the board and the crew behind it.</p><p className="d">Apr 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Crew Call</p><h3>Learn the Ropes: Join the Skeleton Crew</h3><p>We train the next generation of experiential producers on real projects. How to come aboard.</p><p className="d">Mar 2026</p></a></div>
+  <a className="bp" href="#"><p className="cat">Crew Call</p><h3>Learn the Ropes: Join the Crew</h3><p>We train the next generation of experiential producers on real projects. How to come aboard.</p><p className="d">Mar 2026</p></a></div>
 </div></section>
 <section className="cta"><div className="wrap"><h2>Build With<br/>GHXSTSHIP.</h2><div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">See Solutions</Link></div></div></section>
 </main>
@@ -123,7 +123,7 @@ export default function Page() {
   <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Blog","name":"GHXSTSHIP Captain\\u2019s Log","url":"https://ghxstship.tours/resources/blog"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Blog","name":"GHXSTSHIP Log","url":"https://ghxstship.tours/resources/blog"}` }} />
     </>
   );
 }

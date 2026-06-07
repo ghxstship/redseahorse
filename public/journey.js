@@ -37,6 +37,8 @@
       rl.setAttribute("tabindex", "0");
       rl.setAttribute("aria-label", "Go to step " + (idx + 1));
       function go() {
+        // When the scroll-driven pin is active, hscroll.js owns dot navigation.
+        if (stepsWrap.hasAttribute("data-hscroll-track")) return;
         var s = steps[idx];
         if (!s) return;
         var horizontal = getComputedStyle(stepsWrap).flexDirection === "row";
