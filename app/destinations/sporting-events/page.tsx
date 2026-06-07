@@ -122,7 +122,7 @@ export default function Page() {
     <p className="answer">GHXSTSHIP is a full-service <strong>sporting event production company</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver stadium activations, fan experiences, and game-day production — for leagues, teams, brands, and venues — through our eight-phase production lifecycle.</p>
     <div className="hero-cta">
       <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations &#8599;</Link>
+      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
     </div>
   </div>
   <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=900&q=80&auto=format&fit=crop" alt="Sporting Event Production" loading="lazy"/><figcaption>Sporting Event Production</figcaption></figure>

@@ -125,7 +125,7 @@ export default function Page() {
     brands, and production directors — through our eight-phase production lifecycle.</p>
     <div className="hero-cta">
       <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations &#8599;</Link>
+      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
     </div>
   </div>
   <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop" alt="Festival Production · Multi-Stage" loading="lazy"/><figcaption>Festival Production · Multi-Stage</figcaption></figure>

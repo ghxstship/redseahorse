@@ -79,12 +79,12 @@ export default function Page() {
 </div></section>
 <section className="pad"><div className="wrap">
   <div className="dgrid">
-    <Link href="/destinations/festival-production" className="dc"><i className="ph-bold ph-confetti"></i><h2>Festivals &amp; Cultural Moments</h2><p>Multi-stage festival production, infrastructure, and headliner experiences at scale.</p><span className="go">View destination &#8599;</span></Link>
-    <Link href="/destinations/concert-tour-production" className="dc"><i className="ph-bold ph-music-notes"></i><h2>Concerts &amp; Tours</h2><p>Concert touring, show production, and multi-city routing for live music.</p><span className="go">View destination &#8599;</span></Link>
-    <Link href="/destinations/brand-activations" className="dc"><i className="ph-bold ph-storefront"></i><h2>Brand Activations</h2><p>Experiential marketing, pop-ups, and brand environments that convert.</p><span className="go">View destination &#8599;</span></Link>
-    <Link href="/destinations/immersive-experiences" className="dc"><i className="ph-bold ph-planet"></i><h2>Immersive Environments</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span className="go">View destination &#8599;</span></Link>
-    <Link href="/destinations/sporting-events" className="dc"><i className="ph-bold ph-flag-checkered"></i><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span className="go">View destination &#8599;</span></Link>
-    <Link href="/destinations/tv-film-broadcast" className="dc"><i className="ph-bold ph-television-simple"></i><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span className="go">View destination &#8599;</span></Link>
+    <Link href="/destinations/festival-production" className="dc"><i className="ph-bold ph-confetti"></i><h2>Festivals &amp; Cultural Moments</h2><p>Multi-stage festival production, infrastructure, and headliner experiences at scale.</p><span className="go">View destination</span></Link>
+    <Link href="/destinations/concert-tour-production" className="dc"><i className="ph-bold ph-music-notes"></i><h2>Concerts &amp; Tours</h2><p>Concert touring, show production, and multi-city routing for live music.</p><span className="go">View destination</span></Link>
+    <Link href="/destinations/brand-activations" className="dc"><i className="ph-bold ph-storefront"></i><h2>Brand Activations</h2><p>Experiential marketing, pop-ups, and brand environments that convert.</p><span className="go">View destination</span></Link>
+    <Link href="/destinations/immersive-experiences" className="dc"><i className="ph-bold ph-planet"></i><h2>Immersive Environments</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span className="go">View destination</span></Link>
+    <Link href="/destinations/sporting-events" className="dc"><i className="ph-bold ph-flag-checkered"></i><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span className="go">View destination</span></Link>
+    <Link href="/destinations/tv-film-broadcast" className="dc"><i className="ph-bold ph-television-simple"></i><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span className="go">View destination</span></Link>
   </div>
   <div className="more">
     <p className="l">Also on the board</p>

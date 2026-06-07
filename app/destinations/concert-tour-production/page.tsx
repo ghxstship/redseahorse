@@ -122,7 +122,7 @@ export default function Page() {
     <p className="answer">GHXSTSHIP is a full-service <strong>concert and tour production company</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our eight-phase production lifecycle.</p>
     <div className="hero-cta">
       <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations &#8599;</Link>
+      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
     </div>
   </div>
   <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=900&q=80&auto=format&fit=crop" alt="Concert & Tour Production" loading="lazy"/><figcaption>Concert & Tour Production</figcaption></figure>

@@ -122,7 +122,7 @@ export default function Page() {
     <p className="answer">GHXSTSHIP is a full-service <strong>broadcast, film, and television production company</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our eight-phase production lifecycle.</p>
     <div className="hero-cta">
       <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations &#8599;</Link>
+      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
     </div>
   </div>
   <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=900&q=80&auto=format&fit=crop" alt="TV, Film & Broadcast" loading="lazy"/><figcaption>TV, Film & Broadcast</figcaption></figure>

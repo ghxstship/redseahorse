@@ -77,7 +77,7 @@ function para(text) {
 function button(href, label) {
   return (
     '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:6px 0 8px"><tr><td style="background:' + C.brass + ';border:2px solid ' + C.ink + '">' +
-    '<a href="' + href + '" style="display:inline-block;padding:13px 24px;font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:' + C.onBrass + ';text-decoration:none">' + esc(label) + " ↗</a>" +
+    '<a href="' + href + '" style="display:inline-block;padding:13px 24px;font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:' + C.onBrass + ';text-decoration:none">' + esc(label) + "</a>" +
     "</td></tr></table>"
   );
 }
@@ -206,7 +206,7 @@ function receiptEmail(name) {
     '<div style="height:10px"></div>' +
     button(SITE + "/destinations/", "Explore the Destinations") +
     '<div style="height:4px"></div>' +
-    '<a href="' + SITE + '/work/" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none">See the Archives ↗</a>' +
+    '<a href="' + SITE + '/work/" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none">See the Archives</a>' +
     social;
 
   return shell({
