@@ -112,7 +112,7 @@ export default function Page() {
   <p className="lede">Experiential production management, operations leadership, and event technology integration &mdash; delivered as one system, not three vendors.</p>
   <div className="sgrid">
     <div className="scard"><i className="ph-bold ph-boat"></i><h3>Production Management</h3><p>The general contractor for live experiences: experiential design, scenic fabrication, staging, technical production, and show calling &mdash; scope, schedule, and budget owned end to end.</p></div>
-    <div className="scard"><i className="ph-bold ph-steering-wheel"></i><h3>Operations Leadership</h3><p>The foreman for venues and activations: logistics, crew and workforce, vendor management, health, safety and compliance, and day-of operations at any scale.</p></div>
+    <div className="scard"><i className="ph-bold ph-anchor"></i><h3>Operations Leadership</h3><p>The foreman for venues and activations: logistics, crew and workforce, vendor management, health, safety and compliance, and day-of operations at any scale.</p></div>
     <div className="scard"><i className="ph-bold ph-compass"></i><h3>Technology Innovations</h3><p>The Procore for the project: ATLVS, COMPVSS, and GVTEWAY plus event-technology integrations, installs, and analytics &mdash; the platforms the whole build runs on.</p><p style={{margin: '14px 0 0'}}><a href="https://atlvs.pro" target="_blank" rel="noopener" style={{fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-label)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--plasma)', textDecoration: 'none'}}>Explore the platforms at ATLVS.pro</a></p></div>
   </div>
 </div></section>
