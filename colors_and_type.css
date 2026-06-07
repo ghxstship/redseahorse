@@ -99,15 +99,35 @@
   --tracking-body:    0.005em;
 
   /* ---------------------------------------------------------------------
-     SPACING — 4px base grid
+     SPACING — px-keyed scale (--space-N == N px). The kit hand-tunes between
+     the coarse 4px steps, so the scale is dense enough to absorb every value
+     without drift. --sp-* are the legacy ordinal aliases (kept for back-compat).
      --------------------------------------------------------------------- */
-  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
-  --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px;
+  --space-2: 2px;   --space-3: 3px;   --space-4: 4px;   --space-5: 5px;
+  --space-6: 6px;   --space-7: 7px;   --space-8: 8px;   --space-9: 9px;
+  --space-10: 10px; --space-11: 11px; --space-12: 12px; --space-13: 13px;
+  --space-14: 14px; --space-15: 15px; --space-16: 16px; --space-18: 18px;
+  --space-20: 20px; --space-22: 22px; --space-24: 24px; --space-26: 26px;
+  --space-28: 28px; --space-30: 30px; --space-32: 32px; --space-36: 36px;
+  --space-40: 40px; --space-44: 44px; --space-48: 48px; --space-56: 56px;
+  --space-64: 64px; --space-80: 80px; --space-96: 96px; --space-128: 128px;
+
+  --sp-1: var(--space-4);  --sp-2: var(--space-8);  --sp-3: var(--space-12);
+  --sp-4: var(--space-16); --sp-5: var(--space-24); --sp-6: var(--space-32);
+  --sp-7: var(--space-48); --sp-8: var(--space-64); --sp-9: var(--space-96);
+  --sp-10: var(--space-128);
+
+  /* LAYOUT DIMENSIONS — recurring component/page measures. */
+  --container: 1180px;       /* page content max-width                          */
+  --measure: 760px;          /* readable text column                            */
+  --measure-wide: 840px;     /* wide content column                             */
+  --measure-narrow: 540px;   /* tight column                                    */
+  --nav-h: 72px;             /* sticky nav bar height                           */
 
   /* ---------------------------------------------------------------------
      RADII — Vintage Reef is SOFT-premium. Gentle rounding; pills for tags.
      --------------------------------------------------------------------- */
-  --r-0: 0px;   --r-1: 4px;   --r-2: 8px;   --r-3: 12px;  --r-pill: 999px;
+  --r-xs: 2px;  --r-0: 0px;   --r-1: 4px;   --r-2: 8px;   --r-3: 12px;  --r-pill: 999px;
 
   /* ---------------------------------------------------------------------
      STROKES + REFINED ELEVATION (premium vintage-tropical)

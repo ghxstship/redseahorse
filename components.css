@@ -10,7 +10,7 @@
 /* ---- PANEL: refined bordered surface w/ soft elevation ------------------- */
 .gx-panel {
   background: var(--bone);
-  border: 1px solid var(--parchment-2);
+  border:var(--stroke-1) solid var(--parchment-2);
   border-radius: var(--r-3);
   box-shadow: var(--shadow-pop);
   padding: var(--sp-6);
@@ -24,7 +24,7 @@
   display: inline-flex; align-items: center; gap: var(--sp-2);
   font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.03em; font-size:var(--fs-body-l); line-height: 1;
-  padding: 14px 26px; border: 1px solid transparent;
+  padding:var(--space-14) var(--space-26); border:var(--stroke-1) solid transparent;
   border-radius: var(--r-3); background: var(--brass); color: var(--on-brass, #06140E);
   box-shadow: var(--shadow-pop-sm); cursor: pointer; text-decoration: none;
   transition: transform var(--dur-3) cubic-bezier(.2,.7,.2,1), box-shadow var(--dur-3) ease, background .15s ease, filter .15s ease;
@@ -37,15 +37,15 @@
 .gx-btn--ink    { background: var(--ink); color: var(--bone); }
 .gx-btn--ghost  { background: transparent; color: var(--bone); border-color: var(--ink-3); box-shadow: none; }
 .gx-btn--ghost:hover { border-color: var(--brass); background: rgba(34,176,131,0.08); }
-.gx-btn--sm { font-size:var(--fs-small); padding:9px var(--sp-4); }
-.gx-btn--lg { font-size:var(--fs-h3); padding: 18px 34px; }
+.gx-btn--sm { font-size:var(--fs-small); padding:var(--space-9) var(--sp-4); }
+.gx-btn--lg { font-size:var(--fs-h3); padding:var(--space-18) var(--space-32); }
 
 /* ---- TAGS / BADGES / CHIPS — soft pill, hairline -------------------------- */
 .gx-tag {
-  display: inline-flex; align-items: center; gap: 6px;
+  display: inline-flex; align-items: center; gap:var(--space-6);
   font-family: var(--font-mono); font-weight: 600; font-size:var(--fs-label);
   text-transform: uppercase; letter-spacing: 0.1em;
-  padding:5px var(--sp-3); border: 1px solid var(--parchment-2);
+  padding:var(--space-5) var(--sp-3); border:var(--stroke-1) solid var(--parchment-2);
   border-radius: var(--r-pill); background: var(--bone); color: var(--ink);
 }
 .gx-tag--brass  { background: rgba(34,176,131,0.14);  color: var(--jade-ink); border-color: rgba(34,176,131,0.3); }
@@ -57,8 +57,8 @@
 .gx-chip-pixel {
   display: inline-block; font-family: var(--font-mono); font-weight: 700; font-size:var(--fs-label);
   text-transform: uppercase; letter-spacing: 0.08em;
-  padding: 6px 11px; background: var(--ink); color: var(--brass);
-  border: 1px solid var(--ink-3); border-radius: var(--r-2);
+  padding:var(--space-6) var(--space-11); background: var(--ink); color: var(--brass);
+  border:var(--stroke-1) solid var(--ink-3); border-radius: var(--r-2);
 }
 
 /* ---- SEAL BADGE — replaces the comic starburst; vintage emblem ----------- */
@@ -67,7 +67,7 @@
   width: 116px; height: 116px; color: var(--ink);
   font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
   background: var(--brass); border-radius: 50%;
-  border: 3px double rgba(6,20,14,0.35);
+  border:var(--stroke-3) double rgba(6,20,14,0.35);
   box-shadow: var(--shadow-pop);
 }
 
@@ -83,17 +83,17 @@
 /* ---- INPUTS — clean, hairline, focus ring -------------------------------- */
 .gx-input {
   font-family: var(--font-body); font-size:var(--fs-body); color: var(--ink);
-  background: var(--bone); border: 1px solid var(--parchment-2);
-  border-radius: var(--r-3); padding:var(--sp-3) 14px; width: 100%;
+  background: var(--bone); border:var(--stroke-1) solid var(--parchment-2);
+  border-radius: var(--r-3); padding:var(--sp-3) var(--space-14); width: 100%;
   transition: border-color .15s, box-shadow .15s;
 }
 .gx-input::placeholder { color: var(--fg-on-light-3); }
 .gx-input:focus { outline: none; border-color: var(--brass); box-shadow: 0 0 0 3px rgba(34,176,131,0.18); }
-.gx-field-label { font-family: var(--font-mono); font-size:var(--fs-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-on-dark-3); margin-bottom: 6px; display: block; }
+.gx-field-label { font-family: var(--font-mono); font-size:var(--fs-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-on-dark-3); margin-bottom:var(--space-6); display: block; }
 
 /* ---- DIVIDERS / RULES ---------------------------------------------------- */
 .gx-rule { height: 1px; background: var(--ink-3); border: 0; }
-.gx-rule--stripe { height: 3px; border: 0; background: var(--brass); border-radius: 2px; }
+.gx-rule--stripe { height: 3px; border: 0; background: var(--brass); border-radius:var(--r-xs); }
 .gx-rule--dotted { height: var(--dot-size); border: 0; background: var(--halftone-brass); opacity: .5; }
 
 /* ---- COORDINATE STAMP (nautical/vintage metadata) ------------------------ */
@@ -106,7 +106,7 @@
 
 /* ---- CARD (case-study) — soft elevation, lift on hover ------------------- */
 .gx-card {
-  background: var(--ink-2); border: 1px solid var(--ink-3);
+  background: var(--ink-2); border:var(--stroke-1) solid var(--ink-3);
   border-radius: var(--r-3); overflow: hidden; box-shadow: var(--shadow-pop);
   transition: transform var(--dur-3) cubic-bezier(.2,.7,.2,1), box-shadow var(--dur-3) ease, border-color var(--dur-3) ease;
 }
@@ -116,5 +116,5 @@
 
 /* ---- LINK STYLE ---------------------------------------------------------- */
 .gx-link { color: var(--plasma); text-decoration: none; font-weight: 600;
-  border-bottom: 1px solid rgba(46,132,212,0.4); transition: color .15s, border-color .15s; }
+  border-bottom:var(--stroke-1) solid rgba(46,132,212,0.4); transition: color .15s, border-color .15s; }
 .gx-link:hover { color: var(--jade-ink); border-color: var(--brass); }

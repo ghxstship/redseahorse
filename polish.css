@@ -23,7 +23,7 @@
 a:focus-visible, button:focus-visible, .gx-btn:focus-visible,
 .dcard:focus-visible, [tabindex]:focus-visible, input:focus-visible,
 select:focus-visible, summary:focus-visible{
-  outline:3px solid var(--brass); outline-offset:2px; border-radius:var(--r-1);
+  outline:var(--stroke-3) solid var(--brass); outline-offset:var(--space-2); border-radius:var(--r-1);
 }
 /* keep mouse clicks clean — only show ring for keyboard nav */
 a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
@@ -41,13 +41,13 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
 [disabled], .is-disabled{opacity:.45; pointer-events:none; filter:grayscale(.3)}
 
 /* ---- #5 DENSITY: 4px-rhythm table + list helpers ------------------------ */
-.gx-dense th{padding:10px var(--sp-3)}
+.gx-dense th{padding:var(--space-10) var(--sp-3)}
 .gx-dense td{padding:var(--sp-3)}            /* 12 = sp-3, consistent row rhythm */
 .gx-comfy td{padding:var(--sp-4)}            /* 16 = sp-4 */
 .gx-row-hover tbody tr{transition:background var(--dur-2) ease}
 
 /* ---- #5 EMPTY / LOADING grammar (reusable) ------------------------------ */
-.gx-empty{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:var(--sp-7) var(--sp-5)}
+.gx-empty{display:flex;flex-direction:column;align-items:center;gap:var(--space-14);text-align:center;padding:var(--sp-7) var(--sp-5)}
 .gx-empty img{width:56px;height:56px;image-rendering:pixelated;opacity:.55}
 .gx-empty h4{font-family:var(--font-display);font-weight:800;font-size:var(--fs-h3);text-transform:uppercase;color:var(--bone);margin:0}
 .gx-empty p{font-family:var(--font-body);font-size:var(--fs-small);color:var(--fg-on-dark-3);margin:0;max-width:340px;line-height:1.5}
@@ -74,7 +74,7 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
 }
 
 /* ---- KIT FIX: restore horizontal padding on wraps that get overridden ---- */
-/* The kit's `.nav-inner{padding:10px 0}` zeroes the horizontal padding that
+/* The kit's `.nav-inner{padding:var(--space-10) 0}` zeroes the horizontal padding that
    `.wrap` would otherwise supply, pushing the brand + nav flush to the viewport
    edges at narrow widths. (The homepage numbers band had the same issue via an
    inline `padding-left/right:0`, fixed at source.) Reapply the standard
@@ -186,8 +186,8 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
   .close { padding-top: 4rem; padding-bottom: 4rem; }
 
   /* Tap targets >= ~44px. Footer + utility links become full-height hit areas. */
-  .foot-col a { display: inline-block; padding: 6px 0; }
-  .foot-social a { padding: 6px; }
+  .foot-col a { display: inline-block; padding:var(--space-6) 0; }
+  .foot-social a { padding:var(--space-6); }
   /* Bigger journey progress dots. */
   .journey .rail .rl .n { width: 2.5rem; height: 2.5rem; }
   /* Small "view" buttons get a comfortable min height. */
@@ -314,7 +314,7 @@ header.nav.is-scrolled {
   .navlinks a:not(.gx-btn)::after, .foot-col a::after, .foot-links a::after {
     content: "";
     position: absolute;
-    left: 0; bottom: -2px;
+    left: 0; bottom:-var(--space-2);
     width: 100%; height: 1.5px;
     background: currentColor;
     transform: scaleX(0);
@@ -368,14 +368,14 @@ header.nav.is-scrolled {
 .nav-toggle-bars { display: block; width: 18px; height: 14px; position: relative; }
 .nav-toggle-bars i {
   position: absolute; left: 0; width: 100%; height: 2px; background: currentColor;
-  border-radius: 2px; transition: transform .28s cubic-bezier(.22,1,.36,1), opacity .2s ease, top .28s ease;
+  border-radius:var(--r-xs); transition: transform .28s cubic-bezier(.22,1,.36,1), opacity .2s ease, top .28s ease;
 }
 .nav-toggle-bars i:nth-child(1) { top: 0; }
-.nav-toggle-bars i:nth-child(2) { top: 6px; }
+.nav-toggle-bars i:nth-child(2) { top:var(--space-6); }
 .nav-toggle-bars i:nth-child(3) { top:var(--sp-3); }
-.nav-toggle.is-open .nav-toggle-bars i:nth-child(1) { top: 6px; transform: rotate(45deg); }
+.nav-toggle.is-open .nav-toggle-bars i:nth-child(1) { top:var(--space-6); transform: rotate(45deg); }
 .nav-toggle.is-open .nav-toggle-bars i:nth-child(2) { opacity: 0; }
-.nav-toggle.is-open .nav-toggle-bars i:nth-child(3) { top: 6px; transform: rotate(-45deg); }
+.nav-toggle.is-open .nav-toggle-bars i:nth-child(3) { top:var(--space-6); transform: rotate(-45deg); }
 
 .nav-drawer {
   position: fixed; inset: 0; z-index: 49;

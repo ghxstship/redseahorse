@@ -12,15 +12,25 @@ clamp()/calc(), shadows, transitions, and borders are left untouched.
 """
 import re, glob, sys
 
-SP = {4: "--sp-1", 8: "--sp-2", 12: "--sp-3", 16: "--sp-4", 24: "--sp-5",
-      32: "--sp-6", 48: "--sp-7", 64: "--sp-8", 96: "--sp-9", 128: "--sp-10"}
-RAD = {4: "--r-1", 8: "--r-2", 12: "--r-3"}
+# px-keyed spacing scale (--space-N == N px). Every value the kit uses.
+SPACE = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 22, 24,
+         26, 28, 30, 32, 36, 40, 44, 48, 56, 64, 80, 96, 128}
+RAD = {2: "--r-xs", 3: "--r-xs", 4: "--r-1", 8: "--r-2", 12: "--r-3"}
+STROKE = {1: "--stroke-1", 2: "--stroke-2", 3: "--stroke-3", 4: "--stroke-4"}
+# Recurring layout dimensions → semantic tokens (near-dups normalized).
+DIM_WIDTH = {1180: "--container", 1200: "--container",
+             760: "--measure", 780: "--measure",
+             820: "--measure-wide", 840: "--measure-wide", 896: "--measure-wide",
+             540: "--measure-narrow", 560: "--measure-narrow"}
+DIM_HEIGHT = {72: "--nav-h"}
 SP_PROPS = {"padding", "margin", "gap", "row-gap", "column-gap", "inset",
-            "top", "right", "bottom", "left",
+            "top", "right", "bottom", "left", "outline-offset",
             "padding-top", "padding-right", "padding-bottom", "padding-left",
             "margin-top", "margin-right", "margin-bottom", "margin-left"}
 RAD_PROPS = {"border-radius", "border-top-left-radius", "border-top-right-radius",
              "border-bottom-left-radius", "border-bottom-right-radius"}
+STROKE_PROPS = {"border", "border-top", "border-right", "border-bottom",
+                "border-left", "border-width", "outline", "outline-width"}
 
 
 def fs_token(n: int) -> str:
@@ -34,14 +44,41 @@ def fs_token(n: int) -> str:
     return None  # leave very large (display) sizes alone
 
 
-def sub_scale(value: str, table: dict) -> str:
+_SPACE_SORTED = sorted(SPACE)
+
+
+def sub_space(value: str) -> str:
+    # Snap each spacing px to the nearest --space-N. The scale is dense (≤2px
+    # steps through 32), so off-scale values normalize with no visible change.
     def repl(m):
         n = int(m.group(1))
+        if n == 0 or n > 128:
+            return m.group(0)
+        nearest = min(_SPACE_SORTED, key=lambda s: (abs(s - n), s))
+        return "var(--space-" + str(nearest) + ")"
+    return re.sub(r"\b(\d+)px\b", repl, value)
+
+
+def sub_map(value: str, table: dict, pill=False) -> str:
+    def repl(m):
+        n = int(m.group(1))
+        if pill and n >= 999:
+            return "var(--r-pill)"
         return "var(" + table[n] + ")" if n in table else m.group(0)
     return re.sub(r"\b(\d+)px\b", repl, value)
 
 
 def tokenize_style(css: str) -> str:
+    # Mask @media preludes so breakpoint conditions (which can't be CSS vars)
+    # are never rewritten; declarations inside the block are still processed.
+    medias: list[str] = []
+
+    def mask(m):
+        medias.append(m.group(0))
+        return f"@@M{len(medias) - 1}@@"
+
+    css = re.sub(r"@media[^{]*\{", mask, css)
+
     # Match `prop: value` up to ; or } or { — declarations only.
     decl = re.compile(r"(?P<prop>[a-zA-Z-]+)\s*:\s*(?P<val>[^;{}]+)")
 
@@ -56,18 +93,22 @@ def tokenize_style(css: str) -> str:
                 if tok:
                     new = tok
         elif prop in SP_PROPS:
-            new = sub_scale(val, SP)
+            new = sub_space(val)
         elif prop in RAD_PROPS:
-            def repl(mm):
-                n = int(mm.group(1))
-                if n >= 999: return "var(--r-pill)"
-                return "var(" + RAD[n] + ")" if n in RAD else mm.group(0)
-            new = re.sub(r"\b(\d+)px\b", repl, val)
+            new = sub_map(val, RAD, pill=True)
+        elif prop in STROKE_PROPS:
+            new = sub_map(val, STROKE)
+        elif prop in ("max-width", "min-width", "width"):
+            new = sub_map(val, DIM_WIDTH)
+        elif prop in ("min-height", "height"):
+            new = sub_map(val, DIM_HEIGHT)
         if new != val:
             return f"{m.group('prop')}:{new}"
         return m.group(0)
 
-    return decl.sub(handle, css)
+    css = decl.sub(handle, css)
+    css = re.sub(r"@@M(\d+)@@", lambda m: medias[int(m.group(1))], css)
+    return css
 
 
 def process(path: str) -> int:
