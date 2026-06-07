@@ -37,12 +37,6 @@
       viewport: ".j-steps",  // column-2 clip box (bounds the track to its column)
       track: ".j-track",     // the flex row that translates
       onProgress: function (p, prog) {
-        // The voyage line tracks progress continuously (every frame).
-        var pct = (prog * 100).toFixed(1) + "%";
-        var fill = p.section.querySelector(".j-voyage-fill");
-        if (fill) fill.style.width = pct;
-        var ship = p.section.querySelector(".j-voyage-ship");
-        if (ship) ship.style.left = pct;
         var steps = p.track.children, n = steps.length;
         if (!n) return;
         var idx = Math.round(prog * (n - 1));
@@ -50,8 +44,6 @@
         p.prevIndex = idx;
         var rails = p.section.querySelectorAll(".rail .rl");
         for (var i = 0; i < rails.length; i++) rails[i].classList.toggle("on", i === idx);
-        var ticks = p.section.querySelectorAll(".j-voyage-tick");
-        for (var t = 0; t < ticks.length; t++) ticks[t].classList.toggle("on", t <= idx);
       },
     },
   ];

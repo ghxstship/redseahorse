@@ -240,11 +240,6 @@ export default function Page() {
     <div className="step"><p className="sn">Step 05 · The Manifest</p><h3>Pack Your Bags.</h3><p>Onboarding, approvals, and the know-before-you-go — everything settled and signed off before we go live.</p></div>
     <div className="step"><p className="sn">Step 06 · Launch</p><h3>Anchors Away.</h3><p>The experience goes live. We run the show, hold the standard, and strike clean — then log the build.</p></div>
   </div></div>
-  <div className="j-voyage" aria-hidden="true"><div className="j-voyage-line">
-    <div className="j-voyage-fill"></div>
-    <span className="j-voyage-tick" style={{left: '0%'}}></span><span className="j-voyage-tick" style={{left: '20%'}}></span><span className="j-voyage-tick" style={{left: '40%'}}></span><span className="j-voyage-tick" style={{left: '60%'}}></span><span className="j-voyage-tick" style={{left: '80%'}}></span><span className="j-voyage-tick" style={{left: '100%'}}></span>
-    <span className="j-voyage-ship"><i className="ph-bold ph-boat"></i></span>
-  </div></div>
 </div></div></section>
 
 <section className="cap" id="cap"><div className="wrap">
