@@ -221,17 +221,24 @@
     document.querySelectorAll("form").forEach(bind);
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bindAll);
-  } else {
+  // Bind now, then again after React hydration settles. If hydration replaces
+  // a form node, its __ghxstBound flag is lost and bindAll re-binds it; if the
+  // node is patched in place, the flag persists and bind() no-ops. This makes
+  // the handler reliable on direct page loads (not just client navigations).
+  function boot() {
     bindAll();
+    [120, 400, 900, 1600].forEach(function (d) { setTimeout(bindAll, d); });
   }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+  window.addEventListener("load", bindAll);
+
   // Re-bind on client-side navigations (next/link).
   var lastPath = location.pathname;
   setInterval(function () {
     if (location.pathname !== lastPath) {
       lastPath = location.pathname;
-      setTimeout(bindAll, 50);
+      setTimeout(bindAll, 80);
     }
   }, 300);
 })();

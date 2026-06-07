@@ -145,7 +145,7 @@ function receiptEmail(name) {
     para("Thanks, " + esc(first) + " — your brief reached the bridge. Consider this your boarding pass: we've logged it and a producer will be in touch within one business day.") +
     '<p style="margin:0 0 10px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.brass + ';text-transform:uppercase">What happens next</p>' +
     steps +
-    "While you wait, see what we've built and where we sail:" +
+    para("While you wait, see what we've built and where we sail:") +
     '<div style="height:10px"></div>' +
     button(SITE + "/work/", "See the Archives") +
     '<div style="height:4px"></div>' +

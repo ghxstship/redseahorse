@@ -46,7 +46,7 @@ export default function Page() {
   .foot-bot{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:22px 0 0;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3)}
   .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:44px 0 0}@media(max-width:880px){.tgrid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.tgrid{grid-template-columns:1fr}}
   .tm{background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);overflow:hidden}
-  .tm .av{height:150px;display:grid;place-items:center;background:repeating-linear-gradient(45deg,#13201f 0 14px,#0f1a1a 14px 28px);border-bottom:var(--stroke-2) solid var(--ink-3)}
+  .tm .av{height:150px;display:grid;place-items:center;background:repeating-linear-gradient(45deg,var(--ink-2) 0 14px,var(--ink) 14px 28px);border-bottom:var(--stroke-2) solid var(--ink-3)}
   .tm .av img{width:54px;height:54px;image-rendering:pixelated;opacity:.85}
   .tm .body{padding:18px}.tm .rk{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
   .tm h3{font-family:var(--font-display);font-weight:900;font-size:22px;text-transform:uppercase;margin:6px 0 6px;line-height:1}

@@ -37,6 +37,11 @@
   --plasma:      #2E84D4;  /* SAPPHIRE · Technology — links, data, secondary   */
   --flare:       #F2603A;  /* vintage coral — alerts, accents                 */
   --aurora:      #1E6FA3;  /* deep harbor — cosmic-depth blue accent          */
+  /* Product accents (per tokens.json / BRAND_ARCHITECTURE) — used to
+     differentiate the ATLVS / COMPVSS / GVTEWAY pages from the jade default. */
+  --atlvs:       #FF2E88;  /* ATLVS — pink   */  --atlvs-deep:   #C21E68;
+  --compvss:     #E9A23B;  /* COMPVSS — amber */ --compvss-deep: #BE7E1E;
+  --gvteway:     #21D4D4;  /* GVTEWAY — cyan */  --gvteway-deep: #15A0A0;
 
   /* JADE-on-light variants (text-safe) */
   --jade-ink:    #18855F;  /* jade for text/UI on light grounds              */

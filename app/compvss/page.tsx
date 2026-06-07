@@ -89,6 +89,9 @@ export default function Page() {
   .site-foot .foot-col a{display:block;font-size:13px;color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:9px}
   .site-foot .foot-col a:hover{color:var(--bone)}
   .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+
+  /* Product accent: remap the jade accent to the COMPVSS color within page content (nav/footer stay global jade). */
+  main{--brass:var(--compvss);--brass-deep:var(--compvss-deep);--halftone-brass:color-mix(in srgb, var(--compvss) 16%, transparent)}
 ` }} />
       
 <header className="nav"><div className="wrap nav-inner">
