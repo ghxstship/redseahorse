@@ -84,17 +84,24 @@
       if (!ticking) { ticking = true; requestAnimationFrame(update); }
     }
 
-    stepsWrap.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
+    if (!stepsWrap.__jScroll) {
+      stepsWrap.__jScroll = true;
+      stepsWrap.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+    }
     update();
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
+  // Bind now, then again after React hydration settles (it can replace the
+  // journey nodes, dropping the listeners and freezing the rail on step 1).
+  function boot() {
     init();
+    [120, 400, 900, 1600].forEach(function (d) { setTimeout(init, d); });
   }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+  window.addEventListener("load", init);
   // Re-init across client-side navigations.
   var last = location.pathname;
   setInterval(function () {

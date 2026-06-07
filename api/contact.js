@@ -82,8 +82,10 @@ function button(href, label) {
   );
 }
 
-/* Studio notification: the submission, as a labeled table. */
-function notificationEmail(fields, name, email) {
+/* Studio notification: the submission, as a labeled table. opts lets the
+   application flow override the stamp/eyebrow/headline/intro. */
+function notificationEmail(fields, name, email, opts) {
+  opts = opts || {};
   var rows = fields
     .map(function (f) {
       return (
@@ -93,32 +95,87 @@ function notificationEmail(fields, name, email) {
     })
     .join("");
   var body =
-    para("A new inquiry just came in through the GHXSTSHIP site. Reply directly to this email to reach " + esc(name || "them") + ".") +
+    para(opts.intro || ("A new inquiry just came in through the GHXSTSHIP site. Reply directly to this email to reach " + esc(name || "them") + ".")) +
     '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 18px;border-top:1px solid ' + C.ink3 + ';border-bottom:1px solid ' + C.ink3 + '">' + rows + "</table>" +
     button("mailto:" + esc(email), "Reply to " + (name ? esc(name.split(" ")[0]) : "sender"));
   return shell({
-    stamp: "New Inquiry", eyebrow: "Incoming Transmission", headline: 'New Project <span style="color:' + C.brass + '">Inquiry.</span>',
-    preheader: "New inquiry from " + (name || email), body: body,
-    footer: "Sent by the GHXSTSHIP contact form · " + esc(email),
+    stamp: opts.stamp || "New Inquiry",
+    eyebrow: opts.eyebrow || "Incoming Transmission",
+    headline: opts.headline || ('New Project <span style="color:' + C.brass + '">Inquiry.</span>'),
+    preheader: opts.preheader || ("New inquiry from " + (name || email)), body: body,
+    footer: "Sent by the GHXSTSHIP site · " + esc(email),
   });
 }
 
-/* Submitter auto-reply: confirmation + what happens next + connect. */
+/* Applicant auto-reply: confirmation + the hiring path + connect. */
+function applicationReceiptEmail(name, role) {
+  var first = name ? name.split(" ")[0] : "there";
+  var steps =
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:2px 0 20px">' +
+    [
+      ["1", "A crew lead reviews it", "A human on the crew — not a bot — reads every application."],
+      ["2", "A short intro call", "If it's a fit, we'll set up a 20-minute call to learn what you want to build."],
+      ["3", "A working conversation", "A practical session with the department lead — the real work, not trivia."],
+      ["4", "References & offer", "A quick reference check, then we welcome you aboard."],
+    ]
+      .map(function (s) {
+        return (
+          "<tr>" +
+          '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px"><span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;border:2px solid ' + C.ink3 + ';font-family:' + FONT_MONO + ';font-size:12px;font-weight:700;color:' + C.fg3 + '">' + s[0] + "</span></td>" +
+          '<td style="padding:0 0 14px;vertical-align:top">' +
+          '<div style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:.3px;color:' + C.bone + ';text-transform:uppercase">' + esc(s[1]) + "</div>" +
+          '<div style="font-family:' + FONT_BODY + ';font-size:14px;line-height:1.55;color:' + C.fg2 + ';margin-top:3px">' + esc(s[2]) + "</div>" +
+          "</td></tr>"
+        );
+      })
+      .join("") +
+    "</table>";
+  var social =
+    '<p style="margin:22px 0 8px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.fg3 + ';text-transform:uppercase">Follow the voyage</p>' +
+    '<p style="margin:0">' +
+    [["Instagram", "https://instagram.com/ghxstship"], ["LinkedIn", "https://linkedin.com/company/ghxstship"], ["YouTube", "https://youtube.com/@ghxstship"], ["X", "https://x.com/ghxstship"]]
+      .map(function (s) { return '<a href="' + s[1] + '" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none;margin-right:16px">' + s[0] + "</a>"; })
+      .join("") + "</p>";
+  var body =
+    para("Thanks, " + esc(first) + " — your application" + (role ? " for <strong style=\"color:" + C.bone + "\">" + esc(role) + "</strong>" : "") + " reached the crew. A human reads every one; if there's a fit we'll be in touch.") +
+    '<p style="margin:0 0 10px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.brass + ';text-transform:uppercase">How hiring works</p>' +
+    steps +
+    para("No experience? We train the next generation — apply to Production Assistant and learn the ropes on real builds.") +
+    '<div style="height:6px"></div>' +
+    button(SITE + "/team/", "Meet the Crew") +
+    social;
+  return shell({
+    stamp: "Crew Manifest", eyebrow: "Application Logged", headline: "Application <span style=\"color:" + C.brass + "\">Received.</span>",
+    preheader: "We got your application — here's how hiring works.", body: body,
+    footer: "G H X S T S H I P · You're receiving this because you applied · Venture Beyond",
+  });
+}
+
+/* Submitter auto-reply: pre-booking confirmation framed around THE JOURNEY —
+   the six stages from the marketing site. The Destination (the brief they just
+   sent) is marked complete; the rest is the route ahead. */
 function receiptEmail(name) {
   var first = name ? name.split(" ")[0] : "there";
   var steps =
     '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:2px 0 20px">' +
     [
-      ["01", "A producer reads your brief", "A human on the crew — not a bot — reviews what you sent."],
-      ["02", "We chart a first course", "Within one business day we'll reach out to open Discovery: goals, scope, timeline."],
-      ["03", "We build the ship", "Scope it full-build, by discipline, or by phase — sized to your destination."],
+      ["1", "The Destination", "Share your vision — the brief you just sent.", true],
+      ["2", "The Ship", "Build your vessel: a full build, a single discipline, or by the phase.", false],
+      ["3", "The Course", "Chart the route — eight phases from first line to launch.", false],
+      ["4", "The Crew", "Meet the producers and leads matched to your build.", false],
+      ["5", "The Manifest", "Onboarding, approvals, and the know-before-you-go.", false],
+      ["6", "Launch", "Anchors away — we run the show and strike clean.", false],
     ]
       .map(function (s) {
+        var done = s[3];
+        var dotColor = done ? C.brass : C.ink3;
+        var dotText = done ? C.onBrass : C.fg3;
         return (
           "<tr>" +
-          '<td style="padding:0 14px 16px 0;vertical-align:top;width:34px"><span style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:22px;color:' + C.brass + '">' + s[0] + "</span></td>" +
-          '<td style="padding:0 0 16px;vertical-align:top">' +
-          '<div style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:.3px;color:' + C.bone + ';text-transform:uppercase">' + esc(s[1]) + "</div>" +
+          '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px">' +
+          '<span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:' + (done ? C.brass : "transparent") + ';border:2px solid ' + dotColor + ';font-family:' + FONT_MONO + ';font-size:12px;font-weight:700;color:' + dotText + '">' + (done ? "✓" : s[0]) + "</span></td>" +
+          '<td style="padding:0 0 14px;vertical-align:top">' +
+          '<div style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:.3px;color:' + C.bone + ';text-transform:uppercase">' + esc(s[1]) + (done ? ' <span style="font-family:' + FONT_MONO + ';font-size:10px;letter-spacing:1px;color:' + C.brass + '">· YOU ARE HERE</span>' : "") + "</div>" +
           '<div style="font-family:' + FONT_BODY + ';font-size:14px;line-height:1.55;color:' + C.fg2 + ';margin-top:3px">' + esc(s[2]) + "</div>" +
           "</td></tr>"
         );
@@ -142,19 +199,19 @@ function receiptEmail(name) {
     "</p>";
 
   var body =
-    para("Thanks, " + esc(first) + " — your brief reached the bridge. Consider this your boarding pass: we've logged it and a producer will be in touch within one business day.") +
-    '<p style="margin:0 0 10px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.brass + ';text-transform:uppercase">What happens next</p>' +
+    para("Thanks, " + esc(first) + " — your vision reached the bridge. This is your confirmation: we've logged your brief and charted the first waypoint. A producer will reach out within one business day to set the course.") +
+    '<p style="margin:0 0 10px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.brass + ';text-transform:uppercase">The journey ahead</p>' +
     steps +
-    para("While you wait, see what we've built and where we sail:") +
+    para("While you prepare, see where we sail and what we've built:") +
     '<div style="height:10px"></div>' +
-    button(SITE + "/work/", "See the Archives") +
+    button(SITE + "/destinations/", "Explore the Destinations") +
     '<div style="height:4px"></div>' +
-    '<a href="' + SITE + '/destinations/" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none">Explore the Destinations ↗</a>' +
+    '<a href="' + SITE + '/work/" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none">See the Archives ↗</a>' +
     social;
 
   return shell({
-    stamp: "Boarding Pass", eyebrow: "Now Boarding", headline: "You're <span style=\"color:" + C.brass + "\">Aboard.</span>",
-    preheader: "We got your brief — here's what happens next.", body: body,
+    stamp: "Itinerary", eyebrow: "Prepare to Board", headline: "Prepare for Your <span style=\"color:" + C.brass + "\">Journey.</span>",
+    preheader: "We've logged your brief — here's the journey ahead.", body: body,
     footer: "G H X S T S H I P · You're receiving this because you contacted us · Venture Beyond",
   });
 }
@@ -194,12 +251,38 @@ module.exports = async function handler(req, res) {
   var from = process.env.RESEND_FROM || DEFAULT_FROM;
   var to = process.env.CONTACT_TO || DEFAULT_TO;
 
+  // Branch: a careers application vs a general/contact inquiry.
+  var isApplication = String(body["form-type"] || "").toLowerCase() === "application" ||
+    (!!body["why-ghxstship"] && (!!body.role || !!body["resume-cv"]));
+  var role = String(body.role || "").trim();
+  var inquiryType = String(body["inquiry-type"] || "").trim();
+
+  var notifSubject, notifOpts, receiptSubject, receiptText, receiptHtml;
+  if (isApplication) {
+    notifSubject = "New application — " + (role || "General") + " — " + (name || email);
+    notifOpts = {
+      stamp: "New Application", eyebrow: "Crew Manifest",
+      headline: 'New <span style="color:' + C.brass + '">Application.</span>',
+      preheader: "New application" + (role ? " for " + role : "") + " from " + (name || email),
+      intro: "A new application just came in" + (role ? " for " + esc(role) : "") + ". Reply directly to reach " + esc(name || "them") + ".",
+    };
+    receiptSubject = "Application received — GHXSTSHIP";
+    receiptText = "Thanks, " + (name || "there") + " — your application" + (role ? " for " + role : "") + " reached the crew. A human reads every one; if there's a fit we'll be in touch.";
+    receiptHtml = applicationReceiptEmail(name, role);
+  } else {
+    notifSubject = "New " + (inquiryType || "inquiry").toLowerCase() + " — " + (name || email);
+    notifOpts = inquiryType ? { stamp: inquiryType, preheader: inquiryType + " from " + (name || email) } : {};
+    receiptSubject = "Prepare for the journey — we've logged your brief";
+    receiptText = "Thanks, " + (name || "there") + " — your vision reached the bridge. We've logged your brief; a producer will reach out within one business day to set the course.";
+    receiptHtml = receiptEmail(name);
+  }
+
   try {
     var r = await send(key, {
       from: from, to: [to], reply_to: email,
-      subject: "New project inquiry — " + (name || email),
-      text: "New inquiry\n\n" + fields.map(function (f) { return f.label + ": " + f.value; }).join("\n"),
-      html: notificationEmail(fields, name, email),
+      subject: notifSubject,
+      text: notifSubject + "\n\n" + fields.map(function (f) { return f.label + ": " + f.value; }).join("\n"),
+      html: notificationEmail(fields, name, email, notifOpts),
     });
     if (!r.ok) {
       var detail = await r.text();
@@ -213,9 +296,7 @@ module.exports = async function handler(req, res) {
       try {
         await send(key, {
           from: from, to: [email], reply_to: to,
-          subject: "You're aboard — we got your brief",
-          text: "Thanks, " + (name || "there") + " — your brief reached the bridge. A producer will be in touch within one business day.",
-          html: receiptEmail(name),
+          subject: receiptSubject, text: receiptText, html: receiptHtml,
         });
       } catch (e) { /* ignore receipt failures */ }
     }

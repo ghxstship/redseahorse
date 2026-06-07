@@ -61,10 +61,11 @@
   function layout(p) {
     reset(p);
     if (reduce) return;
-    // Tablet and up get the pinned scroll; phones keep the native swipe carousel
-    // (polish.css) — touch swipe, not a click-through, and avoids nested-sticky
-    // conflicts with the mobile rail.
-    if (window.innerWidth < 48 * 16) return;
+    // All widths incl. mobile: vertical scroll drives the cards horizontally and
+    // the rail dots stay synced (hscroll owns them). The rail is forced to
+    // position:relative while pinned (polish.css) so there's no nested-sticky
+    // conflict. Only bail on very small screens where the runway is awkward.
+    if (window.innerWidth < 22 * 16) return; // skip < 352px
 
     // Lay the track out horizontally and measure its overflow.
     p.track.setAttribute("data-hscroll-track", "");
