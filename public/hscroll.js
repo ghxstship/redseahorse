@@ -33,8 +33,9 @@
     // overview with tap-to-reveal detail, so it keeps its native behavior.
     {
       section: ".journey",
-      stage: ".j-grid",
-      track: ".j-steps",
+      stage: ".j-grid",      // the sticky pinned box
+      viewport: ".j-steps",  // column-2 clip box (bounds the track to its column)
+      track: ".j-track",     // the flex row that translates
       onProgress: function (p, prog) {
         var steps = p.track.children, n = steps.length;
         if (!n) return;
@@ -74,9 +75,9 @@
     // Lay the track out horizontally and measure its overflow.
     p.track.setAttribute("data-hscroll-track", "");
     p.stage.setAttribute("data-hscroll-stage", "");
-    var stageW = p.stage.clientWidth;
+    var viewW = (p.viewport || p.stage).clientWidth; // the clip column, not the whole grid
     var trackW = p.track.scrollWidth;
-    var dist = trackW - stageW;
+    var dist = trackW - viewW;
     if (dist <= 24) { reset(p); return; }
 
     p.runway = p.stage.parentElement;
@@ -138,8 +139,9 @@
       if (!section) return;
       var stage = section.querySelector(cfg.stage);
       var track = section.querySelector(cfg.track);
+      var viewport = cfg.viewport ? section.querySelector(cfg.viewport) : null;
       if (!stage || !track) return;
-      var p = { section: section, stage: stage, track: track, cfg: cfg, active: false, dist: 0, top: 0, prevIndex: -1 };
+      var p = { section: section, stage: stage, track: track, viewport: viewport, cfg: cfg, active: false, dist: 0, top: 0, prevIndex: -1 };
       pins.push(p);
       layout(p);
     });

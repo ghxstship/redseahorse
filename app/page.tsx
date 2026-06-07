@@ -83,6 +83,7 @@ export default function Page() {
   .rail .rl .n{width:1.6rem;height:1.6rem;border-radius:50%;border:var(--stroke-1) solid var(--ink-3);display:grid;place-items:center;font-size:var(--fs-label);flex:none}
   .rail .rl.on{color:var(--fg-on-dark-1)}.rail .rl.on .n{background:var(--brass);border-color:var(--brass);color:var(--on-brass)}
   .j-steps{display:flex;flex-direction:column;gap:var(--sp-5)}
+  .j-track{display:contents}
   .step{background:var(--ink-2);border:var(--stroke-1) solid var(--ink-3);border-radius:var(--r-3);padding:var(--sp-6);box-shadow:var(--shadow-pop)}
   .step .sn{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
   .step h3{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:var(--lh-h2);text-transform:uppercase;letter-spacing:var(--tracking-display);margin:var(--sp-2) 0 var(--sp-3)}
@@ -231,14 +232,14 @@ export default function Page() {
     <div className="rl"><span className="n">5</span>The Manifest</div>
     <div className="rl"><span className="n">6</span>Launch</div>
   </div>
-  <div className="j-steps">
+  <div className="j-steps"><div className="j-track">
     <div className="step"><p className="sn">Step 01 · The Destination</p><h3>Share Your Vision.</h3><p>Start with the vision — the project goal, the experience worth building. That's the destination, and everything we build is sized to reach it.</p></div>
     <div className="step"><p className="sn">Step 02 · The Ship</p><h3>Build Your Vessel.</h3><p>Pick the hull and the fit-out: a full build, a single discipline, or by the phase. The scope, customized to the destination you're reaching for.</p></div>
     <div className="step"><p className="sn">Step 03 · The Course</p><h3>Chart the Course.</h3><p>Eight phases from first line to launch — Discovery to Close. The route we build to, with deliverables and owners at every stop.</p></div>
     <div className="step"><p className="sn">Step 04 · The Crew</p><h3>Meet the Team.</h3><p>With the course charted, we assign the producers, operations leads, and technologists your build needs — the accountable crew, matched to the route.</p></div>
     <div className="step"><p className="sn">Step 05 · The Manifest</p><h3>Pack Your Bags.</h3><p>Onboarding, approvals, and the know-before-you-go — everything settled and signed off before we go live.</p></div>
     <div className="step"><p className="sn">Step 06 · Launch</p><h3>Anchors Away.</h3><p>The experience goes live. We run the show, hold the standard, and strike clean — then log the build.</p></div>
-  </div>
+  </div></div>
 </div></div></section>
 
 <section className="cap" id="cap"><div className="wrap">

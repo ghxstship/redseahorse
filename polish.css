@@ -436,18 +436,16 @@ header.nav.is-scrolled {
   will-change: transform;
 }
 [data-hscroll-track] > * { scroll-snap-align: none !important; }
-.journey .j-steps[data-hscroll-track] { padding: var(--sp-5) 0 !important; align-items: stretch; position: relative; z-index: 1; }
-.journey .j-steps[data-hscroll-track] .step {
+.journey .j-track[data-hscroll-track] { padding: var(--sp-5) 0 !important; align-items: stretch; }
+.journey .j-track[data-hscroll-track] .step {
   flex: 0 0 clamp(19rem, 40vw, 30rem) !important;
 }
-/* Pin layering: the progress rail stays ABOVE the translating cards, with an
-   opaque mask so cards slide cleanly behind it (no overlap onto the stepper). */
-.journey .j-grid[data-hscroll-stage] { gap: 0 !important; }
-.journey .j-grid[data-hscroll-stage] .rail {
-  position: relative; z-index: 3; align-self: stretch;
-  background: var(--ink);
-  padding-right: var(--sp-6);
+/* Column 2 (.j-steps) becomes a clipping viewport: the translating .j-track is
+   bounded to its own column and can never reach the rail — no masking needed. */
+.journey .j-grid[data-hscroll-stage] .j-steps {
+  display: block !important; overflow: hidden; min-width: 0; align-self: stretch;
 }
+.journey .j-grid[data-hscroll-stage] .rail { align-self: start; }
 
 /* A subtle hint that the pinned section scrolls horizontally. */
 @media (prefers-reduced-motion: reduce) {

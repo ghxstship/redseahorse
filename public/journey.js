@@ -38,7 +38,7 @@
       rl.setAttribute("aria-label", "Go to step " + (idx + 1));
       function go() {
         // When the scroll-driven pin is active, hscroll.js owns dot navigation.
-        if (stepsWrap.hasAttribute("data-hscroll-track")) return;
+        if ((journey.querySelector(".j-track") || stepsWrap).hasAttribute("data-hscroll-track")) return;
         var s = steps[idx];
         if (!s) return;
         var horizontal = getComputedStyle(stepsWrap).flexDirection === "row";
@@ -78,7 +78,7 @@
     function update() {
       ticking = false;
       // When the scroll-driven pin is active, hscroll.js owns the active dot.
-      if (stepsWrap.hasAttribute("data-hscroll-track")) return;
+      if ((journey.querySelector(".j-track") || stepsWrap).hasAttribute("data-hscroll-track")) return;
       var horizontal = getComputedStyle(stepsWrap).flexDirection === "row";
       setActive(horizontal ? nearestHorizontal() : nearestVertical());
     }
