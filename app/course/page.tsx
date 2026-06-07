@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Captain\u2019s Log \u2014 Dispatches on Experiential Production",
-  description: "The GHXSTSHIP Captain\u2019s Log \u2014 field notes on experiential production management, venue operations, event technology, and the 8-phase production lifecycle.",
-  alternates: { canonical: "https://ghxstship.tours/resources/blog" },
+  title: "The Course \u2014 The 8-Phase Production Lifecycle",
+  description: "The GHXSTSHIP Course is an eight-phase experiential production lifecycle \u2014 Project Discovery, R&amp;D, Creative Design, Compliance &amp; Risk, Production &amp; Build, Operations &amp; Logistics, Live Activation, and Strike &amp; Post \u2014 the route every build follows from first line to launch.",
+  alternates: { canonical: "https://ghxstship.tours/course" },
 };
 
 export default function Page() {
@@ -26,7 +26,7 @@ export default function Page() {
   .eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 14px;display:flex;align-items:center;gap:10px}
   .eyebrow::before{content:"\\25C6";color:var(--nebula)}
   .hero{padding:40px 0 56px;border-bottom:var(--stroke-2) solid var(--ink-3)}
-  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(40px,7vw,84px);line-height:.86;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 18px}
+  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,7vw,84px);line-height:.86;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 18px}
   h1 .pop{color:var(--brass)}
   .lede{font-size:18px;line-height:1.62;color:var(--fg-on-dark-2);max-width:780px;margin:0}
   .answer{font-size:20px;line-height:1.55;color:var(--fg-on-dark-1);max-width:840px;margin:0;font-weight:500}
@@ -42,15 +42,24 @@ export default function Page() {
   .foot-links a{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
   .foot-links a:hover{color:var(--brass)}
   .foot-social{display:flex;gap:14px;margin-top:14px}
-  .foot-social a{color:var(--fg-on-dark-2);font-size:20px;line-height:1;text-decoration:none}.foot-social a:hover{color:var(--brass)}
+  .foot-social a{color:var(--fg-on-dark-2);font-size:20px;line-height:1;text-decoration:none}
+  .foot-social a:hover{color:var(--brass)}
   .foot-bot{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:22px 0 0;padding-top:16px;border-top:var(--stroke-2) solid var(--ink-3)}
-  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:44px 0 0}@media(max-width:880px){.bgrid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.bgrid{grid-template-columns:1fr}}
-  .bp{display:block;text-decoration:none;background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);padding:22px;transition:transform var(--dur-2),border-color var(--dur-2),box-shadow .12s}
-  .bp:hover{transform:translate(-3px,-3px);border-color:var(--brass);box-shadow:var(--shadow-hard-lg)}
-  .bp .cat{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
-  .bp h3{font-family:var(--font-display);font-weight:900;font-size:22px;text-transform:uppercase;margin:8px 0 8px;line-height:1.02}
-  .bp p{font-size:13.5px;line-height:1.55;color:var(--fg-on-dark-2);margin:0}
-  .bp .d{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin-top:12px}/*__nf__*/
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:36px 0 0}@media(max-width:880px){.sgrid{grid-template-columns:1fr}}
+  .scard{background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);padding:26px}
+  .scard i{font-size:30px;color:var(--brass)}
+  .scard h3{font-family:var(--font-display);font-weight:900;font-size:24px;text-transform:uppercase;margin:14px 0 8px;line-height:.98}
+  .scard p{font-size:14.5px;line-height:1.55;color:var(--fg-on-dark-2);margin:0}
+  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:36px 0 0}@media(max-width:880px){.who{grid-template-columns:1fr}}
+  .who .w{border-left:var(--stroke-4) solid var(--brass);background:var(--ink-2);border-radius:0 6px 6px 0;padding:22px}
+  .who .w:nth-child(2){border-color:var(--nebula)}.who .w:nth-child(3){border-color:var(--plasma)}
+  .who .w h3{font-family:var(--font-display);font-weight:900;font-size:21px;text-transform:uppercase;margin:0 0 8px}
+  .who .w p{font-size:14px;line-height:1.55;color:var(--fg-on-dark-2);margin:0}
+  .faq{margin-top:28px;border-top:var(--stroke-2) solid var(--ink-3)}
+  .faq details{border-bottom:var(--stroke-2) solid var(--ink-3)}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;gap:20px;font-family:var(--font-display);font-weight:800;font-size:19px;color:var(--bone)}
+  .faq summary::-webkit-details-marker{display:none}.faq .ic{color:var(--brass);font-size:22px}.faq details[open] .ic{transform:rotate(45deg)}
+  .faq .a{padding:0 0 20px;font-size:15px;line-height:1.6;color:var(--fg-on-dark-2);max-width:880px}/*__nf__*/
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:10px 0}
   .nav-inner .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -89,24 +98,23 @@ export default function Page() {
     <Link href="/contact" className="gx-btn gx-btn--sm">Start a Project</Link>
   </nav>
 </div></header>
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/glossary">Resources</Link> / <span style={{color: 'var(--brass)'}}>Captain’s Log</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>The Course</span></p></div>
 <main>
 <section className="hero"><div className="wrap">
-  <p className="eyebrow">The Log &middot; Dispatches</p>
-  <h1>Notes From<br/>the <span className="pop">Bridge.</span></h1>
-  <p className="answer">The The Log is where GHXSTSHIP shares field notes on experiential production, venue operations, and event technology &mdash; how we build, what we&rsquo;ve learned, and where the industry is heading.</p>
+  <p className="eyebrow">The Course &middot; The Production Lifecycle</p>
+  <h1>Eight Phases,<br/>First Line to <span className="pop">Launch.</span></h1>
+  <p className="answer">The Course is the GHXSTSHIP production lifecycle — eight phases that take an experiential or entertainment project from first consultation to strike. Every build follows the same charted route, with clear deliverables and an accountable owner at each stop, so scope, schedule, and budget stay on course from discovery to close.</p>
+  <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '26px'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost">See the Archives</Link></div>
 </div></section>
 <section className="pad"><div className="wrap">
-  <p className="eyebrow">Latest Dispatches</p>
-  <h2 className="sec">From the Log.</h2>
-  <div className="bgrid"><Link href="/resources/the-experiential-gc" className="bp"><p className="cat">Field Notes</p><h3>What an Experiential General Contractor Actually Does</h3><p>One accountable partner for scope, schedule, budget, crew, and tech — and why the GC model beats a vendor chain for live experiences.</p><p className="d">Jun 2026</p></Link>
-  <a className="bp" href="#"><p className="cat">Operations</p><h3>The 8-Phase Production Lifecycle, Explained</h3><p>Discovery to Close — how the Course keeps a build on schedule, on budget, and on standard.</p><p className="d">May 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Technology</p><h3>ATLVS, COMPVSS &amp; GVTEWAY: The Instruments</h3><p>How proprietary production, crew, and ticketing software coordinate an entire experiential build.</p><p className="d">May 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Venue Ops</p><h3>Running a Venue to One Standard</h3><p>Programming, staffing, compliance, and day-of operations across every date — the foreman&rsquo;s playbook.</p><p className="d">Apr 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Press</p><h3>GHXSTSHIP Charts New Immersive Work in Miami</h3><p>A look at the latest voyage on the board and the crew behind it.</p><p className="d">Apr 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Crew Call</p><h3>Learn the Ropes: Join the Skeleton Crew</h3><p>We train the next generation of experiential producers on real projects. How to come aboard.</p><p className="d">Mar 2026</p></a></div>
+  <p className="eyebrow">The Route</p>
+  <h2 className="sec">The 8-Phase Lifecycle.</h2>
+  <p className="lede">Discovery to Close — one methodology across festivals, tours, activations, immersive, sporting, and broadcast.</p>
+  <div className="sgrid"><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>01</span><h3>Project Discovery</h3><p>Goals, scope, budget, and vision — the consultation that sets the route and sizes the build.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>02</span><h3>Research & Development</h3><p>Feasibility, concepts, and technology and partner exploration. The idea gets pressure-tested.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>03</span><h3>Creative Design</h3><p>Creative direction, experiential design, and storytelling — the look, the feel, the narrative.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>04</span><h3>Compliance & Risk</h3><p>Engineering, permits, safety, insurance, and risk planning. The build is made real and safe.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>05</span><h3>Production & Build</h3><p>Fabrication, scenic, staging, and technical production — pre-built and tested off-site.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>06</span><h3>Operations & Logistics</h3><p>Logistics, crew, vendors, scheduling, and load-in. Crew on the ground, systems up.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>07</span><h3>Live Activation</h3><p>Show calling and live execution — the experience itself. We run the show and hold the standard.</p></div><div className="scard"><span style={{fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '34px', color: 'var(--brass)', display: 'block', lineHeight: '1'}}>08</span><h3>Strike & Post</h3><p>Load-out, reconciliation, analytics, and the debrief. Struck clean, logged in the Archives.</p></div></div>
 </div></section>
-<section className="cta"><div className="wrap"><h2>Build With<br/>GHXSTSHIP.</h2><div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">See Solutions</Link></div></div></section>
+<section className="cta"><div className="wrap"><h2>Chart Your<br/>Course.</h2>
+  <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">Meet the Fleet</Link></div>
+</div></section>
 </main>
 <footer className="site-foot"><div className="wrap">
   <div className="foot-grid">
@@ -123,7 +131,11 @@ export default function Page() {
   <div className="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Blog","name":"GHXSTSHIP Captain\\u2019s Log","url":"https://ghxstship.tours/resources/blog"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/","sameAs":["https://instagram.com/ghxstship","https://linkedin.com/company/ghxstship","https://youtube.com/@ghxstship","https://x.com/ghxstship"]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Experiential production management","name":"Experiential Production Management","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"General contractor and management team for experiential and entertainment production \\u2014 design, fabrication, staging, technical production, and show calling.","audience":{"@type":"Audience","audienceType":"General contractors, venue operators, brands, promoters, and production directors"}}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Venue operations management","name":"Venue Operations Management","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Venue operations leadership \\u2014 logistics, crew and workforce, compliance, programming, and day-of operations for venues, stadiums, and hospitality."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Event technology integration","name":"Event Technology Integration","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Event technology integration and installs \\u2014 ATLVS, COMPVSS, and GVTEWAY plus third-party integrations, data, and analytics."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?","acceptedAnswer":{"@type":"Answer","text":"Yes. GHXSTSHIP operates as the general contractor and accountable management team for experiential and entertainment production, owning scope, schedule, budget, crew, vendors, and technology across all eight phases."}},{"@type":"Question","name":"Do you provide venue operations management?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide venue operations leadership: logistics, workforce and crew management, vendor coordination, health, safety and compliance, programming, and day-of operations."}},{"@type":"Question","name":"Do you handle event technology integrations and installs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We implement and integrate event technology: ATLVS, COMPVSS, and GVTEWAY, plus third-party integrations, on-site installs, data, and analytics."}}]}` }} />
     </>
   );
 }
