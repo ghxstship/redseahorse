@@ -56,6 +56,9 @@ export default function Page() {
   .rail .lbl{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-6)}
   .rail a,.rail p{font-size:var(--fs-body);color:var(--fg-on-dark-1);text-decoration:none;margin:0;line-height:1.6;display:block}
   .rail a:hover{color:var(--brass)}
+  .rail .port{margin-bottom:var(--space-12)}
+  .rail .port .city{color:var(--bone);margin:0 0 var(--space-2)}
+  .rail .port a{font-size:var(--fs-small);color:var(--fg-on-dark-2)}
 /*__nf__*/
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
@@ -104,11 +107,17 @@ export default function Page() {
     <div className="field"><label htmlFor="it">Inquiry Type</label><select id="it" name="inquiry-type"><option>General Inquiry</option><option>New Project</option><option>Partnerships</option><option>Media</option><option>Press</option><option>Talent &amp; Vendors</option><option>Careers</option><option>Other</option></select></div>
     <div className="field"><label htmlFor="t">Destination</label><select id="t" name="destination"><option>Festival</option><option>Concert / Tour</option><option>Brand Activation</option><option>Immersive Experience</option><option>Sporting Event</option><option>TV, Film &amp; Broadcast</option><option>Not Sure Yet</option></select></div>
     <div className="field"><label htmlFor="m">The Brief</label><textarea id="m" rows={5} placeholder="Tell us about the experience you want to build." name="the-brief"></textarea></div>
-    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Send the Brief</a>
+    <a className="gx-btn gx-btn--lg" href="mailto:sos@ghxstship.pro">Send the Brief</a>
   </form>
   <aside className="rail">
-    <div className="blk"><p className="lbl">Hail the Bridge</p><a href="mailto:hello@ghxstship.tours">hello@ghxstship.tours</a></div>
-    <div className="blk"><p className="lbl">Home Ports</p><p>Miami HQ &middot; Las Vegas &middot; Chicago &middot; New York &middot; Los Angeles</p></div>
+    <div className="blk"><p className="lbl">Email</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
+    <div className="blk"><p className="lbl">Home Ports</p>
+      <div className="port"><p className="city">Miami HQ</p><a href="mailto:miami@ghxstship.pro">miami@ghxstship.pro</a></div>
+      <div className="port"><p className="city">Las Vegas</p><a href="mailto:lasvegas@ghxstship.pro">lasvegas@ghxstship.pro</a></div>
+      <div className="port"><p className="city">Chicago</p><a href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></div>
+      <div className="port"><p className="city">New York</p><a href="mailto:newyork@ghxstship.pro">newyork@ghxstship.pro</a></div>
+      <div className="port"><p className="city">Los Angeles</p><a href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></div>
+    </div>
   </aside>
 </div></div></section>
 </main>
