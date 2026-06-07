@@ -37,11 +37,64 @@
     ".crumbs", ".rail",
   ].join(",");
 
-  var pending = []; // {el} still to reveal
-  var stats = [];   // {el, target, suffix, done}
+  // Media gets a clip-wipe reveal instead of the translateY fade.
+  var MEDIA_SEL = ".wcard .media img, .work-grid a img, .mu img, .vcard .media img, .destinations img, .dhero img";
 
-  function reveal(el) {
-    el.classList.add("gx-in");
+  var pending = []; // { el, cls } still to reveal
+  var stats = [];   // { el, target, suffix, done }
+
+  function reveal(item) {
+    item.el.classList.add(item.cls);
+  }
+
+  // Wrap each word of a headline in <span class="gx-word"> with a rising
+  // per-word delay, preserving inline elements (e.g. the colored span) and
+  // <br>. `wi.n` is a shared running word index for the stagger.
+  function wrapWords(node, wi) {
+    var kids = [].slice.call(node.childNodes);
+    kids.forEach(function (child) {
+      if (child.nodeType === 3) {
+        var words = (child.textContent || "").split(/(\s+)/);
+        if (!words.length) return;
+        var frag = document.createDocumentFragment();
+        words.forEach(function (w) {
+          if (/^\s*$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+          var span = document.createElement("span");
+          span.className = "gx-word";
+          span.textContent = w;
+          span.style.setProperty("--gx-delay", 120 + wi.n * 70 + "ms");
+          wi.n++;
+          frag.appendChild(span);
+        });
+        node.replaceChild(frag, child);
+      } else if (child.nodeType === 1 && child.tagName !== "BR") {
+        wrapWords(child, wi); // recurse into inline elements, keep their styling
+      }
+    });
+  }
+
+  // Subtle cursor attraction on large CTAs.
+  function setupMagnetic() {
+    if (!window.matchMedia || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    document.querySelectorAll(".gx-btn--lg").forEach(function (btn) {
+      if (btn.__gxMag) return;
+      btn.__gxMag = true;
+      btn.classList.add("gx-magnetic");
+      var strength = 0.28, max = 8;
+      btn.addEventListener("pointermove", function (e) {
+        var r = btn.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) * strength;
+        var dy = (e.clientY - (r.top + r.height / 2)) * strength;
+        dx = Math.max(-max, Math.min(max, dx));
+        dy = Math.max(-max, Math.min(max, dy));
+        btn.style.setProperty("--mx", dx.toFixed(1) + "px");
+        btn.style.setProperty("--my", dy.toFixed(1) + "px");
+      });
+      btn.addEventListener("pointerleave", function () {
+        btn.style.setProperty("--mx", "0px");
+        btn.style.setProperty("--my", "0px");
+      });
+    });
   }
 
   function runCountUp(s) {
@@ -66,10 +119,9 @@
     var trigger = vh * 0.92; // reveal a touch before fully in view
 
     for (var i = pending.length - 1; i >= 0; i--) {
-      var el = pending[i];
-      var top = el.getBoundingClientRect().top;
+      var top = pending[i].el.getBoundingClientRect().top;
       if (top < trigger) {
-        reveal(el);
+        reveal(pending[i]);
         pending.splice(i, 1);
       }
     }
@@ -83,13 +135,21 @@
   }
 
   function setup() {
-    // Build the reveal set.
+    // Build the reveal set (block-level fade/rise).
     pending = [];
     [].slice.call(document.querySelectorAll(REVEAL_SEL)).forEach(function (el) {
       if (el.__gxReveal) return;
       el.__gxReveal = true;
       el.classList.add("gx-reveal");
-      pending.push(el);
+      pending.push({ el: el, cls: "gx-in" });
+    });
+
+    // Media gets a clip-wipe reveal.
+    [].slice.call(document.querySelectorAll(MEDIA_SEL)).forEach(function (el) {
+      if (el.__gxReveal) return;
+      el.__gxReveal = true;
+      el.classList.add("gx-reveal-media");
+      pending.push({ el: el, cls: "gx-in" });
     });
 
     // Stagger cards within a grid.
@@ -101,10 +161,22 @@
       });
     });
 
-    // Hero entrance sequence.
+    // Hero entrance sequence (h1 handled by word reveal below).
     document
-      .querySelectorAll(".hero .eyebrow, .hero h1, .hero .sub, .hero .cta-row, .hero .hero-art")
-      .forEach(function (el, i) { el.style.setProperty("--gx-delay", i * 85 + "ms"); });
+      .querySelectorAll(".hero .eyebrow, .hero .sub, .hero .cta-row, .hero .hero-art")
+      .forEach(function (el, i) { el.style.setProperty("--gx-delay", (i + 1) * 85 + "ms"); });
+
+    // Hero headline: wrap words and reveal them in sequence.
+    var heroH1 = document.querySelector(".hero h1");
+    if (heroH1 && !heroH1.__gxWords) {
+      heroH1.__gxWords = true;
+      var wi = { n: 0 };
+      wrapWords(heroH1, wi);
+      pending.push({ el: heroH1, cls: "gx-words-in" });
+    }
+
+    // Magnetic CTAs (desktop / fine pointer only).
+    setupMagnetic();
 
     // Count-up targets.
     stats = [];
