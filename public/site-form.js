@@ -75,17 +75,46 @@
     });
   }
 
+  // Attachment limits. Raw bytes; base64 inflates ~33%, and the serverless
+  // function's request body is capped at 4.5 MB — 3 MB raw stays safely under.
+  var MAX_FILE_BYTES = 3 * 1024 * 1024;
+  var FILE_TYPES = /\.(pdf|doc|docx)$/i;
+
+  function readFileB64(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () {
+        var s = String(r.result);
+        resolve(s.slice(s.indexOf(",") + 1)); // strip the data:...;base64, prefix
+      };
+      r.onerror = function () { reject(r.error || new Error("File read failed")); };
+      r.readAsDataURL(file);
+    });
+  }
+
+  // Resolves to { data, attachments }: data mirrors the fields (files become a
+  // readable "name (attached)" line); attachments carry the base64 payloads.
   function collect(form) {
     var fd = new FormData(form);
     var data = {};
+    var jobs = [];
+    var attachments = [];
     fd.forEach(function (v, k) {
       if (v instanceof File) {
-        data[k] = v.name ? "[file: " + v.name + "]" : "";
+        if (!v.name) { data[k] = ""; return; }
+        data[k] = v.name + " (attached)";
+        jobs.push(
+          readFileB64(v).then(function (b64) {
+            attachments.push({ filename: v.name, content: b64 });
+          })
+        );
       } else {
         data[k] = v;
       }
     });
-    return data;
+    return Promise.all(jobs).then(function () {
+      return { data: data, attachments: attachments };
+    });
   }
 
   function isImplicitlyRequired(el) {
@@ -119,6 +148,19 @@
         el.setCustomValidity("Enter a valid email.");
         ok = false;
         return;
+      }
+      if (el.type === "file" && el.files && el.files[0]) {
+        var f = el.files[0];
+        if (!FILE_TYPES.test(f.name)) {
+          el.setCustomValidity("PDF or Word documents only.");
+          ok = false;
+          return;
+        }
+        if (f.size > MAX_FILE_BYTES) {
+          el.setCustomValidity("File is over 3 MB. Attach a smaller file, or paste a link in the portfolio field.");
+          ok = false;
+          return;
+        }
       }
     });
     return ok && form.reportValidity();
@@ -171,6 +213,15 @@
       });
     }
 
+    // Clear stale custom validity as soon as a field changes — otherwise the
+    // browser blocks requestSubmit() on the old error and the submit handler
+    // (which re-validates) can never run again.
+    function clearValidity(e) {
+      if (e.target && e.target.setCustomValidity) e.target.setCustomValidity("");
+    }
+    form.addEventListener("input", clearValidity);
+    form.addEventListener("change", clearValidity);
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!basicValidate(form)) {
@@ -178,7 +229,6 @@
         return;
       }
       var endpoint = getEndpoint();
-      var data = collect(form);
       setStatus(form, "Sending…", "");
       var btn = findSubmitTrigger(form);
       if (btn) btn.setAttribute("aria-busy", "true");
@@ -189,31 +239,44 @@
         if (ok) form.reset();
       }
 
-      if (endpoint) {
-        fetch(endpoint, {
-          method: "POST",
-          headers: { "Accept": "application/json", "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        })
-          .then(function (res) {
-            if (res.ok) {
-              done(true, "Sent. We'll be in touch.");
-            } else {
-              // Server unreachable/misconfigured (e.g. a static mirror with no
-              // function) — degrade gracefully to the user's mail client.
+      collect(form)
+        .then(function (c) {
+          var data = c.data;
+          if (!endpoint) {
+            // No endpoint configured — open the user's mail client with the brief.
+            window.location.href = buildMailto(form, data);
+            done(true, "Opening your mail client…");
+            return;
+          }
+          var payload = data;
+          if (c.attachments.length) {
+            payload = {};
+            for (var k in data) payload[k] = data[k];
+            payload.attachments = c.attachments;
+          }
+          fetch(endpoint, {
+            method: "POST",
+            headers: { "Accept": "application/json", "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          })
+            .then(function (res) {
+              if (res.ok) {
+                done(true, "Sent. We'll be in touch.");
+              } else {
+                // Server unreachable/misconfigured (e.g. a static mirror with no
+                // function) — degrade gracefully to the user's mail client.
+                done(false, "Opening your mail client…");
+                window.location.href = buildMailto(form, data);
+              }
+            })
+            .catch(function () {
               done(false, "Opening your mail client…");
               window.location.href = buildMailto(form, data);
-            }
-          })
-          .catch(function () {
-            done(false, "Opening your mail client…");
-            window.location.href = buildMailto(form, data);
-          });
-      } else {
-        // No endpoint configured — open the user's mail client with the brief.
-        window.location.href = buildMailto(form, data);
-        done(true, "Opening your mail client…");
-      }
+            });
+        })
+        .catch(function () {
+          done(false, "Couldn't read the attached file. Remove it and try again, or paste a link instead.");
+        });
     });
   }
 

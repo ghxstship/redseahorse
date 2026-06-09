@@ -218,6 +218,27 @@ function receiptEmail(name) {
   });
 }
 
+/* Attachment guardrails. The client (site-form.js) enforces the same limits;
+   these re-checks protect the Resend quota from direct POSTs. */
+var MAX_ATTACHMENTS = 2;
+var MAX_ATTACH_BYTES = 3.5 * 1024 * 1024; // decoded size; body itself caps at 4.5 MB
+var ATTACH_NAME_RE = /\.(pdf|doc|docx)$/i;
+
+function sanitizeAttachments(raw) {
+  if (!Array.isArray(raw)) return [];
+  var out = [];
+  for (var i = 0; i < raw.length && out.length < MAX_ATTACHMENTS; i++) {
+    var a = raw[i];
+    if (!a || typeof a.filename !== "string" || typeof a.content !== "string") continue;
+    var name = a.filename.replace(/[\/\\]/g, "").trim().slice(-100);
+    if (!name || !ATTACH_NAME_RE.test(name)) continue;
+    if (!/^[A-Za-z0-9+/=\s]+$/.test(a.content)) continue;
+    if (a.content.length * 0.75 > MAX_ATTACH_BYTES) continue;
+    out.push({ filename: name, content: a.content.replace(/\s+/g, "") });
+  }
+  return out;
+}
+
 function send(key, payload) {
   return fetch(RESEND_ENDPOINT, {
     method: "POST",
@@ -238,6 +259,9 @@ module.exports = async function handler(req, res) {
   body = body && typeof body === "object" ? body : {};
 
   if (body.company_website) { res.statusCode = 200; res.end(JSON.stringify({ ok: true })); return; } // honeypot
+
+  var attachments = sanitizeAttachments(body.attachments);
+  delete body.attachments;
 
   var email = String(body.email || "").trim().slice(0, 250);
   var name = String(body.name || body["first-name"] || "").trim().slice(0, 250);
@@ -280,12 +304,14 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    var r = await send(key, {
+    var notifPayload = {
       from: from, to: [to], reply_to: email,
       subject: notifSubject,
       text: notifSubject + "\n\n" + fields.map(function (f) { return f.label + ": " + f.value; }).join("\n"),
       html: notificationEmail(fields, name, email, notifOpts),
-    });
+    };
+    if (attachments.length) notifPayload.attachments = attachments;
+    var r = await send(key, notifPayload);
     if (!r.ok) {
       var detail = await r.text();
       res.statusCode = 502; res.end(JSON.stringify({ error: "Email provider rejected the message.", detail: detail.slice(0, 300) })); return;
