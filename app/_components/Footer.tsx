@@ -24,11 +24,13 @@ const COMPANY = [
 ];
 
 const SOCIAL = [
-  { href: "https://instagram.com/ghxstship", label: "Instagram", icon: "ph-instagram-logo" },
-  { href: "https://linkedin.com/company/ghxstship", label: "LinkedIn", icon: "ph-linkedin-logo" },
-  { href: "https://youtube.com/@ghxstship", label: "YouTube", icon: "ph-youtube-logo" },
-  { href: "https://tiktok.com/@ghxstship", label: "TikTok", icon: "ph-tiktok-logo" },
-  { href: "https://x.com/ghxstship", label: "X", icon: "ph-x-logo" },
+  { href: "https://instagram.com/ghxstship.xyz", label: "Instagram", icon: "ph-instagram-logo" },
+  { href: "https://x.com/ghxstship_xyz", label: "X", icon: "ph-x-logo" },
+  { href: "https://www.tiktok.com/@ghxstship.pro", label: "TikTok", icon: "ph-tiktok-logo" },
+  { href: "https://www.youtube.com/@ghxstship", label: "YouTube", icon: "ph-youtube-logo" },
+  { href: "https://www.facebook.com/ghxstship.xyz", label: "Facebook", icon: "ph-facebook-logo" },
+  { href: "https://soundcloud.com/ghxstship", label: "SoundCloud", icon: "ph-soundcloud-logo" },
+  { href: "https://www.linkedin.com/company/ghxstship", label: "LinkedIn", icon: "ph-linkedin-logo" },
 ];
 
 const PLATFORMS = [

@@ -133,7 +133,7 @@ function applicationReceiptEmail(name, role) {
   var social =
     '<p style="margin:22px 0 8px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.fg3 + ';text-transform:uppercase">Follow the voyage</p>' +
     '<p style="margin:0">' +
-    [["Instagram", "https://instagram.com/ghxstship"], ["LinkedIn", "https://linkedin.com/company/ghxstship"], ["YouTube", "https://youtube.com/@ghxstship"], ["X", "https://x.com/ghxstship"]]
+    [["Instagram", "https://instagram.com/ghxstship.xyz"], ["LinkedIn", "https://linkedin.com/company/ghxstship"], ["YouTube", "https://youtube.com/@ghxstship"], ["X", "https://x.com/ghxstship_xyz"]]
       .map(function (s) { return '<a href="' + s[1] + '" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none;margin-right:16px">' + s[0] + "</a>"; })
       .join("") + "</p>";
   var body =
@@ -187,10 +187,10 @@ function receiptEmail(name) {
     '<p style="margin:22px 0 8px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.fg3 + ';text-transform:uppercase">Follow the voyage</p>' +
     '<p style="margin:0">' +
     [
-      ["Instagram", "https://instagram.com/ghxstship"],
+      ["Instagram", "https://instagram.com/ghxstship.xyz"],
       ["LinkedIn", "https://linkedin.com/company/ghxstship"],
       ["YouTube", "https://youtube.com/@ghxstship"],
-      ["X", "https://x.com/ghxstship"],
+      ["X", "https://x.com/ghxstship_xyz"],
     ]
       .map(function (s) {
         return '<a href="' + s[1] + '" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none;margin-right:16px">' + s[0] + "</a>";
