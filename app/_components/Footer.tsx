@@ -28,6 +28,7 @@ const SOCIAL = [
   { href: "https://www.facebook.com/ghxstship.tours", label: "Facebook", icon: "ph-facebook-logo" },
   { href: "https://www.tiktok.com/@ghxstship.tours", label: "TikTok", icon: "ph-tiktok-logo" },
   { href: "https://www.youtube.com/@ghxstship", label: "YouTube", icon: "ph-youtube-logo" },
+  { href: "https://soundcloud.com/ghxstship", label: "SoundCloud", icon: "ph-soundcloud-logo" },
   { href: "https://www.linkedin.com/company/ghxstship", label: "LinkedIn", icon: "ph-linkedin-logo" },
 ];
 

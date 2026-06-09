@@ -133,7 +133,7 @@ function applicationReceiptEmail(name, role) {
   var social =
     '<p style="margin:22px 0 8px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.fg3 + ';text-transform:uppercase">Follow the voyage</p>' +
     '<p style="margin:0">' +
-    [["Instagram", "https://www.instagram.com/ghxstship.tours"], ["Facebook", "https://www.facebook.com/ghxstship.tours"], ["TikTok", "https://www.tiktok.com/@ghxstship.tours"], ["YouTube", "https://www.youtube.com/@ghxstship"], ["LinkedIn", "https://www.linkedin.com/company/ghxstship"]]
+    [["Instagram", "https://www.instagram.com/ghxstship.tours"], ["Facebook", "https://www.facebook.com/ghxstship.tours"], ["TikTok", "https://www.tiktok.com/@ghxstship.tours"], ["YouTube", "https://www.youtube.com/@ghxstship"], ["SoundCloud", "https://soundcloud.com/ghxstship"], ["LinkedIn", "https://www.linkedin.com/company/ghxstship"]]
       .map(function (s) { return '<a href="' + s[1] + '" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none;margin-right:16px">' + s[0] + "</a>"; })
       .join("") + "</p>";
   var body =
@@ -191,6 +191,7 @@ function receiptEmail(name) {
       ["Facebook", "https://www.facebook.com/ghxstship.tours"],
       ["TikTok", "https://www.tiktok.com/@ghxstship.tours"],
       ["YouTube", "https://www.youtube.com/@ghxstship"],
+      ["SoundCloud", "https://soundcloud.com/ghxstship"],
       ["LinkedIn", "https://www.linkedin.com/company/ghxstship"],
     ]
       .map(function (s) {
