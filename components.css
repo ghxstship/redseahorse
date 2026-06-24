@@ -25,7 +25,7 @@
   font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.03em; font-size:var(--fs-body-l); line-height: 1;
   padding:var(--space-14) var(--space-26); border:var(--stroke-1) solid transparent;
-  border-radius: var(--r-3); background: var(--brass); color: var(--on-brass, #012202);
+  border-radius: var(--r-3); background: var(--brass); color: var(--on-brass, #001800);
   box-shadow: var(--shadow-pop-sm); cursor: pointer; text-decoration: none;
   transition: transform var(--dur-3) cubic-bezier(.2,.7,.2,1), box-shadow var(--dur-3) ease, background .15s ease, filter .15s ease;
   user-select: none;

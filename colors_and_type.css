@@ -15,32 +15,31 @@
 
 :root {
   /* ---------------------------------------------------------------------
-     CORE PALETTE — GHXSTSHIP "mono-green" (approved palette v8)
-     The whole system resolves to ONE accent — Accent 1 #2edb3a — on the
-     Background/Foreground duality (#000000 / #ededed). Products & verticals
-     differentiate by TYPE, LAYOUT & ICONOGRAPHY, not hue. The 5 approved
-     swatches: Background #000000 · Foreground #ededed · Accent 1 #2edb3a ·
-     Accent 2 #6ee176 · Accent 3 #ade7b1. Functional signals (success/warning/
-     danger/info) stay multi-hue below — those are not brand accents.
+     CORE PALETTE — GHXSTSHIP house green on the ATLVS kit v2 neutral ramp.
+     House accent = #2edb3a (the GHXSTSHIP brand). Surfaces ride v2's cool
+     blue-gray neutral ramp (NOT pure black): dark ground #111318 → text
+     #f2f4f8. Green roles follow v2 brand.css (base/hover/on/text/lift/
+     lift-text). Products own their own accents (below). Functional signals
+     (success/warning/danger/info) stay multi-hue — not brand accents.
      Token NAMES are retained so every page keeps working; only values changed.
      --------------------------------------------------------------------- */
-  --void:        #000000;  /* Background swatch — primary dark ground         */
-  --ink:         #0D0D0D;  /* base dark surface                               */
-  --ink-2:       #171717;  /* raised surface                                  */
-  --ink-3:       #262626;  /* hairlines / muted strokes on dark              */
+  --void:        #111318;  /* v2 neutral-d-0 — primary dark ground            */
+  --ink:         #1A1D24;  /* v2 neutral-d-50 — base dark surface             */
+  --ink-2:       #232730;  /* v2 neutral-d-100 — raised surface               */
+  --ink-3:       #2C313B;  /* v2 neutral-d-200 — hairlines / strokes on dark */
 
-  --bone:        #EDEDED;  /* Foreground swatch — light ground / text on dark */
-  --parchment:   #EDEDED;  /* light surface                                   */
-  --parchment-2: #D6D6D6;  /* dividers / edge on light                        */
+  --bone:        #F2F4F8;  /* v2 neutral-d-1000 — light ground / text on dark */
+  --parchment:   #F7F8FA;  /* v2 neutral-l-50 — light surface                 */
+  --parchment-2: #E4E7EC;  /* v2 neutral-l-200 — dividers / edge on light     */
 
-  /* SIGNALS — collapsed to the single approved green (mono-accent doctrine) */
-  --brass:       #2EDB3A;  /* Accent 1 — primary brand fill (bright)          */
-  --on-brass:    #012202;  /* dark ink that sits ON the bright green          */
-  --brass-deep:  #17C62A;  /* base, one step darker — shadow/hover            */
-  --nebula:      #ADE7B1;  /* Accent 3 — pale green highlight                 */
-  --plasma:      #6EE176;  /* Accent 2 — AA green link/secondary on dark      */
+  /* SIGNALS — GHXSTSHIP house green roles (v2 brand.css ghxstship-*) */
+  --brass:       #2EDB3A;  /* house base — primary brand fill (bright)        */
+  --on-brass:    #001800;  /* v2 -on — dark ink that sits ON the green        */
+  --brass-deep:  #00CA22;  /* v2 -hover — one step darker, shadow/hover       */
+  --nebula:      #43E94B;  /* v2 -lift — bright dark-mode green highlight      */
+  --plasma:      #7DCE7B;  /* v2 -lift-text — AA green link/secondary on dark */
   --flare:       #E5484D;  /* functional alert/danger (multi-hue signal)      */
-  --aurora:      #17C62A;  /* deep green accent                               */
+  --aurora:      #00CA22;  /* deep green accent (v2 -hover)                    */
   /* Product accents — each product owns its OWN accent (per ATLVS kit v2
      brand.css). GHXSTSHIP green (--brass) is the HOUSE brand only; the
      products differentiate by hue here. base = bright fill · -deep = hover. */
@@ -48,18 +47,18 @@
   --compvss:     #FFC400;  /* COMPVSS — signal yellow */ --compvss-deep: #EEB400;
   --gvteway:     #2563EB;  /* GVTEWAY — blue         */  --gvteway-deep: #1F57D6;
 
-  /* GREEN-on-light variants (AA text-safe on light grounds) */
-  --jade-ink:    #147D1C;  /* AA green for text/UI on light grounds          */
-  --pineapple-deep:#147D1C;/* green text/UI on light                         */
-  --sapphire-ink:#147D1C;  /* green link/UI on light                         */
+  /* GREEN-on-light variants (AA text-safe on light grounds — v2 -text) */
+  --jade-ink:    #1F8425;  /* v2 ghxstship -text — AA green on light grounds */
+  --pineapple-deep:#1F8425;/* green text/UI on light                         */
+  --sapphire-ink:#1F8425;  /* green link/UI on light                         */
 
-  /* TEXT RAMPS — on dark / on light (neutral ramp, AA-tuned) */
-  --fg-on-dark-1: #EDEDED; /* primary text on dark                           */
-  --fg-on-dark-2: #B0B0B0; /* secondary text on dark                         */
-  --fg-on-dark-3: #909090; /* tertiary / captions on dark (AA 6.6:1 on #000) */
-  --fg-on-light-1:#1C1C1C; /* primary text on light                          */
-  --fg-on-light-2:#424242; /* secondary text on light                        */
-  --fg-on-light-3:#5C5C5C; /* tertiary on light (AA 5.7:1 on #ededed)        */
+  /* TEXT RAMPS — on dark / on light (v2 neutral ramp, AA-tuned) */
+  --fg-on-dark-1: #F2F4F8; /* v2 neutral-d-1000 — primary text on dark       */
+  --fg-on-dark-2: #AEB6C4; /* v2 neutral-d-700 — secondary text on dark      */
+  --fg-on-dark-3: #9098A4; /* v2 neutral-d-600 — tertiary (AA 5.8:1 on dark) */
+  --fg-on-light-1:#232932; /* v2 neutral-l-900 — primary text on light       */
+  --fg-on-light-2:#4A5563; /* v2 neutral-l-700 — secondary text on light     */
+  --fg-on-light-3:#656D7A; /* v2 neutral-l-600 — tertiary (AA 4.9:1 on bg)   */
 
   /* SEMANTIC — functional signals, intentionally multi-hue */
   --success:   #2FA968;
