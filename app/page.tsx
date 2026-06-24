@@ -246,7 +246,7 @@ export default function Page() {
     <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience. Scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
     <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground. Logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
     <div className="ccard v"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room. Programming, bookings, facility and vendor operations, the space managed start to finish.</p></div>
-    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments. <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span> plus immersive show tech, so the plan, the people running it, and the gate all live in one place.</p></div>
+    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments. <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span> plus immersive show tech, so the plan, the people running it, and the gate all live in one place.</p></div>
   </div>
 </div></section>
 

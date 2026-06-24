@@ -83,8 +83,9 @@
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -185,10 +186,10 @@
   <h2 class="sec">Four Platforms, One Floor.</h2>
   <p class="lede">The technology layer of XPMS is four platforms a production runs on. Each owns a job, and they share one source of truth.</p>
   <div class="caps" style="margin-top:var(--space-32)">
-    <div class="cap"><i class="ph-bold ph-squares-four"></i><b style="color:var(--bone)"><span class="pn-atlvs">ATLVS</span></b> — production &amp; resource management, the operator system.</div>
-    <div class="cap"><i class="ph-bold ph-device-mobile"></i><b style="color:var(--bone)"><span class="pn-compvss">COMPVSS</span></b> — workforce &amp; crew, the app in the field.</div>
-    <div class="cap"><i class="ph-bold ph-ticket"></i><b style="color:var(--bone)"><span class="pn-gvteway">GVTEWAY</span></b> — ticketing, access &amp; fan engagement, the guest gateway.</div>
-    <div class="cap"><i class="ph-bold ph-book-bookmark"></i><b style="color:var(--bone)"><span class="pn-legend">LEG3ND</span></b> — standards, knowledge &amp; the production record.</div>
+    <div class="cap"><i class="ph-bold ph-squares-four"></i><span class="cap-t"><b style="color:var(--bone)"><span class="pn-atlvs">ATLVS</span></b> — production &amp; resource management, the operator system.</span></div>
+    <div class="cap"><i class="ph-bold ph-device-mobile"></i><span class="cap-t"><b style="color:var(--bone)"><span class="pn-compvss">COMPVSS</span></b> — workforce &amp; crew, the app in the field.</span></div>
+    <div class="cap"><i class="ph-bold ph-ticket"></i><span class="cap-t"><b style="color:var(--bone)"><span class="pn-gvteway">GVTEWAY</span></b> — ticketing, access &amp; fan engagement, the guest gateway.</span></div>
+    <div class="cap"><i class="ph-bold ph-book-bookmark"></i><span class="cap-t"><b style="color:var(--bone)"><span class="pn-legend">LEG3ND</span></b> — standards, knowledge &amp; the production record.</span></div>
   </div>
 </div></section>
 
@@ -197,9 +198,9 @@
   <h2 class="sec">The Classes We Activate.</h2>
   <p class="lede">XPMS maps every deliverable to a department class and a production phase. Immersive Technologies lights up three.</p>
   <div class="caps" style="margin-top:var(--space-32)">
-    <div class="cap"><i class="ph-bold ph-circuitry"></i><b style="color:var(--bone)">Technology</b> — the platforms above, integrations, the data pipeline, dashboards &amp; reporting.</div>
-    <div class="cap"><i class="ph-bold ph-cube-transparent"></i><b style="color:var(--bone)">Experience</b> — interactive media, show control, sensors &amp; real-time content.</div>
-    <div class="cap"><i class="ph-bold ph-paint-brush-broad"></i><b style="color:var(--bone)">Creative</b> — content systems and the tech that serves the creative.</div>
+    <div class="cap"><i class="ph-bold ph-circuitry"></i><span class="cap-t"><b style="color:var(--bone)">Technology</b> — the platforms above, integrations, the data pipeline, dashboards &amp; reporting.</span></div>
+    <div class="cap"><i class="ph-bold ph-cube-transparent"></i><span class="cap-t"><b style="color:var(--bone)">Experience</b> — interactive media, show control, sensors &amp; real-time content.</span></div>
+    <div class="cap"><i class="ph-bold ph-paint-brush-broad"></i><span class="cap-t"><b style="color:var(--bone)">Creative</b> — content systems and the tech that serves the creative.</span></div>
   </div>
   <p class="answer" style="margin-top:var(--space-30)">Integrations meet your stack where it is, and show control drives the room. The data pipeline keeps ticketing, finance,
   scheduling, and access talking to each other, and the dashboards put the numbers on one screen so they reconcile.
@@ -248,9 +249,9 @@
   <p class="answer">We build the technology and we run it on the floor. The platforms come from people who advance the show
   and reconcile the settlement after it, so the tech serves the production instead of the other way around.</p>
   <div class="caps" style="margin-top:var(--space-32)">
-    <div class="cap"><i class="ph-bold ph-stack"></i><b style="color:var(--bone)">We build the platforms</b> — <span class="pn-atlvs">ATLVS</span>, <span class="pn-compvss">COMPVSS</span>, <span class="pn-gvteway">GVTEWAY</span> &amp; <span class="pn-legend">LEG3ND</span>, in-house.</div>
-    <div class="cap"><i class="ph-bold ph-plugs-connected"></i><b style="color:var(--bone)">We meet your stack</b> — integrations &amp; a data pipeline that put the numbers on one screen.</div>
-    <div class="cap"><i class="ph-bold ph-pulse"></i><b style="color:var(--bone)">We run it live</b> — show control &amp; real-time content, on the floor with you.</div>
+    <div class="cap"><i class="ph-bold ph-stack"></i><span class="cap-t"><b style="color:var(--bone)">We build the platforms</b> — <span class="pn-atlvs">ATLVS</span>, <span class="pn-compvss">COMPVSS</span>, <span class="pn-gvteway">GVTEWAY</span> &amp; <span class="pn-legend">LEG3ND</span>, in-house.</span></div>
+    <div class="cap"><i class="ph-bold ph-plugs-connected"></i><span class="cap-t"><b style="color:var(--bone)">We meet your stack</b> — integrations &amp; a data pipeline that put the numbers on one screen.</span></div>
+    <div class="cap"><i class="ph-bold ph-pulse"></i><span class="cap-t"><b style="color:var(--bone)">We run it live</b> — show control &amp; real-time content, on the floor with you.</span></div>
   </div>
 </div></section>
 
@@ -285,7 +286,7 @@
     </div>
     <nav class="foot-col"><h5>Explore</h5><a href="../destinations/index.html">Destinations</a><a href="../solutions.html">Fleet</a><a href="../team.html">Crew</a><a href="../course.html">Course</a><a href="../work/index.html">Archives</a><a href="../resources/blog.html">Logs</a><a href="../gallery.html">Gallery</a><a href="../store.html">Museum</a></nav>
     <nav class="foot-col"><h5>Company</h5><a href="../about.html">The Story</a><a href="../locations.html">Home Ports</a><a href="../resources/glossary.html">Glossary</a><a href="../careers/index.html">Careers</a><a href="../contact.html">Contact</a><a href="../contact.html">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a></nav>
+    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a><a href="https://atlvs.pro/legend"><span class="pn-legend">LEG3ND</span></a></nav>
   </div>
   <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>

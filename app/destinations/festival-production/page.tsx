@@ -42,8 +42,9 @@ export default function Page() {
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -129,12 +130,12 @@ export default function Page() {
   <p className="eyebrow">What We Build</p>
   <h2 className="sec">Everything a Festival Needs.</h2>
   <div className="caps">
-    <div className="cap"><i className="ph-bold ph-blueprint"></i>Site design &amp; infrastructure</div>
-    <div className="cap"><i className="ph-bold ph-cube"></i>Multi-stage design &amp; scenic build</div>
-    <div className="cap"><i className="ph-bold ph-waveform"></i>Audio, lighting, video &amp; rigging</div>
-    <div className="cap"><i className="ph-bold ph-lightning"></i>Power &amp; distribution</div>
-    <div className="cap"><i className="ph-bold ph-star"></i>Headliner &amp; talent experiences</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i>Permits, safety &amp; compliance</div>
+    <div className="cap"><i className="ph-bold ph-blueprint"></i><span className="cap-t">Site design &amp; infrastructure</span></div>
+    <div className="cap"><i className="ph-bold ph-cube"></i><span className="cap-t">Multi-stage design &amp; scenic build</span></div>
+    <div className="cap"><i className="ph-bold ph-waveform"></i><span className="cap-t">Audio, lighting, video &amp; rigging</span></div>
+    <div className="cap"><i className="ph-bold ph-lightning"></i><span className="cap-t">Power &amp; distribution</span></div>
+    <div className="cap"><i className="ph-bold ph-star"></i><span className="cap-t">Headliner &amp; talent experiences</span></div>
+    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t">Permits, safety &amp; compliance</span></div>
   </div>
 </div></section>
 
@@ -179,9 +180,9 @@ export default function Page() {
   <h2 className="sec">The Difference.</h2>
   <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that powers it.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</span></div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</span></div>
+    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</span></div>
   </div>
 </div></section>
 
@@ -189,7 +190,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Festival Production FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>, and <span className="pn-legend">LEG3ND</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
     <details><summary>What does GHXSTSHIP do for festivals?<span className="ic">+</span></summary><p className="a">End-to-end festival production: site and infrastructure, multi-stage design and build, technical production (audio, lighting, video, rigging, power), and headliner experiences — managed through our eight-phase production lifecycle.</p></details>
     <details><summary>Who is festival production for?<span className="ic">+</span></summary><p className="a">Festival promoters, brands, talent buyers, and production directors who need one accountable partner from first consultation to load-out.</p></details>
     <details><summary>What size festivals can you produce?<span className="ic">+</span></summary><p className="a">From boutique single-stage events to 50,000-plus-capacity multi-stage festivals, with full infrastructure and logistics.</p></details>

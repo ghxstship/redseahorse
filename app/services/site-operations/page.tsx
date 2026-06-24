@@ -42,8 +42,9 @@ export default function Page() {
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -132,10 +133,10 @@ export default function Page() {
   Production Management System: eight department classes crossed with eight production phases, so nothing
   falls between the floor and the office. Here are the classes this work activates.</p>
   <div className="caps">
-    <div className="cap"><i className="ph-bold ph-truck"></i><b style={{color: 'var(--bone)'}}>Operations</b> — logistics, load-in and load-out, transport and freight, site and infrastructure, run-of-show, day-of show calling, incident management.</div>
-    <div className="cap"><i className="ph-bold ph-wrench"></i><b style={{color: 'var(--bone)'}}>Production</b> — technical operations on site, build-to-run handoff, vendor coordination on the ground.</div>
-    <div className="cap"><i className="ph-bold ph-users-three"></i><b style={{color: 'var(--bone)'}}>Talent</b> — crew and workforce scheduling, call times, credentialing and access, run in <span className="pn-compvss">COMPVSS</span> and <span className="pn-gvteway">GVTEWAY</span>.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Executive</b> — health, safety and compliance ownership, the accountable operations lead on site.</div>
+    <div className="cap"><i className="ph-bold ph-truck"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Operations</b> — logistics, load-in and load-out, transport and freight, site and infrastructure, run-of-show, day-of show calling, incident management.</span></div>
+    <div className="cap"><i className="ph-bold ph-wrench"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Production</b> — technical operations on site, build-to-run handoff, vendor coordination on the ground.</span></div>
+    <div className="cap"><i className="ph-bold ph-users-three"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Talent</b> — crew and workforce scheduling, call times, credentialing and access, run in <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>, and <span className="pn-legend">LEG3ND</span>.</span></div>
+    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Executive</b> — health, safety and compliance ownership, the accountable operations lead on site.</span></div>
   </div>
 </div></section>
 
@@ -183,9 +184,9 @@ export default function Page() {
   the schedule slips. We treat operations as its own discipline. One accountable lead stays on the floor, and the
   work runs on tooling we built ourselves.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-megaphone"></i><b style={{color: 'var(--bone)'}}>One accountable lead</b> — The Foreman calls the show and answers for the site.</div>
-    <div className="cap"><i className="ph-bold ph-identification-card"></i><b style={{color: 'var(--bone)'}}>Crew and access, handled</b> — schedules in <span className="pn-compvss">COMPVSS</span>, credentials in <span className="pn-gvteway">GVTEWAY</span>.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Safety we own</b> — compliance is a job somebody works on the floor, with permits, inspections, and incident protocol carried as part of it.</div>
+    <div className="cap"><i className="ph-bold ph-megaphone"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>One accountable lead</b> — The Foreman calls the show and answers for the site.</span></div>
+    <div className="cap"><i className="ph-bold ph-identification-card"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Crew and access, handled</b> — schedules in <span className="pn-compvss">COMPVSS</span>, credentials in <span className="pn-gvteway">GVTEWAY</span>.</span></div>
+    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Safety we own</b> — compliance is a job somebody works on the floor, with permits, inspections, and incident protocol carried as part of it.</span></div>
   </div>
 </div></section>
 

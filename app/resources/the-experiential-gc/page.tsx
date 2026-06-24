@@ -96,7 +96,7 @@ export default function Page() {
     <h2>Operations: the run</h2>
     <p>The foreman crews it and runs it. Logistics and load-in, workforce and crew management, vendor and procurement coordination, health, safety and compliance, and the day-of call. It's a real discipline with its own people, not something bolted onto creative at the end.</p>
     <h2>Technology: the coordination</h2>
-    <p>The software is how the whole thing stays in sync: <span className="pn-atlvs">ATLVS</span> for production and resource management, <span className="pn-compvss">COMPVSS</span> for workforce and crew, <span className="pn-gvteway">GVTEWAY</span> for ticketing and fans, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
+    <p>The software is how the whole thing stays in sync: <span className="pn-atlvs">ATLVS</span> for production and resource management, <span className="pn-compvss">COMPVSS</span> for workforce and crew, <span className="pn-gvteway">GVTEWAY</span> for ticketing and fans, and <span className="pn-legend">LEG3ND</span> for the production standard, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
     <h2>Why it matters</h2>
     <p>For general contractors, venue operators, brands, and promoters, it means one partner to hold accountable instead of a dozen, working off a single schedule that everyone can actually see. On time, on budget, and nothing hidden in someone else's inbox.</p>
     <div style={{display: 'flex', gap: 'var(--space-14)', flexWrap: 'wrap', margin: 'var(--space-32) 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/resources/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>

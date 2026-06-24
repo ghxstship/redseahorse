@@ -42,8 +42,9 @@ export default function Page() {
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -136,11 +137,11 @@ export default function Page() {
     steel Production cuts from it never drift apart. Here are the classes experiential production turns
     on.</p>
   <div className="caps">
-    <div className="cap"><i className="ph-bold ph-pen-nib"></i><b style={{color: 'var(--bone)'}}>Creative</b>&nbsp;— creative direction, experiential &amp; scenic design, content and show design.</div>
-    <div className="cap"><i className="ph-bold ph-cube"></i><b style={{color: 'var(--bone)'}}>Production</b>&nbsp;— scenic fabrication, staging &amp; rigging, technical production for audio, video &amp; lighting, plus production management and budgets.</div>
-    <div className="cap"><i className="ph-bold ph-users-three"></i><b style={{color: 'var(--bone)'}}>Talent</b>&nbsp;— performers, specialty acts, and the crew who build and run the show.</div>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>Experience</b>&nbsp;— the audience journey, moment design, and how the world reads from the floor.</div>
-    <div className="cap"><i className="ph-bold ph-crown-simple"></i><b style={{color: 'var(--bone)'}}>Executive</b>&nbsp;— the accountable producer who owns the budget and the schedule end to end.</div>
+    <div className="cap"><i className="ph-bold ph-pen-nib"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Creative</b>&nbsp;— creative direction, experiential &amp; scenic design, content and show design.</span></div>
+    <div className="cap"><i className="ph-bold ph-cube"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Production</b>&nbsp;— scenic fabrication, staging &amp; rigging, technical production for audio, video &amp; lighting, plus production management and budgets.</span></div>
+    <div className="cap"><i className="ph-bold ph-users-three"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Talent</b>&nbsp;— performers, specialty acts, and the crew who build and run the show.</span></div>
+    <div className="cap"><i className="ph-bold ph-path"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Experience</b>&nbsp;— the audience journey, moment design, and how the world reads from the floor.</span></div>
+    <div className="cap"><i className="ph-bold ph-crown-simple"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Executive</b>&nbsp;— the accountable producer who owns the budget and the schedule end to end.</span></div>
   </div>
 </div></section>
 
@@ -196,9 +197,9 @@ export default function Page() {
     creative and the fabrication shop and the crew and the producer under one roof, on XPMS, so the
     person who drew it is talking to the person cutting it. We build the technology that runs it too.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>One accountable crew</b>&nbsp;— all 8 phases under one producer, so you're never chasing a vendor relay.</div>
-    <div className="cap"><i className="ph-bold ph-hammer"></i><b style={{color: 'var(--bone)'}}>We fabricate</b>&nbsp;— scenic, staging, and rigging built by the crew who install it.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We build the tech</b>&nbsp;— <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>One accountable crew</b>&nbsp;— all 8 phases under one producer, so you're never chasing a vendor relay.</span></div>
+    <div className="cap"><i className="ph-bold ph-hammer"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We fabricate</b>&nbsp;— scenic, staging, and rigging built by the crew who install it.</span></div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We build the tech</b>&nbsp;— <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</span></div>
   </div>
 </div></section>
 

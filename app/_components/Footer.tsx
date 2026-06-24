@@ -40,6 +40,7 @@ const PLATFORMS = [
   { href: "https://atlvs.pro", label: "ATLVS", cls: "pn-atlvs" },
   { href: "https://atlvs.pro/compvss", label: "COMPVSS", cls: "pn-compvss" },
   { href: "https://atlvs.pro/gvteway", label: "GVTEWAY", cls: "pn-gvteway" },
+  { href: "https://atlvs.pro/legend", label: "LEG3ND", cls: "pn-legend" },
 ];
 
 export default function Footer() {

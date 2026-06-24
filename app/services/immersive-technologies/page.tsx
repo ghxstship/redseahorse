@@ -42,8 +42,9 @@ export default function Page() {
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -132,10 +133,10 @@ export default function Page() {
   <h2 className="sec">Four Platforms, One Floor.</h2>
   <p className="lede">The technology layer of XPMS is four platforms a production runs on. Each owns a job, and they share one source of truth.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-squares-four"></i><b style={{color: 'var(--bone)'}}><span className="pn-atlvs">ATLVS</span></b> — production &amp; resource management, the operator system.</div>
-    <div className="cap"><i className="ph-bold ph-device-mobile"></i><b style={{color: 'var(--bone)'}}><span className="pn-compvss">COMPVSS</span></b> — workforce &amp; crew, the app in the field.</div>
-    <div className="cap"><i className="ph-bold ph-ticket"></i><b style={{color: 'var(--bone)'}}><span className="pn-gvteway">GVTEWAY</span></b> — ticketing, access &amp; fan engagement, the guest gateway.</div>
-    <div className="cap"><i className="ph-bold ph-book-bookmark"></i><b style={{color: 'var(--bone)'}}><span className="pn-legend">LEG3ND</span></b> — standards, knowledge &amp; the production record.</div>
+    <div className="cap"><i className="ph-bold ph-squares-four"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}><span className="pn-atlvs">ATLVS</span></b> — production &amp; resource management, the operator system.</span></div>
+    <div className="cap"><i className="ph-bold ph-device-mobile"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}><span className="pn-compvss">COMPVSS</span></b> — workforce &amp; crew, the app in the field.</span></div>
+    <div className="cap"><i className="ph-bold ph-ticket"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}><span className="pn-gvteway">GVTEWAY</span></b> — ticketing, access &amp; fan engagement, the guest gateway.</span></div>
+    <div className="cap"><i className="ph-bold ph-book-bookmark"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}><span className="pn-legend">LEG3ND</span></b> — standards, knowledge &amp; the production record.</span></div>
   </div>
 </div></section>
 
@@ -144,9 +145,9 @@ export default function Page() {
   <h2 className="sec">The Classes We Activate.</h2>
   <p className="lede">XPMS maps every deliverable to a department class and a production phase. Immersive Technologies lights up three.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-circuitry"></i><b style={{color: 'var(--bone)'}}>Technology</b> — the platforms above, integrations, the data pipeline, dashboards &amp; reporting.</div>
-    <div className="cap"><i className="ph-bold ph-cube-transparent"></i><b style={{color: 'var(--bone)'}}>Experience</b> — interactive media, show control, sensors &amp; real-time content.</div>
-    <div className="cap"><i className="ph-bold ph-paint-brush-broad"></i><b style={{color: 'var(--bone)'}}>Creative</b> — content systems and the tech that serves the creative.</div>
+    <div className="cap"><i className="ph-bold ph-circuitry"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Technology</b> — the platforms above, integrations, the data pipeline, dashboards &amp; reporting.</span></div>
+    <div className="cap"><i className="ph-bold ph-cube-transparent"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Experience</b> — interactive media, show control, sensors &amp; real-time content.</span></div>
+    <div className="cap"><i className="ph-bold ph-paint-brush-broad"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Creative</b> — content systems and the tech that serves the creative.</span></div>
   </div>
   <p className="answer" style={{marginTop: 'var(--space-30)'}}>Integrations meet your stack where it is, and show control drives the room. The data pipeline keeps ticketing, finance,
   scheduling, and access talking to each other, and the dashboards put the numbers on one screen so they reconcile.
@@ -195,9 +196,9 @@ export default function Page() {
   <p className="answer">We build the technology and we run it on the floor. The platforms come from people who advance the show
   and reconcile the settlement after it, so the tech serves the production instead of the other way around.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-stack"></i><b style={{color: 'var(--bone)'}}>We build the platforms</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</div>
-    <div className="cap"><i className="ph-bold ph-plugs-connected"></i><b style={{color: 'var(--bone)'}}>We meet your stack</b> — integrations &amp; a data pipeline that put the numbers on one screen.</div>
-    <div className="cap"><i className="ph-bold ph-pulse"></i><b style={{color: 'var(--bone)'}}>We run it live</b> — show control &amp; real-time content, on the floor with you.</div>
+    <div className="cap"><i className="ph-bold ph-stack"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We build the platforms</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</span></div>
+    <div className="cap"><i className="ph-bold ph-plugs-connected"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We meet your stack</b> — integrations &amp; a data pipeline that put the numbers on one screen.</span></div>
+    <div className="cap"><i className="ph-bold ph-pulse"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We run it live</b> — show control &amp; real-time content, on the floor with you.</span></div>
   </div>
 </div></section>
 

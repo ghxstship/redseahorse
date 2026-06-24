@@ -107,7 +107,7 @@ export default function Page() {
     <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience: scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
     <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground: logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
     <div className="pc"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room: programming, bookings, facility and vendor operations, and on-site teams.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments: <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, the platforms the whole build runs on.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments: <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, the platforms the whole build runs on.</p></div>
   </div>
 </div></section>
 <section className="pad"><div className="wrap">

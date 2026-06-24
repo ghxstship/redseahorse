@@ -356,6 +356,7 @@ header.nav.is-scrolled {
 @media (max-width: 68.75rem) {
   /* Below ~1100px: hide inline desktop links uniformly, show the hamburger. */
   header.nav .navlinks a:not(.gx-btn),
+  header.nav .navlinks .nav-item,
   header.nav .navlinks .cart { display: none !important; }
   .nav-toggle {
     display: inline-flex; align-items: center; justify-content: center;
@@ -367,6 +368,52 @@ header.nav.is-scrolled {
   /* Keep the top-bar CTA on wider phones; hide it <=24rem to make room. */
   @media (max-width: 24rem) { header.nav .navlinks a.gx-btn { display: none; } }
 }
+
+/* ---- DROPDOWN NAV (Destinations / Services) -----------------------------
+   Desktop: hover/focus reveals a submenu of the section's nested pages.
+   Mobile: the same children render as indented links inside the drawer. */
+.navlinks .nav-item { position: relative; display: inline-flex; align-items: center; }
+.navlinks .nav-item > a { display: inline-flex; align-items: center; gap: 6px; }
+.nav-caret {
+  width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 4px solid currentColor; opacity: .55; transition: transform .15s ease, opacity .15s ease;
+}
+.navlinks .nav-item:hover .nav-caret,
+.navlinks .nav-item:focus-within .nav-caret { transform: rotate(180deg); opacity: 1; }
+.nav-sub {
+  position: absolute; top: calc(100% + 12px); left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 15rem; background: var(--ink);
+  border: var(--stroke-1) solid var(--ink-3); border-radius: var(--r-2);
+  padding: var(--space-6); display: flex; flex-direction: column; gap: 2px;
+  box-shadow: 0 14px 44px rgba(0,0,0,.5); z-index: 60;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+}
+/* invisible bridge so the cursor can cross the gap without dropping the hover */
+.nav-sub::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+.navlinks .nav-item:hover .nav-sub,
+.navlinks .nav-item:focus-within .nav-sub {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
+}
+.nav-sub a {
+  font-family: var(--font-mono); font-size: var(--fs-label); letter-spacing: .08em;
+  text-transform: uppercase; color: var(--fg-on-dark-2) !important;
+  padding: var(--space-10) var(--sp-3); border-radius: var(--r-1);
+  white-space: nowrap; text-decoration: none;
+}
+.nav-sub a::after { display: none !important; } /* no underline-sweep inside the menu */
+.nav-sub a:hover { background: var(--ink-2); color: var(--brass) !important; }
+/* Mobile drawer: nested service/destination links, indented under their parent. */
+.nav-drawer-group { display: contents; }
+.nav-drawer-sublink {
+  font-family: var(--font-mono) !important; font-weight: 400 !important;
+  font-size: var(--fs-body) !important; letter-spacing: .06em;
+  line-height: 1.2 !important; color: var(--fg-on-dark-2) !important;
+  padding: var(--space-12) 0 !important; padding-left: var(--sp-4) !important;
+  border-bottom: var(--stroke-1) solid var(--ink-2) !important;
+}
+.nav-drawer-sublink::before { content: "— "; opacity: .5; }
 
 .nav-toggle-bars { display: block; width: 18px; height: 14px; position: relative; }
 .nav-toggle-bars i {

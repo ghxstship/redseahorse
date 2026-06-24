@@ -71,8 +71,9 @@
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -173,10 +174,10 @@
   Production Management System: eight department classes crossed with eight production phases, so nothing
   falls between the floor and the office. Here are the classes this work activates.</p>
   <div class="caps">
-    <div class="cap"><i class="ph-bold ph-truck"></i><b style="color:var(--bone)">Operations</b> — logistics, load-in and load-out, transport and freight, site and infrastructure, run-of-show, day-of show calling, incident management.</div>
-    <div class="cap"><i class="ph-bold ph-wrench"></i><b style="color:var(--bone)">Production</b> — technical operations on site, build-to-run handoff, vendor coordination on the ground.</div>
-    <div class="cap"><i class="ph-bold ph-users-three"></i><b style="color:var(--bone)">Talent</b> — crew and workforce scheduling, call times, credentialing and access, run in <span class="pn-compvss">COMPVSS</span> and <span class="pn-gvteway">GVTEWAY</span>.</div>
-    <div class="cap"><i class="ph-bold ph-shield-check"></i><b style="color:var(--bone)">Executive</b> — health, safety and compliance ownership, the accountable operations lead on site.</div>
+    <div class="cap"><i class="ph-bold ph-truck"></i><span class="cap-t"><b style="color:var(--bone)">Operations</b> — logistics, load-in and load-out, transport and freight, site and infrastructure, run-of-show, day-of show calling, incident management.</span></div>
+    <div class="cap"><i class="ph-bold ph-wrench"></i><span class="cap-t"><b style="color:var(--bone)">Production</b> — technical operations on site, build-to-run handoff, vendor coordination on the ground.</span></div>
+    <div class="cap"><i class="ph-bold ph-users-three"></i><span class="cap-t"><b style="color:var(--bone)">Talent</b> — crew and workforce scheduling, call times, credentialing and access, run in <span class="pn-compvss">COMPVSS</span>, <span class="pn-gvteway">GVTEWAY</span>, and <span class="pn-legend">LEG3ND</span>.</span></div>
+    <div class="cap"><i class="ph-bold ph-shield-check"></i><span class="cap-t"><b style="color:var(--bone)">Executive</b> — health, safety and compliance ownership, the accountable operations lead on site.</span></div>
   </div>
 </div></section>
 
@@ -224,9 +225,9 @@
   the schedule slips. We treat operations as its own discipline. One accountable lead stays on the floor, and the
   work runs on tooling we built ourselves.</p>
   <div class="caps" style="margin-top:var(--space-32)">
-    <div class="cap"><i class="ph-bold ph-megaphone"></i><b style="color:var(--bone)">One accountable lead</b> — The Foreman calls the show and answers for the site.</div>
-    <div class="cap"><i class="ph-bold ph-identification-card"></i><b style="color:var(--bone)">Crew and access, handled</b> — schedules in <span class="pn-compvss">COMPVSS</span>, credentials in <span class="pn-gvteway">GVTEWAY</span>.</div>
-    <div class="cap"><i class="ph-bold ph-shield-check"></i><b style="color:var(--bone)">Safety we own</b> — compliance is a job somebody works on the floor, with permits, inspections, and incident protocol carried as part of it.</div>
+    <div class="cap"><i class="ph-bold ph-megaphone"></i><span class="cap-t"><b style="color:var(--bone)">One accountable lead</b> — The Foreman calls the show and answers for the site.</span></div>
+    <div class="cap"><i class="ph-bold ph-identification-card"></i><span class="cap-t"><b style="color:var(--bone)">Crew and access, handled</b> — schedules in <span class="pn-compvss">COMPVSS</span>, credentials in <span class="pn-gvteway">GVTEWAY</span>.</span></div>
+    <div class="cap"><i class="ph-bold ph-shield-check"></i><span class="cap-t"><b style="color:var(--bone)">Safety we own</b> — compliance is a job somebody works on the floor, with permits, inspections, and incident protocol carried as part of it.</span></div>
   </div>
 </div></section>
 
@@ -261,7 +262,7 @@
     </div>
     <nav class="foot-col"><h5>Explore</h5><a href="../destinations/index.html">Destinations</a><a href="../solutions.html">Fleet</a><a href="../team.html">Crew</a><a href="../course.html">Course</a><a href="../work/index.html">Archives</a><a href="../resources/blog.html">Logs</a><a href="../gallery.html">Gallery</a><a href="../store.html">Museum</a></nav>
     <nav class="foot-col"><h5>Company</h5><a href="../about.html">The Story</a><a href="../locations.html">Home Ports</a><a href="../resources/glossary.html">Glossary</a><a href="../careers/index.html">Careers</a><a href="../contact.html">Contact</a><a href="../contact.html">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a></nav>
+    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a><a href="https://atlvs.pro/legend"><span class="pn-legend">LEG3ND</span></a></nav>
   </div>
   <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>

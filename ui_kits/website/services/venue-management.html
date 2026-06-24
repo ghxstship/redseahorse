@@ -71,8 +71,9 @@
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -172,10 +173,10 @@
   <h2 class="sec">Everything That Keeps the Room Running.</h2>
   <p class="lede" style="margin-bottom:var(--space-30)">We run the room on XPMS, our Experiential Production Management System: eight department classes across eight production phases. Venue Management activates the classes a live room needs, every date, on a repeating cycle.</p>
   <div class="caps">
-    <div class="cap"><i class="ph-bold ph-calendar-check"></i><b style="color:var(--bone)">Operations</b> — venue programming and booking calendar, facility operations, vendor management, settlement and reporting.</div>
-    <div class="cap"><i class="ph-bold ph-wine"></i><b style="color:var(--bone)">Hospitality</b> — F&amp;B, bars and catering, VIP and premium hospitality, front-of-house standards.</div>
-    <div class="cap"><i class="ph-bold ph-ticket"></i><b style="color:var(--bone)">Experience</b> — guest journey, box office and access on <span class="pn-gvteway">GVTEWAY</span>, the room as a designed experience.</div>
-    <div class="cap"><i class="ph-bold ph-user-focus"></i><b style="color:var(--bone)">Executive</b> — the accountable venue lead, P&amp;L and standards across every date.</div>
+    <div class="cap"><i class="ph-bold ph-calendar-check"></i><span class="cap-t"><b style="color:var(--bone)">Operations</b> — venue programming and booking calendar, facility operations, vendor management, settlement and reporting.</span></div>
+    <div class="cap"><i class="ph-bold ph-wine"></i><span class="cap-t"><b style="color:var(--bone)">Hospitality</b> — F&amp;B, bars and catering, VIP and premium hospitality, front-of-house standards.</span></div>
+    <div class="cap"><i class="ph-bold ph-ticket"></i><span class="cap-t"><b style="color:var(--bone)">Experience</b> — guest journey, box office and access on <span class="pn-gvteway">GVTEWAY</span>, the room as a designed experience.</span></div>
+    <div class="cap"><i class="ph-bold ph-user-focus"></i><span class="cap-t"><b style="color:var(--bone)">Executive</b> — the accountable venue lead, P&amp;L and standards across every date.</span></div>
   </div>
 </div></section>
 
@@ -226,9 +227,9 @@
     <span class="pn-gvteway">GVTEWAY</span>, so the people at the door and the numbers in the back office
     come from the same place.</p>
   <div class="caps" style="margin-top:var(--space-32)">
-    <div class="cap"><i class="ph-bold ph-user-focus"></i><b style="color:var(--bone)">One accountable lead</b> who owns the P&amp;L and the standard on every show.</div>
-    <div class="cap"><i class="ph-bold ph-compass-tool"></i>We run the room on the tech we build, with <span class="pn-gvteway">GVTEWAY</span> at the door.</div>
-    <div class="cap"><i class="ph-bold ph-calendar-check"></i>Operations owns the calendar, so the room stays full and the settlement stays clean.</div>
+    <div class="cap"><i class="ph-bold ph-user-focus"></i><span class="cap-t"><b style="color:var(--bone)">One accountable lead</b> who owns the P&amp;L and the standard on every show.</span></div>
+    <div class="cap"><i class="ph-bold ph-compass-tool"></i><span class="cap-t">We run the room on the tech we build, with <span class="pn-gvteway">GVTEWAY</span> at the door.</span></div>
+    <div class="cap"><i class="ph-bold ph-calendar-check"></i><span class="cap-t">Operations owns the calendar, so the room stays full and the settlement stays clean.</span></div>
   </div>
 </div></section>
 
@@ -263,7 +264,7 @@
     </div>
     <nav class="foot-col"><h5>Explore</h5><a href="../destinations/index.html">Destinations</a><a href="../solutions.html">Fleet</a><a href="../team.html">Crew</a><a href="../course.html">Course</a><a href="../work/index.html">Archives</a><a href="../resources/blog.html">Logs</a><a href="../gallery.html">Gallery</a><a href="../store.html">Museum</a></nav>
     <nav class="foot-col"><h5>Company</h5><a href="../about.html">The Story</a><a href="../locations.html">Home Ports</a><a href="../resources/glossary.html">Glossary</a><a href="../careers/index.html">Careers</a><a href="../contact.html">Contact</a><a href="../contact.html">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a></nav>
+    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a><a href="https://atlvs.pro/legend"><span class="pn-legend">LEG3ND</span></a></nav>
   </div>
   <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>

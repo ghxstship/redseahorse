@@ -42,8 +42,9 @@ export default function Page() {
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -126,12 +127,12 @@ export default function Page() {
   <p className="eyebrow">What We Build</p>
   <h2 className="sec">Everything a Tour Needs.</h2>
   <div className="caps">
-    <div className="cap"><i className="ph-bold ph-cube"></i>Show design &amp; staging</div>
-    <div className="cap"><i className="ph-bold ph-path"></i>Routing &amp; advancing</div>
-    <div className="cap"><i className="ph-bold ph-waveform"></i>Audio, lighting, video &amp; rigging</div>
-    <div className="cap"><i className="ph-bold ph-truck"></i>Trucking &amp; backline</div>
-    <div className="cap"><i className="ph-bold ph-users-three"></i>Crew &amp; tour management</div>
-    <div className="cap"><i className="ph-bold ph-currency-circle-dollar"></i>Budgets &amp; settlements</div>
+    <div className="cap"><i className="ph-bold ph-cube"></i><span className="cap-t">Show design &amp; staging</span></div>
+    <div className="cap"><i className="ph-bold ph-path"></i><span className="cap-t">Routing &amp; advancing</span></div>
+    <div className="cap"><i className="ph-bold ph-waveform"></i><span className="cap-t">Audio, lighting, video &amp; rigging</span></div>
+    <div className="cap"><i className="ph-bold ph-truck"></i><span className="cap-t">Trucking &amp; backline</span></div>
+    <div className="cap"><i className="ph-bold ph-users-three"></i><span className="cap-t">Crew &amp; tour management</span></div>
+    <div className="cap"><i className="ph-bold ph-currency-circle-dollar"></i><span className="cap-t">Budgets &amp; settlements</span></div>
   </div>
 </div></section>
 
@@ -172,9 +173,9 @@ export default function Page() {
   <h2 className="sec">The Difference.</h2>
   <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that powers it.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</span></div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</span></div>
+    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</span></div>
   </div>
 </div></section>
 
@@ -182,7 +183,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Touring FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>, and <span className="pn-legend">LEG3ND</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
     <details><summary>What does GHXSTSHIP do for tours?<span className="ic">+</span></summary><p className="a">End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management — on our eight-phase lifecycle.</p></details>
     <details><summary>Who is tour production for?<span className="ic">+</span></summary><p className="a">Artists and management, tour managers, promoters, and labels who need one accountable production partner across every city.</p></details>
     <details><summary>How many cities can you route?<span className="ic">+</span></summary><p className="a">From single-market runs to multi-continent routings, with full logistics, advancing, and settlements.</p></details>

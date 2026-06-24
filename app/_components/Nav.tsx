@@ -4,15 +4,41 @@
  * across client-side navigation (no re-mount, no flicker). React owns the
  * drawer state; usePathname closes it on route change. The drawer is a sibling
  * of <header> (not nested) so it sits at z-index 49, just under the z-50 nav —
- * keeping the close (X) button clickable. */
+ * keeping the close (X) button clickable.
+ *
+ * Destinations and Services carry `children` — rendered as a hover/focus
+ * dropdown on desktop and as indented sub-links inside the mobile drawer. */
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const LINKS = [
-  { href: "/destinations/", label: "Destinations" },
-  { href: "/solutions/", label: "Services" },
+type NavChild = { href: string; label: string };
+type NavLink = { href: string; label: string; children?: NavChild[] };
+
+const LINKS: NavLink[] = [
+  {
+    href: "/destinations/",
+    label: "Destinations",
+    children: [
+      { href: "/destinations/festival-production/", label: "Festival Production" },
+      { href: "/destinations/concert-tour-production/", label: "Concert & Tour Production" },
+      { href: "/destinations/brand-activations/", label: "Brand Activations" },
+      { href: "/destinations/immersive-experiences/", label: "Immersive Experiences" },
+      { href: "/destinations/sporting-events/", label: "Sporting Events" },
+      { href: "/destinations/tv-film-broadcast/", label: "TV, Film & Broadcast" },
+    ],
+  },
+  {
+    href: "/solutions/",
+    label: "Services",
+    children: [
+      { href: "/services/experiential-production/", label: "Experiential Production" },
+      { href: "/services/site-operations/", label: "Site Operations" },
+      { href: "/services/venue-management/", label: "Venue Management" },
+      { href: "/services/immersive-technologies/", label: "Immersive Technologies" },
+    ],
+  },
   { href: "/team/", label: "Crew" },
   { href: "/resources/blog/", label: "Logs" },
   { href: "/store/", label: "Museum" },
@@ -43,6 +69,8 @@ export default function Nav() {
     };
   }, [open]);
 
+  const close = () => setOpen(false);
+
   return (
     <>
       <header className={"nav" + (open ? " nav-is-open" : "")}>
@@ -52,11 +80,27 @@ export default function Nav() {
             <b>G H X S T S H I P</b>
           </Link>
           <nav className="navlinks" aria-label="Primary">
-            {LINKS.map((l) => (
-              <Link key={l.href} href={l.href}>
-                {l.label}
-              </Link>
-            ))}
+            {LINKS.map((l) =>
+              l.children ? (
+                <div key={l.href} className="nav-item">
+                  <Link href={l.href} aria-haspopup="true">
+                    {l.label}
+                    <span className="nav-caret" aria-hidden="true" />
+                  </Link>
+                  <div className="nav-sub" role="menu" aria-label={l.label}>
+                    {l.children.map((c) => (
+                      <Link key={c.href} href={c.href} role="menuitem">
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link key={l.href} href={l.href}>
+                  {l.label}
+                </Link>
+              )
+            )}
             <Link className="gx-btn gx-btn--sm" href="/contact/">
               Start a Project
             </Link>
@@ -88,11 +132,23 @@ export default function Nav() {
       >
         <nav className="nav-drawer-panel" aria-label="Mobile">
           {LINKS.map((l) => (
-            <Link key={l.href} className="nav-drawer-link" href={l.href} onClick={() => setOpen(false)}>
-              {l.label}
-            </Link>
+            <div key={l.href} className="nav-drawer-group">
+              <Link className="nav-drawer-link" href={l.href} onClick={close}>
+                {l.label}
+              </Link>
+              {l.children?.map((c) => (
+                <Link
+                  key={c.href}
+                  className="nav-drawer-link nav-drawer-sublink"
+                  href={c.href}
+                  onClick={close}
+                >
+                  {c.label}
+                </Link>
+              ))}
+            </div>
           ))}
-          <Link className="nav-drawer-link is-cta" href="/contact/" onClick={() => setOpen(false)}>
+          <Link className="nav-drawer-link is-cta" href="/contact/" onClick={close}>
             Start a Project
           </Link>
         </nav>

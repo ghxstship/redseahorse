@@ -85,7 +85,7 @@ export default function Page() {
   <article className="term"><h2>Show Caller</h2><p>The person who directs a live event in real time, calling cues to audio, lighting, video, and stage departments from the run of show.</p></article>
   <article className="term"><h2>Strike</h2><p>The controlled teardown, removal, and load-out of all production elements after a live event concludes, including reconciliation and site restoration.</p></article>
   <article className="term"><h2>Activation Footprint</h2><p>The total physical space and spatial layout a brand activation or installation occupies within a venue or site, including audience flow and technical zones.</p></article>
-  <article className="term"><h2>Experiential Technology</h2><p>The software and integrated systems that power live experience production and audience engagement — including production management (<span className="pn-atlvs">ATLVS</span>), workforce and crew management (<span className="pn-compvss">COMPVSS</span>), and ticketing platforms (<span className="pn-gvteway">GVTEWAY</span>).</p></article>
+  <article className="term"><h2>Experiential Technology</h2><p>The software and integrated systems that power live experience production and audience engagement — including production management (<span className="pn-atlvs">ATLVS</span>), workforce and crew management (<span className="pn-compvss">COMPVSS</span>), and ticketing platforms (<span className="pn-gvteway">GVTEWAY</span>), and the production standard (<span className="pn-legend">LEG3ND</span>).</p></article>
 </div></section>
 <section className="cta"><div className="wrap">
   <h3>Learn the Ropes.</h3>

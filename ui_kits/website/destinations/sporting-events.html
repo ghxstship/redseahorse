@@ -64,8 +64,9 @@
   .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
   .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:center;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass)}
+  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
+  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
+.cap-t{flex:1;min-width:0;line-height:1.5}
   .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
   .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
   .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
@@ -160,12 +161,12 @@
   <p class="eyebrow">What We Build</p>
   <h2 class="sec">Game-Day, Handled.</h2>
   <div class="caps">
-    <div class="cap"><i class="ph-bold ph-star"></i>Fan experience design</div>
-    <div class="cap"><i class="ph-bold ph-flag-banner"></i>Field &amp; stadium activations</div>
-    <div class="cap"><i class="ph-bold ph-video-camera"></i>Broadcast-ready staging</div>
-    <div class="cap"><i class="ph-bold ph-waveform"></i>Audio, lighting &amp; video</div>
-    <div class="cap"><i class="ph-bold ph-handshake"></i>Sponsorship integration</div>
-    <div class="cap"><i class="ph-bold ph-shield-check"></i>Safety &amp; crowd ops</div>
+    <div class="cap"><i class="ph-bold ph-star"></i><span class="cap-t">Fan experience design</span></div>
+    <div class="cap"><i class="ph-bold ph-flag-banner"></i><span class="cap-t">Field &amp; stadium activations</span></div>
+    <div class="cap"><i class="ph-bold ph-video-camera"></i><span class="cap-t">Broadcast-ready staging</span></div>
+    <div class="cap"><i class="ph-bold ph-waveform"></i><span class="cap-t">Audio, lighting &amp; video</span></div>
+    <div class="cap"><i class="ph-bold ph-handshake"></i><span class="cap-t">Sponsorship integration</span></div>
+    <div class="cap"><i class="ph-bold ph-shield-check"></i><span class="cap-t">Safety &amp; crowd ops</span></div>
   </div>
 </div></section>
 
@@ -207,9 +208,9 @@
   <h2 class="sec">The Difference.</h2>
   <p class="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that runs them.</p>
   <div class="caps" style="margin-top:var(--space-32)">
-    <div class="cap"><i class="ph-bold ph-path"></i><b style="color:var(--bone)">End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
-    <div class="cap"><i class="ph-bold ph-compass-tool"></i><b style="color:var(--bone)">We implement the tech</b> — <span class="pn-atlvs">ATLVS</span>, <span class="pn-compvss">COMPVSS</span> &amp; <span class="pn-gvteway">GVTEWAY</span>, in-house.</div>
-    <div class="cap"><i class="ph-bold ph-shield-check"></i><b style="color:var(--bone)">Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+    <div class="cap"><i class="ph-bold ph-path"></i><span class="cap-t"><b style="color:var(--bone)">End to end</b> — all 8 phases, one accountable crew running the whole build.</span></div>
+    <div class="cap"><i class="ph-bold ph-compass-tool"></i><span class="cap-t"><b style="color:var(--bone)">We implement the tech</b> — <span class="pn-atlvs">ATLVS</span>, <span class="pn-compvss">COMPVSS</span>, <span class="pn-gvteway">GVTEWAY</span> &amp; <span class="pn-legend">LEG3ND</span>, in-house.</span></div>
+    <div class="cap"><i class="ph-bold ph-shield-check"></i><span class="cap-t"><b style="color:var(--bone)">Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</span></div>
   </div>
 </div></section>
 
@@ -217,7 +218,7 @@
   <p class="eyebrow">Answers</p>
   <h2 class="sec">Sporting FAQ.</h2>
   <div class="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span class="ic">+</span></summary><p class="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span class="pn-atlvs">ATLVS</span>, <span class="pn-compvss">COMPVSS</span>, <span class="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span class="ic">+</span></summary><p class="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span class="pn-atlvs">ATLVS</span>, <span class="pn-compvss">COMPVSS</span>, <span class="pn-gvteway">GVTEWAY</span>, and <span class="pn-legend">LEG3ND</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
     <details><summary>What does GHXSTSHIP do for sporting events?<span class="ic">+</span></summary><p class="a">End-to-end sporting event production: fan experience design, field and stadium activations, broadcast-ready staging, technical production, sponsorship integration, and crowd operations — on our eight-phase lifecycle.</p></details>
     <details><summary>Who is sporting production for?<span class="ic">+</span></summary><p class="a">Leagues, teams, venues, federations, and brand sponsors who need a single accountable production partner.</p></details>
     <details><summary>Can you produce broadcast-ready moments?<span class="ic">+</span></summary><p class="a">Yes — staging and technical are built to broadcast standards for in-venue and on-air.</p></details>
@@ -244,7 +245,7 @@
     </div>
     <nav class="foot-col"><h5>Explore</h5><a href="../destinations/index.html">Destinations</a><a href="../solutions.html">Fleet</a><a href="../team.html">Crew</a><a href="../course.html">Course</a><a href="../work/index.html">Archives</a><a href="../resources/blog.html">Logs</a><a href="../gallery.html">Gallery</a><a href="../store.html">Museum</a></nav>
     <nav class="foot-col"><h5>Company</h5><a href="../about.html">The Story</a><a href="../locations.html">Home Ports</a><a href="../resources/glossary.html">Glossary</a><a href="../careers/index.html">Careers</a><a href="../contact.html">Contact</a><a href="../contact.html">Start a Project</a></nav>
-    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a></nav>
+    <nav class="foot-col"><h5>Platforms</h5><a href="https://atlvs.pro"><span class="pn-atlvs">ATLVS</span></a><a href="https://atlvs.pro/compvss"><span class="pn-compvss">COMPVSS</span></a><a href="https://atlvs.pro/gvteway"><span class="pn-gvteway">GVTEWAY</span></a><a href="https://atlvs.pro/legend"><span class="pn-legend">LEG3ND</span></a></nav>
   </div>
   <div class="foot-bot"><span>&copy; 2026 G H X S T S H I P Industries LLC</span><span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span></div>
 </div></footer>
