@@ -100,8 +100,8 @@ export default function Page() {
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h1>Every Voyage,<br/><span className="pop">Logged.</span></h1>
-  <p className="answer">The Archives are our case studies &mdash; featured past projects we designed, built, crewed, and launched end to end. Real outcomes, no vanity metrics.</p>
+  <h1>Every Build,<br/><span className="pop">Logged.</span></h1>
+  <p className="answer">The Archives are our case studies: shows we designed, built, crewed, and ran end to end. Real outcomes, no vanity metrics.</p>
 </div></section>
 <section className="pad"><div className="wrap">
   <div className="wgrid"><a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"/></div><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival &middot; Insomniac, Las Vegas &middot; 2025&ndash;26</p></div></a>
@@ -115,7 +115,7 @@ export default function Page() {
   <a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Red Bull Unforeseen Motel" loading="lazy"/></div><div className="body"><h3>Red Bull Unforeseen Motel</h3><p className="meta">Brand Activation &middot; III Points Miami &middot; 2023</p></div></a></div>
 </div></section>
 <section className="cta"><div className="wrap">
-  <h2>Add Your Voyage<br/>to the Archives.</h2>
+  <h2>Add Your Build<br/>to the Archives.</h2>
   <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/destinations" className="gx-btn gx-btn--ghost gx-btn--lg">See the Destinations</Link></div>
 </div></section>
 </main>

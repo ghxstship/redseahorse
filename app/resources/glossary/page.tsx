@@ -73,7 +73,7 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">Resources · The Field Guide</p>
   <h1>The Experiential<br/>Production Glossary</h1>
-  <p className="lede">The industry's terms, defined plainly by the people who produce it. A reference for producers, brands, and the next generation learning the craft — part of the GHXSTSHIP commitment to training experiential producers.</p>
+  <p className="lede">The industry's terms, defined plainly by the people who produce it. Built for producers, brands, and anyone learning the craft, because we train experiential producers and they kept asking what half of this meant.</p>
 </div></section>
 <section className="terms"><div className="wrap">
   <article className="term"><h2>Experiential Production</h2><p>The end-to-end creative and physical production of live experiences — festivals, concerts and tours, brand activations, immersive experiences, and sporting events — from concept through strike.</p><span className="x">Related: Production Lifecycle · Brand Activation</span></article>
@@ -85,7 +85,7 @@ export default function Page() {
   <article className="term"><h2>Show Caller</h2><p>The person who directs a live event in real time, calling cues to audio, lighting, video, and stage departments from the run of show.</p></article>
   <article className="term"><h2>Strike</h2><p>The controlled teardown, removal, and load-out of all production elements after a live event concludes, including reconciliation and site restoration.</p></article>
   <article className="term"><h2>Activation Footprint</h2><p>The total physical space and spatial layout a brand activation or installation occupies within a venue or site, including audience flow and technical zones.</p></article>
-  <article className="term"><h2>Experiential Technology</h2><p>The software and integrated systems that power live experience production and audience engagement — including production management (ATLVS), workforce and crew management (COMPVSS), and ticketing platforms (GVTEWAY).</p></article>
+  <article className="term"><h2>Experiential Technology</h2><p>The software and integrated systems that power live experience production and audience engagement — including production management (<span className="pn-atlvs">ATLVS</span>), workforce and crew management (<span className="pn-compvss">COMPVSS</span>), and ticketing platforms (<span className="pn-gvteway">GVTEWAY</span>).</p></article>
 </div></section>
 <section className="cta"><div className="wrap">
   <h3>Learn the Ropes.</h3>

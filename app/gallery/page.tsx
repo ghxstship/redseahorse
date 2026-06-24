@@ -73,7 +73,7 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Gallery</p>
   <h1>Beyond the <span className="pop">Scenes.</span></h1>
-  <p className="lede">Photography and video from the GHXSTSHIP yard — festivals, concerts and tours, brand activations, immersive worlds, and game-day production, captured on site.</p>
+  <p className="lede">Photography and video from our builds &mdash; festivals, concerts and tours, brand activations, immersive worlds, and game-day production, shot on site while the work was up.</p>
   <div className="filters">
     <button className="on">All</button><button>Festivals</button><button>Concerts &amp; Tours</button><button>Activations</button><button>Immersive</button><button>Sporting</button><button>Video</button>
   </div>

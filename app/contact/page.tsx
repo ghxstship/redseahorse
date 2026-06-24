@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Start a Project \u2014 Contact",
-  description: "Start an experiential production project with GHXSTSHIP \u2014 the general contractor, foreman, and Procore of experiential project management. Tell us the destination and we will build, crew, and launch it.",
+  description: "Start an experiential production project with GHXSTSHIP \u2014 the general contractor, foreman, and Procore of experiential project management. Tell us what you're building and we'll crew it, build it, and run it.",
   alternates: { canonical: "https://ghxstship.tours/contact" },
 };
 
@@ -95,9 +95,9 @@ export default function Page() {
 <div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Start a Project</span></p></div>
 <main>
 <section className="hero"><div className="wrap">
-  <p className="eyebrow">Set Your Course</p>
+  <p className="eyebrow">Let's Build It</p>
   <h1>Start a<br/><span className="pop">Project.</span></h1>
-  <p className="answer">Tell us the destination &mdash; the experience worth building. We'll build the ship, crew it, chart the course, and launch. Every voyage starts with a consultation.</p>
+  <p className="answer">Tell us what you're building. We'll crew it, build it, run it, and stay on the standard the whole way. It starts with a consultation, which is just a real conversation about what you're trying to pull off.</p>
 </div></section>
 <section className="pad"><div className="wrap"><div className="cgrid">
   <form className="form">
@@ -106,7 +106,7 @@ export default function Page() {
     <div className="field"><label htmlFor="e">Email</label><input id="e" type="email" placeholder="you@company.com" name="email"/></div>
     <div className="field"><label htmlFor="it">Inquiry Type</label><select id="it" name="inquiry-type"><option>General Inquiry</option><option>New Project</option><option>Partnerships</option><option>Media</option><option>Press</option><option>Talent &amp; Vendors</option><option>Careers</option><option>Other</option></select></div>
     <div className="field"><label htmlFor="t">Destination</label><select id="t" name="destination"><option>Festival</option><option>Concert / Tour</option><option>Brand Activation</option><option>Immersive Experience</option><option>Sporting Event</option><option>TV, Film &amp; Broadcast</option><option>Not Sure Yet</option></select></div>
-    <div className="field"><label htmlFor="m">The Brief</label><textarea id="m" rows={5} placeholder="Tell us about the experience you want to build." name="the-brief"></textarea></div>
+    <div className="field"><label htmlFor="m">The Brief</label><textarea id="m" rows={5} placeholder="Tell us what you're building, who it's for, and when it has to happen." name="the-brief"></textarea></div>
     <a className="gx-btn gx-btn--lg" href="mailto:sos@ghxstship.pro">Send the Brief</a>
   </form>
   <aside className="rail">

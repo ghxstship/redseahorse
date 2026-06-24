@@ -53,9 +53,10 @@ html {
   /* Product accents — each product owns its OWN accent (per ATLVS kit v2
      brand.css). GHXSTSHIP green (--brass) is the HOUSE brand only; the
      products differentiate by hue here. base = bright fill · -deep = hover. */
-  --atlvs:       #E23414;  /* ATLVS — volcanic red   */  --atlvs-deep:   #C92C10;
+  --atlvs:       #E23414;  /* ATLVS — volcanic red    */ --atlvs-deep:   #C92C10;
   --compvss:     #FFC400;  /* COMPVSS — signal yellow */ --compvss-deep: #EEB400;
-  --gvteway:     #2563EB;  /* GVTEWAY — blue         */  --gvteway-deep: #1F57D6;
+  --gvteway:     #2563EB;  /* GVTEWAY — blue          */ --gvteway-deep: #1F57D6;
+  --legend:      #ED6A1E;  /* LEG3ND — molten orange  */ --legend-deep:  #DB5A00;
 
   /* GREEN-on-light variants (AA text-safe on light grounds — v2 -text) */
   --jade-ink:    #1F8425;  /* v2 ghxstship -text — AA green on light grounds */

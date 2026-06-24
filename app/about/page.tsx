@@ -96,23 +96,23 @@ export default function Page() {
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Story &middot; Beyond the Scenes</p>
-  <h1>We Build the<br/><span className="pop">Whole Ship.</span></h1>
-  <p className="answer">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with home ports in Las Vegas, Chicago, New York, and Los Angeles. We deliver four professional services &mdash; Experiential Production, Site Operations, Venue Management, and Immersive Technologies &mdash; as one accountable partner owning scope, schedule, budget, crew, and technology from first line to launch.</p>
+  <h1>We Build the<br/><span className="pop">Whole Thing.</span></h1>
+  <p className="answer">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four services, Experiential Production, Site Operations, Venue Management, and Immersive Technologies, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
 </div></section>
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">How We're Built</p>
-  <h2 className="sec">Four Disciplines. One Yard.</h2>
-  <p className="lede">Four professional services, one accountable yard: we produce it, operate the site, run the venue, and wire the technology. Distinct crews, one standard.</p>
+  <h2 className="sec">Four Disciplines. One Team.</h2>
+  <p className="lede">Four services run by one team: we produce the experience, operate the site, run the venue, and wire the technology. Different crews doing each, held to the same standard.</p>
   <div className="pgrid">
-    <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground &mdash; logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room &mdash; programming, bookings, facility and vendor operations, and on-site teams.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the yard its instruments &mdash; ATLVS, COMPVSS &amp; GVTEWAY, the platforms the project runs on.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience: scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground: logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room: programming, bookings, facility and vendor operations, and on-site teams.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments: <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, the platforms the whole build runs on.</p></div>
   </div>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Track Record</p>
-  <h2 className="sec">Receipts, Not Promises.</h2>
+  <h2 className="sec">The Receipts.</h2>
   <div className="band">
     <div className="st"><div className="v">14+</div><div className="k">Years</div></div>
     <div className="st"><div className="v">250+</div><div className="k">Experiences</div></div>
@@ -120,7 +120,7 @@ export default function Page() {
     <div className="st"><div className="v">5</div><div className="k">Home Ports</div></div>
   </div>
 </div></section>
-<section className="cta"><div className="wrap"><h2>Venture<br/>Beyond.</h2>
+<section className="cta"><div className="wrap"><h2>Let's Build<br/>Something.</h2>
   <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link></div>
 </div></section>
 </main>

@@ -118,3 +118,14 @@
 .gx-link { color: var(--plasma); text-decoration: none; font-weight: 600;
   border-bottom:var(--stroke-1) solid rgba(110,225,118,0.4); transition: color .15s, border-color .15s; }
 .gx-link:hover { color: var(--jade-ink); border-color: var(--brass); }
+
+/* ---- PRODUCT-NAME ACCENTS ------------------------------------------------- */
+/* The four platform sub-brands always render in their OWN accent color
+   whenever mentioned in copy — never the house green. Inherits font-weight
+   from context (kept semibold so the name reads as a branded token). When a
+   product name sits inside a link/button that already sets a color, the .pn-*
+   color still wins via specificity, which is intended. */
+.pn-atlvs   { color: var(--atlvs)   !important; font-weight: 700; }
+.pn-compvss { color: var(--compvss) !important; font-weight: 700; }
+.pn-gvteway { color: var(--gvteway) !important; font-weight: 700; }
+.pn-legend  { color: var(--legend)  !important; font-weight: 700; }

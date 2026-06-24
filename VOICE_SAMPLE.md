@@ -1,96 +1,101 @@
-# VOICE & COPY SAMPLE — for approval
+# Brand Voice — GHXSTSHIP (v8.1)
 
-## Positioning (what we are — literal, for SEO/GEO + sales)
-GHXSTSHIP is the **General Contractor, Foreman, and Procore of experiential project management** —
-**Production Management, Operations Leadership, and Technology Innovations.**
+GHXSTSHIP is for people who build worlds — a festival, a film set, a gala, a stadium tour,
+an immersive run, a broadcast. Temporary worlds thousands of people live inside, then strike
+by morning. The voice carries the art of that work, the weight of it, and the fun of it —
+without ever sounding like a brochure.
 
-## Brand voice & client journey (how it feels)
-**Yacht Builder + Expedition Creator.** Two registers, fused — used as light texture, never forced:
-- **Yacht Builder** → *commissioned craftsmanship.* Used sparingly: build, hull, customize, fit-out, launch, the yard.
-- **Expedition Creator** → *charting the journey to a destination.* Used sparingly: destination, charter, the crew, chart the course, the log.
+> **What changed (v8.1).** The voyage/nautical metaphor is **retired as a voice device.** The
+> production *lifecycle* still exists as a concept, but "every production is a voyage,"
+> "Book Passage," "set sail," "the manifest," "ports of call" and the rest are gone from
+> user-facing copy. We keep a few nautical **IA labels** (Crew, Logs, Museum, Archives, Home
+> Ports, The Course, The Fleet) as light brand flavor — but the prose reads like a person now.
 
-**Tone rule:** confident and crafted, never loud, **never corny.** Plain capability sentence first; the
-craft/voyage language is occasional seasoning, not every line. The core verb is **“build/charter a
-GHXSTSHIP”** — the client's project is a GHXSTSHIP they build and launch with us. No parentheses. No
-emoji. If a metaphor has to stretch to fit, drop it.
+## Voice DNA — a 40 / 35 / 25 blend
 
----
+- **MCU Spider-Man — 40%, the public lead.** Friendly, fast, a little self-deprecating,
+  genuinely glad to help. Deflates the epic with a joke, then does the hard thing. Leads
+  marketing, the homepage, social.
+- **Iron Man — 35%, the operator voice.** High-tech, high-taste, sardonic competence: luxury
+  self-confidence with hacker irreverence. The one who already built the thing you're
+  describing — and the only voice that talks when something's broken.
+- **Thor — 25%, the scale.** Mythic weight for the genuinely huge moments — doors open,
+  headliner's on, the wrap — with a wink so it never goes pompous.
 
-## Section-by-section sample copy
+**Two centers of gravity, one voice.** Parker leads the public face; Stark leads anything
+operational or broken. Don't let Parker's nerves write the error states; don't let Stark's
+swagger run the welcome mat. Thor is a volume knob, not a default.
 
-### Hero
-**Eyebrow:** Production Management · Operations Leadership · Technology Innovations
-**Headline:** Beyond the Scene.
-**Sub:** GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management. Tell us
-where you want to take people — the festival, the activation, the world worth stepping into — and we
-build the GHXSTSHIP that gets them there. Production, operations, and the technology that runs it.
-**CTAs:** Build a GHXSTSHIP · See the Log
+## The world-builder's mentality
 
-### The category claim (positioning band)
-We are the general contractor, foreman, and Procore of experiential project management — the accountable yard
-that manages the build, leads the crew, and implements the technology. One destination, one ship, one
-crew, start to launch.
+You're not running an event — you're building a world. Don't describe that world from a
+poster; ride along inside it while the client builds. Ambition lives in the invitation to
+climb in — "pick something ambitious and rough it in" — not in a slogan.
 
-### The three verticals
-- **Production Management — The General Contractor.** We build the ship. Scope, schedule, budget,
-  fabrication, staging, and the finish — owned end to end, the way a master yard owns a build.
-- **Operations Leadership — The Foreman.** We crew it and run it. Logistics, staffing, safety, and the
-  day-of call — the foreman who makes a 50,000-person undertaking run like clockwork.
-- **Technology Innovations — The Procore.** We give the yard its instruments. ATLVS, COMPVSS, and
-  GVTEWAY — the platform that charts the course, points the crew, and opens the gate.
+## Write like a person, not an AI
 
-### The client journey (the booking sequence — re-voiced, in order)
-1. **The Destination** *(the vision)* — “Start with where you’re taking people: the project goal, the
-   experience worth building. That’s the destination.”
-2. **The Ship** *(was: Charters / scope)* — “Choose the hull and the fit-out — full build, a single
-   discipline, or by the phase — sized to reach it.”
-3. **The Crew** — “Meet the people who get you there: the producers, leads, and technologists on your build.”
-4. **The Course** *(was: Itinerary / 8-phase lifecycle)* — “Chart the course: eight phases from first
-   line to launch. The route we build to.”
-5. **Know Before You Go** *(pre-launch checklist / onboarding / FAQs)* — “The pre-launch checklist —
-   everything settled before we go live.”
-6. **Launch** — “We launch. The experience goes live.”
+The rule that protects everything else. Kill the slop tells:
 
-*(The Log / Archives remain throughout: case studies, past work, and articles — the record of GHXSTSHIPs built.)*
+- No rule-of-three triads ("scope, schedule, and budget" as a rhythmic flourish).
+- No alliteration runs.
+- No "X, not Y" antithesis ("a standard, not a trend").
+- No em-dash used for fake drama.
+- Let sentences run uneven. Be concrete — a number beats an adjective ("9-day settlement";
+  "fourteen cities, zero dropped handoffs").
 
-### The 8-phase lifecycle (keep plain phase names; route framing only, light touch)
-01 Discovery · 02 R&D · 03 Creative Design · 04 Compliance & Risk · 05 Production & Build ·
-06 Operations & Logistics · 07 Live Activation · 08 Strike & Post — framed as **“the course: eight
-phases from first line to launch.”** Don’t rename the phases; let the route framing carry it.
+## The rules
 
-### Selected Work
-**Eyebrow:** The Log · GHXSTSHIPs We’ve Built
-**Framing:** Every entry is a destination reached — the brief, the build, the launch. The record of
-GHXSTSHIPs we’ve built and the people they moved.
+- **Person & tense.** First person plural ("We plot the work"), second person present
+  ("You aim big"). Not "our customers."
+- **Trade-true vocabulary.** Talk like the floor: advancing, run-of-show, settlement, call
+  times, load-in, load-out, day-of. It's how producers search and how you earn trust.
+- **Where the wonder goes.** Invitations only — the homepage, onboarding, the first empty
+  screen, the help that teaches. In dense chrome and anything broken, drop it: errors stay
+  flat and accountable, confirmations short. Nobody wants a tour guide when the bus is on fire.
+- **No comparison. Ever.** No "unlike," no "vs.", no competitor names. Capture intent against
+  the status quo instead ("moving off spreadsheets").
+- **No emoji. Ever — anywhere.**
+- **Discretion.** Strategy and positioning notes are direction for *how* you write — never
+  text to drop on the page.
+- **Products keep their colors.** Whenever ATLVS, COMPVSS, GVTEWAY, or LEG3ND is named in
+  copy, it renders in its own accent (`.pn-atlvs` red, `.pn-compvss` yellow, `.pn-gvteway`
+  blue, `.pn-legend` orange) — never the house green.
 
-### Trust band
-Trusted by the brands behind the moments. 14+ years · 250+ experiences · five home ports · in-house
-technology. The yard you call for the builds no one else will take.
+## Hard don'ts
 
-### CTA (close)
-**Headline:** Build a GHXSTSHIP.
-**Sub:** Tell us the destination. We build the ship, crew it, chart the course, and launch — on time,
-on budget, beyond the scene.
-**Buttons:** Build a GHXSTSHIP · See the Log
+"solutions," "synergy," "unlocks," "empowers," "streamlines," "unified" (say *one*),
+"enterprise-grade" (name the feature), "best-in-class." No sentence that would survive in
+Salesforce docs.
 
----
+## Register by surface
 
-## Microcopy swaps (apply kit-wide on approval)
-| Now | New voice |
+| Surface | Lead | Sounds like |
+|---|---|---|
+| Marketing hero / CTA | Spider-Man (+ Thor for scale) | "So you're building a city that exists for one weekend." |
+| Operator / capability copy | Iron Man | "Yeah, it does that too." |
+| Empty state | Spider-Man | "Pick something ambitious and rough it in." |
+| Error | Iron Man (calm) | "That didn't load. Give it another shot — if it sticks, it's on us." |
+| Confirmation | brief | "Saved. Smooth one." |
+| The genuinely huge moment | Thor | reserved, mythic, one line |
+
+## Retired lexicon — replace on sight
+
+| Retired (voyage) | Use instead |
 |---|---|
-| Book Now / Book Your Voyage | **Build a GHXSTSHIP** |
-| Destinations (nav) | **Destinations** — the project goal / experience |
-| Charters / Ways to Sail | **The Ship** — hull + fit-out / scope |
-| Itinerary | **The Course** — 8-phase lifecycle |
-| — new step | **Know Before You Go** — pre-launch checklist / FAQs |
-| Set Sail / Launch | **Launch** |
-| The Archives / Logs | **The Log** — case studies, past work, articles |
-| The Crew | **The Crew** |
+| Book passage · the manifest opens · board the voyage | Start a production · Get started |
+| Captain's briefing · concierge preview | Book a demo · See it in action |
+| The voyage · the crossing · the passage (as "project") | The production · the show |
+| Sailing orders (as "schedule") | The schedule · run-of-show |
+| The boarding pass · the pass | The ticket |
+| Ports of call | Venues · cities · dates |
+| The bridge · the chart room (as "dashboard") | The dashboard |
+| Cast off · set sail · anchors away · all aboard | Plain verbs: start, plan, build, run, wrap |
+| "every production is a voyage" · "ClickUp × Virgin Voyages × SXSW" | (delete — never ship) |
 
----
+## The voice, in one paragraph
 
-## Build rule (#2): zero inline design code
-On approval, the rebuild moves **all** styling to kit tokens/classes — no inline `style="…"` design
-values. New utility layer to add to the kit so markup stays clean: `gx-section`, `gx-wrap`,
-`gx-eyebrow`, `gx-stack`, `gx-grid-2/3/4`, `gx-rail` (sticky journey rail), plus the existing `.gx-*`
-components. Every color/space/shadow/radius/border reads a `var(--*)`.
+> You build worlds for a living — the rooms people fly in for, the nights the press doesn't
+> cover. GHXSTSHIP runs the whole thing with you: the pitch, the build, the show, the wrap,
+> every piece of it where you can see it. We don't hand you a list and call it project
+> management. We plot the work, ride along while you build it, and stay calm when something
+> breaks. Built by the people booking the next one.

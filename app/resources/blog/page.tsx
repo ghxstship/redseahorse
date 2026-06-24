@@ -87,18 +87,18 @@ export default function Page() {
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Log &middot; Dispatches</p>
-  <h1>Notes From<br/>the <span className="pop">Bridge.</span></h1>
-  <p className="answer">The The Log is where GHXSTSHIP shares field notes on experiential production, operations leadership, and event technology &mdash; how we build, what we&rsquo;ve learned, and where the industry is heading.</p>
+  <h1>Notes From<br/>the <span className="pop">Floor.</span></h1>
+  <p className="answer">The Log is where we write down what the build actually taught us: experiential production, operations, event tech, and the calls we made when the schedule moved.</p>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">Latest Dispatches</p>
   <h2 className="sec">From the Log.</h2>
   <div className="bgrid"><Link href="/resources/the-experiential-gc" className="bp"><p className="cat">Field Notes</p><h3>What an Experiential General Contractor Actually Does</h3><p>One accountable partner for scope, schedule, budget, crew, and tech — and why the GC model beats a vendor chain for live experiences.</p><p className="d">Jun 2026</p></Link>
-  <a className="bp" href="#"><p className="cat">Operations</p><h3>The 8-Phase Production Lifecycle, Explained</h3><p>Discovery to Close — how the Course keeps a build on schedule, on budget, and on standard.</p><p className="d">May 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Technology</p><h3>ATLVS, COMPVSS &amp; GVTEWAY: The Instruments</h3><p>How proprietary production, crew, and ticketing software coordinate an entire experiential build.</p><p className="d">May 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Venue Ops</p><h3>Running a Venue to One Standard</h3><p>Programming, staffing, compliance, and day-of operations across every date — the foreman&rsquo;s playbook.</p><p className="d">Apr 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Press</p><h3>GHXSTSHIP Charts New Immersive Work in Miami</h3><p>A look at the latest voyage on the board and the crew behind it.</p><p className="d">Apr 2026</p></a>
-  <a className="bp" href="#"><p className="cat">Crew Call</p><h3>Learn the Ropes: Join the Crew</h3><p>We train the next generation of experiential producers on real projects. How to come aboard.</p><p className="d">Mar 2026</p></a></div>
+  <a className="bp" href="#"><p className="cat">Operations</p><h3>The 8-Phase Production Lifecycle, Explained</h3><p>Discovery to Close. How the Course keeps a build on schedule and on budget when every phase wants to slip.</p><p className="d">May 2026</p></a>
+  <a className="bp" href="#"><p className="cat">Technology</p><h3><span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>: The Instruments</h3><p>The production, crew, and ticketing software we built ourselves, and how they keep a whole build talking to itself.</p><p className="d">May 2026</p></a>
+  <a className="bp" href="#"><p className="cat">Venue Ops</p><h3>Running a Venue to One Standard</h3><p>Programming, staffing, compliance, the day-of call. The foreman&rsquo;s playbook for holding every date to the same bar.</p><p className="d">Apr 2026</p></a>
+  <a className="bp" href="#"><p className="cat">Press</p><h3>GHXSTSHIP Charts New Immersive Work in Miami</h3><p>A look at the newest build on the board and the crew behind it.</p><p className="d">Apr 2026</p></a>
+  <a className="bp" href="#"><p className="cat">Crew Call</p><h3>Learn the Ropes: Join the Crew</h3><p>We train the next generation of experiential producers on real builds. Here&rsquo;s how to join one.</p><p className="d">Mar 2026</p></a></div>
 </div></section>
 <section className="cta"><div className="wrap"><h2>Build With<br/>GHXSTSHIP.</h2><div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">See Solutions</Link></div></div></section>
 </main>

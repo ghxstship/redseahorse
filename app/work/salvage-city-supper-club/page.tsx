@@ -83,7 +83,7 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">Case Study · Immersive Experience</p>
   <h1>Salvage City<br/>Supper Club</h1>
-  <div className="meta"><span>Client <b>Insomniac</b></span><span>Venue <b>Club Space, Miami</b></span><span>Year <b>2025</b></span><span>Scope <b>Full Voyage · 8 Phases</b></span></div>
+  <div className="meta"><span>Client <b>Insomniac</b></span><span>Venue <b>Club Space, Miami</b></span><span>Year <b>2025</b></span><span>Scope <b>Full Build · 8 Phases</b></span></div>
   <div className="coverimg"><i className="ph-fill ph-confetti"></i><span className="ph">[ Hero image — drop production photography here ]</span></div>
 </div></section>
 <div className="wrap">
@@ -108,7 +108,7 @@ export default function Page() {
   </div>
 </div>
 <section className="cta"><div className="wrap">
-  <h3>Chart Your Experience.</h3>
+  <h3>Build Yours Next.</h3>
   <Link href="/#close" className="gx-btn">Start a Project</Link>
 </div></section>
 </main>

@@ -97,38 +97,38 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Services &middot; What We Deliver</p>
   <h1>The Management Team<br/>Behind the <span className="pop">Build.</span></h1>
-  <p className="answer">GHXSTSHIP is a professional services firm for live and experiential projects &mdash; one accountable management team across experiential production, site operations, venue management, and immersive technologies. We own scope, schedule, budget, crew, and the platforms, from first line to launch, so owners, operators, and partners don't have to manage a chain of vendors.</p>
+  <p className="answer">GHXSTSHIP is the management team behind the build. One crew across experiential production, site operations, venue management, and immersive technologies. We own scope, schedule, budget, crew, and the platforms from the first line to the night it opens, so you're talking to one team instead of refereeing six vendors.</p>
   <div style={{display: 'flex', gap: 'var(--space-14)', flexWrap: 'wrap', marginTop: 'var(--space-26)'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost">See the Archives</Link></div>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Services &middot; What We Run</p>
-  <h2 className="sec">Four Disciplines, One Yard.</h2>
-  <p className="lede">Experiential production, site operations, venue management, and immersive technologies &mdash; delivered as one system, not four vendors.</p>
+  <h2 className="sec">Four Disciplines, One Team.</h2>
+  <p className="lede">Experiential production, site operations, venue management, and immersive technologies, run as one system. The handoffs that usually drop happen inside one team instead.</p>
   <div className="sgrid">
-    <div className="scard"><i className="ph-bold ph-flag"></i><h3>Experiential Production</h3><p>The general contractor for live experiences: experiential design, scenic fabrication, staging, technical production, and show calling &mdash; scope, schedule, and budget owned end to end.</p></div>
-    <div className="scard"><i className="ph-bold ph-anchor"></i><h3>Site Operations</h3><p>The foreman on the ground: logistics, crew and workforce, vendor management, health, safety and compliance, and day-of operations at any scale.</p></div>
-    <div className="scard"><i className="ph-bold ph-boat"></i><h3>Venue Management</h3><p>The harbor master for the room: venue programming, bookings, facility and vendor operations, and on-site teams &mdash; the space, managed start to finish.</p></div>
-    <div className="scard"><i className="ph-bold ph-compass"></i><h3>Immersive Technologies</h3><p>The Procore for the project: ATLVS, COMPVSS, and GVTEWAY plus immersive show systems, integrations, and analytics &mdash; the platforms the whole build runs on.</p><p style={{margin: 'var(--space-14) 0 0'}}><a href="https://atlvs.pro" target="_blank" rel="noopener" style={{fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-label)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--plasma)', textDecoration: 'none'}}>Explore the platforms at ATLVS.pro</a></p></div>
+    <div className="scard"><i className="ph-bold ph-flag"></i><h3>Experiential Production</h3><p>The general contractor for live experiences: design, scenic fabrication, staging, technical production, and show calling, with scope, schedule, and budget owned end to end.</p></div>
+    <div className="scard"><i className="ph-bold ph-anchor"></i><h3>Site Operations</h3><p>The foreman on the ground: logistics, crew and workforce, vendor management, health and safety, and the day-of call at any scale.</p></div>
+    <div className="scard"><i className="ph-bold ph-boat"></i><h3>Venue Management</h3><p>The harbor master for the room: programming, bookings, facility and vendor operations, and on-site teams. The space, managed start to finish.</p></div>
+    <div className="scard"><i className="ph-bold ph-compass"></i><h3>Immersive Technologies</h3><p>The Procore for the project: <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, and <span className="pn-gvteway">GVTEWAY</span> plus immersive show systems, integrations, and analytics. The platforms the whole build runs on.</p><p style={{margin: 'var(--space-14) 0 0'}}><a href="https://atlvs.pro" target="_blank" rel="noopener" style={{fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-label)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--plasma)', textDecoration: 'none'}}>Explore the platforms at <span className="pn-atlvs">ATLVS</span>.pro</a></p></div>
   </div>
 </div></section>
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">Who We Build For</p>
   <h2 className="sec">Built for the People Accountable for the Show.</h2>
   <div className="who">
-    <div className="w"><h3>General Contractors &amp; Owner's Reps</h3><p>A specialist experiential management team you can subcontract for production, staging, and live-event scope &mdash; one accountable partner that plugs into your build.</p></div>
-    <div className="w"><h3>Venue &amp; Hospitality Operators</h3><p>Turnkey venue management, site operations, and technology installs for clubs, stadiums, arenas, and hospitality &mdash; run to a single standard across every date.</p></div>
-    <div className="w"><h3>Brands, Promoters &amp; Producers</h3><p>End-to-end production and operations for festivals, tours, activations, immersive, sporting, and broadcast &mdash; with the platforms to coordinate it all.</p></div>
+    <div className="w"><h3>General Contractors &amp; Owner's Reps</h3><p>A specialist experiential team you can subcontract for production, staging, and live-event scope. One partner that plugs into your build and answers for it.</p></div>
+    <div className="w"><h3>Venue &amp; Hospitality Operators</h3><p>Venue management, site operations, and technology installs for clubs, stadiums, arenas, and hospitality, run to the same standard on every date.</p></div>
+    <div className="w"><h3>Brands, Promoters &amp; Producers</h3><p>Production and operations for festivals, tours, activations, immersive, sporting, and broadcast, with the platforms to keep all of it in one place.</p></div>
   </div>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Solutions FAQ.</h2>
   <div className="faq">
-    <details open><summary>Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?<span className="ic">+</span></summary><p className="a">Yes. GHXSTSHIP operates as the general contractor and accountable management team for experiential and entertainment production &mdash; owning scope, schedule, budget, crew, vendors, and technology across all eight phases, from discovery to close, the way a GC owns a build.</p></details>
-    <details><summary>Do you provide site operations?<span className="ic">+</span></summary><p className="a">Yes. Site Operations is a dedicated service &mdash; logistics, workforce and crew management, vendor and procurement coordination, health, safety and compliance, and day-of operations on the ground for events, venues, and activations.</p></details>
-    <details><summary>Do you manage venues?<span className="ic">+</span></summary><p className="a">Yes. Venue Management is a dedicated service &mdash; programming, bookings, facility and vendor operations, and on-site teams for clubs, stadiums, arenas, and hospitality, run to a single standard across every date.</p></details>
-    <details><summary>Do you handle immersive technologies, integrations, and installs?<span className="ic">+</span></summary><p className="a">Yes. We build and integrate immersive technologies &mdash; production and resource management (ATLVS), workforce and crew management (COMPVSS), and ticketing and fan engagement (GVTEWAY) &mdash; alongside show systems, third-party integrations, on-site installs, data, and analytics.</p></details>
-    <details><summary>Which industries and verticals do you serve?<span className="ic">+</span></summary><p className="a">Festivals, concerts and tours, brand activations, immersive experiences, sporting events, TV, film and broadcast, health and wellness, premium hospitality, luxury retail, and water and motorsports &mdash; for brands, promoters, venue operators, general contractors, and production directors worldwide.</p></details>
+    <details open><summary>Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?<span className="ic">+</span></summary><p className="a">Yes. GHXSTSHIP runs as the general contractor and accountable team for experiential and entertainment production, owning scope, schedule, budget, crew, vendors, and technology across all eight phases, from discovery to close, the way a GC owns a build.</p></details>
+    <details><summary>Do you provide site operations?<span className="ic">+</span></summary><p className="a">Yes. Site Operations is its own service: logistics, workforce and crew management, vendor and procurement coordination, health and safety and compliance, and the day-of on the ground for events, venues, and activations.</p></details>
+    <details><summary>Do you manage venues?<span className="ic">+</span></summary><p className="a">Yes. Venue Management is its own service: programming, bookings, facility and vendor operations, and on-site teams for clubs, stadiums, arenas, and hospitality, run to the same standard on every date.</p></details>
+    <details><summary>Do you handle immersive technologies, integrations, and installs?<span className="ic">+</span></summary><p className="a">Yes. We build and integrate immersive technologies: production and resource management (<span className="pn-atlvs">ATLVS</span>), workforce and crew management (<span className="pn-compvss">COMPVSS</span>), and ticketing and fan engagement (<span className="pn-gvteway">GVTEWAY</span>), alongside show systems, third-party integrations, on-site installs, data, and analytics.</p></details>
+    <details><summary>Which industries and verticals do you serve?<span className="ic">+</span></summary><p className="a">Festivals, concerts and tours, brand activations, immersive experiences, sporting events, TV, film and broadcast, health and wellness, premium hospitality, luxury retail, and water and motorsports, for brands, promoters, venue operators, general contractors, and production directors worldwide.</p></details>
   </div>
 </div></section>
 <section className="cta"><div className="wrap"><h2>Bring On the<br/>Management Team.</h2>

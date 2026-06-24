@@ -141,7 +141,7 @@ export default function Page() {
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Course</p>
   <h2 className="sec">Your Festival, Eight Phases.</h2>
-  <p className="lede">Every festival sails the same proven course — from first consultation to load-out and analytics.</p>
+  <p className="lede">Every festival runs the same eight phases — from first consultation to load-out and analytics.</p>
   <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
     <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
@@ -168,8 +168,8 @@ export default function Page() {
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Festivals We've Charted.</h2>
-  <div className="mu-grid"><article className="mu" style={{gridColumn: '1/-1'}}><div className="body" style={{textAlign: 'center', padding: 'var(--space-40)'}}><h3>Now Charting</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>New festival work is on the board. Want to be the first case study? Start a project.</p><a className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}} href="mailto:hello@ghxstship.tours">Start a Project</a></div></article>
+  <h2 className="sec">Festivals We've Built.</h2>
+  <div className="mu-grid"><article className="mu" style={{gridColumn: '1/-1'}}><div className="body" style={{textAlign: 'center', padding: 'var(--space-40)'}}><h3>In Production</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>New festival work is underway. Want to be the first case study? Start a project.</p><a className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}} href="mailto:hello@ghxstship.tours">Start a Project</a></div></article>
   </div>
 </div></section>
 
@@ -177,10 +177,10 @@ export default function Page() {
 <section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
   <p className="eyebrow">Why GHXSTSHIP</p>
   <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you to a chain of vendors. GHXSTSHIP owns the entire voyage — and builds the technology that powers it.</p>
+  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that powers it.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
     <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — ATLVS, COMPVSS &amp; GVTEWAY, in-house.</div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
     <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
   </div>
 </div></section>
@@ -189,7 +189,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Festival Production FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
     <details><summary>What does GHXSTSHIP do for festivals?<span className="ic">+</span></summary><p className="a">End-to-end festival production: site and infrastructure, multi-stage design and build, technical production (audio, lighting, video, rigging, power), and headliner experiences — managed through our eight-phase production lifecycle.</p></details>
     <details><summary>Who is festival production for?<span className="ic">+</span></summary><p className="a">Festival promoters, brands, talent buyers, and production directors who need one accountable partner from first consultation to load-out.</p></details>
     <details><summary>What size festivals can you produce?<span className="ic">+</span></summary><p className="a">From boutique single-stage events to 50,000-plus-capacity multi-stage festivals, with full infrastructure and logistics.</p></details>
@@ -198,7 +198,7 @@ export default function Page() {
 
 <section className="cta"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Chart Your<br/>Festival.</h2>
+  <h2>Build Your<br/>Festival.</h2>
   <div className="hero-cta" style={{justifyContent: 'center'}}>
     <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
     <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>

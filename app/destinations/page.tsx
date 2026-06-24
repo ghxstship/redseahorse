@@ -68,8 +68,8 @@ export default function Page() {
 <main>
 <section className="hero"><div className="wrap">
   <p className="eyebrow">Destinations</p>
-  <h1>Where We <span className="pop">Sail.</span></h1>
-  <p className="answer">GHXSTSHIP produces experiential and entertainment work across the industries below — each a destination on the board. Pick where you're headed; we bring the right ship from the Fleet and crew the build end to end.</p>
+  <h1>Where We <span className="pop">Work.</span></h1>
+  <p className="answer">GHXSTSHIP produces experiential and entertainment work across the industries below. Tell us what you're building. We bring the right team and run the whole build, start to finish.</p>
 </div></section>
 <section className="pad"><div className="wrap">
   <div className="dgrid">
@@ -81,7 +81,7 @@ export default function Page() {
     <Link href="/destinations/tv-film-broadcast" className="dc"><i className="ph-bold ph-television-simple"></i><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span className="go">View destination</span></Link>
   </div>
   <div className="more">
-    <p className="l">Also on the board</p>
+    <p className="l">Also where we work</p>
     <div className="tags"><span>Health &amp; Wellness</span><span>Premium Hospitality</span><span>Luxury Retail</span><span>Water &amp; Motorsports</span><span>Corporate &amp; Private</span></div>
   </div>
 </div></section>

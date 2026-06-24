@@ -88,17 +88,17 @@ export default function Page() {
   <h1 style={{maxWidth: '880px'}}>What an Experiential<br/><span className="pop">General Contractor</span> Does.</h1>
   <div className="prose">
     <p className="meta">By the GHXSTSHIP Crew &middot; June 2026 &middot; 5 min read</p>
-    <p className="lead">An experiential general contractor is a single accountable partner that owns a live experience the way a construction GC owns a building &mdash; scope, schedule, budget, crew, and the technology that runs it, from first line to launch.</p>
-    <p>Most experiential and brand-activation work is bought as a chain of vendors: a creative shop, a fabricator, a staging company, a staffing agency, and a stack of disconnected software. Each is accountable for a slice. No one is accountable for the whole. When the schedule slips or the budget moves, the seams show.</p>
-    <p>The general-contractor model collapses that chain into one yard. GHXSTSHIP carries four integrated disciplines &mdash; Experiential Production, Site Operations, Venue Management, and Immersive Technologies &mdash; under one accountable crew, governed by a single eight-phase production lifecycle from Discovery to Close.</p>
+    <p className="lead">An experiential general contractor is one accountable partner that owns a live experience the way a construction GC owns a building: scope, schedule, budget, crew, and the technology that runs it, from the first line to the night it opens.</p>
+    <p>Most experiential and brand-activation work gets bought as a chain of vendors. A creative shop, a fabricator, a staging company, a staffing agency, and a stack of software that doesn't talk to itself. Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p>
+    <p>The general-contractor model puts all of it under one roof. GHXSTSHIP runs four disciplines &mdash; Experiential Production, Site Operations, Venue Management, and Immersive Technologies &mdash; with one accountable crew and one eight-phase production lifecycle, Discovery to Close.</p>
     <h2>Production: the build</h2>
-    <p>The general contractor builds the ship: experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and the finish.</p>
+    <p>The GC builds it. Experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and how it looks when the doors open.</p>
     <h2>Operations: the run</h2>
-    <p>The foreman crews it and runs it: logistics and load-in, workforce and crew management, vendor and procurement coordination, health, safety and compliance, and the day-of call. This is a dedicated discipline, not an afterthought bolted onto creative.</p>
+    <p>The foreman crews it and runs it. Logistics and load-in, workforce and crew management, vendor and procurement coordination, health, safety and compliance, and the day-of call. It's a real discipline with its own people, not something bolted onto creative at the end.</p>
     <h2>Technology: the coordination</h2>
-    <p>The Procore gives the yard its instruments: ATLVS for production and resource management, COMPVSS for workforce and crew, and GVTEWAY for ticketing and fans &mdash; plus the integrations, installs, and analytics that keep the whole build coordinated and measurable.</p>
+    <p>The software is how the whole thing stays in sync: <span className="pn-atlvs">ATLVS</span> for production and resource management, <span className="pn-compvss">COMPVSS</span> for workforce and crew, <span className="pn-gvteway">GVTEWAY</span> for ticketing and fans, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
     <h2>Why it matters</h2>
-    <p>For general contractors, venue operators, brands, and promoters, the result is one partner to hold accountable, one schedule to track, and one standard to hold &mdash; on time, on budget, beyond the scenes.</p>
+    <p>For general contractors, venue operators, brands, and promoters, you get one partner to hold accountable, one schedule to track, one standard to hold. On time, on budget, and you can see all of it.</p>
     <div style={{display: 'flex', gap: 'var(--space-14)', flexWrap: 'wrap', margin: 'var(--space-32) 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/resources/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>
   </div>
 </div></article>

@@ -54,18 +54,18 @@ export default function Page() {
       
 <div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Careers</span></p></div>
 <main><section className="hero"><div className="wrap">
-  <p className="eyebrow">Join the Crew &middot; Careers</p>
+  <p className="eyebrow">Build With Us &middot; Careers</p>
   <h1>Open <span className="pop">Roles.</span></h1>
-  <p className="answer">GHXSTSHIP hires producers, directors, managers, and crew who build experiential and entertainment productions end to end. Find an open role, read the brief, and apply. We train the next generation &mdash; no experience gatekept.</p>
+  <p className="answer">We hire producers, directors, managers, and crew who build experiential and entertainment productions end to end. You're not running an event here &mdash; you're building a world people live inside for a weekend, then strike by morning. Find a role, read the brief, apply. We train the next generation, and we don't gatekeep experience.</p>
   <div className="filters"><button className="on">All</button><button>Production</button><button>Operations</button><button>Technology</button></div>
 </div></section>
 <section className="pad"><div className="wrap">
   <p className="eyebrow">8 Open Positions</p>
-  <h2 className="sec">On the Manifest.</h2>
+  <h2 className="sec">What We're Hiring.</h2>
   <div className="jobs"><Link href="/careers/role" className="job"><h3>Production Manager</h3><span className="m">Production</span><span className="m loc">Miami, FL</span><span className="go">Full-time</span></Link><Link href="/careers/role" className="job"><h3>Project Coordinator</h3><span className="m">Operations</span><span className="m loc">Las Vegas, NV</span><span className="go">Full-time</span></Link><Link href="/careers/role" className="job"><h3>Logistics Manager</h3><span className="m">Operations</span><span className="m loc">Miami, FL</span><span className="go">Full-time</span></Link><Link href="/careers/role" className="job"><h3>Technical Director</h3><span className="m">Technology</span><span className="m loc">Los Angeles, CA</span><span className="go">Full-time</span></Link><Link href="/careers/role" className="job"><h3>Production Crew</h3><span className="m">Production</span><span className="m loc">Multiple</span><span className="go">Freelance</span></Link><Link href="/careers/role" className="job"><h3>Production Assistant</h3><span className="m">Production</span><span className="m loc">Miami, FL</span><span className="go">Internship</span></Link><Link href="/careers/role" className="job"><h3>Operations Director</h3><span className="m">Operations</span><span className="m loc">New York, NY</span><span className="go">Full-time</span></Link><Link href="/careers/role" className="job"><h3>Hospitality Manager</h3><span className="m">Operations</span><span className="m loc">Miami, FL</span><span className="go">Full-time</span></Link></div>
   <p className="lede" style={{marginTop: 'var(--sp-5)'}}>Don&rsquo;t see your role? <Link href="/careers/apply" style={{color: 'var(--brass)', textDecoration: 'none'}}>Send a general application</Link></p>
 </div></section>
-<section className="cta"><div className="wrap"><h2>Learn the Ropes.</h2><div className="row"><Link href="/careers/apply" className="gx-btn gx-btn--lg">Apply Now</Link><Link href="/team" className="gx-btn gx-btn--ghost gx-btn--lg">Meet the Crew</Link></div></div></section></main>
+<section className="cta"><div className="wrap"><h2>Come Build Worlds.</h2><div className="row"><Link href="/careers/apply" className="gx-btn gx-btn--lg">Apply Now</Link><Link href="/team" className="gx-btn gx-btn--ghost gx-btn--lg">Meet the Crew</Link></div></div></section></main>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Careers","url":"https://ghxstship.tours/careers"}` }} />
       <Script id="inline-careers-index-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `

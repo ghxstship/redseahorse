@@ -138,7 +138,7 @@ export default function Page() {
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Course</p>
   <h2 className="sec">Sporting, Eight Phases.</h2>
-  <p className="lede">Every project follows the same proven course — eight phases, Discovery to Close.</p>
+  <p className="lede">Same eight phases on every project, Discovery to Close. You watch each one happen.</p>
   <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
     <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
@@ -160,7 +160,7 @@ export default function Page() {
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Game Days, Charted.</h2>
+  <h2 className="sec">Game Days We Ran.</h2>
   <div className="mu-grid">
     <article className="mu"><div className="media" style={{background: 'repeating-linear-gradient(45deg,var(--ink-2) 0 14px,var(--ink) 14px 28px)'}}><span className="gx-chip-pixel px">RRR 001</span><i className="ph-bold ph-flag-checkered" style={{fontSize: 'var(--fs-h1)', color: 'var(--brass)'}}></i></div><div className="body"><h3>Formula 1 Las Vegas Grand Prix</h3><p className="meta">Motorsports · Las Vegas · 2023</p></div></article>
     <article className="mu"><div className="media" style={{background: 'radial-gradient(var(--nebula) 16%,transparent 17%) 0 0/18px 18px,var(--ink)'}}><span className="gx-chip-pixel px">RRR 023</span><i className="ph-bold ph-trophy" style={{fontSize: 'var(--fs-h1)', color: 'var(--bone)'}}></i></div><div className="body"><h3>Heineken Turn4 Nightclub</h3><p className="meta">Motorsports · F1 Las Vegas Grand Prix · 2024</p></div></article>
@@ -171,10 +171,10 @@ export default function Page() {
 <section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
   <p className="eyebrow">Why GHXSTSHIP</p>
   <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you to a chain of vendors. GHXSTSHIP owns the entire voyage — and builds the technology that powers it.</p>
+  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that runs them.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
     <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — ATLVS, COMPVSS &amp; GVTEWAY, in-house.</div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
     <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
   </div>
 </div></section>
@@ -183,7 +183,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Sporting FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
     <details><summary>What does GHXSTSHIP do for sporting events?<span className="ic">+</span></summary><p className="a">End-to-end sporting event production: fan experience design, field and stadium activations, broadcast-ready staging, technical production, sponsorship integration, and crowd operations — on our eight-phase lifecycle.</p></details>
     <details><summary>Who is sporting production for?<span className="ic">+</span></summary><p className="a">Leagues, teams, venues, federations, and brand sponsors who need a single accountable production partner.</p></details>
     <details><summary>Can you produce broadcast-ready moments?<span className="ic">+</span></summary><p className="a">Yes — staging and technical are built to broadcast standards for in-venue and on-air.</p></details>
@@ -192,7 +192,7 @@ export default function Page() {
 
 <section className="cta"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Chart Your<br/>Game Day.</h2>
+  <h2>Build Your<br/>Game Day.</h2>
   <div className="hero-cta" style={{justifyContent: 'center'}}>
     <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
     <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>

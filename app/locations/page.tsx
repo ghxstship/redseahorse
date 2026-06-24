@@ -73,10 +73,10 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">Home Ports · Coast to Coast</p>
   <h1>Five Cities.<br/>One Crew.</h1>
-  <p className="lede">GHXSTSHIP produces experiential events nationwide from five home ports — headquartered in Miami, with crews in Las Vegas, Chicago, New York, and Los Angeles. Local presence, national reach, one accountable standard.</p>
+  <p className="lede">GHXSTSHIP produces experiential events nationwide from five cities — headquartered in Miami, with crews in Las Vegas, Chicago, New York, and Los Angeles. Someone local in the room, the same standard everywhere.</p>
 </div></section>
 <section><div className="wrap"><div className="grid">
-  <article className="loc"><span className="tag">Headquarters</span><h2>Miami</h2><p>Our flagship home port. The base for experiential production across the Southeast, Latin America, and the Caribbean — and home to festivals, immersive experiences, and brand activations in one of the world's fastest-growing event markets.</p><p className="area">Serving Miami · Southeast US · LATAM &amp; Caribbean</p></article>
+  <article className="loc"><span className="tag">Headquarters</span><h2>Miami</h2><p>Our headquarters. The base for experiential production across the Southeast, Latin America, and the Caribbean — and home to festivals, immersive experiences, and brand activations in one of the world's fastest-growing event markets.</p><p className="area">Serving Miami · Southeast US · LATAM &amp; Caribbean</p></article>
   <article className="loc"><span className="tag">Office</span><h2>New York</h2><p>Our Northeast crew — producing brand activations, launches, and immersive experiences across the country's most demanding event market.</p><p className="area">Serving NYC · Northeast US</p></article>
   <article className="loc"><span className="tag">Office</span><h2>Chicago</h2><p>Our Midwest base — festival, corporate, and live-music production across the central US.</p><p className="area">Serving Chicago · Midwest US</p></article>
   <article className="loc"><span className="tag">Office</span><h2>Los Angeles</h2><p>Our West Coast crew — entertainment, product launches, TV/film &amp; broadcast, and motorsports production.</p><p className="area">Serving LA · West Coast US</p></article>

@@ -33,9 +33,9 @@ const SOCIAL = [
 ];
 
 const PLATFORMS = [
-  { href: "https://atlvs.pro", label: "ATLVS" },
-  { href: "https://atlvs.pro/compvss", label: "COMPVSS" },
-  { href: "https://atlvs.pro/gvteway", label: "GVTEWAY" },
+  { href: "https://atlvs.pro", label: "ATLVS", cls: "pn-atlvs" },
+  { href: "https://atlvs.pro/compvss", label: "COMPVSS", cls: "pn-compvss" },
+  { href: "https://atlvs.pro/gvteway", label: "GVTEWAY", cls: "pn-gvteway" },
 ];
 
 export default function Footer() {
@@ -89,7 +89,7 @@ export default function Footer() {
             <h5>Platforms</h5>
             {PLATFORMS.map((l) => (
               <a key={l.label} href={l.href} target="_blank" rel="noopener">
-                {l.label}
+                <span className={l.cls}>{l.label}</span>
               </a>
             ))}
           </nav>

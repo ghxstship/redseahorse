@@ -185,7 +185,7 @@ export default function Page() {
   <div>
     <p className="eyebrow">Experiential Production &nbsp;·&nbsp; Site Operations &nbsp;·&nbsp; Venue Management &nbsp;·&nbsp; Immersive Technologies</p>
     <h1>Beyond<br/>the <span className="a">Scenes.</span></h1>
-    <p className="sub">GHXSTSHIP is a professional services firm for live and experiential projects — one accountable partner across experiential production, site operations, venue management, and immersive technologies. For brands, agencies, and venues producing festivals, activations, immersive experiences, and live events.</p>
+    <p className="sub">You're not running an event, you're building a world that exists for one weekend and strikes by morning. GHXSTSHIP runs the whole thing with you: experiential production, site operations, venue management, and the technology that ties it together. One partner you can hold accountable, for festivals, activations, immersive experiences, and live events.</p>
     <div className="cta-row">
       <a className="gx-btn" href="#close">Start a Project</a>
       <a className="gx-btn gx-btn--ghost" href="#work">See the Archives</a>
@@ -216,7 +216,7 @@ export default function Page() {
 
 <section className="pos"><div className="wrap"><div className="grid">
   <h2>One accountable partner for <span className="a">Experiential Production</span>, <span className="b">Site Operations</span>, <span className="c">Venue Management</span> &amp; <span className="d">Immersive Technologies</span>.</h2>
-  <p className="lede">GHXSTSHIP delivers four professional services the way a general contractor runs a build — one accountable partner owning scope, schedule, budget, crew, and technology. Not a vendor chain: experiential production, site operations, venue management, and the immersive technologies that run them, start to launch.</p>
+  <p className="lede">GHXSTSHIP runs four services the way a general contractor runs a build: one partner who owns scope, schedule, budget, crew, and the technology. You get experiential production, site operations, venue management, and the immersive tech that ties it together, from the first call to the night it opens, instead of stitching together six vendors who blame each other when something slips.</p>
 </div></div></section>
 
 <section className="journey" id="journey"><div className="wrap"><div className="j-grid">
@@ -229,30 +229,30 @@ export default function Page() {
     <div className="rl"><span className="n">6</span>Launch</div>
   </div>
   <div className="j-steps"><div className="j-track">
-    <div className="step"><p className="sn">Step 01 · The Destination</p><h3>Share Your Vision.</h3><p>Start with the vision — the project goal, the experience worth building. That's the destination, and everything we build is sized to reach it.</p></div>
-    <div className="step"><p className="sn">Step 02 · The Ship</p><h3>Build Your Vessel.</h3><p>Pick the hull and the fit-out: a full build, a single discipline, or by the phase. The scope, customized to the destination you're reaching for.</p></div>
-    <div className="step"><p className="sn">Step 03 · The Course</p><h3>Chart the Course.</h3><p>Eight phases from first line to launch — Discovery to Close. The route we build to, with deliverables and owners at every stop.</p></div>
-    <div className="step"><p className="sn">Step 04 · The Crew</p><h3>Meet the Team.</h3><p>With the course charted, we assign the producers, operations leads, and technologists your build needs — the accountable crew, matched to the route.</p></div>
-    <div className="step"><p className="sn">Step 05 · The Manifest</p><h3>Pack Your Bags.</h3><p>Onboarding, approvals, and the know-before-you-go — everything settled and signed off before we go live.</p></div>
-    <div className="step"><p className="sn">Step 06 · Launch</p><h3>Anchors Away.</h3><p>The experience goes live. We run the show, hold the standard, and strike clean — then log the build.</p></div>
+    <div className="step"><p className="sn">Step 01 · The Destination</p><h3>Tell Us What You're Building.</h3><p>Start with the thing you want to exist: the goal, the experience worth pulling off. Everything we build is sized to get there.</p></div>
+    <div className="step"><p className="sn">Step 02 · The Ship</p><h3>Set the Scope.</h3><p>Pick how much you want us on: the full build, a single discipline, or one phase. We shape the scope around what you're after.</p></div>
+    <div className="step"><p className="sn">Step 03 · The Course</p><h3>Walk the Eight Phases.</h3><p>Eight phases from the first line to the night it opens, Discovery through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p></div>
+    <div className="step"><p className="sn">Step 04 · The Crew</p><h3>Meet the Team.</h3><p>Now we staff it: the producers, operations leads, and technologists your build actually needs. The people who'll answer when you call, matched to the work.</p></div>
+    <div className="step"><p className="sn">Step 05 · The Manifest</p><h3>Get Set.</h3><p>Onboarding, approvals, and the details you need nailed down before day one. Everything settled and signed off before we go live.</p></div>
+    <div className="step"><p className="sn">Step 06 · Launch</p><h3>Doors Open.</h3><p>The experience goes live. We run the show, hold the standard, strike clean, and hand you the recap.</p></div>
   </div></div>
 </div></div></section>
 
 <section className="cap" id="cap"><div className="wrap">
   <p className="eyebrow">The Services</p>
-  <h2 className="sec">Four Disciplines. One Yard.</h2>
-  <p className="lede">Four professional services, one accountable yard: we produce it, operate the site, run the venue, and wire the technology. Distinct crews, one standard.</p>
+  <h2 className="sec">Four Disciplines. One Team.</h2>
+  <p className="lede">Four services run by one team: we produce the experience, operate the site, run the venue, and wire the technology. Different crews doing each, held to the same standard.</p>
   <div className="cap-grid">
-    <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience. Scope, schedule, budget, fabrication, staging, and the finish — owned end to end.</p></div>
-    <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground. Logistics, staffing, safety, and the day-of call — clockwork at any scale.</p></div>
-    <div className="ccard v"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room. Venue programming, bookings, facility and vendor operations — the space, managed start to finish.</p></div>
-    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the yard its instruments. ATLVS, COMPVSS &amp; GVTEWAY plus immersive show tech — chart the course, point the crew, open the gate.</p></div>
+    <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience. Scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
+    <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground. Logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
+    <div className="ccard v"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room. Programming, bookings, facility and vendor operations, the space managed start to finish.</p></div>
+    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments. <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span> plus immersive show tech, so everyone can see the plan, the people, and the gate in one place.</p></div>
   </div>
 </div></section>
 
 <section className="course" id="course"><div className="wrap">
   <p className="eyebrow">The Course</p>
-  <h2 className="sec">8 Phases, from Launch to Landing.</h2>
+  <h2 className="sec">8 Phases, First Line to Wrap.</h2>
   <div className="smap">
     <div className="stop done"><div className="dot">1</div><div className="nm">Discovery</div></div>
     <div className="stop done"><div className="dot">2</div><div className="nm">Design</div></div>
@@ -268,7 +268,7 @@ export default function Page() {
 <section className="work" id="work"><div className="wrap">
   <p className="eyebrow">The Archives</p>
   <h2 className="sec">Selected Work.</h2>
-  <p className="lede">Case studies from the Archives — experiential project management we designed, built, crewed, and launched end to end.</p>
+  <p className="lede">A few from the Archives. Experiences we designed, built, crewed, and ran end to end.</p>
   <div className="work-grid">
     <article className="wcard"><div className="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"/></div><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival · Insomniac, Las Vegas · 2025–26</p></div></article>
     <article className="wcard"><div className="media"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy"/></div><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concerts &amp; Tours · Club Space Miami · 2026</p></div></article>
@@ -279,7 +279,7 @@ export default function Page() {
 <section className="close" id="close"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
   <h2>Start Your <span className="a">Project.</span></h2>
-  <p className="sub lede">Tell us the destination. We build the ship, crew it, chart the course, and launch — on time, on budget, beyond the scene.</p>
+  <p className="sub lede">Tell us what you're building. We scope it, crew it, run the eight phases, and go live, on time and on budget.</p>
   <div className="cta-row" style={{justifyContent: 'center'}}>
     <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
     <a className="gx-btn gx-btn--ghost gx-btn--lg" href="#work">See the Archives</a>
@@ -298,7 +298,7 @@ export default function Page() {
   "description":"GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four professional services — Experiential Production, Site Operations, Venue Management, and Immersive Technologies — for festivals, concerts and tours, brand activations, immersive experiences, and sporting events, serving brands, producers, creative directors, and production directors.",
   "audience":{"@type":"Audience","audienceType":"Brands, producers, creative directors, production directors, and project managers in live entertainment, experiential marketing, and arts and culture"},
   "email":"hello@ghxstship.tours",
-  "foundingDate":"2022","slogan":"Venture Beyond",
+  "foundingDate":"2022","slogan":"You build worlds. We help run them.",
   "address":{"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"},
   "location":[
     {"@type":"Place","name":"GHXSTSHIP Miami (Headquarters)","address":{"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"}},
@@ -319,7 +319,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"HowTo","name":"The GHXSTSHIP Production Lifecycle",
  "description":"GHXSTSHIP's eight-phase methodology for delivering live experiences, from discovery to strike.",
  "step":[
-  {"@type":"HowToStep","position":1,"name":"Project Discovery (Consultation)","text":"Goals, scope, and vision — the consultation that sets the route."},
+  {"@type":"HowToStep","position":1,"name":"Project Discovery (Consultation)","text":"Goals, scope, and what you're building. The first call where we figure out what it takes."},
   {"@type":"HowToStep","position":2,"name":"Research &amp; Development","text":"Feasibility, concepts, and technology and partner exploration."},
   {"@type":"HowToStep","position":3,"name":"Creative Design","text":"Creative direction, design, and experiential storytelling."},
   {"@type":"HowToStep","position":4,"name":"Compliance &amp; Risk Management","text":"Engineering, permits, safety, insurance, and risk planning."},
@@ -358,9 +358,9 @@ export default function Page() {
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"What does GHXSTSHIP do?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four professional services — Experiential Production, Site Operations, Venue Management, and Immersive Technologies — for festivals, concerts and tours, brand activations, immersive experiences, and sporting events."}},
- {"@type":"Question","name":"How do I work with GHXSTSHIP?","acceptedAnswer":{"@type":"Answer","text":"Working with GHXSTSHIP is a six-step journey: share your vision (the destination), build your vessel (the scope), chart the course (the eight-phase production lifecycle), meet your crew, pack the manifest, and launch. It starts with a consultation."}},
+ {"@type":"Question","name":"How do I work with GHXSTSHIP?","acceptedAnswer":{"@type":"Answer","text":"Working with GHXSTSHIP runs in six steps: tell us what you're building, set the scope, walk the eight-phase production lifecycle, meet the team, lock onboarding and approvals, and go live. It starts with a consultation."}},
  {"@type":"Question","name":"What is the GHXSTSHIP production lifecycle?","acceptedAnswer":{"@type":"Answer","text":"An eight-phase methodology: Project Discovery, Research and Development, Creative Design, Compliance and Risk Management, Production and Build, Operations and Logistics, Live Activation, and Strike and Post-Production."}},
- {"@type":"Question","name":"Who produces my experience?","acceptedAnswer":{"@type":"Answer","text":"Your experience is delivered by the GHXSTSHIP crew — a senior team of producers, directors, technicians, and logistics specialists who stay with you from consultation to celebration."}},
+ {"@type":"Question","name":"Who produces my experience?","acceptedAnswer":{"@type":"Answer","text":"Your experience is delivered by the GHXSTSHIP crew — a senior team of producers, directors, technicians, and logistics specialists who stay with you from the first call through the wrap."}},
  {"@type":"Question","name":"What software does GHXSTSHIP build?","acceptedAnswer":{"@type":"Answer","text":"Three platforms: ATLVS for production and resource management, COMPVSS for workforce and crew management, and GVTEWAY for ticketing, fan engagement, and community."}},
  {"@type":"Question","name":"Who does GHXSTSHIP work with?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP partners with brands, producers, creative directors, production directors, and project managers across live entertainment, experiential marketing, and arts and culture — and trains the next generation of experiential producers."}},
  {"@type":"Question","name":"Does GHXSTSHIP produce festivals and concert tours?","acceptedAnswer":{"@type":"Answer","text":"Yes. Festival production and concert and tour production are core destinations, alongside brand activations, immersive experiences, and sporting events."}},

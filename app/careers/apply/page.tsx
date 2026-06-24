@@ -72,7 +72,7 @@ export default function Page() {
   </form>
   <aside className="rail">
     <div className="blk"><p className="lbl">What Happens Next</p><ol><li>A human on the crew reviews your application.</li><li>If it&rsquo;s a fit, a 20-minute intro call.</li><li>A practical conversation with the department lead.</li><li>Reference check and offer.</li></ol></div>
-    <div className="blk"><p className="lbl">Apprenticeships</p><p>No experience? We train the next generation. Apply to Production Assistant and learn the ropes on real voyages.</p></div>
+    <div className="blk"><p className="lbl">Apprenticeships</p><p>No experience? We train the next generation. Apply to Production Assistant and learn the work on real productions.</p></div>
     <div className="blk"><p className="lbl">Equal Opportunity</p><p>GHXSTSHIP is an equal-opportunity employer. We crew on merit, and we don&rsquo;t gatekeep talent.</p></div>
   </aside>
 </div></div></section></main>

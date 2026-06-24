@@ -97,7 +97,7 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Museum</p>
   <h1>Fly the <span className="pop">Colors.</span></h1>
-  <p className="lede">Branded apparel and gear from the GHXSTSHIP yard across three lines &mdash; <span style={{color: 'var(--brass)'}}>Sitewear</span>, <span style={{color: 'var(--plasma)'}}>Streetwear</span>, and <span style={{color: 'var(--nebula)'}}>Performancewear</span>. Crew-grade goods, built to the same standard as the work. Checkout runs on GVTEWAY.</p>
+  <p className="lede">Branded apparel and gear in three lines &mdash; <span style={{color: 'var(--brass)'}}>Sitewear</span>, <span style={{color: 'var(--plasma)'}}>Streetwear</span>, and <span style={{color: 'var(--nebula)'}}>Performancewear</span>. The same stuff our crew actually wears on site, held to the same standard as the work. Checkout runs on <span className="pn-gvteway">GVTEWAY</span>.</p>
   <p style={{fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-label)', letterSpacing: '.1em', textTransform: 'uppercase', margin: 'var(--sp-4) 0 0'}}><Link href="/contact" style={{color: 'var(--brass)', textDecoration: 'none'}}>Wholesale &amp; custom crew kit</Link></p>
 </div></section>
 <section className="pad"><div className="wrap">
@@ -111,7 +111,7 @@ export default function Page() {
     <article className="pc c"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Performance &middot; GX-PW-AP-003</p><h3>Track Jacket</h3><div className="row"><span className="price">$88</span><button className="add" data-name="Track Jacket">Add</button></div></div></article>
     <article className="pc b"><div className="media"><img src="/assets/skull-bone.svg" alt=""/></div><div className="body"><p className="cat">Streetwear &middot; GX-ST-AC-002</p><h3>Enamel Skull Pin</h3><div className="row"><span className="price">$14</span><button className="add" data-name="Enamel Skull Pin">Add</button></div></div></article>
   </div>
-  <p className="note">Secure checkout powered by <b>GVTEWAY</b> &middot; Free crew shipping over $100 &middot; Product photography drops in as the line ships</p>
+  <p className="note">Secure checkout powered by <b><span className="pn-gvteway">GVTEWAY</span></b> &middot; Free crew shipping over $100 &middot; Product photography drops in as the line ships</p>
 </div></section>
 </main>
 

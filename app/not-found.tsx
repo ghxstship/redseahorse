@@ -77,14 +77,14 @@ export default function NotFound() {
 ` }} />
       
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Off the Map</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>404</span></p></div>
 <main>
 <section><div className="wrap"><div className="nf"><div>
   <img src="/assets/skull-bone.svg" alt=""/>
-  <p className="code">Error 404 &middot; Off Course</p>
-  <h1 style={{margin: 'var(--space-14) 0 var(--space-14)'}}>Off the Map.</h1>
-  <p className="lede" style={{margin: '0 auto', maxWidth: 'var(--measure-narrow)'}}>This route isn't on the map. The page you're after was moved, struck, or never charted. Chart a new course below.</p>
-  <div className="row"><Link href="/" className="gx-btn gx-btn--lg">Back to Home Port</Link><Link href="/work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link></div>
+  <p className="code">Error 404 &middot; Page Not Found</p>
+  <h1 style={{margin: 'var(--space-14) 0 var(--space-14)'}}>That page isn't here.</h1>
+  <p className="lede" style={{margin: '0 auto', maxWidth: 'var(--measure-narrow)'}}>Happens. The page moved, got pulled, or never existed. Either way, here's a way back.</p>
+  <div className="row"><Link href="/" className="gx-btn gx-btn--lg">Back to Home</Link><Link href="/work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link></div>
 </div></div></div></section>
 </main>
 

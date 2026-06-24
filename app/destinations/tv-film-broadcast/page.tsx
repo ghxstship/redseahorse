@@ -138,7 +138,7 @@ export default function Page() {
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Course</p>
   <h2 className="sec">Broadcast, Eight Phases.</h2>
-  <p className="lede">Every project follows the same proven course — eight phases, Discovery to Close.</p>
+  <p className="lede">Same eight phases on every project, Discovery to Close. You watch each one happen.</p>
   <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
     <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
@@ -160,8 +160,8 @@ export default function Page() {
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Broadcasts, Charted.</h2>
-  <div className="mu-grid"><article className="mu" style={{gridColumn: '1/-1'}}><div className="body" style={{textAlign: 'center', padding: 'var(--space-40)'}}><h3>Now Charting</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>New broadcast work is on the board. Want to be the first case study? Start a project.</p><a className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}} href="mailto:hello@ghxstship.tours">Start a Project</a></div></article>
+  <h2 className="sec">Broadcasts We Ran.</h2>
+  <div className="mu-grid"><article className="mu" style={{gridColumn: '1/-1'}}><div className="body" style={{textAlign: 'center', padding: 'var(--space-40)'}}><h3>In Production</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>New broadcast work is underway. Want to be the first case study? Start a project.</p><a className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}} href="mailto:hello@ghxstship.tours">Start a Project</a></div></article>
   </div>
 </div></section>
 
@@ -169,10 +169,10 @@ export default function Page() {
 <section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
   <p className="eyebrow">Why GHXSTSHIP</p>
   <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you to a chain of vendors. GHXSTSHIP owns the entire voyage — and builds the technology that powers it.</p>
+  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that runs them.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
     <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — ATLVS, COMPVSS &amp; GVTEWAY, in-house.</div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
     <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
   </div>
 </div></section>
@@ -181,7 +181,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Broadcast FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
     <details><summary>What does GHXSTSHIP do for TV, film and broadcast?<span className="ic">+</span></summary><p className="a">End-to-end broadcast production: live broadcast, set design and scenic, camera/audio/lighting, content capture and post, on-air activations, and compliance — on our eight-phase lifecycle.</p></details>
     <details><summary>Who is broadcast production for?<span className="ic">+</span></summary><p className="a">Networks, studios, streamers, and brands that need a production partner from set build to air.</p></details>
     <details><summary>Do you handle live and captured content?<span className="ic">+</span></summary><p className="a">Yes — live broadcast and captured/post content, plus on-air brand activations.</p></details>
@@ -190,7 +190,7 @@ export default function Page() {
 
 <section className="cta"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Chart Your<br/>Broadcast.</h2>
+  <h2>Build Your<br/>Broadcast.</h2>
   <div className="hero-cta" style={{justifyContent: 'center'}}>
     <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
     <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>
