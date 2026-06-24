@@ -70,7 +70,7 @@ export default function Page() {
     <h2>Nice to Have</h2>
     <ul><li>OSHA / safety certification</li><li>Experience across multiple verticals &mdash; festivals, activations, sporting</li><li>A network of trusted freelance crew</li></ul>
     <h2>About GHXSTSHIP</h2>
-    <p>GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management &mdash; a full-service experiential production, operations, and technology company headquartered in Miami, with crews in Las Vegas, Chicago, New York, and Los Angeles. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
+    <p>GHXSTSHIP is a professional services firm for live and experiential projects &mdash; experiential production, site operations, venue management, and immersive technologies &mdash; headquartered in Miami, with crews in Las Vegas, Chicago, New York, and Los Angeles. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
     <div style={{display: 'flex', gap: 'var(--space-14)', flexWrap: 'wrap', marginTop: 'var(--sp-5)'}}><Link href="/careers/apply" className="gx-btn gx-btn--lg">Apply for This Role</Link><Link href="/careers" className="gx-btn gx-btn--ghost gx-btn--lg">All Open Roles</Link></div>
   </div>
   <aside><div className="meta-card">

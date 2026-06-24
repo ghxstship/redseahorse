@@ -9,58 +9,62 @@
    files in fonts/ and swap the @import for @font-face (see README).
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap');
+/* MONUMENT type — Anton (display, ALL-CAPS), Hanken Grotesk (body/UI),
+   Space Mono (eyebrows/IDs/coords), Jost (wordmark lockup only). */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Jost:wght@300;400;500&display=swap');
 
 :root {
   /* ---------------------------------------------------------------------
-     CORE PALETTE — "Vintage Reef" (lead world)
-     Premium vintage-tropical. Charcoal-graphite reef night, jade, pineapple,
-     sapphire. Vertical color logic: Jade = Production, Pineapple = Operations,
-     Blue = Technology  (green = yellow + blue ⇒ Production = Ops + Tech).
-     Token NAMES are retained from the prior cosmic system so every artifact
-     keeps working; only the values changed.
+     CORE PALETTE — GHXSTSHIP "mono-green" (approved palette v8)
+     The whole system resolves to ONE accent — Accent 1 #2edb3a — on the
+     Background/Foreground duality (#000000 / #ededed). Products & verticals
+     differentiate by TYPE, LAYOUT & ICONOGRAPHY, not hue. The 5 approved
+     swatches: Background #000000 · Foreground #ededed · Accent 1 #2edb3a ·
+     Accent 2 #6ee176 · Accent 3 #ade7b1. Functional signals (success/warning/
+     danger/info) stay multi-hue below — those are not brand accents.
+     Token NAMES are retained so every page keeps working; only values changed.
      --------------------------------------------------------------------- */
-  --void:        #0B1314;  /* deepest reef night — primary dark ground       */
-  --ink:         #101A1B;  /* charcoal-graphite — base dark surface          */
-  --ink-2:       #18262A;  /* raised reef surface                            */
-  --ink-3:       #243234;  /* hairlines / muted strokes on dark             */
+  --void:        #000000;  /* Background swatch — primary dark ground         */
+  --ink:         #0D0D0D;  /* base dark surface                               */
+  --ink-2:       #171717;  /* raised surface                                  */
+  --ink-3:       #262626;  /* hairlines / muted strokes on dark              */
 
-  --bone:        #EDF1EF;  /* pearl — primary light ground / text on dark    */
-  --parchment:   #EDF1EC;  /* soft pearl-mist — light surface                */
-  --parchment-2: #DCE3DE;  /* dividers / aged edge on light                  */
+  --bone:        #EDEDED;  /* Foreground swatch — light ground / text on dark */
+  --parchment:   #EDEDED;  /* light surface                                   */
+  --parchment-2: #D6D6D6;  /* dividers / edge on light                        */
 
-  /* SIGNALS — mapped to the three verticals (use with intent) */
-  --brass:       #22B083;  /* JADE · Production — primary brand accent        */
-  --on-brass:    #06140E;  /* text on jade                                    */
-  --brass-deep:  #14835F;  /* deep jade — shadow/hover of primary             */
-  --nebula:      #FFC24A;  /* PINEAPPLE · Operations — energy, highlights      */
-  --plasma:      #2E84D4;  /* SAPPHIRE · Technology — links, data, secondary   */
-  --flare:       #F2603A;  /* vintage coral — alerts, accents                 */
-  --aurora:      #1E6FA3;  /* deep harbor — cosmic-depth blue accent          */
-  /* Product accents (per tokens.json / BRAND_ARCHITECTURE) — used to
-     differentiate the ATLVS / COMPVSS / GVTEWAY pages from the jade default. */
-  --atlvs:       #FF2E88;  /* ATLVS — pink   */  --atlvs-deep:   #C21E68;
-  --compvss:     #E9A23B;  /* COMPVSS — amber */ --compvss-deep: #BE7E1E;
-  --gvteway:     #21D4D4;  /* GVTEWAY — cyan */  --gvteway-deep: #15A0A0;
+  /* SIGNALS — collapsed to the single approved green (mono-accent doctrine) */
+  --brass:       #2EDB3A;  /* Accent 1 — primary brand fill (bright)          */
+  --on-brass:    #012202;  /* dark ink that sits ON the bright green          */
+  --brass-deep:  #17C62A;  /* base, one step darker — shadow/hover            */
+  --nebula:      #ADE7B1;  /* Accent 3 — pale green highlight                 */
+  --plasma:      #6EE176;  /* Accent 2 — AA green link/secondary on dark      */
+  --flare:       #E5484D;  /* functional alert/danger (multi-hue signal)      */
+  --aurora:      #17C62A;  /* deep green accent                               */
+  /* Product accents — under mono-green doctrine every product resolves to the
+     one approved green; differentiation is by type/layout, not hue. */
+  --atlvs:       #2EDB3A;  /* ATLVS   */  --atlvs-deep:   #17C62A;
+  --compvss:     #6EE176;  /* COMPVSS */  --compvss-deep: #2EDB3A;
+  --gvteway:     #ADE7B1;  /* GVTEWAY */  --gvteway-deep: #6EE176;
 
-  /* JADE-on-light variants (text-safe) */
-  --jade-ink:    #18855F;  /* jade for text/UI on light grounds              */
-  --pineapple-deep:#C9931F;/* pineapple for text/UI on light                 */
-  --sapphire-ink:#205FB0;  /* sapphire for text/UI on light                  */
+  /* GREEN-on-light variants (AA text-safe on light grounds) */
+  --jade-ink:    #147D1C;  /* AA green for text/UI on light grounds          */
+  --pineapple-deep:#147D1C;/* green text/UI on light                         */
+  --sapphire-ink:#147D1C;  /* green link/UI on light                         */
 
-  /* TEXT RAMPS — on dark / on light */
-  --fg-on-dark-1: #EDF1EF; /* primary text on dark                           */
-  --fg-on-dark-2: #A6B4B1; /* secondary text on dark                         */
-  --fg-on-dark-3: #76847F; /* tertiary / captions on dark                    */
-  --fg-on-light-1:#13201B; /* primary text on light                          */
-  --fg-on-light-2:#475650; /* secondary text on light                        */
-  --fg-on-light-3:#76837D; /* tertiary on light                              */
+  /* TEXT RAMPS — on dark / on light (neutral ramp, AA-tuned) */
+  --fg-on-dark-1: #EDEDED; /* primary text on dark                           */
+  --fg-on-dark-2: #B0B0B0; /* secondary text on dark                         */
+  --fg-on-dark-3: #909090; /* tertiary / captions on dark (AA 6.6:1 on #000) */
+  --fg-on-light-1:#1C1C1C; /* primary text on light                          */
+  --fg-on-light-2:#424242; /* secondary text on light                        */
+  --fg-on-light-3:#5C5C5C; /* tertiary on light (AA 5.7:1 on #ededed)        */
 
-  /* SEMANTIC */
-  --success:   #22B083;
-  --warning:   #FFC24A;
-  --danger:    #F2603A;
-  --info:      #2E84D4;
+  /* SEMANTIC — functional signals, intentionally multi-hue */
+  --success:   #2FA968;
+  --warning:   #C8841A;
+  --danger:    #E5484D;
+  --info:      #2596C4;
 
   /* ---------------------------------------------------------------------
      ALT COLOR WORLDS (see preview/colors-*.html). Swap by overriding the
@@ -70,10 +74,11 @@
   /* ---------------------------------------------------------------------
      TYPE FAMILIES
      --------------------------------------------------------------------- */
-  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif; /* posters, hero, headlines */
-  --font-body:    "Space Grotesk", "Helvetica Neue", Arial, sans-serif; /* UI + body copy          */
-  --font-pixel:   "Silkscreen", "Space Mono", monospace;               /* 8-bit labels, ghost-ship */
+  --font-display: "Anton", "Arial Narrow", "Hanken Grotesk", system-ui, sans-serif; /* display/hero/headlines — single black weight, ALL-CAPS */
+  --font-body:    "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; /* UI + body copy */
+  --font-pixel:   "Space Mono", ui-monospace, monospace;               /* mono eyebrows / labels   */
   --font-mono:    "Space Mono", "SF Mono", ui-monospace, monospace;    /* coordinates, specs, data */
+  --font-wordmark:"Jost", "Hanken Grotesk", system-ui, sans-serif;     /* wordmark lockup only      */
 
   /* TYPE SCALE — modular, ratio 1.25 (major third) anchored at 16px body.
      Poster-led; display is condensed so it can run large. Override per artifact.
@@ -138,8 +143,8 @@
   --shadow-pop-sm: 0 1px 2px rgba(6,12,12,0.18), 0 1px 3px rgba(6,12,12,0.12);
   --shadow-pop:    0 2px 6px rgba(6,12,12,0.22), 0 6px 16px rgba(6,12,12,0.16);
   --shadow-pop-lg: 0 8px 28px rgba(6,12,12,0.30);
-  --shadow-pop-brass: 0 6px 18px rgba(20,131,95,0.30);
-  --shadow-pop-nebula: 0 6px 18px rgba(201,147,31,0.28);
+  --shadow-pop-brass: 0 6px 18px rgba(46,219,58,0.30);
+  --shadow-pop-nebula: 0 6px 18px rgba(110,225,118,0.28);
   /* hard offset — the pop-art "sticker" signature (zero blur). Canonical hard elevation. */
   --shadow-hard-sm: 3px 3px 0 var(--ink);
   --shadow-hard:    6px 6px 0 var(--ink);
@@ -149,8 +154,8 @@
   --dur-1: 80ms; --dur-2: 120ms; --dur-3: 160ms; --dur-4: 240ms;
   --ease-pop: cubic-bezier(.2,.7,.2,1); --ease-snap: ease;
   /* soft glow for dark surfaces (use rarely) */
-  --glow-plasma: 0 0 24px rgba(46,132,212,0.42);
-  --glow-nebula: 0 0 24px rgba(255,194,74,0.42);
+  --glow-plasma: 0 0 24px rgba(110,225,118,0.42);
+  --glow-nebula: 0 0 24px rgba(173,231,177,0.42);
 
   /* ---------------------------------------------------------------------
      HALFTONE / BEN-DAY DOT TEXTURES (CSS-only, no images)
@@ -164,7 +169,7 @@
   --halftone-nebula:
     radial-gradient(var(--nebula) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
   --halftone-bone:
-    radial-gradient(rgba(237,241,239,0.7) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
+    radial-gradient(rgba(237,237,237,0.7) 16%, transparent 17%) 0 0 / var(--dot-size) var(--dot-size);
 
   /* Thin reef-stripe accent motif (premium, not caution-tape) */
   --stripe-brass: repeating-linear-gradient(45deg, var(--brass) 0 2px, transparent 2px 14px);

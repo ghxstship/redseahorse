@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Story",
-  description: "GHXSTSHIP is the general contractor, foreman, and Procore of experiential project management \u2014 a full-service experiential production, operations, and technology company in Miami, Las Vegas, Chicago, New York, and Los Angeles.",
+  description: "GHXSTSHIP is a professional services firm for live and experiential projects \u2014 experiential production, site operations, venue management, and immersive technologies \u2014 in Miami, Las Vegas, Chicago, New York, and Los Angeles.",
   alternates: { canonical: "https://ghxstship.tours/about" },
 };
 
@@ -47,12 +47,12 @@ export default function Page() {
   .foot-links a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
   .foot-links a:hover{color:var(--brass)}
   .foot-bot{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:var(--space-22) 0 0;padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3)}
-  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-4);padding:var(--space-36) 0 0}@media(max-width:880px){.pgrid{grid-template-columns:1fr}}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-4);padding:var(--space-36) 0 0}@media(max-width:1040px){.pgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
   .pc{background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);padding:var(--space-26)}
   .pc .bar{height:6px;width:54px;border-radius:var(--r-xs);margin-bottom:var(--space-18);background:var(--brass)}
-  .pc:nth-child(2) .bar{background:var(--nebula)}.pc:nth-child(3) .bar{background:var(--plasma)}
+  .pc:nth-child(2) .bar{background:var(--nebula)}.pc:nth-child(3) .bar{background:var(--plasma)}.pc:nth-child(4) .bar{background:var(--brass)}
   .pc .role{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
-  .pc:nth-child(2) .role{color:var(--nebula)}.pc:nth-child(3) .role{color:var(--plasma)}
+  .pc:nth-child(2) .role{color:var(--nebula)}.pc:nth-child(3) .role{color:var(--plasma)}.pc:nth-child(4) .role{color:var(--brass)}
   .pc h3{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h2);text-transform:uppercase;margin:var(--sp-2) 0 var(--sp-2);line-height:.95}
   .pc p{font-size:var(--fs-small);line-height:1.55;color:var(--fg-on-dark-2);margin:0}
   .band{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-18);padding:var(--space-40) 0 0}@media(max-width:680px){.band{grid-template-columns:1fr 1fr}}
@@ -97,16 +97,17 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Story &middot; Beyond the Scenes</p>
   <h1>We Build the<br/><span className="pop">Whole Ship.</span></h1>
-  <p className="answer">GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with home ports in Las Vegas, Chicago, New York, and Los Angeles. We are the general contractor, foreman, and Procore of experiential project management &mdash; one accountable partner owning scope, schedule, budget, crew, and technology from first line to launch.</p>
+  <p className="answer">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with home ports in Las Vegas, Chicago, New York, and Los Angeles. We deliver four professional services &mdash; Experiential Production, Site Operations, Venue Management, and Immersive Technologies &mdash; as one accountable partner owning scope, schedule, budget, crew, and technology from first line to launch.</p>
 </div></section>
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">How We're Built</p>
-  <h2 className="sec">Three Vessels. One Yard.</h2>
-  <p className="lede">Three disciplines, one accountable yard: Production builds it, Operations runs it, Technology streamlines it. Distinct crews, one standard.</p>
+  <h2 className="sec">Four Disciplines. One Yard.</h2>
+  <p className="lede">Four professional services, one accountable yard: we produce it, operate the site, run the venue, and wire the technology. Distinct crews, one standard.</p>
   <div className="pgrid">
-    <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Production</h3><p>We build the ship &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Operations</h3><p>We crew it and run it &mdash; logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Technology</h3><p>We give the yard its instruments &mdash; ATLVS, COMPVSS &amp; GVTEWAY, the platforms the project runs on.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience &mdash; scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground &mdash; logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room &mdash; programming, bookings, facility and vendor operations, and on-site teams.</p></div>
+    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the yard its instruments &mdash; ATLVS, COMPVSS &amp; GVTEWAY, the platforms the project runs on.</p></div>
   </div>
 </div></section>
 <section className="pad"><div className="wrap">

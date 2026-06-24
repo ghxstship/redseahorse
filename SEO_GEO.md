@@ -5,17 +5,20 @@ engines (GEO — Generative Engine Optimization: ChatGPT, Perplexity, Google AI 
 Every page in this kit follows these rules.
 
 ## Shared foundations
-- **One clear entity.** Always name the company the same way: *GHXSTSHIP* (an experiential production
-  & technology company headquartered in Miami, FL). Consistent name + location + founding year (2022) =
-  strong entity recognition.
+- **One clear entity.** Always name the company the same way: *GHXSTSHIP* (a professional services firm
+  for live and experiential projects, headquartered in Miami, FL). Consistent name + location + founding
+  year (2022) = strong entity recognition.
 - **Answer-first writing.** Open every section with a single, self-contained sentence that *defines or
   answers* before the brand voice kicks in. Generative engines extract these.
-- **Three-vertical taxonomy** (Production · Operations · Technology) used as `<h2>`s, in nav, in
-  structured data, and in copy — a stable, repeated taxonomy is easy for models to learn and cite.
+- **Four-service taxonomy** (Experiential Production · Site Operations · Venue Management · Immersive
+  Technologies) used as `<h2>`s, in nav, in structured data, and in copy — a stable, repeated taxonomy is
+  easy for models to learn and cite. Event types (festivals, concerts & tours, brand activations,
+  immersive, sporting) are framed as the **markets** these services are delivered into, not the
+  top-level taxonomy.
 
 ## SEO (classic search)
-- **`<title>`** ≤ 60 chars, primary keyword first: e.g. *"Experiential Production, Operations & Technology — GHXSTSHIP."*
-- **Meta description** ≤ 155 chars, includes verticals + location + a verb.
+- **`<title>`** ≤ 60 chars, primary keyword first: e.g. *"Experiential Production, Site Operations & Venue Management — GHXSTSHIP."*
+- **Meta description** ≤ 155 chars, includes the services + location + a verb.
 - **Semantic HTML5 landmarks:** `<header><nav aria-label><main><section aria-labelledby><article><footer>`.
 - **Heading hierarchy:** exactly one `<h1>`; sections use `<h2>`; sub-items `<h3>`. No skipped levels.
 - **Descriptive `alt`** on every meaningful image (the skull mark = "GHXSTSHIP ghost-ship logo").
@@ -28,7 +31,7 @@ Every page in this kit follows these rules.
   "What software does GHXSTSHIP build?"). This is the single highest-leverage GEO move.
 - **Structured data (JSON-LD):**
   - `Organization` — name, url, logo, description, foundingDate, address, areaServed, sameAs,
-    `knowsAbout` (the verticals + key services), `hasOfferCatalog` (3 verticals as offers).
+    `knowsAbout` (the four services + key markets), `hasOfferCatalog` (the 4 services as offers).
   - `SoftwareApplication` ×3 — ATLVS, COMPVSS, GVTEWAY (name, applicationCategory, description).
   - `WebSite` with `SearchAction` (optional).
 - **Extractable facts.** State numbers plainly and consistently: *14+ years · 250+ experiences · 5M+ memories · founded 2022 · Miami HQ + New York, Chicago & Los Angeles.* Lean on real case studies (the Archives); avoid the "52 countries" geographic claim.
@@ -44,7 +47,7 @@ keyword-true. Don't bury the entity in metaphor.
 ---
 
 ## Canonical definition (reuse verbatim, everywhere)
-> GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami (with offices in Las Vegas, Chicago, New York, and Los Angeles) that produces festivals, concerts and tours, brand activations, immersive experiences, and sporting events — for brands, producers, and creative and production directors — across three verticals: Production, Operations, and Technology.
+> GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami (with offices in Las Vegas, Chicago, New York, and Los Angeles), that delivers four professional services — Experiential Production, Site Operations, Venue Management, and Immersive Technologies — for festivals, concerts and tours, brand activations, immersive experiences, and sporting events, serving brands, producers, and creative and production directors.
 
 ## Target audience (bake into copy + schema + FAQ)
 Primary: **brands, producers, creative directors, production directors, and project managers** in

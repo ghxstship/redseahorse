@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const EXPLORE = [
   { href: "/destinations/", label: "Destinations" },
-  { href: "/solutions/", label: "Fleet" },
+  { href: "/solutions/", label: "Services" },
   { href: "/team/", label: "Crew" },
   { href: "/course/", label: "Course" },
   { href: "/work/", label: "Archives" },
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
         <div className="foot-bot">
           <span>&copy; 2026 G H X S T S H I P Industries LLC</span>
-          <span>Production Management &middot; Operations Leadership &middot; Technology Innovations</span>
+          <span>Experiential Production &middot; Site Operations &middot; Venue Management &middot; Immersive Technologies</span>
         </div>
       </div>
     </footer>

@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 
 const LINKS = [
   { href: "/destinations/", label: "Destinations" },
-  { href: "/solutions/", label: "Fleet" },
+  { href: "/solutions/", label: "Services" },
   { href: "/team/", label: "Crew" },
   { href: "/resources/blog/", label: "Logs" },
   { href: "/store/", label: "Museum" },

@@ -20,12 +20,12 @@
     '.seven .dstep:hover{transform:translateY(-3px)}' +
     '.smap .stop .dot,.gx-smap__stop .gx-smap__dot{transition:box-shadow .15s ease,background .12s ease,border-color .12s ease,color .12s ease}' +
     '.smap .stop .dot{background:var(--void);border-color:var(--ink-3);color:var(--fg-on-dark-3)}' +
-    '.smap .stop:hover .dot,.gx-smap__stop:hover .gx-smap__dot{box-shadow:0 0 0 6px rgba(34,176,131,.22)!important}' +
-    '.smap .stop.phase-active .dot,.gx-smap__stop.phase-active .gx-smap__dot{background-color:var(--brass)!important;background-image:none!important;border-color:var(--brass)!important;color:var(--on-brass,#0B1314)!important;box-shadow:0 0 0 6px rgba(34,176,131,.34)!important}' +
+    '.smap .stop:hover .dot,.gx-smap__stop:hover .gx-smap__dot{box-shadow:0 0 0 6px rgba(46,219,58,.22)!important}' +
+    '.smap .stop.phase-active .dot,.gx-smap__stop.phase-active .gx-smap__dot{background-color:var(--brass)!important;background-image:none!important;border-color:var(--brass)!important;color:var(--on-brass,#012202)!important;box-shadow:0 0 0 6px rgba(46,219,58,.34)!important}' +
     '.seven .dstep.phase-active{outline:3px solid var(--brass);outline-offset:3px}' +
     '.phase-detail{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;' +
       'background:var(--ink-2);border:var(--stroke-1,2px) solid var(--ink-3);border-left:4px solid var(--brass);' +
-      'border-radius:6px;padding:22px 26px;box-shadow:6px 6px 0 var(--ink,#0B1314)}' +
+      'border-radius:6px;padding:22px 26px;box-shadow:6px 6px 0 var(--ink,#000000)}' +
     '.phase-detail .pd-n{font-family:var(--font-display);font-weight:900;font-size:54px;line-height:.8;color:var(--brass)}' +
     '.phase-detail .pd-eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 6px}' +
     '.phase-detail .pd-name{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.01em;color:var(--bone);margin:0 0 6px;line-height:1}' +

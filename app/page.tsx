@@ -2,9 +2,9 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiential Production & Operations Management",
-  description: "GHXSTSHIP runs experiential production and operations like a general contractor \u2014 managing scope, schedule, budget, crew, and technology for festivals, brand activations, immersive experiences, and live events.",
-  keywords: ["experiential production management", "event general contractor", "production management company", "operations leadership management", "event project management", "brand activation contractor", "festival production management", "live event operations"],
+  title: "Experiential Production, Site Operations & Venue Management",
+  description: "GHXSTSHIP delivers four professional services \u2014 experiential production, site operations, venue management, and immersive technologies \u2014 for festivals, activations, and live events.",
+  keywords: ["experiential production", "site operations", "venue management", "immersive technologies", "event production company", "live event operations", "venue management company", "experiential technology company"],
   alternates: { canonical: "https://ghxstship.tours/" },
 };
 
@@ -70,7 +70,7 @@ export default function Page() {
   /* POSITIONING */
   .pos{padding:var(--sp-9) 0;border-top:var(--stroke-1) solid var(--ink-3)}
   .pos h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-display-m);line-height:var(--lh-display-m);text-transform:uppercase;letter-spacing:var(--tracking-display);margin:0;max-width:30rem}
-  .pos h2 .a{color:var(--brass)}.pos h2 .b{color:var(--nebula)}.pos h2 .c{color:var(--plasma)}
+  .pos h2 .a{color:var(--brass)}.pos h2 .b{color:var(--nebula)}.pos h2 .c{color:var(--plasma)}.pos h2 .d{color:var(--brass)}
   .pos .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-7);align-items:center}
   @media(max-width:56rem){.pos .grid{grid-template-columns:1fr}}
 
@@ -91,15 +91,16 @@ export default function Page() {
 
   /* CAPABILITY STACK */
   .cap{padding:var(--sp-9) 0}
-  .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-4);margin-top:var(--sp-6)}
-  @media(max-width:56rem){.cap-grid{grid-template-columns:1fr}}
+  .cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-4);margin-top:var(--sp-6)}
+  @media(max-width:64rem){.cap-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:38rem){.cap-grid{grid-template-columns:1fr}}
   .ccard{background:var(--ink-2);border:var(--stroke-1) solid var(--ink-3);border-radius:var(--r-3);padding:var(--sp-6);box-shadow:var(--shadow-pop)}
   .ccard .role{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase}
-  .ccard.p .role{color:var(--brass)}.ccard.o .role{color:var(--nebula)}.ccard.t .role{color:var(--plasma)}
+  .ccard.p .role{color:var(--brass)}.ccard.o .role{color:var(--nebula)}.ccard.t .role{color:var(--plasma)}.ccard.v .role{color:var(--brass)}
   .ccard h3{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:var(--lh-h2);text-transform:uppercase;letter-spacing:var(--tracking-display);margin:var(--sp-2) 0 var(--sp-3)}
   .ccard p{font-size:var(--fs-small);line-height:var(--lh-body);color:var(--fg-on-dark-2);margin:0}
   .ccard .bar{height:3px;border-radius:var(--r-xs);margin-bottom:var(--sp-4)}
-  .ccard.p .bar{background:var(--brass)}.ccard.o .bar{background:var(--nebula)}.ccard.t .bar{background:var(--plasma)}
+  .ccard.p .bar{background:var(--brass)}.ccard.o .bar{background:var(--nebula)}.ccard.t .bar{background:var(--plasma)}.ccard.v .bar{background:var(--brass)}
 
   /* THE COURSE (strip-map) */
   .course{padding:var(--sp-9) 0;background:var(--ink);border-top:var(--stroke-1) solid var(--ink-3);border-bottom:var(--stroke-1) solid var(--ink-3)}
@@ -182,11 +183,9 @@ export default function Page() {
 <main>
 <section className="hero"><div className="wrap"><div className="hero-grid">
   <div>
-    <p className="eyebrow">Production Management &nbsp;·&nbsp; Operations Leadership &nbsp;·&nbsp; Technology Innovations</p>
+    <p className="eyebrow">Experiential Production &nbsp;·&nbsp; Site Operations &nbsp;·&nbsp; Venue Management &nbsp;·&nbsp; Immersive Technologies</p>
     <h1>Beyond<br/>the <span className="a">Scenes.</span></h1>
-    <p className="sub">GHXSTSHIP runs experiential production and operations the way a general contractor runs a build —
-      one accountable partner managing scope, schedule, budget, crew, and technology end to end. For brands,
-      agencies, and venues producing festivals, activations, immersive experiences, and live events.</p>
+    <p className="sub">GHXSTSHIP is a professional services firm for live and experiential projects — one accountable partner across experiential production, site operations, venue management, and immersive technologies. For brands, agencies, and venues producing festivals, activations, immersive experiences, and live events.</p>
     <div className="cta-row">
       <a className="gx-btn" href="#close">Start a Project</a>
       <a className="gx-btn gx-btn--ghost" href="#work">See the Archives</a>
@@ -216,11 +215,8 @@ export default function Page() {
 </div></section>
 
 <section className="pos"><div className="wrap"><div className="grid">
-  <h2>The <span className="a">General Contractor</span>, <span className="b">Foreman</span>, and <span className="c">Procore</span> of experiential project management.</h2>
-  <p className="lede">GHXSTSHIP manages experiential production and operations leadership the way a general
-    contractor manages a build — one accountable partner owning scope, schedule, budget, crew, and
-    technology. Not a vendor chain: production management, operations leadership, and the platforms that
-    run them, start to launch.</p>
+  <h2>One accountable partner for <span className="a">Experiential Production</span>, <span className="b">Site Operations</span>, <span className="c">Venue Management</span> &amp; <span className="d">Immersive Technologies</span>.</h2>
+  <p className="lede">GHXSTSHIP delivers four professional services the way a general contractor runs a build — one accountable partner owning scope, schedule, budget, crew, and technology. Not a vendor chain: experiential production, site operations, venue management, and the immersive technologies that run them, start to launch.</p>
 </div></div></section>
 
 <section className="journey" id="journey"><div className="wrap"><div className="j-grid">
@@ -243,13 +239,14 @@ export default function Page() {
 </div></div></section>
 
 <section className="cap" id="cap"><div className="wrap">
-  <p className="eyebrow">The Fleet</p>
-  <h2 className="sec">Three Vessels. One Yard.</h2>
-  <p className="lede">Three disciplines, one accountable yard: Production builds it, Operations runs it, Technology streamlines it. Distinct crews, one standard.</p>
+  <p className="eyebrow">The Services</p>
+  <h2 className="sec">Four Disciplines. One Yard.</h2>
+  <p className="lede">Four professional services, one accountable yard: we produce it, operate the site, run the venue, and wire the technology. Distinct crews, one standard.</p>
   <div className="cap-grid">
-    <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Production Management</h3><p>We build the ship. Scope, schedule, budget, fabrication, staging, and the finish — owned end to end.</p></div>
-    <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Operations Leadership</h3><p>We crew it and run it. Logistics, staffing, safety, and the day-of call — clockwork at any scale.</p></div>
-    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Technology Innovations</h3><p>We give the yard its instruments. ATLVS, COMPVSS &amp; GVTEWAY — chart the course, point the crew, open the gate.</p></div>
+    <div className="ccard p"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience. Scope, schedule, budget, fabrication, staging, and the finish — owned end to end.</p></div>
+    <div className="ccard o"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground. Logistics, staffing, safety, and the day-of call — clockwork at any scale.</p></div>
+    <div className="ccard v"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room. Venue programming, bookings, facility and vendor operations — the space, managed start to finish.</p></div>
+    <div className="ccard t"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the yard its instruments. ATLVS, COMPVSS &amp; GVTEWAY plus immersive show tech — chart the course, point the crew, open the gate.</p></div>
   </div>
 </div></section>
 
@@ -298,7 +295,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
   "@context":"https://schema.org","@type":"Organization","name":"GHXSTSHIP","alternateName":"G H X S T S H I P","legalName":"G H X S T S H I P Industries LLC",
   "url":"https://ghxstship.tours/","logo":"https://ghxstship.tours/logo.svg",
-  "description":"GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We produce festivals, concerts and tours, brand activations, immersive experiences, and sporting events for brands, producers, creative directors, and production directors — through three verticals: Production, Operations, and Technology.",
+  "description":"GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four professional services — Experiential Production, Site Operations, Venue Management, and Immersive Technologies — for festivals, concerts and tours, brand activations, immersive experiences, and sporting events, serving brands, producers, creative directors, and production directors.",
   "audience":{"@type":"Audience","audienceType":"Brands, producers, creative directors, production directors, and project managers in live entertainment, experiential marketing, and arts and culture"},
   "email":"hello@ghxstship.tours",
   "foundingDate":"2022","slogan":"Venture Beyond",
@@ -310,19 +307,13 @@ export default function Page() {
     {"@type":"Place","name":"GHXSTSHIP Los Angeles","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"}}
   ],
   "areaServed":"Worldwide",
-  "knowsAbout":["Festival production","Concert and tour production","Brand activations","Immersive experience design","Sporting event production","Broadcast and film production","Health and wellness experiences","Premium hospitality","Luxury retail activations","Water and motorsports production","Event production management","Crew management","Event ticketing"],
-  "hasOfferCatalog":{"@type":"OfferCatalog","name":"GHXSTSHIP Destinations",
+  "knowsAbout":["Experiential production","Site operations","Venue management","Immersive technologies","Festival production","Concert and tour production","Brand activations","Immersive experience design","Sporting event production","Event production management","Crew management","Event ticketing"],
+  "hasOfferCatalog":{"@type":"OfferCatalog","name":"GHXSTSHIP Professional Services",
     "itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Festival Production"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Concert &amp; Tour Production"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand Activations"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Immersive Experiences"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sporting Events"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"TV, Film &amp; Broadcast"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Health &amp; Wellness Experiences"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Premium Hospitality"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Luxury Retail Activations"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Water &amp; Motorsports Production"}}
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Experiential Production"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Site Operations"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Venue Management"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Immersive Technologies"}}
     ]}
 }` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"HowTo","name":"The GHXSTSHIP Production Lifecycle",
@@ -343,6 +334,10 @@ export default function Page() {
  {"@type":"SoftwareApplication","name":"GVTEWAY","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Event ticketing, fan engagement, and community platform.","publisher":{"@type":"Organization","name":"GHXSTSHIP"}}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@graph":[
+ {"@type":"Service","name":"Experiential Production","serviceType":"Experiential production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"End-to-end production of live and experiential projects — scope, design, fabrication, staging, and technical delivery owned start to launch.","audience":{"@type":"Audience","audienceType":"Brands, agencies, producers, and creative and production directors"}},
+ {"@type":"Service","name":"Site Operations","serviceType":"Event and site operations","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"On-the-ground operations leadership — logistics, staffing, safety, compliance, and day-of show calling at any scale.","audience":{"@type":"Audience","audienceType":"Producers, promoters, venues, and production directors"}},
+ {"@type":"Service","name":"Venue Management","serviceType":"Venue management and operations","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Full-service venue management — programming, bookings, facility and vendor operations, and on-site teams.","audience":{"@type":"Audience","audienceType":"Venue owners, operators, and cultural institutions"}},
+ {"@type":"Service","name":"Immersive Technologies","serviceType":"Immersive and experiential technology","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Experiential and immersive technology — show systems, interactive media, and the ATLVS, COMPVSS, and GVTEWAY platforms that run productions.","audience":{"@type":"Audience","audienceType":"Brands, producers, and venue operators"}},
  {"@type":"Service","name":"Festival Production","serviceType":"Festival production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Multi-stage festival production, infrastructure, staging, and headliner experiences at scale.","audience":{"@type":"Audience","audienceType":"Festival promoters, brands, and production directors"}},
  {"@type":"Service","name":"Concert &amp; Tour Production","serviceType":"Concert touring production","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Concert touring, show production, and multi-city routing for live music.","audience":{"@type":"Audience","audienceType":"Artists, tour managers, and promoters"}},
  {"@type":"Service","name":"Brand Activations","serviceType":"Brand activation &amp; experiential marketing","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Experiential marketing, pop-ups, and brand environments that convert attention.","audience":{"@type":"Audience","audienceType":"Brands, agencies, and creative directors"}},
@@ -362,7 +357,7 @@ export default function Page() {
  {"@type":"ListItem","position":9,"item":{"@type":"CreativeWork","name":"Red Bull Unforeseen Motel","about":"Brand activation","locationCreated":"III Points, Miami","datePublished":"2023"}}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"What does GHXSTSHIP do?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We produce festivals, concerts and tours, brand activations, immersive experiences, and sporting events through three verticals: Production, Operations, and Technology."}},
+ {"@type":"Question","name":"What does GHXSTSHIP do?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four professional services — Experiential Production, Site Operations, Venue Management, and Immersive Technologies — for festivals, concerts and tours, brand activations, immersive experiences, and sporting events."}},
  {"@type":"Question","name":"How do I work with GHXSTSHIP?","acceptedAnswer":{"@type":"Answer","text":"Working with GHXSTSHIP is a six-step journey: share your vision (the destination), build your vessel (the scope), chart the course (the eight-phase production lifecycle), meet your crew, pack the manifest, and launch. It starts with a consultation."}},
  {"@type":"Question","name":"What is the GHXSTSHIP production lifecycle?","acceptedAnswer":{"@type":"Answer","text":"An eight-phase methodology: Project Discovery, Research and Development, Creative Design, Compliance and Risk Management, Production and Build, Operations and Logistics, Live Activation, and Strike and Post-Production."}},
  {"@type":"Question","name":"Who produces my experience?","acceptedAnswer":{"@type":"Answer","text":"Your experience is delivered by the GHXSTSHIP crew — a senior team of producers, directors, technicians, and logistics specialists who stay with you from consultation to celebration."}},
@@ -370,7 +365,7 @@ export default function Page() {
  {"@type":"Question","name":"Who does GHXSTSHIP work with?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP partners with brands, producers, creative directors, production directors, and project managers across live entertainment, experiential marketing, and arts and culture — and trains the next generation of experiential producers."}},
  {"@type":"Question","name":"Does GHXSTSHIP produce festivals and concert tours?","acceptedAnswer":{"@type":"Answer","text":"Yes. Festival production and concert and tour production are core destinations, alongside brand activations, immersive experiences, and sporting events."}},
  {"@type":"Question","name":"What are ATLVS, COMPVSS, and GVTEWAY?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP's proprietary software: ATLVS (the Atlas) for production and resource management, COMPVSS (the Compass) for workforce and crew management, and GVTEWAY (the Gateway) for ticketing, fan engagement, and community."}},
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical rather than an afterthought."}},
+ {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own immersive technologies (ATLVS, COMPVSS, and GVTEWAY), and Site Operations and Venue Management — logistics, crew, compliance, and the room itself — are dedicated services rather than an afterthought."}},
  {"@type":"Question","name":"Where is GHXSTSHIP based?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP is headquartered in Miami, Florida, with offices in Las Vegas, Chicago, New York, and Los Angeles, and produces experiences worldwide."}}
 ]}` }} />
       <Script id="inline-index-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `

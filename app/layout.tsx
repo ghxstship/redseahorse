@@ -9,11 +9,11 @@ import Footer from "./_components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ghxstship.tours"),
   title: {
-    default: "Experiential Production & Operations Management — GHXSTSHIP",
+    default: "Experiential Production, Site Operations & Venue Management — GHXSTSHIP",
     template: "%s — GHXSTSHIP",
   },
   description:
-    "GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles.",
+    "GHXSTSHIP is a professional services firm for live and experiential projects — experiential production, site operations, venue management, and immersive technologies — headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
