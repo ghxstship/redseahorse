@@ -13,6 +13,16 @@
    Space Mono (eyebrows/IDs/coords), Jost (wordmark lockup only). */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Jost:wght@300;400;500&display=swap');
 
+/* Anton (display) ships a SINGLE 400 weight — it is already a black display
+   face. Heading rules carry font-weight:700–900 (legacy from Big Shoulders),
+   which makes the browser SYNTHESIZE faux-bold and smear Anton into a "melted"
+   blob. Disable weight synthesis globally so Anton renders crisp at its real
+   design weight; keep style/small-caps synthesis for body emphasis. */
+html {
+  font-synthesis: style small-caps;
+  font-synthesis-weight: none;
+}
+
 :root {
   /* ---------------------------------------------------------------------
      CORE PALETTE — GHXSTSHIP house green on the ATLVS kit v2 neutral ramp.

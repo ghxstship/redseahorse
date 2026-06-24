@@ -49,9 +49,10 @@ export default function Footer() {
               <b>G H X S T S H I P</b>
             </Link>
             <p className="foot-tag" style={{ color: "var(--bone)" }}>
-              The <span style={{ color: "var(--brass)" }}>General Contractor</span>,{" "}
-              <span style={{ color: "var(--nebula)" }}>Foreman</span> &amp;{" "}
-              <span style={{ color: "var(--plasma)" }}>Procore</span> of experiential project management.
+              <span style={{ color: "var(--brass)" }}>Experiential Production</span>,{" "}
+              <span style={{ color: "var(--nebula)" }}>Site Operations</span>,{" "}
+              <span style={{ color: "var(--plasma)" }}>Venue Management</span> &amp;{" "}
+              <span style={{ color: "var(--brass)" }}>Immersive Technologies</span>.
             </p>
             <p className="foot-ports">
               <span>Miami</span>
