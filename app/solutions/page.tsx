@@ -105,9 +105,9 @@ export default function Page() {
   <h2 className="sec">Four Disciplines, One Yard.</h2>
   <p className="lede">Experiential production, site operations, venue management, and immersive technologies &mdash; delivered as one system, not four vendors.</p>
   <div className="sgrid">
-    <div className="scard"><i className="ph-bold ph-boat"></i><h3>Experiential Production</h3><p>The general contractor for live experiences: experiential design, scenic fabrication, staging, technical production, and show calling &mdash; scope, schedule, and budget owned end to end.</p></div>
+    <div className="scard"><i className="ph-bold ph-flag"></i><h3>Experiential Production</h3><p>The general contractor for live experiences: experiential design, scenic fabrication, staging, technical production, and show calling &mdash; scope, schedule, and budget owned end to end.</p></div>
     <div className="scard"><i className="ph-bold ph-anchor"></i><h3>Site Operations</h3><p>The foreman on the ground: logistics, crew and workforce, vendor management, health, safety and compliance, and day-of operations at any scale.</p></div>
-    <div className="scard"><i className="ph-bold ph-buildings"></i><h3>Venue Management</h3><p>The harbor master for the room: venue programming, bookings, facility and vendor operations, and on-site teams &mdash; the space, managed start to finish.</p></div>
+    <div className="scard"><i className="ph-bold ph-boat"></i><h3>Venue Management</h3><p>The harbor master for the room: venue programming, bookings, facility and vendor operations, and on-site teams &mdash; the space, managed start to finish.</p></div>
     <div className="scard"><i className="ph-bold ph-compass"></i><h3>Immersive Technologies</h3><p>The Procore for the project: ATLVS, COMPVSS, and GVTEWAY plus immersive show systems, integrations, and analytics &mdash; the platforms the whole build runs on.</p><p style={{margin: 'var(--space-14) 0 0'}}><a href="https://atlvs.pro" target="_blank" rel="noopener" style={{fontFamily: 'var(--font-mono)', fontSize: 'var(--fs-label)', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--plasma)', textDecoration: 'none'}}>Explore the platforms at ATLVS.pro</a></p></div>
   </div>
 </div></section>
