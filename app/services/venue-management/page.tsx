@@ -3,9 +3,9 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brand Activations",
-  description: "GHXSTSHIP is a brand activation agency in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, agencies &amp; creative directors \u2014 experiential marketing, pop-ups &amp; brand environments that convert, via our 8-phase lifecycle.",
-  alternates: { canonical: "https://ghxstship.tours/destinations/brand-activations" },
+  title: "Venue Management",
+  description: "GHXSTSHIP runs the room: programming and bookings, facility and vendor operations, hospitality, box office, and the accountable lead on every date.",
+  alternates: { canonical: "https://ghxstship.tours/services/venue-management" },
 };
 
 export default function Page() {
@@ -106,39 +106,42 @@ export default function Page() {
 
 
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/destinations">Destinations</Link> / <span style={{color: 'var(--brass)'}}>Brand Activations</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/solutions">Services</Link> / <span style={{color: 'var(--brass)'}}>Venue Management</span></p></div>
 
 <main>
 <section className="hero"><div className="wrap"><div className="hero-grid">
   <div className="hero-copy">
-    <p className="eyebrow">Destinations · Brand Activations</p>
-    <h1>Brand<br/><span className="pop">Activations</span></h1>
-    <p className="answer">GHXSTSHIP is a full-service <strong>brand activation agency</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We design and build experiential marketing, pop-ups, and brand environments that convert attention — for brands, agencies, and creative directors — through our eight-phase production lifecycle.</p>
+    <p className="eyebrow">Services · Venue Management</p>
+    <h1>Venue<br/><span className="pop">Management</span></h1>
+    <p className="answer">GHXSTSHIP runs the room. We operate venues end to end: the programming and booking
+    calendar, facility and vendor operations, hospitality and F&amp;B, box office and access, and the
+    guest journey from the door to settlement. One accountable lead owns the P&amp;L and holds the
+    standard on every date. We already do this work in the field, from <strong>Factory Town</strong> in
+    Miami to <strong>The Vanguard Orlando</strong>, and we'd run yours the same way.</p>
     <div className="hero-cta">
-      <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
+      <Link href="/contact" className="gx-btn">Start a Project</Link>
+      <Link href="/solutions" className="gx-btn gx-btn--ghost">All Services</Link>
     </div>
   </div>
-  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&q=80&auto=format&fit=crop" alt="Brand Activation" loading="lazy"/><figcaption>Brand Activation</figcaption></figure>
+  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=900&q=80&auto=format&fit=crop" alt="Venue Management · The Room" loading="lazy"/><figcaption>Venue Management · The Room</figcaption></figure>
 </div></div></section>
 
 <section className="pad alt"><div className="wrap">
-  <p className="eyebrow">What We Build</p>
-  <h2 className="sec">Activations That Convert.</h2>
+  <p className="eyebrow">What We Run</p>
+  <h2 className="sec">Everything That Keeps the Room Running.</h2>
+  <p className="lede" style={{marginBottom: 'var(--space-30)'}}>We run the room on XPMS, our Experiential Production Management System: eight department classes across eight production phases. Venue Management activates the classes a live room needs, every date, on a repeating cycle.</p>
   <div className="caps">
-    <div className="cap"><i className="ph-bold ph-sparkle"></i>Concept &amp; creative direction</div>
-    <div className="cap"><i className="ph-bold ph-cube"></i>Fabrication &amp; scenic</div>
-    <div className="cap"><i className="ph-bold ph-blueprint"></i>Footprint &amp; spatial design</div>
-    <div className="cap"><i className="ph-bold ph-cursor-click"></i>Technical &amp; interactive</div>
-    <div className="cap"><i className="ph-bold ph-truck"></i>Permitting &amp; logistics</div>
-    <div className="cap"><i className="ph-bold ph-chart-line-up"></i>Measurement &amp; reporting</div>
+    <div className="cap"><i className="ph-bold ph-calendar-check"></i><b style={{color: 'var(--bone)'}}>Operations</b> — venue programming and booking calendar, facility operations, vendor management, settlement and reporting.</div>
+    <div className="cap"><i className="ph-bold ph-wine"></i><b style={{color: 'var(--bone)'}}>Hospitality</b> — F&amp;B, bars and catering, VIP and premium hospitality, front-of-house standards.</div>
+    <div className="cap"><i className="ph-bold ph-ticket"></i><b style={{color: 'var(--bone)'}}>Experience</b> — guest journey, box office and access on <span className="pn-gvteway">GVTEWAY</span>, the room as a designed experience.</div>
+    <div className="cap"><i className="ph-bold ph-user-focus"></i><b style={{color: 'var(--bone)'}}>Executive</b> — the accountable venue lead, P&amp;L and standards across every date.</div>
   </div>
 </div></section>
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Course</p>
-  <h2 className="sec">Activations, Eight Phases.</h2>
-  <p className="lede">Every project runs the same eight phases, Discovery to Close.</p>
+  <h2 className="sec">The Room, Eight Phases.</h2>
+  <p className="lede">Venue Management runs the room across every date and every cycle. The same eight phases carry each show from a held date to a clean settlement.</p>
   <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
     <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
@@ -147,23 +150,29 @@ export default function Page() {
     <div className="gx-smap__stop"><div className="gx-smap__dot">05</div><div className="gx-smap__name">Build</div><div className="gx-smap__sub">Fabricate</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">06</div><div className="gx-smap__name">Install</div><div className="gx-smap__sub">Install</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">07</div><div className="gx-smap__name">Operate</div><div className="gx-smap__sub">Live</div></div>
-    <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">08</div><div className="gx-smap__name">Close</div><div className="gx-smap__sub">Close-out</div></div>
+    <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">08</div><div className="gx-smap__name">Close</div><div className="gx-smap__sub">Settle</div></div>
   </div></div>
 </div></section>
 
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">Who We Build For</p>
-  <h2 className="sec">Built for Brands &amp; Their Agencies.</h2>
-  <p className="answer">Activations at GHXSTSHIP are built for the marketers and creatives accountable for the result.</p>
-  <div className="aud"><span className="gx-tag">Brands</span><span className="gx-tag">Agencies</span><span className="gx-tag">CMOs</span><span className="gx-tag">Creative Directors</span><span className="gx-tag">Experiential Leads</span></div>
+  <h2 className="sec">Built for the People Who Own the Room.</h2>
+  <p className="answer">Venue Management is built for the operators who answer for the building, the calendar,
+    and the night. We take the day-to-day so you can think about the next year.</p>
+  <div className="aud">
+    <span className="gx-tag">Venue Owners &amp; Operators</span><span className="gx-tag">Clubs</span>
+    <span className="gx-tag">Stadiums &amp; Arenas</span><span className="gx-tag">Hospitality Groups</span>
+    <span className="gx-tag">Cultural Institutions</span>
+  </div>
 </div></section>
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Activations We've Built.</h2>
+  <h2 className="sec">Rooms We Run.</h2>
   <div className="mu-grid">
-    <article className="mu"><div className="media" style={{background: 'radial-gradient(var(--nebula) 16%,transparent 17%) 0 0/18px 18px,var(--ink)'}}><span className="gx-chip-pixel px">RRR 226</span><i className="ph-bold ph-shopping-cart" style={{fontSize: 'var(--fs-h1)', color: 'var(--bone)'}}></i></div><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation · Miami · 2026</p></div></article>
-    <article className="mu"><div className="media" style={{background: 'repeating-linear-gradient(45deg,var(--ink-2) 0 14px,var(--ink) 14px 28px)'}}><span className="gx-chip-pixel px">RRR 311</span><i className="ph-bold ph-confetti" style={{fontSize: 'var(--fs-h1)', color: 'var(--brass)'}}></i></div><div className="body"><h3>Red Bull Unforeseen Motel</h3><p className="meta">Brand Activation · III Points · Miami · 2023</p></div></article>
+    <article className="mu"><div className="body"><h3>Factory Town</h3><p className="meta">Venue Management &middot; Miami &middot; 2023</p></div></article>
+    <article className="mu"><div className="body"><h3>The Vanguard Orlando</h3><p className="meta">Venue Management &middot; Orlando &middot; 2024</p></div></article>
+    <article className="mu"><div className="body" style={{textAlign: 'center'}}><h3>Your Room</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>Want your venue next on this list? Start a project.</p><Link href="/contact" className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}}>Start a Project</Link></div></article>
   </div>
 </div></section>
 
@@ -171,31 +180,34 @@ export default function Page() {
 <section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
   <p className="eyebrow">Why GHXSTSHIP</p>
   <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that powers it.</p>
+  <p className="answer">We don't consult on your room and leave you to staff it. We run all eight phases ourselves
+    on every date, and we build the technology underneath. Box office and access ride on
+    <span className="pn-gvteway">GVTEWAY</span>, so the people at the door and the numbers in the back office
+    come from the same place.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+    <div className="cap"><i className="ph-bold ph-user-focus"></i><b style={{color: 'var(--bone)'}}>One accountable lead</b> who owns the P&amp;L and the standard on every show.</div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i>We run the room on the tech we build, with <span className="pn-gvteway">GVTEWAY</span> at the door.</div>
+    <div className="cap"><i className="ph-bold ph-calendar-check"></i>Operations owns the calendar, so the room stays full and the settlement stays clean.</div>
   </div>
 </div></section>
 
 <section className="pad alt faq"><div className="wrap">
   <p className="eyebrow">Answers</p>
-  <h2 className="sec">Activations FAQ.</h2>
+  <h2 className="sec">Venue Management FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
-    <details><summary>What does GHXSTSHIP do for brand activations?<span className="ic">+</span></summary><p className="a">End-to-end experiential marketing: concept and creative, fabrication and scenic, spatial design, interactive technology, permitting, and measurement — on our eight-phase lifecycle.</p></details>
-    <details><summary>Who are activations for?<span className="ic">+</span></summary><p className="a">Brands, agencies, CMOs, and creative directors who need a partner from concept through reporting.</p></details>
-    <details><summary>Can you measure activation impact?<span className="ic">+</span></summary><p className="a">Yes — we build in measurement and reporting so the activation ties back to business outcomes.</p></details>
+    <details open><summary>What does Venue Management cover?<span className="ic">+</span></summary><p className="a">We run the room across every date: the programming and booking calendar, facility operations, vendor management, hospitality and F&amp;B, box office and access, the guest journey, and settlement and reporting. One accountable venue lead owns the P&amp;L and the standard on every show.</p></details>
+    <details><summary>Do you handle programming and bookings?<span className="ic">+</span></summary><p className="a">Yes. We build and run the booking calendar, hold and confirm dates, advance each show, manage vendors, and settle and report after the night ends. Operations owns the calendar so the room stays full and the back office stays clean.</p></details>
+    <details><summary>Do you run hospitality and F&amp;B?<span className="ic">+</span></summary><p className="a">Yes. Hospitality covers F&amp;B, bars and catering, VIP and premium hospitality, and the front-of-house standards your guests feel the moment they walk in. We staff it, train it, and hold the line on it every date.</p></details>
+    <details><summary>How does XPMS work?<span className="ic">+</span></summary><p className="a">XPMS is our Experiential Production Management System: eight department classes (Operations, Hospitality, Experience, Executive, and the rest) across eight production phases (Discovery, Design, Advance, Procurement, Build, Install, Operate, Close). Venue Management activates the classes a running room needs and applies them on a repeating cycle, every date.</p></details>
   </div>
 </div></section>
 
 <section className="cta"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Build Your<br/>Activation.</h2>
+  <h2>Run Your<br/>Room.</h2>
   <div className="hero-cta" style={{justifyContent: 'center'}}>
-    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
-    <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link>
+    <Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">All Services</Link>
   </div>
 </div></section>
 </main>
@@ -203,17 +215,22 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Brand Activations","serviceType":"Brand activation and experiential marketing","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Experiential marketing, pop-ups, and brand environments that convert attention, delivered through the GHXSTSHIP eight-phase production lifecycle.","audience":{"@type":"Audience","audienceType":"Brands, agencies, and creative directors"},"url":"https://ghxstship.tours/destinations/brand-activations"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Venue Management","serviceType":"Venue management",
+ "provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},
+ "areaServed":"Worldwide",
+ "description":"Full-service venue management: programming and booking calendar, facility and vendor operations, hospitality and F&B, box office and access, and the accountable venue lead across every date, run on the GHXSTSHIP Experiential Production Management System.",
+ "audience":{"@type":"Audience","audienceType":"Venue owners and operators, clubs, stadiums, arenas, hospitality groups, and cultural institutions"},
+ "url":"https://ghxstship.tours/services/venue-management"}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},
- {"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/#destinations"},
- {"@type":"ListItem","position":3,"name":"Brand Activations","item":"https://ghxstship.tours/destinations/brand-activations"}
+ {"@type":"ListItem","position":2,"name":"Services","item":"https://ghxstship.tours/solutions"},
+ {"@type":"ListItem","position":3,"name":"Venue Management","item":"https://ghxstship.tours/services/venue-management"}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for brand activations?","acceptedAnswer":{"@type":"Answer","text":"End-to-end experiential marketing: concept and creative, fabrication and scenic, spatial design, interactive technology, permitting, and measurement — on our eight-phase lifecycle."}},
- {"@type":"Question","name":"Who are activations for?","acceptedAnswer":{"@type":"Answer","text":"Brands, agencies, CMOs, and creative directors who need a partner from concept through reporting."}},
- {"@type":"Question","name":"Can you measure activation impact?","acceptedAnswer":{"@type":"Answer","text":"Yes — we build in measurement and reporting so the activation ties back to business outcomes."}}
+ {"@type":"Question","name":"What does Venue Management cover?","acceptedAnswer":{"@type":"Answer","text":"We run the room across every date: the programming and booking calendar, facility operations, vendor management, hospitality and F&B, box office and access, the guest journey, and settlement and reporting. One accountable venue lead owns the P&L and the standards on every show."}},
+ {"@type":"Question","name":"Do you handle programming and bookings?","acceptedAnswer":{"@type":"Answer","text":"Yes. We build and run the booking calendar, hold and confirm dates, advance each show, manage vendors, and settle and report after the night ends. Operations owns the calendar so the room stays full and the back office stays clean."}},
+ {"@type":"Question","name":"Do you run hospitality and F&B?","acceptedAnswer":{"@type":"Answer","text":"Yes. Hospitality covers F&B, bars and catering, VIP and premium hospitality, and the front-of-house standards your guests feel the moment they walk in. We staff it, train it, and hold the line on it every date."}},
+ {"@type":"Question","name":"How does XPMS work?","acceptedAnswer":{"@type":"Answer","text":"XPMS is the Experiential Production Management System: eight department classes (Operations, Hospitality, Experience, Executive, and the rest) across eight production phases (Discovery, Design, Advance, Procurement, Build, Install, Operate, Close). Venue Management activates the classes a running room needs and applies them on a repeating cycle, every date."}}
 ]}` }} />
       <Script src="/phase-detail.js" strategy="afterInteractive" />
     </>

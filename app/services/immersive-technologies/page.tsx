@@ -3,9 +3,9 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brand Activations",
-  description: "GHXSTSHIP is a brand activation agency in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, agencies &amp; creative directors \u2014 experiential marketing, pop-ups &amp; brand environments that convert, via our 8-phase lifecycle.",
-  alternates: { canonical: "https://ghxstship.tours/destinations/brand-activations" },
+  title: "Immersive Technologies",
+  description: "GHXSTSHIP builds the technology layer of live experience \u2014 ATLVS, COMPVSS, GVTEWAY, and LEG3ND \u2014 the platforms, show control, and data that run under all eight production phases.",
+  alternates: { canonical: "https://ghxstship.tours/services/immersive-technologies" },
 };
 
 export default function Page() {
@@ -106,39 +106,58 @@ export default function Page() {
 
 
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/destinations">Destinations</Link> / <span style={{color: 'var(--brass)'}}>Brand Activations</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/solutions">Services</Link> / <span style={{color: 'var(--brass)'}}>Immersive Technologies</span></p></div>
 
 <main>
 <section className="hero"><div className="wrap"><div className="hero-grid">
   <div className="hero-copy">
-    <p className="eyebrow">Destinations · Brand Activations</p>
-    <h1>Brand<br/><span className="pop">Activations</span></h1>
-    <p className="answer">GHXSTSHIP is a full-service <strong>brand activation agency</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We design and build experiential marketing, pop-ups, and brand environments that convert attention — for brands, agencies, and creative directors — through our eight-phase production lifecycle.</p>
+    <p className="eyebrow">Services · Immersive Technologies</p>
+    <h1>Immersive<br/><span className="pop">Technologies</span></h1>
+    <p className="answer"><strong>Immersive Technologies</strong> is the layer that runs under the whole show. We build the
+    platforms that operators actually use on the floor — <span className="pn-atlvs">ATLVS</span> for production and resource
+    management, <span className="pn-compvss">COMPVSS</span> in the crew's pocket, <span className="pn-gvteway">GVTEWAY</span> at the
+    door, <span className="pn-legend">LEG3ND</span> holding the record — plus the show control, sensors, and data pipeline that
+    tie a live experience together. Technology runs under all eight production phases, and it's where every other discipline
+    reports in.</p>
     <div className="hero-cta">
-      <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
+      <Link href="/contact" className="gx-btn">Start a Project</Link>
+      <a className="gx-btn gx-btn--ghost" href="https://atlvs.pro">Explore the Platforms</a>
     </div>
   </div>
-  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&q=80&auto=format&fit=crop" alt="Brand Activation" loading="lazy"/><figcaption>Brand Activation</figcaption></figure>
+  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop" alt="Immersive Technologies · Show Control" loading="lazy"/><figcaption>Immersive Technologies · Show Control</figcaption></figure>
 </div></div></section>
 
 <section className="pad alt"><div className="wrap">
-  <p className="eyebrow">What We Build</p>
-  <h2 className="sec">Activations That Convert.</h2>
-  <div className="caps">
-    <div className="cap"><i className="ph-bold ph-sparkle"></i>Concept &amp; creative direction</div>
-    <div className="cap"><i className="ph-bold ph-cube"></i>Fabrication &amp; scenic</div>
-    <div className="cap"><i className="ph-bold ph-blueprint"></i>Footprint &amp; spatial design</div>
-    <div className="cap"><i className="ph-bold ph-cursor-click"></i>Technical &amp; interactive</div>
-    <div className="cap"><i className="ph-bold ph-truck"></i>Permitting &amp; logistics</div>
-    <div className="cap"><i className="ph-bold ph-chart-line-up"></i>Measurement &amp; reporting</div>
+  <p className="eyebrow">The Platforms</p>
+  <h2 className="sec">Four Platforms, One Floor.</h2>
+  <p className="lede">The technology layer of XPMS is four platforms a production runs on. Each owns a job, and they share one source of truth.</p>
+  <div className="caps" style={{marginTop: 'var(--space-32)'}}>
+    <div className="cap"><i className="ph-bold ph-squares-four"></i><b style={{color: 'var(--bone)'}}><span className="pn-atlvs">ATLVS</span></b> — production &amp; resource management, the operator system.</div>
+    <div className="cap"><i className="ph-bold ph-device-mobile"></i><b style={{color: 'var(--bone)'}}><span className="pn-compvss">COMPVSS</span></b> — workforce &amp; crew, the app in the field.</div>
+    <div className="cap"><i className="ph-bold ph-ticket"></i><b style={{color: 'var(--bone)'}}><span className="pn-gvteway">GVTEWAY</span></b> — ticketing, access &amp; fan engagement, the guest gateway.</div>
+    <div className="cap"><i className="ph-bold ph-book-bookmark"></i><b style={{color: 'var(--bone)'}}><span className="pn-legend">LEG3ND</span></b> — standards, knowledge &amp; the production record.</div>
   </div>
 </div></section>
 
 <section className="pad"><div className="wrap">
+  <p className="eyebrow">What We Build</p>
+  <h2 className="sec">The Classes We Activate.</h2>
+  <p className="lede">XPMS maps every deliverable to a department class and a production phase. Immersive Technologies lights up three.</p>
+  <div className="caps" style={{marginTop: 'var(--space-32)'}}>
+    <div className="cap"><i className="ph-bold ph-circuitry"></i><b style={{color: 'var(--bone)'}}>Technology</b> — the platforms above, integrations, the data pipeline, dashboards &amp; reporting.</div>
+    <div className="cap"><i className="ph-bold ph-cube-transparent"></i><b style={{color: 'var(--bone)'}}>Experience</b> — interactive media, show control, sensors &amp; real-time content.</div>
+    <div className="cap"><i className="ph-bold ph-paint-brush-broad"></i><b style={{color: 'var(--bone)'}}>Creative</b> — content systems and the tech that serves the creative.</div>
+  </div>
+  <p className="answer" style={{marginTop: 'var(--space-30)'}}>Integrations meet your stack where it is, and show control drives the room. The data pipeline keeps ticketing, finance,
+  scheduling, and access talking to each other, and the dashboards put the numbers on one screen so they reconcile.
+  <span className="pn-legend">LEG3ND</span> writes it all down as the production runs, so the next show starts from what the last
+  one learned.</p>
+</div></section>
+
+<section className="pad alt"><div className="wrap">
   <p className="eyebrow">The Course</p>
-  <h2 className="sec">Activations, Eight Phases.</h2>
-  <p className="lede">Every project runs the same eight phases, Discovery to Close.</p>
+  <h2 className="sec">Tech Runs Under All Eight.</h2>
+  <p className="lede">Every production runs the same eight phases. The technology layer runs under all of them, and it's where every other discipline reports in.</p>
   <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
     <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
@@ -151,19 +170,21 @@ export default function Page() {
   </div></div>
 </div></section>
 
-<section className="pad alt"><div className="wrap">
+<section className="pad"><div className="wrap">
   <p className="eyebrow">Who We Build For</p>
-  <h2 className="sec">Built for Brands &amp; Their Agencies.</h2>
-  <p className="answer">Activations at GHXSTSHIP are built for the marketers and creatives accountable for the result.</p>
-  <div className="aud"><span className="gx-tag">Brands</span><span className="gx-tag">Agencies</span><span className="gx-tag">CMOs</span><span className="gx-tag">Creative Directors</span><span className="gx-tag">Experiential Leads</span></div>
+  <h2 className="sec">Built for the People Running the Show.</h2>
+  <p className="answer">Immersive Technologies is built for the people accountable for what happens when the doors open and
+  the data has to add up the next morning.</p>
+  <div className="aud">
+    <span className="gx-tag">Producers</span><span className="gx-tag">Brands &amp; Sponsors</span>
+    <span className="gx-tag">Venue Operators</span><span className="gx-tag">Technical Directors</span>
+  </div>
 </div></section>
 
-<section className="pad"><div className="wrap">
+<section className="pad alt"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Activations We've Built.</h2>
-  <div className="mu-grid">
-    <article className="mu"><div className="media" style={{background: 'radial-gradient(var(--nebula) 16%,transparent 17%) 0 0/18px 18px,var(--ink)'}}><span className="gx-chip-pixel px">RRR 226</span><i className="ph-bold ph-shopping-cart" style={{fontSize: 'var(--fs-h1)', color: 'var(--bone)'}}></i></div><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation · Miami · 2026</p></div></article>
-    <article className="mu"><div className="media" style={{background: 'repeating-linear-gradient(45deg,var(--ink-2) 0 14px,var(--ink) 14px 28px)'}}><span className="gx-chip-pixel px">RRR 311</span><i className="ph-bold ph-confetti" style={{fontSize: 'var(--fs-h1)', color: 'var(--brass)'}}></i></div><div className="body"><h3>Red Bull Unforeseen Motel</h3><p className="meta">Brand Activation · III Points · Miami · 2023</p></div></article>
+  <h2 className="sec">On-Site, On the Record.</h2>
+  <div className="mu-grid"><article className="mu" style={{gridColumn: '1/-1'}}><div className="body" style={{textAlign: 'center', padding: 'var(--space-40)'}}><h3>In Production</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>New platform work is live on the floor. Want your show to be the first case study? Start a project.</p><Link href="/contact" className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}}>Start a Project</Link></div></article>
   </div>
 </div></section>
 
@@ -171,31 +192,32 @@ export default function Page() {
 <section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
   <p className="eyebrow">Why GHXSTSHIP</p>
   <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that powers it.</p>
+  <p className="answer">We build the technology and we run it on the floor. The platforms come from people who advance the show
+  and reconcile the settlement after it, so the tech serves the production instead of the other way around.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+    <div className="cap"><i className="ph-bold ph-stack"></i><b style={{color: 'var(--bone)'}}>We build the platforms</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</div>
+    <div className="cap"><i className="ph-bold ph-plugs-connected"></i><b style={{color: 'var(--bone)'}}>We meet your stack</b> — integrations &amp; a data pipeline that put the numbers on one screen.</div>
+    <div className="cap"><i className="ph-bold ph-pulse"></i><b style={{color: 'var(--bone)'}}>We run it live</b> — show control &amp; real-time content, on the floor with you.</div>
   </div>
 </div></section>
 
 <section className="pad alt faq"><div className="wrap">
   <p className="eyebrow">Answers</p>
-  <h2 className="sec">Activations FAQ.</h2>
+  <h2 className="sec">Immersive Technologies FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
-    <details><summary>What does GHXSTSHIP do for brand activations?<span className="ic">+</span></summary><p className="a">End-to-end experiential marketing: concept and creative, fabrication and scenic, spatial design, interactive technology, permitting, and measurement — on our eight-phase lifecycle.</p></details>
-    <details><summary>Who are activations for?<span className="ic">+</span></summary><p className="a">Brands, agencies, CMOs, and creative directors who need a partner from concept through reporting.</p></details>
-    <details><summary>Can you measure activation impact?<span className="ic">+</span></summary><p className="a">Yes — we build in measurement and reporting so the activation ties back to business outcomes.</p></details>
+    <details open><summary>What are <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>, and <span className="pn-legend">LEG3ND</span>?<span className="ic">+</span></summary><p className="a">Four platforms that make up the technology layer of XPMS. <span className="pn-atlvs">ATLVS</span> is the studio and operator system for production and resource management. <span className="pn-compvss">COMPVSS</span> is the field app for workforce and crew. <span className="pn-gvteway">GVTEWAY</span> is the guest gateway for ticketing, access, and fan engagement. <span className="pn-legend">LEG3ND</span> holds the standards, knowledge, and the production record. Together they run under the whole show.</p></details>
+    <details><summary>Do you integrate with our existing stack?<span className="ic">+</span></summary><p className="a">Yes. We meet your stack where it is. We connect to the ticketing, finance, scheduling, access, and show-control systems you already run, build the data pipeline between them, and put the reporting on one set of dashboards so the numbers reconcile instead of arguing with each other.</p></details>
+    <details><summary>What is XPMS?<span className="ic">+</span></summary><p className="a">XPMS is our Experiential Production Management System: eight department classes mapped across eight production phases, so every deliverable maps to a class and a phase. The four platforms are the technology layer of XPMS, and technology is where every other discipline reports in.</p></details>
+    <details><summary>Can we use the platforms without the full production service?<span className="ic">+</span></summary><p className="a">Yes. The platforms stand on their own. Run <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>, and <span className="pn-legend">LEG3ND</span> for your own productions and bring us in for as much or as little of the build and operate work as you want. Start at <a href="https://atlvs.pro" style={{color: 'var(--brass)'}}>atlvs.pro</a>.</p></details>
   </div>
 </div></section>
 
 <section className="cta"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Build Your<br/>Activation.</h2>
+  <h2>Run the<br/>Whole Show.</h2>
   <div className="hero-cta" style={{justifyContent: 'center'}}>
-    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
-    <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link>
+    <a className="gx-btn gx-btn--ghost gx-btn--lg" href="https://atlvs.pro">Explore the Platforms</a>
   </div>
 </div></section>
 </main>
@@ -203,18 +225,27 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Brand Activations","serviceType":"Brand activation and experiential marketing","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Experiential marketing, pop-ups, and brand environments that convert attention, delivered through the GHXSTSHIP eight-phase production lifecycle.","audience":{"@type":"Audience","audienceType":"Brands, agencies, and creative directors"},"url":"https://ghxstship.tours/destinations/brand-activations"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Immersive Technologies","serviceType":"Immersive and experiential technology",
+ "provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},
+ "areaServed":"Worldwide",
+ "description":"The technology layer of live experience: production and resource management, workforce and crew apps, ticketing and access, interactive media and show control, integrations, and the production record, delivered through the GHXSTSHIP eight-phase production lifecycle.",
+ "audience":{"@type":"Audience","audienceType":"Producers, brands, venue operators, and technical directors"},
+ "url":"https://ghxstship.tours/services/immersive-technologies"}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},
- {"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/#destinations"},
- {"@type":"ListItem","position":3,"name":"Brand Activations","item":"https://ghxstship.tours/destinations/brand-activations"}
+ {"@type":"ListItem","position":2,"name":"Services","item":"https://ghxstship.tours/solutions"},
+ {"@type":"ListItem","position":3,"name":"Immersive Technologies","item":"https://ghxstship.tours/services/immersive-technologies"}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for brand activations?","acceptedAnswer":{"@type":"Answer","text":"End-to-end experiential marketing: concept and creative, fabrication and scenic, spatial design, interactive technology, permitting, and measurement — on our eight-phase lifecycle."}},
- {"@type":"Question","name":"Who are activations for?","acceptedAnswer":{"@type":"Answer","text":"Brands, agencies, CMOs, and creative directors who need a partner from concept through reporting."}},
- {"@type":"Question","name":"Can you measure activation impact?","acceptedAnswer":{"@type":"Answer","text":"Yes — we build in measurement and reporting so the activation ties back to business outcomes."}}
+ {"@type":"Question","name":"What are ATLVS, COMPVSS, GVTEWAY, and LEG3ND?","acceptedAnswer":{"@type":"Answer","text":"Four platforms that make up the technology layer of XPMS. ATLVS is the studio and operator system for production and resource management. COMPVSS is the field app for workforce and crew management. GVTEWAY is the guest gateway for ticketing, access, and fan engagement. LEG3ND holds the standards, knowledge, and the production record. Together they run under the whole show."}},
+ {"@type":"Question","name":"Do you integrate with our existing stack?","acceptedAnswer":{"@type":"Answer","text":"Yes. We meet your stack where it is. We connect to the ticketing, finance, scheduling, access, and show-control systems you already run, build the data pipeline between them, and put the reporting on one set of dashboards so the numbers reconcile instead of arguing with each other."}},
+ {"@type":"Question","name":"What is XPMS?","acceptedAnswer":{"@type":"Answer","text":"XPMS is the GHXSTSHIP Experiential Production Management System: eight department classes mapped across eight production phases, so every deliverable maps to a class and a phase. The four platforms are the technology layer of XPMS, and technology is where every other discipline reports in."}},
+ {"@type":"Question","name":"Can we use the platforms without the full production service?","acceptedAnswer":{"@type":"Answer","text":"Yes. The platforms stand on their own. You can run ATLVS, COMPVSS, GVTEWAY, and LEG3ND for your own productions and bring us in for as much or as little of the build and operate work as you want. Start at atlvs.pro."}}
 ]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ATLVS","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","url":"https://atlvs.pro"},"description":"Production and resource management — the studio and operator system in the GHXSTSHIP technology layer."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"SoftwareApplication","name":"COMPVSS","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","url":"https://atlvs.pro/compvss"},"description":"Workforce and crew management — the field app in the GHXSTSHIP technology layer."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GVTEWAY","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","url":"https://atlvs.pro/gvteway"},"description":"Ticketing, access, and fan engagement — the guest gateway in the GHXSTSHIP technology layer."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LEG3ND","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","url":"https://atlvs.pro"},"description":"Standards, knowledge, and the production record in the GHXSTSHIP technology layer."}` }} />
       <Script src="/phase-detail.js" strategy="afterInteractive" />
     </>
   );

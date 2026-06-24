@@ -171,7 +171,7 @@ export default function Page() {
   <h2 className="sec">The Difference.</h2>
   <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that runs them.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
     <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
     <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
   </div>
@@ -181,7 +181,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Broadcast FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
     <details><summary>What does GHXSTSHIP do for TV, film and broadcast?<span className="ic">+</span></summary><p className="a">End-to-end broadcast production: live broadcast, set design and scenic, camera/audio/lighting, content capture and post, on-air activations, and compliance — on our eight-phase lifecycle.</p></details>
     <details><summary>Who is broadcast production for?<span className="ic">+</span></summary><p className="a">Networks, studios, streamers, and brands that need a production partner from set build to air.</p></details>
     <details><summary>Do you handle live and captured content?<span className="ic">+</span></summary><p className="a">Yes — live broadcast and captured/post content, plus on-air brand activations.</p></details>
@@ -208,7 +208,7 @@ export default function Page() {
  {"@type":"ListItem","position":3,"name":"TV, Film &amp; Broadcast","item":"https://ghxstship.tours/destinations/tv-film-broadcast"}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical rather than an afterthought."}},
+ {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team."}},
  {"@type":"Question","name":"What does GHXSTSHIP do for TV, film and broadcast?","acceptedAnswer":{"@type":"Answer","text":"End-to-end broadcast production: live broadcast, set design and scenic, camera/audio/lighting, content capture and post, on-air activations, and compliance — on our eight-phase lifecycle."}},
  {"@type":"Question","name":"Who is broadcast production for?","acceptedAnswer":{"@type":"Answer","text":"Networks, studios, streamers, and brands that need a production partner from set build to air."}},
  {"@type":"Question","name":"Do you handle live and captured content?","acceptedAnswer":{"@type":"Answer","text":"Yes — live broadcast and captured/post content, plus on-air brand activations."}}

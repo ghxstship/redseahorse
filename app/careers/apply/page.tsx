@@ -56,7 +56,7 @@ export default function Page() {
 <main><section className="hero"><div className="wrap">
   <p className="eyebrow">Apply</p>
   <h1>Apply to the <span className="pop">Crew.</span></h1>
-  <p className="answer">Tell us who you are and what you&rsquo;ve built. Every application is read by a human on the crew &mdash; not just a bot.</p>
+  <p className="answer">Tell us who you are and what you&rsquo;ve built. A human on the crew reads every application that comes in.</p>
 </div></section>
 <section className="pad"><div className="wrap"><div className="cgrid">
   <form>

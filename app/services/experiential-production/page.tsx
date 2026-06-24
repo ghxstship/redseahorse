@@ -3,9 +3,9 @@ import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brand Activations",
-  description: "GHXSTSHIP is a brand activation agency in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, agencies &amp; creative directors \u2014 experiential marketing, pop-ups &amp; brand environments that convert, via our 8-phase lifecycle.",
-  alternates: { canonical: "https://ghxstship.tours/destinations/brand-activations" },
+  title: "Experiential Production",
+  description: "GHXSTSHIP experiential production builds branded environments end to end: creative, scenic fabrication, technical production, talent, and a producer.",
+  alternates: { canonical: "https://ghxstship.tours/services/experiential-production" },
 };
 
 export default function Page() {
@@ -54,6 +54,7 @@ export default function Page() {
   .mu .body{padding:var(--space-18)}
   .mu h3{font-family:var(--font-display);font-weight:800;font-size:var(--fs-body-l);text-transform:uppercase;margin:0 0 var(--space-5);line-height:1}
   .mu .meta{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase}
+  .mu a{text-decoration:none}
   .faq-list{margin-top:var(--space-30);border-top:var(--stroke-2) solid var(--ink-3)}
   .faq details{border-bottom:var(--stroke-2) solid var(--ink-3)}
   .faq summary{list-style:none;cursor:pointer;padding:var(--space-20) 0;display:flex;justify-content:space-between;gap:var(--space-20);font-family:var(--font-display);font-weight:800;font-size:var(--fs-body-l);text-transform:none;letter-spacing:-.01em;color:var(--bone)}
@@ -106,39 +107,47 @@ export default function Page() {
 
 
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/destinations">Destinations</Link> / <span style={{color: 'var(--brass)'}}>Brand Activations</span></p></div>
+<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/solutions">Services</Link> / <span style={{color: 'var(--brass)'}}>Experiential Production</span></p></div>
 
 <main>
 <section className="hero"><div className="wrap"><div className="hero-grid">
   <div className="hero-copy">
-    <p className="eyebrow">Destinations · Brand Activations</p>
-    <h1>Brand<br/><span className="pop">Activations</span></h1>
-    <p className="answer">GHXSTSHIP is a full-service <strong>brand activation agency</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We design and build experiential marketing, pop-ups, and brand environments that convert attention — for brands, agencies, and creative directors — through our eight-phase production lifecycle.</p>
+    <p className="eyebrow">Services · Experiential Production</p>
+    <h1>Experiential<br/><span className="pop">Production</span></h1>
+    <p className="answer"><strong>Experiential production</strong> is the build. You bring an idea for a
+    branded environment people walk into, and we make it real: creative direction and show design,
+    scenic fabrication, staging and rigging, audio, video, and lighting, the performers and crew who
+    run it, and a producer who owns the budget and the schedule from the first call to load-out. We are
+    the General Contractor of the experience.</p>
     <div className="hero-cta">
-      <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
+      <Link href="/contact" className="gx-btn">Start a Project</Link>
+      <Link href="/solutions" className="gx-btn gx-btn--ghost">All Services</Link>
     </div>
   </div>
-  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&q=80&auto=format&fit=crop" alt="Brand Activation" loading="lazy"/><figcaption>Brand Activation</figcaption></figure>
+  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop" alt="Experiential Production · The Build" loading="lazy"/><figcaption>Experiential Production · The Build</figcaption></figure>
 </div></div></section>
 
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">What We Build</p>
-  <h2 className="sec">Activations That Convert.</h2>
+  <h2 className="sec">The Whole Build, in One Crew.</h2>
+  <p className="answer">We run experiential production on XPMS, our Experiential Production Management
+    System. Picture a grid: eight department classes down one side, eight production phases across the
+    top. Every deliverable lives at one address, a class and a phase, so a render from Creative and the
+    steel Production cuts from it never drift apart. Here are the classes experiential production turns
+    on.</p>
   <div className="caps">
-    <div className="cap"><i className="ph-bold ph-sparkle"></i>Concept &amp; creative direction</div>
-    <div className="cap"><i className="ph-bold ph-cube"></i>Fabrication &amp; scenic</div>
-    <div className="cap"><i className="ph-bold ph-blueprint"></i>Footprint &amp; spatial design</div>
-    <div className="cap"><i className="ph-bold ph-cursor-click"></i>Technical &amp; interactive</div>
-    <div className="cap"><i className="ph-bold ph-truck"></i>Permitting &amp; logistics</div>
-    <div className="cap"><i className="ph-bold ph-chart-line-up"></i>Measurement &amp; reporting</div>
+    <div className="cap"><i className="ph-bold ph-pen-nib"></i><b style={{color: 'var(--bone)'}}>Creative</b>&nbsp;— creative direction, experiential &amp; scenic design, content and show design.</div>
+    <div className="cap"><i className="ph-bold ph-cube"></i><b style={{color: 'var(--bone)'}}>Production</b>&nbsp;— scenic fabrication, staging &amp; rigging, technical production for audio, video &amp; lighting, plus production management and budgets.</div>
+    <div className="cap"><i className="ph-bold ph-users-three"></i><b style={{color: 'var(--bone)'}}>Talent</b>&nbsp;— performers, specialty acts, and the crew who build and run the show.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>Experience</b>&nbsp;— the audience journey, moment design, and how the world reads from the floor.</div>
+    <div className="cap"><i className="ph-bold ph-crown-simple"></i><b style={{color: 'var(--bone)'}}>Executive</b>&nbsp;— the accountable producer who owns the budget and the schedule end to end.</div>
   </div>
 </div></section>
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Course</p>
-  <h2 className="sec">Activations, Eight Phases.</h2>
-  <p className="lede">Every project runs the same eight phases, Discovery to Close.</p>
+  <h2 className="sec">Your Build, Eight Phases.</h2>
+  <p className="lede">Experiential production walks all eight phases, from the first Discovery call through Close-out and the final invoice.</p>
   <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
     <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
     <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
@@ -153,17 +162,29 @@ export default function Page() {
 
 <section className="pad alt"><div className="wrap">
   <p className="eyebrow">Who We Build For</p>
-  <h2 className="sec">Built for Brands &amp; Their Agencies.</h2>
-  <p className="answer">Activations at GHXSTSHIP are built for the marketers and creatives accountable for the result.</p>
-  <div className="aud"><span className="gx-tag">Brands</span><span className="gx-tag">Agencies</span><span className="gx-tag">CMOs</span><span className="gx-tag">Creative Directors</span><span className="gx-tag">Experiential Leads</span></div>
+  <h2 className="sec">Built for the People Who Build Experiences.</h2>
+  <p className="answer">Experiential production is for the people on the hook for the room: the brand whose
+    name is on the door, the agency that pitched the idea, the promoter putting it on, and the creative
+    and production directors who have to make it stand up on site.</p>
+  <div className="aud">
+    <span className="gx-tag">Brands</span><span className="gx-tag">Agencies</span>
+    <span className="gx-tag">Promoters</span><span className="gx-tag">Creative Directors</span>
+    <span className="gx-tag">Production Directors</span>
+  </div>
 </div></section>
 
 <section className="pad"><div className="wrap">
   <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Activations We've Built.</h2>
+  <h2 className="sec">Experiences We've Built.</h2>
+  <p className="answer">A few of the worlds we've built and run, from a sold-out immersive supper club to
+    brand takeovers on the festival floor.</p>
   <div className="mu-grid">
-    <article className="mu"><div className="media" style={{background: 'radial-gradient(var(--nebula) 16%,transparent 17%) 0 0/18px 18px,var(--ink)'}}><span className="gx-chip-pixel px">RRR 226</span><i className="ph-bold ph-shopping-cart" style={{fontSize: 'var(--fs-h1)', color: 'var(--bone)'}}></i></div><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation · Miami · 2026</p></div></article>
-    <article className="mu"><div className="media" style={{background: 'repeating-linear-gradient(45deg,var(--ink-2) 0 14px,var(--ink) 14px 28px)'}}><span className="gx-chip-pixel px">RRR 311</span><i className="ph-bold ph-confetti" style={{fontSize: 'var(--fs-h1)', color: 'var(--brass)'}}></i></div><div className="body"><h3>Red Bull Unforeseen Motel</h3><p className="meta">Brand Activation · III Points · Miami · 2023</p></div></article>
+    <article className="mu"><Link href="/work/salvage-city-supper-club"><div className="body"><h3>Salvage City Supper Club</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>Immersive Experience · Club Space, Miami</p></div></Link></article>
+    <article className="mu"><Link href="/work"><div className="body"><h3>Red Bull Unforeseen Motel</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>Brand Activation · Built &amp; Run</p></div></Link></article>
+    <article className="mu"><Link href="/work"><div className="body"><h3>Polymarket Grocery Store</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>Brand Activation · Built &amp; Run</p></div></Link></article>
+  </div>
+  <div className="hero-cta" style={{marginTop: 'var(--space-30)'}}>
+    <Link href="/work" className="gx-btn gx-btn--sm gx-btn--ghost">See the Archives</Link>
   </div>
 </div></section>
 
@@ -171,31 +192,33 @@ export default function Page() {
 <section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
   <p className="eyebrow">Why GHXSTSHIP</p>
   <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that powers it.</p>
+  <p className="answer">Most shops design the thing and then hand you a list of vendors to chase. We hold
+    creative and the fabrication shop and the crew and the producer under one roof, on XPMS, so the
+    person who drew it is talking to the person cutting it. We build the technology that runs it too.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>One accountable crew</b>&nbsp;— all 8 phases under one producer, so you're never chasing a vendor relay.</div>
+    <div className="cap"><i className="ph-bold ph-hammer"></i><b style={{color: 'var(--bone)'}}>We fabricate</b>&nbsp;— scenic, staging, and rigging built by the crew who install it.</div>
+    <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We build the tech</b>&nbsp;— <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
   </div>
 </div></section>
 
 <section className="pad alt faq"><div className="wrap">
   <p className="eyebrow">Answers</p>
-  <h2 className="sec">Activations FAQ.</h2>
+  <h2 className="sec">Experiential Production FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
-    <details><summary>What does GHXSTSHIP do for brand activations?<span className="ic">+</span></summary><p className="a">End-to-end experiential marketing: concept and creative, fabrication and scenic, spatial design, interactive technology, permitting, and measurement — on our eight-phase lifecycle.</p></details>
-    <details><summary>Who are activations for?<span className="ic">+</span></summary><p className="a">Brands, agencies, CMOs, and creative directors who need a partner from concept through reporting.</p></details>
-    <details><summary>Can you measure activation impact?<span className="ic">+</span></summary><p className="a">Yes — we build in measurement and reporting so the activation ties back to business outcomes.</p></details>
+    <details open><summary>What does GHXSTSHIP's experiential production cover?<span className="ic">+</span></summary><p className="a">The whole build of a branded environment: creative direction and show design, experiential and scenic design, scenic fabrication, staging and rigging, technical production for audio, video, and lighting, performers and crew, the audience experience, and a producer who owns the budget and the schedule from the first call to load-out.</p></details>
+    <details><summary>Do you fabricate and build in-house?<span className="ic">+</span></summary><p className="a">Yes. Scenic fabrication, staging, rigging, and technical production sit inside our Production class, so the people who design the build are the same crew accountable for installing and running it on site.</p></details>
+    <details><summary>How does XPMS work?<span className="ic">+</span></summary><p className="a">XPMS is our Experiential Production Management System, a coordinate model of eight department classes by eight production phases. Every deliverable lives at one address, a class and a phase, so nothing falls between Creative finishing a render and Production cutting steel. It runs on <span className="pn-atlvs">ATLVS</span>.</p></details>
+    <details><summary>Who runs point on the project?<span className="ic">+</span></summary><p className="a">A producer from our Executive class. They own the budget and the schedule end to end, and they are your single accountable contact from Discovery through Close.</p></details>
   </div>
 </div></section>
 
 <section className="cta"><div className="wrap">
   <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Build Your<br/>Activation.</h2>
+  <h2>Build Your<br/>Experience.</h2>
   <div className="hero-cta" style={{justifyContent: 'center'}}>
-    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
-    <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>
+    <Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link>
+    <Link href="/destinations/immersive-experiences" className="gx-btn gx-btn--ghost gx-btn--lg">Immersive Experiences</Link>
   </div>
 </div></section>
 </main>
@@ -203,17 +226,22 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Brand Activations","serviceType":"Brand activation and experiential marketing","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Experiential marketing, pop-ups, and brand environments that convert attention, delivered through the GHXSTSHIP eight-phase production lifecycle.","audience":{"@type":"Audience","audienceType":"Brands, agencies, and creative directors"},"url":"https://ghxstship.tours/destinations/brand-activations"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Experiential Production","serviceType":"Experiential production",
+ "provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},
+ "areaServed":"Worldwide",
+ "description":"End-to-end experiential production: creative direction and show design, scenic fabrication, staging and rigging, technical production for audio, video, and lighting, performers and production crew, audience experience design, and an accountable producer who owns the budget and the schedule across the GHXSTSHIP eight-phase lifecycle.",
+ "audience":{"@type":"Audience","audienceType":"Brands, agencies, promoters, and creative and production directors"},
+ "url":"https://ghxstship.tours/services/experiential-production"}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},
- {"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/#destinations"},
- {"@type":"ListItem","position":3,"name":"Brand Activations","item":"https://ghxstship.tours/destinations/brand-activations"}
+ {"@type":"ListItem","position":2,"name":"Services","item":"https://ghxstship.tours/solutions"},
+ {"@type":"ListItem","position":3,"name":"Experiential Production","item":"https://ghxstship.tours/services/experiential-production"}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for brand activations?","acceptedAnswer":{"@type":"Answer","text":"End-to-end experiential marketing: concept and creative, fabrication and scenic, spatial design, interactive technology, permitting, and measurement — on our eight-phase lifecycle."}},
- {"@type":"Question","name":"Who are activations for?","acceptedAnswer":{"@type":"Answer","text":"Brands, agencies, CMOs, and creative directors who need a partner from concept through reporting."}},
- {"@type":"Question","name":"Can you measure activation impact?","acceptedAnswer":{"@type":"Answer","text":"Yes — we build in measurement and reporting so the activation ties back to business outcomes."}}
+ {"@type":"Question","name":"What does GHXSTSHIP's experiential production cover?","acceptedAnswer":{"@type":"Answer","text":"The whole build of a branded environment: creative direction and show design, experiential and scenic design, scenic fabrication, staging and rigging, technical production for audio, video, and lighting, performers and crew, the audience experience, and an accountable producer who owns the budget and the schedule from first call to load-out."}},
+ {"@type":"Question","name":"Do you fabricate and build in-house?","acceptedAnswer":{"@type":"Answer","text":"Yes. Scenic fabrication, staging, rigging, and technical production sit inside our Production department, so the people who design the build are the same crew accountable for installing and running it on site."}},
+ {"@type":"Question","name":"How does XPMS work?","acceptedAnswer":{"@type":"Answer","text":"XPMS is our Experiential Production Management System: a coordinate model of eight department classes by eight production phases. Every deliverable lives at one address, a class and a phase, so nothing falls between Creative finishing a render and Production cutting steel."}},
+ {"@type":"Question","name":"Who runs point on the project?","acceptedAnswer":{"@type":"Answer","text":"A producer from our Executive class. They own the budget and the schedule end to end, and they are your single accountable contact from Discovery through Close."}}
 ]}` }} />
       <Script src="/phase-detail.js" strategy="afterInteractive" />
     </>

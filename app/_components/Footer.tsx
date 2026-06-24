@@ -6,6 +6,10 @@ import Link from "next/link";
 const EXPLORE = [
   { href: "/destinations/", label: "Destinations" },
   { href: "/solutions/", label: "Services" },
+  { href: "/services/experiential-production/", label: "— Experiential Production" },
+  { href: "/services/site-operations/", label: "— Site Operations" },
+  { href: "/services/venue-management/", label: "— Venue Management" },
+  { href: "/services/immersive-technologies/", label: "— Immersive Technologies" },
   { href: "/team/", label: "Crew" },
   { href: "/course/", label: "Course" },
   { href: "/work/", label: "Archives" },

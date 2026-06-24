@@ -94,13 +94,13 @@ export default function Page() {
     <div className="res"><div className="v">[00]</div><div className="k">Days Concept-to-Live</div></div>
   </div>
   <div className="block"><h2>The Challenge</h2>
-    <p>[Client] needed an immersive supper-club experience that could live inside <strong>Club Space, Miami</strong> — a venue with its own identity, technical constraints, and an audience that has seen everything. The brief: a fully-realized world that felt discovered, not built, and that could be installed, run, and struck without disrupting the venue's ongoing programming.</p>
+    <p>[Client] needed an immersive supper-club experience that could live inside <strong>Club Space, Miami</strong> — a venue with its own identity, technical constraints, and an audience that has seen everything. The brief: a fully-realized world that felt like a place guests had stumbled onto, and that could be installed, run, and struck without disrupting the venue's ongoing programming.</p>
     <p>The constraints were real: a fixed footprint, a hard load-in window, and a guest experience that had to feel intimate at scale.</p>
   </div>
   <div className="block"><h2>The Approach</h2>
     <p>GHXSTSHIP ran the full <strong>eight-phase production lifecycle</strong>. Discovery and R&amp;D defined the narrative world and tested it against the venue. Creative Design delivered the scenic language; Compliance &amp; Risk cleared the build against venue and fire-code requirements.</p>
     <p>Production &amp; Build fabricated a modular scenic package designed for the load-in window. Operations &amp; Logistics sequenced crew and freight around the venue's calendar. Live Activation ran the room nightly; Strike returned the space clean — with a full reconciliation and analytics report.</p>
-    <p className="pull">"A world that felt discovered, not built — installed, run, and struck on the venue's clock."</p>
+    <p className="pull">"A world guests felt they'd stumbled onto, installed and run and struck on the venue's clock."</p>
   </div>
   <div className="block"><h2>The Result</h2>
     <p>[Outcome paragraph — what it drove for the client: attendance, social reach, earned media, repeat booking. Replace bracketed metrics above with real figures.]</p>

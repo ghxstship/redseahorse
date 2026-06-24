@@ -172,7 +172,7 @@ export default function Page() {
   <h2 className="sec">The Difference.</h2>
   <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that runs them.</p>
   <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew, not just creative.</div>
+    <div className="cap"><i className="ph-bold ph-path"></i><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</div>
     <div className="cap"><i className="ph-bold ph-compass-tool"></i><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span> &amp; <span className="pn-gvteway">GVTEWAY</span>, in-house.</div>
     <div className="cap"><i className="ph-bold ph-shield-check"></i><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</div>
   </div>
@@ -182,7 +182,7 @@ export default function Page() {
   <p className="eyebrow">Answers</p>
   <h2 className="sec">Immersive FAQ.</h2>
   <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical, not an afterthought.</p></details>
+    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
     <details><summary>What does GHXSTSHIP do for immersive experiences?<span className="ic">+</span></summary><p className="a">End-to-end immersive design: narrative and world-building, spatial and set design, interactive technology, projection and lighting, fabrication, and run-of-show — on our eight-phase lifecycle.</p></details>
     <details><summary>Who are immersive experiences for?<span className="ic">+</span></summary><p className="a">Brands, museums, cultural institutions, and attractions that want audiences to step inside a story.</p></details>
     <details><summary>Do you handle the technology and the build?<span className="ic">+</span></summary><p className="a">Yes — creative, technology, fabrication, install, and daily operations are all in-house.</p></details>
@@ -209,7 +209,7 @@ export default function Page() {
  {"@type":"ListItem","position":3,"name":"Immersive Experiences","item":"https://ghxstship.tours/destinations/immersive-experiences"}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical rather than an afterthought."}},
+ {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team."}},
  {"@type":"Question","name":"What does GHXSTSHIP do for immersive experiences?","acceptedAnswer":{"@type":"Answer","text":"End-to-end immersive design: narrative and world-building, spatial and set design, interactive technology, projection and lighting, fabrication, and run-of-show — on our eight-phase lifecycle."}},
  {"@type":"Question","name":"Who are immersive experiences for?","acceptedAnswer":{"@type":"Answer","text":"Brands, museums, cultural institutions, and attractions that want audiences to step inside a story."}},
  {"@type":"Question","name":"Do you handle the technology and the build?","acceptedAnswer":{"@type":"Answer","text":"Yes — creative, technology, fabrication, install, and daily operations are all in-house."}}

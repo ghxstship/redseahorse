@@ -101,7 +101,7 @@ export default function Page() {
 <section className="hero"><div className="wrap">
   <p className="eyebrow">The Archives</p>
   <h1>Every Build,<br/><span className="pop">Logged.</span></h1>
-  <p className="answer">The Archives are our case studies: shows we designed, built, crewed, and ran end to end. Real outcomes, no vanity metrics.</p>
+  <p className="answer">The Archives are our case studies: shows we designed, built, crewed, and ran end to end. The numbers here are the ones that actually moved.</p>
 </div></section>
 <section className="pad"><div className="wrap">
   <div className="wgrid"><a className="wc" href="#" aria-disabled="true"><div className="media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy"/></div><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival &middot; Insomniac, Las Vegas &middot; 2025&ndash;26</p></div></a>

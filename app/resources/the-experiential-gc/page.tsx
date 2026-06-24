@@ -98,7 +98,7 @@ export default function Page() {
     <h2>Technology: the coordination</h2>
     <p>The software is how the whole thing stays in sync: <span className="pn-atlvs">ATLVS</span> for production and resource management, <span className="pn-compvss">COMPVSS</span> for workforce and crew, <span className="pn-gvteway">GVTEWAY</span> for ticketing and fans, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
     <h2>Why it matters</h2>
-    <p>For general contractors, venue operators, brands, and promoters, you get one partner to hold accountable, one schedule to track, one standard to hold. On time, on budget, and you can see all of it.</p>
+    <p>For general contractors, venue operators, brands, and promoters, it means one partner to hold accountable instead of a dozen, working off a single schedule that everyone can actually see. On time, on budget, and nothing hidden in someone else's inbox.</p>
     <div style={{display: 'flex', gap: 'var(--space-14)', flexWrap: 'wrap', margin: 'var(--space-32) 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/resources/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>
   </div>
 </div></article>
