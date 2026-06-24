@@ -41,11 +41,12 @@
   --plasma:      #6EE176;  /* Accent 2 — AA green link/secondary on dark      */
   --flare:       #E5484D;  /* functional alert/danger (multi-hue signal)      */
   --aurora:      #17C62A;  /* deep green accent                               */
-  /* Product accents — under mono-green doctrine every product resolves to the
-     one approved green; differentiation is by type/layout, not hue. */
-  --atlvs:       #2EDB3A;  /* ATLVS   */  --atlvs-deep:   #17C62A;
-  --compvss:     #6EE176;  /* COMPVSS */  --compvss-deep: #2EDB3A;
-  --gvteway:     #ADE7B1;  /* GVTEWAY */  --gvteway-deep: #6EE176;
+  /* Product accents — each product owns its OWN accent (per ATLVS kit v2
+     brand.css). GHXSTSHIP green (--brass) is the HOUSE brand only; the
+     products differentiate by hue here. base = bright fill · -deep = hover. */
+  --atlvs:       #E23414;  /* ATLVS — volcanic red   */  --atlvs-deep:   #C92C10;
+  --compvss:     #FFC400;  /* COMPVSS — signal yellow */ --compvss-deep: #EEB400;
+  --gvteway:     #2563EB;  /* GVTEWAY — blue         */  --gvteway-deep: #1F57D6;
 
   /* GREEN-on-light variants (AA text-safe on light grounds) */
   --jade-ink:    #147D1C;  /* AA green for text/UI on light grounds          */
