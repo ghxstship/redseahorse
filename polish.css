@@ -92,6 +92,24 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
   padding-right:var(--sp-6, var(--sp-6));
 }
 
+/* ---- CANONICAL HEADER TYPOGRAPHY — single source of truth ----------------
+   The shared React <Nav> inherits .brand b / .navlinks a styling from whatever
+   page <style> block is active, and those drifted: the wordmark varied in
+   size/letter-spacing/weight, the nav links in letter-spacing (.1 vs .12em).
+   Pin the canonical values here so the header reads identically on every page.
+   `header.nav …` specificity beats the page-block `.brand b` / `.navlinks a`,
+   so this wins regardless of source order. The mobile rule below only resizes. */
+header.nav .brand b {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: var(--fs-h3); letter-spacing: .04em;
+  text-transform: uppercase; white-space: nowrap; color: var(--bone);
+}
+header.nav .navlinks > a:not(.gx-btn),
+header.nav .navlinks > .nav-item > a {
+  font-family: var(--font-mono); font-size: var(--fs-label);
+  letter-spacing: .1em; text-transform: uppercase;
+}
+
 /* ---- MOBILE: shrink nav brand to keep header + CTA on one line ---------- */
 @media (max-width: 30rem) {
   .nav-inner .brand b,

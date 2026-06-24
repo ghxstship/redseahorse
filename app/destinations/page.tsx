@@ -36,7 +36,7 @@ export default function Page() {
   .tags{display:flex;gap:var(--space-9);flex-wrap:wrap}
   .tags span{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);border:var(--stroke-1) solid var(--ink-3);border-radius:var(--r-pill);padding:var(--space-7) var(--space-13)}
   .cta{padding:var(--space-80) 0;text-align:center;border-top:var(--stroke-2) solid var(--ink-3)}
-  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(36px,6vw,72px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22)}
+  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(38px,6.5vw,78px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22)}
   .cta .row{display:flex;gap:var(--space-14);justify-content:center;flex-wrap:wrap}
   /*__nf__*/
   header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
