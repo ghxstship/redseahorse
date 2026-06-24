@@ -25,7 +25,7 @@
     '.seven .dstep.phase-active{outline:3px solid var(--brass);outline-offset:3px}' +
     '.phase-detail{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;' +
       'background:var(--ink-2);border:var(--stroke-1,2px) solid var(--ink-3);border-left:4px solid var(--brass);' +
-      'border-radius:6px;padding:22px 26px;box-shadow:6px 6px 0 var(--ink,#111318)}' +
+      'border-radius:6px;padding:22px 26px;box-shadow:6px 6px 0 var(--ink,#181818)}' +
     '.phase-detail .pd-n{font-family:var(--font-display);font-weight:900;font-size:54px;line-height:.8;color:var(--brass)}' +
     '.phase-detail .pd-eb{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 6px}' +
     '.phase-detail .pd-name{font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.01em;color:var(--bone);margin:0 0 6px;line-height:1}' +

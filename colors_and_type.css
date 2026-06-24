@@ -25,22 +25,23 @@ html {
 
 :root {
   /* ---------------------------------------------------------------------
-     CORE PALETTE — GHXSTSHIP house green on the ATLVS kit v2 neutral ramp.
-     House accent = #2edb3a (the GHXSTSHIP brand). Surfaces ride v2's cool
-     blue-gray neutral ramp (NOT pure black): dark ground #111318 → text
-     #f2f4f8. Green roles follow v2 brand.css (base/hover/on/text/lift/
-     lift-text). Products own their own accents (below). Functional signals
-     (success/warning/danger/info) stay multi-hue — not brand accents.
+     CORE PALETTE — GHXSTSHIP house green on a PURE-GRAYSCALE neutral ramp
+     (client-specified, no blue tint). The five swatches: Background #fcfcfc ·
+     Foreground #000000 · Accent 1 #2a2a2a · Accent 2 #545454 · Accent 3 #7e7e7e.
+     Dark orientation kept: #000 ground, #fcfcfc text, grays as surfaces /
+     borders / muted text. Two intermediate steps (--ink #181818, fg-2 #b3b3b3)
+     derived so the ramp stays usable and AA-tuned. House accent #2edb3a and the
+     product accents are unchanged — only the neutrals changed.
      Token NAMES are retained so every page keeps working; only values changed.
      --------------------------------------------------------------------- */
-  --void:        #111318;  /* kit neutral-d-0 — primary dark ground            */
-  --ink:         #1A1D24;  /* kit neutral-d-50 — base dark surface             */
-  --ink-2:       #232730;  /* kit neutral-d-100 — raised surface               */
-  --ink-3:       #2C313B;  /* kit neutral-d-200 — hairlines / strokes on dark */
+  --void:        #000000;  /* Foreground swatch — primary dark ground          */
+  --ink:         #181818;  /* derived — base dark surface (alt bands / footer) */
+  --ink-2:       #2A2A2A;  /* Accent 1 — raised surface / cards                */
+  --ink-3:       #545454;  /* Accent 2 — hairlines / borders on dark           */
 
-  --bone:        #F2F4F8;  /* kit neutral-d-1000 — light ground / text on dark */
-  --parchment:   #F7F8FA;  /* kit neutral-l-50 — light surface                 */
-  --parchment-2: #E4E7EC;  /* kit neutral-l-200 — dividers / edge on light     */
+  --bone:        #FCFCFC;  /* Background swatch — light text on dark           */
+  --parchment:   #FCFCFC;  /* Background swatch — light surface                */
+  --parchment-2: #E6E6E6;  /* derived — dividers / edge on light               */
 
   /* SIGNALS — GHXSTSHIP house green roles (v2 brand.css ghxstship-*) */
   --brass:       #2EDB3A;  /* house base — primary brand fill (bright)        */
@@ -64,12 +65,12 @@ html {
   --sapphire-ink:#1F8425;  /* green link/UI on light                         */
 
   /* TEXT RAMPS — on dark / on light (v2 neutral ramp, AA-tuned) */
-  --fg-on-dark-1: #F2F4F8; /* kit neutral-d-1000 — primary text on dark       */
-  --fg-on-dark-2: #AEB6C4; /* kit neutral-d-700 — secondary text on dark      */
-  --fg-on-dark-3: #9098A4; /* kit neutral-d-600 — tertiary (AA 5.8:1 on dark) */
-  --fg-on-light-1:#232932; /* kit neutral-l-900 — primary text on light       */
-  --fg-on-light-2:#4A5563; /* kit neutral-l-700 — secondary text on light     */
-  --fg-on-light-3:#656D7A; /* kit neutral-l-600 — tertiary (AA 4.9:1 on bg)   */
+  --fg-on-dark-1: #FCFCFC; /* Background swatch — primary text on dark         */
+  --fg-on-dark-2: #B3B3B3; /* derived — secondary text on dark (AA ~9:1)       */
+  --fg-on-dark-3: #7E7E7E; /* Accent 3 — tertiary / muted on dark             */
+  --fg-on-light-1:#000000; /* Foreground swatch — primary text on light        */
+  --fg-on-light-2:#2A2A2A; /* Accent 1 — secondary text on light              */
+  --fg-on-light-3:#545454; /* Accent 2 — tertiary on light                    */
 
   /* SEMANTIC — functional signals, intentionally multi-hue */
   --success:   #2FA968;
