@@ -70,7 +70,8 @@ standalone. Do not invent variant chrome.
 ```
 
 ## Component vocabulary (all in modernist.css — use these, don't reinvent)
-- Layout: `.wrap`, `.sec-pad`, `.sec-pad-sm`, `.grid2/.grid3/.grid4`,
+- Layout: `.wrap` (fluid to 1440px max — never pin a page to a narrower
+  container or re-declare wrap widths), `.sec-pad`, `.sec-pad-sm`, `.grid2/.grid3/.grid4`,
   `.split2` (+`.sticky-fig`), `.band` (gray section), `.band-dark`
   (black section, for the closing CTA only).
 - Type: `.kicker`, `.page-h1`, `.display-h1`, `.lede`, `.text-muted`,

@@ -14,7 +14,7 @@ export default function Page() {
   /* page-specific layout — components come from modernist.css */
   .legal { max-width: 72ch; }
   .legal h2 { font-size: 22px; margin: clamp(32px, 4vw, 44px) 0 10px; }
-  .legal p, .legal li { font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 82%, transparent); }
+  .legal p, .legal li { line-height: 1.7; color: color-mix(in srgb, var(--color-text) 82%, transparent); }
   .legal ul { margin: 0 0 12px; padding-left: 20px; }
   .legal li { margin-bottom: 6px; }
   .eff { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
