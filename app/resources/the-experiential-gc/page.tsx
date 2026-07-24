@@ -4,108 +4,113 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "What an Experiential General Contractor Does",
   description: "An experiential general contractor is one accountable partner that owns scope, schedule, budget, crew, and technology for a live experience \u2014 here is how the GC model works for experiential and entertainment production.",
+  keywords: ["experiential general contractor", "experiential production company", "event production GC", "one accountable partner", "live event production model"],
   alternates: { canonical: "https://ghxstship.tours/resources/the-experiential-gc" },
 };
 
 export default function Page() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `*{box-sizing:border-box}
-  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
-  a{color:inherit}.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--sp-6)}
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}.brand img{width:34px;height:34px}
-  .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap}
-  .navlinks{display:flex;gap:var(--space-20);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}.navlinks a.gx-btn{color:var(--on-brass)}
-  @media(max-width:1040px){.navlinks a:not(.gx-btn){display:none}}
-  .crumbs{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:var(--space-20) 0 0}
-  .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
-  .eyebrow{font-family:var(--font-mono);font-size:var(--fs-small);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-14);display:flex;align-items:center;gap:var(--space-10)}
-  .eyebrow::before{content:"\\25C6";color:var(--nebula)}
-  .hero{padding:var(--space-40) 0 var(--space-56);border-bottom:var(--stroke-2) solid var(--ink-3)}
-  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,7vw,84px);line-height:0.97;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 var(--space-18)}
-  h1 .pop{color:var(--brass)}
-  .lede{font-size:var(--fs-body-l);line-height:1.62;color:var(--fg-on-dark-2);max-width:var(--measure);margin:0}
-  .answer{font-size:var(--fs-body-l);line-height:1.55;color:var(--fg-on-dark-1);max-width:var(--measure-wide);margin:0;font-weight:500}
-  .pad{padding:var(--space-56) 0}.pad.alt{background:var(--ink);border-top:var(--stroke-3) solid var(--ink-3);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  h2.sec{font-family:var(--font-display);font-weight:900;font-size:clamp(30px,4.2vw,48px);line-height:0.98;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 var(--space-14)}
-  .cta{padding:var(--space-80) 0;text-align:center;position:relative;overflow:hidden;border-top:var(--stroke-2) solid var(--ink-3)}
-  .cta::before{content:"";position:absolute;inset:0;background:var(--halftone-brass);background-size:18px 18px;opacity:.1}
-  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(38px,6.5vw,78px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22);position:relative}
-  .cta .row{display:flex;gap:var(--space-14);justify-content:center;flex-wrap:wrap;position:relative}
-  .foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-40) 0 var(--space-30)}
-  .foot-top{display:flex;justify-content:space-between;gap:var(--sp-5);flex-wrap:wrap;align-items:flex-start}
-  .foot-links{display:flex;gap:var(--space-18);flex-wrap:wrap}
-  .foot-links a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .foot-links a:hover{color:var(--brass)}
-  .foot-social{display:flex;gap:var(--space-14);margin-top:var(--space-14)}
-  .foot-social a{color:var(--fg-on-dark-2);font-size:var(--fs-body-l);line-height:1;text-decoration:none}.foot-social a:hover{color:var(--brass)}
-  .foot-bot{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:var(--space-22) 0 0;padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3)}
-  .prose{max-width:var(--measure);margin:0 auto;padding:var(--sp-7) 0 0}
-  .prose .meta{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--space-26)}
-  .prose p{font-size:var(--fs-body-l);line-height:1.72;color:var(--fg-on-dark-1);margin:0 0 var(--space-20)}
-  .prose h2{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h2);text-transform:uppercase;letter-spacing:-.01em;margin:var(--space-36) 0 var(--space-14);line-height:1}
-  .prose .lead{font-size:var(--fs-h3);line-height:1.6;color:var(--bone);font-weight:500}/*__nf__*/
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .nav-inner .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .nav-inner .brand img{width:34px;height:34px}
-  .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .navlinks{display:flex;gap:var(--space-16);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  .navlinks .cart{display:flex;align-items:center;gap:var(--space-7);font-family:var(--font-mono);font-size:var(--fs-label);color:var(--brass)}
-  .navlinks .cart .n{background:var(--brass);color:var(--on-brass);border-radius:var(--r-pill);min-width:20px;height:20px;display:grid;place-items:center;font-size:var(--fs-label);font-weight:700;padding:0 var(--space-5)}
-  @media(max-width:1100px){.navlinks a:not(.gx-btn){display:none}.navlinks .cart{display:none}}
-  .site-foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-44) 0 var(--space-26)}
-  .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:var(--space-30)}
-  @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
-  .site-foot .brand{display:inline-flex;align-items:center;gap:var(--sp-3);text-decoration:none;margin-bottom:var(--space-14)}
-  .site-foot .brand img{width:30px;height:30px}
-  .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-body-l);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:var(--fs-body-l);line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3);max-width:22rem}
-  .site-foot .foot-ports{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--space-14);display:flex;flex-wrap:nowrap;white-space:nowrap}
-  .site-foot .foot-ports span:not(:first-child)::before{content:"\\00b7";margin:0 var(--space-7);color:var(--fg-on-dark-3)}
-  @media(max-width:560px){.site-foot .foot-ports{flex-direction:column}.site-foot .foot-ports span:not(:first-child)::before{display:none}}
-  .site-foot .foot-social{display:flex;gap:var(--space-14)}
-  .site-foot .foot-social a{color:var(--fg-on-dark-2);font-size:var(--fs-body-l);text-decoration:none}
-  .site-foot .foot-social a:hover{color:var(--brass)}
-  .site-foot .foot-col h5{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3)}
-  .site-foot .foot-col a{display:block;font-size:var(--fs-small);color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:var(--space-9)}
-  .site-foot .foot-col a:hover{color:var(--bone)}
-  .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-10);margin-top:var(--space-30);padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+      <style dangerouslySetInnerHTML={{ __html: `
+  /* page-specific layout — components come from modernist.css */
+  .art-head { padding-block: clamp(36px, 5vw, 64px) 0; }
+  .art-head h1 { max-width: 20ch; }
+  .byline { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 18px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+  .byline .sep { color: color-mix(in srgb, var(--color-text) 35%, transparent); }
+  .art-body { max-width: 68ch; margin-inline: auto; padding-block: clamp(32px, 5vw, 56px); }
+  .art-body > p { font-size: 16px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 22px; }
+  .art-body > p.lead { font-size: 19px; line-height: 1.6; color: var(--color-text); font-weight: 600; }
+  .art-body h2 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.05; margin: 38px 0 14px; }
+  .pullquote { border-left: 2px solid var(--color-accent); margin: 32px 0; padding: 4px 0 4px 22px; }
+  .pullquote p { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(19px, 2.4vw, 25px); line-height: 1.25; text-transform: uppercase; letter-spacing: -0.01em; margin: 0; }
+  .read-next { max-width: 68ch; margin-inline: auto; }
+  .read-next .row-line { text-decoration: none; color: inherit; }
+  .read-next .row-line:hover .row-title { color: var(--color-accent-700); }
+  .read-next .d { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
+  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
+  .close-cta h2 .a { color: var(--color-accent); }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 ` }} />
       
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/resources/blog">The Log</Link> / <span style={{color: 'var(--brass)'}}>The Experiential GC</span></p></div>
-<main>
-<article className="pad"><div className="wrap">
-  <p className="eyebrow">Field Notes</p>
-  <h1 style={{maxWidth: '880px'}}>What an Experiential<br/><span className="pop">General Contractor</span> Does.</h1>
-  <div className="prose">
-    <p className="meta">By the GHXSTSHIP Crew &middot; June 2026 &middot; 5 min read</p>
-    <p className="lead">An experiential general contractor is one accountable partner that owns a live experience the way a construction GC owns a building: scope, schedule, budget, crew, and the technology that runs it, from the first line to the night it opens.</p>
-    <p>Most experiential and brand-activation work gets bought as a chain of vendors. A creative shop, a fabricator, a staging company, a staffing agency, and a stack of software that doesn't talk to itself. Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p>
-    <p>The general-contractor model puts all of it under one roof. GHXSTSHIP runs four disciplines &mdash; Experiential Production, Site Operations, Venue Management, and Immersive Technologies &mdash; with one accountable crew and one eight-phase production lifecycle, Discovery to Close.</p>
-    <h2>Production: the build</h2>
-    <p>The GC builds it. Experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and how it looks when the doors open.</p>
-    <h2>Operations: the run</h2>
-    <p>The foreman crews it and runs it. Logistics and load-in, workforce and crew management, vendor and procurement coordination, health, safety and compliance, and the day-of call. It's a real discipline with its own people, not something bolted onto creative at the end.</p>
-    <h2>Technology: the coordination</h2>
-    <p>The software is how the whole thing stays in sync: <span className="pn-atlvs">ATLVS</span> for production and resource management, <span className="pn-compvss">COMPVSS</span> for workforce and crew, <span className="pn-gvteway">GVTEWAY</span> for ticketing and fans, and <span className="pn-legend">LEG3ND</span> for the production standard, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
-    <h2>Why it matters</h2>
-    <p>For general contractors, venue operators, brands, and promoters, it means one partner to hold accountable instead of a dozen, working off a single schedule that everyone can actually see. On time, on budget, and nothing hidden in someone else's inbox.</p>
-    <div style={{display: 'flex', gap: 'var(--space-14)', flexWrap: 'wrap', margin: 'var(--space-32) 0 0'}}><Link href="/contact" className="gx-btn">Start a Project</Link><Link href="/resources/blog" className="gx-btn gx-btn--ghost">Back to the Log</Link></div>
+
+<main id="main">
+
+<article>
+
+<header className="wrap art-head">
+  <p className="kicker">Field Notes</p>
+  <h1 className="page-h1">What an Experiential General Contractor Does.</h1>
+  <div className="byline">
+    <span>By the GHXSTSHIP Crew</span><span className="sep">·</span>
+    <span>June 2026</span><span className="sep">·</span>
+    <span>5 min read</span>
   </div>
-</div></article>
+  <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
+</header>
+
+<div className="wrap"><div className="art-body">
+  <p className="lead">An experiential general contractor is one accountable partner that owns a live experience the way a construction GC owns a building: scope, schedule, budget, crew, and the technology that runs it, from the first line to the night it opens.</p>
+
+  <p>Most experiential and brand-activation work gets bought as a chain of vendors. A creative shop, a fabricator, a staging company, a staffing agency, and a stack of software that doesn't talk to itself. Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p>
+
+  <blockquote className="pullquote"><p>Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p></blockquote>
+
+  <p>The general-contractor model puts all of it under one roof. GHXSTSHIP runs four services — Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation — with one accountable crew and one nine-phase production lifecycle — the XPMS 2.5 standard, Discover to Close.</p>
+
+  <h2>The Build: Experiential Design &amp; Production</h2>
+  <p>The GC builds it. Experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and how it looks when the doors open.</p>
+
+  <h2>The Run: Venue &amp; Site Operations</h2>
+  <p>The foreman crews it and runs it. Logistics and load-in, workforce and crew management, vendor coordination and purchasing, health, safety and compliance, and the day-of call. It's a real discipline with its own people, not something bolted onto creative at the end.</p>
+
+  <h2>The Road: Tour &amp; Talent Management</h2>
+  <p>The road manager moves the show and the people in it. Routing and advancing, artist relations, travel and settlement, and the run of show, city after city, held to the same standard as the build itself.</p>
+
+  <h2>The Coordination: Technology &amp; Systems</h2>
+  <p>The software is how the whole thing stays in sync: ATLVS for production and resource management, COMPVSS for workforce and crew, GVTEWAY for ticketing and fans, and LEG3ND for show and media systems, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
+
+  <h2>Why It Matters</h2>
+  <p>For general contractors, venue operators, brands, and promoters, it means one partner to hold accountable instead of a dozen, working off a single schedule that everyone can actually see. On time, on budget, and nothing hidden in someone else's inbox.</p>
+</div></div>
+
+<section className="band"><div className="wrap sec-pad-sm">
+  <div className="read-next">
+    <p className="kicker">Read Next</p>
+    <div style={{borderTop: '1px solid var(--color-divider)'}}>
+      <Link href="/resources/blog" className="row-line">
+        <span className="row-title">The Log: Notes From the Floor</span>
+        <span className="d">Dispatches</span>
+        <span className="row-sub">Field notes on production, operations, and event tech from every build.</span>
+      </Link>
+      <Link href="/resources/glossary" className="row-line">
+        <span className="row-title">The Experiential Production Glossary</span>
+        <span className="d">Field Guide</span>
+        <span className="row-sub">The industry's terms, defined plainly by the people who produce it.</span>
+      </Link>
+    </div>
+  </div>
+</div></section>
+
+<section className="band-dark close-cta"><div className="wrap">
+  <p className="kicker">Ready When You Are</p>
+  <h2>Build With <span className="a">GHXSTSHIP.</span></h2>
+  <p className="lede" style={{marginInline: 'auto'}}>One accountable partner for the build, the run, the road, and the systems. Tell us what you're making.</p>
+  <div className="cta-row" style={{marginTop: '22px'}}>
+    <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
+    <Link href="/resources/blog" className="btn btn-secondary btn-lg">Back to the Log</Link>
+  </div>
+</div></section>
+
+</article>
+
 </main>
 
 
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Article","headline":"What an Experiential General Contractor Does","datePublished":"2026-06-06","author":{"@type":"Organization","name":"GHXSTSHIP"},"publisher":{"@type":"Organization","name":"GHXSTSHIP"},"mainEntityOfPage":"https://ghxstship.tours/resources/the-experiential-gc"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://ghxstship.tours/resources"},{"@type":"ListItem","position":3,"name":"The Log","item":"https://ghxstship.tours/resources/blog"},{"@type":"ListItem","position":4,"name":"The Experiential GC","item":"https://ghxstship.tours/resources/the-experiential-gc"}]}` }} />
     </>
   );
 }

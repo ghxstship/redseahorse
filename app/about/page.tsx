@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Story",
-  description: "GHXSTSHIP is a professional services firm for live and experiential projects \u2014 experiential production, site operations, venue management, and immersive technologies \u2014 in Miami, Las Vegas, Chicago, New York, and Los Angeles.",
+  description: "GHXSTSHIP is a professional services firm for live and experiential projects \u2014 experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation \u2014 in Miami, Las Vegas, Chicago, New York, and Los Angeles.",
+  keywords: ["about GHXSTSHIP", "experiential production company", "experiential design and production", "venue and site operations", "tour and talent management", "technology and systems implementation"],
   alternates: { canonical: "https://ghxstship.tours/about" },
 };
 
@@ -11,122 +12,84 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  .wrap{max-width:var(--container);margin:0 auto;padding:0 var(--sp-6)}
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .brand img{width:34px;height:34px}
-  .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap}
-  .navlinks{display:flex;gap:var(--space-22);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  @media(max-width:980px){.navlinks a:not(.gx-btn){display:none}}
-  .crumbs{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:var(--space-20) 0 0}
-  .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
-  .eyebrow{font-family:var(--font-mono);font-size:var(--fs-small);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-14);display:flex;align-items:center;gap:var(--space-10)}
-  .eyebrow::before{content:"\\25C6";color:var(--nebula)}
-  .hero{padding:var(--space-40) 0 var(--space-56);border-bottom:var(--stroke-2) solid var(--ink-3)}
-  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,7vw,84px);line-height:0.97;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 var(--space-18)}
-  h1 .pop{color:var(--brass)}
-  .lede{font-size:var(--fs-body-l);line-height:1.62;color:var(--fg-on-dark-2);max-width:var(--measure);margin:0}
-  .answer{font-size:var(--fs-body-l);line-height:1.55;color:var(--fg-on-dark-1);max-width:var(--measure-wide);margin:0;font-weight:500}
-  .pad{padding:var(--sp-8) 0}
-  .pad.alt{background:var(--ink);border-top:var(--stroke-3) solid var(--ink-3);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  h2.sec{font-family:var(--font-display);font-weight:900;font-size:clamp(30px,4.2vw,48px);line-height:0.98;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 var(--space-14)}
-  .cta{padding:var(--space-80) 0;text-align:center;position:relative;overflow:hidden;border-top:var(--stroke-2) solid var(--ink-3)}
-  .cta::before{content:"";position:absolute;inset:0;background:var(--halftone-brass);background-size:18px 18px;opacity:.1}
-  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(38px,6.5vw,78px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22);position:relative}
-  .cta .row{display:flex;gap:var(--space-14);justify-content:center;flex-wrap:wrap;position:relative}
-  .foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-40) 0 var(--space-30)}
-  .foot-top{display:flex;justify-content:space-between;gap:var(--sp-5);flex-wrap:wrap;align-items:center}
-  .foot-links{display:flex;gap:var(--space-18);flex-wrap:wrap}
-  .foot-links a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .foot-links a:hover{color:var(--brass)}
-  .foot-bot{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:var(--space-22) 0 0;padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3)}
-  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-4);padding:var(--space-36) 0 0}@media(max-width:1040px){.pgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
-  .pc{background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);padding:var(--space-26)}
-  .pc .bar{height:6px;width:54px;border-radius:var(--r-xs);margin-bottom:var(--space-18);background:var(--brass)}
-  .pc:nth-child(2) .bar{background:var(--nebula)}.pc:nth-child(3) .bar{background:var(--plasma)}.pc:nth-child(4) .bar{background:var(--brass)}
-  .pc .role{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
-  .pc:nth-child(2) .role{color:var(--nebula)}.pc:nth-child(3) .role{color:var(--plasma)}.pc:nth-child(4) .role{color:var(--brass)}
-  .pc h3{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h2);text-transform:uppercase;margin:var(--sp-2) 0 var(--sp-2);line-height:.95}
-  .pc p{font-size:var(--fs-small);line-height:1.55;color:var(--fg-on-dark-2);margin:0}
-  .band{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-18);padding:var(--space-40) 0 0}@media(max-width:680px){.band{grid-template-columns:1fr 1fr}}
-  .st .v{font-family:var(--font-display);font-weight:900;font-size:56px;line-height:.9;color:var(--brass)}
-  .st:nth-child(2) .v{color:var(--nebula)}.st:nth-child(3) .v{color:var(--plasma)}.st:nth-child(4) .v{color:var(--bone)}
-  .st .k{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);margin-top:var(--sp-2)}
-/*__nf__*/
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .nav-inner .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .nav-inner .brand img{width:34px;height:34px}
-  .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .navlinks{display:flex;gap:var(--space-16);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  .navlinks .cart{display:flex;align-items:center;gap:var(--space-7);font-family:var(--font-mono);font-size:var(--fs-label);color:var(--brass)}
-  .navlinks .cart .n{background:var(--brass);color:var(--on-brass);border-radius:var(--r-pill);min-width:20px;height:20px;display:grid;place-items:center;font-size:var(--fs-label);font-weight:700;padding:0 var(--space-5)}
-  @media(max-width:1100px){.navlinks a:not(.gx-btn){display:none}.navlinks .cart{display:none}}
-  .site-foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-44) 0 var(--space-26)}
-  .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:var(--space-30)}
-  @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
-  .site-foot .brand{display:inline-flex;align-items:center;gap:var(--sp-3);text-decoration:none;margin-bottom:var(--space-14)}
-  .site-foot .brand img{width:30px;height:30px}
-  .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-body-l);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:var(--fs-body-l);line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3);max-width:22rem}
-  .site-foot .foot-ports{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--space-14);display:flex;flex-wrap:nowrap;white-space:nowrap}
-  .site-foot .foot-ports span:not(:first-child)::before{content:"\\00b7";margin:0 var(--space-7);color:var(--fg-on-dark-3)}
-  @media(max-width:560px){.site-foot .foot-ports{flex-direction:column}.site-foot .foot-ports span:not(:first-child)::before{display:none}}
-  .site-foot .foot-social{display:flex;gap:var(--space-14)}
-  .site-foot .foot-social a{color:var(--fg-on-dark-2);font-size:var(--fs-body-l);text-decoration:none}
-  .site-foot .foot-social a:hover{color:var(--brass)}
-  .site-foot .foot-col h5{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3)}
-  .site-foot .foot-col a{display:block;font-size:var(--fs-small);color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:var(--space-9)}
-  .site-foot .foot-col a:hover{color:var(--bone)}
-  .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-10);margin-top:var(--space-30);padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  /* page-specific layout — components come from modernist.css */
+  .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
+  .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
+  .svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
+  .svc-card h3 { font-size: 21px; line-height: 1.05; margin: 0; }
+  .svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
+  .svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
+  .stats-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 28px; }
+  @media (max-width: 720px) { .stats-in { grid-template-columns: repeat(2, 1fr); } }
+  .story-fig { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--color-divider); }
+  .story-fig img { width: 100%; height: 100%; object-fit: cover; }
+  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
+  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
+  .close-cta h2 .a { color: var(--color-accent); }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
 ` }} />
       
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>The Story</span></p></div>
-<main>
-<section className="hero"><div className="wrap">
-  <p className="eyebrow">The Story &middot; Beyond the Scenes</p>
-  <h1>We Build the<br/><span className="pop">Whole Thing.</span></h1>
-  <p className="answer">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four services, Experiential Production, Site Operations, Venue Management, and Immersive Technologies, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
-</div></section>
-<section className="pad alt"><div className="wrap">
-  <p className="eyebrow">How We're Built</p>
-  <h2 className="sec">Four Disciplines. One Team.</h2>
-  <p className="lede">Four services run by one team: we produce the experience, operate the site, run the venue, and wire the technology. Different crews doing each, held to the same standard.</p>
-  <div className="pgrid">
-    <div className="pc"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Production</h3><p>We build the experience: scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Foreman</p><h3>Site Operations</h3><p>We crew it and run it on the ground: logistics, staffing, safety, and the day-of call, clockwork at any scale.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Harbor Master</p><h3>Venue Management</h3><p>We run the room: programming, bookings, facility and vendor operations, and on-site teams.</p></div>
-    <div className="pc"><div className="bar"></div><p className="role">The Procore</p><h3>Immersive Technologies</h3><p>We give the team its instruments: <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, the platforms the whole build runs on.</p></div>
+
+<main id="main">
+
+<section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
+  <p className="kicker">The Company</p>
+  <h1 className="page-h1">We Build the Whole Thing.</h1>
+  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver four services, Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
+  <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
+</section>
+
+<section className="wrap sec-pad"><div className="split2">
+  <figure className="story-fig grayscale">
+    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop" alt="Crowd at a live event under production lighting" width="900" height="675"/>
+  </figure>
+  <div>
+    <p className="kicker">Beyond the Scenes</p>
+    <h2 style={{fontSize: 'clamp(28px,3.6vw,44px)', lineHeight: '1.02'}}>One Accountable Partner.</h2>
+    <p className="lede">You're not running an event, you're building a world that exists for one weekend and strikes by morning. GHXSTSHIP runs the whole thing with you, one partner who owns scope, schedule, budget, crew, and the technology, instead of six vendors who blame each other when something slips.</p>
+    <p style={{marginTop: '16px'}}><Link href="/services/experiential-design-production" className="btn btn-ghost">Explore the services →</Link></p>
   </div>
 </div></section>
-<section className="pad"><div className="wrap">
-  <p className="eyebrow">The Track Record</p>
-  <h2 className="sec">The Receipts.</h2>
-  <div className="band">
-    <div className="st"><div className="v">14+</div><div className="k">Years</div></div>
-    <div className="st"><div className="v">250+</div><div className="k">Experiences</div></div>
-    <div className="st"><div className="v">5M+</div><div className="k">Memories</div></div>
-    <div className="st"><div className="v">5</div><div className="k">Home Ports</div></div>
+
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">How We're Built</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Disciplines. One Team.</h2>
+  <p className="lede">Four services run by one team: we design and produce the experience, operate the venue and the site, manage the tour and the talent, and implement the technology. Different crews doing each, held to the same standard.</p>
+  <div className="grid4" style={{marginTop: '28px'}}>
+    <article className="svc-card"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Design &amp; Production</h3><p>We design and build the experience: concept, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Foreman</p><h3>Venue &amp; Site Operations</h3><p>We run the room and the ground: programming, bookings, logistics, staffing, safety, facility and vendor operations, clockwork at any scale.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Road Manager</p><h3>Tour &amp; Talent Management</h3><p>We move the show and the people in it: routing, advancing, artist relations, travel, settlement, and the run of show, city after city.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Procore</p><h3>Technology &amp; Systems Implementation</h3><p>We give the team its instruments: ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, the platforms the whole build runs on, plus immersive show tech.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
   </div>
 </div></section>
-<section className="cta"><div className="wrap"><h2>Let's Build<br/>Something.</h2>
-  <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link></div>
+
+<section className="wrap sec-pad">
+  <p className="kicker">The Track Record</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Receipts.</h2>
+  <div className="stats-in">
+    <div className="stat"><div className="v">14+</div><div className="k">Years</div></div>
+    <div className="stat"><div className="v">250+</div><div className="k">Experiences</div></div>
+    <div className="stat"><div className="v">5M+</div><div className="k">Memories</div></div>
+    <div className="stat"><div className="v">5</div><div className="k">Offices</div></div>
+  </div>
+</section>
+
+<section className="band-dark close-cta"><div className="wrap">
+  <p className="kicker">Ready When You Are</p>
+  <h2>Let's Build <span className="a">Something.</span></h2>
+  <p className="lede" style={{marginInline: 'auto'}}>Tell us what you're building. We scope it, crew it, run the nine phases, and go live, on time and on budget.</p>
+  <div className="cta-row" style={{justifyContent: 'center', marginTop: '22px'}}>
+    <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
+    <Link href="/work" className="btn btn-secondary btn-lg">See the Work</Link>
+  </div>
 </div></section>
+
 </main>
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/about"}` }} />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story — GHXSTSHIP","url":"https://ghxstship.tours/about","description":"GHXSTSHIP is a professional services firm for live and experiential projects: experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation."}` }} />
     </>
   );
 }

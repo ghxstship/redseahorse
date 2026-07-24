@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "TV, Film & Broadcast",
-  description: "GHXSTSHIP is a broadcast &amp; film production company in Miami \u2014 Las Vegas, Chicago, NY, LA for networks, studios, streamers &amp; brands \u2014 live broadcast, content capture &amp; on-air activations, via our 8-phase lifecycle.",
+  description: "GHXSTSHIP is a broadcast, film &amp; television production company in Miami \u2014 Las Vegas, Chicago, NY, LA for networks, studios, streamers &amp; brands \u2014 live broadcast, content capture &amp; on-air activations, via our 9-phase XPMS 2.5 lifecycle.",
+  keywords: ["broadcast production company", "tv production", "film production", "live broadcast", "content capture", "on-air activations", "set design", "broadcast production Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/tv-film-broadcast" },
 };
 
@@ -12,209 +12,175 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  .wrap{max-width:1240px;margin:0 auto;padding:0 var(--sp-6)}
-  .eyebrow{font-family:var(--font-mono);font-size:var(--fs-small);letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-14);display:flex;align-items:center;gap:var(--space-10)}
-  .eyebrow::before{content:"◆";color:var(--nebula)}
-  h2.sec{font-family:var(--font-display);font-weight:900;font-size:clamp(36px,5vw,64px);line-height:0.98;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 var(--space-14)}
-  .answer{font-family:var(--font-body);font-size:var(--fs-body-l);line-height:1.55;color:var(--fg-on-dark-1);max-width:var(--measure-wide);margin:0 0 var(--space-14);font-weight:500}
-  .lede{font-size:var(--fs-body-l);line-height:1.6;color:var(--fg-on-dark-2);max-width:var(--measure);margin:0}
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(6,8,21,.88);backdrop-filter:blur(10px);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h)}
-  .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .brand img{width:34px;height:34px}
-  .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);letter-spacing:0;text-transform:uppercase;white-space:nowrap}
-  .navlinks{display:flex;gap:var(--space-22);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  @media(max-width:1000px){.navlinks a:not(.gx-btn){display:none}}
-  .crumbs{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:var(--space-20) 0 0}
-  .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
-  .pad{padding:var(--space-64) 0}
-  .pad.alt{background:var(--ink);border-top:var(--stroke-4) solid var(--ink-3);border-bottom:var(--stroke-4) solid var(--ink-3)}
-  .hero{padding:var(--space-32) 0 var(--sp-8);position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(var(--ink-3) 1.4px,transparent 1.5px) 0 0/26px 26px;opacity:.45;-webkit-mask:radial-gradient(120% 90% at 70% 0%,#000,transparent);mask:radial-gradient(120% 90% at 70% 0%,#000,transparent)}
-  .hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(48px,8vw,104px);line-height:0.97;text-transform:uppercase;letter-spacing:-.015em;margin:var(--sp-2) 0 var(--space-18);position:relative}
-  .hero h1 .pop{color:var(--brass)}
-  .hero-cta{display:flex;gap:var(--space-14);flex-wrap:wrap;margin-top:var(--sp-5);position:relative}
-  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--space-32)}
-  @media(max-width:760px){.caps{grid-template-columns:1fr}}
-  .cap{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-small);color:var(--fg-on-dark-2);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);padding:var(--space-14) var(--sp-4)}
-  .cap i{font-size:var(--fs-body-l);color:var(--brass);flex:none;position:relative;top:1px}
-.cap-t{flex:1;min-width:0;line-height:1.5}
-  .aud{display:flex;gap:var(--space-10);flex-wrap:wrap;margin-top:var(--space-26)}
-  .aud .gx-tag{background:var(--ink-2);color:var(--fg-on-dark-1);border-color:var(--ink-3)}
-  .mu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--space-32)}
-  @media(max-width:760px){.mu-grid{grid-template-columns:1fr}}
-  .mu{border:var(--stroke-3) solid var(--ink);border-radius:var(--r-1);overflow:hidden;background:var(--ink-2);box-shadow:var(--shadow-hard)}
-  .mu .media{height:130px;display:grid;place-items:center;border-bottom:var(--stroke-3) solid var(--ink);position:relative}
-  .mu .px{position:absolute;left:var(--sp-3);top:var(--sp-3)}
-  .mu .body{padding:var(--space-18)}
-  .mu h3{font-family:var(--font-display);font-weight:800;font-size:var(--fs-body-l);text-transform:uppercase;margin:0 0 var(--space-5);line-height:1}
-  .mu .meta{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.08em;color:var(--fg-on-dark-3);text-transform:uppercase}
-  .faq-list{margin-top:var(--space-30);border-top:var(--stroke-2) solid var(--ink-3)}
-  .faq details{border-bottom:var(--stroke-2) solid var(--ink-3)}
-  .faq summary{list-style:none;cursor:pointer;padding:var(--space-20) 0;display:flex;justify-content:space-between;gap:var(--space-20);font-family:var(--font-display);font-weight:800;font-size:var(--fs-body-l);text-transform:none;letter-spacing:-.01em;color:var(--bone)}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq .ic{color:var(--brass);font-size:var(--fs-h3)}.faq details[open] .ic{transform:rotate(45deg)}
-  .faq .a{padding:0 0 var(--space-22);font-size:var(--fs-body);line-height:1.6;color:var(--fg-on-dark-2);max-width:880px}
-  .cta{padding:var(--space-96) 0;text-align:center;position:relative;overflow:hidden}
-  .cta::before{content:"";position:absolute;inset:0;background:var(--halftone-brass);background-size:18px 18px;opacity:.12}
-  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,8vw,96px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22);position:relative}
-  footer{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-40) 0;text-align:center}
-  footer .fm{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;color:var(--fg-on-dark-3);text-transform:uppercase}
-
-  .hero-grid{display:grid;grid-template-columns:1.45fr .85fr;gap:var(--sp-7);align-items:center}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-fig{max-width:420px}}
-  .hero-fig{position:relative;border:var(--stroke-3) solid var(--ink);border-radius:var(--r-2);overflow:hidden;box-shadow:var(--shadow-hard-lg);aspect-ratio:4/5;background:var(--ink-2);margin:0}
-  .hero-fig img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.04) contrast(1.04)}
-  .hero-fig figcaption{position:absolute;left:0;right:0;bottom:0;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--bone);background:linear-gradient(transparent,rgba(6,12,12,.88));padding:var(--space-30) var(--space-14) var(--sp-3)}
-/*__nf__*/
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .nav-inner .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .nav-inner .brand img{width:34px;height:34px}
-  .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .navlinks{display:flex;gap:var(--space-16);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  .navlinks .cart{display:flex;align-items:center;gap:var(--space-7);font-family:var(--font-mono);font-size:var(--fs-label);color:var(--brass)}
-  .navlinks .cart .n{background:var(--brass);color:var(--on-brass);border-radius:var(--r-pill);min-width:20px;height:20px;display:grid;place-items:center;font-size:var(--fs-label);font-weight:700;padding:0 var(--space-5)}
-  @media(max-width:1100px){.navlinks a:not(.gx-btn){display:none}.navlinks .cart{display:none}}
-  .site-foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-44) 0 var(--space-26)}
-  .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:var(--space-30)}
-  @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
-  .site-foot .brand{display:inline-flex;align-items:center;gap:var(--sp-3);text-decoration:none;margin-bottom:var(--space-14)}
-  .site-foot .brand img{width:30px;height:30px}
-  .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-body-l);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:var(--fs-body-l);line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3);max-width:22rem}
-  .site-foot .foot-ports{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--space-14);display:flex;flex-wrap:nowrap;white-space:nowrap}
-  .site-foot .foot-ports span:not(:first-child)::before{content:"\\00b7";margin:0 var(--space-7);color:var(--fg-on-dark-3)}
-  @media(max-width:560px){.site-foot .foot-ports{flex-direction:column}.site-foot .foot-ports span:not(:first-child)::before{display:none}}
-  .site-foot .foot-social{display:flex;gap:var(--space-14)}
-  .site-foot .foot-social a{color:var(--fg-on-dark-2);font-size:var(--fs-body-l);text-decoration:none}
-  .site-foot .foot-social a:hover{color:var(--brass)}
-  .site-foot .foot-col h5{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3)}
-  .site-foot .foot-col a{display:block;font-size:var(--fs-small);color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:var(--space-9)}
-  .site-foot .foot-col a:hover{color:var(--bone)}
-  .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-10);margin-top:var(--space-30);padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  /* page-specific layout — components come from modernist.css */
+  .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
+  .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .cap { border: 1px solid var(--color-divider); background: var(--color-bg); padding: 16px 18px; font-family: var(--font-heading); font-weight: 600; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
+  .phases { display: flex; margin-top: 32px; }
+  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
+  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
+  .phase:first-child::before { left: 50%; width: 50%; }
+  .phase:last-child::before { width: 50%; }
+  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
+  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
+  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
+  .aud-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
+  .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
+  .svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
+  .svc-card h3 { font-size: 19px; line-height: 1.05; margin: 0; }
+  .svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
+  .svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
+  .more-mkts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
+  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
+  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
 
+<main id="main">
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <Link href="/destinations">Destinations</Link> / <span style={{color: 'var(--brass)'}}>TV, Film &amp; Broadcast</span></p></div>
-
-<main>
-<section className="hero"><div className="wrap"><div className="hero-grid">
-  <div className="hero-copy">
-    <p className="eyebrow">Destinations · TV · Film · Broadcast</p>
-    <h1>TV, Film<br/><span className="pop">&amp; Broadcast</span></h1>
-    <p className="answer">GHXSTSHIP is a full-service <strong>broadcast, film, and television production company</strong> headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our eight-phase production lifecycle.</p>
-    <div className="hero-cta">
-      <a className="gx-btn" href="mailto:hello@ghxstship.tours">Start a Project</a>
-      <Link href="/destinations" className="gx-btn gx-btn--ghost">All Destinations</Link>
+<section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) clamp(40px,6vw,72px)'}}><div className="hero-grid">
+  <div>
+    <p className="kicker">Industry · TV · Film · Broadcast</p>
+    <h1 className="page-h1">TV, Film <span style={{color: 'var(--color-accent-700)'}}>&amp; Broadcast.</span></h1>
+    <p className="lede">GHXSTSHIP is a full-service broadcast, film, and television production company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our nine-phase XPMS 2.5 production lifecycle.</p>
+    <div className="cta-row" style={{marginTop: '22px'}}>
+      <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
+      <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>
     </div>
   </div>
-  <figure className="hero-fig"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=900&q=80&auto=format&fit=crop" alt="TV, Film & Broadcast" loading="lazy"/><figcaption>TV, Film & Broadcast</figcaption></figure>
-</div></div></section>
+  <figure className="hero-fig grayscale">
+    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=900&q=80&auto=format&fit=crop" alt="Broadcast camera on a television production set" width="720" height="900"/>
+  </figure>
+</div></section>
 
-<section className="pad alt"><div className="wrap">
-  <p className="eyebrow">What We Build</p>
-  <h2 className="sec">On Air, On Time.</h2>
-  <div className="caps">
-    <div className="cap"><i className="ph-bold ph-broadcast"></i><span className="cap-t">Live broadcast production</span></div>
-    <div className="cap"><i className="ph-bold ph-cube"></i><span className="cap-t">Set design &amp; scenic</span></div>
-    <div className="cap"><i className="ph-bold ph-video-camera"></i><span className="cap-t">Camera, audio &amp; lighting</span></div>
-    <div className="cap"><i className="ph-bold ph-film-slate"></i><span className="cap-t">Content capture &amp; post</span></div>
-    <div className="cap"><i className="ph-bold ph-megaphone-simple"></i><span className="cap-t">On-air activations</span></div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t">Compliance &amp; insurance</span></div>
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">What We Build</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>On Air, On Time.</h2>
+  <div className="grid3" style={{marginTop: '24px'}}>
+    <div className="cap">Live Broadcast Production</div>
+    <div className="cap">Set Design &amp; Scenic</div>
+    <div className="cap">Camera, Audio &amp; Lighting</div>
+    <div className="cap">Content Capture &amp; Post</div>
+    <div className="cap">On-Air Activations</div>
+    <div className="cap">Compliance &amp; Insurance</div>
   </div>
 </div></section>
 
-<section className="pad"><div className="wrap">
-  <p className="eyebrow">The Course</p>
-  <h2 className="sec">Broadcast, Eight Phases.</h2>
-  <p className="lede">Same eight phases on every project, Discovery to Close. You watch each one happen.</p>
-  <div className="gx-smap" style={{marginTop: 'var(--space-40)'}}><div className="gx-smap__line">
-    <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">01</div><div className="gx-smap__name">Discovery</div><div className="gx-smap__sub">Consult</div></div>
-    <div className="gx-smap__stop"><div className="gx-smap__dot">02</div><div className="gx-smap__name">Design</div><div className="gx-smap__sub">Concept</div></div>
-    <div className="gx-smap__stop"><div className="gx-smap__dot">03</div><div className="gx-smap__name">Advance</div><div className="gx-smap__sub">Advance</div></div>
-    <div className="gx-smap__stop"><div className="gx-smap__dot">04</div><div className="gx-smap__name">Procurement</div><div className="gx-smap__sub">Procure</div></div>
-    <div className="gx-smap__stop"><div className="gx-smap__dot">05</div><div className="gx-smap__name">Build</div><div className="gx-smap__sub">Fabricate</div></div>
-    <div className="gx-smap__stop"><div className="gx-smap__dot">06</div><div className="gx-smap__name">Install</div><div className="gx-smap__sub">Install</div></div>
-    <div className="gx-smap__stop"><div className="gx-smap__dot">07</div><div className="gx-smap__name">Operate</div><div className="gx-smap__sub">Live</div></div>
-    <div className="gx-smap__stop is-terminus"><div className="gx-smap__dot">08</div><div className="gx-smap__name">Close</div><div className="gx-smap__sub">Close-out</div></div>
-  </div></div>
-</div></section>
+<section className="wrap sec-pad">
+  <p className="kicker">The Process</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Broadcast, Nine Phases.</h2>
+  <p className="lede">Same nine phases on every project, Discover to Close. You watch each one happen.</p>
+  <div className="phases">
+    <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
+    <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
+    <div className="phase done"><div className="dot">3</div><div className="nm">Advance</div></div>
+    <div className="phase done"><div className="dot">4</div><div className="nm">Procure</div></div>
+    <div className="phase"><div className="dot">5</div><div className="nm">Build</div></div>
+    <div className="phase"><div className="dot">6</div><div className="nm">Install</div></div>
+    <div className="phase"><div className="dot">7</div><div className="nm">Operate</div></div>
+    <div className="phase"><div className="dot">8</div><div className="nm">Amplify</div></div>
+    <div className="phase"><div className="dot">9</div><div className="nm">Close</div></div>
+  </div>
+  <p style={{marginTop: '24px'}}><Link href="/course" className="btn btn-ghost">Walk the full course →</Link></p>
+</section>
 
-<section className="pad alt"><div className="wrap">
-  <p className="eyebrow">Who We Build For</p>
-  <h2 className="sec">Built for Networks, Studios &amp; Streamers.</h2>
-  <p className="answer">Broadcast work at GHXSTSHIP is built for the teams accountable for what airs.</p>
-  <div className="aud"><span className="gx-tag">Networks</span><span className="gx-tag">Studios</span><span className="gx-tag">Streamers</span><span className="gx-tag">Brands</span><span className="gx-tag">Producers</span></div>
-</div></section>
-
-<section className="pad"><div className="wrap">
-  <p className="eyebrow">The Archives</p>
-  <h2 className="sec">Broadcasts We Ran.</h2>
-  <div className="mu-grid"><article className="mu" style={{gridColumn: '1/-1'}}><div className="body" style={{textAlign: 'center', padding: 'var(--space-40)'}}><h3>In Production</h3><p className="meta" style={{marginTop: 'var(--sp-2)'}}>New broadcast work is underway. Want to be the first case study? Start a project.</p><a className="gx-btn gx-btn--sm" style={{marginTop: 'var(--space-18)'}} href="mailto:hello@ghxstship.tours">Start a Project</a></div></article>
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">Who We Build For</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Built for Networks, Studios &amp; Streamers.</h2>
+  <p className="lede">Broadcast work at GHXSTSHIP is built for the teams accountable for what airs.</p>
+  <div className="aud-tags">
+    <span className="tag tag-neutral">Networks</span>
+    <span className="tag tag-neutral">Studios</span>
+    <span className="tag tag-neutral">Streamers</span>
+    <span className="tag tag-neutral">Brands</span>
+    <span className="tag tag-neutral">Producers</span>
   </div>
 </div></section>
 
-{/* THE DIFFERENCE */}
-<section className="pad" id="difference" aria-labelledby="diff-h"><div className="wrap">
-  <p className="eyebrow">Why GHXSTSHIP</p>
-  <h2 className="sec">The Difference.</h2>
-  <p className="answer">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all eight phases ourselves, and we build the technology that runs them.</p>
-  <div className="caps" style={{marginTop: 'var(--space-32)'}}>
-    <div className="cap"><i className="ph-bold ph-path"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>End to end</b> — all 8 phases, one accountable crew running the whole build.</span></div>
-    <div className="cap"><i className="ph-bold ph-compass-tool"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>We implement the tech</b> — <span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span> &amp; <span className="pn-legend">LEG3ND</span>, in-house.</span></div>
-    <div className="cap"><i className="ph-bold ph-shield-check"></i><span className="cap-t"><b style={{color: 'var(--bone)'}}>Ops as a discipline</b> — logistics, crew &amp; compliance, a full vertical.</span></div>
+<section className="wrap sec-pad">
+  <p className="kicker">Selected Work</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Broadcasts We Ran.</h2>
+  <div style={{border: '1px solid var(--color-divider)', padding: 'clamp(28px,4vw,48px)', textAlign: 'center', marginTop: '24px'}}>
+    <h3 style={{fontSize: '21px'}}>In Production</h3>
+    <p className="text-muted" style={{maxWidth: '44ch', marginInline: 'auto'}}>New broadcast work is underway. Want to be the first case study? Start a project.</p>
+    <Link href="/contact" className="btn btn-secondary" style={{marginTop: '8px'}}>Start a Project</Link>
+  </div>
+</section>
+
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">The Services</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Verticals Behind Every Broadcast.</h2>
+  <p className="lede">One accountable partner, four services carrying the shoot: the set designed and produced, the stage operated, the talent managed, and the systems wired to keep it on air.</p>
+  <div className="grid4" style={{marginTop: '28px'}}>
+    <article className="svc-card"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Design &amp; Production</h3><p>Set design, scenic, fabrication, and the finish, built to broadcast standards.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Foreman</p><h3>Venue &amp; Site Operations</h3><p>Stage and location operations, staffing, safety, and vendor logistics on the clock.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Road Manager</p><h3>Tour &amp; Talent Management</h3><p>On-air talent, appearances, and artist logistics from call time to wrap.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Procore</p><h3>Technology &amp; Systems Implementation</h3><p>ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND plus playback and control for the live moment.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
   </div>
 </div></section>
 
-<section className="pad alt faq"><div className="wrap">
-  <p className="eyebrow">Answers</p>
-  <h2 className="sec">Broadcast FAQ.</h2>
-  <div className="faq-list">
-    <details open><summary>How is GHXSTSHIP different from a traditional agency?<span className="ic">+</span></summary><p className="a">Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (<span className="pn-atlvs">ATLVS</span>, <span className="pn-compvss">COMPVSS</span>, <span className="pn-gvteway">GVTEWAY</span>, and <span className="pn-legend">LEG3ND</span>), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team.</p></details>
-    <details><summary>What does GHXSTSHIP do for TV, film and broadcast?<span className="ic">+</span></summary><p className="a">End-to-end broadcast production: live broadcast, set design and scenic, camera/audio/lighting, content capture and post, on-air activations, and compliance — on our eight-phase lifecycle.</p></details>
-    <details><summary>Who is broadcast production for?<span className="ic">+</span></summary><p className="a">Networks, studios, streamers, and brands that need a production partner from set build to air.</p></details>
-    <details><summary>Do you handle live and captured content?<span className="ic">+</span></summary><p className="a">Yes — live broadcast and captured/post content, plus on-air brand activations.</p></details>
+<section className="wrap sec-pad">
+  <p className="kicker">Why GHXSTSHIP</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Difference.</h2>
+  <p className="lede">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all nine phases ourselves, and we build the technology that runs them.</p>
+  <div className="grid3" style={{marginTop: '24px'}}>
+    <div className="card"><p className="card-title">End to End</p><p className="card-body">All nine phases, one accountable crew running the whole build.</p></div>
+    <div className="card"><p className="card-title">We Implement the Tech</p><p className="card-body">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, built in-house and implemented through <Link href="/services/technology-systems-implementation">Technology &amp; Systems Implementation</Link>.</p></div>
+    <div className="card"><p className="card-title">Ops as a Discipline</p><p className="card-body">Logistics, crew, and compliance run as a full vertical: <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>.</p></div>
+  </div>
+</section>
+
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">Answers</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Broadcast FAQ.</h2>
+  <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
+    <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.5 production lifecycle end to end, not just creative. We build and implement our own technology, ATLVS, COMPVSS, GVTEWAY, and LEG3ND. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
+    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for TV, film and broadcast?</summary><div className="faq-a">End-to-end broadcast production: live broadcast, set design and scenic, camera, audio, and lighting, content capture and post, on-air activations, and compliance — on our nine-phase XPMS 2.5 lifecycle.</div></details>
+    <details className="faq-item"><summary className="faq-q">Who is broadcast production for?</summary><div className="faq-a">Networks, studios, streamers, and brands that need a production partner from set build to air.</div></details>
+    <details className="faq-item"><summary className="faq-q">Do you handle live and captured content?</summary><div className="faq-a">Yes — live broadcast and captured and post content, plus on-air brand activations.</div></details>
   </div>
 </div></section>
 
-<section className="cta"><div className="wrap">
-  <p className="eyebrow" style={{justifyContent: 'center'}}>Ready When You Are</p>
-  <h2>Build Your<br/>Broadcast.</h2>
-  <div className="hero-cta" style={{justifyContent: 'center'}}>
-    <a className="gx-btn gx-btn--lg" href="mailto:hello@ghxstship.tours">Start a Project</a>
-    <Link href="/#work" className="gx-btn gx-btn--ghost gx-btn--lg">See the Archives</Link>
+<section className="wrap sec-pad-sm">
+  <p className="kicker">More Industries</p>
+  <div className="more-mkts">
+    <Link href="/destinations/festival-production" className="chip">Festival Production</Link>
+    <Link href="/destinations/concert-tour-production" className="chip">Concerts &amp; Tours</Link>
+    <Link href="/destinations/brand-activations" className="chip">Brand Activations</Link>
+    <Link href="/destinations/immersive-experiences" className="chip">Immersive Experiences</Link>
+    <Link href="/destinations/sporting-events" className="chip">Sporting Events</Link>
+  </div>
+</section>
+
+<section className="band-dark close-cta"><div className="wrap">
+  <p className="kicker">Ready When You Are</p>
+  <h2>Build Your <span className="a">Broadcast.</span></h2>
+  <p className="lede" style={{marginInline: 'auto'}}>Tell us what you're building. We scope it, crew it, run the nine phases, and go live, on time and on budget.</p>
+  <div className="cta-row" style={{justifyContent: 'center', marginTop: '22px'}}>
+    <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
+    <Link href="/work" className="btn btn-secondary btn-lg">See the Work</Link>
   </div>
 </div></section>
+
 </main>
 
 
 
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"TV, Film &amp; Broadcast","serviceType":"Broadcast, film and television production","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Live broadcast, film and TV content capture, and on-air activations, delivered through the GHXSTSHIP eight-phase production lifecycle.","audience":{"@type":"Audience","audienceType":"Networks, studios, streamers, and brands"},"url":"https://ghxstship.tours/destinations/tv-film-broadcast"}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
- {"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},
- {"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/#destinations"},
- {"@type":"ListItem","position":3,"name":"TV, Film &amp; Broadcast","item":"https://ghxstship.tours/destinations/tv-film-broadcast"}
-]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"TV, Film & Broadcast","serviceType":"Broadcast, film, and television production","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Live broadcast, film and TV capture, and on-air activations, delivered through the GHXSTSHIP nine-phase XPMS 2.5 production lifecycle.","audience":{"@type":"Audience","audienceType":"Networks, studios, streamers, and brands"},"url":"https://ghxstship.tours/destinations/tv-film-broadcast"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"TV, Film & Broadcast","item":"https://ghxstship.tours/destinations/tv-film-broadcast"}]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full eight-phase production lifecycle end to end (not just creative), we build our own technology (ATLVS, COMPVSS, and GVTEWAY), and Operations — logistics, crew, compliance, and analytics — is a dedicated vertical with its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for TV, film and broadcast?","acceptedAnswer":{"@type":"Answer","text":"End-to-end broadcast production: live broadcast, set design and scenic, camera/audio/lighting, content capture and post, on-air activations, and compliance — on our eight-phase lifecycle."}},
+ {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full nine-phase XPMS 2.5 production lifecycle end to end, not just creative. We build and implement our own technology, ATLVS, COMPVSS, GVTEWAY, and LEG3ND. And operations is a dedicated vertical, Venue & Site Operations, with logistics, crew, compliance, and analytics run by its own team."}},
+ {"@type":"Question","name":"What does GHXSTSHIP do for TV, film and broadcast?","acceptedAnswer":{"@type":"Answer","text":"End-to-end broadcast production: live broadcast, set design and scenic, camera, audio, and lighting, content capture and post, on-air activations, and compliance — on our nine-phase XPMS 2.5 lifecycle."}},
  {"@type":"Question","name":"Who is broadcast production for?","acceptedAnswer":{"@type":"Answer","text":"Networks, studios, streamers, and brands that need a production partner from set build to air."}},
- {"@type":"Question","name":"Do you handle live and captured content?","acceptedAnswer":{"@type":"Answer","text":"Yes — live broadcast and captured/post content, plus on-air brand activations."}}
+ {"@type":"Question","name":"Do you handle live and captured content?","acceptedAnswer":{"@type":"Answer","text":"Yes — live broadcast and captured and post content, plus on-air brand activations."}}
 ]}` }} />
-      <Script src="/phase-detail.js" strategy="afterInteractive" />
     </>
   );
 }

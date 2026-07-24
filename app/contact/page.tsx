@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Start a Project \u2014 Contact",
-  description: "Start an experiential production project with GHXSTSHIP \u2014 the general contractor, foreman, and Procore of experiential project management. Tell us what you're building and we'll crew it, build it, and run it.",
+  title: "Start a Project",
+  description: "Start a project with GHXSTSHIP \u2014 experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation. Tell us what you're building and we'll scope it, crew it, and run it.",
+  keywords: ["contact GHXSTSHIP", "start a project", "experiential production inquiry", "event production consultation"],
   alternates: { canonical: "https://ghxstship.tours/contact" },
 };
 
@@ -11,119 +12,73 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  .wrap{max-width:var(--container);margin:0 auto;padding:0 var(--sp-6)}
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .brand img{width:34px;height:34px}
-  .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap}
-  .navlinks{display:flex;gap:var(--space-22);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  @media(max-width:980px){.navlinks a:not(.gx-btn){display:none}}
-  .crumbs{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:var(--space-20) 0 0}
-  .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
-  .eyebrow{font-family:var(--font-mono);font-size:var(--fs-small);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-14);display:flex;align-items:center;gap:var(--space-10)}
-  .eyebrow::before{content:"\\25C6";color:var(--nebula)}
-  .hero{padding:var(--space-40) 0 var(--space-56);border-bottom:var(--stroke-2) solid var(--ink-3)}
-  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,7vw,84px);line-height:0.97;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 var(--space-18)}
-  h1 .pop{color:var(--brass)}
-  .lede{font-size:var(--fs-body-l);line-height:1.62;color:var(--fg-on-dark-2);max-width:var(--measure);margin:0}
-  .answer{font-size:var(--fs-body-l);line-height:1.55;color:var(--fg-on-dark-1);max-width:var(--measure-wide);margin:0;font-weight:500}
-  .pad{padding:var(--sp-8) 0}
-  .pad.alt{background:var(--ink);border-top:var(--stroke-3) solid var(--ink-3);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  h2.sec{font-family:var(--font-display);font-weight:900;font-size:clamp(30px,4.2vw,48px);line-height:0.98;text-transform:uppercase;letter-spacing:-.01em;margin:0 0 var(--space-14)}
-  .cta{padding:var(--space-80) 0;text-align:center;position:relative;overflow:hidden;border-top:var(--stroke-2) solid var(--ink-3)}
-  .cta::before{content:"";position:absolute;inset:0;background:var(--halftone-brass);background-size:18px 18px;opacity:.1}
-  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(38px,6.5vw,78px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22);position:relative}
-  .cta .row{display:flex;gap:var(--space-14);justify-content:center;flex-wrap:wrap;position:relative}
-  .foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-40) 0 var(--space-30)}
-  .foot-top{display:flex;justify-content:space-between;gap:var(--sp-5);flex-wrap:wrap;align-items:center}
-  .foot-links{display:flex;gap:var(--space-18);flex-wrap:wrap}
-  .foot-links a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .foot-links a:hover{color:var(--brass)}
-  .foot-bot{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:var(--space-22) 0 0;padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3)}
-  .cgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--space-40);padding:var(--space-44) 0 0}@media(max-width:820px){.cgrid{grid-template-columns:1fr}}
-  .field{display:flex;flex-direction:column;gap:var(--space-6);margin-bottom:var(--sp-4)}
-  .field label{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-2)}
-  .field input,.field select,.field textarea{font-family:var(--font-body);font-size:var(--fs-body);background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-1);color:var(--bone);padding:var(--sp-3) var(--space-14)}
-  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass)}
-  .rail .blk{margin-bottom:var(--sp-5)}
-  .rail .lbl{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-6)}
-  .rail a,.rail p{font-size:var(--fs-body);color:var(--fg-on-dark-1);text-decoration:none;margin:0;line-height:1.6;display:block}
-  .rail a:hover{color:var(--brass)}
-  .rail .port{margin-bottom:var(--space-12)}
-  .rail .port .city{color:var(--bone);margin:0 0 var(--space-2)}
-  .rail .port a{font-size:var(--fs-small);color:var(--fg-on-dark-2)}
-/*__nf__*/
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .nav-inner .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}
-  .nav-inner .brand img{width:34px;height:34px}
-  .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .navlinks{display:flex;gap:var(--space-16);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}
-  .navlinks a.gx-btn{color:var(--on-brass)}
-  .navlinks .cart{display:flex;align-items:center;gap:var(--space-7);font-family:var(--font-mono);font-size:var(--fs-label);color:var(--brass)}
-  .navlinks .cart .n{background:var(--brass);color:var(--on-brass);border-radius:var(--r-pill);min-width:20px;height:20px;display:grid;place-items:center;font-size:var(--fs-label);font-weight:700;padding:0 var(--space-5)}
-  @media(max-width:1100px){.navlinks a:not(.gx-btn){display:none}.navlinks .cart{display:none}}
-  .site-foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-44) 0 var(--space-26)}
-  .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:var(--space-30)}
-  @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
-  .site-foot .brand{display:inline-flex;align-items:center;gap:var(--sp-3);text-decoration:none;margin-bottom:var(--space-14)}
-  .site-foot .brand img{width:30px;height:30px}
-  .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-body-l);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:var(--fs-body-l);line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3);max-width:22rem}
-  .site-foot .foot-ports{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--space-14);display:flex;flex-wrap:nowrap;white-space:nowrap}
-  .site-foot .foot-ports span:not(:first-child)::before{content:"\\00b7";margin:0 var(--space-7);color:var(--fg-on-dark-3)}
-  @media(max-width:560px){.site-foot .foot-ports{flex-direction:column}.site-foot .foot-ports span:not(:first-child)::before{display:none}}
-  .site-foot .foot-social{display:flex;gap:var(--space-14)}
-  .site-foot .foot-social a{color:var(--fg-on-dark-2);font-size:var(--fs-body-l);text-decoration:none}
-  .site-foot .foot-social a:hover{color:var(--brass)}
-  .site-foot .foot-col h5{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3)}
-  .site-foot .foot-col a{display:block;font-size:var(--fs-small);color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:var(--space-9)}
-  .site-foot .foot-col a:hover{color:var(--bone)}
-  .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-10);margin-top:var(--space-30);padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  /* page-specific layout — components come from modernist.css */
+  .cgrid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+  @media (max-width: 820px) { .cgrid { grid-template-columns: 1fr; } }
+  .contact-form .field { margin-bottom: 16px; }
+  .rail .blk { margin-bottom: 28px; }
+  .rail .lbl { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 8px; }
+  .rail a { text-decoration: none; font-weight: 600; }
+  .rail .office { padding: 10px 0; border-bottom: 1px solid var(--color-divider); }
+  .rail .office:first-of-type { border-top: 1px solid var(--color-divider); }
+  .rail .office .city { font-family: var(--font-heading); font-weight: 800; font-size: 14px; text-transform: uppercase; margin: 0 0 2px; }
+  .rail .office a { font-size: 13px; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
+  .rail .office a:hover { color: var(--color-accent-700); }
 ` }} />
       
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Start a Project</span></p></div>
-<main>
-<section className="hero"><div className="wrap">
-  <p className="eyebrow">Let's Build It</p>
-  <h1>Start a<br/><span className="pop">Project.</span></h1>
-  <p className="answer">Tell us what you're building. We'll crew it, build it, run it, and stay on the standard the whole way. It starts with a consultation, which is just a real conversation about what you're trying to pull off.</p>
+
+<main id="main">
+
+<section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
+  <p className="kicker">Contact</p>
+  <h1 className="page-h1">Start a Project.</h1>
+  <p className="lede">Tell us what you're building. We'll crew it, build it, run it, and stay on the standard the whole way. It starts with a consultation, which is just a real conversation about what you're trying to pull off.</p>
+  <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
+</section>
+
+<section className="wrap sec-pad" style={{paddingTop: 'clamp(28px,4vw,48px)'}}>
+  <div className="cgrid">
+    <form className="contact-form">
+      <div className="field"><label htmlFor="n">Name</label><input className="input" id="n" type="text" placeholder="Your name" required name="name"/></div>
+      <div className="field"><label htmlFor="co">Company</label><input className="input" id="co" type="text" placeholder="Company / organization" name="company"/></div>
+      <div className="field"><label htmlFor="e">Email</label><input className="input" id="e" type="email" placeholder="you@company.com" required name="email"/></div>
+      <div className="field"><label htmlFor="it">Inquiry Type</label><select className="input" id="it" name="inquiry-type"><option>General Inquiry</option><option>New Project</option><option>Partnerships</option><option>Media</option><option>Press</option><option>Talent &amp; Vendors</option><option>Careers</option><option>Other</option></select></div>
+      <div className="field"><label htmlFor="t">Destination</label><select className="input" id="t" name="destination"><option>Festival</option><option>Concert / Tour</option><option>Brand Activation</option><option>Immersive Experience</option><option>Sporting Event</option><option>TV, Film &amp; Broadcast</option><option>Not Sure Yet</option></select></div>
+      <div className="field"><label htmlFor="m">The Brief</label><textarea className="input" id="m" rows={5} placeholder="Tell us what you're building, who it's for, and when it has to happen." required name="the-brief"></textarea></div>
+      <a className="btn btn-primary btn-lg gx-btn" role="button" href="mailto:sos@ghxstship.pro">Send the Brief</a>
+    </form>
+    <aside className="rail">
+      <div className="blk"><p className="lbl">Email</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
+      <div className="blk"><p className="lbl">Offices</p>
+        <div className="office"><p className="city">Miami HQ</p><a href="mailto:miami@ghxstship.pro">miami@ghxstship.pro</a></div>
+        <div className="office"><p className="city">Las Vegas</p><a href="mailto:lasvegas@ghxstship.pro">lasvegas@ghxstship.pro</a></div>
+        <div className="office"><p className="city">Chicago</p><a href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></div>
+        <div className="office"><p className="city">New York</p><a href="mailto:newyork@ghxstship.pro">newyork@ghxstship.pro</a></div>
+        <div className="office"><p className="city">Los Angeles</p><a href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></div>
+      </div>
+      <div className="blk"><p className="lbl">Elsewhere</p><Link href="/locations" style={{display: 'block', fontSize: '13px', padding: '4px 0'}}>All locations</Link><Link href="/careers" style={{display: 'block', fontSize: '13px', padding: '4px 0'}}>Careers</Link><Link href="/pricing" style={{display: 'block', fontSize: '13px', padding: '4px 0'}}>Engagement models</Link></div>
+    </aside>
+  </div>
+</section>
+
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">Before You Ask</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Frequently Asked.</h2>
+  <div style={{maxWidth: '820px', marginTop: '20px'}}>
+    <details className="faq-item"><summary className="faq-q">What happens after I send the brief?</summary><div className="faq-a">We read it and come back to set up a consultation, a real conversation about what you're trying to pull off, who it's for, and when it has to happen. From there we scope it: services, schedule, budget, and the crew that owns it.</div></details>
+    <details className="faq-item"><summary className="faq-q">What services do you provide?</summary><div className="faq-a">Four: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation. Engage one, or all four as one accountable partner.</div></details>
+    <details className="faq-item"><summary className="faq-q">What kinds of projects do you take on?</summary><div className="faq-a">Festivals, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film &amp; broadcast, from single-night shows to multi-weekend builds.</div></details>
+    <details className="faq-item"><summary className="faq-q">Where do you operate?</summary><div className="faq-a">Nationwide, from five offices: Miami HQ, Las Vegas, Chicago, New York, and Los Angeles. Someone local in the room, the same standard everywhere.</div></details>
+    <details className="faq-item"><summary className="faq-q">How do engagements run?</summary><div className="faq-a">Every engagement walks the same nine-phase XPMS 2.5 lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</div></details>
+  </div>
 </div></section>
-<section className="pad"><div className="wrap"><div className="cgrid">
-  <form className="form">
-    <div className="field"><label htmlFor="n">Name</label><input id="n" type="text" placeholder="Your name" name="name"/></div>
-    <div className="field"><label htmlFor="co">Company</label><input id="co" type="text" placeholder="Company / organization" name="company"/></div>
-    <div className="field"><label htmlFor="e">Email</label><input id="e" type="email" placeholder="you@company.com" name="email"/></div>
-    <div className="field"><label htmlFor="it">Inquiry Type</label><select id="it" name="inquiry-type"><option>General Inquiry</option><option>New Project</option><option>Partnerships</option><option>Media</option><option>Press</option><option>Talent &amp; Vendors</option><option>Careers</option><option>Other</option></select></div>
-    <div className="field"><label htmlFor="t">Destination</label><select id="t" name="destination"><option>Festival</option><option>Concert / Tour</option><option>Brand Activation</option><option>Immersive Experience</option><option>Sporting Event</option><option>TV, Film &amp; Broadcast</option><option>Not Sure Yet</option></select></div>
-    <div className="field"><label htmlFor="m">The Brief</label><textarea id="m" rows={5} placeholder="Tell us what you're building, who it's for, and when it has to happen." name="the-brief"></textarea></div>
-    <a className="gx-btn gx-btn--lg" href="mailto:sos@ghxstship.pro">Send the Brief</a>
-  </form>
-  <aside className="rail">
-    <div className="blk"><p className="lbl">Email</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
-    <div className="blk"><p className="lbl">Home Ports</p>
-      <div className="port"><p className="city">Miami HQ</p><a href="mailto:miami@ghxstship.pro">miami@ghxstship.pro</a></div>
-      <div className="port"><p className="city">Las Vegas</p><a href="mailto:lasvegas@ghxstship.pro">lasvegas@ghxstship.pro</a></div>
-      <div className="port"><p className="city">Chicago</p><a href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></div>
-      <div className="port"><p className="city">New York</p><a href="mailto:newyork@ghxstship.pro">newyork@ghxstship.pro</a></div>
-      <div className="port"><p className="city">Los Angeles</p><a href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></div>
-    </div>
-  </aside>
-</div></div></section>
+
 </main>
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ContactPage","name":"Start a Project \\u2014 GHXSTSHIP","url":"https://ghxstship.tours/contact"}` }} />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ContactPage","name":"Start a Project — GHXSTSHIP","url":"https://ghxstship.tours/contact","description":"Start a project with GHXSTSHIP: experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation."}` }} />
     </>
   );
 }

@@ -1,13 +1,10 @@
 "use client";
 
-/* Shared site navigation — rendered once in the root layout, so it persists
- * across client-side navigation (no re-mount, no flicker). React owns the
- * drawer state; usePathname closes it on route change. The drawer is a sibling
- * of <header> (not nested) so it sits at z-index 49, just under the z-50 nav —
- * keeping the close (X) button clickable.
- *
- * Destinations and Services carry `children` — rendered as a hover/focus
- * dropdown on desktop and as indented sub-links inside the mobile drawer. */
+/* Shared site navigation — Modernist chrome (greyscale + GHXSTSHIP Green).
+ * Rendered once in the root layout so it persists across client-side
+ * navigation. React owns the drawer state; usePathname closes it on route
+ * change. Dropdowns are hover/focus on desktop, flattened sub-links in the
+ * mobile drawer. Styles live in modernist.css (header.nav / .nav-drawer). */
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,9 +15,22 @@ type NavLink = { href: string; label: string; children?: NavChild[] };
 
 const LINKS: NavLink[] = [
   {
-    href: "/destinations/",
-    label: "Destinations",
+    href: "/services/",
+    label: "Services",
     children: [
+      { href: "/services/", label: "All Services" },
+      { href: "/services/experiential-design-production/", label: "Experiential Design & Production" },
+      { href: "/services/venue-site-operations/", label: "Venue & Site Operations" },
+      { href: "/services/tour-talent-management/", label: "Tour & Talent Management" },
+      { href: "/services/technology-systems-implementation/", label: "Technology & Systems Implementation" },
+      { href: "/pricing/", label: "Engagement Models" },
+    ],
+  },
+  {
+    href: "/destinations/",
+    label: "Industries",
+    children: [
+      { href: "/destinations/", label: "All Industries" },
       { href: "/destinations/festival-production/", label: "Festival Production" },
       { href: "/destinations/concert-tour-production/", label: "Concert & Tour Production" },
       { href: "/destinations/brand-activations/", label: "Brand Activations" },
@@ -29,21 +39,31 @@ const LINKS: NavLink[] = [
       { href: "/destinations/tv-film-broadcast/", label: "TV, Film & Broadcast" },
     ],
   },
+  { href: "/work/", label: "Work" },
+  { href: "/platforms/", label: "Platforms" },
   {
-    href: "/solutions/",
-    label: "Services",
+    href: "/about/",
+    label: "Company",
     children: [
-      { href: "/services/experiential-production/", label: "Experiential Production" },
-      { href: "/services/site-operations/", label: "Site Operations" },
-      { href: "/services/venue-management/", label: "Venue Management" },
-      { href: "/services/immersive-technologies/", label: "Immersive Technologies" },
+      { href: "/about/", label: "About" },
+      { href: "/team/", label: "Team" },
+      { href: "/locations/", label: "Locations" },
+      { href: "/careers/", label: "Careers" },
+      { href: "/gallery/", label: "Gallery" },
+      { href: "/store/", label: "Store" },
     ],
   },
-  { href: "/team/", label: "Crew" },
-  { href: "/resources/blog/", label: "Logs" },
-  { href: "/store/", label: "Museum" },
-  { href: "/gallery/", label: "Gallery" },
-  { href: "/work/", label: "Archives" },
+  {
+    href: "/resources/",
+    label: "Resources",
+    children: [
+      { href: "/resources/", label: "All Resources" },
+      { href: "/resources/blog/", label: "Blog" },
+      { href: "/resources/the-experiential-gc/", label: "The Experiential GC" },
+      { href: "/resources/glossary/", label: "Glossary" },
+      { href: "/course/", label: "The Course" },
+    ],
+  },
 ];
 
 export default function Nav() {
@@ -73,13 +93,13 @@ export default function Nav() {
 
   return (
     <>
-      <header className={"nav" + (open ? " nav-is-open" : "")}>
+      <header className="nav">
         <div className="wrap nav-inner">
           <Link className="brand" href="/" aria-label="GHXSTSHIP home">
-            <img src="/assets/skull-bone.svg" alt="GHXSTSHIP" width={34} height={34} />
-            <b>G H X S T S H I P</b>
+            <img src="/assets/logo-ghostship-skull.svg" alt="" width={28} height={28} />
+            <b>GHXSTSHIP</b>
           </Link>
-          <nav className="navlinks" aria-label="Primary">
+          <nav className="desk-nav" aria-label="Primary">
             {LINKS.map((l) =>
               l.children ? (
                 <div key={l.href} className="nav-item">
@@ -89,7 +109,7 @@ export default function Nav() {
                   </Link>
                   <div className="nav-sub" role="menu" aria-label={l.label}>
                     {l.children.map((c) => (
-                      <Link key={c.href} href={c.href} role="menuitem">
+                      <Link key={c.href + c.label} href={c.href} role="menuitem">
                         {c.label}
                       </Link>
                     ))}
@@ -101,23 +121,30 @@ export default function Nav() {
                 </Link>
               )
             )}
-            <Link className="gx-btn gx-btn--sm" href="/contact/">
+            <Link className="btn btn-primary nav-cta" href="/contact/">
               Start a Project
             </Link>
           </nav>
           <button
-            className={"nav-toggle" + (open ? " is-open" : "")}
+            className={"burger btn btn-icon" + (open ? " is-open" : "")}
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="gx-nav-drawer"
             onClick={() => setOpen((o) => !o)}
           >
-            <span className="nav-toggle-bars" aria-hidden="true">
-              <i></i>
-              <i></i>
-              <i></i>
-            </span>
+            {open ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            )}
           </button>
         </div>
       </header>
@@ -138,7 +165,7 @@ export default function Nav() {
               </Link>
               {l.children?.map((c) => (
                 <Link
-                  key={c.href}
+                  key={c.href + c.label}
                   className="nav-drawer-link nav-drawer-sublink"
                   href={c.href}
                   onClick={close}

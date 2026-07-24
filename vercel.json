@@ -2,5 +2,27 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "buildCommand": "pnpm run build",
-  "installCommand": "pnpm install --frozen-lockfile"
+  "installCommand": "pnpm install --frozen-lockfile",
+  "redirects": [
+    { "source": "/solutions", "destination": "/services/", "permanent": true },
+    { "source": "/solutions/", "destination": "/services/", "permanent": true },
+    { "source": "/services/experiential-production", "destination": "/services/experiential-design-production/", "permanent": true },
+    { "source": "/services/experiential-production/", "destination": "/services/experiential-design-production/", "permanent": true },
+    { "source": "/services/site-operations", "destination": "/services/venue-site-operations/", "permanent": true },
+    { "source": "/services/site-operations/", "destination": "/services/venue-site-operations/", "permanent": true },
+    { "source": "/services/venue-management", "destination": "/services/venue-site-operations/", "permanent": true },
+    { "source": "/services/venue-management/", "destination": "/services/venue-site-operations/", "permanent": true },
+    { "source": "/services/immersive-technologies", "destination": "/services/technology-systems-implementation/", "permanent": true },
+    { "source": "/services/immersive-technologies/", "destination": "/services/technology-systems-implementation/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ]
 }

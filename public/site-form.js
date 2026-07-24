@@ -18,7 +18,7 @@
   // Overridable per-page via window.__GHXST_FORM_ENDPOINT or a
   // <meta name="ghxst-form-endpoint"> tag. On hosts without the function
   // (e.g. a static mirror) the POST fails and we fall back to mailto:.
-  var DEFAULT_ENDPOINT = "/api/contact";
+  var DEFAULT_ENDPOINT = "/api/contact/";
 
   function getEndpoint() {
     if (window.__GHXST_FORM_ENDPOINT) return window.__GHXST_FORM_ENDPOINT;

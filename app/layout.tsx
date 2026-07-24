@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import "../colors_and_type.css";
-import "../components.css";
-import "../terminal.css";
-import "../polish.css";
+import "../modernist.css";
 import Nav from "./_components/Nav";
 import Footer from "./_components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ghxstship.tours"),
   title: {
-    default: "Experiential Production, Site Operations & Venue Management — GHXSTSHIP",
+    default:
+      "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management, Technology & Systems — GHXSTSHIP",
     template: "%s — GHXSTSHIP",
   },
   description:
-    "GHXSTSHIP is a professional services firm for live and experiential projects — experiential production, site operations, venue management, and immersive technologies — headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles.",
+    "GHXSTSHIP is a professional services firm for live and experiential projects — experiential design & production, venue & site operations, tour & talent management, and technology & systems implementation — headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles.",
+  icons: {
+    icon: "/assets/logo-ghostship-skull.svg",
+    apple: "/assets/skull-bone.png",
+  },
+  openGraph: {
+    siteName: "GHXSTSHIP",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,20 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"
-        />
         <script src="/site-form.js" defer />
-        <script src="/journey.js" defer />
-        <script src="/hscroll.js" defer />
-        <script src="/motion.js" defer />
       </head>
       <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
         <Nav />
         {children}
         <Footer />

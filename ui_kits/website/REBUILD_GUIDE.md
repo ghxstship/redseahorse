@@ -1,0 +1,129 @@
+# GHXSTSHIP Site Rebuild — Page Authoring Guide (Modernist · greyscale + green)
+
+Read this fully before authoring any page. The reference implementation is
+`ui_kits/website/index.html` — open it and mirror its conventions exactly.
+
+## What this is
+The site is being rebuilt in the **Modernist** design system, recolored to
+GHXSTSHIP: pure-grayscale neutrals on a `#fcfcfc` ground, **GHXSTSHIP Green
+`#2edb3a` as the ONLY accent**, Archivo 400/600/800 everywhere, radius 0,
+structure drawn with 2px rules and 1px borders — no shadows, no gradients,
+no other hues. All tokens/components live in `modernist.css` at repo root.
+
+## The four services (updated verticals — use these names everywhere)
+1. **Experiential Design & Production** — `services/experiential-design-production.html` — "The General Contractor"
+2. **Venue & Site Operations** — `services/venue-site-operations.html` — "The Foreman"
+3. **Tour & Talent Management** — `services/tour-talent-management.html` — "The Road Manager"
+4. **Technology & Systems Implementation** — `services/technology-systems-implementation.html` — "The Procore"
+
+Never reference the old vertical set (Experiential Production / Site
+Operations / Venue Management / Immersive Technologies) as the service names.
+Platforms are ATLVS, COMPVSS, GVTEWAY, LEG3ND (all four, always).
+
+## File anatomy (copy from index.html)
+1. `<!DOCTYPE html><html lang="en"><head>` with: charset, viewport,
+   description, keywords, canonical (`https://ghxstship.tours/<route>`),
+   title (`Page Name — GHXSTSHIP`), the two font preconnects, and the
+   stylesheet link. **Depth matters**:
+   - root pages (`about.html`): `../../modernist.css`
+   - subdir pages (`services/x.html`): `../../../modernist.css`
+2. One or more `<script type="application/ld+json">` blocks (port/adapt the
+   old page's JSON-LD; update service names; plain JSON, no HTML entities).
+3. A `<style>` block with **page-specific layout only** — components
+   (buttons, cards, chips, grids, forms, faq, stats, chrome) come from
+   modernist.css. Keep it small. Never redefine chrome (nav/footer) styles.
+4. `<body>` = chrome header + `<main id="main">` + chrome footer.
+
+## Canonical chrome (copy VERBATIM, adjust ../ for subdirs)
+Header (root-level hrefs shown; from `services/`, `work/`, `careers/`,
+`resources/`, `destinations/` prefix `../`):
+
+```html
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="index.html" aria-label="GHXSTSHIP home"><img src="../../assets/logo-ghostship-skull.svg" alt="" width="28" height="28"><b>GHXSTSHIP</b></a>
+  <nav class="desk-nav" aria-label="Primary">
+    <a href="services/experiential-design-production.html">Services</a>
+    <a href="destinations/index.html">Markets</a>
+    <a href="work/index.html">Work</a>
+    <a href="platforms.html">Platforms</a>
+    <a href="about.html">Company</a>
+    <a href="resources/index.html">Resources</a>
+    <a class="btn btn-primary nav-cta" href="contact.html">Start a Project</a>
+  </nav>
+</div></header>
+```
+
+Footer: copy the entire `<footer class="site-foot">…</footer>` block from
+index.html verbatim (again adjusting `../`). The generator DROPS both
+`header.nav` and `footer.site-foot` from generated pages (React chrome in
+the layout replaces them) — they exist in source only so the file previews
+standalone. Do not invent variant chrome.
+
+## Page opener pattern (every non-home page)
+```html
+<section class="wrap" style="padding-block:clamp(36px,5vw,64px) 0;">
+  <p class="kicker">Section Name</p>
+  <h1 class="page-h1">Page Title.</h1>
+  <p class="lede">One-to-two sentence dek.</p>
+  <hr class="hr" style="margin-top:clamp(24px,4vw,40px);">
+</section>
+```
+
+## Component vocabulary (all in modernist.css — use these, don't reinvent)
+- Layout: `.wrap`, `.sec-pad`, `.sec-pad-sm`, `.grid2/.grid3/.grid4`,
+  `.split2` (+`.sticky-fig`), `.band` (gray section), `.band-dark`
+  (black section, for the closing CTA only).
+- Type: `.kicker`, `.page-h1`, `.display-h1`, `.lede`, `.text-muted`.
+  Headings auto-uppercase via CSS — write Title Case in source.
+- Actions: `.btn.btn-primary` (green fill — ONE per viewport-ish, the primary
+  action), `.btn-secondary` (outlined), `.btn-ghost` (green text link),
+  `.btn-lg`, `.btn-block`.
+- Bits: `.tag(-accent/-neutral/-outline)`, `.chip` (+`.on`) for filters,
+  `.stat` (`.v`/`.k`), `.card` family, `.row-line` (+`.row-title`/`.row-sub`)
+  for list rows, `.faq-item > .faq-q + .faq-a` accordions, `.table`,
+  `.progress`, `.field > label` + `.input` for forms.
+- Images: ALWAYS wrap in a `.grayscale` figure with a fixed `aspect-ratio`
+  (via a small page class), `width`/`height` attrs, `loading="lazy"` below
+  the fold. Keep existing Unsplash URLs from the old pages when porting.
+
+## Accent discipline (hard rules)
+- Green is spent sparingly: primary button, kickers, stat figures, small
+  emphasis spans, one accent moment per section.
+- Small green text uses `var(--color-accent-700)` (#1f8425) — never the base
+  green. Base green `var(--color-accent)` only as a FILL (buttons, bars, dots)
+  with `var(--color-on-accent)` ink, or large display spans on dark.
+- Everything else is grayscale. No other hues anywhere.
+
+## Voice + content
+- Port the existing page's copy — it passed a voice audit. Adapt terminology
+  to the four new verticals; don't invent new facts, clients, or numbers.
+- No parentheses in copy. No emoji. Em-dash sparingly. Confident, plainspoken.
+- Nav/section labels are literal (Services, Work, Team), not nautical.
+- Keep every internal link pointing at a real page (see route list below).
+  Relative `.html` hrefs — the generator rewrites them to routes.
+
+## Routes that will exist (link only to these)
+index, about, team, locations, contact, platforms, pricing, store, gallery,
+course, privacy, terms, 404, services/{index, experiential-design-production,
+venue-site-operations, tour-talent-management, technology-systems-implementation},
+destinations/{index, festival-production, concert-tour-production,
+brand-activations, immersive-experiences, sporting-events, tv-film-broadcast},
+work/{index, salvage-city-supper-club}, careers/{index, role, apply},
+resources/{index, blog, glossary, the-experiential-gc}.
+
+## Forms (contact + careers/apply only)
+Keep the existing form field names/structure from the old page; add
+`required` on genuinely required fields; keep `<form>` markup compatible
+with `/public/site-form.js` (it binds any `<form>` and posts to
+`/api/contact/`). Inputs use `.field > label` + `.input`.
+
+## Generator constraints
+- `<main id="main">` wraps all content.
+- No `<script>` in the body except JSON-LD in head (behavior JS is global).
+  EXCEPTION: tiny inline widgets (FAQ toggle) — instead author FAQs with
+  `<details class="faq-item"><summary class="faq-q">…</summary><div class="faq-a">…</div></details>`
+  so they work with zero JS (style `details.faq-item summary` in page CSS if
+  needed).
+- Self-closed void elements not required (generator handles), but keep valid
+  HTML: no unclosed tags, no duplicate ids, alt text on every img.
+- JSON-LD: plain decoded text (write `&` not `&amp;` inside the JSON).

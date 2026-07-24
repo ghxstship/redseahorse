@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Destinations \u2014 Industries We Produce",
-  description: "GHXSTSHIP produces experiential and entertainment productions across festivals, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast \u2014 plus health and wellness, hospitality, luxury retail, and motorsports.",
+  title: "Industries",
+  description: "The industries GHXSTSHIP serves: festivals and cultural moments, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast \u2014 plus health and wellness, hospitality, luxury retail, and motorsports.",
+  keywords: ["festival production company", "concert tour production", "brand activation agency", "immersive experience design", "sporting event production", "broadcast production company", "experiential production industries"],
   alternates: { canonical: "https://ghxstship.tours/destinations" },
 };
 
@@ -11,88 +12,102 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--void);color:var(--bone);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
-  a{color:inherit}.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--sp-6)}
-  .crumbs{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-on-dark-3);padding:var(--space-20) 0 0}
-  .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brass)}
-  .eyebrow{font-family:var(--font-mono);font-size:var(--fs-small);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--space-14);display:flex;align-items:center;gap:var(--space-10)}
-  .eyebrow::before{content:"\\25C6";color:var(--nebula)}
-  .hero{padding:var(--space-40) 0 var(--space-40);border-bottom:var(--stroke-2) solid var(--ink-3)}
-  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,7vw,84px);line-height:0.97;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 var(--sp-4)}
-  h1 .pop{color:var(--brass)}
-  .answer{font-size:var(--fs-body-l);line-height:1.55;color:var(--fg-on-dark-1);max-width:var(--measure-wide);margin:0;font-weight:500}
-  .pad{padding:var(--space-56) 0}
-  .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-18);margin-top:var(--sp-2)}
-  @media(max-width:880px){.dgrid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.dgrid{grid-template-columns:1fr}}
-  .dc{display:block;text-decoration:none;background:var(--ink-2);border:var(--stroke-2) solid var(--ink-3);border-radius:var(--r-2);padding:var(--space-26);transition:transform var(--dur-2),border-color var(--dur-2),box-shadow var(--dur-2)}
-  .dc:hover{transform:translate(-3px,-3px);border-color:var(--brass);box-shadow:var(--shadow-hard)}
-  .dc i{font-size:var(--fs-h1);color:var(--brass)}
-  .dc h2{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h2);text-transform:uppercase;margin:var(--space-14) 0 var(--sp-2);line-height:.98}
-  .dc p{font-size:var(--fs-small);line-height:1.55;color:var(--fg-on-dark-2);margin:0}
-  .dc .go{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin-top:var(--sp-3);display:inline-block}
-  .more{margin-top:var(--space-30);padding-top:var(--sp-5);border-top:var(--stroke-2) solid var(--ink-3)}
-  .more p.l{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--sp-3)}
-  .tags{display:flex;gap:var(--space-9);flex-wrap:wrap}
-  .tags span{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-2);border:var(--stroke-1) solid var(--ink-3);border-radius:var(--r-pill);padding:var(--space-7) var(--space-13)}
-  .cta{padding:var(--space-80) 0;text-align:center;border-top:var(--stroke-2) solid var(--ink-3)}
-  .cta h2{font-family:var(--font-display);font-weight:900;font-size:clamp(38px,6.5vw,78px);line-height:0.96;text-transform:uppercase;margin:0 0 var(--space-22)}
-  .cta .row{display:flex;gap:var(--space-14);justify-content:center;flex-wrap:wrap}
-  /*__nf__*/
-  header.nav{position:sticky;top:0;z-index:50;background:var(--void);border-bottom:var(--stroke-3) solid var(--ink-3)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h);padding:var(--space-10) 0}
-  .nav-inner .brand{display:flex;align-items:center;gap:var(--sp-3);text-decoration:none}.nav-inner .brand img{width:34px;height:34px}
-  .nav-inner .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-h3);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .navlinks{display:flex;gap:var(--space-16);align-items:center}
-  .navlinks a{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--fg-on-dark-2)}
-  .navlinks a:hover{color:var(--brass)}.navlinks a.gx-btn{color:var(--on-brass)}
-  @media(max-width:1100px){.navlinks a:not(.gx-btn){display:none}}
-  .site-foot{background:var(--ink);border-top:var(--stroke-4) solid var(--brass);padding:var(--space-44) 0 var(--space-26)}
-  .site-foot .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:var(--space-30)}
-  @media(max-width:820px){.site-foot .foot-grid{grid-template-columns:1fr 1fr}}
-  .site-foot .brand{display:inline-flex;align-items:center;gap:var(--sp-3);text-decoration:none;margin-bottom:var(--space-14)}
-  .site-foot .brand img{width:30px;height:30px}
-  .site-foot .brand b{font-family:var(--font-display);font-weight:900;font-size:var(--fs-body-l);text-transform:uppercase;white-space:nowrap;color:var(--bone)}
-  .site-foot .foot-tag{font-family:var(--font-display);font-weight:700;font-size:var(--fs-body-l);line-height:1.2;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3);max-width:22rem}
-  .site-foot .foot-ports{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-on-dark-3);margin:0 0 var(--space-14);display:flex;flex-wrap:nowrap;white-space:nowrap}
-  .site-foot .foot-ports span:not(:first-child)::before{content:"\\00b7";margin:0 var(--space-7);color:var(--fg-on-dark-3)}
-  @media(max-width:560px){.site-foot .foot-ports{flex-direction:column}.site-foot .foot-ports span:not(:first-child)::before{display:none}}
-  .site-foot .foot-social{display:flex;gap:var(--space-14)}.site-foot .foot-social a{color:var(--fg-on-dark-2);font-size:var(--fs-body-l);text-decoration:none}.site-foot .foot-social a:hover{color:var(--brass)}
-  .site-foot .foot-col h5{font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--sp-3)}
-  .site-foot .foot-col a{display:block;font-size:var(--fs-small);color:var(--fg-on-dark-2);text-decoration:none;margin-bottom:var(--space-9)}.site-foot .foot-col a:hover{color:var(--bone)}
-  .site-foot .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-10);margin-top:var(--space-30);padding-top:var(--sp-4);border-top:var(--stroke-2) solid var(--ink-3);font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-on-dark-3)}
+  /* page-specific layout — components come from modernist.css */
+  .mcard { border: 1px solid var(--color-divider); background: var(--color-bg); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+  .mcard .media { aspect-ratio: 4 / 3; overflow: hidden; }
+  .mcard .media img { width: 100%; height: 100%; object-fit: cover; }
+  .mcard .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .mcard .bar { height: 3px; width: 44px; background: var(--color-accent); }
+  .mcard h2 { font-size: 21px; line-height: 1.05; margin: 0; }
+  .mcard p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
+  .mcard .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); }
+  .also-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
+  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
+  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
-<div className="wrap"><p className="crumbs"><Link href="/">Home</Link> / <span style={{color: 'var(--brass)'}}>Destinations</span></p></div>
-<main>
-<section className="hero"><div className="wrap">
-  <p className="eyebrow">Destinations</p>
-  <h1>Where We <span className="pop">Work.</span></h1>
-  <p className="answer">GHXSTSHIP produces experiential and entertainment work across the industries below. Tell us what you're building. We bring the right team and run the whole build, start to finish.</p>
-</div></section>
-<section className="pad"><div className="wrap">
-  <div className="dgrid">
-    <Link href="/destinations/festival-production" className="dc"><i className="ph-bold ph-confetti"></i><h2>Festivals &amp; Cultural Moments</h2><p>Multi-stage festival production, infrastructure, and headliner experiences at scale.</p><span className="go">View destination</span></Link>
-    <Link href="/destinations/concert-tour-production" className="dc"><i className="ph-bold ph-music-notes"></i><h2>Concerts &amp; Tours</h2><p>Concert touring, show production, and multi-city routing for live music.</p><span className="go">View destination</span></Link>
-    <Link href="/destinations/brand-activations" className="dc"><i className="ph-bold ph-storefront"></i><h2>Brand Activations</h2><p>Experiential marketing, pop-ups, and brand environments that convert.</p><span className="go">View destination</span></Link>
-    <Link href="/destinations/immersive-experiences" className="dc"><i className="ph-bold ph-planet"></i><h2>Immersive Environments</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span className="go">View destination</span></Link>
-    <Link href="/destinations/sporting-events" className="dc"><i className="ph-bold ph-flag-checkered"></i><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span className="go">View destination</span></Link>
-    <Link href="/destinations/tv-film-broadcast" className="dc"><i className="ph-bold ph-television-simple"></i><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span className="go">View destination</span></Link>
+
+<main id="main">
+
+<section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
+  <p className="kicker">Industries</p>
+  <h1 className="page-h1">Where We Work.</h1>
+  <p className="lede">GHXSTSHIP produces experiential and entertainment work across the industries below. Tell us what you're building. We bring the right team and run the whole build, start to finish.</p>
+  <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
+</section>
+
+<section className="wrap sec-pad" style={{paddingTop: 'clamp(28px,4vw,48px)'}}>
+  <div className="grid3">
+    <Link href="/destinations/festival-production" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80&auto=format&fit=crop" alt="Festival crowd under multi-stage production lighting" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Festivals &amp; Cultural Moments</h2><p>Multi-stage festival production, infrastructure, and headliner experiences at scale.</p><span className="more">View industry →</span></div>
+    </Link>
+    <Link href="/destinations/concert-tour-production" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80&auto=format&fit=crop" alt="Concert crowd facing a lit stage" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Concerts &amp; Tours</h2><p>Concert touring, show production, and multi-city routing for live music.</p><span className="more">View industry →</span></div>
+    </Link>
+    <Link href="/destinations/brand-activations" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=700&q=80&auto=format&fit=crop" alt="Brand activation environment with a live crowd" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Brand Activations</h2><p>Experiential marketing, pop-ups, and brand environments that convert.</p><span className="more">View industry →</span></div>
+    </Link>
+    <Link href="/destinations/immersive-experiences" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=700&q=80&auto=format&fit=crop" alt="Immersive light installation surrounding an audience" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Immersive Experiences</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span className="more">View industry →</span></div>
+    </Link>
+    <Link href="/destinations/sporting-events" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=700&q=80&auto=format&fit=crop" alt="Stadium crowd on game day" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span className="more">View industry →</span></div>
+    </Link>
+    <Link href="/destinations/tv-film-broadcast" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=700&q=80&auto=format&fit=crop" alt="Broadcast camera on a television production set" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>TV, Film &amp; Broadcast</h2><p>Live broadcast, film and TV capture, and on-air activations.</p><span className="more">View industry →</span></div>
+    </Link>
   </div>
-  <div className="more">
-    <p className="l">Also where we work</p>
-    <div className="tags"><span>Health &amp; Wellness</span><span>Premium Hospitality</span><span>Luxury Retail</span><span>Water &amp; Motorsports</span><span>Corporate &amp; Private</span></div>
+</section>
+
+<section className="band"><div className="wrap sec-pad-sm">
+  <p className="kicker">Also Where We Work</p>
+  <h2 style={{fontSize: 'clamp(24px,3vw,34px)'}}>Beyond the Big Six.</h2>
+  <div className="also-tags">
+    <span className="tag tag-neutral">Health &amp; Wellness</span>
+    <span className="tag tag-neutral">Premium Hospitality</span>
+    <span className="tag tag-neutral">Luxury Retail</span>
+    <span className="tag tag-neutral">Water &amp; Motorsports</span>
+    <span className="tag tag-neutral">Corporate &amp; Private</span>
   </div>
 </div></section>
-<section className="cta"><div className="wrap"><h2>Pick Your<br/>Destination.</h2>
-  <div className="row"><Link href="/contact" className="gx-btn gx-btn--lg">Start a Project</Link><Link href="/solutions" className="gx-btn gx-btn--ghost gx-btn--lg">See the Fleet</Link></div>
+
+<section className="wrap sec-pad">
+  <p className="kicker">The Services</p>
+  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Verticals, Every Industry.</h2>
+  <p className="lede">Whatever the industry, the same four services carry the build: we design and produce the experience, operate the venue and the site, manage the tour and the talent, and implement the technology.</p>
+  <div className="grid4" style={{marginTop: '24px'}}>
+    <Link href="/services/experiential-design-production" className="btn btn-secondary btn-block">Experiential Design &amp; Production</Link>
+    <Link href="/services/venue-site-operations" className="btn btn-secondary btn-block">Venue &amp; Site Operations</Link>
+    <Link href="/services/tour-talent-management" className="btn btn-secondary btn-block">Tour &amp; Talent Management</Link>
+    <Link href="/services/technology-systems-implementation" className="btn btn-secondary btn-block">Technology &amp; Systems Implementation</Link>
+  </div>
+</section>
+
+<section className="band-dark close-cta"><div className="wrap">
+  <p className="kicker">Ready When You Are</p>
+  <h2>Pick Your <span className="a">Industry.</span></h2>
+  <p className="lede" style={{marginInline: 'auto'}}>Tell us what you're building. We scope it, crew it, run the nine phases, and go live, on time and on budget.</p>
+  <div className="cta-row" style={{justifyContent: 'center', marginTop: '22px'}}>
+    <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
+    <Link href="/services/experiential-design-production" className="btn btn-secondary btn-lg">See the Services</Link>
+  </div>
 </div></section>
+
 </main>
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Destinations","url":"https://ghxstship.tours/destinations","about":"Industries and experience types GHXSTSHIP produces."}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Destinations","item":"https://ghxstship.tours/destinations"}]}` }} />
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Industries","url":"https://ghxstship.tours/destinations","about":"The industries and kinds of projects GHXSTSHIP serves: festivals, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"}]}` }} />
     </>
   );
 }

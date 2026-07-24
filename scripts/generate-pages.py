@@ -722,10 +722,30 @@ def main() -> None:
         shutil.rmtree(assets_dst)
     shutil.copytree(ROOT / "assets", assets_dst)
     shutil.copy(ROOT / "phase-detail.js", public / "phase-detail.js")
-    for f in ("robots.txt", "sitemap.xml"):
-        src = SRC / f
-        if src.exists():
-            shutil.copy(src, public / f)
+    src = SRC / "robots.txt"
+    if src.exists():
+        shutil.copy(src, public / "robots.txt")
+
+    # Sitemap: emitted from the route tree (canonical host, trailing slashes,
+    # lastmod = source file mtime) instead of a hand-maintained copy.
+    import datetime
+
+    host = "https://ghxstship.tours"
+    entries = []
+    for f in html_files:
+        if f.name == "404.html":
+            continue
+        url, _ = src_to_route(f.relative_to(SRC))
+        loc = host + ("/" if url == "/" else url + "/")
+        lastmod = datetime.date.fromtimestamp(f.stat().st_mtime).isoformat()
+        entries.append((loc, lastmod))
+    entries.sort()
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for loc, lastmod in entries:
+        lines.append(f"  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod></url>")
+    lines.append("</urlset>")
+    (public / "sitemap.xml").write_text("\n".join(lines) + "\n")
 
     print("Done.")
 
