@@ -13,20 +13,10 @@ export default function Page() {
     <>
       <style dangerouslySetInnerHTML={{ __html: `
   /* page-specific layout — components come from modernist.css */
-  .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
-  .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
-  .svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
-  .svc-card h3 { font-size: 21px; line-height: 1.05; margin: 0; }
-  .svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
-  .svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
   .stats-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 28px; }
   @media (max-width: 720px) { .stats-in { grid-template-columns: repeat(2, 1fr); } }
   .story-fig { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--color-divider); }
   .story-fig img { width: 100%; height: 100%; object-fit: cover; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
 ` }} />
       
 
@@ -46,7 +36,7 @@ export default function Page() {
   </figure>
   <div>
     <p className="kicker">Beyond the Scenes</p>
-    <h2 style={{fontSize: 'clamp(28px,3.6vw,44px)', lineHeight: '1.02'}}>One Accountable Partner.</h2>
+    <h2 className="sec-h2-sm">One Accountable Partner.</h2>
     <p className="lede">You're not running an event, you're building a world that exists for one weekend and strikes by morning. GHXSTSHIP runs the whole thing with you, one partner who owns scope, schedule, budget, crew, and the technology, instead of six vendors who blame each other when something slips.</p>
     <p style={{marginTop: '16px'}}><Link href="/services/experiential-design-production" className="btn btn-ghost">Explore the services →</Link></p>
   </div>
@@ -54,7 +44,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">How We're Built</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Disciplines. One Team.</h2>
+  <h2 className="sec-h2">Four Disciplines. One Team.</h2>
   <p className="lede">Four services run by one team: we design and produce the experience, operate the venue and the site, manage the tour and the talent, and implement the technology. Different crews doing each, held to the same standard.</p>
   <div className="grid4" style={{marginTop: '28px'}}>
     <article className="svc-card"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Design &amp; Production</h3><p>We design and build the experience: concept, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
@@ -66,7 +56,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">The Track Record</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Receipts.</h2>
+  <h2 className="sec-h2">The Receipts.</h2>
   <div className="stats-in">
     <div className="stat"><div className="v">14+</div><div className="k">Years</div></div>
     <div className="stat"><div className="v">250+</div><div className="k">Experiences</div></div>

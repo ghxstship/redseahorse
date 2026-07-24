@@ -25,17 +25,7 @@ export default function Page() {
   .pull { border-left: 4px solid var(--color-accent); padding-left: 20px; margin: clamp(24px, 4vw, 36px) 0; }
   .pull p { font-family: var(--font-heading); font-weight: 800; font-size: clamp(19px, 2.4vw, 26px); line-height: 1.2; text-transform: uppercase; color: var(--color-text); margin: 0; max-width: 34ch; }
   .more-grid { margin-top: clamp(24px, 4vw, 36px); }
-  .wcard { border: 1px solid var(--color-divider); text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--color-bg); }
   .wcard:hover h3 { color: var(--color-accent-700); }
-  .wcard .media { aspect-ratio: 4 / 3; overflow: hidden; }
-  .wcard .media img { width: 100%; height: 100%; object-fit: cover; }
-  .wcard .body { padding: 16px 18px 18px; }
-  .wcard h3 { font-size: 18px; margin: 0 0 4px; }
-  .wcard .meta { font-size: 12px; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 ` }} />
       
 
@@ -87,7 +77,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">More Work</p>
-  <h2 style={{fontSize: 'clamp(28px,3.6vw,44px)'}}>From the Archives.</h2>
+  <h2 className="sec-h2-sm">From the Archives.</h2>
   <div className="grid3 more-grid">
     <Link href="/work" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy" width="800" height="600"/></figure>

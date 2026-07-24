@@ -16,22 +16,9 @@ export default function Page() {
   .svc-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .svc-fig img { width: 100%; height: 100%; object-fit: cover; }
   .role-tag { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 10px 0 0; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .aud-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
-  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
-  .phase:first-child::before { left: 50%; width: 50%; }
-  .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
   .more-svc a.row-line { text-decoration: none; color: inherit; }
   .more-svc .arrow { color: var(--color-accent-700); font-weight: 600; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -55,7 +42,7 @@ export default function Page() {
   </figure>
   <div>
     <p className="kicker">What We Build</p>
-    <h2 style={{fontSize: 'clamp(28px,3.6vw,44px)'}}>The Whole Build, in One Crew.</h2>
+    <h2 className="sec-h2-sm">The Whole Build, in One Crew.</h2>
     <p className="lede">We run experiential design &amp; production on XPMS 2.5, our Experiential Production Management Standard. Picture a grid: ten department classes down one side, nine gated production phases across the top — the ATLVS Coordinate Matrix, 90 coordinates in all. Every deliverable lives at one address, a class and a phase, so a render from Creative and the steel Production cuts from it never drift apart. Here are the classes this service turns on.</p>
     <div style={{marginTop: '20px'}}>
       <div className="row-line"><span className="row-title">Creative</span><span className="row-sub">Concept, creative direction, creative development, content and show design</span></div>
@@ -70,7 +57,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">The Process</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Your Build, Nine Phases.</h2>
+  <h2 className="sec-h2">Your Build, Nine Phases.</h2>
   <p className="lede">Experiential design &amp; production walks all nine phases, from the first Discover call through Close-out and the final invoice. In Amplify, we lead the capture and coordinate content delivery — media, broadcast, and the post-event campaign — before the books close.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
@@ -88,7 +75,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">Who We Build For</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Built for the People Who Build Experiences.</h2>
+  <h2 className="sec-h2">Built for the People Who Build Experiences.</h2>
   <p className="lede">Experiential design &amp; production is for the people on the hook for the room: the brand whose name is on the door, the agency that pitched the idea, the promoter putting it on, and the creative and production directors who have to make it stand up on site.</p>
   <div className="aud-tags">
     <span className="tag tag-neutral">Brands</span><span className="tag tag-neutral">Agencies</span>
@@ -99,7 +86,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Selected Work</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Experiences We've Built.</h2>
+  <h2 className="sec-h2">Experiences We've Built.</h2>
   <p className="lede">A few of the worlds we've designed, built, and run, from a sold-out immersive supper club to brand takeovers on the festival floor.</p>
   <div className="more-svc" style={{marginTop: '16px'}}>
     <Link href="/work/salvage-city-supper-club" className="row-line"><span className="row-title">Salvage City Supper Club</span><span className="row-sub">Immersive Experience · Club Space, Miami</span><span className="arrow">→</span></Link>
@@ -111,7 +98,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">Why GHXSTSHIP</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Difference.</h2>
+  <h2 className="sec-h2">The Difference.</h2>
   <p className="lede">Most shops design the thing and then hand you a list of vendors to chase. We hold the concept and the fabrication shop and the crew and the producer under one roof, on XPMS, so the person who drew it is talking to the person cutting it. We build the technology that runs it too.</p>
   <div style={{marginTop: '20px'}}>
     <div className="row-line"><span className="row-title">One Accountable Crew</span><span className="row-sub">All 9 phases under one producer, so you're never chasing a vendor relay</span></div>
@@ -122,7 +109,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Answers</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Experiential Design &amp; Production FAQ.</h2>
+  <h2 className="sec-h2">Experiential Design &amp; Production FAQ.</h2>
   <div style={{marginTop: '20px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">What does GHXSTSHIP's experiential design and production cover?</summary><div className="faq-a">The whole build of a branded environment: concept and creative development, creative direction and show design, experiential, spatial, and scenic design, scenic fabrication, staging and rigging, technical production for audio, video, and lighting, performers and crew, the audience experience, and a producer who owns the budget and the schedule from the first call to load-out.</div></details>
     <details className="faq-item"><summary className="faq-q">Do you fabricate and build in-house?</summary><div className="faq-a">Yes. Scenic fabrication, staging, rigging, and technical production sit inside our Production class, so the people who design the build are the same crew accountable for installing and running it on site.</div></details>

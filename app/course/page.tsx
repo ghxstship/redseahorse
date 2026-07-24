@@ -13,16 +13,6 @@ export default function Page() {
     <>
       <style dangerouslySetInnerHTML={{ __html: `
   /* page-specific layout — components come from modernist.css */
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
-  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
-  .phase:first-child::before { left: 50%; width: 50%; }
-  .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 11px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
   .ph { border-top: 2px solid var(--color-divider); padding: clamp(24px, 4vw, 44px) 0; display: grid; grid-template-columns: 110px 1fr; gap: clamp(16px, 3vw, 48px); align-items: start; }
   .ph:last-of-type { border-bottom: 2px solid var(--color-divider); }
   .ph .num { font-family: var(--font-heading); font-weight: 800; font-size: clamp(34px, 4vw, 56px); line-height: 1; letter-spacing: -0.02em; color: var(--color-accent-700); }
@@ -34,9 +24,6 @@ export default function Page() {
   .ph .exit b { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text); }
   .ph .dels { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
   @media (max-width: 640px) { .ph { grid-template-columns: 1fr; gap: 8px; } }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -56,7 +43,7 @@ export default function Page() {
 
 <section className="wrap sec-pad-sm">
   <p className="kicker">The Route</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The 9-Phase Lifecycle.</h2>
+  <h2 className="sec-h2">The 9-Phase Lifecycle.</h2>
   <p className="lede">Discover to Close — the XPMS 2.5 standard, one way of working across festivals, tours, activations, immersive, sporting, and broadcast. Nine gates in three acts: Depart runs gates 1–3, Sail runs 4–6, Return runs 7–9.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
@@ -73,7 +60,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Phase by Phase</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Every Build Walks the Same Course.</h2>
+  <h2 className="sec-h2">Every Build Walks the Same Course.</h2>
   <div style={{marginTop: '28px'}}>
     <article className="ph" id="phase-1">
       <div className="num">01</div>
@@ -170,13 +157,13 @@ export default function Page() {
 
 <section className="wrap sec-pad-sm">
   <p className="kicker">The Chart · ATLVS Coordinate Matrix</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>90 Coordinates. Nothing Off the Map.</h2>
+  <h2 className="sec-h2">90 Coordinates. Nothing Off the Map.</h2>
   <p className="lede">XPMS 2.5 formalizes the ATLVS Coordinate Matrix — the task-management lens over the lifecycle. Every task and work item on a build resolves to exactly one of 90 coordinates: ten department classes (latitude) crossed with the nine gated phases (longitude), written class-by-phase, like 3000xAMP for Marketing × Amplify. Project workspaces own gates 1–4, Discover through Procure; an oversight grid runs gates 5–9, Build through Close. So there is always one cell, one owner, and one place to look.</p>
 </section>
 
 <section className="wrap sec-pad">
   <p className="kicker">Questions</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Asked Before Every Build.</h2>
+  <h2 className="sec-h2">Asked Before Every Build.</h2>
   <div style={{marginTop: '20px', borderTop: '1px solid var(--color-divider)', maxWidth: '880px'}}>
     <details className="faq-item">
       <summary className="faq-q">How many phases are in the GHXSTSHIP production lifecycle?</summary>

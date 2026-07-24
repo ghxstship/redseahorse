@@ -171,11 +171,13 @@
     if (!s) {
       s = document.createElement("p");
       s.setAttribute("data-form-status", "");
-      s.style.cssText = "font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;margin:12px 0 0;";
+      s.setAttribute("role", "status");
+      s.setAttribute("aria-live", "polite");
+      s.style.cssText = "font:600 13px/1.5 var(--font-body, inherit);letter-spacing:.02em;margin:12px 0 0;";
       form.appendChild(s);
     }
     s.textContent = msg;
-    s.style.color = kind === "err" ? "var(--plasma, #ff8da1)" : kind === "ok" ? "var(--brass, #c8a44c)" : "var(--fg-on-dark-2, #cfd8d4)";
+    s.style.color = kind === "err" ? "#A61B1B" : kind === "ok" ? "var(--color-accent-700, #1b7c21)" : "color-mix(in srgb, var(--color-text, #000) 72%, transparent)";
   }
 
   function buildMailto(form, data) {

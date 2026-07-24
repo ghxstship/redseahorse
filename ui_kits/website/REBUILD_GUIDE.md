@@ -73,8 +73,15 @@ standalone. Do not invent variant chrome.
 - Layout: `.wrap`, `.sec-pad`, `.sec-pad-sm`, `.grid2/.grid3/.grid4`,
   `.split2` (+`.sticky-fig`), `.band` (gray section), `.band-dark`
   (black section, for the closing CTA only).
-- Type: `.kicker`, `.page-h1`, `.display-h1`, `.lede`, `.text-muted`.
-  Headings auto-uppercase via CSS — write Title Case in source.
+- Type: `.kicker`, `.page-h1`, `.display-h1`, `.lede`, `.text-muted`,
+  `.sec-h2` / `.sec-h2-sm` (section heading sizes — never inline clamps).
+  Headings auto-uppercase via CSS — write Title Case in source. The
+  GHXSTSHIP wordmark in chrome renders in `--font-wordmark` (Bebas Neue)
+  via the `.brand` / `.foot-brand-name` classes — never restyle it per page.
+- Global page components (never redefine per page): `.svc-card`, `.phases`
+  9-stop strip, `.wcard`, `.close-cta`, `.cta-row`. Page CSS holds only
+  genuine overrides. Footer legal row includes the Accessibility link
+  (accessibility.html) after Terms.
 - Actions: `.btn.btn-primary` (green fill — ONE per viewport-ish, the primary
   action), `.btn-secondary` (outlined), `.btn-ghost` (green text link),
   `.btn-lg`, `.btn-block`.
@@ -104,7 +111,7 @@ standalone. Do not invent variant chrome.
 
 ## Routes that will exist (link only to these)
 index, about, team, locations, contact, platforms, pricing, store, gallery,
-course, privacy, terms, 404, services/{index, experiential-design-production,
+course, privacy, terms, accessibility, 404, services/{index, experiential-design-production,
 venue-site-operations, tour-talent-management, technology-systems-implementation},
 destinations/{index, festival-production, concert-tour-production,
 brand-activations, immersive-experiences, sporting-events, tv-film-broadcast},

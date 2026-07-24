@@ -15,7 +15,6 @@ export default function Page() {
   /* page-specific layout — components come from modernist.css */
   .svc-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .svc-fig img { width: 100%; height: 100%; object-fit: cover; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .aud-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
   .plat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
   @media (max-width: 720px) { .plat-row { grid-template-columns: repeat(2, 1fr); } }
@@ -23,20 +22,8 @@ export default function Page() {
   .plat { border: 1px solid var(--color-divider); padding: 20px; background: var(--color-bg); }
   .plat b { font-family: var(--font-heading); font-weight: 800; font-size: 18px; letter-spacing: 0.02em; }
   .plat p { font-size: 12px; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
-  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
-  .phase:first-child::before { left: 50%; width: 50%; }
-  .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
   .more-svc a.row-line { text-decoration: none; color: inherit; }
   .more-svc .arrow { color: var(--color-accent-700); font-weight: 600; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -56,7 +43,7 @@ export default function Page() {
 
 <section className="wrap sec-pad" style={{paddingTop: 'clamp(28px,4vw,48px)'}}>
   <p className="kicker">The Platforms</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Platforms, One Floor.</h2>
+  <h2 className="sec-h2">Four Platforms, One Floor.</h2>
   <p className="lede">The technology layer of XPMS 2.5 is four platforms a production runs on. Each owns a job, and they share one source of truth.</p>
   <div className="plat-row">
     <div className="plat"><b>ATLVS</b><p>Production and resource management. The studio and operator system: the plan, the budget, the schedule.</p></div>
@@ -73,7 +60,7 @@ export default function Page() {
   </figure>
   <div>
     <p className="kicker">What We Implement</p>
-    <h2 style={{fontSize: 'clamp(28px,3.6vw,44px)'}}>From the Platforms to the Floor.</h2>
+    <h2 className="sec-h2-sm">From the Platforms to the Floor.</h2>
     <p className="lede">XPMS 2.5 maps every deliverable to a department class and a production phase. Technology &amp; systems implementation lights up three, and carries the work from configuration to commissioning to the crew knowing how to use it.</p>
     <div style={{marginTop: '20px'}}>
       <div className="row-line"><span className="row-title">Technology</span><span className="row-sub">The four platforms, third-party integrations, the data pipeline, dashboards and reporting</span></div>
@@ -87,7 +74,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">The Process</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Tech Runs Under All Nine.</h2>
+  <h2 className="sec-h2">Tech Runs Under All Nine.</h2>
   <p className="lede">Every production runs the same nine phases. The technology layer runs under all of them, and it's where every other discipline reports in. Amplify is a natural fit: LEG3ND and the streaming delivery pipeline carry capture, broadcast, and post-event content from the floor to wherever it plays next.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
@@ -105,7 +92,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Who We Build For</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Built for the People Running the Show.</h2>
+  <h2 className="sec-h2">Built for the People Running the Show.</h2>
   <p className="lede">Technology &amp; systems implementation is built for the people accountable for what happens when the doors open and the data has to add up the next morning.</p>
   <div className="aud-tags">
     <span className="tag tag-neutral">Producers</span><span className="tag tag-neutral">Brands &amp; Sponsors</span>
@@ -115,7 +102,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">Why GHXSTSHIP</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Difference.</h2>
+  <h2 className="sec-h2">The Difference.</h2>
   <p className="lede">We build the technology and we run it on the floor. The platforms come from people who advance the show and reconcile the settlement after it, so the tech serves the production instead of the other way around.</p>
   <div style={{marginTop: '20px'}}>
     <div className="row-line"><span className="row-title">We Build the Platforms</span><span className="row-sub">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, in-house</span></div>
@@ -127,7 +114,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Answers</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Technology &amp; Systems FAQ.</h2>
+  <h2 className="sec-h2">Technology &amp; Systems FAQ.</h2>
   <div style={{marginTop: '20px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">What are ATLVS, COMPVSS, GVTEWAY, and LEG3ND?</summary><div className="faq-a">Four platforms that make up the technology layer of XPMS 2.5. ATLVS is the studio and operator system for production and resource management. COMPVSS is the field app for workforce and crew management. GVTEWAY is the guest gateway for ticketing, access, and fan engagement. LEG3ND holds the standards, knowledge, and the production record. Together they run under the whole show.</div></details>
     <details className="faq-item"><summary className="faq-q">Do you integrate with our existing stack?</summary><div className="faq-a">Yes. We meet your stack where it is. We connect to the ticketing, finance, scheduling, access, and show-control systems you already run, build the data pipeline between them, and put the reporting on one set of dashboards so the numbers reconcile instead of arguing with each other.</div></details>

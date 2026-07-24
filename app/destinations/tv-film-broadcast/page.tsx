@@ -17,28 +17,9 @@ export default function Page() {
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .cap { border: 1px solid var(--color-divider); background: var(--color-bg); padding: 16px 18px; font-family: var(--font-heading); font-weight: 600; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
-  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
-  .phase:first-child::before { left: 50%; width: 50%; }
-  .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
   .aud-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-  .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
-  .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
-  .svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
-  .svc-card h3 { font-size: 19px; line-height: 1.05; margin: 0; }
-  .svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
-  .svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
   .more-mkts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -62,7 +43,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">What We Build</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>On Air, On Time.</h2>
+  <h2 className="sec-h2">On Air, On Time.</h2>
   <div className="grid3" style={{marginTop: '24px'}}>
     <div className="cap">Live Broadcast Production</div>
     <div className="cap">Set Design &amp; Scenic</div>
@@ -75,7 +56,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">The Process</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Broadcast, Nine Phases.</h2>
+  <h2 className="sec-h2">Broadcast, Nine Phases.</h2>
   <p className="lede">Same nine phases on every project, Discover to Close. You watch each one happen.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
@@ -93,7 +74,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Who We Build For</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Built for Networks, Studios &amp; Streamers.</h2>
+  <h2 className="sec-h2">Built for Networks, Studios &amp; Streamers.</h2>
   <p className="lede">Broadcast work at GHXSTSHIP is built for the teams accountable for what airs.</p>
   <div className="aud-tags">
     <span className="tag tag-neutral">Networks</span>
@@ -106,7 +87,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">Selected Work</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Broadcasts We Ran.</h2>
+  <h2 className="sec-h2">Broadcasts We Ran.</h2>
   <div style={{border: '1px solid var(--color-divider)', padding: 'clamp(28px,4vw,48px)', textAlign: 'center', marginTop: '24px'}}>
     <h3 style={{fontSize: '21px'}}>In Production</h3>
     <p className="text-muted" style={{maxWidth: '44ch', marginInline: 'auto'}}>New broadcast work is underway. Want to be the first case study? Start a project.</p>
@@ -116,7 +97,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">The Services</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Verticals Behind Every Broadcast.</h2>
+  <h2 className="sec-h2">Four Verticals Behind Every Broadcast.</h2>
   <p className="lede">One accountable partner, four services carrying the shoot: the set designed and produced, the stage operated, the talent managed, and the systems wired to keep it on air.</p>
   <div className="grid4" style={{marginTop: '28px'}}>
     <article className="svc-card"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Design &amp; Production</h3><p>Set design, scenic, fabrication, and the finish, built to broadcast standards.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
@@ -128,7 +109,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">Why GHXSTSHIP</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Difference.</h2>
+  <h2 className="sec-h2">The Difference.</h2>
   <p className="lede">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all nine phases ourselves, and we build the technology that runs them.</p>
   <div className="grid3" style={{marginTop: '24px'}}>
     <div className="card"><p className="card-title">End to End</p><p className="card-body">All nine phases, one accountable crew running the whole build.</p></div>
@@ -139,7 +120,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Answers</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Broadcast FAQ.</h2>
+  <h2 className="sec-h2">Broadcast FAQ.</h2>
   <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.5 production lifecycle end to end, not just creative. We build and implement our own technology, ATLVS, COMPVSS, GVTEWAY, and LEG3ND. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
     <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for TV, film and broadcast?</summary><div className="faq-a">End-to-end broadcast production: live broadcast, set design and scenic, camera, audio, and lighting, content capture and post, on-air activations, and compliance — on our nine-phase XPMS 2.5 lifecycle.</div></details>

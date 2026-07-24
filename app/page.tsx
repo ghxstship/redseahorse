@@ -18,7 +18,6 @@ export default function Page() {
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero h1 { margin-bottom: 20px; }
   .hero h1 .a { color: var(--color-accent-700); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
   .stats-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: clamp(28px, 4vw, 44px); }
@@ -31,36 +30,15 @@ export default function Page() {
   .trust .track span { font-family: var(--font-heading); font-weight: 800; font-size: 20px; letter-spacing: 0.02em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap; }
   @keyframes trust-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .trust .track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } }
-  .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
-  .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
-  .svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
-  .svc-card h3 { font-size: 21px; line-height: 1.05; margin: 0; }
-  .svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
-  .svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
   .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
   .phase:first-child::before { left: 50%; width: 50%; }
   .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
-  .wcard { border: 1px solid var(--color-divider); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-  .wcard .media { aspect-ratio: 4 / 3; overflow: hidden; }
-  .wcard .media img { width: 100%; height: 100%; object-fit: cover; }
-  .wcard .body { padding: 16px 18px 18px; }
-  .wcard h3 { font-size: 18px; margin: 0 0 4px; }
-  .wcard .meta { font-size: 12px; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0; }
   .plat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
   @media (max-width: 720px) { .plat-row { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .plat-row { grid-template-columns: 1fr; } }
   .plat { border: 1px solid var(--color-divider); padding: 20px; }
   .plat b { font-family: var(--font-heading); font-weight: 800; font-size: 18px; letter-spacing: 0.02em; }
   .plat p { font-size: 12px; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -98,13 +76,13 @@ export default function Page() {
 </div></section>
 
 <section className="wrap sec-pad"><div className="split2">
-  <h2 style={{fontSize: 'clamp(28px,3.6vw,44px)', lineHeight: '1.02', maxWidth: '22ch'}}>One accountable partner for <span style={{color: 'var(--color-accent-700)'}}>Experiential Design &amp; Production</span>, <span style={{color: 'var(--color-accent-700)'}}>Venue &amp; Site Operations</span>, <span style={{color: 'var(--color-accent-700)'}}>Tour &amp; Talent Management</span> &amp; <span style={{color: 'var(--color-accent-700)'}}>Technology &amp; Systems</span>.</h2>
+  <h2 className="sec-h2-sm" style={{maxWidth: '22ch'}}>One accountable partner for <span style={{color: 'var(--color-accent-700)'}}>Experiential Design &amp; Production</span>, <span style={{color: 'var(--color-accent-700)'}}>Venue &amp; Site Operations</span>, <span style={{color: 'var(--color-accent-700)'}}>Tour &amp; Talent Management</span> &amp; <span style={{color: 'var(--color-accent-700)'}}>Technology &amp; Systems</span>.</h2>
   <p className="lede">GHXSTSHIP runs four services the way a general contractor runs a build: one partner who owns scope, schedule, budget, crew, and the technology. You get the experience designed and produced, the venue and site operated, the tour and the talent managed, and the systems wired to run it all, from the first call to the night it opens, instead of stitching together six vendors who blame each other when something slips.</p>
 </div></section>
 
 <section className="band"><div className="wrap sec-pad" id="services">
   <p className="kicker">The Services</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Disciplines. One Team.</h2>
+  <h2 className="sec-h2">Four Disciplines. One Team.</h2>
   <p className="lede">Four services run by one team: we design and produce the experience, operate the venue and the site, manage the tour and the talent, and implement the technology. Different crews doing each, held to the same standard.</p>
   <div className="grid4" style={{marginTop: '28px'}}>
     <article className="svc-card"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Design &amp; Production</h3><p>We design and build the experience. Concept, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
@@ -116,7 +94,7 @@ export default function Page() {
 
 <section className="wrap sec-pad" id="course">
   <p className="kicker">The Process</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>9 Phases, First Line to Wrap.</h2>
+  <h2 className="sec-h2">9 Phases, First Line to Wrap.</h2>
   <p className="lede">Every engagement walks the same nine-phase XPMS 2.5 production lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
@@ -134,7 +112,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad" id="work">
   <p className="kicker">Selected Work</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>From the Archives.</h2>
+  <h2 className="sec-h2">From the Archives.</h2>
   <p className="lede">A few of the experiences we designed, built, crewed, and ran end to end.</p>
   <div className="grid3" style={{marginTop: '28px'}}>
     <Link href="/work" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy" width="700" height="525"/></figure><div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival · Insomniac, Las Vegas · 2025–26</p></div></Link>
@@ -145,7 +123,7 @@ export default function Page() {
 
 <section className="wrap sec-pad" id="platforms">
   <p className="kicker">The Platforms</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Software We Run On.</h2>
+  <h2 className="sec-h2">Software We Run On.</h2>
   <p className="lede">Four in-house platforms wire every engagement together, from the production plan to the crew to the gate.</p>
   <div className="plat-row">
     <div className="plat"><b>ATLVS</b><p>Project management for producers and executives. The plan, the budget, the schedule.</p></div>

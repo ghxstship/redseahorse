@@ -18,10 +18,6 @@ export default function Page() {
   .roles a.row-line:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
   .roles a.row-line:hover .row-title { color: var(--color-accent-700); }
   .values-grid { margin-top: 28px; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -37,7 +33,7 @@ export default function Page() {
 
 <section className="wrap sec-pad-sm">
   <p className="kicker">8 Open Positions</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>What We're Hiring.</h2>
+  <h2 className="sec-h2">What We're Hiring.</h2>
   <div className="roles">
     <Link href="/careers/role" className="row-line"><span className="row-title">Production Manager</span><span className="row-sub">Production · Miami, FL</span><span className="row-sub">Full-time</span></Link>
     <Link href="/careers/role" className="row-line"><span className="row-title">Project Coordinator</span><span className="row-sub">Operations · Las Vegas, NV</span><span className="row-sub">Full-time</span></Link>
@@ -53,7 +49,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">How We Crew</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>What You Can Expect.</h2>
+  <h2 className="sec-h2">What You Can Expect.</h2>
   <div className="grid4 values-grid">
     <article className="card">
       <p className="card-kicker">The Work</p>

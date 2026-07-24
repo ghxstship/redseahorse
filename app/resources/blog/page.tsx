@@ -25,10 +25,6 @@ export default function Page() {
   .post-row:hover .row-title { color: var(--color-accent-700); }
   .post-row .ex { grid-column: 1 / -1; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 68ch; }
   .post-row .d { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 ` }} />
       
 
@@ -54,7 +50,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Latest Dispatches</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>From the Log.</h2>
+  <h2 className="sec-h2">From the Log.</h2>
   <div style={{marginTop: '20px', borderTop: '1px solid var(--color-divider)'}}>
     <a className="row-line post-row" href="#">
       <span className="row-title">The 9-Phase Production Lifecycle, Explained</span>

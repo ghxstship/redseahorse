@@ -22,10 +22,6 @@ export default function Page() {
   .mcard p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
   .mcard .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); }
   .also-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -82,7 +78,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">The Services</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Four Verticals, Every Industry.</h2>
+  <h2 className="sec-h2">Four Verticals, Every Industry.</h2>
   <p className="lede">Whatever the industry, the same four services carry the build: we design and produce the experience, operate the venue and the site, manage the tour and the talent, and implement the technology.</p>
   <div className="grid4" style={{marginTop: '24px'}}>
     <Link href="/services/experiential-design-production" className="btn btn-secondary btn-block">Experiential Design &amp; Production</Link>

@@ -13,21 +13,6 @@ export default function Page() {
     <>
       <style dangerouslySetInnerHTML={{ __html: `
   /* page-specific layout — components come from modernist.css */
-  .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
-  .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
-  .svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
-  .svc-card h3 { font-size: 21px; line-height: 1.05; margin: 0; }
-  .svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
-  .svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
-  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
-  .phase:first-child::before { left: 50%; width: 50%; }
-  .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
   .who-card { border-left: 3px solid var(--color-accent); background: var(--color-bg); border-top: 1px solid var(--color-divider); border-right: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 22px; }
   .who-card h3 { font-size: 17px; margin: 0 0 6px; }
   .who-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
@@ -35,10 +20,6 @@ export default function Page() {
   .xlink h3 { font-size: 19px; margin: 0; }
   .xlink p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
   .xlink .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 ` }} />
       
 
@@ -58,7 +39,7 @@ export default function Page() {
 
 <section className="wrap sec-pad" style={{paddingTop: 'clamp(28px,4vw,48px)'}}>
   <p className="kicker">What We Run</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Four Services.</h2>
+  <h2 className="sec-h2">The Four Services.</h2>
   <p className="lede">Four services run as one system. The handoffs that usually drop between vendors happen inside one team instead.</p>
   <div className="grid4" style={{marginTop: '28px'}}>
     <article className="svc-card"><div className="bar"></div><p className="role">The General Contractor</p><h3>Experiential Design &amp; Production</h3><p>We design and build the experience. Concept, creative development, spatial design, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
@@ -70,7 +51,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Who We Build For</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Built for the People Accountable for the Show.</h2>
+  <h2 className="sec-h2">Built for the People Accountable for the Show.</h2>
   <div className="grid3" style={{marginTop: '28px'}}>
     <div className="who-card"><h3>General Contractors &amp; Owner's Reps</h3><p>A specialist experiential team you can subcontract for production, staging, and live-event scope. One partner that plugs into your build and answers for it.</p></div>
     <div className="who-card"><h3>Venue &amp; Hospitality Operators</h3><p>Venue and site operations and technology installs for clubs, stadiums, arenas, and hospitality, run to the same standard on every date.</p></div>
@@ -80,7 +61,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">The Process</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>9 Phases, First Line to Wrap.</h2>
+  <h2 className="sec-h2">9 Phases, First Line to Wrap.</h2>
   <p className="lede">Every service walks the same nine-phase XPMS 2.5 production lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
@@ -98,7 +79,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Keep Exploring</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Where the Services Go to Work.</h2>
+  <h2 className="sec-h2">Where the Services Go to Work.</h2>
   <div className="grid3" style={{marginTop: '28px'}}>
     <Link href="/destinations" className="xlink"><h3>Industries</h3><p>Festivals, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast. See where the work happens.</p><span className="more">See the industries →</span></Link>
     <Link href="/pricing" className="xlink"><h3>Engagement Models</h3><p>Project-based, retained, or embedded. How we scope, staff, and price an engagement, and where each model fits.</p><span className="more">See the models →</span></Link>
@@ -108,7 +89,7 @@ export default function Page() {
 
 <section className="wrap sec-pad">
   <p className="kicker">Answers</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>The Services, Answered.</h2>
+  <h2 className="sec-h2">The Services, Answered.</h2>
   <div style={{marginTop: '20px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">Can GHXSTSHIP act as the general contractor for an experiential or entertainment project?</summary><div className="faq-a">Yes. GHXSTSHIP runs as the general contractor and accountable team for experiential design and production, owning scope, schedule, budget, crew, vendors, and technology across all nine phases, from Discover to Close, the way a GC owns a build.</div></details>
     <details className="faq-item"><summary className="faq-q">Do you run venues and sites?</summary><div className="faq-a">Yes. Venue &amp; Site Operations is its own service: logistics, workforce and crew management, health, safety and compliance, and the day-of on the ground, plus programming, bookings, facility and vendor operations, and on-site teams for clubs, stadiums, arenas, and hospitality.</div></details>

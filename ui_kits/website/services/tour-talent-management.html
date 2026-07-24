@@ -16,22 +16,9 @@
   /* page-specific layout — components come from modernist.css */
   .svc-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .svc-fig img { width: 100%; height: 100%; object-fit: cover; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .aud-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
-  .phases { display: flex; margin-top: 32px; }
-  .phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
-  .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
-  .phase:first-child::before { left: 50%; width: 50%; }
-  .phase:last-child::before { width: 50%; }
-  .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
-  .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
-  .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
-  @media (max-width: 720px) { .phases { flex-direction: column; gap: 10px; } .phase { text-align: left; padding: 0 0 0 30px; } .phase::before { top: 0; left: 9px; width: 2px; height: 100%; } .phase .dot { left: 0; transform: none; } }
   .more-svc a.row-line { text-decoration: none; color: inherit; }
   .more-svc .arrow { color: var(--color-accent-700); font-weight: 600; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
 </style>
 </head>
 <body>
@@ -67,7 +54,7 @@
   </figure>
   <div>
     <p class="kicker">What We Run</p>
-    <h2 style="font-size:clamp(28px,3.6vw,44px);">The Whole Run, One Sheet.</h2>
+    <h2 class="sec-h2-sm">The Whole Run, One Sheet.</h2>
     <p class="lede">Like every GHXSTSHIP service, the tour runs on XPMS 2.5, our Experiential Production Management Standard: ten department classes crossed with nine gated production phases, so every deliverable has an address and nothing falls between the bus and the office. Here is what the road work covers.</p>
     <div style="margin-top:20px;">
       <div class="row-line"><span class="row-title">Routing &amp; Advancing</span><span class="row-sub">The run itself: dates, holds, routing, and the master advance for the whole tour</span></div>
@@ -83,7 +70,7 @@
 
 <section class="band"><div class="wrap sec-pad">
   <p class="kicker">The Process</p>
-  <h2 style="font-size:clamp(30px,4.2vw,48px);">Nine Phases, Every City.</h2>
+  <h2 class="sec-h2">Nine Phases, Every City.</h2>
   <p class="lede">Every production runs the same nine phases. A tour runs them as a cycle: the run is designed and routed once, then every city gets its own advance, install, show, and settlement. In Amplify, the road manager carries talent approvals and the per-city content — capture, recaps, and post-show delivery cleared with the artist party before the bus rolls. The road manager keeps hands on the work from Advance through Close, date after date.</p>
   <div class="phases">
     <div class="phase"><div class="dot">1</div><div class="nm">Discover</div></div>
@@ -101,7 +88,7 @@
 
 <section class="wrap sec-pad">
   <p class="kicker">Who We Build For</p>
-  <h2 style="font-size:clamp(30px,4.2vw,48px);">Built for the People on the Bus.</h2>
+  <h2 class="sec-h2">Built for the People on the Bus.</h2>
   <p class="lede">Tour &amp; talent management is for the people whose name is on the ticket and the people who answer to them: the artist and their manager, the promoter with dates on the line, the agency routing the run, and the production director who has to land the same show in a different room every night.</p>
   <div class="aud-tags">
     <span class="tag tag-neutral">Artists &amp; Managers</span><span class="tag tag-neutral">Promoters</span>
@@ -112,7 +99,7 @@
 
 <section class="band"><div class="wrap sec-pad">
   <p class="kicker">Why GHXSTSHIP</p>
-  <h2 style="font-size:clamp(30px,4.2vw,48px);">The Difference.</h2>
+  <h2 class="sec-h2">The Difference.</h2>
   <p class="lede">Most tours run on a binder, a group chat, and one exhausted tour manager. We run the road as a discipline: one accountable lead, a full advance for every city, and the whole run living in the platforms we build, so the artist party, the crew, and the promoter all work from the same sheet.</p>
   <div style="margin-top:20px;">
     <div class="row-line"><span class="row-title">One Accountable Lead</span><span class="row-sub">The Road Manager owns the schedule, the people, and the money for the whole run</span></div>
@@ -124,7 +111,7 @@
 
 <section class="wrap sec-pad">
   <p class="kicker">Answers</p>
-  <h2 style="font-size:clamp(30px,4.2vw,48px);">Tour &amp; Talent Management FAQ.</h2>
+  <h2 class="sec-h2">Tour &amp; Talent Management FAQ.</h2>
   <div style="margin-top:20px;border-top:1px solid var(--color-divider);">
     <details class="faq-item" open><summary class="faq-q">What does Tour &amp; Talent Management cover?</summary><div class="faq-a">The whole run: tour routing and advancing, artist and talent relations and logistics, travel and accommodation, crew rostering on the road, the per-city venue advance, settlement and reporting after each date, and the run of show itself. One road manager owns the schedule, the people, and the money from the first hold to the last settlement.</div></details>
     <details class="faq-item"><summary class="faq-q">Do you advance every date?</summary><div class="faq-a">Yes. Every city gets a full venue advance: technical requirements, hospitality riders, schedules, credentials, security, and settlement terms, confirmed with the local promoter and venue before the trucks roll. The advance lives in ATLVS and COMPVSS so the whole party works from the same sheet.</div></details>
@@ -179,7 +166,7 @@
   </div>
   <div class="foot-legal">
     <span>© 2026 GHXSTSHIP Industries LLC. All rights reserved.</span>
-    <span><a href="../privacy.html">Privacy</a> <a href="../terms.html">Terms</a> <a href="../contact.html">Start a Project</a></span>
+    <span><a href="../privacy.html">Privacy</a> <a href="../terms.html">Terms</a> <a href="../accessibility.html">Accessibility</a> <a href="../contact.html">Start a Project</a></span>
   </div>
 </div></footer>
 </body></html>

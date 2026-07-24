@@ -16,7 +16,7 @@
    - Text tints via color-mix(in srgb, var(--color-text) N%, transparent):
      82 body · 78/72/65/60/55 supporting.
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Bebas+Neue&display=swap');
 
 :root {
   /* — ground (client grayscale swatches: #fcfcfc / #000 / #2a2a2a / #545454 / #7e7e7e) — */
@@ -44,7 +44,7 @@
   --color-accent-400: #67e274;
   --color-accent-500: #2edb3a;
   --color-accent-600: #00ca22;
-  --color-accent-700: #1f8425;
+  --color-accent-700: #1b7c21; /* AA ≥4.5:1 on --color-bg AND --color-surface (was #1f8425 · 4.44:1) */
   --color-accent-800: #155b1b;
   --color-accent-900: #103f14;
   /* dark ink that sits ON the green (buttons, filled chips) */
@@ -53,6 +53,8 @@
   --font-heading: "Archivo", system-ui, sans-serif;
   --font-heading-weight: 800;
   --font-body: "Archivo", system-ui, sans-serif;
+  /* wordmark lockup only — GHXSTSHIP brand name in chrome; never body text */
+  --font-wordmark: "Bebas Neue", "Archivo", "Arial Narrow", system-ui, sans-serif;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -177,7 +179,7 @@ textarea.input { min-height: 90px; resize: vertical; }
 .card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
 .card-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17px; line-height: 1.2; text-transform: uppercase; }
 .card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
-.card-meta { display: flex; align-items: center; gap: 6px; font-size: 11px; color: color-mix(in srgb, var(--color-text) 50%, transparent); }
+.card-meta { display: flex; align-items: center; gap: 6px; font-size: 11px; color: color-mix(in srgb, var(--color-text) 62%, transparent); }
 
 .tag { display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.02em; padding: 3px 10px; border-radius: 0; }
 .tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
@@ -239,6 +241,54 @@ details.faq-item[open] > summary.faq-q::after { content: "–"; }
 .table td { padding: var(--space-2); border-bottom: 1px solid var(--color-divider); }
 .table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
 
+/* ── heading scale utilities (replace per-page inline clamps) ──────────── */
+.sec-h2 { font-size: clamp(30px, 4.2vw, 48px); }
+.sec-h2-sm { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.02; }
+
+/* ── service card (canonical; was duplicated per page) ─────────────────── */
+.svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
+.svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); }
+.svc-card .role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
+.svc-card h2, .svc-card h3 { font-size: 21px; line-height: 1.05; margin: 0; }
+.svc-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
+.svc-card .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
+
+/* ── nine-phase lifecycle strip (canonical; was duplicated per page) ───── */
+.phases { display: flex; margin-top: 32px; }
+.phase { flex: 1; position: relative; text-align: center; padding-top: 34px; }
+.phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
+.phase:first-child::before { left: 50%; width: 50%; }
+.phase:last-child::before { width: 50%; }
+.phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 10px; font-weight: 600; display: grid; place-items: center; }
+.phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 12px; text-transform: uppercase; margin-top: 2px; }
+@media (max-width: 720px) {
+  .phases { flex-direction: column; gap: 10px; }
+  .phase { text-align: left; padding: 0 0 0 30px; }
+  .phase::before { top: 0; left: 9px; width: 2px; height: 100%; }
+  .phase .dot { left: 0; transform: none; }
+}
+
+/* ── work card (canonical; was duplicated per page) ────────────────────── */
+.wcard { border: 1px solid var(--color-divider); text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--color-bg); }
+.wcard .media { aspect-ratio: 4 / 3; overflow: hidden; }
+.wcard .media img { width: 100%; height: 100%; object-fit: cover; }
+.wcard .body { padding: 16px 18px 18px; }
+.wcard h2, .wcard h3 { font-size: 18px; margin: 0 0 4px; }
+.wcard .meta { font-size: 12px; color: color-mix(in srgb, var(--color-text) 62%, transparent); margin: 0; }
+
+/* ── closing CTA band (canonical; was duplicated per page) ─────────────── */
+.close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
+.close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
+.close-cta h2 .a { color: var(--color-accent); }
+.close-cta .cta-row, .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.close-cta .cta-row { justify-content: center; margin-top: 22px; }
+.close-cta .lede { margin-inline: auto; }
+
+/* ── a11y utilities ────────────────────────────────────────────────────── */
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+summary { cursor: pointer; }
+
 /* ── grid helpers (pages rely on these + breakpoints below) ────────────── */
 .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
@@ -259,9 +309,10 @@ header.nav {
 .nav-inner { display: flex; align-items: center; gap: 26px; min-height: 74px; }
 .nav .brand {
   display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text);
-  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
-  font-size: 19px; letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap;
+  font-family: var(--font-wordmark); font-weight: 400;
+  font-size: 27px; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
 }
+.nav .brand b { font-weight: 400; transform: translateY(1px); }
 .nav .brand img { width: 28px; height: 28px; }
 .desk-nav { display: flex; gap: 24px; align-items: center; margin-left: auto; }
 .desk-nav > a, .nav-item > a {
@@ -310,7 +361,7 @@ header.nav {
 /* footer */
 footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp(48px, 7vw, 96px); background: var(--color-bg); padding: 0; }
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: clamp(24px, 4vw, 56px); padding-block: clamp(36px, 5vw, 64px) clamp(28px, 4vw, 48px); }
-.foot-brand-name { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 20px; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.foot-brand-name { font-family: var(--font-wordmark); font-weight: 400; font-size: 26px; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
 .foot-brand-name img { width: 26px; height: 26px; }
 .foot-tag { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 34ch; margin-top: 12px; }
 .foot-col h6 { font-size: 11px; letter-spacing: 0.14em; color: var(--color-accent-700); margin-bottom: 12px; }

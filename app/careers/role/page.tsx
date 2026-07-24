@@ -26,7 +26,7 @@ export default function Page() {
   .jd-meta .r:last-of-type { border-bottom: 0; }
   .jd-meta .k { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
   .jd-meta .v { font-weight: 600; text-align: right; }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .cta-row { margin-top: 28px; }
 ` }} />
       
 

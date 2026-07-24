@@ -27,10 +27,6 @@ export default function Page() {
   .tile .cap b { font-family: var(--font-heading); font-weight: 800; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
   .tile:hover .cap b { color: var(--color-accent-700); }
   .gal-note { text-align: center; margin-top: clamp(24px, 4vw, 36px); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 ` }} />
       
 

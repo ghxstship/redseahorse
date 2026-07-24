@@ -19,14 +19,10 @@ export default function Page() {
   .prod .media { aspect-ratio: 1 / 1; display: grid; place-items: center; background: var(--color-neutral-100); border-bottom: 1px solid var(--color-divider); }
   .prod .media img { width: 44%; height: 44%; object-fit: contain; opacity: 0.85; }
   .prod .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
-  .prod h3 { font-size: 17px; margin: 0; }
+  .prod h2 { font-size: 17px; margin: 0; }
   .prod .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
   .prod .price { font-family: var(--font-heading); font-weight: 800; font-size: 16px; }
   .store-note { text-align: center; margin-top: clamp(24px, 4vw, 36px); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 ` }} />
       
 
@@ -50,42 +46,42 @@ export default function Page() {
   <div className="grid4 prod-grid">
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Site Coverall" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Sitewear · GX-SW-AP-001</p><h3>Site Coverall</h3>
+      <div className="body"><p className="card-kicker">Sitewear · GX-SW-AP-001</p><h2>Site Coverall</h2>
       <div className="row"><span className="price">$148</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Site%20Coverall">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Hi-Vis Crew Tee" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Sitewear · GX-SW-AP-002</p><h3>Hi-Vis Crew Tee</h3>
+      <div className="body"><p className="card-kicker">Sitewear · GX-SW-AP-002</p><h2>Hi-Vis Crew Tee</h2>
       <div className="row"><span className="price">$44</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Hi-Vis%20Crew%20Tee">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Skull Flag Tee" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-001</p><h3>Skull Flag Tee</h3>
+      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-001</p><h2>Skull Flag Tee</h2>
       <div className="row"><span className="price">$38</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Skull%20Flag%20Tee">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Reef Night Hoodie" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-002</p><h3>Reef Night Hoodie</h3>
+      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-002</p><h2>Reef Night Hoodie</h2>
       <div className="row"><span className="price">$74</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Reef%20Night%20Hoodie">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Voyage Dad Cap" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-004</p><h3>Voyage Dad Cap</h3>
+      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-004</p><h2>Voyage Dad Cap</h2>
       <div className="row"><span className="price">$32</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Voyage%20Dad%20Cap">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Performance Tee" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Performance · GX-PW-AP-001</p><h3>Performance Tee</h3>
+      <div className="body"><p className="card-kicker">Performance · GX-PW-AP-001</p><h2>Performance Tee</h2>
       <div className="row"><span className="price">$42</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Performance%20Tee">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Track Jacket" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Performance · GX-PW-AP-003</p><h3>Track Jacket</h3>
+      <div className="body"><p className="card-kicker">Performance · GX-PW-AP-003</p><h2>Track Jacket</h2>
       <div className="row"><span className="price">$88</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Track%20Jacket">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><img src="/assets/skull-bone.svg" alt="GHXSTSHIP skull mark on the Enamel Skull Pin" loading="lazy" width="200" height="200"/></figure>
-      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AC-002</p><h3>Enamel Skull Pin</h3>
+      <div className="body"><p className="card-kicker">Streetwear · GX-ST-AC-002</p><h2>Enamel Skull Pin</h2>
       <div className="row"><span className="price">$14</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Enamel%20Skull%20Pin">Order</a></div></div>
     </article>
   </div>

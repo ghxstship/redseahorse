@@ -91,6 +91,11 @@ export default function Nav() {
 
   const close = () => setOpen(false);
 
+  // aria-current for the active route (trailing-slash tolerant).
+  const norm = (p: string) => (p.endsWith("/") ? p : p + "/");
+  const current = (href: string) =>
+    norm(pathname || "/") === norm(href) ? ("page" as const) : undefined;
+
   return (
     <>
       <header className="nav">
@@ -103,20 +108,20 @@ export default function Nav() {
             {LINKS.map((l) =>
               l.children ? (
                 <div key={l.href} className="nav-item">
-                  <Link href={l.href} aria-haspopup="true">
+                  <Link href={l.href} aria-haspopup="true" aria-current={current(l.href)}>
                     {l.label}
                     <span className="nav-caret" aria-hidden="true" />
                   </Link>
                   <div className="nav-sub" role="menu" aria-label={l.label}>
                     {l.children.map((c) => (
-                      <Link key={c.href + c.label} href={c.href} role="menuitem">
+                      <Link key={c.href + c.label} href={c.href} role="menuitem" aria-current={current(c.href)}>
                         {c.label}
                       </Link>
                     ))}
                   </div>
                 </div>
               ) : (
-                <Link key={l.href} href={l.href}>
+                <Link key={l.href} href={l.href} aria-current={current(l.href)}>
                   {l.label}
                 </Link>
               )

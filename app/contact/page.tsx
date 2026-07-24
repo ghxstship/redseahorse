@@ -64,7 +64,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Before You Ask</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Frequently Asked.</h2>
+  <h2 className="sec-h2">Frequently Asked.</h2>
   <div style={{maxWidth: '820px', marginTop: '20px'}}>
     <details className="faq-item"><summary className="faq-q">What happens after I send the brief?</summary><div className="faq-a">We read it and come back to set up a consultation, a real conversation about what you're trying to pull off, who it's for, and when it has to happen. From there we scope it: services, schedule, budget, and the crew that owns it.</div></details>
     <details className="faq-item"><summary className="faq-q">What services do you provide?</summary><div className="faq-a">Four: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation. Engage one, or all four as one accountable partner.</div></details>

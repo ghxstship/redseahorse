@@ -26,10 +26,6 @@ export default function Page() {
   .tm .rk { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0; }
   .tm h3 { font-size: 19px; line-height: 1.05; margin: 0; }
   .tm p { font-size: 13px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
-  .close-cta { text-align: center; padding-block: clamp(56px, 8vw, 110px); }
-  .close-cta h2 { font-size: clamp(36px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 0.96; margin-bottom: 18px; }
-  .close-cta h2 .a { color: var(--color-accent); }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
 ` }} />
       
 
@@ -45,7 +41,7 @@ export default function Page() {
 
 <section className="wrap sec-pad" style={{paddingTop: '0'}}>
   <p className="kicker">Ranks &amp; Roles</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Who Runs What.</h2>
+  <h2 className="sec-h2">Who Runs What.</h2>
 
   <p className="tier">Level 01 · Command</p>
   <div className="grid3">
@@ -78,7 +74,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Join the Team</p>
-  <h2 style={{fontSize: 'clamp(30px,4.2vw,48px)'}}>Learn the Ropes.</h2>
+  <h2 className="sec-h2">Learn the Ropes.</h2>
   <p className="lede">We train the next generation of experiential producers, no experience gatekept. Apprentice on real productions, next to the people who've built them. Bring the hunger; we'll teach the ropes.</p>
   <div className="cta-row" style={{marginTop: '22px'}}>
     <Link href="/careers" className="btn btn-primary">See Open Roles</Link>
