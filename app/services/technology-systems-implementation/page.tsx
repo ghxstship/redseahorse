@@ -20,8 +20,8 @@ export default function Page() {
   @media (max-width: 720px) { .plat-row { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .plat-row { grid-template-columns: 1fr; } }
   .plat { border: 1px solid var(--color-divider); padding: 20px; background: var(--color-bg); }
-  .plat b { font-family: var(--font-heading); font-weight: 800; font-size: 18px; letter-spacing: 0.02em; }
-  .plat p { font-size: 12px; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
+  .plat b { font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; letter-spacing: 0.02em; }
+  .plat p { font-size: 0.8rem; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
   .more-svc a.row-line { text-decoration: none; color: inherit; }
   .more-svc .arrow { color: var(--color-accent-700); font-weight: 600; }
 ` }} />

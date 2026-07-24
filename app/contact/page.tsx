@@ -17,12 +17,12 @@ export default function Page() {
   @media (max-width: 820px) { .cgrid { grid-template-columns: 1fr; } }
   .contact-form .field { margin-bottom: 16px; }
   .rail .blk { margin-bottom: 28px; }
-  .rail .lbl { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 8px; }
+  .rail .lbl { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 8px; }
   .rail a { text-decoration: none; font-weight: 600; }
   .rail .office { padding: 10px 0; border-bottom: 1px solid var(--color-divider); }
   .rail .office:first-of-type { border-top: 1px solid var(--color-divider); }
-  .rail .office .city { font-family: var(--font-heading); font-weight: 800; font-size: 14px; text-transform: uppercase; margin: 0 0 2px; }
-  .rail .office a { font-size: 13px; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
+  .rail .office .city { font-family: var(--font-heading); font-weight: 800; font-size: 0.933rem; text-transform: uppercase; margin: 0 0 2px; }
+  .rail .office a { font-size: 0.867rem; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
   .rail .office a:hover { color: var(--color-accent-700); }
 ` }} />
       
@@ -65,7 +65,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Before You Ask</p>
   <h2 className="sec-h2">Frequently Asked.</h2>
-  <div style={{maxWidth: '820px', marginTop: '20px'}}>
+  <div style={{maxWidth: '55rem', marginTop: '20px'}}>
     <details className="faq-item"><summary className="faq-q">What happens after I send the brief?</summary><div className="faq-a">We read it and come back to set up a consultation, a real conversation about what you're trying to pull off, who it's for, and when it has to happen. From there we scope it: services, schedule, budget, and the crew that owns it.</div></details>
     <details className="faq-item"><summary className="faq-q">What services do you provide?</summary><div className="faq-a">Four: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation. Engage one, or all four as one accountable partner.</div></details>
     <details className="faq-item"><summary className="faq-q">What kinds of projects do you take on?</summary><div className="faq-a">Festivals, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film &amp; broadcast, from single-night shows to multi-weekend builds.</div></details>

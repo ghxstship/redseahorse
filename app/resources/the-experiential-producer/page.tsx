@@ -15,7 +15,7 @@ export default function Page() {
   /* page-specific layout — components come from modernist.css */
   .art-head { padding-block: clamp(36px, 5vw, 64px) 0; }
   .art-head h1 { max-width: 20ch; }
-  .byline { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 18px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+  .byline { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 18px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
   .byline .sep { color: color-mix(in srgb, var(--color-text) 35%, transparent); }
   .art-body { max-width: 68ch; margin-inline: auto; padding-block: clamp(32px, 5vw, 56px); }
   .art-body > p { font-size: clamp(16px, 15px + 0.15vw, 18px); line-height: 1.75; color: color-mix(in srgb, var(--color-text) 82%, transparent); margin: 0 0 22px; }
@@ -26,7 +26,7 @@ export default function Page() {
   .read-next { max-width: 68ch; margin-inline: auto; }
   .read-next .row-line { text-decoration: none; color: inherit; }
   .read-next .row-line:hover .row-title { color: var(--color-accent-700); }
-  .read-next .d { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+  .read-next .d { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
 ` }} />
       
 

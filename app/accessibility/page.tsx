@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <style dangerouslySetInnerHTML={{ __html: `
   .read { max-width: 72ch; }
-  .read h2 { font-size: 24px; margin-top: clamp(28px, 4vw, 44px); }
+  .read h2 { font-size: 1.6rem; margin-top: clamp(28px, 4vw, 44px); }
   .read p, .read li { line-height: 1.7; color: color-mix(in srgb, var(--color-text) 82%, transparent); }
   .read ul { padding-left: 20px; margin: 0 0 12px; }
 ` }} />

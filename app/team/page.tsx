@@ -14,7 +14,7 @@ export default function Page() {
       <style dangerouslySetInnerHTML={{ __html: `
   /* page-specific layout — components come from modernist.css */
   .tier {
-    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;
+    font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;
     color: var(--color-accent-700); margin: clamp(28px, 4vw, 44px) 0 14px;
     display: flex; align-items: center; gap: 10px;
   }
@@ -24,8 +24,8 @@ export default function Page() {
   .tm .av img { width: 48px; height: 48px; opacity: 0.85; }
   .tm .body { padding: 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
   .tm .role { margin: 0; }
-  .tm h3 { font-size: 18px; line-height: 1.05; margin: 0; }
-  .tm p { font-size: 13px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
+  .tm h3 { font-size: 1.2rem; line-height: 1.05; margin: 0; }
+  .tm p { font-size: 0.867rem; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
 ` }} />
       
 

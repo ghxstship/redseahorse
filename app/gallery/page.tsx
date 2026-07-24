@@ -24,9 +24,9 @@ export default function Page() {
   .tile .ar-169 { aspect-ratio: 16 / 9; }
   .tile .ar-34 { aspect-ratio: 3 / 4; }
   .tile .cap { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 10px 12px 12px; }
-  .tile .cap b { font-family: var(--font-heading); font-weight: 800; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
+  .tile .cap b { font-family: var(--font-heading); font-weight: 800; font-size: 0.867rem; letter-spacing: 0.02em; text-transform: uppercase; }
   .tile:hover .cap b { color: var(--color-accent-700); }
-  .gal-note { text-align: center; margin-top: clamp(24px, 4vw, 36px); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+  .gal-note { text-align: center; margin-top: clamp(24px, 4vw, 36px); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
 ` }} />
       
 

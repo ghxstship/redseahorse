@@ -16,9 +16,9 @@ export default function Page() {
   .loc { border: 1px solid var(--color-divider); background: var(--color-bg); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
   .loc .tag { align-self: flex-start; }
   .loc h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1; margin: 4px 0 2px; }
-  .loc p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: none; }
-  .loc .area { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-top: auto; padding-top: 10px; flex: none; }
-  .loc .mail { font-size: 13px; font-weight: 600; text-decoration: none; margin-top: 2px; }
+  .loc p { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: none; }
+  .loc .area { font-size: 0.733rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-top: auto; padding-top: 10px; flex: none; }
+  .loc .mail { font-size: 0.867rem; font-weight: 600; text-decoration: none; margin-top: 2px; }
 ` }} />
       
 

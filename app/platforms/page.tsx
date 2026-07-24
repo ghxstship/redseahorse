@@ -16,16 +16,16 @@ export default function Page() {
   .plat-sec { padding-block: clamp(40px, 6vw, 80px); }
   .plat-name { font-size: clamp(34px, 4.6vw, 56px); line-height: 0.98; letter-spacing: -0.02em; margin-bottom: 12px; }
   .plat-aud { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }
-  .plat-body p { font-size: 15px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 52ch; }
+  .plat-body p { font-size: 1rem; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 52ch; }
   .plat-rows { margin-top: 4px; }
   .fit-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 32px; }
   @media (max-width: 960px) { .fit-row { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .fit-row { grid-template-columns: 1fr; } }
   .fit { border: 1px solid var(--color-divider); padding: 20px; background: var(--color-bg); }
-  .fit .n { font-family: var(--font-heading); font-weight: 800; font-size: 12px; letter-spacing: 0.1em; color: var(--color-accent-700); }
-  .fit h3 { font-size: 19px; line-height: 1.05; margin: 6px 0 4px; }
-  .fit .sys { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 0 0 8px; }
-  .fit p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0; }
+  .fit .n { font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--color-accent-700); }
+  .fit h3 { font-size: 1.267rem; line-height: 1.05; margin: 6px 0 4px; }
+  .fit .sys { font-size: 0.733rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 0 0 8px; }
+  .fit p { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0; }
 ` }} />
       
 

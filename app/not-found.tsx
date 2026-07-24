@@ -6,13 +6,13 @@ export default function NotFound() {
       <style dangerouslySetInnerHTML={{ __html: `
   /* page-specific layout — components come from modernist.css */
   .nf { min-height: 58vh; display: grid; place-items: center; text-align: center; padding-block: clamp(56px, 9vw, 120px); }
-  .nf .code { font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 16px; }
+  .nf .code { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 16px; }
   .nf h1 { margin-bottom: 18px; }
   .nf h1 .a { color: var(--color-accent-700); }
   .nf .lede { margin-inline: auto; max-width: 44ch; }
   .nf .cta-row { justify-content: center; margin-top: 28px; }
-  .nf .also { margin-top: 26px; font-size: 13px; color: color-mix(in srgb, var(--color-text) 60%, transparent); }
-  .nf .also a { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); margin-inline: 8px; }
+  .nf .also { margin-top: 26px; font-size: 0.867rem; color: color-mix(in srgb, var(--color-text) 60%, transparent); }
+  .nf .also a { font-family: var(--font-heading); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); margin-inline: 8px; }
   .nf .also a:hover { color: var(--color-accent-800); }
 ` }} />
       

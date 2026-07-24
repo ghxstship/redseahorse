@@ -17,7 +17,7 @@ export default function Page() {
   a.wcard:hover h2 { color: var(--color-accent-700); }
   .wcard .body { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
   .wcard h2 { margin: 0; }
-  .wcard .go { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); margin-top: 2px; }
+  .wcard .go { font-family: var(--font-heading); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); margin-top: 2px; }
 ` }} />
       
 

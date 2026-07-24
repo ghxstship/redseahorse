@@ -23,11 +23,11 @@ export default function Page() {
   .stats-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: clamp(28px, 4vw, 44px); }
   @media (max-width: 720px) { .stats-in { grid-template-columns: repeat(2, 1fr); } }
   .trust { padding-block: clamp(28px, 4vw, 48px); text-align: center; }
-  .trust .lbl { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 0 0 18px; }
+  .trust .lbl { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 0 0 18px; }
   .trust .marquee { overflow: hidden; -webkit-mask: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
   .trust .track { display: flex; gap: 56px; width: max-content; animation: trust-scroll 34s linear infinite; }
   .trust:hover .track { animation-play-state: paused; }
-  .trust .track span { font-family: var(--font-heading); font-weight: 800; font-size: 20px; letter-spacing: 0.02em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap; }
+  .trust .track span { font-family: var(--font-heading); font-weight: 800; font-size: 1.333rem; letter-spacing: 0.02em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent); white-space: nowrap; }
   @keyframes trust-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .trust .track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } }
   .phase::before { content: ""; position: absolute; top: 9px; left: 0; width: 100%; height: 2px; background: var(--color-divider); }
@@ -37,8 +37,8 @@ export default function Page() {
   @media (max-width: 720px) { .plat-row { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .plat-row { grid-template-columns: 1fr; } }
   .plat { border: 1px solid var(--color-divider); padding: 20px; }
-  .plat b { font-family: var(--font-heading); font-weight: 800; font-size: 18px; letter-spacing: 0.02em; }
-  .plat p { font-size: 12px; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
+  .plat b { font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; letter-spacing: 0.02em; }
+  .plat p { font-size: 0.8rem; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
 ` }} />
       
 

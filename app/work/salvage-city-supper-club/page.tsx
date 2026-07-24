@@ -18,9 +18,9 @@ export default function Page() {
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
   .results-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: clamp(28px, 4vw, 44px); }
   @media (max-width: 720px) { .results-in { grid-template-columns: repeat(2, 1fr); } }
-  .cs-body { max-width: 820px; }
+  .cs-body { max-width: 55rem; }
   .cs-body h2 { font-size: clamp(24px, 3vw, 34px); margin-top: clamp(32px, 5vw, 56px); }
-  .cs-body p { font-size: 16px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 68ch; }
+  .cs-body p { font-size: 1.067rem; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 68ch; }
   .cs-body strong { color: var(--color-text); }
   .pull { border-left: 4px solid var(--color-accent); padding-left: 20px; margin: clamp(24px, 4vw, 36px) 0; }
   .pull p { font-family: var(--font-heading); font-weight: 800; font-size: clamp(19px, 2.4vw, 26px); line-height: 1.2; text-transform: uppercase; color: var(--color-text); margin: 0; max-width: 34ch; }

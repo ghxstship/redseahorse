@@ -76,6 +76,10 @@ standalone. Do not invent variant chrome.
   (black section, for the closing CTA only).
 - Type: `.kicker`, `.page-h1`, `.display-h1`, `.lede`, `.text-muted`,
   `.sec-h2` / `.sec-h2-sm` (section heading sizes — never inline clamps).
+  ALL text sizes are rem-based (the root font-size is fluid:
+  15px mobile → 16.5px wide desktop, so every rem scales with viewport).
+  NEVER declare `font-size` in px except inside a clamp() for display
+  headings; width caps on text containers use ch or rem, never px.
   Headings auto-uppercase via CSS — write Title Case in source. The
   GHXSTSHIP wordmark in chrome renders in `--font-wordmark` (Bebas Neue)
   via the `.brand` / `.foot-brand-name` classes — never restyle it per page.
