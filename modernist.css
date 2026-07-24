@@ -344,12 +344,12 @@ header.nav {
 .nav .brand b { font-weight: 400; transform: translateY(1px); }
 .nav .brand img { width: 28px; height: 28px; }
 .desk-nav { display: flex; gap: 24px; align-items: center; margin-left: auto; }
-.desk-nav > a, .nav-item > a {
+.desk-nav > a:not(.btn), .nav-item > a {
   font-family: var(--font-heading); font-weight: 600; font-size: 0.867rem;
   letter-spacing: 0.02em; text-transform: uppercase; text-decoration: none; color: inherit;
   display: inline-flex; align-items: center; gap: 5px; padding: 6px 0;
 }
-.desk-nav > a:hover, .nav-item > a:hover, .desk-nav a[aria-current="page"] { color: var(--color-accent-700); }
+.desk-nav > a:not(.btn):hover, .nav-item > a:hover, .desk-nav a[aria-current="page"]:not(.btn) { color: var(--color-accent-700); }
 .nav-item { position: relative; }
 .nav-caret { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
 .nav-sub {
@@ -394,7 +394,8 @@ footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp
 .foot-brand-name img { width: 26px; height: 26px; }
 .foot-tag { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 34ch; margin-top: 12px; }
 .foot-col h6 { font-size: 0.733rem; letter-spacing: 0.14em; color: var(--color-accent-700); margin-bottom: 12px; }
-.foot-col a { display: block; padding: 5px 0; font-size: 0.867rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; text-decoration: none; color: color-mix(in srgb, var(--color-text) 72%, transparent); font-family: var(--font-heading); }
+/* footer links are BODY register per the kit canon — never the heading font */
+.foot-col a { display: block; padding: 5px 0; font-size: 0.933rem; font-family: var(--font-body); font-weight: 400; text-decoration: none; color: var(--color-text); }
 .foot-col a:hover { color: var(--color-accent-700); }
 .foot-legal { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 18px 30px; border-top: 1px solid var(--color-divider); font-size: 0.8rem; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
 .foot-legal a { color: inherit; text-decoration: none; margin-left: 16px; }

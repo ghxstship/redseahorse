@@ -118,6 +118,7 @@ standalone. Do not invent variant chrome.
 - Port the existing page's copy — it passed a voice audit. Adapt terminology
   to the four new verticals; don't invent new facts, clients, or numbers.
 - No parentheses in copy. No emoji. Em-dash sparingly. Confident, plainspoken.
+- Premium register for cost language: "Complimentary", never "free", "no charge", or "no cost".
 - Nav/section labels are literal (Services, Work, Team), not nautical.
 - Keep every internal link pointing at a real page (see route list below).
   Relative `.html` hrefs — the generator rewrites them to routes.

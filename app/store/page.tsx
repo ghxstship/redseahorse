@@ -85,7 +85,7 @@ export default function Page() {
       <div className="row"><span className="price">$14</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Enamel%20Skull%20Pin">Order</a></div></div>
     </article>
   </div>
-  <p className="store-note text-muted">Secure checkout powered by GVTEWAY · Free crew shipping over $100 · Product photography drops in as the line ships</p>
+  <p className="store-note text-muted">Secure checkout powered by GVTEWAY · Complimentary crew shipping over $100 · Product photography drops in as the line ships</p>
 </section>
 
 <section className="band-dark close-cta"><div className="wrap">
