@@ -39,10 +39,10 @@ export default function Page() {
 
 <section className="wrap sec-pad" style={{paddingTop: '0'}}>
   <p className="kicker">Featured Dispatch</p>
-  <Link href="/resources/the-experiential-gc" className="feat">
+  <Link href="/resources/the-experiential-producer" className="feat">
     <p className="cat">Field Notes</p>
-    <h2>What an Experiential General Contractor Actually Does</h2>
-    <p>One accountable partner for scope, schedule, budget, crew, and tech — and why the GC model beats a vendor chain for live experiences.</p>
+    <h2>What an Experiential Producer Actually Does</h2>
+    <p>One accountable partner for scope, schedule, budget, crew, and tech — and why the one-producer model beats a vendor chain for live experiences.</p>
     <span className="meta"><span className="d">Jun 2026</span><span className="more">Read the dispatch →</span></span>
   </Link>
 </section>
@@ -67,7 +67,7 @@ export default function Page() {
       <span className="row-title">Running a Venue to One Standard</span>
       <span className="tag tag-neutral">Venue Ops</span>
       <span className="d">Apr 2026</span>
-      <span className="ex">Programming, staffing, compliance, the day-of call. The foreman's playbook for holding every date to the same bar.</span>
+      <span className="ex">Programming, staffing, compliance, the day-of call. The operations playbook for holding every date to the same bar.</span>
     </a>
     <a className="row-line post-row" href="#">
       <span className="row-title">GHXSTSHIP Breaks Ground on New Immersive Work in Miami</span>

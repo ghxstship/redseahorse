@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What an Experiential General Contractor Does",
-  description: "An experiential general contractor is one accountable partner that owns scope, schedule, budget, crew, and technology for a live experience \u2014 here is how the GC model works for experiential and entertainment production.",
-  keywords: ["experiential general contractor", "experiential production company", "event production GC", "one accountable partner", "live event production model"],
-  alternates: { canonical: "https://ghxstship.tours/resources/the-experiential-gc" },
+  title: "What an Experiential Producer Does",
+  description: "An experiential producer is one accountable partner that owns scope, schedule, budget, crew, and technology for a live experience \u2014 here is how the one-producer model works for experiential and entertainment production.",
+  keywords: ["experiential producer", "experiential production company", "production management partner", "one accountable partner", "live event production model"],
+  alternates: { canonical: "https://ghxstship.tours/resources/the-experiential-producer" },
 };
 
 export default function Page() {
@@ -37,7 +37,7 @@ export default function Page() {
 
 <header className="wrap art-head">
   <p className="kicker">Field Notes</p>
-  <h1 className="page-h1">What an Experiential General Contractor Does.</h1>
+  <h1 className="page-h1">What an Experiential Producer Does.</h1>
   <div className="byline">
     <span>By the GHXSTSHIP Crew</span><span className="sep">·</span>
     <span>June 2026</span><span className="sep">·</span>
@@ -47,28 +47,28 @@ export default function Page() {
 </header>
 
 <div className="wrap"><div className="art-body">
-  <p className="lead">An experiential general contractor is one accountable partner that owns a live experience the way a construction GC owns a building: scope, schedule, budget, crew, and the technology that runs it, from the first line to the night it opens.</p>
+  <p className="lead">An experiential producer is one accountable partner that owns a live experience end to end: scope, schedule, budget, crew, and the technology that runs it, from the first line to the night it opens.</p>
 
   <p>Most experiential and brand-activation work gets bought as a chain of vendors. A creative shop, a fabricator, a staging company, a staffing agency, and a stack of software that doesn't talk to itself. Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p>
 
   <blockquote className="pullquote"><p>Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p></blockquote>
 
-  <p>The general-contractor model puts all of it under one roof. GHXSTSHIP runs four services — Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation — with one accountable crew and one nine-phase production lifecycle — the XPMS 2.5 standard, Discover to Close.</p>
+  <p>The one-producer model puts all of it under one roof. GHXSTSHIP runs four services — Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation — with one accountable crew and one nine-phase production lifecycle — the XPMS 2.5 standard, Discover to Close.</p>
 
   <h2>The Build: Experiential Design &amp; Production</h2>
-  <p>The GC builds it. Experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and how it looks when the doors open.</p>
+  <p>The producer builds it. Experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and how it looks when the doors open.</p>
 
   <h2>The Run: Venue &amp; Site Operations</h2>
-  <p>The foreman crews it and runs it. Logistics and load-in, workforce and crew management, vendor coordination and purchasing, health, safety and compliance, and the day-of call. It's a real discipline with its own people, not something bolted onto creative at the end.</p>
+  <p>The operations director crews it and runs it. Logistics and load-in, workforce and crew management, vendor coordination and purchasing, health, safety and compliance, and the day-of call. It's a real discipline with its own people, not something bolted onto creative at the end.</p>
 
   <h2>The Road: Tour &amp; Talent Management</h2>
-  <p>The road manager moves the show and the people in it. Routing and advancing, artist relations, travel and settlement, and the run of show, city after city, held to the same standard as the build itself.</p>
+  <p>The tour manager moves the show and the people in it. Routing and advancing, artist relations, travel and settlement, and the run of show, city after city, held to the same standard as the build itself.</p>
 
   <h2>The Coordination: Technology &amp; Systems</h2>
   <p>The software is how the whole thing stays in sync: ATLVS for production and resource management, COMPVSS for workforce and crew, GVTEWAY for ticketing and fans, and LEG3ND for show and media systems, plus the integrations, installs, and analytics that keep a build measurable while it's still moving.</p>
 
   <h2>Why It Matters</h2>
-  <p>For general contractors, venue operators, brands, and promoters, it means one partner to hold accountable instead of a dozen, working off a single schedule that everyone can actually see. On time, on budget, and nothing hidden in someone else's inbox.</p>
+  <p>For brands, promoters, venue operators, and general contractors bringing in a specialist experiential team, it means one partner to hold accountable instead of a dozen, working off a single schedule that everyone can actually see. On time, on budget, and nothing hidden in someone else's inbox.</p>
 </div></div>
 
 <section className="band"><div className="wrap sec-pad-sm">
@@ -105,8 +105,8 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Article","headline":"What an Experiential General Contractor Does","datePublished":"2026-06-06","author":{"@type":"Organization","name":"GHXSTSHIP"},"publisher":{"@type":"Organization","name":"GHXSTSHIP"},"mainEntityOfPage":"https://ghxstship.tours/resources/the-experiential-gc"}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://ghxstship.tours/resources"},{"@type":"ListItem","position":3,"name":"The Log","item":"https://ghxstship.tours/resources/blog"},{"@type":"ListItem","position":4,"name":"The Experiential GC","item":"https://ghxstship.tours/resources/the-experiential-gc"}]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Article","headline":"What an Experiential Producer Does","datePublished":"2026-06-06","dateModified":"2026-07-24","author":{"@type":"Organization","name":"GHXSTSHIP"},"publisher":{"@type":"Organization","name":"GHXSTSHIP"},"mainEntityOfPage":"https://ghxstship.tours/resources/the-experiential-producer"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://ghxstship.tours/resources"},{"@type":"ListItem","position":3,"name":"The Log","item":"https://ghxstship.tours/resources/blog"},{"@type":"ListItem","position":4,"name":"The Experiential Producer","item":"https://ghxstship.tours/resources/the-experiential-producer"}]}` }} />
     </>
   );
 }

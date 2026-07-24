@@ -13,7 +13,9 @@
     { "source": "/services/venue-management", "destination": "/services/venue-site-operations/", "permanent": true },
     { "source": "/services/venue-management/", "destination": "/services/venue-site-operations/", "permanent": true },
     { "source": "/services/immersive-technologies", "destination": "/services/technology-systems-implementation/", "permanent": true },
-    { "source": "/services/immersive-technologies/", "destination": "/services/technology-systems-implementation/", "permanent": true }
+    { "source": "/services/immersive-technologies/", "destination": "/services/technology-systems-implementation/", "permanent": true },
+    { "source": "/resources/the-experiential-gc", "destination": "/resources/the-experiential-producer/", "permanent": true },
+    { "source": "/resources/the-experiential-gc/", "destination": "/resources/the-experiential-producer/", "permanent": true }
   ],
   "headers": [
     {

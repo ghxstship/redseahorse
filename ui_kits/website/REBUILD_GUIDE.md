@@ -11,10 +11,10 @@ structure drawn with 2px rules and 1px borders — no shadows, no gradients,
 no other hues. All tokens/components live in `modernist.css` at repo root.
 
 ## The four services (updated verticals — use these names everywhere)
-1. **Experiential Design & Production** — `services/experiential-design-production.html` — "The General Contractor"
-2. **Venue & Site Operations** — `services/venue-site-operations.html` — "The Foreman"
-3. **Tour & Talent Management** — `services/tour-talent-management.html` — "The Road Manager"
-4. **Technology & Systems Implementation** — `services/technology-systems-implementation.html` — "The Procore"
+1. **Experiential Design & Production** — `services/experiential-design-production.html` — "The Experiential Producer"
+2. **Venue & Site Operations** — `services/venue-site-operations.html` — "The Operations Director"
+3. **Tour & Talent Management** — `services/tour-talent-management.html` — "The Tour Manager"
+4. **Technology & Systems Implementation** — `services/technology-systems-implementation.html` — "The Production OS"
 
 Never reference the old vertical set (Experiential Production / Site
 Operations / Venue Management / Immersive Technologies) as the service names.
@@ -43,7 +43,7 @@ Header (root-level hrefs shown; from `services/`, `work/`, `careers/`,
   <a class="brand" href="index.html" aria-label="GHXSTSHIP home"><img src="../../assets/logo-ghostship-skull.svg" alt="" width="28" height="28"><b>GHXSTSHIP</b></a>
   <nav class="desk-nav" aria-label="Primary">
     <a href="services/experiential-design-production.html">Services</a>
-    <a href="destinations/index.html">Markets</a>
+    <a href="destinations/index.html">Industries</a>
     <a href="work/index.html">Work</a>
     <a href="platforms.html">Platforms</a>
     <a href="about.html">Company</a>
@@ -104,7 +104,7 @@ standalone. Do not invent variant chrome.
 ## Accent discipline (hard rules)
 - Green is spent sparingly: primary button, kickers, stat figures, small
   emphasis spans, one accent moment per section.
-- Small green text uses `var(--color-accent-700)` (#1f8425) — never the base
+- Small green text uses `var(--color-accent-700)` (#1b7c21) — never the base
   green. Base green `var(--color-accent)` only as a FILL (buttons, bars, dots)
   with `var(--color-on-accent)` ink, or large display spans on dark.
 - Everything else is grayscale. No other hues anywhere.
@@ -124,7 +124,7 @@ venue-site-operations, tour-talent-management, technology-systems-implementation
 destinations/{index, festival-production, concert-tour-production,
 brand-activations, immersive-experiences, sporting-events, tv-film-broadcast},
 work/{index, salvage-city-supper-club}, careers/{index, role, apply},
-resources/{index, blog, glossary, the-experiential-gc}.
+resources/{index, blog, glossary, the-experiential-producer}.
 
 ## Forms (contact + careers/apply only)
 Keep the existing form field names/structure from the old page; add

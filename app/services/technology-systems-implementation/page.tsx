@@ -31,7 +31,7 @@ export default function Page() {
 <main id="main">
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
-  <p className="kicker">The Services · The Procore</p>
+  <p className="kicker">The Services · The Production OS</p>
   <h1 className="page-h1">Technology &amp; Systems Implementation.</h1>
   <p className="lede">Technology &amp; systems implementation is the layer that runs under the whole show. We build the platforms operators actually use on the floor, ATLVS for production and resource management, COMPVSS in the crew's pocket, GVTEWAY at the door, LEG3ND holding the record, plus the immersive show technology, show control, and data pipeline that tie a live experience together. Then we implement it: configuration, integration, installs, and training, so the systems run your shows instead of sitting in a browser tab.</p>
   <div className="cta-row" style={{marginTop: '20px'}}>
@@ -128,9 +128,9 @@ export default function Page() {
   <p className="kicker">More Services</p>
   <h2 style={{fontSize: 'clamp(24px,3vw,36px)'}}>The Other Disciplines.</h2>
   <div style={{marginTop: '12px'}}>
-    <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The General Contractor</span><span className="arrow">→</span></Link>
-    <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Foreman</span><span className="arrow">→</span></Link>
-    <Link href="/services/tour-talent-management" className="row-line"><span className="row-title">Tour &amp; Talent Management</span><span className="row-sub">The Road Manager</span><span className="arrow">→</span></Link>
+    <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The Experiential Producer</span><span className="arrow">→</span></Link>
+    <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Operations Director</span><span className="arrow">→</span></Link>
+    <Link href="/services/tour-talent-management" className="row-line"><span className="row-title">Tour &amp; Talent Management</span><span className="row-sub">The Tour Manager</span><span className="arrow">→</span></Link>
   </div>
 </section>
 

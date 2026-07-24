@@ -27,9 +27,9 @@ export default function Page() {
 <main id="main">
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
-  <p className="kicker">The Services · The Foreman</p>
+  <p className="kicker">The Services · The Operations Director</p>
   <h1 className="page-h1">Venue &amp; Site Operations.</h1>
-  <p className="lede">Venue &amp; site operations is the work of actually running the ground and the room. On the site, we carry the logistics, the run-of-show, the crew, the access points, and the day-of calls. In the venue, we operate the programming and booking calendar, facility and vendor operations, hospitality, box office and access, and the guest journey from the door to settlement. One accountable lead, The Foreman, owns all of it from advance through wrap. They live on the floor so you can watch the show instead of chasing it.</p>
+  <p className="lede">Venue &amp; site operations is the work of actually running the ground and the room. On the site, we carry the logistics, the run-of-show, the crew, the access points, and the day-of calls. In the venue, we operate the programming and booking calendar, facility and vendor operations, hospitality, box office and access, and the guest journey from the door to settlement. One accountable lead, The Operations Director, owns all of it from advance through wrap. They live on the floor so you can watch the show instead of chasing it.</p>
   <div className="cta-row" style={{marginTop: '20px'}}>
     <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
     <Link href="/services" className="btn btn-secondary btn-lg">All Services</Link>
@@ -115,7 +115,7 @@ export default function Page() {
   <h2 className="sec-h2">The Difference.</h2>
   <p className="lede">Plenty of crews can build a site, and plenty of consultants will assess your room and leave you to staff it. Fewer will stand on the ground at 6am and own what happens when the schedule slips, then run all nine phases themselves on every date. We treat operations as its own discipline, and the work runs on tooling we built ourselves, with GVTEWAY at the door so the people at the gate and the numbers in the back office come from the same place.</p>
   <div style={{marginTop: '20px'}}>
-    <div className="row-line"><span className="row-title">One Accountable Lead</span><span className="row-sub">The Foreman calls the show, owns the P&amp;L, and answers for the site and the standard on every date</span></div>
+    <div className="row-line"><span className="row-title">One Accountable Lead</span><span className="row-sub">The Operations Director calls the show, owns the P&amp;L, and answers for the site and the standard on every date</span></div>
     <div className="row-line"><span className="row-title">Crew and Access, Handled</span><span className="row-sub">Schedules in COMPVSS, credentials and box office in GVTEWAY</span></div>
     <div className="row-line"><span className="row-title">Safety We Own</span><span className="row-sub">Compliance is a job somebody works on the floor, with permits, inspections, and incident protocol carried as part of it</span></div>
     <div className="row-line"><span className="row-title">The Calendar, Owned</span><span className="row-sub">Operations runs the bookings so the room stays full and the settlement stays clean</span></div>
@@ -139,9 +139,9 @@ export default function Page() {
   <p className="kicker">More Services</p>
   <h2 style={{fontSize: 'clamp(24px,3vw,36px)'}}>The Other Disciplines.</h2>
   <div style={{marginTop: '12px'}}>
-    <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The General Contractor</span><span className="arrow">→</span></Link>
-    <Link href="/services/tour-talent-management" className="row-line"><span className="row-title">Tour &amp; Talent Management</span><span className="row-sub">The Road Manager</span><span className="arrow">→</span></Link>
-    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Procore</span><span className="arrow">→</span></Link>
+    <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The Experiential Producer</span><span className="arrow">→</span></Link>
+    <Link href="/services/tour-talent-management" className="row-line"><span className="row-title">Tour &amp; Talent Management</span><span className="row-sub">The Tour Manager</span><span className="arrow">→</span></Link>
+    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Production OS</span><span className="arrow">→</span></Link>
   </div>
 </section>
 

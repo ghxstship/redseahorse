@@ -59,7 +59,7 @@ const LINKS: NavLink[] = [
     children: [
       { href: "/resources/", label: "All Resources" },
       { href: "/resources/blog/", label: "Blog" },
-      { href: "/resources/the-experiential-gc/", label: "The Experiential GC" },
+      { href: "/resources/the-experiential-producer/", label: "The Experiential Producer" },
       { href: "/resources/glossary/", label: "Glossary" },
       { href: "/course/", label: "The Course" },
     ],

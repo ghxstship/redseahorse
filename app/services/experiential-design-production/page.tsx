@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Experiential Design & Production",
   description: "GHXSTSHIP Experiential Design &amp; Production builds branded environments end to end: concept, creative development, spatial design, scenic fabrication, technical production, talent, and an accountable producer.",
-  keywords: ["experiential design and production", "experiential production company", "branded environments", "scenic fabrication", "spatial design", "show design", "technical production", "event general contractor"],
+  keywords: ["experiential design and production", "experiential production company", "branded environments", "scenic fabrication", "spatial design", "show design", "technical production", "event production management"],
   alternates: { canonical: "https://ghxstship.tours/services/experiential-design-production" },
 };
 
@@ -26,9 +26,9 @@ export default function Page() {
 <main id="main">
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
-  <p className="kicker">The Services · The General Contractor</p>
+  <p className="kicker">The Services · The Experiential Producer</p>
   <h1 className="page-h1">Experiential Design &amp; Production.</h1>
-  <p className="lede">Experiential design &amp; production is the build. You bring an idea for a branded environment people walk into, and we make it real: concept and creative development, show and spatial design, scenic fabrication, staging and rigging, audio, video, and lighting, the performers and crew who run it, and a producer who owns the budget and the schedule from the first call to load-out. We are the general contractor of the experience.</p>
+  <p className="lede">Experiential design &amp; production is the build. You bring an idea for a branded environment people walk into, and we make it real: concept and creative development, show and spatial design, scenic fabrication, staging and rigging, audio, video, and lighting, the performers and crew who run it, and a producer who owns the budget and the schedule from the first call to load-out. We are the producer of record for the experience.</p>
   <div className="cta-row" style={{marginTop: '20px'}}>
     <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
     <Link href="/services" className="btn btn-secondary btn-lg">All Services</Link>
@@ -122,9 +122,9 @@ export default function Page() {
   <p className="kicker">More Services</p>
   <h2 style={{fontSize: 'clamp(24px,3vw,36px)'}}>The Other Disciplines.</h2>
   <div style={{marginTop: '12px'}}>
-    <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Foreman</span><span className="arrow">→</span></Link>
-    <Link href="/services/tour-talent-management" className="row-line"><span className="row-title">Tour &amp; Talent Management</span><span className="row-sub">The Road Manager</span><span className="arrow">→</span></Link>
-    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Procore</span><span className="arrow">→</span></Link>
+    <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Operations Director</span><span className="arrow">→</span></Link>
+    <Link href="/services/tour-talent-management" className="row-line"><span className="row-title">Tour &amp; Talent Management</span><span className="row-sub">The Tour Manager</span><span className="arrow">→</span></Link>
+    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Production OS</span><span className="arrow">→</span></Link>
   </div>
 </section>
 

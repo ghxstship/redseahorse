@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Resources",
-  description: "The GHXSTSHIP resource library \u2014 the Log, the Experiential GC guide, the production glossary, the nine-phase course, and the four in-house platforms.",
+  description: "The GHXSTSHIP resource library \u2014 the Log, the Experiential Producer guide, the production glossary, the nine-phase course, and the four in-house platforms.",
   keywords: ["experiential production resources", "event production blog", "production glossary", "production lifecycle course", "event production software"],
   alternates: { canonical: "https://ghxstship.tours/resources" },
 };
@@ -27,7 +27,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Resources</p>
   <h1 className="page-h1">The Field Library.</h1>
-  <p className="lede">Everything we write down between builds. Dispatches from the floor, the guide to the experiential GC model, the glossary of the craft, the nine-phase course, and the platforms that run it all.</p>
+  <p className="lede">Everything we write down between builds. Dispatches from the floor, the guide to the experiential producer model, the glossary of the craft, the nine-phase course, and the platforms that run it all.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -40,11 +40,11 @@ export default function Page() {
       <p>Field notes on experiential production, operations, event technology, and the calls we made when the schedule moved. What the build actually taught us.</p>
       <span className="more">Read the Log →</span>
     </Link>
-    <Link href="/resources/the-experiential-gc" className="svc-card">
+    <Link href="/resources/the-experiential-producer" className="svc-card">
       <div className="bar"></div>
       <p className="role">Featured Guide</p>
-      <h2>The Experiential GC</h2>
-      <p>What an experiential general contractor actually does — one accountable partner for scope, schedule, budget, crew, and tech, and why the GC model beats a vendor chain.</p>
+      <h2>The Experiential Producer</h2>
+      <p>What an experiential producer actually does — one accountable partner for scope, schedule, budget, crew, and tech, and why the one-producer model beats a vendor chain.</p>
       <span className="more">Read the guide →</span>
     </Link>
     <Link href="/resources/glossary" className="svc-card">

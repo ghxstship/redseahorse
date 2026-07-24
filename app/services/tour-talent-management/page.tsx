@@ -25,9 +25,9 @@ export default function Page() {
 <main id="main">
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
-  <p className="kicker">The Services · The Road Manager</p>
+  <p className="kicker">The Services · The Tour Manager</p>
   <h1 className="page-h1">Tour &amp; Talent Management.</h1>
-  <p className="lede">Tour &amp; talent management is the work of moving the show and the people in it. We route the run, advance every city, carry the artist party and the crew, and own the run of show from the first hold to the last settlement. One accountable lead, The Road Manager, rides with the tour, so the artist plays the room and somebody else worries about everything between the rooms.</p>
+  <p className="lede">Tour &amp; talent management is the work of moving the show and the people in it. We route the run, advance every city, carry the artist party and the crew, and own the run of show from the first hold to the last settlement. One accountable lead, The Tour Manager, rides with the tour, so the artist plays the room and somebody else worries about everything between the rooms.</p>
   <div className="cta-row" style={{marginTop: '20px'}}>
     <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
     <Link href="/services" className="btn btn-secondary btn-lg">All Services</Link>
@@ -89,7 +89,7 @@ export default function Page() {
   <h2 className="sec-h2">The Difference.</h2>
   <p className="lede">Most tours run on a binder, a group chat, and one exhausted tour manager. We run the road as a discipline: one accountable lead, a full advance for every city, and the whole run living in the platforms we build, so the artist party, the crew, and the promoter all work from the same sheet.</p>
   <div style={{marginTop: '20px'}}>
-    <div className="row-line"><span className="row-title">One Accountable Lead</span><span className="row-sub">The Road Manager owns the schedule, the people, and the money for the whole run</span></div>
+    <div className="row-line"><span className="row-title">One Accountable Lead</span><span className="row-sub">The Tour Manager owns the schedule, the people, and the money for the whole run</span></div>
     <div className="row-line"><span className="row-title">Every City, Advanced</span><span className="row-sub">A full venue advance before every date, confirmed with the local promoter and venue</span></div>
     <div className="row-line"><span className="row-title">The Run on Our Platforms</span><span className="row-sub">Routing and budgets in ATLVS, crew and day sheets in COMPVSS, credentials in GVTEWAY</span></div>
     <div className="row-line"><span className="row-title">Settled the Morning After</span><span className="row-sub">Each date reconciled and reported before the bus reaches the next city</span></div>
@@ -111,9 +111,9 @@ export default function Page() {
   <p className="kicker">More Services</p>
   <h2 style={{fontSize: 'clamp(24px,3vw,36px)'}}>The Other Disciplines.</h2>
   <div style={{marginTop: '12px'}}>
-    <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The General Contractor</span><span className="arrow">→</span></Link>
-    <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Foreman</span><span className="arrow">→</span></Link>
-    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Procore</span><span className="arrow">→</span></Link>
+    <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The Experiential Producer</span><span className="arrow">→</span></Link>
+    <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Operations Director</span><span className="arrow">→</span></Link>
+    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Production OS</span><span className="arrow">→</span></Link>
   </div>
 </section>
 
