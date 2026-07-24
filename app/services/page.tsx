@@ -17,9 +17,9 @@ export default function Page() {
   .who-card h3 { font-size: 17px; margin: 0 0 6px; }
   .who-card p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
   .xlink { border: 1px solid var(--color-divider); padding: 24px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 8px; background: var(--color-bg); }
-  .xlink h3 { font-size: 19px; margin: 0; }
-  .xlink p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
-  .xlink .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); }
+  .xlink h3 { font-size: 18px; margin: 0; }
+  .xlink p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: none; }
+  .xlink .more { margin-top: auto; padding-top: 6px; }
 ` }} />
       
 

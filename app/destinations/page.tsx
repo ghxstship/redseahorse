@@ -19,8 +19,8 @@ export default function Page() {
   .mcard .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .mcard .bar { height: 3px; width: 44px; background: var(--color-accent); }
   .mcard h2 { font-size: 21px; line-height: 1.05; margin: 0; }
-  .mcard p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
-  .mcard .more { font-family: var(--font-heading); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); }
+  .mcard p { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: none; }
+  .mcard .more { margin-top: auto; padding-top: 6px; }
   .also-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
 ` }} />
       

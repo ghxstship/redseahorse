@@ -20,7 +20,7 @@ export default function Page() {
   .prod .media img { width: 44%; height: 44%; object-fit: contain; opacity: 0.85; }
   .prod .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
   .prod h2 { font-size: 17px; margin: 0; }
-  .prod .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
+  .prod .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 10px; }
   .prod .price { font-family: var(--font-heading); font-weight: 800; font-size: 16px; }
   .store-note { text-align: center; margin-top: clamp(24px, 4vw, 36px); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
 ` }} />

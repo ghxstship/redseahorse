@@ -83,8 +83,16 @@ standalone. Do not invent variant chrome.
   genuine overrides. Footer legal row includes the Accessibility link
   (accessibility.html) after Terms.
 - Actions: `.btn.btn-primary` (green fill — ONE per viewport-ish, the primary
-  action), `.btn-secondary` (outlined), `.btn-ghost` (green text link),
-  `.btn-lg`, `.btn-block`.
+  action), `.btn-secondary` (outlined), `.btn-ghost` (green text link).
+  Size scale is closed: `.btn-sm` 7×14 · `.btn` 10×18 (36px min-height,
+  matches `.input`) · `.btn-lg` 14×26 · `.btn-icon` 36×36 · `.btn-block`.
+  NEVER override button padding or font-size inline or per page.
+- Card atoms: `.more` (arrow link) and `.role` (card kicker) are global —
+  never redefine their typography per page. Card alignment contract: card
+  internals are top-anchored in source order; ONLY the trailing action pins
+  to the card bottom via `margin-top: auto`. Nothing else may `flex: 1`
+  inside a card. Card title scale: 21px feature (svc/mcard) · 18px compact
+  (wcard/xlink/tm) · 17px dense (card/prod).
 - Bits: `.tag(-accent/-neutral/-outline)`, `.chip` (+`.on`) for filters,
   `.stat` (`.v`/`.k`), `.card` family, `.row-line` (+`.row-title`/`.row-sub`)
   for list rows, `.faq-item > .faq-q + .faq-a` accordions, `.table`,

@@ -23,8 +23,8 @@ export default function Page() {
   .tm .av { aspect-ratio: 5 / 2; display: grid; place-items: center; background: var(--color-neutral-200); border-bottom: 1px solid var(--color-divider); }
   .tm .av img { width: 48px; height: 48px; opacity: 0.85; }
   .tm .body { padding: 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-  .tm .rk { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0; }
-  .tm h3 { font-size: 19px; line-height: 1.05; margin: 0; }
+  .tm .role { margin: 0; }
+  .tm h3 { font-size: 18px; line-height: 1.05; margin: 0; }
   .tm p { font-size: 13px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
 ` }} />
       
@@ -45,30 +45,30 @@ export default function Page() {
 
   <p className="tier">Level 01 · Command</p>
   <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Production</p><h3>Executive Producer</h3><p>Owns the production end to end: vision, budget, and the standard the whole build holds to.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Production</p><h3>Senior Producer</h3><p>Leads the production day to day: scope, schedule, vendors, and the build.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Production</p><h3>Associate Producer</h3><p>Supports the production across phases: coordination, tracking, and delivery.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Executive Producer</h3><p>Owns the production end to end: vision, budget, and the standard the whole build holds to.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Senior Producer</h3><p>Leads the production day to day: scope, schedule, vendors, and the build.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Associate Producer</h3><p>Supports the production across phases: coordination, tracking, and delivery.</p></div></article>
   </div>
 
   <p className="tier">Level 02 · Direction</p>
   <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Production</p><h3>Production Director</h3><p>Runs the build: creative, scenic, staging, and technical production.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Operations</p><h3>Operations Director</h3><p>Runs the day-of: logistics, crew, safety, and compliance.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Hospitality</p><h3>Hospitality Director</h3><p>Owns guest experience, VIP, and hospitality operations.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Production Director</h3><p>Runs the build: creative, scenic, staging, and technical production.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Operations</p><h3>Operations Director</h3><p>Runs the day-of: logistics, crew, safety, and compliance.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Hospitality</p><h3>Hospitality Director</h3><p>Owns guest experience, VIP, and hospitality operations.</p></div></article>
   </div>
 
   <p className="tier">Level 03 · Management</p>
   <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Project</p><h3>Project Manager</h3><p>Holds the plan: scope, schedule, deliverables, and owners.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Project</p><h3>Project Coordinator</h3><p>Keeps the plan moving: documents, comms, and tracking.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Logistics</p><h3>Logistics Manager</h3><p>Moves freight and crew: load-in and out, transport, and vendors.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Project</p><h3>Project Manager</h3><p>Holds the plan: scope, schedule, deliverables, and owners.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Project</p><h3>Project Coordinator</h3><p>Keeps the plan moving: documents, comms, and tracking.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Logistics</p><h3>Logistics Manager</h3><p>Moves freight and crew: load-in and out, transport, and vendors.</p></div></article>
   </div>
 
   <p className="tier">Level 04 · On Site</p>
   <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Production</p><h3>Production Manager</h3><p>Runs the floor build and the technical package on site.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Crew</p><h3>Production Crew</h3><p>The hands that build, rig, run, and strike.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="rk">Support</p><h3>Production Assistant</h3><p>Supports every department, and learns the ropes.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Production Manager</h3><p>Runs the floor build and the technical package on site.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Crew</p><h3>Production Crew</h3><p>The hands that build, rig, run, and strike.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Support</p><h3>Production Assistant</h3><p>Supports every department, and learns the ropes.</p></div></article>
   </div>
 </section>
 

@@ -21,7 +21,8 @@ export default function Page() {
   .model-card .row-line { padding: 10px 0; grid-template-columns: 1fr; }
   .model-card .row-line .row-title { font-size: 14px; }
   .model-card .row-line .row-sub { font-size: 12px; }
-  .model-card .how { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: 1; }
+  .model-card .how { font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: none; }
+  .model-card .act { margin: auto 0 0; padding-top: 14px; }
   .model-card .act { margin-top: 20px; }
   .cmp-wrap { overflow-x: auto; margin-top: 28px; }
   .cmp-wrap .table { min-width: 680px; }
