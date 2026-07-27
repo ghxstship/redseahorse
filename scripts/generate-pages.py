@@ -9,7 +9,7 @@ Each source `.html` becomes a fully JSX-ified `page.tsx` with:
 - void elements self-closed, comments → JSX comments,
 - internal `<a href="/foo">` links rewritten to `<Link href="/foo">`,
 - per-page JSON-LD blocks emitted as `<script type="application/ld+json">`,
-- inline behavior scripts and `phase-detail.js` loaded via `next/script`,
+- inline behavior scripts,
 - per-page `<style>` blocks preserved verbatim via `dangerouslySetInnerHTML`.
 
 Run via `pnpm run prebuild` or directly: `python3 scripts/generate-pages.py`.
@@ -299,8 +299,6 @@ def attr_value_jsx(value: str) -> str:
 
 def rewrite_asset_src(value: str) -> str:
     """Map kit-local asset paths to /-rooted public paths."""
-    if value.endswith("phase-detail.js"):
-        return "/phase-detail.js"
     m = re.match(r"^(?:\.\./)+assets/(.+)$", value)
     if m:
         return "/assets/" + m.group(1)
@@ -311,7 +309,6 @@ def rewrite_asset_src(value: str) -> str:
 class EmitContext:
     inline_scripts: list[str] = field(default_factory=list)
     jsonld_blocks: list[str] = field(default_factory=list)
-    needs_external_phase_detail: bool = False
     needs_link: bool = False
     needs_script: bool = False
     inline_style_blocks: list[str] = field(default_factory=list)
@@ -383,11 +380,6 @@ def emit_attrs(tag: str, attrs: list[tuple[str, str | None]], *, internal_link: 
         # Drop inline event handlers; they don't work via React JSX without rewrites.
         if name.startswith("on"):
             continue
-        # Drop stale stylesheet links, the kit CSS is loaded in app/layout.tsx.
-        if tag == "link" and name == "href" and raw_value and (
-            raw_value.endswith(("colors_and_type.css", "components.css", "terminal.css", "polish.css"))
-        ):
-            return ""  # caller will drop the whole element
         # `style="..."` -> object.
         if name == "style" and raw_value is not None:
             parts.append(f"style={{{style_string_to_object(raw_value)}}}")
@@ -464,25 +456,12 @@ def emit_node(node: Node, ctx: EmitContext, depth: int = 0) -> str:
     tag = node.tag.lower()
 
     # Drop stale stylesheet <link>s for kit CSS (moved to layout).
-    if tag == "link":
-        for k, v in node.attrs:
-            if k.lower() == "rel" and v and "stylesheet" in v.lower():
-                for k2, v2 in node.attrs:
-                    if k2.lower() == "href" and v2 and v2.endswith((
-                        "colors_and_type.css", "components.css", "terminal.css", "polish.css",
-                    )):
-                        return ""
-
     # JSON-LD scripts and other <script> elements are extracted to ctx.
     if tag == "script":
         attrs = {k.lower(): v for k, v in node.attrs}
         inner = "".join(c.text for c in node.children if c.kind == "text")
         if attrs.get("type", "").lower() == "application/ld+json":
             ctx.jsonld_blocks.append(inner.strip())
-            return ""
-        if attrs.get("src", "").endswith("phase-detail.js"):
-            ctx.needs_external_phase_detail = True
-            ctx.needs_script = True
             return ""
         if inner.strip():
             ctx.inline_scripts.append(inner)
@@ -713,8 +692,6 @@ def emit_page(src_rel: Path) -> None:
         sid = f"inline-{src_rel.with_suffix('').as_posix().replace('/', '-')}-{i}"
         lit = js_string_literal(code)
         lines.append(f'      <Script id="{sid}" strategy="afterInteractive" dangerouslySetInnerHTML={{{{ __html: {lit} }}}} />')
-    if ctx.needs_external_phase_detail:
-        lines.append('      <Script src="/phase-detail.js" strategy="afterInteractive" />')
     lines.append("    </>")
     lines.append("  );")
     lines.append("}")
@@ -755,7 +732,6 @@ def main() -> None:
     if assets_dst.exists():
         shutil.rmtree(assets_dst)
     shutil.copytree(ROOT / "assets", assets_dst)
-    shutil.copy(ROOT / "phase-detail.js", public / "phase-detail.js")
     src = SRC / "robots.txt"
     if src.exists():
         shutil.copy(src, public / "robots.txt")

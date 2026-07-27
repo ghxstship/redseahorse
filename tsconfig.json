@@ -38,12 +38,7 @@
   "exclude": [
     "node_modules",
     "ui_kits",
-    "scraps",
     "uploads",
-    "preview",
-    "slides",
-    "social",
-    "design_handoff",
     "dist",
     ".next",
     "out"

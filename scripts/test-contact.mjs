@@ -4,6 +4,20 @@
  * - forwards to the real Resend API so both emails actually deliver.
  * Run: RESEND_API_KEY=... node scripts/test-contact.mjs
  */
+
+// This script sends REAL email through the production Resend key and bills the
+// account. It exists to prove the handler end to end, which cannot be faked,
+// but nothing about the filename says "this will land in someone's inbox".
+// Require an explicit opt-in so it can never run from a stray `node scripts/*`.
+if (process.env.CONFIRM_LIVE_SEND !== "yes") {
+  console.error(
+    "Refusing to run: this delivers real email via Resend and bills the account.\n" +
+    "If that is what you want:\n\n" +
+    "  CONFIRM_LIVE_SEND=yes node scripts/test-contact.mjs\n"
+  );
+  process.exit(2);
+}
+
 import { createRequire } from "module";
 import { writeFileSync } from "fs";
 const require = createRequire(import.meta.url);
