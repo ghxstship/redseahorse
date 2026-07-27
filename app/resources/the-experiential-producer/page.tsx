@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "What an Experiential Producer Does",
-  description: "An experiential producer is one accountable partner that owns scope, schedule, budget, crew, and technology for a live experience \u2014 here is how the one-producer model works for experiential and entertainment production.",
+  description: "An experiential producer is one accountable partner that owns scope, schedule, budget, crew, and technology for a live experience, here is how the one-producer model works for experiential and entertainment production.",
   keywords: ["experiential producer", "experiential production company", "production management partner", "one accountable partner", "live event production model"],
   alternates: { canonical: "https://ghxstship.tours/resources/the-experiential-producer" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .art-head { padding-block: clamp(36px, 5vw, 64px) 0; }
   .art-head h1 { max-width: 20ch; }
   .byline { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 18px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
@@ -53,7 +53,7 @@ export default function Page() {
 
   <blockquote className="pullquote"><p>Each one owns a slice. Nobody owns the whole thing, so when the schedule slips, the seams show and everyone points sideways.</p></blockquote>
 
-  <p>The one-producer model puts all of it under one roof. GHXSTSHIP runs four services — Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering — with one accountable crew and one nine-phase production lifecycle — the XPMS 2.6 standard, Discover to Close.</p>
+  <p>The one-producer model puts all of it under one roof. GHXSTSHIP runs four services. Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering, with one accountable crew and one nine-phase production lifecycle, the XPMS 2.6 standard: Discover to Close.</p>
 
   <h2>The Build: Experiential Design &amp; Production</h2>
   <p>The producer builds it. Experiential design and creative direction, scenic fabrication, staging and set, technical production across audio, lighting, video, rigging, and power, and live show calling. One team owns scope, schedule, budget, and how it looks when the doors open.</p>

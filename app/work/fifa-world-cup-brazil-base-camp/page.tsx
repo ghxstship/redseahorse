@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FIFA World Cup Brazil Base Camp \u2014 Case Study",
-  description: "FIFA World Cup Brazil Base Camp \u2014 team base camp operations in New Jersey for the 2026 FIFA World Cup.",
+  title: "FIFA World Cup Brazil Base Camp | Case Study",
+  description: "FIFA World Cup Brazil Base Camp, team base camp operations in New Jersey for the 2026 FIFA World Cup.",
   keywords: ["World Cup 2026 base camp", "team base camp operations", "New Jersey", "sporting event operations", "tournament hospitality production"],
   alternates: { canonical: "https://ghxstship.tours/work/fifa-world-cup-brazil-base-camp" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -63,7 +63,7 @@ export default function Page() {
   <p>A tournament base camp is a closed operation with a fixed occupant and no margin. It runs to a calendar set by the competition, with security, media and access regimes that are not negotiable, for a party whose only interest in the site is that it never becomes a distraction.</p>
 
   <h2>The Approach</h2>
-  <p>Venue and site operations across the tournament window: logistics, workforce, vendor coordination, and the compliance and access control a tournament imposes — planned in Advance, run in Operate, closed out clean.</p>
+  <p>Venue and site operations across the tournament window: logistics, workforce, vendor coordination, and the compliance and access control a tournament imposes, planned in Advance, run in Operate, closed out clean.</p>
   <div className="pull"><p>A base camp works when nobody notices it.</p></div>
 
   <h2>The Result</h2>

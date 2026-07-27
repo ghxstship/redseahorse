@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GHXSTSHIP \u2014 Live & Experiential Production, Miami",
+  title: "Experiential Production & Technology, Miami | GHXSTSHIP",
   description: "One accountable partner for live and experiential projects: design and production, venue and site operations, tour and talent management, and technology. Miami HQ.",
   keywords: ["experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering", "event production company", "live event operations", "tour management company", "experiential technology"],
   alternates: { canonical: "https://ghxstship.tours/" },
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .hero { padding-block: clamp(48px, 8vw, 110px) clamp(40px, 6vw, 80px); }
   .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
@@ -92,7 +92,7 @@ export default function Page() {
 <section className="wrap sec-pad" id="course">
   <p className="kicker">The Process</p>
   <h2 className="sec-h2">9 Phases, First Line to Wrap.</h2>
-  <p className="lede">Every engagement walks the same nine-phase XPMS 2.6 production lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
+  <p className="lede">Every engagement walks the same nine-phase XPMS 2.6 production lifecycle: Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>

@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Immersive</p>
     <h1 className="page-h1">Immersive <span style={{color: 'var(--color-accent-700)'}}>Experiences.</span></h1>
-    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Immersive Experiences, we build narrative installations and immersive worlds audiences step inside — for brands, museums, and cultural institutions — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Immersive Experiences, we build narrative installations and immersive worlds audiences step inside. We do it for brands, museums, and cultural institutions, on the same nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>
@@ -122,9 +122,9 @@ export default function Page() {
   <h2 className="sec-h2">Immersive FAQ.</h2>
   <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
-    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for immersive experiences?</summary><div className="faq-a">End-to-end immersive design: narrative and world-building, spatial and set design, interactive technology, projection and lighting, fabrication, and run-of-show — on our nine-phase XPMS 2.6 lifecycle.</div></details>
+    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for immersive experiences?</summary><div className="faq-a">End-to-end immersive design: narrative and world-building, spatial and set design, interactive technology, projection and lighting, fabrication, and run-of-show, on our nine-phase XPMS 2.6 lifecycle.</div></details>
     <details className="faq-item"><summary className="faq-q">Who are immersive experiences for?</summary><div className="faq-a">Brands, museums, cultural institutions, and attractions that want audiences to step inside a story.</div></details>
-    <details className="faq-item"><summary className="faq-q">Do you handle the technology and the build?</summary><div className="faq-a">Yes — creative, technology, fabrication, install, and daily operations are all in-house.</div></details>
+    <details className="faq-item"><summary className="faq-q">Do you handle the technology and the build?</summary><div className="faq-a">Yes, creative, technology, fabrication, install, and daily operations are all in-house.</div></details>
   </div>
 </div></section>
 
@@ -159,9 +159,9 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"Immersive Experiences","item":"https://ghxstship.tours/destinations/immersive-experiences"}]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, Venue & Site Operations, with logistics, crew, compliance, and analytics run by its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for immersive experiences?","acceptedAnswer":{"@type":"Answer","text":"End-to-end immersive design: narrative and world-building, spatial and set design, interactive technology, projection and lighting, fabrication, and run-of-show — on our nine-phase XPMS 2.6 lifecycle."}},
+ {"@type":"Question","name":"What does GHXSTSHIP do for immersive experiences?","acceptedAnswer":{"@type":"Answer","text":"End-to-end immersive design: narrative and world-building, spatial and set design, interactive technology, projection and lighting, fabrication, and run-of-show, on our nine-phase XPMS 2.6 lifecycle."}},
  {"@type":"Question","name":"Who are immersive experiences for?","acceptedAnswer":{"@type":"Answer","text":"Brands, museums, cultural institutions, and attractions that want audiences to step inside a story."}},
- {"@type":"Question","name":"Do you handle the technology and the build?","acceptedAnswer":{"@type":"Answer","text":"Yes — creative, technology, fabrication, install, and daily operations are all in-house."}}
+ {"@type":"Question","name":"Do you handle the technology and the build?","acceptedAnswer":{"@type":"Answer","text":"Yes, creative, technology, fabrication, install, and daily operations are all in-house."}}
 ]}` }} />
     </>
   );

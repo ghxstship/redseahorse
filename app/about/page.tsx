@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Story",
-  description: "GHXSTSHIP is a professional services firm for live and experiential projects \u2014 experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering \u2014 in Miami, Chicago, Los Angeles, New York City, Nashville, Denver, Las Vegas, and Phoenix.",
+  description: "GHXSTSHIP is a professional services firm for live and experiential projects, experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering, in Miami, Chicago, Los Angeles, New York City, Nashville, Denver, Las Vegas, and Phoenix.",
   keywords: ["about GHXSTSHIP", "experiential production company", "experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering"],
   alternates: { canonical: "https://ghxstship.tours/about" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .stats-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 28px; }
   @media (max-width: 720px) { .stats-in { grid-template-columns: repeat(2, 1fr); } }
   .story-fig { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--color-divider); }
@@ -26,7 +26,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">The Company</p>
   <h1 className="page-h1">We Build the Whole Thing.</h1>
-  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver four services, Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
+  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver four services: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -79,7 +79,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story — GHXSTSHIP","url":"https://ghxstship.tours/about","description":"GHXSTSHIP is a professional services firm for live and experiential projects: experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story | GHXSTSHIP","url":"https://ghxstship.tours/about","description":"GHXSTSHIP is a professional services firm for live and experiential projects: experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering."}` }} />
     </>
   );
 }

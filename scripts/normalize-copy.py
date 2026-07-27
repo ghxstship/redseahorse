@@ -6,7 +6,7 @@
 Two things it holds still:
 
 1. WHO WE ARE. Every industry page opens by naming the company. Left to hand
-   editing they named eight different companies — an agency, a studio, five
+   editing they named eight different companies, an agency, a studio, five
    production companies, and two pages that said "sporting event production
    company" on a cruise ship page and an amusement park page. The identity
    clause is now one string from the canon; only the delivery clause after it
@@ -64,9 +64,13 @@ for slug, ind in CANON["industries"].items():
         continue
 
     verb = ind.get("verb", "deliver")
+    # Two sentences, not one clause hung off two dashes. Substituting commas
+    # for the dashes left five in a row; the audience and the lifecycle are
+    # separate thoughts and read better as separate sentences.
     tail = (
-        f"For {ind['label'].replace('&', '&amp;')}, we {verb} {ind['delivers'].replace('&', '&amp;')} "
-        f"— for {ind['audiences']} — through our nine-phase XPMS 2.6 production lifecycle"
+        f"For {ind['label'].replace('&', '&amp;')}, we {verb} "
+        f"{ind['delivers'].replace('&', '&amp;')}. We do it for {ind['audiences']}, "
+        f"on the same nine-phase XPMS 2.6 production lifecycle"
         f"{ind.get('tailPlus', '')}."
     )
     lede = f"{IDENTITY} {tail}"
@@ -103,5 +107,5 @@ for f in sorted(set(findings)):
     print("   ", f)
 
 if CHECK and findings:
-    print("\ncopy is out of sync with data/copy-canon.json — run without --check")
+    print("\ncopy is out of sync with data/copy-canon.json, run without --check")
     sys.exit(1)

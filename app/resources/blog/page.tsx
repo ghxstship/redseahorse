@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Log \u2014 Dispatches on Experiential Production",
-  description: "The GHXSTSHIP Log \u2014 field notes on experiential production management, operations leadership, event technology, and the nine-phase XPMS 2.6 production lifecycle.",
+  title: "The Log | Dispatches on Experiential Production",
+  description: "The GHXSTSHIP Log, field notes on experiential production management, operations leadership, event technology, and the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["experiential production blog", "event production field notes", "production lifecycle", "venue operations", "event technology"],
   alternates: { canonical: "https://ghxstship.tours/resources/blog" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .feat { display: block; border: 1px solid var(--color-divider); border-left: 4px solid var(--color-accent); background: var(--color-bg); padding: clamp(24px, 4vw, 40px); text-decoration: none; color: inherit; margin-top: 28px; }
   .feat:hover { border-color: var(--color-text); border-left-color: var(--color-accent); color: inherit; }
   .feat .cat { font-size: 0.733rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 8px; }
@@ -42,7 +42,7 @@ export default function Page() {
   <Link href="/resources/the-experiential-producer" className="feat">
     <p className="cat">Field Notes</p>
     <h2>What an Experiential Producer Actually Does</h2>
-    <p>One accountable partner for scope, schedule, budget, crew, and tech — and why the one-producer model beats a vendor chain for live experiences.</p>
+    <p>One accountable partner for scope, schedule, budget, crew, and tech, and why the one-producer model beats a vendor chain for live experiences.</p>
     <span className="meta"><span className="d">Jun 2026</span><span className="more">Read the dispatch →</span></span>
   </Link>
 </section>

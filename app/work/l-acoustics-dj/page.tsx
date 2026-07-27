@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "L-Acoustics DJ \u2014 Case Study",
-  description: "L-Acoustics DJ at III Points, Miami \u2014 the first US festival deployment of L-Acoustics&#x27; spatial audio system for DJs, on the S3QU3NC3 stage at Mana Wynwood, October 2025.",
+  title: "L-Acoustics DJ | Case Study",
+  description: "L-Acoustics DJ at III Points, Miami, the first US festival deployment of L-Acoustics&#x27; spatial audio system for DJs, on the S3QU3NC3 stage at Mana Wynwood, October 2025.",
   keywords: ["L-Acoustics DJ", "spatial audio festival", "S3QU3NC3 stage", "III Points Miami", "immersive audio implementation", "L-ISA", "event technology implementation"],
   alternates: { canonical: "https://ghxstship.tours/work/l-acoustics-dj" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -38,7 +38,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Case Study · Technology Implementation</p>
   <h1 className="page-h1">L-Acoustics DJ.</h1>
-  <p className="lede">The first US festival deployment of L-Acoustics DJ — real-time spatial audio on the S3QU3NC3 stage at III Points, Mana Wynwood, October 2025.</p>
+  <p className="lede">The first US festival deployment of L-Acoustics DJ, real-time spatial audio on the S3QU3NC3 stage at III Points, Mana Wynwood, October 2025.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · L-Acoustics · III Points</span>
     <span className="tag tag-neutral">Venue · III Points</span>
@@ -63,7 +63,7 @@ export default function Page() {
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>III Points has treated sound system design as part of its identity for nearly a decade, running L-Acoustics on every stage for eight consecutive years. In 2024 the festival brought <strong>L-ISA</strong> to North American festival audiences on the 444 stage. For 2025 the brief went further: put <strong>L-Acoustics DJ</strong> — the first complete spatial audio system built for DJs — in front of a festival crowd for the first time in the United States.</p>
+  <p>III Points has treated sound system design as part of its identity for nearly a decade, running L-Acoustics on every stage for eight consecutive years. In 2024 the festival brought <strong>L-ISA</strong> to North American festival audiences on the 444 stage. For 2025 the brief went further: put <strong>L-Acoustics DJ</strong>, the first complete spatial audio system built for DJs, in front of a festival crowd for the first time in the United States.</p>
   <p>That is a different problem from hanging a bigger system. Spatial playback has to hold up across a ninety-by-ninety-foot two-level room, for artists who have never touched it, on a festival schedule that does not pause for a soundcheck.</p>
 
   <h2>The Approach</h2>
@@ -72,7 +72,7 @@ export default function Page() {
   <div className="pull"><p>Not listening to music. Being inside it.</p></div>
 
   <h2>The Result</h2>
-  <p>The deployment was picked up by the live-sound trades — <strong>FOH</strong> and <strong>Mix</strong> both carried it, alongside AVNation and USITT — and by artists who played it. Kujo, one of the DJs selected for the system, walked through the preparation and the in-set decisions with Magnetic Magazine afterwards.</p>
+  <p>The live-sound trades picked it up: <strong>FOH</strong> and <strong>Mix</strong> both carried it, alongside AVNation and USITT. So did the artists who played it. Kujo, one of the DJs selected for the system, walked through the preparation and the in-set decisions with Magnetic Magazine afterwards.</p>
   <p>III Points returns in 2026, and the open question the trades keep asking is the useful one: which stage adopts spatial audio next, and whether the format travels beyond electronic music.</p>
 
   <h2>The Credits</h2>
@@ -83,7 +83,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. The public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://fohonline.com/featured/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points-festival/" target="_blank" rel="noopener"><span className="row-title">L-Acoustics DJ Deployed at Miami&#x27;s III Points Festival</span><span className="row-sub">FOH (Front of House)</span><span className="row-sub">2026</span></a>
     <a className="row-line" href="https://www.mixonline.com/the-wire/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points" target="_blank" rel="noopener"><span className="row-title">L-Acoustics DJ Makes Its US Festival Debut at Miami&#x27;s III Points</span><span className="row-sub">Mix</span><span className="row-sub">2026</span></a>

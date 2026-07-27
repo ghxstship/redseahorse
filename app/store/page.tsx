@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Store \u2014 Merch & Gear",
-  description: "The GHXSTSHIP Store \u2014 branded apparel, prints, and gear from the experiential production company. Sitewear, Streetwear, and Performancewear. Checkout runs on GVTEWAY.",
+  title: "Store | Merch & Gear",
+  description: "The GHXSTSHIP Store, branded apparel, prints, and gear from the experiential production company. Sitewear, Streetwear, and Performancewear. Checkout runs on GVTEWAY.",
   keywords: ["GHXSTSHIP merch", "crew apparel", "event production gear", "branded workwear"],
   alternates: { canonical: "https://ghxstship.tours/store" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .lines { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
   .prod-grid { margin-top: clamp(28px, 4vw, 44px); }
   .prod { padding: 0; overflow: hidden; }
@@ -34,7 +34,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">The Store</p>
   <h1 className="page-h1">Fly the Colors.</h1>
-  <p className="lede">Branded apparel and gear in three lines — Sitewear, Streetwear, and Performancewear. The same stuff our crew actually wears on site, held to the same standard as the work. Checkout runs on GVTEWAY; order by email while the line ships.</p>
+  <p className="lede">Branded apparel and gear in three lines. Sitewear, Streetwear, and Performancewear. The same stuff our crew actually wears on site, held to the same standard as the work. Checkout runs on GVTEWAY; order by email while the line ships.</p>
   <div className="lines">
     <span className="tag tag-neutral">Sitewear</span>
     <span className="tag tag-neutral">Streetwear</span>

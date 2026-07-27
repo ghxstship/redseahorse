@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Open roles at GHXSTSHIP \u2014 production, operations, and technology roles for experiential and entertainment production in Miami, Las Vegas, New York, and Los Angeles.",
+  description: "Open roles at GHXSTSHIP, production, operations, and technology roles for experiential and entertainment production in Miami, Las Vegas, New York, and Los Angeles.",
   keywords: ["event production jobs", "experiential production careers", "production manager jobs", "live event operations jobs", "technical director jobs", "festival production careers"],
   alternates: { canonical: "https://ghxstship.tours/careers" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .roles { margin-top: 28px; border-top: 2px solid var(--color-divider); }
   .roles a.row-line { text-decoration: none; color: inherit; }
   .roles a.row-line:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
@@ -27,7 +27,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Careers</p>
   <h1 className="page-h1">Open Roles.</h1>
-  <p className="lede">We hire producers, directors, managers, and crew who build experiential and entertainment productions end to end. You're not running an event here — you're building a world people live inside for a weekend, then strike by morning. Find a role, read the brief, apply. We train the next generation, and we don't gatekeep experience.</p>
+  <p className="lede">We hire producers, directors, managers, and crew who build experiential and entertainment productions end to end. You're not running an event here, you're building a world people live inside for a weekend, then strike by morning. Find a role, read the brief, apply. We train the next generation, and we don't gatekeep experience.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -54,7 +54,7 @@ export default function Page() {
     <article className="card">
       <p className="card-kicker">The Work</p>
       <h3 className="card-title">End to End Productions</h3>
-      <p className="card-body">Producers, directors, managers, and crew building experiential and entertainment productions end to end — festivals, tours, activations, immersive experiences, and live events.</p>
+      <p className="card-body">Producers, directors, managers, and crew building experiential and entertainment productions end to end, festivals, tours, activations, immersive experiences, and live events.</p>
     </article>
     <article className="card">
       <p className="card-kicker">Apprenticeships</p>
@@ -88,7 +88,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Careers","url":"https://ghxstship.tours/careers","description":"Open roles at GHXSTSHIP — production, operations, and technology roles for experiential and entertainment production."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Careers","url":"https://ghxstship.tours/careers","description":"Open roles at GHXSTSHIP, production, operations, and technology roles for experiential and entertainment production."}` }} />
     </>
   );
 }

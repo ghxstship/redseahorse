@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Cruise Ships</p>
     <h1 className="page-h1">Cruise <span style={{color: 'var(--color-accent-700)'}}>Ships.</span></h1>
-    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Cruise Ships, we deliver onboard venue production, production shows, dry-dock installs, and embarkation activations — for cruise lines, shipyards, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Cruise Ships, we deliver onboard venue production, production shows, dry-dock installs, and embarkation activations. We do it for cruise lines, shipyards, and brands, on the same nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>
@@ -124,7 +124,7 @@ export default function Page() {
   <h2 className="sec-h2">Cruise FAQ.</h2>
   <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
-    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for cruise ships?</summary><div className="faq-a">End-to-end shipboard entertainment production: onboard venue and theatre production, production shows and revues, audio, lighting and video integration, dry-dock and refit installs, embarkation and terminal activations, and at-sea operations — on our nine-phase XPMS 2.6 lifecycle.</div></details>
+    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for cruise ships?</summary><div className="faq-a">End-to-end shipboard entertainment production: onboard venue and theatre production, production shows and revues, audio, lighting and video integration, dry-dock and refit installs, embarkation and terminal activations, and at-sea operations, on our nine-phase XPMS 2.6 lifecycle.</div></details>
     <details className="faq-item"><summary className="faq-q">Who is cruise production for?</summary><div className="faq-a">Cruise lines, shipyards and refit yards, onboard entertainment directors, charter operators, and brands taking an activation to sea.</div></details>
     <details className="faq-item"><summary className="faq-q">Can you work to a dry-dock window?</summary><div className="faq-a">Yes. Dry dock is a fixed window with no slippage, so the schedule is built backward from the undocking date and the long-lead items are ordered in Procure, well ahead of the yard period.</div></details>
   </div>
@@ -161,7 +161,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"Cruise Ships","item":"https://ghxstship.tours/destinations/cruise-ships"}]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, Venue & Site Operations, with logistics, crew, compliance, and analytics run by its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for cruise ships?","acceptedAnswer":{"@type":"Answer","text":"End-to-end shipboard entertainment production: onboard venue and theatre production, production shows and revues, audio, lighting and video integration, dry-dock and refit installs, embarkation and terminal activations, and at-sea operations — on our nine-phase XPMS 2.6 lifecycle."}},
+ {"@type":"Question","name":"What does GHXSTSHIP do for cruise ships?","acceptedAnswer":{"@type":"Answer","text":"End-to-end shipboard entertainment production: onboard venue and theatre production, production shows and revues, audio, lighting and video integration, dry-dock and refit installs, embarkation and terminal activations, and at-sea operations, on our nine-phase XPMS 2.6 lifecycle."}},
  {"@type":"Question","name":"Who is cruise production for?","acceptedAnswer":{"@type":"Answer","text":"Cruise lines, shipyards and refit yards, onboard entertainment directors, charter operators, and brands taking an activation to sea."}},
  {"@type":"Question","name":"Can you work to a dry-dock window?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dry dock is a fixed window with no slippage, so the schedule is built backward from the undocking date and the long-lead items are ordered in Procure, well ahead of the yard period."}}
 ]}` }} />

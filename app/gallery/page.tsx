@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gallery \u2014 Photo & Video",
-  description: "The GHXSTSHIP Gallery \u2014 photography and video from festivals, concerts and tours, brand activations, immersive experiences, and sporting events produced by GHXSTSHIP.",
+  title: "Gallery | Photo & Video",
+  description: "The GHXSTSHIP Gallery, photography and video from festivals, concerts and tours, brand activations, immersive experiences, and sporting events produced by GHXSTSHIP.",
   keywords: ["event production photography", "festival production photos", "live event video", "experiential production gallery"],
   alternates: { canonical: "https://ghxstship.tours/gallery" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .masonry { columns: 3; column-gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
   @media (max-width: 960px) { .masonry { columns: 2; } }
   @media (max-width: 480px) { .masonry { columns: 1; } }
@@ -36,7 +36,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">The Gallery</p>
   <h1 className="page-h1">Beyond the Scenes.</h1>
-  <p className="lede">Photography and video from our builds — festivals, concerts and tours, brand activations, immersive worlds, and game-day production, shot on site while the work was up. Every image opens full size in a new tab.</p>
+  <p className="lede">Photography and video from our builds, festivals, concerts and tours, brand activations, immersive worlds, and game-day production, shot on site while the work was up. Every image opens full size in a new tab.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -79,7 +79,7 @@ export default function Page() {
       <span className="cap"><b>Factory Town · Hialeah</b><span className="tag tag-neutral">Festival</span></span>
     </a>
   </div>
-  <p className="gal-note text-muted">Placeholder imagery — real production photography &amp; video drop in here</p>
+  <p className="gal-note text-muted">Placeholder imagery. Real production photography &amp; video drop in here</p>
 </section>
 
 <section className="band-dark close-cta"><div className="wrap">

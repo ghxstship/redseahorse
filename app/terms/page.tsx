@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .legal { max-width: 72ch; }
   .legal h2 { font-size: 1.467rem; margin: clamp(32px, 4vw, 44px) 0 10px; }
   .legal p, .legal li { line-height: 1.7; color: color-mix(in srgb, var(--color-text) 82%, transparent); }
@@ -38,7 +38,7 @@ export default function Page() {
   <p>This website is operated by GHXSTSHIP Industries LLC, a professional services firm headquartered in Miami, Florida. These terms are an agreement between you and GHXSTSHIP Industries LLC. They apply to this website only; work we do for clients is governed by separate written agreements, not by this page.</p>
 
   <h2>Our Content</h2>
-  <p>Everything on this site that we created — the text, layouts, graphics, logos, and the design system it's built in — belongs to GHXSTSHIP Industries LLC or its licensors and is protected by copyright and other intellectual property laws. You may browse the site and share links to it. You may not copy, republish, scrape, or use our content commercially without our written permission. Photography sourced from third parties remains the property of its respective owners.</p>
+  <p>Everything on this site that we created, the text, layouts, graphics, logos, and the design system it's built in, belongs to GHXSTSHIP Industries LLC or its licensors and is protected by copyright and other intellectual property laws. You may browse the site and share links to it. You may not copy, republish, scrape, or use our content commercially without our written permission. Photography sourced from third parties remains the property of its respective owners.</p>
 
   <h2>Trademarks</h2>
   <p>GHXSTSHIP, ATLVS, COMPVSS, GVTEWAY, and LEG3ND, along with the associated logos and marks, are trademarks of GHXSTSHIP Industries LLC. Nothing on this site grants you a license to use them. Don't use our marks in a way that suggests endorsement, affiliation, or sponsorship that doesn't exist.</p>
@@ -57,7 +57,7 @@ export default function Page() {
   <p>The site links to external sites and services, including our platform sites. Those destinations have their own terms and privacy policies, and we're not responsible for their content or practices. A link from us is not an endorsement of everything at the other end.</p>
 
   <h2>No Warranty</h2>
-  <p>The site and its content are provided as is and as available. We work to keep the information current and accurate, but we make no warranties of any kind, express or implied, about the site — including its availability, accuracy, or fitness for a particular purpose. Content on this site is general information, not professional advice for your specific project; that's what an engagement is for.</p>
+  <p>The site and its content are provided as is and as available. We work to keep the information current and accurate, but we make no warranties of any kind, express or implied, about the site, including its availability, accuracy, or fitness for a particular purpose. Content on this site is general information, not professional advice for your specific project; that's what an engagement is for.</p>
 
   <h2>Limitation of Liability</h2>
   <p>To the fullest extent permitted by law, GHXSTSHIP Industries LLC will not be liable for any indirect, incidental, consequential, special, or punitive damages arising out of your use of, or inability to use, this website. Where liability cannot be excluded, it is limited to the maximum extent the law allows. Nothing in these terms limits liability that cannot lawfully be limited.</p>
@@ -84,7 +84,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"Terms of Use — GHXSTSHIP","url":"https://ghxstship.tours/terms","description":"Terms of use for the GHXSTSHIP website: content ownership, trademarks, acceptable use, disclaimers, and governing law.","dateModified":"2026-07-24"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"Terms of Use | GHXSTSHIP","url":"https://ghxstship.tours/terms","description":"Terms of use for the GHXSTSHIP website: content ownership, trademarks, acceptable use, disclaimers, and governing law.","dateModified":"2026-07-24"}` }} />
     </>
   );
 }

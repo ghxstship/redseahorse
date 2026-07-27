@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Industries",
-  description: "The industries GHXSTSHIP serves: festivals and cultural moments, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast \u2014 plus premium hospitality, luxury retail, health and wellness, auto and motorsports, corporate and private, and philanthropy.",
+  description: "The industries GHXSTSHIP serves: festivals and cultural moments, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast, plus premium hospitality, luxury retail, health and wellness, auto and motorsports, corporate and private, and philanthropy.",
   keywords: ["festival production company", "concert tour production", "brand activation agency", "immersive experience design", "sporting event production", "broadcast production company", "experiential production industries"],
   alternates: { canonical: "https://ghxstship.tours/destinations" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .mcard { border: 1px solid var(--color-divider); background: var(--color-bg); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
   .mcard .media { aspect-ratio: 4 / 3; overflow: hidden; }
   .mcard .media img { width: 100%; height: 100%; object-fit: cover; }

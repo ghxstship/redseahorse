@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: {
     // Short on purpose: search shows ~60 characters, and the four services
     // read better in the description than truncated out of a title.
-    default: "GHXSTSHIP — Live & Experiential Production, Miami",
-    template: "%s — GHXSTSHIP",
+    default: "Experiential Production & Technology, Miami | GHXSTSHIP",
+    template: "%s | GHXSTSHIP",
   },
   description:
     "One accountable partner for live and experiential projects: experiential design & production, venue & site operations, tour & talent management, and technology & systems engineering. Headquartered in Miami.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 /* The sticky header is black in every theme, so the browser chrome that abuts
-   it is too — one value, no per-scheme split. */
+   it is too, one value, no per-scheme split. */
 export const viewport: Viewport = {
   themeColor: "#000000",
   colorScheme: "light dark",

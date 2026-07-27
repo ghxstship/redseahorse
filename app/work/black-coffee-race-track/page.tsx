@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Black Coffee at the Race Track \u2014 Case Study",
-  description: "Black Coffee at the Race Track \u2014 the first dance music event ever staged at Hialeah Park, the 1922 racetrack, presented by Club Space for Miami Music Week 2026 with Carlita and Kaz James.",
+  title: "Black Coffee at the Race Track | Case Study",
+  description: "Black Coffee at the Race Track, the first dance music event ever staged at Hialeah Park, the 1922 racetrack, presented by Club Space for Miami Music Week 2026 with Carlita and Kaz James.",
   keywords: ["Hialeah Park racetrack event", "Black Coffee Miami", "Miami Music Week 2026", "Club Space", "open-air festival production", "racetrack event production"],
   alternates: { canonical: "https://ghxstship.tours/work/black-coffee-race-track" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -38,7 +38,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Case Study · Concert &amp; Tour Production</p>
   <h1 className="page-h1">Black Coffee at the Race Track.</h1>
-  <p className="lede">The first dance music event ever staged at Hialeah Park — an open-air build on a 1922 racetrack, presented by Club Space for Miami Music Week 2026.</p>
+  <p className="lede">The first dance music event ever staged at Hialeah Park, an open-air build on a 1922 racetrack, presented by Club Space for Miami Music Week 2026.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · Club Space</span>
     <span className="tag tag-neutral">Venue · Hialeah Park</span>
@@ -61,7 +61,7 @@ export default function Page() {
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>Hialeah Park is a landmark, not a venue. Opened in 1922 and redesigned in the thirties around gardens and flamingo pools, it had never hosted a dance music event — which meant there was no infrastructure to inherit and no precedent to copy. Everything an open-air show needs had to be brought in and taken back out.</p>
+  <p>Hialeah Park is a landmark, not a venue. Opened in 1922 and redesigned in the thirties around gardens and flamingo pools, it had never hosted a dance music event, which meant there was no infrastructure to inherit and no precedent to copy. Everything an open-air show needs had to be brought in and taken back out.</p>
   <p>And the site came with a constraint no production rider covers: the park's flamingos, imported from Cuba in 1934, had to be kept away from the music and otherwise undisturbed.</p>
 
   <h2>The Approach</h2>
@@ -81,7 +81,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. The public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://www.bizbash.com/event-production-planning/miami-music-week-2026-inside-wmc-ultra-edm-marathons-and-standout-activations" target="_blank" rel="noopener"><span className="row-title">Inside Miami Music Week 2026</span><span className="row-sub">BizBash</span><span className="row-sub">2026</span></a>
     <a className="row-line" href="https://worldredeye.com/2026/03/miami-music-week-2026-black-coffee-carlita-at-the-racetrack/" target="_blank" rel="noopener"><span className="row-title">Miami Music Week 2026: Black Coffee &amp; Carlita at the Racetrack</span><span className="row-sub">World Red Eye</span><span className="row-sub">2026-03</span></a>

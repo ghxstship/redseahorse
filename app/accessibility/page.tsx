@@ -71,7 +71,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"Accessibility Statement — GHXSTSHIP","url":"https://ghxstship.tours/accessibility","description":"GHXSTSHIP's accessibility conformance statement for ghxstship.tours."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"Accessibility Statement | GHXSTSHIP","url":"https://ghxstship.tours/accessibility","description":"GHXSTSHIP's accessibility conformance statement for ghxstship.tours."}` }} />
     </>
   );
 }

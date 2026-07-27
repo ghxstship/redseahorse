@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Start a Project",
-  description: "Start a project with GHXSTSHIP \u2014 experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering. Tell us what you're building and we'll scope it, crew it, and run it.",
+  description: "Start a project with GHXSTSHIP, experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering. Tell us what you're building and we'll scope it, crew it, and run it.",
   keywords: ["contact GHXSTSHIP", "start a project", "experiential production inquiry", "event production consultation"],
   alternates: { canonical: "https://ghxstship.tours/contact" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .cgrid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
   @media (max-width: 960px) { .cgrid { grid-template-columns: 1fr; } }
   .contact-form .field { margin-bottom: 16px; }
@@ -72,7 +72,7 @@ export default function Page() {
     <details className="faq-item"><summary className="faq-q">What services do you provide?</summary><div className="faq-a">Four: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering. Engage one, or all four as one accountable partner.</div></details>
     <details className="faq-item"><summary className="faq-q">What kinds of projects do you take on?</summary><div className="faq-a">Festivals, concerts and tours, brand activations, immersive experiences, cruise ships, amusement parks, sporting events, and TV, film &amp; broadcast, from single-night shows to multi-weekend builds.</div></details>
     <details className="faq-item"><summary className="faq-q">Where do you operate?</summary><div className="faq-a">Nationwide, from eight locations. The headquarters is Miami, with regional offices in Los Angeles, Chicago, and New York City; satellite offices are Nashville, Denver, Las Vegas, and Phoenix. Someone local in the room, the same standard everywhere.</div></details>
-    <details className="faq-item"><summary className="faq-q">How do engagements run?</summary><div className="faq-a">Every engagement walks the same nine-phase XPMS 2.6 lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</div></details>
+    <details className="faq-item"><summary className="faq-q">How do engagements run?</summary><div className="faq-a">Every engagement walks the same nine-phase XPMS 2.6 lifecycle: Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</div></details>
   </div>
 </div></section>
 
@@ -80,7 +80,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ContactPage","name":"Start a Project — GHXSTSHIP","url":"https://ghxstship.tours/contact","description":"Start a project with GHXSTSHIP: experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ContactPage","name":"Start a Project | GHXSTSHIP","url":"https://ghxstship.tours/contact","description":"Start a project with GHXSTSHIP: experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering."}` }} />
     </>
   );
 }

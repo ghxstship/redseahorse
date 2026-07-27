@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Salvage City Supper Club \u2014 Case Study",
-  description: "Salvage City Supper Club \u2014 a post-apocalyptic immersive dinner show inside EDC Las Vegas: a 60-minute, five-course seated experience with a dozen performers, run inside a working festival footprint.",
+  title: "Salvage City Supper Club | Case Study",
+  description: "Salvage City Supper Club, a post-apocalyptic immersive dinner show inside EDC Las Vegas: a 60-minute, five-course seated experience with a dozen performers, run inside a working festival footprint.",
   keywords: ["premium hospitality case study", "festival hospitality production", "immersive dinner show", "EDC Las Vegas", "Nomads Land", "supper club production"],
   alternates: { canonical: "https://ghxstship.tours/work/salvage-city-supper-club" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -38,7 +38,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Case Study · Premium Hospitality</p>
   <h1 className="page-h1">Salvage City Supper Club.</h1>
-  <p className="lede">A five-course, sixty-minute immersive dinner show running inside a working festival footprint at EDC Las Vegas — installed, run, and struck on the festival&#x27;s clock.</p>
+  <p className="lede">A five-course, sixty-minute immersive dinner show running inside a working festival footprint at EDC Las Vegas, installed, run, and struck on the festival&#x27;s clock.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · Insomniac</span>
     <span className="tag tag-neutral">Venue · EDC Las Vegas</span>
@@ -61,7 +61,7 @@ export default function Page() {
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>Insomniac needed a premium seated experience that could live inside <strong>EDC Las Vegas</strong> without competing with it — a fully realised world guests felt they had stumbled onto, sited in Nomads Land, inside a festival footprint with its own identity, its own technical constraints, and an audience that has seen everything.</p>
+  <p>Insomniac needed a premium seated experience that could live inside <strong>EDC Las Vegas</strong> without competing with it, a fully realised world guests felt they had stumbled onto, sited in Nomads Land, inside a festival footprint with its own identity, its own technical constraints, and an audience that has seen everything.</p>
   <p>The constraints were real: a fixed footprint, a hard load-in window against the festival's own build, and a guest experience that had to stay intimate while turning over night after night.</p>
 
   <h2>The Approach</h2>
@@ -70,7 +70,7 @@ export default function Page() {
   <div className="pull"><p>A world guests felt they&#x27;d stumbled onto, installed and run and struck on the festival&#x27;s clock.</p></div>
 
   <h2>The Result</h2>
-  <p>The format returned to EDC Las Vegas — the clearest result an experience like this can post, and the reason the trade write-ups lead on <em>returns to</em> rather than <em>debuts at</em>.</p>
+  <p>The format returned to EDC Las Vegas, the clearest result an experience like this can post, and the reason the trade write-ups lead on <em>returns to</em> rather than <em>debuts at</em>.</p>
   <p>Salvage City is now a repeatable format: proof that a seated, catered, performed world can be delivered inside a live festival footprint without either one compromising the other. Attendance and sell-through figures publish here as they clear client review.</p>
 
   <h2>The Credits</h2>
@@ -81,9 +81,9 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. The public record of what was built.</p>
   <div className="press-rows">
-    <a className="row-line" href="https://lasvegas.electricdaisycarnival.com/tickets/salvage-city/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club — EDC Las Vegas</span><span className="row-sub">Insomniac / EDC Las Vegas · primary source</span><span className="row-sub">2026</span></a>
+    <a className="row-line" href="https://lasvegas.electricdaisycarnival.com/tickets/salvage-city/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club, EDC Las Vegas</span><span className="row-sub">Insomniac / EDC Las Vegas · primary source</span><span className="row-sub">2026</span></a>
     <a className="row-line" href="https://gayety.com/salvage-city-edc-immersive-dinner-show" target="_blank" rel="noopener"><span className="row-title">Salvage City: EDC&#x27;s Decadent Post-Apocalyptic Dinner Show</span><span className="row-sub">Gayety</span><span className="row-sub">2025</span></a>
     <a className="row-line" href="https://whatnow.com/las-vegas/restaurants/salvage-city-supper-club-returns-to-edc-las-vegas/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club Returns to EDC Las Vegas</span><span className="row-sub">What Now Las Vegas</span><span className="row-sub">2025</span></a>
     <a className="row-line" href="https://www.salvagecitysupperclub.com/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club</span><span className="row-sub">Salvage City Supper Club · primary source</span><span className="row-sub">current</span></a>

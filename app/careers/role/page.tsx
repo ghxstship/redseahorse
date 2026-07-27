@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Production Manager",
-  description: "Production Manager role at GHXSTSHIP \u2014 own on-site load-in, build, crew calls, and the day-of standard for experiential and entertainment productions. Miami, full-time.",
+  description: "Production Manager role at GHXSTSHIP, own on-site load-in, build, crew calls, and the day-of standard for experiential and entertainment productions. Miami, full-time.",
   keywords: ["production manager job", "live event production manager", "festival production jobs", "experiential production careers", "Miami event production jobs"],
   alternates: { canonical: "https://ghxstship.tours/careers/role" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 14px; }
   .jd { display: grid; grid-template-columns: 1.6fr 0.8fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
   @media (max-width: 960px) { .jd { grid-template-columns: 1fr; } }
@@ -37,7 +37,7 @@ export default function Page() {
   <p className="kicker">Careers · Open Role</p>
   <div className="tag-row"><span className="tag tag-neutral">Production</span><span className="tag tag-outline">Full-time</span><span className="tag tag-neutral">Miami, FL</span></div>
   <h1 className="page-h1">Production Manager.</h1>
-  <p className="lede">The Production Manager runs the floor build and the technical package on site — owning load-in, the crew call, and the day-of standard for festivals, activations, and live events.</p>
+  <p className="lede">The Production Manager runs the floor build and the technical package on site, owning load-in, the crew call, and the day-of standard for festivals, activations, and live events.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -69,7 +69,7 @@ export default function Page() {
       <li>A network of trusted freelance crew</li>
     </ul>
     <h2>About GHXSTSHIP</h2>
-    <p>GHXSTSHIP is a professional services firm for live and experiential projects — experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering — headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
+    <p>GHXSTSHIP is a professional services firm for live and experiential projects, experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
     <div className="cta-row">
       <Link href="/careers/apply" className="btn btn-primary btn-lg">Apply for This Role</Link>
       <Link href="/careers" className="btn btn-secondary btn-lg">All Open Roles</Link>

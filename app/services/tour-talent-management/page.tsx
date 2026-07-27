@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .svc-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .svc-fig img { width: 100%; height: 100%; object-fit: cover; }
   .aud-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
@@ -58,7 +58,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">The Process</p>
   <h2 className="sec-h2">Nine Phases, Every City.</h2>
-  <p className="lede">Every production runs the same nine phases. A tour runs them as a cycle: the run is designed and routed once, then every city gets its own advance, install, show, and settlement. In Amplify, the road manager carries talent approvals and the per-city content — capture, recaps, and post-show delivery cleared with the artist party before the bus rolls. The road manager keeps hands on the work from Advance through Close, date after date.</p>
+  <p className="lede">Every production runs the same nine phases. A tour runs them as a cycle: the run is designed and routed once, then every city gets its own advance, install, show, and settlement. In Amplify, the road manager carries talent approvals and the per-city content, capture, recaps, and post-show delivery cleared with the artist party before the bus rolls. The road manager keeps hands on the work from Advance through Close, date after date.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>

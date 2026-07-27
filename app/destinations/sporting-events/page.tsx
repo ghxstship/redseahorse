@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Sporting Events</p>
     <h1 className="page-h1">Sporting <span style={{color: 'var(--color-accent-700)'}}>Events.</span></h1>
-    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Sporting Events, we deliver stadium activations, fan experiences, and game-day production — for leagues, teams, brands, and venues — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Sporting Events, we deliver stadium activations, fan experiences, and game-day production. We do it for leagues, teams, brands, and venues, on the same nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>
@@ -122,9 +122,9 @@ export default function Page() {
   <h2 className="sec-h2">Sporting FAQ.</h2>
   <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
-    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for sporting events?</summary><div className="faq-a">End-to-end sporting event production: fan experience design, field and stadium activations, broadcast-ready staging, technical production, sponsorship integration, and crowd operations — on our nine-phase XPMS 2.6 lifecycle.</div></details>
+    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for sporting events?</summary><div className="faq-a">End-to-end sporting event production: fan experience design, field and stadium activations, broadcast-ready staging, technical production, sponsorship integration, and crowd operations, on our nine-phase XPMS 2.6 lifecycle.</div></details>
     <details className="faq-item"><summary className="faq-q">Who is sporting production for?</summary><div className="faq-a">Leagues, teams, venues, federations, and brand sponsors who need a single accountable production partner.</div></details>
-    <details className="faq-item"><summary className="faq-q">Can you produce broadcast-ready moments?</summary><div className="faq-a">Yes — staging and technical are built to broadcast standards for in-venue and on-air.</div></details>
+    <details className="faq-item"><summary className="faq-q">Can you produce broadcast-ready moments?</summary><div className="faq-a">Yes, staging and technical are built to broadcast standards for in-venue and on-air.</div></details>
   </div>
 </div></section>
 
@@ -159,9 +159,9 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"Sporting Events","item":"https://ghxstship.tours/destinations/sporting-events"}]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, Venue & Site Operations, with logistics, crew, compliance, and analytics run by its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for sporting events?","acceptedAnswer":{"@type":"Answer","text":"End-to-end sporting event production: fan experience design, field and stadium activations, broadcast-ready staging, technical production, sponsorship integration, and crowd operations — on our nine-phase XPMS 2.6 lifecycle."}},
+ {"@type":"Question","name":"What does GHXSTSHIP do for sporting events?","acceptedAnswer":{"@type":"Answer","text":"End-to-end sporting event production: fan experience design, field and stadium activations, broadcast-ready staging, technical production, sponsorship integration, and crowd operations, on our nine-phase XPMS 2.6 lifecycle."}},
  {"@type":"Question","name":"Who is sporting production for?","acceptedAnswer":{"@type":"Answer","text":"Leagues, teams, venues, federations, and brand sponsors who need a single accountable production partner."}},
- {"@type":"Question","name":"Can you produce broadcast-ready moments?","acceptedAnswer":{"@type":"Answer","text":"Yes — staging and technical are built to broadcast standards for in-venue and on-air."}}
+ {"@type":"Question","name":"Can you produce broadcast-ready moments?","acceptedAnswer":{"@type":"Answer","text":"Yes, staging and technical are built to broadcast standards for in-venue and on-air."}}
 ]}` }} />
     </>
   );

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Selected Work",
-  description: "Selected work from GHXSTSHIP \u2014 festivals, concerts and tours, brand activations, immersive experiences, and sporting events designed, built, crewed, and launched end to end.",
+  description: "Selected work from GHXSTSHIP, festivals, concerts and tours, brand activations, immersive experiences, and sporting events designed, built, crewed, and launched end to end.",
   keywords: ["experiential production portfolio", "festival production case studies", "brand activation work", "immersive experience production", "live event production company"],
   alternates: { canonical: "https://ghxstship.tours/work/" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .work-grid { margin-top: clamp(28px, 4vw, 44px); }
 ` }} />
       
@@ -23,7 +23,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Selected Work</p>
   <h1 className="page-h1">Every Build, Logged.</h1>
-  <p className="lede">These are our case studies: shows we designed, built, crewed, and ran end to end across every industry we work — festivals, concerts and tours, brand activations, immersive experiences, premium hospitality, technology implementation, auto and motorsports, and sporting events. The numbers here are the ones that actually moved.</p>
+  <p className="lede">These are our case studies: shows we designed, built, crewed, and ran end to end across every industry we work, festivals, concerts and tours, brand activations, immersive experiences, premium hospitality, technology implementation, auto and motorsports, and sporting events. The numbers here are the ones that actually moved.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 

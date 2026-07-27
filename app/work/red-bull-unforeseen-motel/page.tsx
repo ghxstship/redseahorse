@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Red Bull Unforeseen Motel \u2014 Case Study",
-  description: "Red Bull Unforeseen Motel \u2014 a motel-world brand environment built inside III Points at Mana Wynwood, Miami, 2024, programmed with Club Space residents and local artists rather than a logo on a stage.",
+  title: "Red Bull Unforeseen Motel | Case Study",
+  description: "Red Bull Unforeseen Motel, a motel-world brand environment built inside III Points at Mana Wynwood, Miami, 2024, programmed with Club Space residents and local artists rather than a logo on a stage.",
   keywords: ["Red Bull Unforeseen", "III Points Miami 2024", "Mana Wynwood", "brand activation case study", "festival brand environment", "Club Space residents"],
   alternates: { canonical: "https://ghxstship.tours/work/red-bull-unforeseen-motel" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -38,7 +38,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Case Study · Brand Activations</p>
   <h1 className="page-h1">Red Bull Unforeseen Motel.</h1>
-  <p className="lede">A motel built inside a festival — Red Bull&#x27;s environment at III Points 2024, programmed with Club Space residents and Miami locals instead of a logo on a stage.</p>
+  <p className="lede">A motel built inside a festival: Red Bull&#x27;s environment at III Points 2024, programmed with Club Space residents and Miami locals instead of a logo on a stage.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · Red Bull</span>
     <span className="tag tag-neutral">Venue · III Points</span>
@@ -66,7 +66,7 @@ export default function Page() {
   <p>That sets a harder bar. A motel-world environment has to read as a place from the moment someone walks in, hold a crowd across two festival days, and sit inside a festival footprint that is already competing for the same attention.</p>
 
   <h2>The Approach</h2>
-  <p>Design built the world — a motel, rendered fully enough to behave like one rather than to photograph like one. Advance and Install sited and built it inside the III Points footprint against the festival's own build schedule.</p>
+  <p>Design built the world, a motel, rendered fully enough to behave like one rather than to photograph like one. Advance and Install sited and built it inside the III Points footprint against the festival's own build schedule.</p>
   <p>The programming was the point and was curated as such: eight Club Space residents and more than a dozen local artists, including back-to-back pairings, with III Points' own leadership on the line-up. Operate ran it across both festival days.</p>
   <div className="pull"><p>Somewhere worth going without the logo on it.</p></div>
 
@@ -82,7 +82,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. The public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://worldredeye.com/2024/10/iii-points-2024/" target="_blank" rel="noopener"><span className="row-title">III Points 2024</span><span className="row-sub">World Red Eye</span><span className="row-sub">2024-10</span></a>
     <a className="row-line" href="https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/" target="_blank" rel="noopener"><span className="row-title">Here Are the Set Times for III Points 2024</span><span className="row-sub">Miami New Times</span><span className="row-sub">2024-10</span></a>

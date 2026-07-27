@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Concerts &amp; Tours</p>
     <h1 className="page-h1">Concerts <span style={{color: 'var(--color-accent-700)'}}>&amp; Tours.</span></h1>
-    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Concert &amp; Tour Production, we deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our nine-phase XPMS 2.6 production lifecycle, with the road itself run by our Tour &amp; Talent Management vertical.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Concert &amp; Tour Production, we deliver show design, technical production, and multi-city routing for live music. We do it for artists, tour managers, and promoters, on the same nine-phase XPMS 2.6 production lifecycle, with the road itself run by our Tour &amp; Talent Management vertical.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>
@@ -57,7 +57,7 @@ export default function Page() {
 <section className="wrap sec-pad">
   <p className="kicker">The Process</p>
   <h2 className="sec-h2">Touring, Nine Phases.</h2>
-  <p className="lede">Every project runs the same nine phases, Discover to Close.</p>
+  <p className="lede">Every project runs the same nine phases: Discover to Close.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
@@ -122,7 +122,7 @@ export default function Page() {
   <h2 className="sec-h2">Touring FAQ.</h2>
   <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
-    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for tours?</summary><div className="faq-a">End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management — run through our <Link href="/services/tour-talent-management">Tour &amp; Talent Management</Link> vertical on our nine-phase XPMS 2.6 lifecycle.</div></details>
+    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for tours?</summary><div className="faq-a">End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management, run through our <Link href="/services/tour-talent-management">Tour &amp; Talent Management</Link> vertical on our nine-phase XPMS 2.6 lifecycle.</div></details>
     <details className="faq-item"><summary className="faq-q">Who is tour production for?</summary><div className="faq-a">Artists and management, tour managers, promoters, and labels who need one accountable production partner across every city.</div></details>
     <details className="faq-item"><summary className="faq-q">How many cities can you route?</summary><div className="faq-a">From single-market runs to multi-continent routings, with full logistics, advancing, and settlements.</div></details>
   </div>
@@ -159,7 +159,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"Concert & Tour Production","item":"https://ghxstship.tours/destinations/concert-tour-production"}]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, Venue & Site Operations, with logistics, crew, compliance, and analytics run by its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for tours?","acceptedAnswer":{"@type":"Answer","text":"End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management — run through our Tour & Talent Management vertical on our nine-phase XPMS 2.6 lifecycle."}},
+ {"@type":"Question","name":"What does GHXSTSHIP do for tours?","acceptedAnswer":{"@type":"Answer","text":"End-to-end concert and tour production: show design and staging, technical production, routing, advancing, trucking, backline, and tour management, run through our Tour & Talent Management vertical on our nine-phase XPMS 2.6 lifecycle."}},
  {"@type":"Question","name":"Who is tour production for?","acceptedAnswer":{"@type":"Answer","text":"Artists and management, tour managers, promoters, and labels who need one accountable production partner across every city."}},
  {"@type":"Question","name":"How many cities can you route?","acceptedAnswer":{"@type":"Answer","text":"From single-market runs to multi-continent routings, with full logistics, advancing, and settlements."}}
 ]}` }} />

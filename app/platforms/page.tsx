@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Platforms",
-  description: "ATLVS, COMPVSS, GVTEWAY, and LEG3ND \u2014 the four in-house platforms behind GHXSTSHIP engagements: the operator console, site and venue operations, the public interface and marketplace, and the knowledge layer.",
+  description: "ATLVS, COMPVSS, GVTEWAY, and LEG3ND, the four in-house platforms behind GHXSTSHIP engagements: the operator console, site and venue operations, the public interface and marketplace, and the knowledge layer.",
   keywords: ["event production software", "production ERP", "crew management software", "deskless workforce app", "event marketplace", "production knowledge base", "ATLVS", "COMPVSS", "GVTEWAY", "LEG3ND"],
   alternates: { canonical: "https://ghxstship.tours/platforms" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .plat-sec { padding-block: clamp(40px, 6vw, 80px); }
   .plat-name { font-size: clamp(34px, 4.6vw, 56px); line-height: 0.98; letter-spacing: -0.02em; margin-bottom: 12px; }
   .plat-aud { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }
@@ -151,7 +151,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"The Platforms — GHXSTSHIP","url":"https://ghxstship.tours/platforms","description":"The four in-house platforms behind GHXSTSHIP engagements: ATLVS, COMPVSS, GVTEWAY, and LEG3ND."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"The Platforms | GHXSTSHIP","url":"https://ghxstship.tours/platforms","description":"The four in-house platforms behind GHXSTSHIP engagements: ATLVS, COMPVSS, GVTEWAY, and LEG3ND."}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"ATLVS","url":"https://atlvs.pro","applicationCategory":"BusinessApplication","description":"The operator console for experiential productions: ERP, CRM, and project management on one record, from estimate to settlement. In build."}},{"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"COMPVSS","url":"https://atlvs.pro/compvss","applicationCategory":"BusinessApplication","description":"Site and venue operations for deskless crews: rosters, advancing, credentials, and day-of coordination in an installable field app."}},{"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"GVTEWAY","url":"https://atlvs.pro/gvteway","applicationCategory":"BusinessApplication","description":"The public interface and marketplace: gigs, open calls, talent and crew profiles, vendor directories, and RFQs, with ticketing and stakeholder portals in build."}},{"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"LEG3ND","url":"https://atlvs.pro/legend","applicationCategory":"BusinessApplication","description":"The knowledge layer: the standard, courses and certifications, the priced catalog, signage, and the compliance engine."}}]}` }} />
     </>
   );

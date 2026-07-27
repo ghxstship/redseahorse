@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PATR\u00d3N Cristalino x Becky G \u2014 Case Study",
-  description: "PATR\u00d3N Cristalino x Becky G \u2014 the US launch of PATR\u00d3N Cristalino on Olvera Street, Los Angeles, September 2024, with Becky G, Gabito Ballesteros and Tito Double P.",
+  title: "PATR\u00d3N Cristalino x Becky G | Case Study",
+  description: "PATR\u00d3N Cristalino x Becky G, the US launch of PATR\u00d3N Cristalino on Olvera Street, Los Angeles, September 2024, with Becky G, Gabito Ballesteros and Tito Double P.",
   keywords: ["PATRON Cristalino launch", "Becky G", "Olvera Street Los Angeles", "product launch event production", "spirits launch activation", "Musica Mexicana event"],
   alternates: { canonical: "https://ghxstship.tours/work/patron-cristalino-becky-g" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -38,7 +38,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Case Study · Product Launch</p>
   <h1 className="page-h1">PATRÓN Cristalino x Becky G.</h1>
-  <p className="lede">The US launch of PATRÓN Cristalino, staged on Olvera Street — a tasting, a dinner and a live show with Becky G, Gabito Ballesteros and Tito Double P.</p>
+  <p className="lede">The US launch of PATRÓN Cristalino, staged on Olvera Street, a tasting, a dinner and a live show with Becky G, Gabito Ballesteros and Tito Double P.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · PATRÓN</span>
     <span className="tag tag-neutral">Venue · Olvera Street</span>
@@ -62,17 +62,17 @@ export default function Page() {
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>A spirits launch on <strong>Olvera Street</strong> — the oldest street in Los Angeles and the heart of the city's Mexican-American history — is a cultural venue before it is an event site. Get the register wrong and a brand launch on that ground reads as appropriation rather than celebration.</p>
+  <p>A spirits launch on <strong>Olvera Street</strong>, the oldest street in Los Angeles and the heart of the city's Mexican-American history, is a cultural venue before it is an event site. Get the register wrong and a brand launch on that ground reads as appropriation rather than celebration.</p>
   <p>The brief was a US product launch that worked as a cultural moment: an intimate tasting, a paired menu, and a live show, on a public historic street, for an audience and a press corps who would notice immediately if it were hollow.</p>
 
   <h2>The Approach</h2>
-  <p>Design and Advance handled a build on a historic public street — access, permissions, and a room that had to feel intimate on ground that is not private. Procure and Build delivered the tasting environment and the stage.</p>
-  <p>Talent and show management ran the performance side: Becky G headlining with an unreleased single alongside her catalogue, and the first joint appearance with Gabito Ballesteros and Tito Double P — a booking that only works if the run-of-show and the artist logistics hold. The evening opened on a tasting of Añejo and Cristalino paired with chocolates and tacos, then moved to the show.</p>
+  <p>Design and Advance handled a build on a historic public street, access, permissions, and a room that had to feel intimate on ground that is not private. Procure and Build delivered the tasting environment and the stage.</p>
+  <p>Talent and show management ran the performance side: Becky G headlining with an unreleased single alongside her catalogue, and the first joint appearance with Gabito Ballesteros and Tito Double P, a booking that only works if the run-of-show and the artist logistics hold. The evening opened on a tasting of Añejo and Cristalino paired with chocolates and tacos, then moved to the show.</p>
   <div className="pull"><p>A launch that had to read as a celebration, not a takeover.</p></div>
 
   <h2>The Result</h2>
   <p>The most broadly and warmly covered project in the archive. <strong>WWD</strong> ran a photo gallery, <strong>¡HOLA!</strong> covered the Selena tribute, and The Knockturnal, Loop, LA Guestlist and identify LA all filed from the night.</p>
-  <p>Every piece led on the performances and the cultural framing rather than the product — which, for a launch, is the result.</p>
+  <p>Every piece led on the performances and the cultural framing rather than the product, which, for a launch, is the result.</p>
 
   <h2>The Credits</h2>
   <p><strong>Client</strong> PATRÓN · <strong>Venue</strong> Downtown Los Angeles · <strong>Year</strong> 2024 · <strong>Services</strong> Experiential Design &amp; Production, Tour &amp; Talent Management.</p>
@@ -82,7 +82,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. The public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://wwd.com/pop-culture/culture-news/gallery/becky-g-bryan-hearns-custom-sequins-outfit-patron-photos-1236615778/" target="_blank" rel="noopener"><span className="row-title">Becky G Sparkles in Silver Sequins With Custom Look &amp; More Arrivals for Patrón Cristalino Launch</span><span className="row-sub">WWD</span><span className="row-sub">2024-09</span></a>
     <a className="row-line" href="https://www.hola.com/us/entertainment/20240916718613/becky-g-pays-tribute-to-selena-quintanilla-in-los-angeles/" target="_blank" rel="noopener"><span className="row-title">Becky G pays tribute to Selena Quintanilla in Los Angeles</span><span className="row-sub">¡HOLA! US</span><span className="row-sub">2024-09-16</span></a>

@@ -1,4 +1,4 @@
-/* GHXSTSHIP — contact form handler (Vercel Serverless Function).
+/* GHXSTSHIP contact form handler (Vercel Serverless Function).
  *
  * Emails the studio when a form is submitted AND sends the submitter a branded
  * auto-reply receipt with next steps + social links. Both emails use the
@@ -8,12 +8,12 @@
  * Env (Vercel → Project → Settings → Environment Variables):
  *   RESEND_API_KEY  (required)  Resend key, re_...
  *   RESEND_FROM     (optional)  overrides the sender; must be on a Resend-verified
- *                               domain. Defaults to "GHXSTSHIP <ghxstship@atlvs.pro>" —
+ *                               domain. Defaults to "GHXSTSHIP <ghxstship@atlvs.pro>":
  *                               deliberately atlvs.pro, not ghxstship.tours: an inquiry
  *                               becomes a project tracked in ATLVS, so the sending identity
  *                               matches the system that owns the record. atlvs.pro is the
  *                               verified domain in Resend; ghxstship.tours is NOT verified
- *                               there, so do not "correct" this to a .tours address —
+ *                               there, so do not "correct" this to a .tours address:
  *                               Resend would reject every send. Must be bare
  *                               "email@example.com" or "Name <email@example.com>", with no
  *                               surrounding quotes (Vercel stores the value literally, and
@@ -25,7 +25,7 @@ var RESEND_ENDPOINT = "https://api.resend.com/emails";
 // bare address, or display name + <address>
 var FROM_RE = /^(?:[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+|[^<>]{1,64}<\s*[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+\s*>)$/;
 // Sender must be on a domain verified in Resend. The plan covers atlvs.pro,
-// so that is the built-in default — RESEND_FROM is now optional and only
+// so that is the built-in default. RESEND_FROM is now optional and only
 // needed to override it.
 var BRAND = "GHXSTSHIP";
 var DEFAULT_FROM = BRAND + " <ghxstship@atlvs.pro>";
@@ -36,7 +36,7 @@ var DEFAULT_TO = "julian.clarkson@ghxstship.pro";
 var SITE = "https://ghxstship.tours";
 var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-// Brand palette — literal hex, because email clients support neither CSS
+// Brand palette, literal hex, because email clients support neither CSS
 // custom properties nor color-mix(). Mirrors modernist.css: grayscale ground,
 // GHXSTSHIP green as the only accent, fill vs text roles kept distinct.
 var C = {
@@ -45,9 +45,9 @@ var C = {
   ink: "#000000",        // --color-text
   rule: "#9a9a9a",       // --color-divider, flattened from 40% black
   hair: "#d4d4d4",       // 1px inner rules
-  accent: "#2edb3a",     // --color-accent — FILLS ONLY
-  accentText: "#1b7c21", // --color-accent-700 — AA text on light
-  onAccent: "#001800",   // --color-on-accent — ink on green
+  accent: "#2edb3a",     // --color-accent, FILLS ONLY
+  accentText: "#1b7c21", // --color-accent-700, AA text on light
+  onAccent: "#001800",   // --color-on-accent, ink on green
   body: "#2b2b2b",       // body copy
   muted: "#5f5f5f",      // supporting
   faint: "#767676",      // labels
@@ -69,7 +69,7 @@ var ASSET_BASE = SITE;
 // touches all four edges. The older skull-bone.png sits on a 64x64 canvas with
 // ~47% empty padding, so every nominal size rendered about half as large as it
 // read on paper. Cropping the frame is what actually fixes "the logo looks small".
-var LOGO = ASSET_BASE + "/assets/skull-bone-mark.png"; // PNG — most clients won't render SVG
+var LOGO = ASSET_BASE + "/assets/skull-bone-mark.png"; // PNG, most clients won't render SVG
 // The flag matches the cap height of the letters beside it, as it does in the
 // site chrome: Bebas Neue caps are 0.72em, so 30px wordmark → 22px mark, and
 // the width follows the 1.304:1 crop. Native 480x368 keeps it crisp on retina.
@@ -80,7 +80,7 @@ var LOGO_W = Math.round(LOGO_H * 1.3043); // 29
 /* Dark mode. Email has no custom properties and no color-mix, and every style
    here is inline, so the only lever is a <style> block of !important overrides
    keyed to a class on each element. Apple Mail, iOS Mail, Outlook.com and
-   Outlook for Mac honour prefers-color-scheme this way. Gmail does not — it
+   Outlook for Mac honour prefers-color-scheme this way. Gmail does not, it
    runs its own partial inversion on the light palette, which the black
    masthead and the green button already survive. The values mirror the dark
    tokens in modernist.css. */
@@ -99,7 +99,7 @@ var EMAIL_CSS =
   ".e-step{background:#131313!important;border-color:#5a5a5a!important;color:#8f8f8f!important}" +
   "}";
 
-/* The wordmark is always Bebas — in the masthead and in the footer signature.
+/* The wordmark is always Bebas, in the masthead and in the footer signature.
    Everything around it stays in the body face, so only the mark switches. */
 function wordmark(text) {
   var i = String(text).indexOf(BRAND);
@@ -117,7 +117,7 @@ function esc(s) {
   });
 }
 
-/* Shared shell — Modernist in email-safe form: 600px column, 2px rules
+/* Shared shell. Modernist in email-safe form: 600px column, 2px rules
    instead of shadows, radius 0 everywhere, uppercase headings. The masthead
    is black in both schemes, exactly as the site header is. */
 function shell(opts) {
@@ -133,7 +133,7 @@ function shell(opts) {
     "<tr><td align=\"center\">" +
     '<table role="presentation" width="600" cellpadding="0" cellspacing="0" class="e-card" style="width:600px;max-width:100%;background:' + C.bg + ';border:1px solid ' + C.rule + '">' +
 
-    // masthead: solid black band carrying the white mark and wordmark. No tile —
+    // masthead: solid black band carrying the white mark and wordmark. No tile:
     // the mark is transparent, so the band itself is its ground. The flag is
     // set to the cap height of the letters and both cells align on that box.
     '<tr><td style="background:' + C.ink + ';padding:20px 28px">' +
@@ -176,7 +176,7 @@ function label(text) {
   return '<p class="e-accent" style="margin:22px 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(text) + "</p>";
 }
 
-/* Primary button — green fill, dark ink, square. Matches .btn-primary. */
+/* Primary button, green fill, dark ink, square. Matches .btn-primary. */
 function button(href, labelText) {
   return (
     '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:6px 0 8px"><tr>' +
@@ -187,7 +187,7 @@ function button(href, labelText) {
 }
 
 /* Numbered step list. `done` fills the marker green, matching the site's
-   phase strip. Square markers — the system carries no border radius. */
+   phase strip. Square markers, the system carries no border radius. */
 function steps(rows) {
   return (
     '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:2px 0 18px">' +
@@ -200,7 +200,7 @@ function steps(rows) {
           '<span' + (done ? "" : ' class="e-step"') + ' style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:' + (done ? C.accent : C.bg) + ';border:2px solid ' + (done ? C.accent : C.rule) + ';font-family:' + FONT + ';font-size:12px;font-weight:800;color:' + (done ? C.onAccent : C.faint) + '">' + s[0] + "</span></td>" +
           '<td style="padding:0 0 14px;vertical-align:top">' +
           '<div class="e-ink" style="font-family:' + FONT + ';font-weight:800;font-size:15px;color:' + C.ink + ';text-transform:uppercase">' + esc(s[1]) +
-          (done ? ' <span class="e-accent" style="font-weight:600;font-size:11px;letter-spacing:1px;color:' + C.accentText + '">— you are here</span>' : "") + "</div>" +
+          (done ? ' <span class="e-accent" style="font-weight:600;font-size:11px;letter-spacing:1px;color:' + C.accentText + '">· you are here</span>' : "") + "</div>" +
           '<div class="e-muted" style="font-family:' + FONT + ';font-size:14px;line-height:1.55;color:' + C.muted + ';margin-top:3px">' + esc(s[2]) + "</div>" +
           "</td></tr>"
         );
@@ -210,7 +210,7 @@ function steps(rows) {
   );
 }
 
-/* Social row — matches the four channels in the site footer. */
+/* Social row, matches the four channels in the site footer. */
 function social() {
   return (
     label("Follow along") +
@@ -231,7 +231,7 @@ function social() {
 
 var FOOT_TAG = "GHXSTSHIP · Venture Beyond.";
 
-/* Studio notification — the lead itself. Optimised for scanning: every
+/* Studio notification, the lead itself. Optimised for scanning: every
    submitted field as a labelled row, reply-to wired to the sender. */
 function notificationEmail(fields, name, email, opts) {
   opts = opts || {};
@@ -250,7 +250,7 @@ function notificationEmail(fields, name, email, opts) {
   return shell({
     eyebrow: opts.eyebrow || "New Inquiry",
     headline: opts.headline || accentWord("New", "Inquiry."),
-    preheader: (name ? name + " — " : "") + (opts.preheader || "new inquiry from the site"),
+    preheader: (name ? name + ", " : "") + (opts.preheader || "new inquiry from the site"),
     body: body,
     footer: FOOT_TAG + " · Sent from the site contact form",
   });
@@ -260,10 +260,10 @@ function notificationEmail(fields, name, email, opts) {
 function applicationReceiptEmail(name, role) {
   var first = name ? name.split(" ")[0] : "there";
   var body =
-    para("Thanks, " + esc(first) + " — your application" + (role ? ' for <strong class="e-ink" style="color:' + C.ink + '">' + esc(role) + "</strong>" : "") + " is in. A person reads every one, and if there is a fit you will hear from us directly.") +
+    para("Thanks, " + esc(first) + ", your application" + (role ? ' for <strong class="e-ink" style="color:' + C.ink + '">' + esc(role) + "</strong>" : "") + " is in. A person reads every one, and if there is a fit you will hear from us directly.") +
     label("How hiring works") +
     steps([
-      ["1", "The Read", "A lead on the team reads it. Not a filter, not a keyword match — the person you would actually work for.", false],
+      ["1", "The Read", "A lead on the team reads it. Not a filter, not a keyword match, the person you would actually work for.", false],
       ["2", "The Call", "Twenty minutes to hear what you want to build and to tell you honestly what the work is like.", false],
       ["3", "The Working Session", "A practical conversation with the department lead about real problems from real builds. No trivia, no whiteboard theatre.", false],
       ["4", "The Offer", "References, terms, a start date, and the name of the person you report to.", false],
@@ -282,13 +282,13 @@ function applicationReceiptEmail(name, role) {
 
 /* Inquiry auto-reply. The four steps are what actually happens next, matching
    the process described on the contact page. Named as the four things rather
-   than described as four actions — the site labels sections literally, and a
+   than described as four actions, the site labels sections literally, and a
    noun the reader can hold ("The Proposal") beats a verb phrase they have to
    parse. The last step is the work itself, so it carries the work's name. */
 function receiptEmail(name) {
   var first = name ? name.split(" ")[0] : "there";
   var body =
-    para("Thanks, " + esc(first) + " — your brief is in, and a producer has it now. You will hear back within one business day.") +
+    para("Thanks, " + esc(first) + ", your brief is in, and a producer has it now. You will hear back within one business day.") +
     label("What happens next") +
     steps([
       ["1", "The Brief", "What you just sent. It is logged, it is read by a person, and it is already with the producer who will own it.", true],
@@ -387,14 +387,14 @@ module.exports = async function handler(req, res) {
   var role = String(body.role || "").trim();
   var inquiryType = String(body["inquiry-type"] || "").trim();
 
-  /* Subjects. The two auto-replies are deliberately parallel and short — the
+  /* Subjects. The two auto-replies are deliberately parallel and short, the
      From line already says GHXSTSHIP, so repeating it in the subject spends
      the only characters a phone will show. Plain, confident, no filler and no
      travel metaphor: the reader wants to know we have the thing. The two
      studio notifications stay front-loaded for scanning in a full inbox. */
   var notifSubject, notifOpts, receiptSubject, receiptText, receiptHtml;
   if (isApplication) {
-    notifSubject = "New application — " + (role || "General") + " — " + (name || email);
+    notifSubject = "New application, " + (role || "General") + ", " + (name || email);
     notifOpts = {
       eyebrow: "New Application",
       headline: accentWord("New", "Application."),
@@ -403,28 +403,28 @@ module.exports = async function handler(req, res) {
     };
     receiptSubject = "We have your application.";
     receiptText =
-      "Thanks, " + (name || "there") + " — your application" + (role ? " for " + role : "") + " is in.\n\n" +
+      "Thanks, " + (name || "there") + ", your application" + (role ? " for " + role : "") + " is in.\n\n" +
       "How hiring works:\n" +
-      "1. The Read — a lead on the team reads it. Not a filter, not a keyword match.\n" +
-      "2. The Call — twenty minutes to hear what you want to build.\n" +
-      "3. The Working Session — a practical conversation with the department lead.\n" +
-      "4. The Offer — references, terms, a start date, and who you report to.\n\n" +
+      "1. The Read, a lead on the team reads it. Not a filter, not a keyword match.\n" +
+      "2. The Call, twenty minutes to hear what you want to build.\n" +
+      "3. The Working Session, a practical conversation with the department lead.\n" +
+      "4. The Offer, references, terms, a start date, and who you report to.\n\n" +
       "GHXSTSHIP · Venture Beyond.";
     receiptHtml = applicationReceiptEmail(name, role);
   } else {
-    notifSubject = "New brief — " + (inquiryType ? inquiryType + " — " : "") + (name || email);
+    notifSubject = "New brief, " + (inquiryType ? inquiryType + ", " : "") + (name || email);
     notifOpts = inquiryType
       ? { eyebrow: inquiryType, preheader: inquiryType + " from " + (name || email) }
       : {};
     receiptSubject = "We have your brief.";
     receiptText =
-      "Thanks, " + (name || "there") + " — your brief is in, and a producer has it now. " +
+      "Thanks, " + (name || "there") + ", your brief is in, and a producer has it now. " +
       "You will hear back within one business day.\n\n" +
       "What happens next:\n" +
-      "1. The Brief — logged, read by a person, already with the producer who will own it.\n" +
-      "2. The Consultation — a real conversation, not a pitch.\n" +
-      "3. The Proposal — scope, schedule, budget, and the lead accountable for the build.\n" +
-      "4. The Production — nine gated phases, Discover through Close.\n\n" +
+      "1. The Brief, logged, read by a person, already with the producer who will own it.\n" +
+      "2. The Consultation, a real conversation, not a pitch.\n" +
+      "3. The Proposal, scope, schedule, budget, and the lead accountable for the build.\n" +
+      "4. The Production, nine gated phases, Discover through Close.\n\n" +
       "GHXSTSHIP · Venture Beyond.";
     receiptHtml = receiptEmail(name);
   }
@@ -444,7 +444,7 @@ module.exports = async function handler(req, res) {
     }
 
     // Auto-reply receipt to the submitter. Deliverable from any verified
-    // domain — including the default — and suppressed only on Resend's shared
+    // domain, including the default, and suppressed only on Resend's shared
     // onboarding sender. Best-effort: never fails the request.
     if (!SHARED_SENDER_RE.test(from)) {
       try {

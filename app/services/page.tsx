@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "GHXSTSHIP runs four professional services as one team \u2014 experiential design &amp; production, venue &amp; site operations, tour &amp; talent management, and technology &amp; systems engineering \u2014 for festivals, tours, activations, and live events.",
+  description: "GHXSTSHIP runs four professional services as one team, experiential design &amp; production, venue &amp; site operations, tour &amp; talent management, and technology &amp; systems engineering, for festivals, tours, activations, and live events.",
   keywords: ["experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering", "event production services", "live event operations", "experiential production company"],
   alternates: { canonical: "https://ghxstship.tours/services" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .who-card { border-left: 3px solid var(--color-accent); background: var(--color-bg); border-top: 1px solid var(--color-divider); border-right: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 22px; }
   .who-card h3 { font-size: 1.133rem; margin: 0 0 6px; }
   .who-card p { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
@@ -62,7 +62,7 @@ export default function Page() {
 <section className="wrap sec-pad">
   <p className="kicker">The Process</p>
   <h2 className="sec-h2">9 Phases, First Line to Wrap.</h2>
-  <p className="lede">Every service walks the same nine-phase XPMS 2.6 production lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
+  <p className="lede">Every service walks the same nine-phase XPMS 2.6 production lifecycle: Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>

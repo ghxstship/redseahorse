@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Team",
-  description: "Meet the GHXSTSHIP team \u2014 the senior management team of executive producers, production directors, project managers, logistics and operations leads, and technical directors who deliver every experiential project.",
+  description: "Meet the GHXSTSHIP team, the senior management team of executive producers, production directors, project managers, logistics and operations leads, and technical directors who deliver every experiential project.",
   keywords: ["GHXSTSHIP team", "executive producer", "production director", "project manager", "operations director", "experiential production leadership"],
   alternates: { canonical: "https://ghxstship.tours/team" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .tier {
     font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;
     color: var(--color-accent-700); margin: clamp(28px, 4vw, 44px) 0 14px;
@@ -103,7 +103,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Team — GHXSTSHIP","url":"https://ghxstship.tours/team","description":"The senior management team of executive producers, production directors, project managers, logistics and operations leads, and technical directors who deliver every GHXSTSHIP project."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Team | GHXSTSHIP","url":"https://ghxstship.tours/team","description":"The senior management team of executive producers, production directors, project managers, logistics and operations leads, and technical directors who deliver every GHXSTSHIP project."}` }} />
     </>
   );
 }

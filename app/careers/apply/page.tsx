@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Apply",
-  description: "Apply to join the GHXSTSHIP crew \u2014 production, operations, and technology roles in experiential and entertainment production. Apprenticeships available.",
+  description: "Apply to join the GHXSTSHIP crew, production, operations, and technology roles in experiential and entertainment production. Apprenticeships available.",
   keywords: ["apply GHXSTSHIP", "event production application", "experiential production jobs", "production crew application", "live event careers"],
   alternates: { canonical: "https://ghxstship.tours/careers/apply" },
 };
@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .ap-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
   @media (max-width: 960px) { .ap-grid { grid-template-columns: 1fr; } }
   .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -68,7 +68,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"Apply — GHXSTSHIP Careers","url":"https://ghxstship.tours/careers/apply","description":"Apply to join the GHXSTSHIP crew — production, operations, and technology roles in experiential and entertainment production."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"WebPage","name":"Apply | GHXSTSHIP Careers","url":"https://ghxstship.tours/careers/apply","description":"Apply to join the GHXSTSHIP crew, production, operations, and technology roles in experiential and entertainment production."}` }} />
     </>
   );
 }

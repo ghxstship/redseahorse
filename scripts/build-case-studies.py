@@ -14,8 +14,8 @@ here, so "normalise the formatting" is a property of the build rather than a
 task someone has to keep redoing.
 
 The press block only ever renders items the inventory marks usable. Anything
-flagged usable:false — the politically framed Polymarket pieces, the Yelp
-reviews — stays in the inventory for awareness and never reaches a page.
+flagged usable:false, the politically framed Polymarket pieces, the Yelp
+reviews, stays in the inventory for awareness and never reaches a page.
 """
 
 import json
@@ -93,7 +93,7 @@ def press_block(s):
 <section class="band"><div class="wrap sec-pad">
   <p class="kicker">Press &amp; Media</p>
   <h2 class="sec-h2-sm">What Was Written.</h2>
-  <p class="lede" style="max-width:64ch;">Independent coverage of the project — the public record of what was built.</p>
+  <p class="lede" style="max-width:64ch;">Independent coverage of the project. The public record of what was built.</p>
   <div class="press-rows">
 {chr(10).join(rows)}
   </div>
@@ -121,12 +121,12 @@ PAGE = """<!DOCTYPE html>
 <meta name="description" content="{description}">
 <meta name="keywords" content="{keywords}">
 <link rel="canonical" href="{site}/work/{slug}">
-<title>{title} — Case Study — GHXSTSHIP</title>
+<title>{title} | Case Study | GHXSTSHIP</title>
 <link rel="stylesheet" href="../../../modernist.css">
 <script type="application/ld+json">{ld}</script>
 <script type="application/ld+json">{crumbs}</script>
 <style>
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags {{ display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }}
   .hero-fig {{ aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }}
   .hero-fig img {{ width: 100%; height: 100%; object-fit: cover; }}
@@ -279,7 +279,7 @@ def press_page():
 <section class="wrap sec-pad-sm">
   <p class="kicker">{esc(s['tag'])}</p>
   <h2 class="sec-h2-sm">{esc(s['title'])}.</h2>
-  <p class="lede" style="max-width:62ch;">{esc(s['venue'])} · {esc(s['city'])} · {esc(s['year'])} — <a href="work/{s['slug']}.html">read the case study →</a></p>
+  <p class="lede" style="max-width:62ch;">{esc(s['venue'])} · {esc(s['city'])} · {esc(s['year'])}, <a href="work/{s['slug']}.html">read the case study →</a></p>
   <div class="press-rows">
 {rows}
   </div>
@@ -290,10 +290,10 @@ def press_page():
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Press and media coverage of GHXSTSHIP projects — {total} articles, galleries and features across festival production, brand activations, venue operations and event technology, catalogued by project.">
+<meta name="description" content="Press and media coverage of GHXSTSHIP projects, {total} articles, galleries and features across festival production, brand activations, venue operations and event technology, catalogued by project.">
 <meta name="keywords" content="GHXSTSHIP press, event production press coverage, experiential production media, case study coverage, festival production press">
 <link rel="canonical" href="{SITE}/press">
-<title>Press &amp; Media — GHXSTSHIP</title>
+<title>Press &amp; Media | GHXSTSHIP</title>
 <link rel="stylesheet" href="../../modernist.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"CollectionPage","name":"Press & Media","description":"Coverage of GHXSTSHIP projects, catalogued by project.","url":"{SITE}/press","isPartOf":{{"@type":"WebSite","name":"GHXSTSHIP","url":"{SITE}/"}}}}</script>
 <style>
@@ -311,7 +311,7 @@ def press_page():
 <section class="wrap" style="padding-block:clamp(36px,5vw,64px) 0;">
   <p class="kicker">Press &amp; Media</p>
   <h1 class="page-h1">What Was Written.</h1>
-  <p class="lede">Independent coverage of the projects we have worked on — {total} articles, features and galleries, catalogued by project. The public record of what was built.</p>
+  <p class="lede">Independent coverage of the projects we have worked on, {total} articles, features and galleries, catalogued by project. The public record of what was built.</p>
   <hr class="hr" style="margin-top:clamp(24px,4vw,40px);">
 </section>
 {body}
@@ -343,4 +343,4 @@ def press_page():
 
 
 press_page()
-print(f"Done — {len(studies)} case studies + the press index.")
+print(f"Done, {len(studies)} case studies + the press index.")

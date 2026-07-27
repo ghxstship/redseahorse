@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Factory Town \u2014 Case Study",
-  description: "Factory Town, Hialeah \u2014 venue and site operations across a seven-acre open-air entertainment district built in a 1946 mattress factory, run season after season through Miami Music Week and Art Basel.",
+  title: "Factory Town | Case Study",
+  description: "Factory Town, Hialeah, venue and site operations across a seven-acre open-air entertainment district built in a 1946 mattress factory, run season after season through Miami Music Week and Art Basel.",
   keywords: ["Factory Town Miami", "Hialeah venue operations", "warehouse venue production", "Miami Music Week", "Art Basel Miami events", "multi-stage site operations"],
   alternates: { canonical: "https://ghxstship.tours/work/factory-town" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only — every component comes from modernist.css */
+  /* page-specific layout only, every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
@@ -62,7 +62,7 @@ export default function Page() {
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>Factory Town is not a room with a calendar. It is a seven-acre site in Hialeah built around an abandoned mattress factory — the Dixie Bedding plant, put up in 1946 and once a US Army contractor — with a large open-sided warehouse and a great deal of open ground where stages and structures go up and come down.</p>
+  <p>Factory Town is not a room with a calendar. It is a seven-acre site in Hialeah built around an abandoned mattress factory, the Dixie Bedding plant, put up in 1946 and once a US Army contractor, with a large open-sided warehouse and a great deal of open ground where stages and structures go up and come down.</p>
   <p>Operating it means the venue is rebuilt for its programme rather than booked into. Every season the site changes shape: different stage counts, different capacities, different circulation, on ground that is industrial rather than purpose-built.</p>
 
   <h2>The Approach</h2>
@@ -72,7 +72,7 @@ export default function Page() {
 
   <h2>The Result</h2>
   <p>Season after season across 2023–25, through Miami Music Week and Art Basel, for headline programmes including Black Coffee, Solomun, Elrow, ZHU, Dom Dolla and Green Velvet.</p>
-  <p>World Red Eye has photographed the site for years and keeps a standing archive of it — the closest thing to a continuous public record of what the ground has held.</p>
+  <p>World Red Eye has photographed the site for years and keeps a standing archive of it, the closest thing to a continuous public record of what the ground has held.</p>
 
   <h2>The Credits</h2>
   <p><strong>Client</strong> Link Miami Rebels · <strong>Venue</strong> 4800 NW 37th Avenue, Hialeah · <strong>Year</strong> 2023–25 · <strong>Services</strong> Venue &amp; Site Operations, Experiential Design &amp; Production.</p>
@@ -82,9 +82,9 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. The public record of what was built.</p>
   <div className="press-rows">
-    <a className="row-line" href="https://worldredeye.com/factory-town/" target="_blank" rel="noopener"><span className="row-title">Factory Town — the World Red Eye archive</span><span className="row-sub">World Red Eye</span><span className="row-sub"></span></a>
+    <a className="row-line" href="https://worldredeye.com/factory-town/" target="_blank" rel="noopener"><span className="row-title">Factory Town: the World Red Eye archive</span><span className="row-sub">World Red Eye</span><span className="row-sub"></span></a>
     <a className="row-line" href="https://magneticmag.com/2026/04/miami-music-week-2026-recap/" target="_blank" rel="noopener"><span className="row-title">Miami Music Week 2026 Recap: Factory Town, WMC, Club Space + More</span><span className="row-sub">Magnetic Magazine</span><span className="row-sub">2026-04</span></a>
     <a className="row-line" href="https://worldredeye.com/2024/12/factory-basel-at-factory-town/" target="_blank" rel="noopener"><span className="row-title">GOLFOS, Carlita &amp; Ben Sterling at Factory Town</span><span className="row-sub">World Red Eye</span><span className="row-sub">2024-12</span></a>
     <a className="row-line" href="https://worldredeye.com/2024/03/dom-dolla-green-velvet-mau-p-at-factory-town/" target="_blank" rel="noopener"><span className="row-title">Dom Dolla, Green Velvet &amp; Mau P at Factory Town</span><span className="row-sub">World Red Eye</span><span className="row-sub">2024-03</span></a>

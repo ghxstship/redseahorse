@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Locations",
-  description: "GHXSTSHIP is an experiential production company with headquarters in Miami and regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix \u2014 producing festivals, brand activations, and immersive experiences nationwide.",
+  description: "GHXSTSHIP is an experiential production company with headquarters in Miami and regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix, producing festivals, brand activations, and immersive experiences nationwide.",
   keywords: ["GHXSTSHIP locations", "experiential production Miami", "event production Las Vegas", "event production Chicago", "event production New York", "event production Los Angeles"],
   alternates: { canonical: "https://ghxstship.tours/locations" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .loc { border: 1px solid var(--color-divider); background: var(--color-bg); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
   .loc .tag { align-self: flex-start; }
   .loc h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1; margin: 4px 0 2px; }
@@ -35,7 +35,7 @@ export default function Page() {
 <section className="wrap sec-pad" style={{paddingTop: 'clamp(28px,4vw,48px)'}}>
   <p className="kicker">Headquarters &amp; Regional Offices</p>
   <h2 className="sec-h2-sm">Full Teams on the Ground.</h2>
-  <p className="lede">Production, operations, and technology staffed in market, with the standard held the same in all four. Every office is reached at one desk — <a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a> — so a brief never lands in a mailbox nobody is watching.</p>
+  <p className="lede">Production, operations, and technology staffed in market, with the standard held the same in all four. Every office is reached at one desk, <a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a>, so a brief never lands in a mailbox nobody is watching.</p>
   <div className="grid2" style={{marginTop: 'clamp(24px,3vw,36px)'}}>
     <article className="loc"><span className="tag tag-accent">Headquarters</span><h2>Miami</h2><p>Our headquarters. The base for experiential production across the Southeast, Latin America, and the Caribbean, and home to festivals, immersive experiences, and brand activations in one of the world's fastest-growing event markets.</p><p className="area">Serving Miami · Southeast US · LATAM &amp; Caribbean</p></article>
     <article className="loc"><span className="tag tag-outline">Regional Office</span><h2>Chicago</h2><p>Our Midwest base, festival, corporate, and live-music production across the central US.</p><p className="area">Serving Chicago · Midwest US</p></article>

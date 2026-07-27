@@ -606,8 +606,12 @@ def emit_page(src_rel: Path) -> None:
     title_m = TITLE_RE.search(head)
     title = html_lib.unescape(title_m.group(1).strip()) if title_m else None
     if title:
-        # Strip trailing brand suffix; root layout's metadata template adds it.
-        title = re.sub(r"\s*[—\-|·]\s*G\s?H\s?X\s?S\s?T\s?S\s?H\s?I\s?P\s*$", "", title, flags=re.IGNORECASE).strip()
+        # Strip the trailing brand suffix; the root layout's title.template
+        # adds it back. EXCEPT on the site root: Next applies title.template
+        # to CHILD segments only, and app/page.tsx sits in the same segment as
+        # app/layout.tsx, so stripping there loses the brand for good.
+        if src_rel.as_posix() != "index.html":
+            title = re.sub(r"\s*[—\-|·]\s*G\s?H\s?X\s?S\s?T\s?S\s?H\s?I\s?P\s*$", "", title, flags=re.IGNORECASE).strip()
     meta = parse_meta(head)
     description = meta.get("description")
     keywords = meta.get("keywords")

@@ -1,17 +1,17 @@
 {
-  "$comment": "Who we are, stated once. Every industry page opens by naming the company, and before this file each one named a DIFFERENT company: an agency on brand-activations, a studio on immersive-experiences, a production company on five more, and — on cruise-ships and amusement-parks — a sporting event production company, which is neither true nor tailored, just copy-paste. The rule is: the identity clause never changes, the delivery clause always does. scripts/normalize-copy.py enforces it.",
+  "$comment": "Who we are, stated once. Every industry page opens by naming the company, and before this file each one named a DIFFERENT company: an agency on brand-activations, a studio on immersive-experiences, a production company on five more, and, on cruise-ships and amusement-parks, a sporting event production company, which is neither true nor tailored, just copy-paste. The rule is: the identity clause never changes, the delivery clause always does. scripts/normalize-copy.py enforces it.",
 
   "identity": {
     "long": "GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix.",
     "short": "GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami",
-    "$why": "Matches about.html and the root layout metadata verbatim. One entity description sitewide is also what search and answer engines need to resolve us to a single thing — eight descriptions is eight weaker entities."
+    "$why": "Matches about.html and the root layout metadata verbatim. One entity description sitewide is also what search and answer engines need to resolve us to a single thing, eight descriptions is eight weaker entities."
   },
 
   "offices": {
     "headquarters": "Miami",
     "regional": ["Los Angeles", "Chicago", "New York City"],
     "satellite": ["Nashville", "Denver", "Las Vegas", "Phoenix"],
-    "$why": "The old meta descriptions read 'in Miami — Las Vegas, Chicago, NY, LA', which is the pre-2026 hierarchy: it promotes Las Vegas to the front and drops the four satellites. Kept here so the tiers cannot drift apart again."
+    "$why": "The old meta descriptions read 'in Miami \u2014 Las Vegas, Chicago, NY, LA', which is the pre-2026 hierarchy: it promotes Las Vegas to the front and drops the four satellites. Kept here so the tiers cannot drift apart again."
   },
 
   "industries": {
@@ -70,6 +70,6 @@
 
   "contact": {
     "primary": "sos@ghxstship.pro",
-    "$why": "One address. The city mailboxes (miami@, chicago@, losangeles@, newyork@) and hello@ghxstship.tours were published across 38 places and none of them exist — every one was a lead with nowhere to land. .pro is the mail domain; .tours is the website only."
+    "$why": "One address. The city mailboxes (miami@, chicago@, losangeles@, newyork@) and hello@ghxstship.tours were published across 38 places and none of them exist, every one was a lead with nowhere to land. .pro is the mail domain; .tours is the website only."
   }
 }

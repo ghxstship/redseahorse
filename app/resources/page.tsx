@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Resources",
-  description: "The GHXSTSHIP resource library \u2014 the Log, the Experiential Producer guide, the production glossary, the nine-phase course, and the four in-house platforms.",
+  description: "The GHXSTSHIP resource library, the Log, the Experiential Producer guide, the production glossary, the nine-phase course, and the four in-house platforms.",
   keywords: ["experiential production resources", "event production blog", "production glossary", "production lifecycle course", "event production software"],
   alternates: { canonical: "https://ghxstship.tours/resources" },
 };
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout, components come from modernist.css */
   .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
   @media (max-width: 960px) { .res-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .res-grid { grid-template-columns: 1fr; } }
@@ -44,7 +44,7 @@ export default function Page() {
       <div className="bar"></div>
       <p className="role">Featured Guide</p>
       <h2>The Experiential Producer</h2>
-      <p>What an experiential producer actually does — one accountable partner for scope, schedule, budget, crew, and tech, and why the one-producer model beats a vendor chain.</p>
+      <p>What an experiential producer actually does, one accountable partner for scope, schedule, budget, crew, and tech, and why the one-producer model beats a vendor chain.</p>
       <span className="more">Read the guide →</span>
     </Link>
     <Link href="/resources/glossary" className="svc-card">
