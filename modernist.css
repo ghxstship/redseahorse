@@ -10,9 +10,13 @@
    file; app/layout.tsx imports it. Never hard-code a value a token carries.
 
    Accent rules (from DESIGN_SYSTEM.md, recolored):
+   - ONE hue (~124°) in three roles. FILL = --color-accent #2edb3a (buttons,
+     dots, bars) with --color-on-accent #001800 as its ink (10:1). TEXT ON
+     LIGHT = --color-accent-700 #1b7c21 (5.18:1 on bg, 4.62:1 on surface) —
+     base green is 1.81:1 and can never carry text on light. TEXT ON DARK =
+     --color-accent, but only inside .band-dark (11.31:1 on black).
    - Accent is spent sparingly: primary button, kickers, stat figures, small
-     emphasis. Accent-colored SMALL TEXT uses --color-accent-700 (#1f8425 — AA
-     on light), never the base accent.
+     emphasis.
    - Text tints via color-mix(in srgb, var(--color-text) N%, transparent):
      82 body · 78/72/65/60/55 supporting.
    ========================================================================== */
@@ -36,14 +40,14 @@
   --color-neutral-800: #424242;
   --color-neutral-900: #2a2a2a;
 
-  /* — accent: GHXSTSHIP Green (house #2edb3a; hover #00ca22; AA text #1f8425) — */
+  /* — accent: GHXSTSHIP Green (house #2edb3a; hover #25ad2e; AA text #1b7c21) — */
   --color-accent: #2edb3a;
   --color-accent-100: #eafbe9;
   --color-accent-200: #cef5cf;
   --color-accent-300: #a3ecaa;
   --color-accent-400: #67e274;
   --color-accent-500: #2edb3a;
-  --color-accent-600: #00ca22;
+  --color-accent-600: #25ad2e; /* hover step, retuned to the family: was #00ca22 — the only 100%-sat, hue-130 step in the ramp */
   --color-accent-700: #1b7c21; /* AA ≥4.5:1 on --color-bg AND --color-surface (was #1f8425 · 4.44:1) */
   --color-accent-800: #155b1b;
   --color-accent-900: #103f14;
