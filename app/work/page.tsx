@@ -14,10 +14,6 @@ export default function Page() {
       <style dangerouslySetInnerHTML={{ __html: `
   /* page-specific layout — components come from modernist.css */
   .work-grid { margin-top: clamp(28px, 4vw, 44px); }
-  a.wcard:hover h2 { color: var(--color-accent-700); }
-  .wcard .body { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
-  .wcard h2 { margin: 0; }
-  .wcard .go { font-family: var(--font-heading); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); margin-top: 2px; }
 ` }} />
       
 
@@ -43,15 +39,15 @@ export default function Page() {
     </article>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><span className="tag tag-neutral">Concerts &amp; Tours</span><h2>Black Coffee at the Race Track</h2><p className="meta">Club Space Miami · 2026</p></div>
+      <div className="body"><span className="tag tag-neutral">Concert &amp; Tour Production</span><h2>Black Coffee at the Race Track</h2><p className="meta">Club Space Miami · 2026</p></div>
     </article>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><span className="tag tag-neutral">Brand Activation</span><h2>The Polymarket: New York's First Free Grocery Store</h2><p className="meta">New York City · 2026</p></div>
+      <div className="body"><span className="tag tag-neutral">Brand Activations</span><h2>The Polymarket</h2><p className="meta">New York's First Free Grocery Store · New York City · 2026</p></div>
     </article>
     <Link href="/work/salvage-city-supper-club" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop" alt="Supper club table set for service" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><span className="tag tag-neutral">Premium Hospitality</span><h2>Salvage City Supper Club</h2><p className="meta">EDC Las Vegas · 2025–26</p><span className="go">Read the case study →</span></div>
+      <div className="body"><span className="tag tag-neutral">Premium Hospitality</span><h2>Salvage City Supper Club</h2><p className="meta">EDC Las Vegas · 2025–26</p><span className="more">Read the case study →</span></div>
     </Link>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=800&q=80&auto=format&fit=crop" alt="Crowd in a warehouse venue under structural lighting" loading="lazy" width="800" height="600"/></figure>
@@ -63,7 +59,7 @@ export default function Page() {
     </article>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1727842568394-f7b5f2db1e90?w=800&q=80&auto=format&fit=crop" alt="Weathered neon MOTEL sign lit at dusk" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><span className="tag tag-neutral">Brand Activation</span><h2>Red Bull Unforeseen Motel</h2><p className="meta">III Points Miami · 2024</p></div>
+      <div className="body"><span className="tag tag-neutral">Brand Activations</span><h2>Red Bull Unforeseen Motel</h2><p className="meta">III Points Miami · 2024</p></div>
     </article>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80&auto=format&fit=crop" alt="Spirit poured over ice in a rocks glass" loading="lazy" width="800" height="600"/></figure>

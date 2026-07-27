@@ -25,7 +25,6 @@ export default function Page() {
   .pull { border-left: 4px solid var(--color-accent); padding-left: 20px; margin: clamp(24px, 4vw, 36px) 0; }
   .pull p { font-family: var(--font-heading); font-weight: 800; font-size: clamp(19px, 2.4vw, 26px); line-height: 1.2; text-transform: uppercase; color: var(--color-text); margin: 0; max-width: 34ch; }
   .more-grid { margin-top: clamp(24px, 4vw, 36px); }
-  .wcard:hover h3 { color: var(--color-accent-700); }
 ` }} />
       
 
@@ -85,11 +84,11 @@ export default function Page() {
     </Link>
     <Link href="/work" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concerts &amp; Tours · Club Space Miami · 2026</p></div>
+      <div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concert &amp; Tour Production · Club Space Miami · 2026</p></div>
     </Link>
     <Link href="/work" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>The Polymarket</h3><p className="meta">Brand Activation · New York City · 2026</p></div>
+      <div className="body"><h3>The Polymarket</h3><p className="meta">New York's First Free Grocery Store · New York City · 2026</p></div>
     </Link>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all the work →</Link></p>
