@@ -22,13 +22,15 @@ contract: components, breakpoints, accent discipline, theming, voice.
 
 ### The build chain
 
-`prebuild` and `predev` run five steps. Two are checks that fail the build
+`prebuild` and `predev` run six steps. Three are checks that fail the build
 rather than fixing anything silently.
 
 ```
 check-assets.py            assets/ and public/assets/ must match
 normalize-copy.py --check  copy must match data/copy-canon.json
 build-case-studies.py      data/case-studies.json → work/*.html + press.html
+build-glossary.py          data/glossary.json → resources/glossary.html
+test-ratelimit.js          the contact limiter must still limit
 render-emails.js           api/contact.js → ui_kits/email/*.html
 generate-pages.py          ui_kits/website/*.html → app/**/page.tsx
 ```
@@ -47,6 +49,7 @@ Four files drive generated content. Edit these, never the output.
 |---|---|
 | `data/copy-canon.json` | the identity sentence and the one contact address, enforced across every industry page |
 | `data/case-studies.json` | the nine case-study pages |
+| `data/glossary.json` | the 62-term glossary, 29 of them XPMS canon |
 | `data/press/inventory.json` | press blocks on case studies, and `/press/` |
 | `data/press/entries.json` | what the press scanner searches for |
 
@@ -121,8 +124,23 @@ most often:
 is the domain verified in Resend and ghxstship.tours is not, so a "correction"
 to a .tours sender breaks every send.
 
-`scripts/test-contact.mjs` delivers real mail and bills the account. It refuses
-to run without `CONFIRM_LIVE_SEND=yes`.
+It is rate limited: 5 sends per IP per 15 minutes, 40 per instance per hour.
+The budget is **checked on arrival but spent on a send**, so a mistyped email
+costs the sender nothing while a honeypot trip costs a bot its whole budget.
+The counters are per warm instance, which bounds a flood but does not stop a
+distributed one. See `BACKLOG.md`.
+
+`scripts/test-ratelimit.js` stubs the provider, runs in the build chain, and
+costs nothing. `scripts/test-contact.mjs` delivers real mail and bills the
+account, so it refuses to run without `CONFIRM_LIVE_SEND=yes`.
+
+## Caching
+
+Vercel only applies immutable caching to its own hashed `_next/static` output.
+Everything served from `public/` defaults to `max-age=0, must-revalidate`, so
+the rules in `vercel.json` set it explicitly. Fonts are `immutable` for a year
+and their filenames are **not** content-hashed, which means **you must rename a
+font file when you regenerate it** or returning visitors keep the old one.
 
 ## Reference
 
@@ -131,6 +149,7 @@ to run without `CONFIRM_LIVE_SEND=yes`.
 | `ui_kits/website/REBUILD_GUIDE.md` | page authoring contract |
 | `ui_kits/website/ATLVS_CANON.md` | what the four platforms are, and their real status |
 | `data/press/README.md` | the press inventory, its ranking model, its scanner |
+| `BACKLOG.md` | measured work not done yet, and why |
 | `OPTIMIZATION_PLAN.md` | architecture decisions log |
 | `BRAND_ARCHITECTURE.md` | the verticals and how they relate |
 | `VOICE_SAMPLE.md` · `PHOTOGRAPHY.md` · `ICONOGRAPHY.md` | brand reference |

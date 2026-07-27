@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "python3 scripts/check-assets.py && python3 scripts/normalize-copy.py --check && python3 scripts/build-case-studies.py && python3 scripts/build-glossary.py && node scripts/render-emails.js && python3 scripts/generate-pages.py",
-    "predev": "python3 scripts/check-assets.py && python3 scripts/normalize-copy.py --check && python3 scripts/build-case-studies.py && python3 scripts/build-glossary.py && node scripts/render-emails.js && python3 scripts/generate-pages.py",
+    "prebuild": "python3 scripts/check-assets.py && python3 scripts/normalize-copy.py --check && python3 scripts/build-case-studies.py && python3 scripts/build-glossary.py && node scripts/test-ratelimit.js && node scripts/render-emails.js && python3 scripts/generate-pages.py",
+    "predev": "python3 scripts/check-assets.py && python3 scripts/normalize-copy.py --check && python3 scripts/build-case-studies.py && python3 scripts/build-glossary.py && node scripts/test-ratelimit.js && node scripts/render-emails.js && python3 scripts/generate-pages.py",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:ratelimit": "node scripts/test-ratelimit.js",
+    "test:contact": "node scripts/test-contact.mjs"
   },
   "dependencies": {
     "next": "16.2.7",

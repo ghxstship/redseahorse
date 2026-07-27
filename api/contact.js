@@ -330,6 +330,81 @@ function sanitizeAttachments(raw) {
   return out;
 }
 
+/* Rate limiting.
+ *
+ * The endpoint is public, it spends money on every call, and the only gate it
+ * had was a honeypot, which stops naive bots and nothing else. A loop against
+ * it burns the Resend quota and, far worse, gets atlvs.pro flagged for spam,
+ * which takes the mailbox down for real inquiries.
+ *
+ * BE CLEAR ABOUT WHAT THIS IS. Serverless instances do not share memory, so
+ * these counters are PER WARM INSTANCE, not global. That still bounds a flood,
+ * because Vercel routes preferentially to warm instances and a single attacker
+ * usually lands on one, but a distributed or slow-drip attack walks straight
+ * past it. The durable fix is a Vercel Firewall rate-limit rule at the edge,
+ * which never invokes the function at all. See BACKLOG.md.
+ *
+ * Two limits. Per-IP catches the obvious flood. The instance-wide ceiling is
+ * the backstop that actually caps the bill when the per-IP check is defeated by
+ * rotating addresses.
+ *
+ * The budget is CHECKED on arrival but only SPENT on an actual send. A person
+ * who mistypes their email and resubmits three times has cost us nothing and
+ * should not be locked out; what we are rationing is mail leaving the building.
+ */
+var IP_MAX = 5;                       // sends per IP
+var IP_WINDOW_MS = 15 * 60 * 1000;    // per 15 minutes
+var GLOBAL_MAX = 40;                  // sends per instance
+var GLOBAL_WINDOW_MS = 60 * 60 * 1000;
+var HITS_MAX_KEYS = 5000;             // hard cap so the map cannot grow without bound
+
+var hits = new Map();
+var globalHits = [];
+
+function clientIp(req) {
+  // Vercel always sets x-forwarded-for and it cannot be spoofed past the proxy:
+  // the client-supplied value is preserved but the real address is appended
+  // last, so read from the END, not the front.
+  var fwd = req.headers["x-forwarded-for"];
+  if (fwd) {
+    var parts = String(fwd).split(",");
+    var last = parts[parts.length - 1].trim();
+    if (last) return last;
+  }
+  return String(req.headers["x-real-ip"] || "unknown").trim();
+}
+
+function checkRate(req) {
+  var now = Date.now();
+
+  globalHits = globalHits.filter(function (t) { return now - t < GLOBAL_WINDOW_MS; });
+  if (globalHits.length >= GLOBAL_MAX) {
+    return { ok: false, retryAfter: Math.ceil((GLOBAL_WINDOW_MS - (now - globalHits[0])) / 1000) };
+  }
+
+  // Sweep expired buckets before the size check, otherwise a long-running warm
+  // instance trips the cap on stale entries and stops limiting anyone.
+  for (var entry of hits) {
+    if (now - entry[1][entry[1].length - 1] >= IP_WINDOW_MS) hits.delete(entry[0]);
+  }
+  if (hits.size >= HITS_MAX_KEYS) hits.clear();
+
+  var mine = (hits.get(clientIp(req)) || []).filter(function (t) { return now - t < IP_WINDOW_MS; });
+  if (mine.length >= IP_MAX) {
+    return { ok: false, retryAfter: Math.ceil((IP_WINDOW_MS - (now - mine[0])) / 1000) };
+  }
+  return { ok: true };
+}
+
+function recordSend(req) {
+  var now = Date.now();
+  var ip = clientIp(req);
+  var mine = (hits.get(ip) || []).filter(function (t) { return now - t < IP_WINDOW_MS; });
+  mine.push(now);
+  hits.set(ip, mine);
+  globalHits.push(now);
+}
+
 function send(key, payload) {
   return fetch(RESEND_ENDPOINT, {
     method: "POST",
@@ -345,11 +420,21 @@ module.exports = async function handler(req, res) {
   var key = process.env.RESEND_API_KEY;
   if (!key) { res.statusCode = 500; res.end(JSON.stringify({ error: "Email is not configured on the server." })); return; }
 
+  var gate = checkRate(req);
+  if (!gate.ok) {
+    res.statusCode = 429;
+    res.setHeader("Retry-After", String(gate.retryAfter));
+    res.end(JSON.stringify({ error: "Too many messages from this address. Try again shortly, or write to sos@ghxstship.pro." }));
+    return;
+  }
+
   var body = req.body;
   if (typeof body === "string") { try { body = JSON.parse(body); } catch (e) { body = {}; } }
   body = body && typeof body === "object" ? body : {};
 
-  if (body.company_website) { res.statusCode = 200; res.end(JSON.stringify({ ok: true })); return; } // honeypot
+  // Honeypot. A real person never fills this, so charging the trip against the
+  // budget has no false-positive cost and makes a looping bot rate-limit itself.
+  if (body.company_website) { recordSend(req); res.statusCode = 200; res.end(JSON.stringify({ ok: true })); return; }
 
   var attachments = sanitizeAttachments(body.attachments);
   delete body.attachments;
@@ -442,6 +527,7 @@ module.exports = async function handler(req, res) {
       var detail = await r.text();
       res.statusCode = 502; res.end(JSON.stringify({ error: "Email provider rejected the message.", detail: detail.slice(0, 300) })); return;
     }
+    recordSend(req);   // mail has actually left; spend the budget here, not on arrival
 
     // Auto-reply receipt to the submitter. Deliverable from any verified
     // domain, including the default, and suppressed only on Resend's shared
