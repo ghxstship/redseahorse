@@ -6,12 +6,13 @@ import Footer from "./_components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ghxstship.tours"),
   title: {
-    default:
-      "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management, Technology & Systems Engineering — GHXSTSHIP",
+    // Short on purpose: search shows ~60 characters, and the four services
+    // read better in the description than truncated out of a title.
+    default: "GHXSTSHIP — Live & Experiential Production, Miami",
     template: "%s — GHXSTSHIP",
   },
   description:
-    "GHXSTSHIP is a professional services firm for live and experiential projects — experiential design & production, venue & site operations, tour & talent management, and technology & systems engineering — headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix.",
+    "One accountable partner for live and experiential projects: experiential design & production, venue & site operations, tour & talent management, and technology & systems engineering. Headquartered in Miami.",
   icons: {
     icon: "/assets/logo-ghostship-skull.svg",
     apple: "/assets/skull-bone.png",

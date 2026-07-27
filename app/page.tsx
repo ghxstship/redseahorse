@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management, Technology & Systems Engineering",
-  description: "GHXSTSHIP delivers four professional services \u2014 experiential design &amp; production, venue &amp; site operations, tour &amp; talent management, and technology &amp; systems engineering \u2014 for festivals, tours, activations, and live events.",
+  title: "GHXSTSHIP \u2014 Live & Experiential Production, Miami",
+  description: "One accountable partner for live and experiential projects: design and production, venue and site operations, tour and talent management, and technology. Miami HQ.",
   keywords: ["experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering", "event production company", "live event operations", "tour management company", "experiential technology"],
   alternates: { canonical: "https://ghxstship.tours/" },
 };
