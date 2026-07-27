@@ -44,23 +44,23 @@ export default function Page() {
   <div className="masonry">
     <a className="tile" href="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-45"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=900&q=80&auto=format&fit=crop" alt="Audio control surface in a live sound control room" width="900" height="1125"/></figure>
-      <span className="cap"><b>L-Acoustics DJ · III Points</b><span className="tag tag-neutral">Technology</span></span>
+      <span className="cap"><b>L-Acoustics DJ · III Points, Mana Wynwood</b><span className="tag tag-neutral">Technology</span></span>
     </a>
     <a className="tile" href="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-169"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=900&q=80&auto=format&fit=crop" alt="Black Coffee performing, still from the aftermovie" loading="lazy" width="900" height="506"/></figure>
-      <span className="cap"><b>Black Coffee · Aftermovie</b><span className="tag tag-neutral">Video</span></span>
+      <span className="cap"><b>Black Coffee at the Race Track · Hialeah Park</b><span className="tag tag-neutral">Video</span></span>
     </a>
     <a className="tile" href="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-11"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Supper club table set for service" loading="lazy" width="900" height="900"/></figure>
-      <span className="cap"><b>Salvage City Supper Club</b><span className="tag tag-neutral">Hospitality</span></span>
+      <span className="cap"><b>Salvage City Supper Club · EDC Las Vegas</b><span className="tag tag-neutral">Hospitality</span></span>
     </a>
     <a className="tile" href="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-34"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&auto=format&fit=crop" alt="Spirit poured over ice in a rocks glass" loading="lazy" width="900" height="1200"/></figure>
-      <span className="cap"><b>PATRÓN x Becky G</b><span className="tag tag-neutral">Activation</span></span>
+      <span className="cap"><b>PATRÓN Cristalino x Becky G · Olvera Street</b><span className="tag tag-neutral">Activation</span></span>
     </a>
     <a className="tile" href="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-45"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=900&q=80&auto=format&fit=crop" alt="Nightclub crowd under stage lighting" loading="lazy" width="900" height="1125"/></figure>
-      <span className="cap"><b>Heineken Turn 4 · F1 Las Vegas</b><span className="tag tag-neutral">Auto &amp; Motorsports</span></span>
+      <span className="cap"><b>Heineken Turn 4 · Formula 1 Las Vegas Grand Prix</b><span className="tag tag-neutral">Auto &amp; Motorsports</span></span>
     </a>
     <a className="tile" href="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-169"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=900&q=80&auto=format&fit=crop" alt="Broadcast camera operator during an on-air capture" loading="lazy" width="900" height="506"/></figure>
@@ -76,7 +76,7 @@ export default function Page() {
     </a>
     <a className="tile" href="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=900&q=80&auto=format&fit=crop" target="_blank" rel="noopener">
       <figure className="grayscale ar-34"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=900&q=80&auto=format&fit=crop" alt="Crowd at Factory Town, Miami" loading="lazy" width="900" height="1200"/></figure>
-      <span className="cap"><b>Factory Town · Miami</b><span className="tag tag-neutral">Festival</span></span>
+      <span className="cap"><b>Factory Town · Hialeah</b><span className="tag tag-neutral">Festival</span></span>
     </a>
   </div>
   <p className="gal-note text-muted">Placeholder imagery — real production photography &amp; video drop in here</p>

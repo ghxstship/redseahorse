@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Salvage City Supper Club \u2014 Case Study",
-  description: "How GHXSTSHIP designed, built, and ran Salvage City Supper Club \u2014 a premium hospitality supper-club experience at EDC Las Vegas. The challenge, the full-lifecycle approach, and the results.",
-  keywords: ["premium hospitality case study", "experiential production", "supper club", "EDC Las Vegas", "festival hospitality production"],
+  description: "Salvage City Supper Club \u2014 a post-apocalyptic immersive dinner show inside EDC Las Vegas: a 60-minute, five-course seated experience with a dozen performers, run inside a working festival footprint.",
+  keywords: ["premium hospitality case study", "festival hospitality production", "immersive dinner show", "EDC Las Vegas", "Nomads Land", "supper club production"],
   alternates: { canonical: "https://ghxstship.tours/work/salvage-city-supper-club" },
 };
 
@@ -12,18 +12,22 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout — components come from modernist.css */
+  /* page-specific layout only — every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }
-  .results-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: clamp(28px, 4vw, 44px); }
-  @media (max-width: 720px) { .results-in { grid-template-columns: repeat(2, 1fr); } }
+  .facts-in { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 32px; padding-block: clamp(28px, 4vw, 44px); }
+  @media (max-width: 720px) { .facts-in { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .facts-in { grid-template-columns: 1fr; } }
   .cs-body { max-width: 55rem; }
   .cs-body h2 { font-size: clamp(24px, 3vw, 34px); margin-top: clamp(32px, 5vw, 56px); }
   .cs-body p { font-size: 1.067rem; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 68ch; }
   .cs-body strong { color: var(--color-text); }
   .pull { border-left: 4px solid var(--color-accent); padding-left: 20px; margin: clamp(24px, 4vw, 36px) 0; }
   .pull p { font-family: var(--font-heading); font-weight: 800; font-size: clamp(19px, 2.4vw, 26px); line-height: 1.2; text-transform: uppercase; color: var(--color-text); margin: 0; max-width: 34ch; }
+  .press-rows { margin-top: clamp(20px, 3vw, 28px); }
+  .press-rows .row-line { text-decoration: none; color: inherit; }
+  .press-rows .row-line:hover .row-title { color: var(--color-accent-700); }
   .more-grid { margin-top: clamp(24px, 4vw, 36px); }
 ` }} />
       
@@ -32,63 +36,75 @@ export default function Page() {
 <main id="main">
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
-  <p className="kicker">Case Study · Immersive Experience</p>
+  <p className="kicker">Case Study · Premium Hospitality</p>
   <h1 className="page-h1">Salvage City Supper Club.</h1>
-  <p className="lede">A premium supper-club world installed, run, and struck inside a working festival footprint — designed, built, and crewed end to end by GHXSTSHIP.</p>
+  <p className="lede">A five-course, sixty-minute immersive dinner show running inside a working festival footprint at EDC Las Vegas — installed, run, and struck on the festival&#x27;s clock.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · Insomniac</span>
-    <span className="tag tag-neutral">Industry · Premium Hospitality</span>
     <span className="tag tag-neutral">Venue · EDC Las Vegas</span>
-    <span className="tag tag-neutral">Year · 2025–26</span>
-    <span className="tag tag-outline">Scope · Full Build · Full Lifecycle</span>
+    <span className="tag tag-neutral">Las Vegas</span>
+    <span className="tag tag-neutral">2025–26</span>
+    <span className="tag tag-outline">Experiential Design &amp; Production, Venue &amp; Site Operations</span>
   </div>
   <figure className="hero-fig grayscale">
     <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&auto=format&fit=crop" alt="Supper club table set for service" width="1600" height="900"/>
   </figure>
 </section>
 
-<div className="band" style={{marginTop: 'clamp(32px,5vw,56px)'}}><div className="wrap results-in">
-  <div className="stat"><div className="v">[00K]</div><div className="k">Guests Hosted</div></div>
-  <div className="stat"><div className="v">[00M]</div><div className="k">Social Impressions</div></div>
-  <div className="stat"><div className="v">[00%]</div><div className="k">Capacity Sell-Through</div></div>
-  <div className="stat"><div className="v">[00]</div><div className="k">Days Concept-to-Live</div></div>
+<div className="band" style={{marginTop: 'clamp(32px,5vw,56px)'}}><div className="wrap facts-in">
+  <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>60-minute seated show, five courses</div><div className="k">Format</div></div>
+  <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>$189 per guest, inclusive</div><div className="k">Ticket</div></div>
+  <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>A dozen performers working the room</div><div className="k">Cast</div></div>
+  <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>Chef Matt Rolnick, Chopped champion</div><div className="k">Kitchen</div></div>
 </div></div>
 
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>Insomniac needed a premium supper-club experience that could live inside <strong>EDC Las Vegas</strong> — a footprint with its own identity, technical constraints, and an audience that has seen everything. The brief: a fully realized world that felt like a place guests had stumbled onto, and that could be installed, run, and struck without disrupting the festival's ongoing programming.</p>
-  <p>The constraints were real: a fixed footprint, a hard load-in window, and a guest experience that had to feel intimate at scale.</p>
+  <p>Insomniac needed a premium seated experience that could live inside <strong>EDC Las Vegas</strong> without competing with it — a fully realised world guests felt they had stumbled onto, sited in Nomads Land, inside a festival footprint with its own identity, its own technical constraints, and an audience that has seen everything.</p>
+  <p>The constraints were real: a fixed footprint, a hard load-in window against the festival's own build, and a guest experience that had to stay intimate while turning over night after night.</p>
 
   <h2>The Approach</h2>
-  <p>GHXSTSHIP ran the full <strong>production lifecycle</strong>, Discover through Close. Discover defined the narrative world and tested it against the venue. Design delivered the scenic language; Advance cleared the build against venue and fire-code requirements and locked the schedule around the room's calendar.</p>
-  <p>Procure and Build fabricated a modular scenic package designed for the load-in window. Install sequenced crew and freight around the venue's programming. Operate ran the room nightly; Close returned the space clean — with a full reconciliation and analytics report.</p>
-  <div className="pull"><p>"A world guests felt they'd stumbled onto, installed and run and struck on the venue's clock."</p></div>
+  <p>The full production lifecycle, Discover through Close. Discover defined the narrative world and tested it against the site. Design delivered the scenic language; Advance cleared the build against venue and fire-code requirements and locked the schedule around the festival calendar.</p>
+  <p>Procure and Build fabricated a modular scenic package sized to the load-in window. Install sequenced crew and freight around live programming. Operate ran the room on service, a choreographed show moving around seated guests while five courses landed on time. Close returned the ground clean.</p>
+  <div className="pull"><p>A world guests felt they&#x27;d stumbled onto, installed and run and struck on the festival&#x27;s clock.</p></div>
 
   <h2>The Result</h2>
-  <p>The room ran nightly on the venue's clock, and the space went back clean, with a full reconciliation and analytics report delivered at close. Final attendance, sell-through, and reach figures publish here as they clear client review.</p>
-  <p>Salvage City is now a repeatable GHXSTSHIP format — proof that an immersive world can be delivered to a working venue without compromise.</p>
+  <p>The format returned to EDC Las Vegas — the clearest result an experience like this can post, and the reason the trade write-ups lead on <em>returns to</em> rather than <em>debuts at</em>.</p>
+  <p>Salvage City is now a repeatable format: proof that a seated, catered, performed world can be delivered inside a live festival footprint without either one compromising the other. Attendance and sell-through figures publish here as they clear client review.</p>
 
   <h2>The Credits</h2>
-  <p><strong>Client</strong> Insomniac · <strong>Venue</strong> EDC Las Vegas · <strong>Year</strong> 2025–26 · <strong>Scope</strong> Full build across the entire production lifecycle · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations, and Technology &amp; Systems Engineering.</p>
+  <p><strong>Client</strong> Insomniac · <strong>Venue</strong> Nomads Land, Las Vegas Motor Speedway · <strong>Year</strong> 2025–26 · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations.</p>
 
+</div></section>
+
+<section className="band"><div className="wrap sec-pad">
+  <p className="kicker">Press &amp; Media</p>
+  <h2 className="sec-h2-sm">What Was Written.</h2>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <div className="press-rows">
+    <a className="row-line" href="https://lasvegas.electricdaisycarnival.com/tickets/salvage-city/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club — EDC Las Vegas</span><span className="row-sub">Insomniac / EDC Las Vegas · primary source</span><span className="row-sub">2026</span></a>
+    <a className="row-line" href="https://gayety.com/salvage-city-edc-immersive-dinner-show" target="_blank" rel="noopener"><span className="row-title">Salvage City: EDC&#x27;s Decadent Post-Apocalyptic Dinner Show</span><span className="row-sub">Gayety</span><span className="row-sub">2025</span></a>
+    <a className="row-line" href="https://whatnow.com/las-vegas/restaurants/salvage-city-supper-club-returns-to-edc-las-vegas/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club Returns to EDC Las Vegas</span><span className="row-sub">What Now Las Vegas</span><span className="row-sub">2025</span></a>
+    <a className="row-line" href="https://www.salvagecitysupperclub.com/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club</span><span className="row-sub">Salvage City Supper Club · primary source</span><span className="row-sub">current</span></a>
+  </div>
 </div></section>
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">More Work</p>
   <h2 className="sec-h2-sm">From the Archives.</h2>
   <div className="grid3 more-grid">
-    <Link href="/work" className="wcard">
+    <Link href="/work/l-acoustics-dj" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80&auto=format&fit=crop" alt="Audio control surface in a live sound control room" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>L-Acoustics DJ</h3><p className="meta">Technology Implementation · III Points Miami · 2025–present</p></div>
+      <div className="body"><h3>L-Acoustics DJ</h3><p className="meta">Technology Implementation · III Points · 2025–present</p></div>
     </Link>
-    <Link href="/work" className="wcard">
-      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concert &amp; Tour Production · Club Space Miami · 2026</p></div>
+    <Link href="/work/black-coffee-race-track" className="wcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Open-air crowd at a racetrack show at dusk" loading="lazy" width="800" height="600"/></figure>
+      <div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concert &amp; Tour Production · Hialeah Park · 2026</p></div>
     </Link>
-    <Link href="/work" className="wcard">
+    <Link href="/work/polymarket-free-grocery-store" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>The Polymarket</h3><p className="meta">New York's First Free Grocery Store · New York City · 2026</p></div>
+      <div className="body"><h3>The Polymarket</h3><p className="meta">Brand Activations · 7th Avenue and Charles Street · 2026</p></div>
     </Link>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all the work →</Link></p>
@@ -108,8 +124,8 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CreativeWork","name":"Salvage City Supper Club","creator":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"about":"Premium hospitality production","locationCreated":{"@type":"Place","name":"EDC Las Vegas"},"datePublished":"2025-05","genre":"Premium Hospitality","keywords":"premium hospitality, experiential production, supper club, Las Vegas, EDC","url":"https://ghxstship.tours/work/salvage-city-supper-club"}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Work","item":"https://ghxstship.tours/work"},{"@type":"ListItem","position":3,"name":"Salvage City Supper Club","item":"https://ghxstship.tours/work/salvage-city-supper-club"}]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Salvage City Supper Club", "creator": {"@type": "Organization", "name": "GHXSTSHIP", "url": "https://ghxstship.tours/"}, "about": "Premium Hospitality", "locationCreated": {"@type": "Place", "name": "EDC Las Vegas", "address": "Nomads Land, Las Vegas Motor Speedway, Las Vegas"}, "genre": "Premium Hospitality", "keywords": "premium hospitality case study, festival hospitality production, immersive dinner show, EDC Las Vegas, Nomads Land, supper club production", "url": "https://ghxstship.tours/work/salvage-city-supper-club"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghxstship.tours/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://ghxstship.tours/work"}, {"@type": "ListItem", "position": 3, "name": "Salvage City Supper Club", "item": "https://ghxstship.tours/work/salvage-city-supper-club"}]}` }} />
     </>
   );
 }

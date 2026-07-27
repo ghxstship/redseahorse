@@ -27,7 +27,8 @@
           "date": "2026-02",
           "http": 200,
           "score": 74,
-          "why": "National outlet, straight reporting on the opening. Best single link for 'this was real and it was big'."
+          "why": "National outlet, straight reporting on the opening. Best single link for 'this was real and it was big'.",
+          "headline": "New York City opens first free grocery store"
         },
         {
           "url": "https://www.newsweek.com/new-york-city-gets-first-free-grocery-store-polymarket-11460498",
@@ -38,7 +39,8 @@
           "date": "2026-02",
           "http": 200,
           "score": 71,
-          "why": "Announcement piece; pairs with the opening story as a before/after."
+          "why": "Announcement piece; pairs with the opening story as a before/after.",
+          "headline": "New York City gets first free grocery store"
         },
         {
           "url": "https://www.foxbusiness.com/markets/betting-company-polymarket-opens-nycs-first-free-grocery-store-downtown-manhattan",
@@ -49,7 +51,8 @@
           "date": "2026-02",
           "http": 200,
           "score": 68,
-          "why": "Business-desk framing; useful when the audience is a brand-side buyer rather than a fan."
+          "why": "Business-desk framing; useful when the audience is a brand-side buyer rather than a fan.",
+          "headline": "Polymarket creates NYC's first free grocery store in downtown Manhattan"
         },
         {
           "url": "https://www.fox5ny.com/news/polymarket-free-grocery-store-opens-nyc-heres-how-work",
@@ -60,7 +63,8 @@
           "date": "2026-02",
           "http": 200,
           "score": 61,
-          "why": "Local broadcast, service-piece tone. Has b-roll value."
+          "why": "Local broadcast, service-piece tone. Has b-roll value.",
+          "headline": "Polymarket free grocery store opens in NYC — here's how it works"
         },
         {
           "url": "https://www.vice.com/en/article/cryptocurrency-firm-launches-free-supermarket/",
@@ -71,7 +75,8 @@
           "date": "2026-02",
           "http": 200,
           "score": 58,
-          "why": "Explainer format, culture audience."
+          "why": "Explainer format, culture audience.",
+          "headline": "There's a Free Grocery Store in NYC Now. Here's How It Works."
         },
         {
           "url": "https://www.nycforfree.co/events/the-polymarket-free-grocery-store",
@@ -125,7 +130,8 @@
           "date": "2024-09",
           "http": 200,
           "score": 78,
-          "why": "WWD is the authority for this audience and it is a photo gallery — the strongest single asset in the whole inventory."
+          "why": "WWD is the authority for this audience and it is a photo gallery — the strongest single asset in the whole inventory.",
+          "headline": "Becky G Sparkles in Silver Sequins With Custom Look & More Arrivals for Patrón Cristalino Launch"
         },
         {
           "url": "https://www.hola.com/us/entertainment/20240916718613/becky-g-pays-tribute-to-selena-quintanilla-in-los-angeles/",
@@ -136,7 +142,8 @@
           "date": "2024-09-16",
           "http": 200,
           "score": 62,
-          "why": "Reaches the Latin-market audience the activation was built for."
+          "why": "Reaches the Latin-market audience the activation was built for.",
+          "headline": "Becky G pays tribute to Selena Quintanilla in Los Angeles"
         },
         {
           "url": "https://theknockturnal.com/becky-g-lights-up-stage/",
@@ -147,7 +154,8 @@
           "date": "2024-09",
           "http": 200,
           "score": 56,
-          "why": "On-the-night write-up with performance detail. Quotable."
+          "why": "On-the-night write-up with performance detail. Quotable.",
+          "headline": "Becky G Lights Up Stage at PATRÓN CRISTALINO Launch"
         },
         {
           "url": "https://loopmag.co/becky-g-gabito-ballesteros-more-celebrate-the-launch-of-patron-cristalino/",
@@ -158,7 +166,8 @@
           "date": "2024-09",
           "http": 200,
           "score": 48,
-          "why": "Covers the room and the guest list."
+          "why": "Covers the room and the guest list.",
+          "headline": "Inside The PATRÓN CRISTALINO Launch With Becky G & More"
         },
         {
           "url": "https://www.identifyla.com/thelatest/becky-g-patron-cristalino-launch",
@@ -169,7 +178,8 @@
           "date": "2024-09",
           "http": 200,
           "score": 44,
-          "why": "Local LA pickup."
+          "why": "Local LA pickup.",
+          "headline": "Becky G, Gabito Ballesteros, Tito Double P Perform at Patrón Cristalino Launch"
         },
         {
           "url": "https://laguestlist.com/becky-g-gabito-ballesteros-tito-double-p-perform-at-patron-cristalino-launch/",
@@ -181,7 +191,8 @@
           "http": 403,
           "httpNote": "bot-blocked to automated clients; loads in a browser",
           "score": 41,
-          "why": "Local LA pickup with the full performer list."
+          "why": "Local LA pickup with the full performer list.",
+          "headline": "Becky G, Gabito Ballesteros, Tito Double P Perform at PATRÓN CRISTALINO Launch"
         },
         {
           "url": "https://www.maxim.com/food-drink/patron-silver-becky-g-launch-limited-edition-tequila-bottle/",
@@ -192,7 +203,8 @@
           "date": "2024",
           "http": 200,
           "score": 30,
-          "why": "About the Rainwater Project limited-edition Silver bottle, not the Cristalino launch night. Same partner, different moment — verify before using it as proof of this project."
+          "why": "About the Rainwater Project limited-edition Silver bottle, not the Cristalino launch night. Same partner, different moment — verify before using it as proof of this project.",
+          "headline": "Patrón Silver & Becky G Launch Limited-Edition Tequila"
         }
       ]
     },
@@ -211,7 +223,8 @@
           "date": "2026",
           "http": 200,
           "score": 58,
-          "why": "The client's own page for the experience. Strongest available proof it is a sanctioned part of EDC."
+          "why": "The client's own page for the experience. Strongest available proof it is a sanctioned part of EDC.",
+          "headline": "Salvage City Supper Club — EDC Las Vegas"
         },
         {
           "url": "https://gayety.com/salvage-city-edc-immersive-dinner-show",
@@ -222,7 +235,8 @@
           "date": "2025",
           "http": 200,
           "score": 52,
-          "why": "The only real editorial feature on the experience. Describes the show, not just the ticket."
+          "why": "The only real editorial feature on the experience. Describes the show, not just the ticket.",
+          "headline": "Salvage City: EDC's Decadent Post-Apocalyptic Dinner Show"
         },
         {
           "url": "https://whatnow.com/las-vegas/restaurants/salvage-city-supper-club-returns-to-edc-las-vegas/",
@@ -233,7 +247,8 @@
           "date": "2025",
           "http": 200,
           "score": 45,
-          "why": "\"Returns to\" framing is useful: it establishes the thing ran more than once."
+          "why": "\"Returns to\" framing is useful: it establishes the thing ran more than once.",
+          "headline": "Salvage City Supper Club Returns to EDC Las Vegas"
         },
         {
           "url": "https://www.salvagecitysupperclub.com/",
@@ -244,7 +259,8 @@
           "date": "current",
           "http": 200,
           "score": 40,
-          "why": "The project's own site. Source of truth for menu, chef and format."
+          "why": "The project's own site. Source of truth for menu, chef and format.",
+          "headline": "Salvage City Supper Club"
         },
         {
           "url": "https://www.yelp.com/biz/salvage-city-supper-club-las-vegas",
@@ -275,7 +291,8 @@
           "date": "2024-11",
           "http": 200,
           "score": 76,
-          "why": "The single most on-target link in the inventory: an event-production trade rounding up the activations at this exact race."
+          "why": "The single most on-target link in the inventory: an event-production trade rounding up the activations at this exact race.",
+          "headline": "Formula 1 Las Vegas Grand Prix 2024's Biggest Events and Activations"
         },
         {
           "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/what-to-do-las-vegas-f1-grand-prix-best-events-2024-1236062087/",
@@ -286,7 +303,8 @@
           "date": "2024-11",
           "http": 200,
           "score": 49,
-          "why": "Establishes the weekend's profile. Does not name the Turn 4 club — context, not proof."
+          "why": "Establishes the weekend's profile. Does not name the Turn 4 club — context, not proof.",
+          "headline": "F1 Las Vegas Grand Prix 2024: Best Ticket Deals, Parties, Events"
         },
         {
           "url": "https://www.f1lasvegasgp.com/2024/11/formula-1-heineken-silver-las-vegas-grand-prix-sets-new-standard-with-2024-race/",
@@ -298,7 +316,8 @@
           "http": 475,
           "httpNote": "WAF-blocked to automated clients; loads in a browser",
           "score": 47,
-          "why": "Promoter's own wrap-up. Good for figures and official language."
+          "why": "Promoter's own wrap-up. Good for figures and official language.",
+          "headline": "Formula 1 Heineken Silver Las Vegas Grand Prix Sets New Standard With 2024 Race"
         }
       ]
     },
@@ -318,7 +337,8 @@
           "http": 403,
           "httpNote": "bot-blocked to automated clients; loads in a browser",
           "score": 57,
-          "why": "A full feature on the activation — build, curation and intent, not just a set time. Credits III Points' David Sinopoli and creative director Veronica Gessa; we are not named."
+          "why": "A full feature on the activation — build, curation and intent, not just a set time. Credits III Points' David Sinopoli and creative director Veronica Gessa; we are not named.",
+          "headline": "Red Bull Unforeseen Put Miami's Vibrant Dance Music Culture On Display At III Points Festival"
         },
         {
           "url": "https://worldredeye.com/2024/10/iii-points-2024/",
@@ -329,7 +349,8 @@
           "date": "2024-10",
           "http": 200,
           "score": 48,
-          "why": "Gallery of III Points 2024, the edition the Unforeseen Motel was built for."
+          "why": "Gallery of III Points 2024, the edition the Unforeseen Motel was built for.",
+          "headline": "III Points 2024"
         },
         {
           "url": "https://worldredeye.com/2025/10/qa-how-iii-points-became-miamis-cultural-pulse/",
@@ -340,7 +361,8 @@
           "date": "2025-10",
           "http": 200,
           "score": 44,
-          "why": "Q&A on how III Points became Miami's cultural pulse. Background for any III Points case study."
+          "why": "Q&A on how III Points became Miami's cultural pulse. Background for any III Points case study.",
+          "headline": "Q&A: How III Points Became Miami's Cultural Pulse"
         },
         {
           "url": "https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/",
@@ -351,7 +373,8 @@
           "date": "2024-10",
           "http": 200,
           "score": 43,
-          "why": "Set times only. Confirms the Red Bull Unforeseen slot existed on the 2024 bill."
+          "why": "Set times only. Confirms the Red Bull Unforeseen slot existed on the 2024 bill.",
+          "headline": "Here Are the Set Times for III Points 2024"
         },
         {
           "url": "https://www.iiipoints.com/2024-lineup/",
@@ -362,7 +385,8 @@
           "date": "2024",
           "http": 200,
           "score": 38,
-          "why": "Festival's own lineup page."
+          "why": "Festival's own lineup page.",
+          "headline": "III Points 2024 Lineup"
         }
       ]
     },
@@ -381,7 +405,8 @@
           "date": null,
           "http": 200,
           "score": 60,
-          "why": "the standing Factory Town archive — every gallery they have shot there, and it keeps growing on its own"
+          "why": "the standing Factory Town archive — every gallery they have shot there, and it keeps growing on its own",
+          "headline": "Factory Town — the World Red Eye archive"
         },
         {
           "url": "https://magneticmag.com/2026/04/miami-music-week-2026-recap/",
@@ -392,7 +417,8 @@
           "date": "2026-04",
           "http": 200,
           "score": 52,
-          "why": "MMW 2026 recap leading with Factory Town."
+          "why": "MMW 2026 recap leading with Factory Town.",
+          "headline": "Miami Music Week 2026 Recap: Factory Town, WMC, Club Space + More"
         },
         {
           "url": "https://worldredeye.com/2024/12/factory-basel-at-factory-town/",
@@ -403,7 +429,8 @@
           "date": "2024-12",
           "http": 200,
           "score": 46,
-          "why": "GOLFOS, Carlita & Ben Sterling, Art Basel 2024"
+          "why": "GOLFOS, Carlita & Ben Sterling, Art Basel 2024",
+          "headline": "GOLFOS, Carlita & Ben Sterling at Factory Town"
         },
         {
           "url": "https://worldredeye.com/2024/03/dom-dolla-green-velvet-mau-p-at-factory-town/",
@@ -414,7 +441,8 @@
           "date": "2024-03",
           "http": 200,
           "score": 46,
-          "why": "Dom Dolla, Green Velvet & Mau P, Miami Music Week 2024"
+          "why": "Dom Dolla, Green Velvet & Mau P, Miami Music Week 2024",
+          "headline": "Dom Dolla, Green Velvet & Mau P at Factory Town"
         },
         {
           "url": "https://en.wikipedia.org/wiki/Factory_Town",
@@ -425,7 +453,8 @@
           "date": "current",
           "http": 200,
           "score": 44,
-          "why": "History and ownership: the 1946 Dixie Bedding factory, operated by Link Miami Rebels alongside Club Space. Good for the seven-acre framing."
+          "why": "History and ownership: the 1946 Dixie Bedding factory, operated by Link Miami Rebels alongside Club Space. Good for the seven-acre framing.",
+          "headline": "Factory Town"
         },
         {
           "url": "https://worldredeye.com/2023/12/zhu-hayden-james-at-factory-town/",
@@ -436,7 +465,8 @@
           "date": "2023-12",
           "http": 200,
           "score": 42,
-          "why": "ZHU & Hayden James, Art Basel 2023"
+          "why": "ZHU & Hayden James, Art Basel 2023",
+          "headline": "ZHU & Hayden James at Factory Town"
         },
         {
           "url": "https://worldredeye.com/2023/12/factory-town-basel/",
@@ -447,7 +477,8 @@
           "date": "2023-12",
           "http": 200,
           "score": 42,
-          "why": "Factory Town at Art Basel 2023"
+          "why": "Factory Town at Art Basel 2023",
+          "headline": "Factory Town: Basel"
         },
         {
           "url": "https://worldredeye.com/2023/03/black-coffee-at-factory-town/",
@@ -458,7 +489,8 @@
           "date": "2023-03",
           "http": 200,
           "score": 42,
-          "why": "Black Coffee at Factory Town, 2023 — same artist, earlier venue"
+          "why": "Black Coffee at Factory Town, 2023 — same artist, earlier venue",
+          "headline": "Black Coffee at Factory Town"
         },
         {
           "url": "https://worldredeye.com/2023/03/elrow-at-factory-town/",
@@ -469,7 +501,8 @@
           "date": "2023-03",
           "http": 200,
           "score": 42,
-          "why": "Elrow at Factory Town, 2023"
+          "why": "Elrow at Factory Town, 2023",
+          "headline": "Elrow at Factory Town"
         },
         {
           "url": "https://worldredeye.com/2023/01/solomun-at-factory-town/",
@@ -480,7 +513,8 @@
           "date": "2023-01",
           "http": 200,
           "score": 42,
-          "why": "Solomun at Factory Town, 2023"
+          "why": "Solomun at Factory Town, 2023",
+          "headline": "Solomun at Factory Town"
         },
         {
           "url": "https://www.factorytown.com/",
@@ -491,7 +525,8 @@
           "date": "current",
           "http": 200,
           "score": 40,
-          "why": "The venue's own site."
+          "why": "The venue's own site.",
+          "headline": "Factory Town · Miami"
         },
         {
           "url": "https://grayarea.co/venues/factory-town-miami",
@@ -502,7 +537,8 @@
           "date": "current",
           "http": 200,
           "score": 33,
-          "why": "Venue profile."
+          "why": "Venue profile.",
+          "headline": "Factory Town — venue profile"
         },
         {
           "url": "https://www.thehouseofrave.com/blogs/rave-gear/factory-town-guide",
@@ -532,7 +568,8 @@
           "date": "2026",
           "http": 200,
           "score": 78,
-          "why": "Live-sound trade of record. The single best link for this entry: right outlet, right audience, right deployment."
+          "why": "Live-sound trade of record. The single best link for this entry: right outlet, right audience, right deployment.",
+          "headline": "L-Acoustics DJ Deployed at Miami's III Points Festival"
         },
         {
           "url": "https://www.mixonline.com/the-wire/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points",
@@ -543,7 +580,8 @@
           "date": "2026",
           "http": 200,
           "score": 76,
-          "why": "Mix carried it too. Two independent trades on the same install is the strongest technical credibility we have anywhere."
+          "why": "Mix carried it too. Two independent trades on the same install is the strongest technical credibility we have anywhere.",
+          "headline": "L-Acoustics DJ Makes Its US Festival Debut at Miami's III Points"
         },
         {
           "url": "https://www.avnation.tv/2026/03/06/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points/",
@@ -554,7 +592,8 @@
           "date": "2026-03",
           "http": 200,
           "score": 70,
-          "why": "AV trade pickup."
+          "why": "AV trade pickup.",
+          "headline": "L-Acoustics DJ Makes U.S. Festival Debut at Miami's III Points with Immersive Spatial Audio"
         },
         {
           "url": "https://www.l-acoustics.com/stories/live-sound-innovation-at-iii-points-festival-2025-in-miami/",
@@ -566,7 +605,8 @@
           "http": 200,
           "score": 62,
           "why": "The manufacturer's own case study on the exact deployment: III Points 2025, Oct 17-18, Mana Wynwood, L-Acoustics DJ on S3QU3NC3. Read in full — GHXSTSHIP is not named, and no integrator is credited at all.",
-          "verifiedBy": "rendered in-browser 2026-07-27; page is JS-built and returns only nav chrome to a plain fetch"
+          "verifiedBy": "rendered in-browser 2026-07-27; page is JS-built and returns only nav chrome to a plain fetch",
+          "headline": "L-Acoustics DJ: Bringing Real-Time Spatial Audio to Miami's III Points Festival Sound System"
         },
         {
           "url": "https://www.l-acoustics.com/press-releases/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points/",
@@ -577,7 +617,8 @@
           "date": "2026",
           "http": 200,
           "score": 58,
-          "why": "The press release the trades ran from. Source of the S3QU3NC3 spec: eight hangs of L2D in 8.1, four frontal stacks of three KS28 cardioid, six X12 plus two KS21i overhead."
+          "why": "The press release the trades ran from. Source of the S3QU3NC3 spec: eight hangs of L2D in 8.1, four frontal stacks of three KS28 cardioid, six X12 plus two KS21i overhead.",
+          "headline": "L-Acoustics DJ Makes Its US Festival Debut at Miami's III Points"
         },
         {
           "url": "https://magneticmag.com/2025/12/kujo-interview/",
@@ -589,7 +630,8 @@
           "http": 200,
           "score": 56,
           "why": "Third-party editorial rather than vendor marketing, and it is artist testimony from the stage itself. Also dates the arc: L-ISA on the 444 stage in 2024, L-Acoustics DJ on S3QU3NC3 in 2025, L-Acoustics on every stage for eight straight years.",
-          "quote": "For nearly a decade, III Points has treated sound system design as a core part of its identity, not an afterthought."
+          "quote": "For nearly a decade, III Points has treated sound system design as a core part of its identity, not an afterthought.",
+          "headline": "Kujo on Performing at III Points With L-Acoustics DJ"
         },
         {
           "url": "https://www.usitt.org/news/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points",
@@ -600,7 +642,8 @@
           "date": "2026",
           "http": 200,
           "score": 48,
-          "why": "Institute for Theatre Technology carried it — useful when the audience is institutional rather than commercial."
+          "why": "Institute for Theatre Technology carried it — useful when the audience is institutional rather than commercial.",
+          "headline": "L-Acoustics DJ Makes Its US Festival Debut at Miami's III Points"
         },
         {
           "url": "https://exronmusic.com/2025/11/14/how-l-acoustics-new-technology-redefining-listening-music/",
@@ -641,7 +684,8 @@
           "date": "2026",
           "http": 200,
           "score": 76,
-          "why": "Event-production trade covering Miami Music Week 2026 activations. Same outlet that carried Heineken Turn 4 — the pattern worth leaning into."
+          "why": "Event-production trade covering Miami Music Week 2026 activations. Same outlet that carried Heineken Turn 4 — the pattern worth leaning into.",
+          "headline": "Inside Miami Music Week 2026"
         },
         {
           "url": "https://worldredeye.com/2026/03/miami-music-week-2026-black-coffee-carlita-at-the-racetrack/",
@@ -653,7 +697,8 @@
           "http": 200,
           "score": 62,
           "why": "~30-photo gallery of the night. Miami's society and nightlife photo agency — for this kind of work their galleries are the most reusable asset in the inventory, not just a citation.",
-          "quote": "The historic Hialeah Park racetrack came to life last night Black Coffee, Carlita, and Kaz James, presented by Club Space."
+          "quote": "The historic Hialeah Park racetrack came to life last night Black Coffee, Carlita, and Kaz James, presented by Club Space.",
+          "headline": "Miami Music Week 2026: Black Coffee & Carlita at the Racetrack"
         },
         {
           "url": "https://www.miaminewtimes.com/music/black-coffee-will-turn-hialeah-race-track-into-dance-floor-40532738/",
@@ -664,7 +709,8 @@
           "date": "2026-03",
           "http": 200,
           "score": 60,
-          "why": "The city's alt-weekly, with the 'first time the track has hosted dance music' framing."
+          "why": "The city's alt-weekly, with the 'first time the track has hosted dance music' framing.",
+          "headline": "Black Coffee Will Turn Hialeah Race Track Into Dance Floor"
         },
         {
           "url": "https://www.timeout.com/miami/things-to-do/black-coffee-at-hialeah-racetrack",
@@ -675,7 +721,8 @@
           "date": "2026-03",
           "http": 200,
           "score": 54,
-          "why": "Time Out listing/preview."
+          "why": "Time Out listing/preview.",
+          "headline": "Black Coffee at Hialeah Racetrack"
         },
         {
           "url": "https://magneticmag.com/2026/04/miami-music-week-2026-recap/",
@@ -686,7 +733,8 @@
           "date": "2026-04",
           "http": 200,
           "score": 52,
-          "why": "MMW 2026 recap covering this AND Factory Town — one link, two entries."
+          "why": "MMW 2026 recap covering this AND Factory Town — one link, two entries.",
+          "headline": "Miami Music Week 2026 Recap: Factory Town, WMC, Club Space + More"
         },
         {
           "url": "https://www.edmtunes.com/2026/03/black-coffee-hialeah-park-racetrack-mmw/",
@@ -697,7 +745,8 @@
           "date": "2026-03",
           "http": 200,
           "score": 50,
-          "why": "'Brings Open Air Show to Historic Hialeah Racetrack' — good headline language to borrow."
+          "why": "'Brings Open Air Show to Historic Hialeah Racetrack' — good headline language to borrow.",
+          "headline": "Black Coffee Brings Open Air Show to Historic Hialeah Racetrack for MMW"
         },
         {
           "url": "https://www.miamiandbeaches.com/event/black-coffee-at-the-racetrack-mmw/36984",
@@ -708,7 +757,8 @@
           "date": "2026-03",
           "http": 200,
           "score": 38,
-          "why": "The official destination marketing org listed it. Carries institutional weight a blog does not."
+          "why": "The official destination marketing org listed it. Carries institutional weight a blog does not.",
+          "headline": "Black Coffee at the Racetrack: MMW"
         },
         {
           "url": "https://iedm.com/blogs/onblast-edm-blog/black-coffee-hialeah-park-racetrack",

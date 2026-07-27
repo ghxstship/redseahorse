@@ -177,8 +177,21 @@ venue-site-operations, tour-talent-management, technology-systems-engineering},
 destinations/{index, festival-production, concert-tour-production,
 brand-activations, immersive-experiences, cruise-ships, amusement-parks,
 sporting-events, tv-film-broadcast},
-work/{index, salvage-city-supper-club}, careers/{index, role, apply},
+press, work/{index, salvage-city-supper-club, l-acoustics-dj, black-coffee-race-track, polymarket-free-grocery-store, factory-town, heineken-turn-4-nightclub, red-bull-unforeseen-motel, patron-cristalino-becky-g, fifa-world-cup-brazil-base-camp},
+careers/{index, role, apply},
 resources/{index, blog, glossary, the-experiential-producer}.
+
+## Generated pages — do NOT hand-edit
+`work/*.html` (every case study) and `press.html` are written by
+`scripts/build-case-studies.py` from `data/case-studies.json` and
+`data/press/inventory.json`. Editing them by hand is editing build output:
+the next run overwrites it. Change the data, run the script.
+
+That generator is also what keeps the case studies normalised — one template,
+one section order, one JSON-LD shape, one press block — so the formatting
+cannot drift page by page. The press block only renders items the inventory
+marks usable, above the tier floor, positive, and carrying a real headline;
+anything else stays backend.
 
 ## Forms (contact + careers/apply only)
 Keep the existing form field names/structure from the old page; add

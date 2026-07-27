@@ -22,6 +22,7 @@ const COMPANY = [
   { href: "/careers/", label: "Careers" },
   { href: "/work/", label: "Work" },
   { href: "/gallery/", label: "Gallery" },
+  { href: "/press/", label: "Press & Media" },
   { href: "/store/", label: "Store" },
   { href: "/contact/", label: "Contact" },
 ];

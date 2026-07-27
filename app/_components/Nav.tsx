@@ -54,6 +54,7 @@ const LINKS: NavLink[] = [
       { href: "/locations/", label: "Locations" },
       { href: "/careers/", label: "Careers" },
       { href: "/gallery/", label: "Gallery" },
+      { href: "/press/", label: "Press & Media" },
       { href: "/store/", label: "Store" },
     ],
   },
