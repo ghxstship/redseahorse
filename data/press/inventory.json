@@ -325,20 +325,22 @@
       "title": "Red Bull Unforeseen Motel",
       "coverageStrength": "niche",
       "sentimentOverall": "positive",
-      "note": "The press calls it Red Bull Unforeseen FULL MOON Motel. Worth deciding whether our card should match the name the coverage uses.",
+      "note": "We worked the 2024 edition. The activation returned in 2025 and that is the edition EDM Identity reviewed, so that feature is marked adjacent and excluded from the case study — citing it there would credit us with a year we were not on.",
       "items": [
         {
           "url": "https://edmidentity.com/2025/10/31/red-bull-unforeseen-iii-points-festival-miami/",
           "outlet": "EDM Identity",
           "tier": "niche-vertical",
           "sentiment": "positive",
-          "attribution": "project-only",
+          "attribution": "adjacent",
           "date": "2025-10-31",
           "http": 403,
           "httpNote": "bot-blocked to automated clients; loads in a browser",
           "score": 57,
-          "why": "A full feature on the activation — build, curation and intent, not just a set time. Credits III Points' David Sinopoli and creative director Veronica Gessa; we are not named.",
-          "headline": "Red Bull Unforeseen Put Miami's Vibrant Dance Music Culture On Display At III Points Festival"
+          "why": "Reviews the 2025 edition, not 2024 — it says the stage 'surfaced' last year and is 'returning for this edition'. The Motel ran both years; we worked 2024. Kept for the record and for the Full Moon Motel naming, never cited on the 2024 case study.",
+          "headline": "Red Bull Unforeseen Put Miami's Vibrant Dance Music Culture On Display At III Points Festival",
+          "usable": false,
+          "locked": true
         },
         {
           "url": "https://worldredeye.com/2024/10/iii-points-2024/",
@@ -357,12 +359,14 @@
           "outlet": "World Red Eye",
           "tier": "photo-agency",
           "sentiment": "positive",
-          "attribution": "context-only",
+          "attribution": "adjacent",
           "date": "2025-10",
           "http": 200,
           "score": 44,
-          "why": "Q&A on how III Points became Miami's cultural pulse. Background for any III Points case study.",
-          "headline": "Q&A: How III Points Became Miami's Cultural Pulse"
+          "why": "III Points 2025 background. Different edition from the one we worked.",
+          "headline": "Q&A: How III Points Became Miami's Cultural Pulse",
+          "usable": false,
+          "locked": true
         },
         {
           "url": "https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/",

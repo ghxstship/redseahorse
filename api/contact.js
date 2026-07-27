@@ -125,7 +125,7 @@ function shell(opts) {
     '<!DOCTYPE html><html><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark">' +
-    '<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">' +
+    '<link href="' + ASSET_BASE + '/fonts/wordmark.css" rel="stylesheet">' +
     "<style>" + EMAIL_CSS + "</style></head>" +
     '<body class="e-outer" style="margin:0;padding:0;background:' + C.surface + ';">' +
     '<div style="display:none;max-height:0;overflow:hidden;opacity:0">' + esc(opts.preheader || "") + "</div>" +

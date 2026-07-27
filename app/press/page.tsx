@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Press & Media",
-  description: "Press and media coverage of GHXSTSHIP projects \u2014 49 articles, galleries and features across festival production, brand activations, venue operations and event technology, catalogued by project.",
+  description: "Press and media coverage of GHXSTSHIP projects \u2014 47 articles, galleries and features across festival production, brand activations, venue operations and event technology, catalogued by project.",
   keywords: ["GHXSTSHIP press", "event production press coverage", "experiential production media", "case study coverage", "festival production press"],
   alternates: { canonical: "https://ghxstship.tours/press" },
 };
@@ -25,7 +25,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Press &amp; Media</p>
   <h1 className="page-h1">What Was Written.</h1>
-  <p className="lede">Independent coverage of the projects we have worked on — 49 articles, features and galleries, catalogued by project. The public record of what was built.</p>
+  <p className="lede">Independent coverage of the projects we have worked on — 47 articles, features and galleries, catalogued by project. The public record of what was built.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -73,7 +73,7 @@ export default function Page() {
 <section className="wrap sec-pad-sm">
   <p className="kicker">Brand Activations</p>
   <h2 className="sec-h2-sm">The Polymarket.</h2>
-  <p className="lede" style={{maxWidth: '62ch'}}>7th Avenue and Charles Street · New York City · 2026 — <Link href="/work/polymarket-free-grocery-store">read the case study →</Link></p>
+  <p className="lede" style={{maxWidth: '62ch'}}>The West Village · New York City · 2026 — <Link href="/work/polymarket-free-grocery-store">read the case study →</Link></p>
   <div className="press-rows">
     <a className="row-line" href="https://www.newsweek.com/new-york-city-opens-first-free-grocery-store-11523713" target="_blank" rel="noopener"><span className="row-title">New York City opens first free grocery store</span><span className="row-sub">Newsweek</span><span className="row-sub">2026-02</span></a>
     <a className="row-line" href="https://www.newsweek.com/new-york-city-gets-first-free-grocery-store-polymarket-11460498" target="_blank" rel="noopener"><span className="row-title">New York City gets first free grocery store</span><span className="row-sub">Newsweek</span><span className="row-sub">2026-02</span></a>
@@ -119,9 +119,7 @@ export default function Page() {
   <h2 className="sec-h2-sm">Red Bull Unforeseen Motel.</h2>
   <p className="lede" style={{maxWidth: '62ch'}}>III Points · Miami · 2024 — <Link href="/work/red-bull-unforeseen-motel">read the case study →</Link></p>
   <div className="press-rows">
-    <a className="row-line" href="https://edmidentity.com/2025/10/31/red-bull-unforeseen-iii-points-festival-miami/" target="_blank" rel="noopener"><span className="row-title">Red Bull Unforeseen Put Miami&#x27;s Vibrant Dance Music Culture On Display At III Points Festival</span><span className="row-sub">EDM Identity</span><span className="row-sub">2025-10-31</span></a>
     <a className="row-line" href="https://worldredeye.com/2024/10/iii-points-2024/" target="_blank" rel="noopener"><span className="row-title">III Points 2024</span><span className="row-sub">World Red Eye</span><span className="row-sub">2024-10</span></a>
-    <a className="row-line" href="https://worldredeye.com/2025/10/qa-how-iii-points-became-miamis-cultural-pulse/" target="_blank" rel="noopener"><span className="row-title">Q&amp;A: How III Points Became Miami&#x27;s Cultural Pulse</span><span className="row-sub">World Red Eye</span><span className="row-sub">2025-10</span></a>
     <a className="row-line" href="https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/" target="_blank" rel="noopener"><span className="row-title">Here Are the Set Times for III Points 2024</span><span className="row-sub">Miami New Times</span><span className="row-sub">2024-10</span></a>
     <a className="row-line" href="https://www.iiipoints.com/2024-lineup/" target="_blank" rel="noopener"><span className="row-title">III Points 2024 Lineup</span><span className="row-sub">III Points</span><span className="row-sub">2024</span></a>
   </div>

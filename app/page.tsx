@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management",
+  title: "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management, Technology & Systems Engineering",
   description: "GHXSTSHIP delivers four professional services \u2014 experiential design &amp; production, venue &amp; site operations, tour &amp; talent management, and technology &amp; systems engineering \u2014 for festivals, tours, activations, and live events.",
   keywords: ["experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering", "event production company", "live event operations", "tour management company", "experiential technology"],
   alternates: { canonical: "https://ghxstship.tours/" },
@@ -44,7 +44,7 @@ export default function Page() {
 
 <section className="hero"><div className="wrap"><div className="hero-grid">
   <div>
-    <p className="kicker">Experiential Design &amp; Production · Venue &amp; Site Operations · Tour &amp; Talent Management · Technology &amp; Systems</p>
+    <p className="kicker">Experiential Design &amp; Production · Venue &amp; Site Operations · Tour &amp; Talent Management · Technology &amp; Systems Engineering</p>
     <h1 className="display-h1">Beyond<br/>the <span className="a">Scenes.</span></h1>
     <p className="lede">You're not running an event, you're building a world that exists for one weekend and strikes by morning. GHXSTSHIP runs the whole thing with you: experiential design &amp; production, venue &amp; site operations, tour &amp; talent management, and the technology and systems that tie it together. One partner you can hold accountable, for festivals, tours, activations, immersive experiences, and live events.</p>
     <div className="cta-row">
@@ -73,7 +73,7 @@ export default function Page() {
 </div></section>
 
 <section className="wrap sec-pad"><div className="split2">
-  <h2 className="sec-h2-sm" style={{maxWidth: '22ch'}}>One accountable partner for <span style={{color: 'var(--color-accent-700)'}}>Experiential Design &amp; Production</span>, <span style={{color: 'var(--color-accent-700)'}}>Venue &amp; Site Operations</span>, <span style={{color: 'var(--color-accent-700)'}}>Tour &amp; Talent Management</span> &amp; <span style={{color: 'var(--color-accent-700)'}}>Technology &amp; Systems</span>.</h2>
+  <h2 className="sec-h2-sm" style={{maxWidth: '22ch'}}>One accountable partner for <span style={{color: 'var(--color-accent-700)'}}>Experiential Design &amp; Production</span>, <span style={{color: 'var(--color-accent-700)'}}>Venue &amp; Site Operations</span>, <span style={{color: 'var(--color-accent-700)'}}>Tour &amp; Talent Management</span> &amp; <span style={{color: 'var(--color-accent-700)'}}>Technology &amp; Systems Engineering</span>.</h2>
   <p className="lede">GHXSTSHIP runs four services the way a lead producer runs a show: one partner who owns scope, schedule, budget, crew, and the technology. You get the experience designed and produced, the venue and site operated, the tour and the talent managed, and the systems wired to run it all, from the first call to the night it opens, instead of stitching together six vendors who blame each other when something slips.</p>
 </div></section>
 
@@ -111,40 +111,14 @@ export default function Page() {
   <p className="kicker">Selected Work</p>
   <h2 className="sec-h2">From the Archives.</h2>
   <p className="lede">A few of the experiences we designed, built, crewed, and ran end to end.</p>
-  <div className="grid3" style={{marginTop: '28px'}}>
-    <Link href="/work" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy" width="700" height="525"/></figure><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concert &amp; Tour Production · Hialeah Park · Miami · 2026</p></div></Link>
-    <Link href="/work" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=700&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="700" height="525"/></figure><div className="body"><h3>The Polymarket</h3><p className="meta">New York's First Free Grocery Store · New York City · 2026</p></div></Link>
-    <Link href="/work" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80&auto=format&fit=crop" alt="Supper club table set for service" loading="lazy" width="700" height="525"/></figure><div className="body"><h3>Salvage City Supper Club</h3><p className="meta">Premium Hospitality · EDC Las Vegas · 2025–26</p></div></Link>
-  </div>
-</div></section>
-
-<section className="wrap sec-pad" id="platforms">
-  <p className="kicker">The Platforms</p>
-  <h2 className="sec-h2">Software We Run On.</h2>
-  <p className="lede">Four in-house platforms wire an engagement together, from the plan to the crew to the public side. COMPVSS and LEG3ND are live today, the GVTEWAY marketplace is open with ticketing and portals in build, and ATLVS is in build.</p>
-  <div className="plat-row">
-    <div className="plat"><b>ATLVS</b><p>The operator console for producers and executives. ERP, CRM, and project management on one record.</p></div>
-    <div className="plat"><b>COMPVSS</b><p>Site and venue operations for deskless crews. Rosters, advancing, day-of coordination.</p></div>
-    <div className="plat"><b>GVTEWAY</b><p>The public interface and marketplace. Gigs, open calls, profiles, directories, and RFQs.</p></div>
-    <div className="plat"><b>LEG3ND</b><p>The knowledge layer. The standard, courses, certifications, and the priced catalog.</p></div>
-  </div>
-  <p style={{marginTop: '24px'}}><Link href="/platforms" className="btn btn-ghost">See the platforms →</Link></p>
-</section>
-
-<section className="band-dark close-cta"><div className="wrap">
-  <p className="kicker">Ready When You Are</p>
-  <h2>Start Your <span className="a">Project.</span></h2>
-  <p className="lede" style={{marginInline: 'auto'}}>Tell us what you're building. We scope it, crew it, run the nine phases, and go live, on time and on budget.</p>
-  <div className="cta-row" style={{justifyContent: 'center', marginTop: '22px'}}>
-    <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
-    <Link href="/work" className="btn btn-secondary btn-lg">See the Work</Link>
-  </div>
-</div></section>
-
-</main>
-
-
-
+  <div className="grid4" style={{marginTop: '28px'}}>
+      <Link href="/work/black-coffee-race-track" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Open-air crowd at a racetrack show at dusk" loading="lazy" width="800" height="600"/></figure><div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concert &amp; Tour Production · Hialeah Park · 2026</p><span className="more">Read the case study →</span></div></Link>
+      <Link href="/work/polymarket-free-grocery-store" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure><div className="body"><h3>The Polymarket</h3><p className="meta">Brand Activations · The West Village · 2026</p><span className="more">Read the case study →</span></div></Link>
+      <Link href="/work/l-acoustics-dj" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80&auto=format&fit=crop" alt="Audio control surface in a live sound control room" loading="lazy" width="800" height="600"/></figure><div className="body"><h3>L-Acoustics DJ</h3><p className="meta">Technology Implementation · III Points · 2025–present</p><span className="more">Read the case study →</span></div></Link>
+      <Link href="/work/patron-cristalino-becky-g" className="wcard"><figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80&auto=format&fit=crop" alt="Spirit poured over ice in a rocks glass" loading="lazy" width="800" height="600"/></figure><div className="body"><h3>PATRÓN Cristalino x Becky G</h3><p className="meta">Product Launch · Olvera Street · 2024</p><span className="more">Read the case study →</span></div></Link>
+    </div>
+</div>
+</section></main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/","logo":"https://ghxstship.tours/assets/logo-ghostship-skull.svg","description":"Professional services firm for live and experiential projects: experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering.","address":{"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"},"sameAs":["https://www.instagram.com/ghxstship.tours","https://www.linkedin.com/company/ghxstship","https://www.youtube.com/@ghxstship","https://www.tiktok.com/@ghxstship.tours"]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"ProfessionalService","name":"GHXSTSHIP","url":"https://ghxstship.tours/","areaServed":"US","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Experiential Design and Production"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Venue and Site Operations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tour and Talent Management"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Technology and Systems Engineering"}}]}` }} />
     </>

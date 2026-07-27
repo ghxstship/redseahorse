@@ -106,7 +106,7 @@ export default function Page() {
     </Link>
     <Link href="/work/polymarket-free-grocery-store" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>The Polymarket</h3><p className="meta">Brand Activations · 7th Avenue and Charles Street · 2026</p></div>
+      <div className="body"><h3>The Polymarket</h3><p className="meta">Brand Activations · The West Village · 2026</p></div>
     </Link>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all the work →</Link></p>

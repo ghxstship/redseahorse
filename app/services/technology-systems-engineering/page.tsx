@@ -114,7 +114,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Answers</p>
-  <h2 className="sec-h2">Technology &amp; Systems FAQ.</h2>
+  <h2 className="sec-h2">Technology &amp; Systems Engineering FAQ.</h2>
   <div style={{marginTop: '20px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">What are ATLVS, COMPVSS, GVTEWAY, and LEG3ND?</summary><div className="faq-a">Four platforms that make up the technology layer of XPMS 2.6. ATLVS is the operator console: ERP, CRM, and project management on one record, from estimate to settlement. COMPVSS runs site and venue operations for deskless crews: rosters, scheduling, advancing, credentials, and day-of coordination. GVTEWAY is the public interface and marketplace: gigs, open calls, talent EPKs and crew profiles, vendor directories, and published RFQs. LEG3ND is the knowledge layer: the XPMS standard, courses and certifications, the priced catalog, the signage library, and the compliance engine. COMPVSS and LEG3ND are live today, the GVTEWAY marketplace is open with ticketing and stakeholder portals in build, and ATLVS is in build.</div></details>
     <details className="faq-item"><summary className="faq-q">Is show technology part of the platforms?</summary><div className="faq-a">No. Projection, playback, LED, show control, and content pipelines are GHXSTSHIP service capabilities. We specify, install, commission, and operate them under this vertical. They are not features of any of the four platforms.</div></details>

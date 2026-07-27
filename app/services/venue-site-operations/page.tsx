@@ -105,7 +105,7 @@ export default function Page() {
   <p className="lede">We already do this work in the field, and we'd run your room the same way.</p>
   <div style={{marginTop: '16px'}}>
     <div className="row-line"><span className="row-title">Factory Town</span><span className="row-sub">Venue Operations · Miami · 2023–25</span></div>
-    <div className="row-line"><span className="row-title">The Vanguard Orlando</span><span className="row-sub">Venue Operations · Orlando · 2024</span></div>
+    
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See the work →</Link></p>
 </section>

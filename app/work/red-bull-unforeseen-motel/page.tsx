@@ -56,7 +56,7 @@ export default function Page() {
   <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>III Points, Mana Wynwood</div><div className="k">Site</div></div>
   <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>Eight Club Space residents</div><div className="k">Programme</div></div>
   <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>A dozen-plus local artists</div><div className="k">Also</div></div>
-  <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>Red Bull Unforeseen Full Moon Motel</div><div className="k">Known as</div></div>
+  <div className="stat"><div className="v" style={{fontSize: 'clamp(19px,2vw,24px)'}}>Back-to-back pairings across both days</div><div className="k">Format</div></div>
 </div></div>
 
 <section className="wrap sec-pad"><div className="cs-body">
@@ -71,8 +71,8 @@ export default function Page() {
   <div className="pull"><p>Somewhere worth going without the logo on it.</p></div>
 
   <h2>The Result</h2>
-  <p><strong>EDM Identity</strong> covered it as a feature rather than a listing — the build, the curation and the intent — and read it as putting Miami's dance music culture on display rather than borrowing it.</p>
-  <p>The activation ran across both days of the 2024 festival at Mana Wynwood, and World Red Eye's gallery of the edition is the visual record.</p>
+  <p>The Motel ran across both days of the 2024 festival at Mana Wynwood, curated with III Points' own leadership rather than around them, and World Red Eye's gallery of the edition is the visual record.</p>
+  <p>It worked well enough to come back: Red Bull returned the Unforeseen Motel to III Points the following year. Ours is the 2024 build.</p>
 
   <h2>The Credits</h2>
   <p><strong>Client</strong> Red Bull · <strong>Venue</strong> Mana Wynwood · <strong>Year</strong> 2024 · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations.</p>
@@ -84,9 +84,7 @@ export default function Page() {
   <h2 className="sec-h2-sm">What Was Written.</h2>
   <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
-    <a className="row-line" href="https://edmidentity.com/2025/10/31/red-bull-unforeseen-iii-points-festival-miami/" target="_blank" rel="noopener"><span className="row-title">Red Bull Unforeseen Put Miami&#x27;s Vibrant Dance Music Culture On Display At III Points Festival</span><span className="row-sub">EDM Identity</span><span className="row-sub">2025-10-31</span></a>
     <a className="row-line" href="https://worldredeye.com/2024/10/iii-points-2024/" target="_blank" rel="noopener"><span className="row-title">III Points 2024</span><span className="row-sub">World Red Eye</span><span className="row-sub">2024-10</span></a>
-    <a className="row-line" href="https://worldredeye.com/2025/10/qa-how-iii-points-became-miamis-cultural-pulse/" target="_blank" rel="noopener"><span className="row-title">Q&amp;A: How III Points Became Miami&#x27;s Cultural Pulse</span><span className="row-sub">World Red Eye</span><span className="row-sub">2025-10</span></a>
     <a className="row-line" href="https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/" target="_blank" rel="noopener"><span className="row-title">Here Are the Set Times for III Points 2024</span><span className="row-sub">Miami New Times</span><span className="row-sub">2024-10</span></a>
     <a className="row-line" href="https://www.iiipoints.com/2024-lineup/" target="_blank" rel="noopener"><span className="row-title">III Points 2024 Lineup</span><span className="row-sub">III Points · primary source</span><span className="row-sub">2024</span></a>
   </div>

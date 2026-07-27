@@ -43,7 +43,7 @@ export default function Page() {
     </Link>
     <Link href="/work/polymarket-free-grocery-store" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><span className="tag tag-neutral">Brand Activations</span><h2>The Polymarket</h2><p className="meta">7th Avenue and Charles Street · New York City · 2026</p><span className="more">Read the case study →</span></div>
+      <div className="body"><span className="tag tag-neutral">Brand Activations</span><h2>The Polymarket</h2><p className="meta">The West Village · New York City · 2026</p><span className="more">Read the case study →</span></div>
     </Link>
     <Link href="/work/salvage-city-supper-club" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop" alt="Supper club table set for service" loading="lazy" width="800" height="600"/></figure>
@@ -66,22 +66,8 @@ export default function Page() {
       <div className="body"><span className="tag tag-neutral">Product Launch</span><h2>PATRÓN Cristalino x Becky G</h2><p className="meta">Olvera Street · Los Angeles · 2024</p><span className="more">Read the case study →</span></div>
     </Link>
   </div>
-</section>
 
-<section className="band-dark close-cta"><div className="wrap">
-  <p className="kicker">Ready When You Are</p>
-  <h2>Add Your Build to <span className="a">the Archives.</span></h2>
-  <p className="lede" style={{marginInline: 'auto'}}>Tell us what you're building. We scope it, crew it, run the nine phases, and go live, on time and on budget.</p>
-  <div className="cta-row" style={{marginTop: '22px'}}>
-    <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
-    <Link href="/destinations" className="btn btn-secondary btn-lg">See the Industries</Link>
-  </div>
-</div></section>
-
-</main>
-
-
-
+</section></main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CollectionPage","name":"GHXSTSHIP Selected Work","url":"https://ghxstship.tours/work/","description":"Selected work from GHXSTSHIP: festivals, concerts and tours, brand activations, immersive experiences, and sporting events designed, built, crewed, and launched end to end."}` }} />
     </>
   );

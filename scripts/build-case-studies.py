@@ -122,8 +122,6 @@ PAGE = """<!DOCTYPE html>
 <meta name="keywords" content="{keywords}">
 <link rel="canonical" href="{site}/work/{slug}">
 <title>{title} — Case Study — GHXSTSHIP</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../../../modernist.css">
 <script type="application/ld+json">{ld}</script>
 <script type="application/ld+json">{crumbs}</script>
@@ -296,8 +294,6 @@ def press_page():
 <meta name="keywords" content="GHXSTSHIP press, event production press coverage, experiential production media, case study coverage, festival production press">
 <link rel="canonical" href="{SITE}/press">
 <title>Press &amp; Media — GHXSTSHIP</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../../modernist.css">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"CollectionPage","name":"Press & Media","description":"Coverage of GHXSTSHIP projects, catalogued by project.","url":"{SITE}/press","isPartOf":{{"@type":"WebSite","name":"GHXSTSHIP","url":"{SITE}/"}}}}</script>
 <style>

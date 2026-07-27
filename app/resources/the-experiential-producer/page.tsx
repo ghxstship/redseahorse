@@ -64,7 +64,7 @@ export default function Page() {
   <h2>The Road: Tour &amp; Talent Management</h2>
   <p>The tour manager moves the show and the people in it. Routing and advancing, artist relations, travel and settlement, and the run of show, city after city, held to the same standard as the build itself.</p>
 
-  <h2>The Coordination: Technology &amp; Systems</h2>
+  <h2>The Coordination: Technology &amp; Systems Engineering</h2>
   <p>The software is how the whole thing stays in sync: ATLVS is the operator console where the estimate, the plan, and the settlement live on one record, COMPVSS runs site and venue operations in the crew's pocket, GVTEWAY is the public interface and marketplace, and LEG3ND holds the standard, the catalog, and the certifications the work is measured against. Some are live today and some are still in build. Around them sit the show technology, integrations, installs, and analytics we specify and implement, so a build stays measurable while it's still moving.</p>
 
   <h2>Why It Matters</h2>

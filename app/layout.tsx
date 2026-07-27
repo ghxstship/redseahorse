@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ghxstship.tours"),
   title: {
     default:
-      "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management, Technology & Systems — GHXSTSHIP",
+      "Experiential Design & Production, Venue & Site Operations, Tour & Talent Management, Technology & Systems Engineering — GHXSTSHIP",
     template: "%s — GHXSTSHIP",
   },
   description:
@@ -37,10 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* Pin the stored theme before the body paints. Deferring this to
             theme.js would flash the wrong ground on every load. */}
+        <link rel="preload" href="/fonts/bebas-neue-400-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <link rel="preload" href="/fonts/archivo-800-latin.woff2" as="font" type="font/woff2" crossOrigin="" />
         <script
           dangerouslySetInnerHTML={{
             __html:

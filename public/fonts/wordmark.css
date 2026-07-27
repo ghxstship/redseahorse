@@ -1,0 +1,10 @@
+/* The wordmark face, for email. Self-hosted so opening a message does not
+   hand the recipient's IP to a third party. Most clients strip <link>
+   entirely and fall back to the condensed stack, which is expected. */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://ghxstship.tours/fonts/bebas-neue-400-latin.woff2') format('woff2');
+}

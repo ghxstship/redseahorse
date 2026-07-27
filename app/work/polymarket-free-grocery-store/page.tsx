@@ -41,7 +41,7 @@ export default function Page() {
   <p className="lede">A fully stocked grocery store in the West Village, open to anyone, where nothing had a price — five days, no purchase, no catch.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · Polymarket</span>
-    <span className="tag tag-neutral">Venue · 7th Avenue and Charles Street</span>
+    <span className="tag tag-neutral">Venue · The West Village</span>
     <span className="tag tag-neutral">New York City</span>
     <span className="tag tag-neutral">2026</span>
     <span className="tag tag-outline">Experiential Design &amp; Production, Venue &amp; Site Operations</span>
@@ -76,7 +76,7 @@ export default function Page() {
   <p>The coverage was national — Newsweek, Fox Business, FOX 5, Vice — and it was not uniformly warm. Some of it was politically framed and some questioned the motive. That is the honest record of a free grocery store in an election-year news cycle, and it is worth stating plainly: the queue was the story, in both directions.</p>
 
   <h2>The Credits</h2>
-  <p><strong>Client</strong> Polymarket · <strong>Venue</strong> West Village, Lower Manhattan · <strong>Year</strong> 2026 · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations.</p>
+  <p><strong>Client</strong> Polymarket · <strong>Venue</strong> 7th Avenue at Charles Street, Lower Manhattan · <strong>Year</strong> 2026 · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations.</p>
 
 </div></section>
 
@@ -127,7 +127,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context": "https://schema.org", "@type": "CreativeWork", "name": "The Polymarket", "creator": {"@type": "Organization", "name": "GHXSTSHIP", "url": "https://ghxstship.tours/"}, "about": "Brand Activations", "locationCreated": {"@type": "Place", "name": "7th Avenue and Charles Street", "address": "West Village, Lower Manhattan, New York City"}, "genre": "Brand Activations", "keywords": "Polymarket free grocery store, West Village pop-up, retail activation New York, brand activation case study, experiential retail production", "url": "https://ghxstship.tours/work/polymarket-free-grocery-store"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context": "https://schema.org", "@type": "CreativeWork", "name": "The Polymarket", "creator": {"@type": "Organization", "name": "GHXSTSHIP", "url": "https://ghxstship.tours/"}, "about": "Brand Activations", "locationCreated": {"@type": "Place", "name": "The West Village", "address": "7th Avenue at Charles Street, Lower Manhattan, New York City"}, "genre": "Brand Activations", "keywords": "Polymarket free grocery store, West Village pop-up, retail activation New York, brand activation case study, experiential retail production", "url": "https://ghxstship.tours/work/polymarket-free-grocery-store"}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ghxstship.tours/"}, {"@type": "ListItem", "position": 2, "name": "Work", "item": "https://ghxstship.tours/work"}, {"@type": "ListItem", "position": 3, "name": "The Polymarket", "item": "https://ghxstship.tours/work/polymarket-free-grocery-store"}]}` }} />
     </>
   );

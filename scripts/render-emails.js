@@ -75,8 +75,6 @@ fs.writeFileSync(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Email Templates — GHXSTSHIP</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../../modernist.css">
 <style>
   .note { max-width: 68ch; }
