@@ -90,7 +90,7 @@ innovative solutions, resources, and technologies that redefine what's possible.
   (14+ years · 250+ experiences · 5M+ memories). Miami HQ // global. Showcase only real projects from the Archives — no geographic vanity stats.
 - **Locations:** **Miami** (Headquarters) · **New York** · **Chicago** · **Los Angeles**.
 - **Stamps:** locations and metadata are written like coordinates/manifests:
-  `MIAMI // LAS VEGAS // CHICAGO // NEW YORK // LOS ANGELES`, `MIAMI HQ`, `EST. 2022`, `CLIENT: RED BULL // YEAR: 2023`.
+  `MIAMI // LAS VEGAS // CHICAGO // NEW YORK // LOS ANGELES`, `MIAMI HQ`, `EST. 2022`, `CLIENT: RED BULL // YEAR: 2024`.
 - **Emoji:** none. Use the icon set or unicode marks (◆ ✦ ↗) sparingly.
 - **Education angle:** when speaking to emerging producers, warm the tone slightly — mentor, not
   recruiter. "Join the Crew," "learn the ropes," apprenticeship framing. Keep the swagger; add generosity.
