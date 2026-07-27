@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Concerts &amp; Tours</p>
     <h1 className="page-h1">Concerts <span style={{color: 'var(--color-accent-700)'}}>&amp; Tours.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service concert and tour production company headquartered in Miami, with primary offices in Chicago, Los Angeles, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our nine-phase XPMS 2.6 production lifecycle, with the road itself run by our <Link href="/services/tour-talent-management">Tour &amp; Talent Management</Link> vertical.</p>
+    <p className="lede">GHXSTSHIP is a full-service concert and tour production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our nine-phase XPMS 2.6 production lifecycle, with the road itself run by our <Link href="/services/tour-talent-management">Tour &amp; Talent Management</Link> vertical.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

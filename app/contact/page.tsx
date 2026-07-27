@@ -50,7 +50,7 @@ export default function Page() {
     </form>
     <aside className="rail">
       <div className="blk"><p className="lbl">Email</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
-      <div className="blk"><p className="lbl">Primary Offices</p>
+      <div className="blk"><p className="lbl">Headquarters &amp; Regional</p>
         <div className="office"><p className="city">Miami HQ</p><a href="mailto:miami@ghxstship.pro">miami@ghxstship.pro</a></div>
         <div className="office"><p className="city">Chicago</p><a href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></div>
         <div className="office"><p className="city">Los Angeles</p><a href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></div>
@@ -71,7 +71,7 @@ export default function Page() {
     <details className="faq-item"><summary className="faq-q">What happens after I send the brief?</summary><div className="faq-a">We read it and come back to set up a consultation, a real conversation about what you're trying to pull off, who it's for, and when it has to happen. From there we scope it: services, schedule, budget, and the crew that owns it.</div></details>
     <details className="faq-item"><summary className="faq-q">What services do you provide?</summary><div className="faq-a">Four: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation. Engage one, or all four as one accountable partner.</div></details>
     <details className="faq-item"><summary className="faq-q">What kinds of projects do you take on?</summary><div className="faq-a">Festivals, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film &amp; broadcast, from single-night shows to multi-weekend builds.</div></details>
-    <details className="faq-item"><summary className="faq-q">Where do you operate?</summary><div className="faq-a">Nationwide, from eight locations. Primary offices are Miami HQ, Chicago, Los Angeles, and New York City; satellite offices are Nashville, Denver, Las Vegas, and Phoenix. Someone local in the room, the same standard everywhere.</div></details>
+    <details className="faq-item"><summary className="faq-q">Where do you operate?</summary><div className="faq-a">Nationwide, from eight locations. The headquarters is Miami, with regional offices in Los Angeles, Chicago, and New York City; satellite offices are Nashville, Denver, Las Vegas, and Phoenix. Someone local in the room, the same standard everywhere.</div></details>
     <details className="faq-item"><summary className="faq-q">How do engagements run?</summary><div className="faq-a">Every engagement walks the same nine-phase XPMS 2.6 lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</div></details>
   </div>
 </div></section>

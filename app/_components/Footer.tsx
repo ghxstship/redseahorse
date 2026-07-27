@@ -74,16 +74,15 @@ export default function Footer() {
               <img src="/assets/logo-ghostship-skull.svg" alt="" width={26} height={26} />
               GHXSTSHIP
             </Link>
-            <p className="foot-tag">
-              Experiential design &amp; production, venue &amp; site operations, tour &amp;
-              talent management, and technology &amp; systems implementation — one
-              accountable partner from first drawing to final load-out.
-            </p>
-            <p className="foot-tag" style={{ marginTop: 6 }}>
-              <b>Primary</b> Miami &middot; Chicago &middot; Los Angeles &middot; New York City
-              <br />
-              <b>Satellite</b> Nashville &middot; Denver &middot; Las Vegas &middot; Phoenix
-            </p>
+            <p className="foot-lede">Venture Beyond.</p>
+            <dl className="foot-loc">
+              <dt>Headquarters</dt>
+              <dd>Miami</dd>
+              <dt>Regional</dt>
+              <dd>Los Angeles &middot; Chicago &middot; New York City</dd>
+              <dt>Satellite</dt>
+              <dd>Nashville &middot; Denver &middot; Las Vegas &middot; Phoenix</dd>
+            </dl>
             <div className="foot-social">
               {SOCIAL.map((s) => (
                 <a key={s.label} href={s.href} aria-label={s.label} target="_blank" rel="noopener">

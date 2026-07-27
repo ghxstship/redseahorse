@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · TV · Film · Broadcast</p>
     <h1 className="page-h1">TV, Film <span style={{color: 'var(--color-accent-700)'}}>&amp; Broadcast.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service broadcast, film, and television production company headquartered in Miami, with primary offices in Chicago, Los Angeles, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a full-service broadcast, film, and television production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

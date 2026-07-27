@@ -26,7 +26,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">The Company</p>
   <h1 className="page-h1">We Build the Whole Thing.</h1>
-  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with primary offices in Chicago, Los Angeles, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver four services, Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
+  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver four services, Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 

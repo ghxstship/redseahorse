@@ -392,6 +392,12 @@ footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: clamp(24px, 4vw, 56px); padding-block: clamp(36px, 5vw, 64px) clamp(28px, 4vw, 48px); }
 .foot-brand-name { font-family: var(--font-wordmark); font-weight: 400; font-size: 1.733rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
 .foot-brand-name img { width: 26px; height: 26px; }
+/* footer brand lockup: wordmark + tagline, then the quiet location table */
+.foot-lede { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 1.067rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-text); margin: 12px 0 0; }
+.foot-loc { margin: 16px 0 0; }
+.foot-loc dt { font-size: 0.667rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 45%, transparent); margin-top: 11px; }
+.foot-loc dt:first-of-type { margin-top: 0; }
+.foot-loc dd { margin: 2px 0 0; font-size: 0.867rem; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
 .foot-tag { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 34ch; margin-top: 12px; }
 .foot-col h6 { font-size: 0.733rem; letter-spacing: 0.14em; color: var(--color-accent-700); margin-bottom: 12px; }
 /* footer links are BODY register per the kit canon — never the heading font */

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Locations",
-  description: "GHXSTSHIP is an experiential production company with primary offices in Miami HQ, Chicago, Los Angeles, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix \u2014 producing festivals, brand activations, and immersive experiences nationwide.",
+  description: "GHXSTSHIP is an experiential production company with headquarters in Miami and regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix \u2014 producing festivals, brand activations, and immersive experiences nationwide.",
   keywords: ["GHXSTSHIP locations", "experiential production Miami", "event production Las Vegas", "event production Chicago", "event production New York", "event production Los Angeles"],
   alternates: { canonical: "https://ghxstship.tours/locations" },
 };
@@ -28,19 +28,19 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Locations</p>
   <h1 className="page-h1">Eight Cities. One Team.</h1>
-  <p className="lede">GHXSTSHIP produces experiential events nationwide from eight locations. Four primary offices carry full production, operations, and technology teams, headquartered in Miami. Four satellite offices put crew and coverage in the markets that run hot. Someone local in the room, the same standard everywhere.</p>
+  <p className="lede">GHXSTSHIP produces experiential events nationwide from eight locations. The Miami headquarters and three regional offices carry full production, operations, and technology teams. Four satellite offices put crew and coverage in the markets that run hot. Someone local in the room, the same standard everywhere.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
 <section className="wrap sec-pad" style={{paddingTop: 'clamp(28px,4vw,48px)'}}>
-  <p className="kicker">Primary Offices</p>
+  <p className="kicker">Headquarters &amp; Regional Offices</p>
   <h2 className="sec-h2-sm">Full Teams on the Ground.</h2>
   <p className="lede">Production, operations, and technology staffed in market, with the standard held the same in all four.</p>
   <div className="grid2" style={{marginTop: 'clamp(24px,3vw,36px)'}}>
     <article className="loc"><span className="tag tag-accent">Headquarters</span><h2>Miami</h2><p>Our headquarters. The base for experiential production across the Southeast, Latin America, and the Caribbean, and home to festivals, immersive experiences, and brand activations in one of the world's fastest-growing event markets.</p><p className="area">Serving Miami · Southeast US · LATAM &amp; Caribbean</p><a className="mail" href="mailto:miami@ghxstship.pro">miami@ghxstship.pro</a></article>
-    <article className="loc"><span className="tag tag-outline">Primary Office</span><h2>Chicago</h2><p>Our Midwest base, festival, corporate, and live-music production across the central US.</p><p className="area">Serving Chicago · Midwest US</p><a className="mail" href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></article>
-    <article className="loc"><span className="tag tag-outline">Primary Office</span><h2>Los Angeles</h2><p>Our West Coast crew, entertainment, product launches, TV, film &amp; broadcast, and motorsports production.</p><p className="area">Serving LA · West Coast US</p><a className="mail" href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></article>
-    <article className="loc"><span className="tag tag-outline">Primary Office</span><h2>New York City</h2><p>Our Northeast crew, producing brand activations, launches, and immersive experiences across the country's most demanding event market.</p><p className="area">Serving NYC · Northeast US</p><a className="mail" href="mailto:newyork@ghxstship.pro">newyork@ghxstship.pro</a></article>
+    <article className="loc"><span className="tag tag-outline">Regional Office</span><h2>Chicago</h2><p>Our Midwest base, festival, corporate, and live-music production across the central US.</p><p className="area">Serving Chicago · Midwest US</p><a className="mail" href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></article>
+    <article className="loc"><span className="tag tag-outline">Regional Office</span><h2>Los Angeles</h2><p>Our West Coast crew, entertainment, product launches, TV, film &amp; broadcast, and motorsports production.</p><p className="area">Serving LA · West Coast US</p><a className="mail" href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></article>
+    <article className="loc"><span className="tag tag-outline">Regional Office</span><h2>New York City</h2><p>Our Northeast crew, producing brand activations, launches, and immersive experiences across the country's most demanding event market.</p><p className="area">Serving NYC · Northeast US</p><a className="mail" href="mailto:newyork@ghxstship.pro">newyork@ghxstship.pro</a></article>
   </div>
 </section>
 
