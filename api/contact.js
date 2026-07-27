@@ -22,7 +22,8 @@ var FROM_RE = /^(?:[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+|[^<>]{1,64}<\s*[^<>@\s]+@[^<>
 // Sender must be on a domain verified in Resend. The plan covers atlvs.pro,
 // so that is the built-in default — RESEND_FROM is now optional and only
 // needed to override it.
-var DEFAULT_FROM = "GHXSTSHIP <ghxstship@atlvs.pro>";
+var BRAND = "GHXSTSHIP";
+var DEFAULT_FROM = BRAND + " <ghxstship@atlvs.pro>";
 // Resend's shared onboarding sender can only deliver to the account owner,
 // so auto-replies to third parties are suppressed if we ever fall back to it.
 var SHARED_SENDER_RE = /@resend\.dev>?\s*$/i;
@@ -300,6 +301,10 @@ module.exports = async function handler(req, res) {
   // rather than trusting the environment.
   var rawFrom = String(process.env.RESEND_FROM || "").trim().replace(/^["']|["']$/g, "");
   var customFrom = FROM_RE.test(rawFrom) ? rawFrom : "";
+  // A bare address sends with no display name, so recipients see the raw
+  // mailbox instead of the brand. Wrap it in the lockup so the sender always
+  // reads "GHXSTSHIP <address>" however the variable happens to be set.
+  if (customFrom && customFrom.indexOf("<") === -1) customFrom = BRAND + " <" + customFrom + ">";
   if (rawFrom && !customFrom) {
     console.error("RESEND_FROM is malformed; falling back to the default sender. Value:", JSON.stringify(rawFrom));
   }
