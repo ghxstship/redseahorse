@@ -27,7 +27,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Resources</p>
   <h1 className="page-h1">The Field Library.</h1>
-  <p className="lede">Everything we write down between builds. Dispatches from the floor, the guide to the experiential producer model, the glossary of the craft, the nine-phase course, and the platforms that run it all.</p>
+  <p className="lede">Everything we write down between builds. Dispatches from the floor, the guide to the experiential producer model, the glossary of the craft, the nine-phase course, and the platforms we run on.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -65,7 +65,7 @@ export default function Page() {
       <div className="bar"></div>
       <p className="role">The Instruments</p>
       <h2>The Platforms</h2>
-      <p>ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND. Four in-house platforms that wire every engagement together, from the production plan to the crew to the gate.</p>
+      <p>ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND. The operator console, site and venue operations, the public interface and marketplace, and the knowledge layer. Some are live today and some are still in build.</p>
       <span className="more">See the platforms →</span>
     </Link>
   </div>

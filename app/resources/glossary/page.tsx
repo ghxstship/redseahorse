@@ -67,7 +67,7 @@ export default function Page() {
       </div>
       <div className="gl-term">
         <dt>Experiential Technology</dt>
-        <dd>The software and integrated systems that power live experience production and audience engagement — including production management with ATLVS, workforce and crew management with COMPVSS, ticketing and guest experience with GVTEWAY, and show and media systems with LEG3ND.</dd>
+        <dd>The software and integrated systems that power live experience production and audience engagement — including the ATLVS operator console for ERP, CRM, and project management, site and venue operations for deskless crews with COMPVSS, the public interface and marketplace with GVTEWAY, and the knowledge layer of standard, courses, certifications, and catalog with LEG3ND, alongside the show technology we specify and install.</dd>
       </div>
     </dl>
   </div>
@@ -152,7 +152,7 @@ export default function Page() {
  {"@type":"DefinedTerm","name":"Strike","description":"The controlled teardown, removal, and load-out of all production elements after a live event concludes, including reconciliation and site restoration."},
  {"@type":"DefinedTerm","name":"Activation Footprint","description":"The total physical space and spatial layout a brand activation or installation occupies within a venue or site, including audience flow and technical zones."},
  {"@type":"DefinedTerm","name":"Show Caller","description":"The person who directs a live event in real time, calling cues to audio, lighting, video, and stage departments from the run of show."},
- {"@type":"DefinedTerm","name":"Experiential Technology","description":"The software and integrated systems that power live experience production and audience engagement, including production management, workforce and crew management, ticketing, and show and media systems."},
+ {"@type":"DefinedTerm","name":"Experiential Technology","description":"The software and integrated systems that power live experience production and audience engagement, including the ATLVS operator console for ERP, CRM, and project management, site and venue operations for deskless crews with COMPVSS, the public interface and marketplace with GVTEWAY, and the knowledge layer of standard, courses, certifications, and catalog with LEG3ND, alongside the show technology we specify and install."},
  {"@type":"DefinedTerm","name":"Immersive Experience","description":"A designed environment that audiences step inside and move through, using narrative, spatial design, and interactive technology to surround and engage them."}
 ]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[

@@ -88,7 +88,7 @@ export default function Page() {
     <article className="svc-card"><div className="bar"></div><p className="role">The Experiential Producer</p><h3>Experiential Design &amp; Production</h3><p>We design and build the experience. Concept, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Operations Director</p><h3>Venue &amp; Site Operations</h3><p>We run the room and the ground. Programming, bookings, logistics, staffing, safety, facility and vendor operations, clockwork at any scale.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Tour Manager</p><h3>Tour &amp; Talent Management</h3><p>We move the show and the people in it. Routing, advancing, artist relations, travel, settlement, and the run of show, city after city.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
-    <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Implementation</h3><p>We give the team its instruments. ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND plus immersive show tech, so the plan, the people, and the gate all live in one place.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Implementation</h3><p>We give the team its instruments. ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, the console, the field app, the public interface, and the knowledge layer, plus the show technology we specify and install.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
   </div>
 </div></section>
 
@@ -124,12 +124,12 @@ export default function Page() {
 <section className="wrap sec-pad" id="platforms">
   <p className="kicker">The Platforms</p>
   <h2 className="sec-h2">Software We Run On.</h2>
-  <p className="lede">Four in-house platforms wire every engagement together, from the production plan to the crew to the gate.</p>
+  <p className="lede">Four in-house platforms wire an engagement together, from the plan to the crew to the public side. COMPVSS and LEG3ND are live today, the GVTEWAY marketplace is open with ticketing and portals in build, and ATLVS is in build.</p>
   <div className="plat-row">
-    <div className="plat"><b>ATLVS</b><p>Project management for producers and executives. The plan, the budget, the schedule.</p></div>
-    <div className="plat"><b>COMPVSS</b><p>Crew, vendor, and talent operations. Rosters, advancing, day-of coordination.</p></div>
-    <div className="plat"><b>GVTEWAY</b><p>Guest and client experience. Access, ticketing integrations, front of house.</p></div>
-    <div className="plat"><b>LEG3ND</b><p>Show and media systems. Immersive content, playback, and control.</p></div>
+    <div className="plat"><b>ATLVS</b><p>The operator console for producers and executives. ERP, CRM, and project management on one record.</p></div>
+    <div className="plat"><b>COMPVSS</b><p>Site and venue operations for deskless crews. Rosters, advancing, day-of coordination.</p></div>
+    <div className="plat"><b>GVTEWAY</b><p>The public interface and marketplace. Gigs, open calls, profiles, directories, and RFQs.</p></div>
+    <div className="plat"><b>LEG3ND</b><p>The knowledge layer. The standard, courses, certifications, and the priced catalog.</p></div>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/platforms" className="btn btn-ghost">See the platforms →</Link></p>
 </section>

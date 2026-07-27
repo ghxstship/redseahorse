@@ -44,7 +44,7 @@ export default function Page() {
     <div style={{marginTop: '16px'}}>
       <div className="row-line"><span className="row-title">Logistics</span><span className="row-sub">Load-in and load-out, transport and freight, site and infrastructure</span></div>
       <div className="row-line"><span className="row-title">Run-of-Show</span><span className="row-sub">Day-of show calling, incident management, vendor coordination on the ground</span></div>
-      <div className="row-line"><span className="row-title">Crew &amp; Workforce</span><span className="row-sub">Scheduling, call times, credentialing and access, run in COMPVSS and GVTEWAY</span></div>
+      <div className="row-line"><span className="row-title">Crew &amp; Workforce</span><span className="row-sub">Scheduling, call times, credentialing and access, run in COMPVSS</span></div>
       <div className="row-line"><span className="row-title">Safety &amp; Compliance</span><span className="row-sub">Permits, inspections, capacity, and incident protocol, owned on the floor</span></div>
     </div>
   </div>
@@ -64,7 +64,7 @@ export default function Page() {
       <div className="row-line"><span className="row-title">Programming &amp; Bookings</span><span className="row-sub">The booking calendar, holds and confirms, per-show advance</span></div>
       <div className="row-line"><span className="row-title">Facility &amp; Vendor Operations</span><span className="row-sub">The building, the contracts, and the crews that keep both running</span></div>
       <div className="row-line"><span className="row-title">Hospitality</span><span className="row-sub">F&amp;B, bars and catering, VIP and premium hospitality, front-of-house standards</span></div>
-      <div className="row-line"><span className="row-title">Guest Journey &amp; Settlement</span><span className="row-sub">Box office and access on GVTEWAY, the door to the back office, settlement and reporting</span></div>
+      <div className="row-line"><span className="row-title">Guest Journey &amp; Settlement</span><span className="row-sub">Box office and access we operate, the door to the back office, settlement and reporting, with GVTEWAY ticketing and stakeholder portals in build</span></div>
     </div>
   </div>
 </div></div></section>
@@ -113,10 +113,10 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Why GHXSTSHIP</p>
   <h2 className="sec-h2">The Difference.</h2>
-  <p className="lede">Plenty of crews can build a site, and plenty of consultants will assess your room and leave you to staff it. Fewer will stand on the ground at 6am and own what happens when the schedule slips, then run all nine phases themselves on every date. We treat operations as its own discipline, and the work runs on tooling we built ourselves, with GVTEWAY at the door so the people at the gate and the numbers in the back office come from the same place.</p>
+  <p className="lede">Plenty of crews can build a site, and plenty of consultants will assess your room and leave you to staff it. Fewer will stand on the ground at 6am and own what happens when the schedule slips, then run all nine phases themselves on every date. We treat operations as its own discipline, and the work runs on tooling we built ourselves, with COMPVSS in the crew's hands so the people on the ground and the numbers in the back office come from the same place.</p>
   <div style={{marginTop: '20px'}}>
     <div className="row-line"><span className="row-title">One Accountable Lead</span><span className="row-sub">The Operations Director calls the show, owns the P&amp;L, and answers for the site and the standard on every date</span></div>
-    <div className="row-line"><span className="row-title">Crew and Access, Handled</span><span className="row-sub">Schedules in COMPVSS, credentials and box office in GVTEWAY</span></div>
+    <div className="row-line"><span className="row-title">Crew and Access, Handled</span><span className="row-sub">Schedules and credentials in COMPVSS, public listings and open calls in GVTEWAY</span></div>
     <div className="row-line"><span className="row-title">Safety We Own</span><span className="row-sub">Compliance is a job somebody works on the floor, with permits, inspections, and incident protocol carried as part of it</span></div>
     <div className="row-line"><span className="row-title">The Calendar, Owned</span><span className="row-sub">Operations runs the bookings so the room stays full and the settlement stays clean</span></div>
   </div>

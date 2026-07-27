@@ -61,7 +61,7 @@ export default function Page() {
       <span className="row-title">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND: The Instruments</span>
       <span className="tag tag-neutral">Technology</span>
       <span className="d">May 2026</span>
-      <span className="ex">The production, crew, and ticketing software we built ourselves, and how they keep a whole build talking to itself.</span>
+      <span className="ex">The operator console, the field app, the public marketplace, and the knowledge layer we built ourselves, and how they keep a whole build talking to itself.</span>
     </a>
     <a className="row-line post-row" href="#">
       <span className="row-title">Running a Venue to One Standard</span>
