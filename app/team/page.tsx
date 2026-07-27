@@ -86,10 +86,6 @@ export default function Page() {
   <p className="kicker">Join the Team</p>
   <h2 className="sec-h2">Learn the Ropes.</h2>
   <p className="lede">We train the next generation of experiential producers, no experience gatekept. Apprentice on real productions, next to the people who've built them. Bring the hunger; we'll teach the ropes.</p>
-  <div className="cta-row" style={{marginTop: '22px'}}>
-    <Link href="/careers" className="btn btn-primary">See Open Roles</Link>
-    <Link href="/services" className="btn btn-secondary">See What We Run</Link>
-  </div>
 </div></section>
 
 <section className="band-dark close-cta"><div className="wrap">

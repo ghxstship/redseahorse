@@ -85,8 +85,15 @@ standalone. Do not invent variant chrome.
   via the `.brand` / `.foot-brand-name` classes — never restyle it per page.
 - Global page components (never redefine per page): `.svc-card`, `.phases`
   9-stop strip, `.wcard`, `.close-cta`, `.cta-row`. Page CSS holds only
-  genuine overrides. Footer legal row includes the Accessibility link
-  (accessibility.html) after Terms.
+  genuine overrides.
+- **One closing CTA per page.** The canonical closer is
+  `<section class="band-dark close-cta">` with kicker + h2 + centered
+  `.cta-row` of two `.btn-lg`. Never place another CTA section
+  immediately before it — a content section may lead into it, but it
+  carries no buttons. Exceptions that legitimately have no closer: forms
+  (contact, careers/apply), 404, and the legal pages, which end quiet.
+- Footer legal row includes the Accessibility link (accessibility.html)
+  after Terms.
 - Actions: `.btn.btn-primary` (green fill — ONE per viewport-ish, the primary
   action), `.btn-secondary` (outlined), `.btn-ghost` (green text link).
   Size scale is closed: `.btn-sm` 7×14 · `.btn` 10×18 (36px min-height,
