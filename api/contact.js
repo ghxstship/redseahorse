@@ -50,12 +50,34 @@ var C = {
 // One family, as on the site. Email clients broadly ignore @font-face, so the
 // grotesque fallback is what most recipients actually see.
 var FONT = "'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif";
+// The wordmark is always Bebas Neue, as in the site chrome. Clients that
+// honour the webfont link get it; the rest fall back to a condensed face so
+// the lockup keeps its proportions rather than collapsing into body text.
+var FONT_WORDMARK = "'Bebas Neue','Arial Narrow','Helvetica Neue',Arial,sans-serif";
 // Images must be served from a host that answers 200 directly. The apex
 // 308-redirects to www, and email image proxies commonly refuse to follow
 // redirects — which renders the mark as a broken image. Links can keep the
 // apex (browsers follow the hop); assets cannot.
 var ASSET_BASE = "https://www.ghxstship.tours";
-var LOGO = ASSET_BASE + "/assets/skull-bone.png"; // PNG — most clients won't render SVG
+// Tight-cropped master of the white flag: 480x368 transparent PNG whose artwork
+// touches all four edges. The older skull-bone.png sits on a 64x64 canvas with
+// ~47% empty padding, so every nominal size rendered about half as large as it
+// read on paper. Cropping the frame is what actually fixes "the logo looks small".
+var LOGO = ASSET_BASE + "/assets/skull-bone-mark.png"; // PNG — most clients won't render SVG
+var LOGO_W = 44; // display size; native 480x368 keeps it crisp on retina
+var LOGO_H = 34;
+
+/* The wordmark is always Bebas — in the masthead and in the footer signature.
+   Everything around it stays in the body face, so only the mark switches. */
+function wordmark(text) {
+  var i = String(text).indexOf(BRAND);
+  if (i === -1) return esc(text);
+  return (
+    esc(text.slice(0, i)) +
+    '<span style="font-family:' + FONT_WORDMARK + ';font-size:14px;letter-spacing:1px">' + BRAND + "</span>" +
+    esc(text.slice(i + BRAND.length))
+  );
+}
 
 function esc(s) {
   return String(s).replace(/[&<>"]/g, function (c) {
@@ -69,19 +91,21 @@ function shell(opts) {
   return (
     '<!DOCTYPE html><html><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-    '<meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"></head>' +
+    '<meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light">' +
+    '<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></head>' +
     '<body style="margin:0;padding:0;background:' + C.surface + ';">' +
     '<div style="display:none;max-height:0;overflow:hidden;opacity:0">' + esc(opts.preheader || "") + "</div>" +
     '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:' + C.surface + ';padding:24px 12px">' +
     "<tr><td align=\"center\">" +
     '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:' + C.bg + ';border:1px solid ' + C.rule + '">' +
 
-    // masthead: black logo tile + wordmark, 2px rule beneath
-    '<tr><td style="padding:22px 28px;border-bottom:2px solid ' + C.rule + '">' +
+    // masthead: solid black band carrying the white mark and wordmark. No tile —
+    // the mark is transparent, so the band itself is its ground.
+    '<tr><td style="background:' + C.ink + ';padding:20px 28px">' +
     '<table role="presentation" cellpadding="0" cellspacing="0"><tr>' +
-    '<td style="background:' + C.ink + ';width:34px;height:34px;text-align:center;vertical-align:middle">' +
-    '<img src="' + LOGO + '" width="22" height="22" alt="" style="display:inline-block;vertical-align:middle"></td>' +
-    '<td style="padding-left:10px;font-family:' + FONT + ';font-weight:800;font-size:19px;letter-spacing:1px;color:' + C.ink + ';text-transform:uppercase;vertical-align:middle">GHXSTSHIP</td>' +
+    '<td style="vertical-align:middle" width="' + LOGO_W + '">' +
+    '<img src="' + LOGO + '" width="' + LOGO_W + '" height="' + LOGO_H + '" alt="GHXSTSHIP" style="display:block;border:0"></td>' +
+    '<td style="padding-left:12px;font-family:' + FONT_WORDMARK + ';font-size:30px;line-height:34px;letter-spacing:2px;color:' + C.bg + ';text-transform:uppercase;vertical-align:middle">GHXSTSHIP</td>' +
     "</tr></table></td></tr>" +
 
     // body
@@ -95,7 +119,7 @@ function shell(opts) {
 
     // footer
     '<tr><td style="background:' + C.surface + ';padding:18px 28px;border-top:2px solid ' + C.rule + ';font-family:' + FONT + ';font-size:12px;line-height:1.6;color:' + C.faint + ';text-align:center">' +
-    esc(opts.footer || "") + "</td></tr>" +
+    wordmark(opts.footer || "") + "</td></tr>" +
 
     "</table></td></tr></table></body></html>"
   );
