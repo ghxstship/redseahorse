@@ -1,0 +1,395 @@
+{
+  "$comment": "The glossary, generated into ui_kits/website/resources/glossary.html by scripts/build-glossary.py. Tier 1 is XPMS canon and is authoritative: phase definitions and gate-exit conditions are transcribed from the dim_phase seed in the XPMS 2.5 kit, with the act names updated to the 2.6 vocabulary (PLAN/BUILD/SHOW). Department class numbers come from the URID prefixes in the 2.2 catalog. Do not paraphrase Tier 1 without checking the kit. Tier 2 is XPMS deliverable vocabulary; Tier 3 is general industry vocabulary we do not own.",
+  "tiers": {
+    "1": "XPMS canon — proprietary, authoritative",
+    "2": "XPMS deliverables — named in the standard",
+    "3": "Industry vocabulary — general"
+  },
+  "terms": [
+    {
+      "term": "Act",
+      "tier": 1,
+      "aliases": ["Plan", "Build (act)", "Show"],
+      "definition": "The three presentation groupings of the XPMS 2.6 lifecycle. <strong>Act I, Plan</strong> covers Discover, Design and Advance: everything before money is committed. <strong>Act II, Build</strong> covers Procure, Build and Install: money committed and the thing made real. <strong>Act III, Show</strong> covers Operate, Amplify and Close: doors open and everything downstream of doors. Acts are a grouping, not an authorization boundary. Gates are the only control points, and nothing gates on an act.",
+      "note": "Act II is named Build and contains the Build phase at gate 5. That is deliberate, on the film convention where the Production stage contains principal photography. Write Act II · Build and Gate 5 · Build when it needs disambiguating.",
+      "see": "/course/"
+    },
+    {
+      "term": "Advance",
+      "tier": 1,
+      "definition": "Gate 3, code ADV, Act I. Contracts, permits, insurance, the risk register and the PO baseline. The paperwork phase that makes the build real and insurable. <strong>Exits when</strong> contracts are executed, permits are filed and the PO baseline is set.",
+      "note": "Distinct from the touring sense of the word. On the road, to advance a date means to confirm technical requirements, hospitality, schedules and settlement terms with the venue and promoter before arrival. See Venue Advance.",
+      "see": "/course/"
+    },
+    {
+      "term": "Amplify",
+      "tier": 1,
+      "definition": "Gate 8, code AMP, Act III. Content capture, media and press, broadcast and livestream delivery, social amplification and post-event campaigns. The experience gets a second life on every screen it did not happen on. <strong>Exits when</strong> capture assets are delivered and archived, press and media distribution is complete, broadcast masters are delivered, and post-event campaigns are launched or formally handed off.",
+      "note": "Added as the ninth gated phase in XPMS 2.5. Before that, amplification was assumed rather than gated.",
+      "see": "/course/"
+    },
+    {
+      "term": "Archive Handover",
+      "tier": 2,
+      "definition": "The transfer of a completed build's full record at Close: drawings, as-builts, permits, contracts, settlement, capture assets and the final cost report. What lets the next build start from evidence instead of memory.",
+      "see": "/course/"
+    },
+    {
+      "term": "As-Built",
+      "tier": 2,
+      "definition": "A drawing corrected to reflect what was actually installed rather than what was designed. Filed at the close of Install, and the reason a venue can be re-entered a year later without re-surveying it.",
+      "see": "/course/"
+    },
+    {
+      "term": "Activation Footprint",
+      "tier": 3,
+      "definition": "The total physical space and spatial layout a brand activation occupies on a site, including the public-facing build, back of house, queueing and the circulation around it.",
+      "see": "/destinations/brand-activations/"
+    },
+    {
+      "term": "ATLVS Coordinate Matrix",
+      "tier": 1,
+      "aliases": ["Coordinate Matrix"],
+      "definition": "The task-management lens over the XPMS lifecycle: ten department classes as latitude, the nine gated phases as longitude, giving <strong>90 coordinates</strong>. Every task and work item on a build resolves to exactly one. It is a computed view, never a taxonomy: it introduces no new codes and no new level in the tree.",
+      "see": "/course/"
+    },
+    {
+      "term": "Atom",
+      "tier": 1,
+      "definition": "The smallest catalogued unit of work or material in XPMS, addressed by a URID and priced by a band. The catalog holds 624 of them across the ten department classes.",
+      "see": "/course/"
+    },
+    {
+      "term": "Brand Activation",
+      "tier": 3,
+      "definition": "A live, experiential marketing engagement that brings a brand into physical space so an audience can walk into it rather than watch it.",
+      "see": "/destinations/brand-activations/"
+    },
+    {
+      "term": "Budget Envelope",
+      "tier": 2,
+      "definition": "The approved outer bound of spend, set in Discover before design begins. Not an estimate and not a quote: the number the build has to fit inside, agreed before anyone draws anything.",
+      "see": "/course/"
+    },
+    {
+      "term": "Build",
+      "tier": 1,
+      "definition": "Gate 5, code BLD, Act II. Fabrication, scenic, staging and technical production, pre-built and tested off site. <strong>Exits when</strong> fabrication is complete, QC has passed and the punch list is opened.",
+      "note": "The phase, not the act. Act II is also called Build and contains this phase.",
+      "see": "/course/"
+    },
+    {
+      "term": "Call Time",
+      "tier": 3,
+      "definition": "The time a crew member or performer is required on site, distinct from door time or show time. The unit the day is actually built from.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "Close",
+      "tier": 1,
+      "definition": "Gate 9, code CLS, Act III. Reconciliation, the final cost report and archive handover. <strong>Exits when</strong> the build is reconciled, the final cost report is filed and the archive is handed over.",
+      "see": "/course/"
+    },
+    {
+      "term": "Commissioning",
+      "tier": 2,
+      "definition": "Proving an installed system performs to specification under real conditions, not just that it powers on. Happens in Install, before the punch list can close.",
+      "see": "/services/technology-systems-engineering/"
+    },
+    {
+      "term": "Coordinate",
+      "tier": 1,
+      "definition": "A single cell of the ATLVS Coordinate Matrix, written <code>class × phase</code> — for example <strong>3000xAMP</strong> for Marketing work in the Amplify phase. Gives every deliverable an address, so nothing falls between departments.",
+      "see": "/course/"
+    },
+    {
+      "term": "Creative",
+      "tier": 1,
+      "definition": "Department class <strong>1000</strong>. Concept, creative direction, art direction, content and the design language a build is made from.",
+      "see": "/services/experiential-design-production/"
+    },
+    {
+      "term": "Dark Day",
+      "tier": 3,
+      "definition": "A day with no public programming inside an otherwise live run. Used for maintenance, changeover, or crew rest, and planned rather than lost.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "Department Class",
+      "tier": 1,
+      "definition": "The latitude of the ATLVS Coordinate Matrix and the first segment of every URID. There are ten, stable since XPMS 2.0: <strong>0000 Executive · 1000 Creative · 2000 Talent · 3000 Marketing · 4000 Build · 5000 Production · 6000 Operations · 7000 Experience · 8000 Hospitality · 9000 Technology</strong>.",
+      "see": "/course/"
+    },
+    {
+      "term": "Design",
+      "tier": 1,
+      "definition": "Gate 2, code DSN, Act I. Concept, development and engineering in one phase, absorbing what other models split into Concept, Develop and Engineering. The idea gets pressure-tested until it can be priced and made. <strong>Exits when</strong> scope is locked and spec drawings and sample approvals are complete.",
+      "see": "/course/"
+    },
+    {
+      "term": "Discipline",
+      "tier": 1,
+      "definition": "The second segment of a URID, below department class. Seventy-nine of them across the ten classes — Production alone carries ten.",
+      "see": "/course/"
+    },
+    {
+      "term": "Discover",
+      "tier": 1,
+      "definition": "Gate 1, code DIS, Act I. Brief intake, feasibility, budget envelope and stakeholder alignment. The consultation that works out what is being built and whether it can be. <strong>Exits when</strong> the go/no-go decision is ratified and the budget envelope is approved.",
+      "see": "/course/"
+    },
+    {
+      "term": "Executive",
+      "tier": 1,
+      "definition": "Department class <strong>0000</strong>. Client relationship, commercial terms, governance and the decisions that sit above the build.",
+      "see": "/about/"
+    },
+    {
+      "term": "Experience",
+      "tier": 1,
+      "definition": "Department class <strong>7000</strong>. Show technology and the audience-facing layer: projection, playback, LED, show control, sensors and real-time content.",
+      "see": "/services/technology-systems-engineering/"
+    },
+    {
+      "term": "Experiential Production",
+      "tier": 3,
+      "definition": "The end-to-end creative and physical production of live experiences: concept, design, fabrication, installation, and the crew who run it.",
+      "see": "/services/experiential-design-production/"
+    },
+    {
+      "term": "Experiential Technology",
+      "tier": 3,
+      "definition": "The software and integrated systems that run live experience production, from the operator console to the show control on the floor.",
+      "see": "/platforms/"
+    },
+    {
+      "term": "Feasibility",
+      "tier": 2,
+      "definition": "The Discover-phase read on whether a brief can be built at all, on the site, in the time, for the envelope. The answer that saves the most money is the early no.",
+      "see": "/course/"
+    },
+    {
+      "term": "Front of House",
+      "tier": 3,
+      "aliases": ["FOH"],
+      "definition": "Everything on the audience side of the line: the guest experience, the service standard, and the mix position the show is run from.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "Gate",
+      "tier": 1,
+      "definition": "The control point at the end of each XPMS phase. Nine of them, numbered 1 to 9. A build does not move to the next phase until its gate exit condition is met, and gates are the only authorization boundary in the standard.",
+      "see": "/course/"
+    },
+    {
+      "term": "Gate Exit Condition",
+      "tier": 1,
+      "definition": "The written test a phase must pass before its gate opens. Stated as facts about deliverables rather than opinions about readiness — \"permits filed, PO baseline set\" rather than \"Advance looks good\".",
+      "see": "/course/"
+    },
+    {
+      "term": "Hold",
+      "tier": 3,
+      "definition": "A date reserved with a venue but not yet contracted, ranked first hold, second hold and so on. Releases if it is not confirmed by the challenge deadline.",
+      "see": "/services/tour-talent-management/"
+    },
+    {
+      "term": "Hospitality",
+      "tier": 1,
+      "definition": "Department class <strong>8000</strong>. Food and beverage, bars and catering, VIP and premium hospitality, and the front-of-house standards a guest feels on arrival.",
+      "see": "/destinations/"
+    },
+    {
+      "term": "Immersive Experience",
+      "tier": 3,
+      "definition": "A designed environment audiences step inside and move through, using narrative, spatial design and interactive technology to surround them rather than face them.",
+      "see": "/destinations/immersive-experiences/"
+    },
+    {
+      "term": "Install",
+      "tier": 1,
+      "definition": "Gate 6, code INS, Act II. Logistics, load-in, commissioning and punch closure. <strong>Exits when</strong> everything is installed and commissioned, the punch list is closed and as-builts are filed.",
+      "see": "/course/"
+    },
+    {
+      "term": "Load-In",
+      "tier": 3,
+      "aliases": ["Bump-In"],
+      "definition": "The scheduled process of transporting, installing and assembling all production elements — staging, scenic, audio, lighting, video and rigging — at a venue ahead of a live event.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "Load-Out",
+      "tier": 3,
+      "aliases": ["Bump-Out"],
+      "definition": "The removal of production elements from a venue after a run. The physical half of Strike.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "Long-Lead Order",
+      "tier": 2,
+      "definition": "An order placed in Procure whose delivery time, not its price, drives the schedule. Missing a long-lead date moves the show, which is why they are locked before anything else is bought.",
+      "see": "/course/"
+    },
+    {
+      "term": "Marketing",
+      "tier": 1,
+      "definition": "Department class <strong>3000</strong>. Campaign, content, press, social and the amplification work that carries a build beyond the people who attended it.",
+      "see": "/course/"
+    },
+    {
+      "term": "Operate",
+      "tier": 1,
+      "definition": "Gate 7, code OPR, Act III. The run plus the strike: live operations, dispatch, and incident and daily reporting. <strong>Exits when</strong> the show is closed, strike is complete and operating acceptance is signed.",
+      "note": "Strike lives inside Operate. It is never a phase of its own.",
+      "see": "/course/"
+    },
+    {
+      "term": "Operations",
+      "tier": 1,
+      "definition": "Department class <strong>6000</strong>, the largest in the catalog at 161 atoms. Logistics, workforce, vendor coordination, safety, compliance and day-of running.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "PO Baseline",
+      "tier": 2,
+      "definition": "The locked set of purchase orders a build is measured against from Advance onward. Every later change is a variance to this, which is what makes a final cost report meaningful.",
+      "see": "/course/"
+    },
+    {
+      "term": "Procure",
+      "tier": 1,
+      "definition": "Gate 4, code PRC, Act II. Vendor award, deposits, long-lead orders, rate-card lock and submittals. The buying phase: who is building what, at what rate, and what has to be ordered now. <strong>Exits when</strong> all awards are issued, deposits are paid and long-lead orders are confirmed.",
+      "see": "/course/"
+    },
+    {
+      "term": "Production",
+      "tier": 1,
+      "definition": "Department class <strong>5000</strong>. Staging, rigging, audio, lighting, video, power and the technical production that makes a show happen.",
+      "see": "/services/experiential-design-production/"
+    },
+    {
+      "term": "Production Lifecycle",
+      "tier": 1,
+      "definition": "The structured, repeatable phases a live experience moves through from first consultation to archive handover. GHXSTSHIP runs the <strong>nine gated phases of XPMS 2.6</strong>: Discover, Design, Advance, Procure, Build, Install, Operate, Amplify, Close.",
+      "see": "/course/"
+    },
+    {
+      "term": "Punch List",
+      "tier": 2,
+      "aliases": ["Punch Closure"],
+      "definition": "The running list of defects and unfinished items opened at the end of Build and closed during Install. Gate 6 does not open while it is open.",
+      "see": "/course/"
+    },
+    {
+      "term": "Rate-Card Lock",
+      "tier": 2,
+      "definition": "Fixing labour and equipment rates with a vendor for the duration of an engagement, so the schedule can move without the price moving with it.",
+      "see": "/pricing/"
+    },
+    {
+      "term": "Reconciliation",
+      "tier": 2,
+      "definition": "Settling actuals against the PO baseline at Close: what was ordered, what was delivered, what was charged, and what the variance was. The step that turns a build into a number you can trust next time.",
+      "see": "/course/"
+    },
+    {
+      "term": "Rider",
+      "tier": 3,
+      "definition": "The technical and hospitality requirements attached to an artist's contract. Advancing a date is largely the work of reconciling the rider with the room.",
+      "see": "/services/tour-talent-management/"
+    },
+    {
+      "term": "Risk Register",
+      "tier": 2,
+      "definition": "The live list of what could go wrong on a build, who owns each item, and what the mitigation is. Opened in Advance and worked until Close, not written once and filed.",
+      "see": "/course/"
+    },
+    {
+      "term": "Run of Show",
+      "tier": 3,
+      "aliases": ["ROS"],
+      "definition": "The minute-by-minute master document that sequences every cue, transition and responsibility across departments during a live event, used by the show caller to run the event.",
+      "see": "/services/experiential-design-production/"
+    },
+    {
+      "term": "Settlement",
+      "tier": 2,
+      "definition": "Closing the financial position on a single date with the promoter or venue: box office against the deal, costs against the budget, signed the same night or the morning after.",
+      "see": "/services/tour-talent-management/"
+    },
+    {
+      "term": "Shop QC",
+      "tier": 2,
+      "definition": "Quality control performed on fabricated elements in the shop, before they ship. Catching a fault in Build costs a day; catching it in Install costs the load-in.",
+      "see": "/course/"
+    },
+    {
+      "term": "Show Caller",
+      "tier": 3,
+      "definition": "The person who directs a live event in real time, calling cues to audio, lighting, video and stage departments from the run of show.",
+      "see": "/services/experiential-design-production/"
+    },
+    {
+      "term": "Site Survey",
+      "tier": 3,
+      "definition": "Measuring and documenting a venue or site before design commits to it: dimensions, power, rigging points, access, load paths and the things drawings never show.",
+      "see": "/services/venue-site-operations/"
+    },
+    {
+      "term": "Strike",
+      "tier": 3,
+      "definition": "The controlled teardown, removal and load-out of all production elements after a live event concludes, including reconciliation and site restoration. In the XPMS 2.6 lifecycle, strike lives inside the Operate phase; it is never a phase of its own.",
+      "see": "/course/"
+    },
+    {
+      "term": "Submittals",
+      "tier": 2,
+      "definition": "Vendor documents issued for approval before fabrication starts: shop drawings, samples, product data, method statements. Approving them is the last chance to change something cheaply.",
+      "see": "/course/"
+    },
+    {
+      "term": "Talent",
+      "tier": 1,
+      "definition": "Department class <strong>2000</strong>. Artists, performers, hosts and crew-facing talent relations, including routing, advancing and settlement.",
+      "see": "/services/tour-talent-management/"
+    },
+    {
+      "term": "Tech Rehearsal",
+      "tier": 3,
+      "definition": "The rehearsal run for the technical departments rather than the performers: cues, transitions, timings and failure modes, worked until the run of show holds.",
+      "see": "/services/experiential-design-production/"
+    },
+    {
+      "term": "Technology",
+      "tier": 1,
+      "definition": "Department class <strong>9000</strong>. The platforms, integrations, data pipeline and reporting that a build runs on, plus the show technology specified and installed under it.",
+      "see": "/services/technology-systems-engineering/"
+    },
+    {
+      "term": "URID",
+      "tier": 1,
+      "definition": "The identifier every catalogued atom carries, in the grammar <code>DEPARTMENT.DISCIPLINE.CATEGORY</code> — for example <strong>4000.02.01</strong> for a Build-class item. Load-bearing on every budget line, assignment and coordinate, which is why the grammar has never changed.",
+      "see": "/course/"
+    },
+    {
+      "term": "Venue Advance",
+      "tier": 3,
+      "definition": "Confirming technical requirements, hospitality riders, schedules, credentials, security and settlement terms with the local promoter and venue before a date. Done for every city on a routing, not once for the tour.",
+      "see": "/services/tour-talent-management/"
+    },
+    {
+      "term": "Wrap",
+      "tier": 3,
+      "definition": "The end of production on a build or a shoot day. Distinct from Close, which is the XPMS phase that reconciles and archives what wrapped.",
+      "see": "/course/"
+    },
+    {
+      "term": "XPMS",
+      "tier": 1,
+      "aliases": ["Experiential Production Management Standard", "XPMS 2.6"],
+      "definition": "The <strong>Experiential Production Management Standard</strong>, the GHXSTSHIP methodology every engagement runs on. Currently at version 2.6: nine gated phases in three acts, ten department classes, 90 coordinates, and a catalog of 624 priced atoms. Governance is append-only, so nothing that has ever been issued is retired.",
+      "see": "/course/"
+    }
+  ]
+}

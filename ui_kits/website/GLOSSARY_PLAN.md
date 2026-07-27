@@ -1,6 +1,11 @@
 # Glossary: optimise and enrich
 
-A plan, not a change. Nothing here is implemented yet.
+**Shipped 2026-07-27.** Kept as the record of what was decided and why.
+
+All four decisions were answered from the XPMS 2.5 kit and the 2.6 change
+record. The glossary is generated from `data/glossary.json` by
+`scripts/build-glossary.py`, wired into the prebuild chain: 62 terms, 29 of
+them XPMS canon, every one with a stable anchor and a `DefinedTerm` `@id`.
 
 ## Where it stands
 
