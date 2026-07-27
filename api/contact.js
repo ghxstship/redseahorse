@@ -7,7 +7,8 @@
  *
  * Env (Vercel → Project → Settings → Environment Variables):
  *   RESEND_API_KEY  (required)  Resend key, re_...
- *   RESEND_FROM     (optional)  verified sender, e.g. "GHXSTSHIP <hello@ghxstship.tours>".
+ *   RESEND_FROM     (optional)  overrides the sender; must be on a Resend-verified
+ *                               domain. Defaults to "GHXSTSHIP <ghxstship@atlvs.pro>".
  *                               Defaults to onboarding@resend.dev (delivers only to the
  *                               Resend account owner — fine for the studio notification;
  *                               the submitter auto-reply requires a verified domain, so it
@@ -18,21 +19,37 @@
 var RESEND_ENDPOINT = "https://api.resend.com/emails";
 // bare address, or display name + <address>
 var FROM_RE = /^(?:[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+|[^<>]{1,64}<\s*[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+\s*>)$/;
-var DEFAULT_FROM = "GHXSTSHIP <onboarding@resend.dev>";
+// Sender must be on a domain verified in Resend. The plan covers atlvs.pro,
+// so that is the built-in default — RESEND_FROM is now optional and only
+// needed to override it.
+var DEFAULT_FROM = "GHXSTSHIP <ghxstship@atlvs.pro>";
+// Resend's shared onboarding sender can only deliver to the account owner,
+// so auto-replies to third parties are suppressed if we ever fall back to it.
+var SHARED_SENDER_RE = /@resend\.dev>?\s*$/i;
 var DEFAULT_TO = "julian.clarkson@ghxstship.pro";
 var SITE = "https://ghxstship.tours";
 var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-// Brand palette (literal hex — email clients don't support CSS variables).
+// Brand palette — literal hex, because email clients support neither CSS
+// custom properties nor color-mix(). Mirrors modernist.css: grayscale ground,
+// GHXSTSHIP green as the only accent, fill vs text roles kept distinct.
 var C = {
-  void: "#0B1314", ink: "#101A1B", ink2: "#18262A", ink3: "#243234",
-  bone: "#EDF1EF", brass: "#22B083", brassDeep: "#14835F", nebula: "#FFC24A",
-  plasma: "#2E84D4", onBrass: "#06140E", fg2: "#A6B4B1", fg3: "#76847F",
+  bg: "#fcfcfc",         // --color-bg
+  surface: "#efefef",    // --color-surface
+  ink: "#000000",        // --color-text
+  rule: "#9a9a9a",       // --color-divider, flattened from 40% black
+  hair: "#d4d4d4",       // 1px inner rules
+  accent: "#2edb3a",     // --color-accent — FILLS ONLY
+  accentText: "#1b7c21", // --color-accent-700 — AA text on light
+  onAccent: "#001800",   // --color-on-accent — ink on green
+  body: "#2b2b2b",       // body copy
+  muted: "#5f5f5f",      // supporting
+  faint: "#767676",      // labels
 };
-var FONT_DISPLAY = "'Arial Black', 'Helvetica Neue', Impact, sans-serif";
-var FONT_MONO = "'Courier New', Courier, monospace";
-var FONT_BODY = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif";
-var LOGO = SITE + "/assets/skull-bone.png"; // PNG, not SVG — most email clients don't render SVG
+// One family, as on the site. Email clients broadly ignore @font-face, so the
+// grotesque fallback is what most recipients actually see.
+var FONT = "'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif";
+var LOGO = SITE + "/assets/skull-bone.png"; // PNG — most clients won't render SVG
 
 function esc(s) {
   return String(s).replace(/[&<>"]/g, function (c) {
@@ -40,183 +57,179 @@ function esc(s) {
   });
 }
 
-/* Shared email shell matching the kit: dark header (logo + wordmark + stamp),
-   dark body (eyebrow, display headline, content), CTA, footer. */
+/* Shared shell — Modernist in email-safe form: light ground, 600px column,
+   2px rules instead of shadows, radius 0 everywhere, uppercase headings. */
 function shell(opts) {
-  var accent = opts.accent || C.brass;
   return (
     '<!DOCTYPE html><html><head><meta charset="utf-8">' +
-    '<meta name="viewport" content="width=device-width,initial-scale=1"></head>' +
-    '<body style="margin:0;padding:0;background:' + C.void + ';">' +
+    '<meta name="viewport" content="width=device-width,initial-scale=1">' +
+    '<meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"></head>' +
+    '<body style="margin:0;padding:0;background:' + C.surface + ';">' +
     '<div style="display:none;max-height:0;overflow:hidden;opacity:0">' + esc(opts.preheader || "") + "</div>" +
-    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:' + C.void + ';padding:28px 16px">' +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:' + C.surface + ';padding:24px 12px">' +
     "<tr><td align=\"center\">" +
-    '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:' + C.ink + ';border-radius:10px;overflow:hidden">' +
-    // header
-    '<tr><td style="background:' + C.void + ';padding:22px 28px;border-bottom:3px solid ' + accent + '">' +
-    '<table role="presentation" width="100%"><tr>' +
-    '<td style="vertical-align:middle"><img src="' + LOGO + '" width="26" height="26" alt="GHXSTSHIP" style="vertical-align:middle;border:0;outline:none">' +
-    '<span style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:2px;color:' + C.bone + ';text-transform:uppercase;vertical-align:middle;margin-left:10px">G H X S T S H I P</span></td>' +
-    '<td align="right" style="font-family:' + FONT_MONO + ';font-size:9px;letter-spacing:2px;color:' + accent + ';text-transform:uppercase">' + esc(opts.stamp || "Dispatch") + "</td>" +
+    '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:' + C.bg + ';border:1px solid ' + C.rule + '">' +
+
+    // masthead: black logo tile + wordmark, 2px rule beneath
+    '<tr><td style="padding:22px 28px;border-bottom:2px solid ' + C.rule + '">' +
+    '<table role="presentation" cellpadding="0" cellspacing="0"><tr>' +
+    '<td style="background:' + C.ink + ';width:34px;height:34px;text-align:center;vertical-align:middle">' +
+    '<img src="' + LOGO + '" width="22" height="22" alt="" style="display:inline-block;vertical-align:middle"></td>' +
+    '<td style="padding-left:10px;font-family:' + FONT + ';font-weight:800;font-size:19px;letter-spacing:1px;color:' + C.ink + ';text-transform:uppercase;vertical-align:middle">GHXSTSHIP</td>' +
     "</tr></table></td></tr>" +
+
     // body
-    '<tr><td style="padding:32px 28px">' +
-    '<p style="margin:0 0 12px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:3px;color:' + accent + ';text-transform:uppercase">◆ ' + esc(opts.eyebrow || "") + "</p>" +
-    '<h1 style="margin:0 0 16px;font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:34px;line-height:1.02;letter-spacing:-0.5px;color:' + C.bone + ';text-transform:uppercase">' + opts.headline + "</h1>" +
+    '<tr><td style="padding:30px 28px 26px">' +
+    (opts.eyebrow
+      ? '<p style="margin:0 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(opts.eyebrow) + "</p>"
+      : "") +
+    '<h1 style="margin:0 0 14px;font-family:' + FONT + ';font-weight:800;font-size:32px;line-height:1.02;letter-spacing:-0.5px;color:' + C.ink + ';text-transform:uppercase">' + opts.headline + "</h1>" +
     opts.body +
     "</td></tr>" +
+
     // footer
-    '<tr><td style="background:' + C.void + ';padding:18px 28px;border-top:1px solid ' + C.ink3 + ';font-family:' + FONT_MONO + ';font-size:10px;letter-spacing:1px;color:' + C.fg3 + ';text-transform:uppercase;text-align:center">' +
-    (opts.footer || "G H X S T S H I P · Miami // Las Vegas // Chicago // NY // LA · Venture Beyond") +
-    "</td></tr>" +
+    '<tr><td style="background:' + C.surface + ';padding:18px 28px;border-top:2px solid ' + C.rule + ';font-family:' + FONT + ';font-size:12px;line-height:1.6;color:' + C.faint + ';text-align:center">' +
+    esc(opts.footer || "") + "</td></tr>" +
+
     "</table></td></tr></table></body></html>"
   );
 }
 
 function para(text) {
-  return '<p style="margin:0 0 16px;font-family:' + FONT_BODY + ';font-size:15px;line-height:1.6;color:' + C.fg2 + '">' + text + "</p>";
+  return '<p style="margin:0 0 16px;font-family:' + FONT + ';font-size:15px;line-height:1.65;color:' + C.body + '">' + text + "</p>";
 }
-function button(href, label) {
+
+function label(text) {
+  return '<p style="margin:22px 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(text) + "</p>";
+}
+
+/* Primary button — green fill, dark ink, square. Matches .btn-primary. */
+function button(href, labelText) {
   return (
-    '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:6px 0 8px"><tr><td style="background:' + C.brass + ';border:2px solid ' + C.ink + '">' +
-    '<a href="' + href + '" style="display:inline-block;padding:13px 24px;font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:' + C.onBrass + ';text-decoration:none">' + esc(label) + "</a>" +
+    '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:6px 0 8px"><tr>' +
+    '<td style="background:' + C.accent + '">' +
+    '<a href="' + href + '" style="display:inline-block;padding:14px 26px;font-family:' + FONT + ';font-weight:800;font-size:15px;letter-spacing:0.5px;text-transform:uppercase;color:' + C.onAccent + ';text-decoration:none">' + esc(labelText) + "</a>" +
     "</td></tr></table>"
   );
 }
 
-/* Studio notification: the submission, as a labeled table. opts lets the
-   application flow override the stamp/eyebrow/headline/intro. */
+/* Numbered step list. `done` fills the marker green, matching the site's
+   phase strip. Square markers — the system carries no border radius. */
+function steps(rows) {
+  return (
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:2px 0 18px">' +
+    rows
+      .map(function (s) {
+        var done = !!s[3];
+        return (
+          "<tr>" +
+          '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px">' +
+          '<span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:' + (done ? C.accent : C.bg) + ';border:2px solid ' + (done ? C.accent : C.rule) + ';font-family:' + FONT + ';font-size:12px;font-weight:800;color:' + (done ? C.onAccent : C.faint) + '">' + s[0] + "</span></td>" +
+          '<td style="padding:0 0 14px;vertical-align:top">' +
+          '<div style="font-family:' + FONT + ';font-weight:800;font-size:15px;color:' + C.ink + ';text-transform:uppercase">' + esc(s[1]) +
+          (done ? ' <span style="font-weight:600;font-size:11px;letter-spacing:1px;color:' + C.accentText + '">— you are here</span>' : "") + "</div>" +
+          '<div style="font-family:' + FONT + ';font-size:14px;line-height:1.55;color:' + C.muted + ';margin-top:3px">' + esc(s[2]) + "</div>" +
+          "</td></tr>"
+        );
+      })
+      .join("") +
+    "</table>"
+  );
+}
+
+/* Social row — matches the four channels in the site footer. */
+function social() {
+  return (
+    label("Follow along") +
+    '<p style="margin:0">' +
+    [
+      ["Instagram", "https://www.instagram.com/ghxstship.tours"],
+      ["LinkedIn", "https://www.linkedin.com/company/ghxstship"],
+      ["YouTube", "https://www.youtube.com/@ghxstship"],
+      ["TikTok", "https://www.tiktok.com/@ghxstship.tours"],
+    ]
+      .map(function (s) {
+        return '<a href="' + s[1] + '" style="font-family:' + FONT + ';font-weight:600;font-size:13px;color:' + C.accentText + ';text-decoration:none;margin-right:18px">' + s[0] + "</a>";
+      })
+      .join("") +
+    "</p>"
+  );
+}
+
+var FOOT_TAG = "GHXSTSHIP · Venture Beyond.";
+
+/* Studio notification — the lead itself. Optimised for scanning: every
+   submitted field as a labelled row, reply-to wired to the sender. */
 function notificationEmail(fields, name, email, opts) {
   opts = opts || {};
   var rows = fields
     .map(function (f) {
       return (
-        '<tr><td style="padding:7px 16px 7px 0;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:1px;color:' + C.fg3 + ';text-transform:uppercase;vertical-align:top;white-space:nowrap">' + esc(f.label) + "</td>" +
-        '<td style="padding:7px 0;font-family:' + FONT_BODY + ';font-size:15px;line-height:1.5;color:' + C.bone + '">' + esc(f.value).replace(/\n/g, "<br>") + "</td></tr>"
+        '<tr><td style="padding:9px 16px 9px 0;border-top:1px solid ' + C.hair + ';font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:1px;color:' + C.faint + ';text-transform:uppercase;vertical-align:top;white-space:nowrap">' + esc(f.label) + "</td>" +
+        '<td style="padding:9px 0;border-top:1px solid ' + C.hair + ';font-family:' + FONT + ';font-size:15px;line-height:1.55;color:' + C.ink + '">' + esc(f.value).replace(/\n/g, "<br>") + "</td></tr>"
       );
     })
     .join("");
   var body =
-    para(opts.intro || ("A new inquiry just came in through the GHXSTSHIP site. Reply directly to this email to reach " + esc(name || "them") + ".")) +
-    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 18px;border-top:1px solid ' + C.ink3 + ';border-bottom:1px solid ' + C.ink3 + '">' + rows + "</table>" +
+    para(opts.intro || "A new inquiry came in through the site.") +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 20px;border-bottom:1px solid ' + C.hair + '">' + rows + "</table>" +
     button("mailto:" + esc(email), "Reply to " + (name ? esc(name.split(" ")[0]) : "sender"));
   return shell({
-    stamp: opts.stamp || "New Inquiry",
-    eyebrow: opts.eyebrow || "Incoming Transmission",
-    headline: opts.headline || ('New Project <span style="color:' + C.brass + '">Inquiry.</span>'),
-    preheader: opts.preheader || ("New inquiry from " + (name || email)), body: body,
-    footer: "Sent by the GHXSTSHIP site · " + esc(email),
+    eyebrow: opts.eyebrow || "New Inquiry",
+    headline: opts.headline || 'New <span style="color:' + C.accentText + '">Inquiry.</span>',
+    preheader: (name ? name + " — " : "") + (opts.preheader || "new inquiry from the site"),
+    body: body,
+    footer: FOOT_TAG + " · Sent from the site contact form",
   });
 }
 
-/* Applicant auto-reply: confirmation + the hiring path + connect. */
+/* Applicant auto-reply. */
 function applicationReceiptEmail(name, role) {
   var first = name ? name.split(" ")[0] : "there";
-  var steps =
-    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:2px 0 20px">' +
-    [
-      ["1", "A crew lead reviews it", "A human on the crew — not a bot — reads every application."],
-      ["2", "A short intro call", "If it's a fit, we'll set up a 20-minute call to learn what you want to build."],
-      ["3", "A working conversation", "A practical session with the department lead — the real work, not trivia."],
-      ["4", "References & offer", "A quick reference check, then we welcome you aboard."],
-    ]
-      .map(function (s) {
-        return (
-          "<tr>" +
-          '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px"><span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;border:2px solid ' + C.ink3 + ';font-family:' + FONT_MONO + ';font-size:12px;font-weight:700;color:' + C.fg3 + '">' + s[0] + "</span></td>" +
-          '<td style="padding:0 0 14px;vertical-align:top">' +
-          '<div style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:.3px;color:' + C.bone + ';text-transform:uppercase">' + esc(s[1]) + "</div>" +
-          '<div style="font-family:' + FONT_BODY + ';font-size:14px;line-height:1.55;color:' + C.fg2 + ';margin-top:3px">' + esc(s[2]) + "</div>" +
-          "</td></tr>"
-        );
-      })
-      .join("") +
-    "</table>";
-  var social =
-    '<p style="margin:22px 0 8px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.fg3 + ';text-transform:uppercase">Follow the voyage</p>' +
-    '<p style="margin:0">' +
-    [["Instagram", "https://www.instagram.com/ghxstship.tours"], ["Facebook", "https://www.facebook.com/ghxstship.tours"], ["TikTok", "https://www.tiktok.com/@ghxstship.tours"], ["YouTube", "https://www.youtube.com/@ghxstship"], ["SoundCloud", "https://soundcloud.com/ghxstship"], ["LinkedIn", "https://www.linkedin.com/company/ghxstship"]]
-      .map(function (s) { return '<a href="' + s[1] + '" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none;margin-right:16px">' + s[0] + "</a>"; })
-      .join("") + "</p>";
   var body =
-    para("Thanks, " + esc(first) + " — your application" + (role ? " for <strong style=\"color:" + C.bone + "\">" + esc(role) + "</strong>" : "") + " reached the crew. A human reads every one; if there's a fit we'll be in touch.") +
-    '<p style="margin:0 0 10px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.brass + ';text-transform:uppercase">How hiring works</p>' +
-    steps +
-    para("No experience? We train the next generation — apply to Production Assistant and learn the ropes on real builds.") +
-    '<div style="height:6px"></div>' +
-    button(SITE + "/team/", "Meet the Crew") +
-    social;
+    para("Thanks, " + esc(first) + " — your application" + (role ? ' for <strong style="color:' + C.ink + '">' + esc(role) + "</strong>" : "") + " reached the team. A person reads every one, and if there is a fit we will be in touch.") +
+    label("How hiring works") +
+    steps([
+      ["1", "A team lead reviews it", "A human on the team, not a filter, reads every application.", false],
+      ["2", "A short intro call", "If it is a fit, we set up a twenty-minute call to hear what you want to build.", false],
+      ["3", "A working conversation", "A practical session with the department lead. The real work, not trivia.", false],
+      ["4", "References and offer", "A quick reference check, then we get you started.", false],
+    ]) +
+    para("No experience yet? We train the next generation. Apply to Production Assistant and learn on real builds.") +
+    button(SITE + "/team/", "Meet the Team") +
+    social();
   return shell({
-    stamp: "Crew Manifest", eyebrow: "Application Logged", headline: "Application <span style=\"color:" + C.brass + "\">Received.</span>",
-    preheader: "We got your application — here's how hiring works.", body: body,
-    footer: "G H X S T S H I P · You're receiving this because you applied · Venture Beyond",
+    eyebrow: "Application Received",
+    headline: 'Application <span style="color:' + C.accentText + '">Received.</span>',
+    preheader: "We got your application — here is how hiring works.",
+    body: body,
+    footer: FOOT_TAG + " · You are receiving this because you applied",
   });
 }
 
-/* Submitter auto-reply: pre-booking confirmation framed around THE JOURNEY —
-   the six stages from the marketing site. The Destination (the brief they just
-   sent) is marked complete; the rest is the route ahead. */
+/* Inquiry auto-reply. The four steps are what actually happens next, matching
+   the process described on the contact page. */
 function receiptEmail(name) {
   var first = name ? name.split(" ")[0] : "there";
-  var steps =
-    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:2px 0 20px">' +
-    [
-      ["1", "The Destination", "Share your vision — the brief you just sent.", true],
-      ["2", "The Ship", "Build your vessel: a full build, a single discipline, or by the phase.", false],
-      ["3", "The Course", "Chart the route — eight phases from first line to launch.", false],
-      ["4", "The Crew", "Meet the producers and leads matched to your build.", false],
-      ["5", "The Manifest", "Onboarding, approvals, and the know-before-you-go.", false],
-      ["6", "Launch", "Anchors away — we run the show and strike clean.", false],
-    ]
-      .map(function (s) {
-        var done = s[3];
-        var dotColor = done ? C.brass : C.ink3;
-        var dotText = done ? C.onBrass : C.fg3;
-        return (
-          "<tr>" +
-          '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px">' +
-          '<span style="display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:' + (done ? C.brass : "transparent") + ';border:2px solid ' + dotColor + ';font-family:' + FONT_MONO + ';font-size:12px;font-weight:700;color:' + dotText + '">' + s[0] + "</span></td>" +
-          '<td style="padding:0 0 14px;vertical-align:top">' +
-          '<div style="font-family:' + FONT_DISPLAY + ';font-weight:800;font-size:15px;letter-spacing:.3px;color:' + C.bone + ';text-transform:uppercase">' + esc(s[1]) + (done ? ' <span style="font-family:' + FONT_MONO + ';font-size:10px;letter-spacing:1px;color:' + C.brass + '">· YOU ARE HERE</span>' : "") + "</div>" +
-          '<div style="font-family:' + FONT_BODY + ';font-size:14px;line-height:1.55;color:' + C.fg2 + ';margin-top:3px">' + esc(s[2]) + "</div>" +
-          "</td></tr>"
-        );
-      })
-      .join("") +
-    "</table>";
-
-  var social =
-    '<p style="margin:22px 0 8px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.fg3 + ';text-transform:uppercase">Follow the voyage</p>' +
-    '<p style="margin:0">' +
-    [
-      ["Instagram", "https://www.instagram.com/ghxstship.tours"],
-      ["Facebook", "https://www.facebook.com/ghxstship.tours"],
-      ["TikTok", "https://www.tiktok.com/@ghxstship.tours"],
-      ["YouTube", "https://www.youtube.com/@ghxstship"],
-      ["SoundCloud", "https://soundcloud.com/ghxstship"],
-      ["LinkedIn", "https://www.linkedin.com/company/ghxstship"],
-    ]
-      .map(function (s) {
-        return '<a href="' + s[1] + '" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none;margin-right:16px">' + s[0] + "</a>";
-      })
-      .join("") +
-    "</p>";
-
   var body =
-    para("Thanks, " + esc(first) + " — your vision reached the bridge. This is your confirmation: we've logged your brief and charted the first waypoint. A producer will reach out within one business day to set the course.") +
-    '<p style="margin:0 0 10px;font-family:' + FONT_MONO + ';font-size:11px;letter-spacing:2px;color:' + C.brass + ';text-transform:uppercase">The journey ahead</p>' +
-    steps +
-    para("While you prepare, see where we sail and what we've built:") +
-    '<div style="height:10px"></div>' +
-    button(SITE + "/destinations/", "Explore the Destinations") +
-    '<div style="height:4px"></div>' +
-    '<a href="' + SITE + '/work/" style="font-family:' + FONT_MONO + ';font-size:13px;letter-spacing:1px;color:' + C.plasma + ';text-decoration:none">See the Archives</a>' +
-    social;
-
+    para("Thanks, " + esc(first) + " — your brief is in. A producer will come back to you within one business day.") +
+    label("What happens next") +
+    steps([
+      ["1", "We read the brief", "Your brief is logged and with a producer now.", true],
+      ["2", "A consultation", "A real conversation about what you are building, who it is for, and when it has to happen.", false],
+      ["3", "Scope and proposal", "Services, schedule, budget, and the named lead who owns the build.", false],
+      ["4", "The nine phases", "Discover through Close on the XPMS 2.6 lifecycle, with a gate to clear at each.", false],
+    ]) +
+    para("In the meantime, see the work and the industries we build in:") +
+    button(SITE + "/work/", "See the Work") +
+    '<p style="margin:4px 0 0"><a href="' + SITE + '/destinations/" style="font-family:' + FONT + ';font-weight:600;font-size:13px;color:' + C.accentText + ';text-decoration:none">Explore the industries</a></p>' +
+    social();
   return shell({
-    stamp: "Pre-Departure", eyebrow: "Prepare to Board", headline: "Prepare for Your <span style=\"color:" + C.brass + "\">Journey.</span>",
-    preheader: "We've logged your brief — here's the journey ahead.", body: body,
-    footer: "G H X S T S H I P · You're receiving this because you contacted us · Venture Beyond",
+    eyebrow: "Brief Received",
+    headline: 'We Got Your <span style="color:' + C.accentText + '">Brief.</span>',
+    preheader: "We have your brief — here is what happens next.",
+    body: body,
+    footer: FOOT_TAG + " · You are receiving this because you contacted us",
   });
 }
 
@@ -328,10 +341,10 @@ module.exports = async function handler(req, res) {
       res.statusCode = 502; res.end(JSON.stringify({ error: "Email provider rejected the message.", detail: detail.slice(0, 300) })); return;
     }
 
-    // Auto-reply receipt to the submitter. Requires a verified domain
-    // (RESEND_FROM); skipped on the shared onboarding sender, which can't
-    // deliver to arbitrary addresses. Best-effort — never fails the request.
-    if (customFrom) {
+    // Auto-reply receipt to the submitter. Deliverable from any verified
+    // domain — including the default — and suppressed only on Resend's shared
+    // onboarding sender. Best-effort: never fails the request.
+    if (!SHARED_SENDER_RE.test(from)) {
       try {
         await send(key, {
           from: from, to: [email], reply_to: to,
@@ -345,3 +358,9 @@ module.exports = async function handler(req, res) {
     res.statusCode = 500; res.end(JSON.stringify({ error: "Failed to send.", detail: String(err).slice(0, 300) }));
   }
 };
+
+// Template functions exposed for the preview generator (scripts/render-emails.js).
+// Vercel invokes the handler above; these are inert at runtime.
+module.exports.notificationEmail = notificationEmail;
+module.exports.receiptEmail = receiptEmail;
+module.exports.applicationReceiptEmail = applicationReceiptEmail;
