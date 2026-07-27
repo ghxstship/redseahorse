@@ -89,8 +89,7 @@ export default function Page() {
   <p className="kicker">Selected Work</p>
   <h2 className="sec-h2">Game Days We Ran.</h2>
   <div style={{marginTop: '8px', borderTop: '1px solid var(--color-divider)'}}>
-    <div className="row-line"><span className="row-title">Formula 1 Las Vegas Grand Prix</span><span className="row-sub">Motorsports · Las Vegas</span><span className="row-sub">2023</span></div>
-    <div className="row-line"><span className="row-title">Heineken Turn4 Nightclub</span><span className="row-sub">Motorsports · F1 Las Vegas Grand Prix</span><span className="row-sub">2024</span></div>
+    <div className="row-line"><span className="row-title">FIFA World Cup Brazil Base Camp</span><span className="row-sub">Sporting Events · New Jersey</span><span className="row-sub">2026</span></div>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all work →</Link></p>
 </section>

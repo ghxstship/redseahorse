@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Salvage City Supper Club \u2014 Case Study",
-  description: "How GHXSTSHIP designed, built, and ran Salvage City Supper Club \u2014 an immersive supper-club experience at Club Space, Miami. The challenge, the full-lifecycle approach, and the results.",
-  keywords: ["immersive experience case study", "experiential production", "supper club", "Club Space Miami", "immersive event production"],
+  description: "How GHXSTSHIP designed, built, and ran Salvage City Supper Club \u2014 a premium hospitality supper-club experience at EDC Las Vegas. The challenge, the full-lifecycle approach, and the results.",
+  keywords: ["premium hospitality case study", "experiential production", "supper club", "EDC Las Vegas", "festival hospitality production"],
   alternates: { canonical: "https://ghxstship.tours/work/salvage-city-supper-club" },
 };
 
@@ -35,16 +35,16 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Case Study · Immersive Experience</p>
   <h1 className="page-h1">Salvage City Supper Club.</h1>
-  <p className="lede">An immersive supper-club world installed, run, and struck inside a working Miami venue — designed, built, and crewed end to end by GHXSTSHIP.</p>
+  <p className="lede">A premium supper-club world installed, run, and struck inside a working festival footprint — designed, built, and crewed end to end by GHXSTSHIP.</p>
   <div className="meta-tags">
     <span className="tag tag-neutral">Client · Insomniac</span>
-    <span className="tag tag-neutral">Industry · Immersive Experiences</span>
-    <span className="tag tag-neutral">Venue · Club Space, Miami</span>
-    <span className="tag tag-neutral">Year · 2025</span>
+    <span className="tag tag-neutral">Industry · Premium Hospitality</span>
+    <span className="tag tag-neutral">Venue · EDC Las Vegas</span>
+    <span className="tag tag-neutral">Year · 2025–26</span>
     <span className="tag tag-outline">Scope · Full Build · Full Lifecycle</span>
   </div>
   <figure className="hero-fig grayscale">
-    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1600&q=80&auto=format&fit=crop" alt="Guests inside the Salvage City Supper Club immersive experience at Club Space, Miami" width="1600" height="900"/>
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&auto=format&fit=crop" alt="Supper club table set for service" width="1600" height="900"/>
   </figure>
 </section>
 
@@ -58,7 +58,7 @@ export default function Page() {
 <section className="wrap sec-pad"><div className="cs-body">
 
   <h2>The Challenge</h2>
-  <p>Insomniac needed an immersive supper-club experience that could live inside <strong>Club Space, Miami</strong> — a venue with its own identity, technical constraints, and an audience that has seen everything. The brief: a fully realized world that felt like a place guests had stumbled onto, and that could be installed, run, and struck without disrupting the venue's ongoing programming.</p>
+  <p>Insomniac needed a premium supper-club experience that could live inside <strong>EDC Las Vegas</strong> — a footprint with its own identity, technical constraints, and an audience that has seen everything. The brief: a fully realized world that felt like a place guests had stumbled onto, and that could be installed, run, and struck without disrupting the festival's ongoing programming.</p>
   <p>The constraints were real: a fixed footprint, a hard load-in window, and a guest experience that had to feel intimate at scale.</p>
 
   <h2>The Approach</h2>
@@ -71,7 +71,7 @@ export default function Page() {
   <p>Salvage City is now a repeatable GHXSTSHIP format — proof that an immersive world can be delivered to a working venue without compromise.</p>
 
   <h2>The Credits</h2>
-  <p><strong>Client</strong> Insomniac · <strong>Venue</strong> Club Space, Miami · <strong>Year</strong> 2025 · <strong>Scope</strong> Full build across the entire production lifecycle · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations, and Technology &amp; Systems Implementation.</p>
+  <p><strong>Client</strong> Insomniac · <strong>Venue</strong> EDC Las Vegas · <strong>Year</strong> 2025–26 · <strong>Scope</strong> Full build across the entire production lifecycle · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations, and Technology &amp; Systems Implementation.</p>
 
 </div></section>
 
@@ -80,16 +80,16 @@ export default function Page() {
   <h2 className="sec-h2-sm">From the Archives.</h2>
   <div className="grid3 more-grid">
     <Link href="/work" className="wcard">
-      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80&auto=format&fit=crop" alt="EDC Las Vegas" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>EDC Las Vegas</h3><p className="meta">Festival · Insomniac, Las Vegas · 2025–26</p></div>
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80&auto=format&fit=crop" alt="Audio control surface in a live sound control room" loading="lazy" width="800" height="600"/></figure>
+      <div className="body"><h3>L-Acoustics DJ</h3><p className="meta">Technology Implementation · III Points Miami · 2025</p></div>
     </Link>
     <Link href="/work" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy" width="800" height="600"/></figure>
       <div className="body"><h3>Black Coffee at the Race Track</h3><p className="meta">Concerts &amp; Tours · Club Space Miami · 2026</p></div>
     </Link>
     <Link href="/work" className="wcard">
-      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Polymarket Grocery Store" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>Polymarket Grocery Store</h3><p className="meta">Brand Activation · 2026</p></div>
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop" alt="Produce aisle stocked in a grocery store" loading="lazy" width="800" height="600"/></figure>
+      <div className="body"><h3>The Polymarket</h3><p className="meta">Brand Activation · New York City · 2026</p></div>
     </Link>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all the work →</Link></p>
@@ -109,7 +109,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CreativeWork","name":"Salvage City Supper Club","creator":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"about":"Immersive experience production","locationCreated":{"@type":"Place","name":"Club Space, Miami"},"datePublished":"2025-05","genre":"Immersive Experience","keywords":"immersive experience, experiential production, supper club, Miami, Club Space","url":"https://ghxstship.tours/work/salvage-city-supper-club"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"CreativeWork","name":"Salvage City Supper Club","creator":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"about":"Premium hospitality production","locationCreated":{"@type":"Place","name":"EDC Las Vegas"},"datePublished":"2025-05","genre":"Premium Hospitality","keywords":"premium hospitality, experiential production, supper club, Las Vegas, EDC","url":"https://ghxstship.tours/work/salvage-city-supper-club"}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Work","item":"https://ghxstship.tours/work"},{"@type":"ListItem","position":3,"name":"Salvage City Supper Club","item":"https://ghxstship.tours/work/salvage-city-supper-club"}]}` }} />
     </>
   );

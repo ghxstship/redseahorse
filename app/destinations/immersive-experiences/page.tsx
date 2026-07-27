@@ -89,7 +89,7 @@ export default function Page() {
   <p className="kicker">Selected Work</p>
   <h2 className="sec-h2">Worlds We Built.</h2>
   <div style={{marginTop: '8px', borderTop: '1px solid var(--color-divider)'}}>
-    <Link href="/work/salvage-city-supper-club" className="row-line" style={{textDecoration: 'none', color: 'inherit'}}><span className="row-title">Salvage City Supper Club</span><span className="row-sub">Immersive Experience · Club Space · Miami</span><span className="row-sub">2025–26</span></Link>
+    <Link href="/work/salvage-city-supper-club" className="row-line" style={{textDecoration: 'none', color: 'inherit'}}><span className="row-title">Salvage City Supper Club</span><span className="row-sub">Premium Hospitality · EDC Las Vegas</span><span className="row-sub">2025–26</span></Link>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all work →</Link></p>
 </section>
