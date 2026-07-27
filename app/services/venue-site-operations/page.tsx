@@ -74,8 +74,8 @@ export default function Page() {
   <h2 className="sec-h2">We Own the Day Itself.</h2>
   <p className="lede">Every production runs the same nine phases. Venue &amp; site operations owns Operate and the day-of, supports Amplify with the site access, crews, and coordination that capture and post-event delivery need, keeps hands on the work from Advance through Close, and runs the room on a repeating cycle, every date, from a held date to a clean settlement.</p>
   <div className="phases">
-    <div className="phase"><div className="dot">1</div><div className="nm">Discover</div></div>
-    <div className="phase"><div className="dot">2</div><div className="nm">Design</div></div>
+    <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
+    <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
     <div className="phase done"><div className="dot">3</div><div className="nm">Advance</div></div>
     <div className="phase done"><div className="dot">4</div><div className="nm">Procure</div></div>
     <div className="phase done"><div className="dot">5</div><div className="nm">Build</div></div>

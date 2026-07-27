@@ -63,11 +63,11 @@ export default function Page() {
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
     <div className="phase done"><div className="dot">3</div><div className="nm">Advance</div></div>
     <div className="phase done"><div className="dot">4</div><div className="nm">Procure</div></div>
-    <div className="phase"><div className="dot">5</div><div className="nm">Build</div></div>
-    <div className="phase"><div className="dot">6</div><div className="nm">Install</div></div>
-    <div className="phase"><div className="dot">7</div><div className="nm">Operate</div></div>
-    <div className="phase"><div className="dot">8</div><div className="nm">Amplify</div></div>
-    <div className="phase"><div className="dot">9</div><div className="nm">Close</div></div>
+    <div className="phase done"><div className="dot">5</div><div className="nm">Build</div></div>
+    <div className="phase done"><div className="dot">6</div><div className="nm">Install</div></div>
+    <div className="phase done"><div className="dot">7</div><div className="nm">Operate</div></div>
+    <div className="phase done"><div className="dot">8</div><div className="nm">Amplify</div></div>
+    <div className="phase done"><div className="dot">9</div><div className="nm">Close</div></div>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/course" className="btn btn-ghost">Walk the full course →</Link></p>
 </section>

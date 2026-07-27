@@ -60,8 +60,8 @@ export default function Page() {
   <h2 className="sec-h2">Nine Phases, Every City.</h2>
   <p className="lede">Every production runs the same nine phases. A tour runs them as a cycle: the run is designed and routed once, then every city gets its own advance, install, show, and settlement. In Amplify, the road manager carries talent approvals and the per-city content — capture, recaps, and post-show delivery cleared with the artist party before the bus rolls. The road manager keeps hands on the work from Advance through Close, date after date.</p>
   <div className="phases">
-    <div className="phase"><div className="dot">1</div><div className="nm">Discover</div></div>
-    <div className="phase"><div className="dot">2</div><div className="nm">Design</div></div>
+    <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
+    <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
     <div className="phase done"><div className="dot">3</div><div className="nm">Advance</div></div>
     <div className="phase done"><div className="dot">4</div><div className="nm">Procure</div></div>
     <div className="phase done"><div className="dot">5</div><div className="nm">Build</div></div>

@@ -291,6 +291,10 @@ details.faq-item[open] > summary.faq-q::after { content: "–"; }
 .phase .dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--color-divider); font-size: 0.667rem; font-weight: 600; display: grid; place-items: center; }
 .phase.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
 .phase .nm { font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; margin-top: 2px; }
+/* the strip is a jump-nav where the page has the sections to jump to */
+a.phase { text-decoration: none; color: inherit; }
+a.phase:hover .nm { color: var(--color-accent-700); }
+a.phase:hover .dot { background: var(--color-accent-600); border-color: var(--color-accent-600); }
 @media (max-width: 720px) {
   .phases { flex-direction: column; gap: 10px; }
   .phase { text-align: left; padding: 0 0 0 30px; }
