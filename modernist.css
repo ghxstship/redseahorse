@@ -1,5 +1,5 @@
 /* ============================================================================
-   GHXSTSHIP — MODERNIST SYSTEM (greyscale · GHXSTSHIP Green accent)
+   GHXSTSHIP, MODERNIST SYSTEM (greyscale · GHXSTSHIP Green accent)
    ----------------------------------------------------------------------------
    Port of the Modernist design system (styles.css, _ds/modernist-8bc889ab) to
    the GHXSTSHIP brand: pure-grayscale neutrals on a #fcfcfc ground, GHXSTSHIP
@@ -12,7 +12,7 @@
    Accent rules (from DESIGN_SYSTEM.md, recolored):
    - ONE hue (~124°) in three roles. FILL = --color-accent #2edb3a (buttons,
      dots, bars) with --color-on-accent #001800 as its ink (10:1). TEXT ON
-     LIGHT = --color-accent-700 #1b7c21 (5.18:1 on bg, 4.62:1 on surface) —
+     LIGHT = --color-accent-700 #1b7c21 (5.18:1 on bg, 4.62:1 on surface)
      base green is 1.81:1 and can never carry text on light. TEXT ON DARK =
      --color-accent, but only inside .band-dark (11.31:1 on black).
    - Accent is spent sparingly: primary button, kickers, stat figures, small
@@ -118,13 +118,13 @@
 }
 
 :root {
-  /* — ground (client grayscale swatches: #fcfcfc / #000 / #2a2a2a / #545454 / #7e7e7e) — */
+  /* ground (client grayscale swatches: #fcfcfc / #000 / #2a2a2a / #545454 / #7e7e7e) */
   --color-bg: #fcfcfc;
   --color-surface: #efefef;
   --color-text: #000000;
   --color-divider: color-mix(in srgb, #000000 40%, transparent);
 
-  /* — neutral ramp (pure grayscale, one lightness scale) — */
+  /* neutral ramp (pure grayscale, one lightness scale) */
   --color-neutral-100: #f7f7f7;
   --color-neutral-200: #ebebeb;
   --color-neutral-300: #d9d9d9;
@@ -135,14 +135,14 @@
   --color-neutral-800: #424242;
   --color-neutral-900: #2a2a2a;
 
-  /* — accent: GHXSTSHIP Green (house #2edb3a; hover #25ad2e; AA text #1b7c21) — */
+  /* accent: GHXSTSHIP Green (house #2edb3a; hover #25ad2e; AA text #1b7c21) */
   --color-accent: #2edb3a;
   --color-accent-100: #eafbe9;
   --color-accent-200: #cef5cf;
   --color-accent-300: #a3ecaa;
   --color-accent-400: #67e274;
   --color-accent-500: #2edb3a;
-  --color-accent-600: #25ad2e; /* hover step, retuned to the family: was #00ca22 — the only 100%-sat, hue-130 step in the ramp */
+  --color-accent-600: #25ad2e; /* hover step, retuned to the family: was #00ca22, the only 100%-sat, hue-130 step in the ramp */
   --color-accent-700: #1b7c21; /* AA ≥4.5:1 on --color-bg AND --color-surface (was #1f8425 · 4.44:1) */
   --color-accent-800: #155b1b;
   --color-accent-900: #103f14;
@@ -152,7 +152,7 @@
   --font-heading: "Archivo", system-ui, sans-serif;
   --font-heading-weight: 800;
   --font-body: "Archivo", system-ui, sans-serif;
-  /* wordmark lockup only — GHXSTSHIP brand name in chrome; never body text */
+  /* wordmark lockup only. GHXSTSHIP brand name in chrome; never body text */
   --font-wordmark: "Bebas Neue", "Archivo", "Arial Narrow", system-ui, sans-serif;
 
   --space-1: 4px;
@@ -170,11 +170,11 @@
   --shadow-md: 0 3px 10px color-mix(in srgb, #2a2a2a 16%, transparent);
   --shadow-lg: 0 12px 32px color-mix(in srgb, #2a2a2a 22%, transparent);
 
-  /* image treatment — a token so dark mode can pull the whites back without
+  /* image treatment, a token so dark mode can pull the whites back without
      any page knowing that grayscale figures are filtered at all */
   --img-filter: grayscale(1) contrast(1.08);
   /* edge between a fixed-black surface (header, closing band) and the page.
-     Invisible on a light page — black against #fcfcfc is its own edge — and a
+     Invisible on a light page, black against #fcfcfc is its own edge, and a
      faint hairline in dark mode, where black meets near-black. */
   --color-chrome-edge: transparent;
 
@@ -182,8 +182,8 @@
 }
 
 /* ── theme: light · dark · system ───────────────────────────────────────────
-   No page and no component hard-codes a colour — the whole surface reads
-   tokens — so a theme is nothing but a swap on :root. Three states: no
+   No page and no component hard-codes a colour, the whole surface reads
+   tokens, so a theme is nothing but a swap on :root. Three states: no
    data-theme follows the OS, data-theme="light"/"dark" pins it. The dark
    block is declared twice on purpose (system preference, then explicit
    choice); CSS has no way to share one body between a media query and a
@@ -252,7 +252,7 @@
 }
 
 /* ── fixed-black surfaces ──────────────────────────────────────────────────
-   The sticky header and the closing CTA band are black in every theme — the
+   The sticky header and the closing CTA band are black in every theme, the
    mark is a white flag and the wordmark is white with it, and that lockup
    should not change identity when the OS does. Re-declaring the ground tokens
    inside the scope is what makes everything nested in them correct with zero
@@ -264,7 +264,7 @@ header.nav, .band-dark, .nav-drawer-panel, .on-dark {
   /* `color` must be restated, not just the token: descendants inherit the
      computed colour from <body>, which resolved --color-text before this
      scope changed it. Without this line every `color: inherit` in the header
-     stays page-ink — black on black in light mode. */
+     stays page-ink, black on black in light mode. */
   color: var(--color-text);
   --color-bg: #000000;
   --color-surface: #141414;
@@ -290,7 +290,7 @@ header.nav, .band-dark, .nav-drawer-panel, .on-dark {
 *, *::before, *::after { box-sizing: border-box; }
 html {
   font-synthesis: style small-caps; font-synthesis-weight: none;
-  /* fluid root: every rem in the system scales with viewport —
+  /* fluid root: every rem in the system scales with viewport
      15px ≤640w → ~15.8px @1280 → 16.5px on wide desktop */
   font-size: clamp(15px, 14.2px + 0.125vw, 16.5px);
 }
@@ -325,7 +325,7 @@ figcaption { font-size: 0.733rem; margin-top: var(--space-1); color: color-mix(i
 /* Placeholder flag, where a real photograph has not been shot yet: team
    avatars and store product tiles. A <use> of the page's inline symbol, so it
    inherits currentColor and reads as a watermark in either theme. It used to
-   be the near-white skull-bone.svg on a near-white tile — invisible in light
+   be the near-white skull-bone.svg on a near-white tile, invisible in light
    mode and only legible in dark. Width comes from the page; height follows. */
 .ph-mark { display: block; aspect-ratio: 120 / 92; color: var(--color-text); opacity: 0.3; }
 
@@ -335,7 +335,7 @@ figcaption { font-size: 0.733rem; margin-top: var(--space-1); color: color-mix(i
 .hr, .rule { height: 2px; border: 0; margin: var(--space-4) 0; background: var(--color-divider); }
 .rule { margin: 0; }
 
-/* page title block: [kicker] + [H1] + rule — opens every non-home page */
+/* page title block: [kicker] + [H1] + rule, opens every non-home page */
 .kicker {
   font-size: 0.867rem; letter-spacing: 0.14em; text-transform: uppercase;
   font-weight: 600; color: var(--color-accent-700); margin: 0 0 var(--space-2);
@@ -353,7 +353,7 @@ figcaption { font-size: 0.733rem; margin-top: var(--space-1); color: color-mix(i
 .lede { font-size: clamp(17px, 16px + 0.15vw, 19px); line-height: 1.65; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 62ch; }
 
 /* ── buttons ───────────────────────────────────────────────────────────── */
-/* Canonical size scale — the ONLY button paddings in the system:
+/* Canonical size scale, the ONLY button paddings in the system:
    .btn-sm 7×14 (dense rows) · .btn 10×18 / min-height 36px (default,
    matches .input height) · .btn-lg 14×26 (hero/closing CTAs) ·
    .btn-icon 36×36. Never override padding/font-size inline. */
@@ -422,7 +422,7 @@ textarea.input { min-height: 90px; resize: vertical; }
 .card-meta { display: flex; align-items: center; gap: 6px; font-size: 0.733rem; color: color-mix(in srgb, var(--color-text) 62%, transparent); margin-top: auto; }
 .card-kicker, .card-title { flex: none; }
 
-/* atoms shared by every card family — never redefine per page */
+/* atoms shared by every card family, never redefine per page */
 .more { font-family: var(--font-heading); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-accent-700); }
 .role { font-size: 0.733rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); }
 /* The alignment contract, in one place: the trailing action is the ONLY thing
@@ -445,7 +445,7 @@ textarea.input { min-height: 90px; resize: vertical; }
   color: color-mix(in srgb, var(--color-text) 60%, transparent); margin-top: var(--space-2);
 }
 
-/* filter chip — the universal filter/segmented control */
+/* filter chip, the universal filter/segmented control */
 .chip {
   display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
   font-family: var(--font-heading); font-weight: 600; font-size: 0.8rem;
@@ -456,7 +456,7 @@ textarea.input { min-height: 90px; resize: vertical; }
 .chip:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .chip.on, .chip[aria-pressed="true"] { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); }
 
-/* list row — reflows on mobile */
+/* list row, reflows on mobile */
 .row-line {
   display: grid; grid-template-columns: 1fr auto auto; gap: 4px 24px;
   align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--color-divider);
@@ -464,7 +464,7 @@ textarea.input { min-height: 90px; resize: vertical; }
 .row-line .row-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 1.133rem; text-transform: uppercase; }
 .row-line .row-sub { font-size: 0.867rem; color: color-mix(in srgb, var(--color-text) 60%, transparent); }
 
-/* FAQ accordion — authored as <details class="faq-item"><summary class="faq-q"> for zero-JS */
+/* FAQ accordion, authored as <details class="faq-item"><summary class="faq-q"> for zero-JS */
 .faq-item { border-bottom: 1px solid var(--color-divider); }
 details.faq-item > summary { list-style: none; }
 details.faq-item > summary::-webkit-details-marker { display: none; }
@@ -497,7 +497,7 @@ details.faq-item[open] > summary.faq-q::after { content: "–"; }
 /* ── service card (canonical; was duplicated per page) ─────────────────── */
 /* Alignment contract: every region is top-anchored in source order (bar,
    role, title, body); ONLY the final CTA floats, pinned to the card bottom
-   via margin-top:auto — so titles and body copy start at the same y across
+   via margin-top:auto, so titles and body copy start at the same y across
    a row regardless of how lines wrap. Nothing else may flex. */
 .svc-card { border: 1px solid var(--color-divider); padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--color-bg); }
 .svc-card .bar { height: 3px; width: 44px; background: var(--color-accent); flex: none; }
@@ -563,7 +563,7 @@ summary { cursor: pointer; }
 .sticky-fig { position: sticky; top: 96px; }
 
 /* ════════════════════════════════════════════════════════════════════════
-   SHARED CHROME — header.nav + footer.site-foot.
+   SHARED CHROME, header.nav + footer.site-foot.
    Markup lives in app/_components/Nav.tsx + Footer.tsx (production) and is
    copied verbatim into each ui_kits/website page (standalone preview); the
    generator drops the in-page copies. Styles live ONLY here.
@@ -616,7 +616,7 @@ header.nav {
 .nav-cta { margin-left: 2px; }
 .burger { display: none; background: none; border: 1px solid var(--color-divider); }
 
-/* theme control — one button cycling system → light → dark. Only the glyph
+/* theme control, one button cycling system → light → dark. Only the glyph
    for the current state is in the box; the other two are display:none, so
    there is nothing to swap at runtime and nothing to flash before theme.js
    loads. Without the script (the standalone source previews) the button is
@@ -639,18 +639,18 @@ header.nav {
 .mob-menu a:hover { color: var(--color-accent-700); }
 
 @media (max-width: 1080px) {
-  /* production chrome has a burger — collapse to it. The standalone source
+  /* production chrome has a burger, collapse to it. The standalone source
      previews in ui_kits/website/ do not, so there the links wrap instead of
      disappearing and leaving the page with no navigation at all. */
   .nav-inner:has(.burger) .desk-nav { display: none; }
   /* the theme control lives outside .desk-nav so collapsing the links never
-     takes it with them — it takes over the right-edge push from the burger */
+     takes it with them, it takes over the right-edge push from the burger */
   .nav-inner:has(.burger) .theme-toggle { margin-left: auto; }
   .burger { display: inline-flex; }
 
   /* The standalone previews in ui_kits/website/ carry no burger and no JS, so
      their links cannot collapse into a drawer. Left on one line they fought
-     the theme control for the space — two competing `margin-left: auto` — and
+     the theme control for the space, two competing `margin-left: auto`, and
      lost: a 126px-wide column of wrapped links at phone widths, a 319px-tall
      header, and 36px of horizontal overflow at 320. So the bar itself wraps
      instead: brand and control on the first row, the full link set across the
@@ -672,14 +672,14 @@ footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp
 .foot-lede { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 1.067rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-text); margin: 12px 0 0; }
 .foot-loc { margin: 16px 0 0; }
 /* 62%, not 45%: at 45% this label was 3.34:1 on the light ground and 4.17:1
-   on the dark one — under AA in both. It is still the quietest thing in the
+   on the dark one, under AA in both. It is still the quietest thing in the
    footer, just legible now. */
 .foot-loc dt { font-size: 0.667rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 62%, transparent); margin-top: 11px; }
 .foot-loc dt:first-of-type { margin-top: 0; }
 .foot-loc dd { margin: 2px 0 0; font-size: 0.867rem; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
 .foot-tag { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 34ch; margin-top: 12px; }
 .foot-col h6 { font-size: 0.733rem; letter-spacing: 0.14em; color: var(--color-accent-700); margin-bottom: 12px; }
-/* footer links are BODY register per the kit canon — never the heading font */
+/* footer links are BODY register per the kit canon, never the heading font */
 .foot-col a { display: block; padding: 5px 0; font-size: 0.933rem; font-family: var(--font-body); font-weight: 400; text-decoration: none; color: var(--color-text); }
 .foot-col a:hover { color: var(--color-accent-700); }
 .foot-legal { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 18px 30px; border-top: 1px solid var(--color-divider); font-size: 0.8rem; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
@@ -694,7 +694,7 @@ footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp
 .sec-pad { padding-block: clamp(40px, 6vw, 80px); }
 .sec-pad-sm { padding-block: clamp(28px, 4vw, 48px); }
 .band { background: var(--color-surface); border-top: 2px solid var(--color-divider); border-bottom: 2px solid var(--color-divider); }
-/* the closing band carries no colour rules of its own — the token scope above
+/* the closing band carries no colour rules of its own, the token scope above
    already flipped the ground under it, so .kicker, .stat, .lede and
    .btn-secondary land correctly with no per-band overrides */
 .band-dark {

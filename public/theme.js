@@ -1,4 +1,4 @@
-/* Theme control — light · dark · system.
+/* Theme control, light · dark · system.
  *
  * The whole visual surface is token-driven, so a theme is one attribute on
  * <html>: absent means "follow the OS" (modernist.css does that with a
@@ -7,7 +7,7 @@
  * and keep the button's accessible name honest.
  *
  * The first paint is handled by a tiny inline snippet in app/layout.tsx that
- * runs before the body renders — if it waited for this file the page would
+ * runs before the body renders, if it waited for this file the page would
  * flash the wrong ground on every load.
  */
 (function () {
@@ -41,7 +41,7 @@
       if (mode === "system") localStorage.removeItem(KEY);
       else localStorage.setItem(KEY, mode);
     } catch (e) {
-      /* private mode — the choice just does not survive the session */
+      /* private mode, the choice just does not survive the session */
     }
     label(mode);
   }

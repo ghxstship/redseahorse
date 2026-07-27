@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .ap-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
   @media (max-width: 960px) { .ap-grid { grid-template-columns: 1fr; } }
   .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }

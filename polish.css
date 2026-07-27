@@ -1,5 +1,5 @@
 /* ============================================================================
-   GHXSTSHIP — polish.css
+   GHXSTSHIP, polish.css
    Premium/intuitive enhancement layer: motion choreography (#2), interaction
    state grammar (#4), and density/rhythm helpers (#5). Requires colors_and_type.css.
    Load AFTER components.css/terminal.css. All motion respects prefers-reduced-motion.
@@ -25,11 +25,11 @@ a:focus-visible, button:focus-visible, .gx-btn:focus-visible,
 select:focus-visible, summary:focus-visible{
   outline:var(--stroke-3) solid var(--brass); outline-offset:var(--space-2); border-radius:var(--r-1);
 }
-/* keep mouse clicks clean — only show ring for keyboard nav */
+/* keep mouse clicks clean, only show ring for keyboard nav */
 a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
 
 /* ---- #4 STATES: consistent interaction grammar -------------------------- */
-/* Cards: lift on hover, press into shadow on active — one grammar everywhere */
+/* Cards: lift on hover, press into shadow on active, one grammar everywhere */
 .dcard, .vcard, .mu, .fcard{transition:transform var(--dur-2) ease, box-shadow var(--dur-2) ease, border-color var(--dur-2) ease}
 .dcard:active, .vcard:active, .mu:active{transform:translate(-1px,-1px)}
 /* Tags become tappable affordances */
@@ -62,7 +62,7 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
 
 /* ---- MOBILE: defensive overflow + wrap eyebrows -------------------------- */
 @media (max-width: 48rem) {
-  /* Clip horizontal bleed on <body> only — never <html>, which would break
+  /* Clip horizontal bleed on <body> only, never <html>, which would break
      position:sticky for the nav and journey rail. overflow-x:clip leaves
      overflow-y visible, so the window still scrolls and sticky tracks it. */
   body { overflow-x: clip; max-width: 100vw; }
@@ -92,7 +92,7 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible){outline:none}
   padding-right:var(--sp-6, var(--sp-6));
 }
 
-/* ---- CANONICAL HEADER TYPOGRAPHY — single source of truth ----------------
+/* ---- CANONICAL HEADER TYPOGRAPHY, single source of truth ----------------
    The shared React <Nav> inherits .brand b / .navlinks a styling from whatever
    page <style> block is active, and those drifted: the wordmark varied in
    size/letter-spacing/weight, the nav links in letter-spacing (.1 vs .12em).
@@ -123,7 +123,7 @@ header.nav .navlinks > .nav-item > a {
    MOBILE: journey + course become horizontal scroll-snap carousels
    ----------------------------------------------------------------------------
    On phones/tablets the journey rail was a tall static list (only step 1 lit)
-   stacked above 6 full step cards — heavy redundant scrolling. The course
+   stacked above 6 full step cards, heavy redundant scrolling. The course
    strip-map collapsed to an 8-item vertical column. Both now become compact
    swipeable carousels: a sticky numbered progress strip + horizontally
    snapping cards. journey.js syncs the active dot to scroll position and adds
@@ -198,7 +198,7 @@ header.nav .navlinks > .nav-item > a {
 .hero .porthole { max-width: 100%; }
 
 /* ============================================================================
-   MOBILE UX POLISH — spacing rhythm, tap targets, sticky offsets
+   MOBILE UX POLISH, spacing rhythm, tap targets, sticky offsets
    ========================================================================== */
 @media (max-width: 48rem) {
   /* Tighten the heavy desktop section rhythm (96-128px) on phones so sections
@@ -221,12 +221,12 @@ header.nav .navlinks > .nav-item > a {
 /* ============================================================================
    PREMIUM MOTION LAYER
    ----------------------------------------------------------------------------
-   Refined scroll-reveal, count-up, and nav-condense — an elevated, "premium"
+   Refined scroll-reveal, count-up, and nav-condense, an elevated, "premium"
    feel kept on-brand (quick, physical, never floaty). All gated behind the
    .gx-motion class that motion.js adds ONLY when prefers-reduced-motion is not
    set, so without JS (or with reduced motion) everything is fully visible and
-   static — no content ever depends on animation to appear.
-   Easing: cubic-bezier(.22,1,.36,1) — a confident ease-out with a soft settle.
+   static, no content ever depends on animation to appear.
+   Easing: cubic-bezier(.22,1,.36,1), a confident ease-out with a soft settle.
    ========================================================================== */
 .gx-motion .gx-reveal {
   opacity: 0;
@@ -267,7 +267,7 @@ header.nav.is-scrolled {
 /* ---- FOOTER: stack to one column on phones ------------------------------- */
 /* The kit footer stays 2-col down to 820px; at <=360px the brand's nowrap
    spaced wordmark can't fit a half-width column and forces ~69px of overflow.
-   Stack to a single column on phones — also gives each link a full-width row. */
+   Stack to a single column on phones, also gives each link a full-width row. */
 @media (max-width: 30rem) {
   .site-foot .foot-grid { grid-template-columns: 1fr !important; gap: var(--sp-6); }
   .site-foot .foot-brand { margin-bottom: var(--sp-2); }
@@ -287,7 +287,7 @@ header.nav.is-scrolled {
 }
 
 /* ============================================================================
-   PREMIUM SUITE — media reveals, hover zoom, magnetic CTAs, link underlines,
+   PREMIUM SUITE, media reveals, hover zoom, magnetic CTAs, link underlines,
    headline word reveal. All gated behind .gx-motion (reduced-motion safe).
    ========================================================================== */
 
@@ -366,7 +366,7 @@ header.nav.is-scrolled {
 }
 
 /* ============================================================================
-   MOBILE NAVIGATION — hamburger + full-screen drawer (built by nav.js)
+   MOBILE NAVIGATION, hamburger + full-screen drawer (built by nav.js)
    The kit hides desktop links <=64rem with no menu; this supplies one.
    ========================================================================== */
 .nav-toggle { display: none; }
@@ -431,7 +431,7 @@ header.nav.is-scrolled {
   padding: var(--space-12) 0 !important; padding-left: var(--sp-4) !important;
   border-bottom: var(--stroke-1) solid var(--ink-2) !important;
 }
-.nav-drawer-sublink::before { content: "— "; opacity: .5; }
+.nav-drawer-sublink::before { content: "· "; opacity: .5; }
 
 .nav-toggle-bars { display: block; width: 18px; height: 14px; position: relative; }
 .nav-toggle-bars i {
@@ -509,7 +509,7 @@ header.nav.is-scrolled {
   flex: 0 0 clamp(19rem, 40vw, 30rem) !important;
 }
 /* Column 2 (.j-steps) becomes a clipping viewport: the translating .j-track is
-   bounded to its own column and can never reach the rail — no masking needed. */
+   bounded to its own column and can never reach the rail, no masking needed. */
 .journey .j-grid[data-hscroll-stage] .j-steps {
   display: block !important; overflow: hidden; min-width: 0; align-self: stretch;
 }

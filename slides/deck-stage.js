@@ -1,24 +1,24 @@
 /* BEGIN USAGE */
 /**
- * <deck-stage> — reusable web component for HTML decks.
+ * <deck-stage>, reusable web component for HTML decks.
  *
  * Handles:
- *  (a) speaker notes — reads <script type="application/json" id="speaker-notes">
+ *  (a) speaker notes, reads <script type="application/json" id="speaker-notes">
  *      and posts {slideIndexChanged: N} to the parent window on nav.
- *  (b) keyboard navigation — ←/→, PgUp/PgDn, Space, Home/End, number keys.
+ *  (b) keyboard navigation, ←/→, PgUp/PgDn, Space, Home/End, number keys.
  *      On touch devices, tapping the left/right half of the stage goes
- *      prev/next — taps on links, buttons and other interactive slide
+ *      prev/next, taps on links, buttons and other interactive slide
  *      content are left alone.
  *  (c) press R to reset to slide 0 (with a tasteful keyboard hint).
  *  (d) bottom-center overlay showing slide count + hints, fades out on idle.
- *  (e) auto-scaling — inner canvas is a fixed design size (default 1920×1080)
+ *  (e) auto-scaling, inner canvas is a fixed design size (default 1920×1080)
  *      scaled with `transform: scale()` to fit the viewport, letterboxed.
- *      Set the `noscale` attribute to render at authored size (1:1) — the
+ *      Set the `noscale` attribute to render at authored size (1:1), the
  *      PPTX exporter sets this so its DOM capture sees unscaled geometry.
- *  (f) print — `@media print` lays every slide out as its own page at the
+ *  (f) print, `@media print` lays every slide out as its own page at the
  *      design size, so the browser's Print → Save as PDF produces a clean
  *      one-page-per-slide PDF with no extra setup.
- *  (g) thumbnail rail — resizable left-hand column of per-slide thumbnails
+ *  (g) thumbnail rail, resizable left-hand column of per-slide thumbnails
  *      (static clones). Click to navigate; ↑/↓ with a thumbnail focused to
  *      step between slides; drag to reorder; right-click for
  *      Skip / Move up / Move down / Delete (opens a Cancel/Delete confirm
@@ -35,7 +35,7 @@
  * `visibility: hidden` + `opacity: 0`, so their state (videos, iframes,
  * form inputs, React trees) is preserved across navigation.
  *
- * Lifecycle event — the component dispatches a `slidechange` CustomEvent on
+ * Lifecycle event, the component dispatches a `slidechange` CustomEvent on
  * itself whenever the active slide changes (including the initial mount).
  * The event bubbles and composes out of shadow DOM, so you can listen on
  * the <deck-stage> element or on document:
@@ -70,7 +70,7 @@
  *   - data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text"
  *
  * Speaker notes stay in sync because the component posts {slideIndexChanged: N}
- * to the parent — just include the #speaker-notes script tag if asked for notes.
+ * to the parent, just include the #speaker-notes script tag if asked for notes.
  *
  * Authoring guidance:
  *   - Write slide bodies as static HTML inside <deck-stage>, with sizing via
@@ -80,7 +80,7 @@
  *     React, or a loop over a JS array has to round-trip every tweak through a
  *     chat message instead. Reach for script-generated slides only when the
  *     content genuinely needs interactive behaviour static HTML can't express.
- *   - Do NOT set position/inset/width/height on the slide <section> elements —
+ *   - Do NOT set position/inset/width/height on the slide <section> elements
  *     the component absolutely positions every slotted child for you.
  */
 /* END USAGE */
@@ -127,7 +127,7 @@
      * the first visible paint has the deck's real typography + final rail
      * layout. opacity (not visibility) so the active slide can't un-hide
      * itself via the ::slotted([data-deck-active]) visibility:visible rule.
-     * Only the stage/rail hide — the black :host background stays, so the
+     * Only the stage/rail hide, the black :host background stays, so the
      * iframe doesn't flash the page's default white. */
     :host([data-fonts-pending]) .stage,
     :host([data-fonts-pending]) .rail { opacity: 0; pointer-events: none; }
@@ -309,14 +309,14 @@
       .rail, .rail-resize { display: none; }
     }
     /* User-driven show/hide (the TweaksPanel toggle) slides instead of
-       popping. Transitions are gated on :host([data-rail-anim]) — set only
-       for the 200ms around the toggle — so window-resize and rail-width
+       popping. Transitions are gated on :host([data-rail-anim]), set only
+       for the 200ms around the toggle, so window-resize and rail-width
        drag (which also call _fit) don't lag behind the cursor. */
     .rail[data-user-hidden] { transform: translateX(-100%); }
     :host([data-rail-anim]) .rail { transition: transform 200ms cubic-bezier(.3,.7,.4,1); }
     :host([data-rail-anim]) .stage { transition: left 200ms cubic-bezier(.3,.7,.4,1); }
     :host([data-rail-anim]) .canvas { transition: transform 200ms cubic-bezier(.3,.7,.4,1); }
-    /* transition shorthand replaces rather than merges — repeat the base
+    /* transition shorthand replaces rather than merges, repeat the base
        .overlay opacity/transform/filter transitions so visibility changes
        during the 200ms toggle window still fade instead of popping. */
     :host([data-rail-anim]) .overlay {
@@ -441,7 +441,7 @@
     .rail[data-presenting] + .rail-resize,
     .rail[data-user-hidden] + .rail-resize { display: none; }
 
-    /* Delete-confirm popup — matches the SPA's ConfirmDialog layout
+    /* Delete-confirm popup, matches the SPA's ConfirmDialog layout
        (title + message body, depressed footer with Cancel / Delete). */
     .confirm-backdrop {
       position: fixed;
@@ -541,7 +541,7 @@
         overflow: hidden;
       }
       /* :last-child alone isn't enough once data-deck-skip hides the
-         trailing slide(s) — the last *visible* slide still carries
+         trailing slide(s), the last *visible* slide still carries
          break-after:page and prints a blank sheet. _markLastVisible()
          maintains data-deck-last-visible on the last non-skipped slide. */
       ::slotted(*:last-child),
@@ -574,7 +574,7 @@
       this._onTap = this._onTap.bind(this);
       this._onMessage = this._onMessage.bind(this);
       // Capture-phase close so a click anywhere dismisses the menu, but
-      // ignore clicks that land inside the menu itself — otherwise the
+      // ignore clicks that land inside the menu itself, otherwise the
       // capture handler runs before the menu's own (bubble) handler and
       // clears _menuIndex out from under it.
       this._onDocClick = (e) => {
@@ -592,7 +592,7 @@
 
     connectedCallback() {
       // Presenter-view popup loads deckUrl?_snthumb=...#N for its prev/cur/
-      // next thumbnails — the rail has no business rendering inside those
+      // next thumbnails, the rail has no business rendering inside those
       // (wrong scale, and it offsets the stage so the thumb shows a gutter).
       if (/[?&]_snthumb=/.test(location.search)) this.setAttribute('no-rail', '');
       this._render();
@@ -607,7 +607,7 @@
       // Initial collection + layout happens via slotchange, which fires on mount.
       this._enableRail();
       // Hold the stage hidden until webfonts are ready so the first visible
-      // paint has the deck's real typography — the :not(:defined) guard in
+      // paint has the deck's real typography, the :not(:defined) guard in
       // the page HTML only covers custom-element upgrade, not font load.
       // Capped so a 404'd font URL can't blank the deck indefinitely.
       this.setAttribute('data-fonts-pending', '');
@@ -625,12 +625,12 @@
     }
 
     _enableRail() {
-      // Idempotent — older host builds still post __omelette_rail_enabled.
+      // Idempotent, older host builds still post __omelette_rail_enabled.
       // no-rail guard keeps the observers/stylesheet walk off the cheap path
       // for presenter-popup thumbnail iframes (up to 9 per view).
       if (this._railEnabled || this.hasAttribute('no-rail')) return;
       this._railEnabled = true;
-      // Per-viewer preference — restored alongside rail width. Default on;
+      // Per-viewer preference, restored alongside rail width. Default on;
       // only a stored '0' (from the TweaksPanel toggle) hides it.
       this._railVisible = true;
       try {
@@ -661,7 +661,7 @@
       this._liveObserver.observe(this, {
         subtree: true, childList: true, characterData: true, attributes: true,
       });
-      // Lazy thumbnail materialization — clone the slide only when its
+      // Lazy thumbnail materialization, clone the slide only when its
       // frame scrolls into (or near) the rail viewport. rootMargin gives
       // ~4 thumbs of pre-load so fast scrolling doesn't flash blanks.
       this._railObserver = new IntersectionObserver((entries) => {
@@ -682,7 +682,7 @@
         clearTimeout(this._tweakTimer);
         this._tweakTimer = setTimeout(() => {
           this._snapshotAuthorCss();
-          // One getComputedStyle for the whole batch — each
+          // One getComputedStyle for the whole batch, each
           // getPropertyValue read below reuses the same computed style
           // as long as nothing invalidates layout between thumbs.
           const cs = getComputedStyle(this);
@@ -693,7 +693,7 @@
       };
       window.addEventListener('tweakchange', this._onTweakChange);
       this._snapshotAuthorCss();
-      // Build the rail now that it's enabled — slotchange already fired,
+      // Build the rail now that it's enabled, slotchange already fired,
       // so _renderRail's early-return skipped the initial build.
       this._syncRailHidden();
       this._renderRail();
@@ -701,9 +701,9 @@
     }
 
     /** Snapshot document stylesheets into a constructable sheet that each
-     *  thumbnail's nested shadow root adopts — so author CSS styles the
+     *  thumbnail's nested shadow root adopts, so author CSS styles the
      *  cloned slide content without touching this component's chrome.
-     *  Cross-origin sheets throw on .cssRules — skip them. Re-callable:
+     *  Cross-origin sheets throw on .cssRules, skip them. Re-callable:
      *  the existing constructable sheet is reused via replaceSync so every
      *  already-adopted shadow root picks up the fresh CSS without re-adopt. */
     _snapshotAuthorCss() {
@@ -719,7 +719,7 @@
         } catch (e) { return ''; }
       }).join('\n')
         // The shadow host is featureless outside the functional :host(...)
-        // form, so any compound on :root — [attr], .class, #id, :pseudo —
+        // form, so any compound on :root, [attr], .class, #id, :pseudo
         // must become :host(<compound>) not :host<compound>. Same for the
         // html type selector (Tailwind class-strategy dark mode emits
         // html.dark; Pico uses html[data-theme]), which has nothing to
@@ -746,7 +746,7 @@
 
     _syncThumbHostAttrs(host, cs) {
       const de = document.documentElement;
-      // setAttribute overwrites but can't delete — an attr removed from
+      // setAttribute overwrites but can't delete, an attr removed from
       // <html> (toggleAttribute off, classList emptied) would linger on
       // the host and :host([data-*]) / :host(.foo) rules would keep
       // matching. Remove stale mirrored attrs first; iterate backward
@@ -766,8 +766,8 @@
       // The :root→:host rewrite in _snapshotAuthorCss pins each custom
       // property to its stylesheet default on the thumb host, shadowing
       // the live value that would otherwise inherit. Tweaks can write the
-      // live value on any ancestor — <html>, <body>, a wrapper div, the
-      // deck-stage element — so read it as the *computed* value at
+      // live value on any ancestor, <html>, <body>, a wrapper div, the
+      // deck-stage element, so read it as the *computed* value at
       // <deck-stage> (which sees the whole inheritance chain) rather than
       // trying to guess which element the author wrote to. Inline on the
       // host beats the :host{} rule. remove-stale covers vars dropped
@@ -868,7 +868,7 @@
       // Edge auto-scroll while dragging a thumb near the rail's top/bottom
       // so off-screen drop targets are reachable. Native dragover fires
       // continuously while the pointer is stationary, so a per-event nudge
-      // (ramped by edge proximity) is enough — no rAF loop needed.
+      // (ramped by edge proximity) is enough, no rAF loop needed.
       rail.addEventListener('dragover', (e) => {
         if (this._dragFrom == null) return;
         const r = rail.getBoundingClientRect();
@@ -901,7 +901,7 @@
       });
       menu.addEventListener('contextmenu', (e) => e.preventDefault());
 
-      // Rail resize handle — drag to set --deck-rail-w, persisted to
+      // Rail resize handle, drag to set --deck-rail-w, persisted to
       // localStorage so the width survives reloads.
       const resize = document.createElement('div');
       resize.className = 'rail-resize export-hidden';
@@ -923,7 +923,7 @@
         resize.addEventListener('pointercancel', up);
       });
 
-      // Delete-confirm dialog — mirrors the SPA's ConfirmDialog layout.
+      // Delete-confirm dialog, mirrors the SPA's ConfirmDialog layout.
       const confirm = document.createElement('div');
       confirm.className = 'confirm-backdrop export-hidden';
       confirm.setAttribute('data-omelette-chrome', '');
@@ -987,7 +987,7 @@
       }
     }
 
-    /** @page must live in the document stylesheet — it's a no-op inside
+    /** @page must live in the document stylesheet, it's a no-op inside
      *  shadow DOM. Inject/update a single <head> style tag so the print
      *  sheet matches the design size and Save-as-PDF yields one slide per
      *  page with no margins. */
@@ -1044,7 +1044,7 @@
     }
 
     /** Tag the last non-skipped slide so print CSS can drop its
-     *  break-after (see the @media print comment above — :last-child
+     *  break-after (see the @media print comment above, :last-child
      *  alone matches a hidden skipped slide). */
     _markLastVisible() {
       let last = null;
@@ -1092,7 +1092,7 @@
       });
       if (this._countEl) this._countEl.textContent = String(curr + 1);
       // Follow-scroll on every navigation (init deep-link, keyboard, click,
-      // tap, external goTo) — the only time we *don't* want the rail to
+      // tap, external goTo), the only time we *don't* want the rail to
       // track current is after a rail-internal mutation, where _renderRail
       // has already restored the user's scroll position and yanking back to
       // current would undo it.
@@ -1128,7 +1128,7 @@
 
     _flashOverlay() {
       // Host posts __omelette_presenting while in fullscreen/tab presentation
-      // mode — suppress the nav footer entirely (both hover and slide-change
+      // mode, suppress the nav footer entirely (both hover and slide-change
       // flash) so the audience sees clean slides.
       if (!this._overlay || this._presenting) return;
       this._overlay.setAttribute('data-visible', '');
@@ -1153,7 +1153,7 @@
       if (!this._canvas) return;
       const stage = this._canvas.parentElement;
       // PPTX export sets noscale so the DOM capture sees authored-size
-      // geometry — the scaled canvas is in shadow DOM, so the exporter's
+      // geometry, the scaled canvas is in shadow DOM, so the exporter's
       // resetTransformSelector can't reach .canvas.style.transform directly.
       if (this.hasAttribute('noscale')) {
         this._canvas.style.transform = 'none';
@@ -1175,7 +1175,7 @@
 
     _onResize() {
       this._fit();
-      // Crossing the narrow-viewport breakpoint reveals the rail — rerun the
+      // Crossing the narrow-viewport breakpoint reveals the rail, rerun the
       // thumbnail scale the same way _setRailWidth does.
       if (!this._scaleRaf) {
         this._scaleRaf = requestAnimationFrame(() => {
@@ -1220,13 +1220,13 @@
       }
       // Per-viewer show/hide, driven by the TweaksPanel's auto-injected
       // "Thumbnail rail" toggle (or any author script). Independent of
-      // whether the Tweaks panel itself is open — closing the panel
+      // whether the Tweaks panel itself is open, closing the panel
       // doesn't change rail visibility. Persists alongside rail width.
       if (d && d.type === '__deck_rail_visible' && typeof d.on === 'boolean') {
         if (d.on === this._railVisible) return;
         this._railVisible = d.on;
         try { localStorage.setItem('deck-stage.railVisible', d.on ? '1' : '0'); } catch (e) {}
-        // Arm the transition, commit it, then flip state — otherwise the
+        // Arm the transition, commit it, then flip state, otherwise the
         // browser coalesces both writes and nothing animates on show.
         this.setAttribute('data-rail-anim', '');
         void (this._rail && this._rail.offsetHeight);
@@ -1242,7 +1242,7 @@
     _syncRailHidden() {
       if (!this._rail) return;
       // data-presenting is the hard hide (display:none) for flag-off,
-      // presentation mode, and the host's Preview segment — instant, no
+      // presentation mode, and the host's Preview segment, instant, no
       // transition. data-user-hidden is the soft hide (translateX(-100%))
       // for the viewer's rail toggle, so show/hide slides under
       // :host([data-rail-anim]).
@@ -1251,20 +1251,20 @@
       else this._rail.removeAttribute('data-presenting');
       if (!this._railVisible) this._rail.setAttribute('data-user-hidden', '');
       else this._rail.removeAttribute('data-user-hidden');
-      // translateX hide leaves thumbs (tabIndex=0) in the tab order —
+      // translateX hide leaves thumbs (tabIndex=0) in the tab order
       // inert keeps them unfocusable while the rail is off-screen.
       this._rail.inert = hard || !this._railVisible;
     }
 
     _onTap(e) {
-      // Touch-only — keyboard + the overlay toolbar cover nav on desktop.
+      // Touch-only, keyboard + the overlay toolbar cover nav on desktop.
       if (FINE_POINTER_MQ.matches) return;
       // Only taps that land on the stage (slide content or letterbox); the
       // overlay / rail / menus are siblings with their own click handlers.
       const path = e.composedPath();
       if (!this._stage || !path.includes(this._stage)) return;
       // Let interactive slide content keep the tap. composedPath (not
-      // e.target.closest) so we see through open shadow roots — a <button>
+      // e.target.closest) so we see through open shadow roots, a <button>
       // inside a slide-authored custom element retargets e.target to the
       // host but still appears in the composed path.
       if (e.defaultPrevented) return;
@@ -1379,7 +1379,7 @@
         else t = this._makeThumb(slide);
         next.push(t);
       });
-      // Orphans — slides removed since last render.
+      // Orphans, slides removed since last render.
       bySlide.forEach((t) => {
         if (this._railObserver) this._railObserver.unobserve(t.frame);
         t.thumb.remove();
@@ -1412,7 +1412,7 @@
         });
         if (moved.length) {
           // Commit the inverted positions before flipping the transition
-          // on — otherwise the browser coalesces both style writes and
+          // on, otherwise the browser coalesces both style writes and
           // nothing animates.
           void this._rail.offsetHeight;
           moved.forEach((t) => {
@@ -1448,7 +1448,7 @@
       thumb.addEventListener('click', () => this._go(idx(), 'click'));
       // ↑/↓ step through the rail when a thumb has focus. _go clamps at the
       // ends and _applyIndex→_syncRail scrolls the new current thumb into
-      // view; we move focus to it (preventScroll — _syncRail already
+      // view; we move focus to it (preventScroll, _syncRail already
       // scrolled) so a held key walks the whole list. stopPropagation keeps
       // this out of the window-level _onKey nav handler.
       thumb.addEventListener('keydown', (e) => {
@@ -1529,7 +1529,7 @@
       // Images: defer decode and let the browser pick the smallest
       // srcset candidate for the ~140px thumb. Same-URL clones reuse the
       // slide's decoded bitmap (URL-keyed cache), so the remaining cost
-      // is paint/composite — lazy+async keeps that off the main thread.
+      // is paint/composite, lazy+async keeps that off the main thread.
       clone.querySelectorAll('img').forEach((el) => {
         el.loading = 'lazy';
         el.decoding = 'async';
@@ -1560,7 +1560,7 @@
         while (el.firstChild) box.appendChild(el.firstChild);
         return box;
       };
-      // querySelectorAll('*') returns descendants only — a custom-element
+      // querySelectorAll('*') returns descendants only, a custom-element
       // slide root (<my-slide>…</my-slide>) would slip through and upgrade
       // on append. Swap the root first.
       if (clone.tagName.includes('-')) clone = neuter(clone);
@@ -1585,13 +1585,13 @@
       entry.host = host;
       entry.clone = clone;
       if (this._thumbScale) clone.style.transform = 'scale(' + this._thumbScale + ')';
-      // Once materialized the IO callback is a no-op early-return —
+      // Once materialized the IO callback is a no-op early-return
       // unobserve so scroll doesn't keep firing it.
       if (this._railObserver) this._railObserver.unobserve(entry.frame);
     }
 
     /** Re-clone a single thumb (live-update path). No-op if the thumb
-     *  hasn't been materialized yet — it'll pick up current content when
+     *  hasn't been materialized yet, it'll pick up current content when
      *  it scrolls into view. */
     _refreshThumb(slide) {
       const entry = (this._thumbs || []).find((t) => t.slide === slide);
@@ -1604,7 +1604,7 @@
     _scaleThumbs() {
       if (!this._thumbs || !this._thumbs.length) return;
       // Every frame is the same width; if it reads 0 the rail is
-      // display:none (noscale / no-rail / presenting / print) — leave the
+      // display:none (noscale / no-rail / presenting / print), leave the
       // clones as-is and re-run when the rail is revealed.
       const fw = this._thumbs[0].frame.offsetWidth;
       if (!fw) return;

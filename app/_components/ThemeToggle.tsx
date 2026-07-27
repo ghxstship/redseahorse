@@ -1,4 +1,4 @@
-/* Theme control — one button cycling system → light → dark.
+/* Theme control, one button cycling system → light → dark.
  *
  * All three glyphs ship in the markup; modernist.css shows only the one that
  * matches the current data-theme on <html>, so there is nothing to swap at

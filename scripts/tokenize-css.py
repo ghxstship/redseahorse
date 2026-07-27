@@ -79,7 +79,7 @@ def tokenize_style(css: str) -> str:
 
     css = re.sub(r"@media[^{]*\{", mask, css)
 
-    # Match `prop: value` up to ; or } or { — declarations only.
+    # Match `prop: value` up to ; or } or {, declarations only.
     decl = re.compile(r"(?P<prop>[a-zA-Z-]+)\s*:\s*(?P<val>[^;{}]+)")
 
     def handle(m):
@@ -124,7 +124,7 @@ def process(path: str) -> int:
 
     s2 = re.sub(r"(<style[^>]*>)(.*?)(</style>)", style_repl, s, flags=re.DOTALL)
 
-    # Inline style="..." attributes — same property-aware tokenization.
+    # Inline style="..." attributes, same property-aware tokenization.
     def attr_repl(m):
         inner = m.group(1)
         new = tokenize_style(inner)
@@ -151,7 +151,7 @@ if __name__ == "__main__":
     files = sorted(glob.glob("ui_kits/website/**/*.html", recursive=True))
     total = sum(process(f) for f in files)
     print(f"tokenized style blocks in {total} occurrences across {len(files)} files")
-    # Global component stylesheets (skip colors_and_type.css — it defines tokens).
+    # Global component stylesheets (skip colors_and_type.css, it defines tokens).
     for css in ("terminal.css", "polish.css", "components.css"):
         if process_css(css):
             print(f"tokenized {css}")

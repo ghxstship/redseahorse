@@ -1,5 +1,5 @@
 {
-  "$comment": "Ranked press inventory. Machine-written by scripts/press-scan.mjs, human-correctable. Anything with \"locked\": true survives a rescan untouched — that is how you keep a hand-written verdict. See README.md for the scoring model and the attribution tiers. Every url here returned a live response when it was added; `http` records what it returned.",
+  "$comment": "Ranked press inventory. Machine-written by scripts/press-scan.mjs, human-correctable. Anything with \"locked\": true survives a rescan untouched, that is how you keep a hand-written verdict. See README.md for the scoring model and the attribution tiers. Every url here returned a live response when it was added; `http` records what it returned.",
   "generated": "2026-07-27",
   "generatedBy": "manual seed + hand-verified follow-up sweep",
   "schemaVersion": 1,
@@ -9,7 +9,7 @@
     "entriesWithNoCoverageFound": 1,
     "itemsTotal": 59,
     "itemsAttributedToGhxstship": 0,
-    "note": "No third-party article names GHXSTSHIP. Searches for the brand return only our own site. Everything below is coverage OF THE WORK, not of us — useful as proof the projects are real and notable, not as a citation that we delivered them. Read the attribution field before quoting anything."
+    "note": "No third-party article names GHXSTSHIP. Searches for the brand return only our own site. Everything below is coverage OF THE WORK, not of us, useful as proof the projects are real and notable, not as a citation that we delivered them. Read the attribution field before quoting anything."
   },
   "entries": {
     "polymarket-free-grocery-store": {
@@ -130,7 +130,7 @@
           "date": "2024-09",
           "http": 200,
           "score": 78,
-          "why": "WWD is the authority for this audience and it is a photo gallery — the strongest single asset in the whole inventory.",
+          "why": "WWD is the authority for this audience and it is a photo gallery, the strongest single asset in the whole inventory.",
           "headline": "Becky G Sparkles in Silver Sequins With Custom Look & More Arrivals for Patrón Cristalino Launch"
         },
         {
@@ -203,7 +203,7 @@
           "date": "2024",
           "http": 200,
           "score": 30,
-          "why": "About the Rainwater Project limited-edition Silver bottle, not the Cristalino launch night. Same partner, different moment — verify before using it as proof of this project.",
+          "why": "About the Rainwater Project limited-edition Silver bottle, not the Cristalino launch night. Same partner, different moment, verify before using it as proof of this project.",
           "headline": "Patrón Silver & Becky G Launch Limited-Edition Tequila"
         }
       ]
@@ -280,7 +280,7 @@
       "title": "Heineken Turn 4 Nightclub",
       "coverageStrength": "trade",
       "sentimentOverall": "positive",
-      "note": "The trade coverage is the valuable part here — BizBash is read by exactly the people who hire this work.",
+      "note": "The trade coverage is the valuable part here. BizBash is read by exactly the people who hire this work.",
       "items": [
         {
           "url": "https://www.bizbash.com/sporting-events/40-adrenaline-filled-event-moments-from-2024-s-formula-1-las-vegas-grand-prix",
@@ -303,7 +303,7 @@
           "date": "2024-11",
           "http": 200,
           "score": 49,
-          "why": "Establishes the weekend's profile. Does not name the Turn 4 club — context, not proof.",
+          "why": "Establishes the weekend's profile. Does not name the Turn 4 club, context, not proof.",
           "headline": "F1 Las Vegas Grand Prix 2024: Best Ticket Deals, Parties, Events"
         },
         {
@@ -325,7 +325,7 @@
       "title": "Red Bull Unforeseen Motel",
       "coverageStrength": "niche",
       "sentimentOverall": "positive",
-      "note": "We worked the 2024 edition. The activation returned in 2025 and that is the edition EDM Identity reviewed, so that feature is marked adjacent and excluded from the case study — citing it there would credit us with a year we were not on.",
+      "note": "We worked the 2024 edition. The activation returned in 2025 and that is the edition EDM Identity reviewed, so that feature is marked adjacent and excluded from the case study, citing it there would credit us with a year we were not on.",
       "items": [
         {
           "url": "https://edmidentity.com/2025/10/31/red-bull-unforeseen-iii-points-festival-miami/",
@@ -337,7 +337,7 @@
           "http": 403,
           "httpNote": "bot-blocked to automated clients; loads in a browser",
           "score": 57,
-          "why": "Reviews the 2025 edition, not 2024 — it says the stage 'surfaced' last year and is 'returning for this edition'. The Motel ran both years; we worked 2024. Kept for the record and for the Full Moon Motel naming, never cited on the 2024 case study.",
+          "why": "Reviews the 2025 edition, not 2024, it says the stage 'surfaced' last year and is 'returning for this edition'. The Motel ran both years; we worked 2024. Kept for the record and for the Full Moon Motel naming, never cited on the 2024 case study.",
           "headline": "Red Bull Unforeseen Put Miami's Vibrant Dance Music Culture On Display At III Points Festival",
           "usable": false,
           "locked": true
@@ -398,7 +398,7 @@
       "title": "Factory Town",
       "coverageStrength": "photo-archive-plus-reference",
       "sentimentOverall": "positive",
-      "note": "Plenty exists about the venue; none of it about who runs its site operations. But World Red Eye has shot Factory Town for years and keeps a standing archive of it, which covers exactly our 2023-25 window — that is the real asset here, not the reference pages.",
+      "note": "Plenty exists about the venue; none of it about who runs its site operations. But World Red Eye has shot Factory Town for years and keeps a standing archive of it, which covers exactly our 2023-25 window, that is the real asset here, not the reference pages.",
       "items": [
         {
           "url": "https://worldredeye.com/factory-town/",
@@ -409,7 +409,7 @@
           "date": null,
           "http": 200,
           "score": 60,
-          "why": "the standing Factory Town archive — every gallery they have shot there, and it keeps growing on its own",
+          "why": "the standing Factory Town archive, every gallery they have shot there, and it keeps growing on its own",
           "headline": "Factory Town: the World Red Eye archive"
         },
         {
@@ -493,7 +493,7 @@
           "date": "2023-03",
           "http": 200,
           "score": 42,
-          "why": "Black Coffee at Factory Town, 2023 — same artist, earlier venue",
+          "why": "Black Coffee at Factory Town, 2023, same artist, earlier venue",
           "headline": "Black Coffee at Factory Town"
         },
         {
@@ -561,7 +561,7 @@
       "title": "L-Acoustics DJ",
       "coverageStrength": "trade",
       "sentimentOverall": "positive",
-      "note": "Was 'none-found' on the first sweep because the queries said 'sound system install'. The trades cover it as L-Acoustics DJ, spatial audio and the S3QU3NC3 stage, and there is a lot of it. Best-covered entry for the Technology vertical, and the closest the inventory gets to trade-press proof — but no piece names an integrator, only L-Acoustics and III Points.",
+      "note": "Was 'none-found' on the first sweep because the queries said 'sound system install'. The trades cover it as L-Acoustics DJ, spatial audio and the S3QU3NC3 stage, and there is a lot of it. Best-covered entry for the Technology vertical, and the closest the inventory gets to trade-press proof, but no piece names an integrator, only L-Acoustics and III Points.",
       "items": [
         {
           "url": "https://fohonline.com/featured/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points-festival/",
@@ -608,7 +608,7 @@
           "date": "2025-10",
           "http": 200,
           "score": 62,
-          "why": "The manufacturer's own case study on the exact deployment: III Points 2025, Oct 17-18, Mana Wynwood, L-Acoustics DJ on S3QU3NC3. Read in full — GHXSTSHIP is not named, and no integrator is credited at all.",
+          "why": "The manufacturer's own case study on the exact deployment: III Points 2025, Oct 17-18, Mana Wynwood, L-Acoustics DJ on S3QU3NC3. Read in full. GHXSTSHIP is not named, and no integrator is credited at all.",
           "verifiedBy": "rendered in-browser 2026-07-27; page is JS-built and returns only nav chrome to a plain fetch",
           "headline": "L-Acoustics DJ: Bringing Real-Time Spatial Audio to Miami's III Points Festival Sound System"
         },
@@ -646,7 +646,7 @@
           "date": "2026",
           "http": 200,
           "score": 48,
-          "why": "Institute for Theatre Technology carried it — useful when the audience is institutional rather than commercial.",
+          "why": "Institute for Theatre Technology carried it, useful when the audience is institutional rather than commercial.",
           "headline": "L-Acoustics DJ Makes Its US Festival Debut at Miami's III Points"
         },
         {
@@ -677,7 +677,7 @@
       "title": "Black Coffee at the Race Track",
       "coverageStrength": "regional-plus-trade",
       "sentimentOverall": "positive",
-      "note": "Was 'none-found' because the queries said Club Space. The event was at HIALEAH PARK RACETRACK on 28 March 2026, presented by Club Space, with Black Coffee, Carlita and Kaz James — first dance-music event ever held at the 1922 track. The site's card currently names Club Space as the venue, which is wrong; see the flag on the work page.",
+      "note": "Was 'none-found' because the queries said Club Space. The event was at HIALEAH PARK RACETRACK on 28 March 2026, presented by Club Space, with Black Coffee, Carlita and Kaz James, first dance-music event ever held at the 1922 track. The site's card currently names Club Space as the venue, which is wrong; see the flag on the work page.",
       "items": [
         {
           "url": "https://www.bizbash.com/event-production-planning/miami-music-week-2026-inside-wmc-ultra-edm-marathons-and-standout-activations",
@@ -688,7 +688,7 @@
           "date": "2026",
           "http": 200,
           "score": 76,
-          "why": "Event-production trade covering Miami Music Week 2026 activations. Same outlet that carried Heineken Turn 4 — the pattern worth leaning into.",
+          "why": "Event-production trade covering Miami Music Week 2026 activations. Same outlet that carried Heineken Turn 4, the pattern worth leaning into.",
           "headline": "Inside Miami Music Week 2026"
         },
         {
@@ -700,7 +700,7 @@
           "date": "2026-03",
           "http": 200,
           "score": 62,
-          "why": "~30-photo gallery of the night. Miami's society and nightlife photo agency — for this kind of work their galleries are the most reusable asset in the inventory, not just a citation.",
+          "why": "~30-photo gallery of the night. Miami's society and nightlife photo agency, for this kind of work their galleries are the most reusable asset in the inventory, not just a citation.",
           "quote": "The historic Hialeah Park racetrack came to life last night Black Coffee, Carlita, and Kaz James, presented by Club Space.",
           "headline": "Miami Music Week 2026: Black Coffee & Carlita at the Racetrack"
         },
@@ -737,7 +737,7 @@
           "date": "2026-04",
           "http": 200,
           "score": 52,
-          "why": "MMW 2026 recap covering this AND Factory Town — one link, two entries.",
+          "why": "MMW 2026 recap covering this AND Factory Town, one link, two entries.",
           "headline": "Miami Music Week 2026 Recap: Factory Town, WMC, Club Space + More"
         },
         {
@@ -749,7 +749,7 @@
           "date": "2026-03",
           "http": 200,
           "score": 50,
-          "why": "'Brings Open Air Show to Historic Hialeah Racetrack' — good headline language to borrow.",
+          "why": "'Brings Open Air Show to Historic Hialeah Racetrack', good headline language to borrow.",
           "headline": "Black Coffee Brings Open Air Show to Historic Hialeah Racetrack for MMW"
         },
         {
@@ -792,7 +792,7 @@
       "title": "FIFA World Cup Brazil Base Camp",
       "coverageStrength": "none-found",
       "sentimentOverall": null,
-      "note": "Nothing found tying a New Jersey Brazil base camp to a named hospitality or operations partner. High-visibility subject — worth a standing alert rather than a monthly sweep.",
+      "note": "Nothing found tying a New Jersey Brazil base camp to a named hospitality or operations partner. High-visibility subject, worth a standing alert rather than a monthly sweep.",
       "items": []
     }
   }

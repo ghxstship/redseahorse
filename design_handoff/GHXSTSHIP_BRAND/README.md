@@ -1,19 +1,19 @@
-# Handoff 1 — GHXSTSHIP Brand & Marketing Site
+# Handoff 1: GHXSTSHIP Brand & Marketing Site
 
 **Build target:** the public marketing website + brand collateral. Cosmic pop-art system.
-These HTML files are **high-fidelity design references** — recreate them in the target stack
+These HTML files are **high-fidelity design references**, recreate them in the target stack
 (Next.js recommended for SEO), porting tokens to its styling layer. Do not ship raw HTML.
 
 ## Stack recommendation
 Next.js (App Router) + a CSS layer that mirrors the tokens (CSS vars or Tailwind theme). SSR/SSG
-is important here — this build lives or dies on SEO/GEO, so server-render every page and keep the
+is important here, this build lives or dies on SEO/GEO, so server-render every page and keep the
 JSON-LD per route.
 
 ## Read in order
-1. `../../tokens.json` — colors, type scale, spacing, radii, shadows, **locked rules**.
-2. `../../BRAND_ARCHITECTURE.md` — 3 verticals, the spaceport metaphor, the **Surface Register**.
-3. `../../README.md` — voice, visual foundations, content rules.
-4. `../../SEO_GEO.md` — the playbook + per-vertical page template (preserve all schema patterns).
+1. `../../tokens.json`, colors, type scale, spacing, radii, shadows, **locked rules**.
+2. `../../BRAND_ARCHITECTURE.md`, 3 verticals, the spaceport metaphor, the **Surface Register**.
+3. `../../README.md`, voice, visual foundations, content rules.
+4. `../../SEO_GEO.md`, the playbook + per-vertical page template (preserve all schema patterns).
 5. `../../ICONOGRAPHY.md`, `../../PHOTOGRAPHY.md`.
 
 ## Stylesheets to port

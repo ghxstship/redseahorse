@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .cgrid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
   @media (max-width: 960px) { .cgrid { grid-template-columns: 1fr; } }
   .contact-form .field { margin-bottom: 16px; }

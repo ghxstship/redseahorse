@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .legal { max-width: 72ch; }
   .legal h2 { font-size: 1.467rem; margin: clamp(32px, 4vw, 44px) 0 10px; }
   .legal p, .legal li { line-height: 1.7; color: color-mix(in srgb, var(--color-text) 82%, transparent); }

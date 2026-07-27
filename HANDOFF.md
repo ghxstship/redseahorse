@@ -1,11 +1,11 @@
-# HANDOFF — GHXSTSHIP → Claude Code
+# HANDOFF | GHXSTSHIP → Claude Code
 
 Source of truth for engineering. Read this + `tokens.json` + `BRAND_ARCHITECTURE.md` first.
-**Preview the whole kit:** open `index.html` (root) — the demo hub links every asset.
+**Preview the whole kit:** open `index.html` (root), the demo hub links every asset.
 
 ## Tokens
-- `tokens.json` — machine-readable colors, type, spacing, radii, shadows, **product colors**, semantic, and rules.
-- `colors_and_type.css` / `components.css` / `terminal.css` — the live CSS implementations to port.
+- `tokens.json`, machine-readable colors, type, spacing, radii, shadows, **product colors**, semantic, and rules.
+- `colors_and_type.css` / `components.css` / `terminal.css`, the live CSS implementations to port.
 
 ## Component → file map (reference implementations)
 | Need | File |
@@ -27,7 +27,7 @@ Source of truth for engineering. Read this + `tokens.json` + `BRAND_ARCHITECTURE
 Logo lock · spaced wordmark + nowrap · RRR Project IDs · Surface Register (metaphor vs. plain) ·
 no parentheses · no emoji · product colors (ATLVS pink / COMPVSS yellow / GVTEWAY cyan). Details in `tokens.json` + `BRAND_ARCHITECTURE.md`.
 
-## SEO/GEO (already implemented on the site — keep the pattern)
+## SEO/GEO (already implemented on the site, keep the pattern)
 Per-page JSON-LD: Organization (+audience), Service ×6, HowTo (8-phase lifecycle), FAQPage, BreadcrumbList.
 Per-vertical page template + keyword table in `SEO_GEO.md`. Answer-first copy.
 

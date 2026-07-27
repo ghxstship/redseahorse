@@ -65,7 +65,7 @@
     var seen = {};
     form.querySelectorAll("input, select, textarea").forEach(function (el) {
       if (el.name) return;
-      // Prefer the label text — the kit uses short ids like "n", "co", "e".
+      // Prefer the label text, the kit uses short ids like "n", "co", "e".
       var base = slug(labelText(el) || el.id || el.type || "field") || "field";
       var n = base;
       var i = 2;
@@ -76,7 +76,7 @@
   }
 
   // Attachment limits. Raw bytes; base64 inflates ~33%, and the serverless
-  // function's request body is capped at 4.5 MB — 3 MB raw stays safely under.
+  // function's request body is capped at 4.5 MB, 3 MB raw stays safely under.
   var MAX_FILE_BYTES = 3 * 1024 * 1024;
   var FILE_TYPES = /\.(pdf|doc|docx)$/i;
 
@@ -181,7 +181,7 @@
   }
 
   function buildMailto(form, data) {
-    var subject = "Project Inquiry — " + (data.name || data.email || "GHXSTSHIP site");
+    var subject = "Project Inquiry, " + (data.name || data.email || "GHXSTSHIP site");
     var lines = Object.keys(data).map(function (k) {
       return k.replace(/-/g, " ") + ": " + data[k];
     });
@@ -215,7 +215,7 @@
       });
     }
 
-    // Clear stale custom validity as soon as a field changes — otherwise the
+    // Clear stale custom validity as soon as a field changes, otherwise the
     // browser blocks requestSubmit() on the old error and the submit handler
     // (which re-validates) can never run again.
     function clearValidity(e) {
@@ -245,7 +245,7 @@
         .then(function (c) {
           var data = c.data;
           if (!endpoint) {
-            // No endpoint configured — open the user's mail client with the brief.
+            // No endpoint configured, open the user's mail client with the brief.
             window.location.href = buildMailto(form, data);
             done(true, "Opening your mail client…");
             return;
@@ -264,7 +264,7 @@
             .then(function (res) {
               if (res.ok) { done(true, "Sent. We'll be in touch."); return; }
               // 404 means there is no function behind this origin (e.g. a static
-              // mirror) — that is the case the mailto fallback exists for.
+              // mirror), that is the case the mailto fallback exists for.
               if (res.status === 404) {
                 done(false, "Opening your mail client…");
                 window.location.href = buildMailto(form, data);
@@ -272,7 +272,7 @@
               }
               // Our own API answered with an error. Surface it instead of
               // silently bouncing the visitor into a mail client they may not
-              // have — a swallowed 4xx/5xx is a lost lead.
+              // have, a swallowed 4xx/5xx is a lost lead.
               return res.json().catch(function () { return {}; }).then(function (b) {
                 if (res.status >= 400 && res.status < 500 && b && b.error) {
                   done(false, b.error);

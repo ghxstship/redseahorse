@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .svc-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .svc-fig img { width: 100%; height: 100%; object-fit: cover; }
   .role-tag { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 10px 0 0; }

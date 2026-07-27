@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .roles { margin-top: 28px; border-top: 2px solid var(--color-divider); }
   .roles a.row-line { text-decoration: none; color: inherit; }
   .roles a.row-line:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }

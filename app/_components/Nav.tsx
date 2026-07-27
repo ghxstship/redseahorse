@@ -1,6 +1,6 @@
 "use client";
 
-/* Shared site navigation — Modernist chrome (greyscale + GHXSTSHIP Green).
+/* Shared site navigation. Modernist chrome (greyscale + GHXSTSHIP Green).
  * Rendered once in the root layout so it persists across client-side
  * navigation. React owns the drawer state; usePathname closes it on route
  * change. Dropdowns are hover/focus on desktop, flattened sub-links in the

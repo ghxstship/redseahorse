@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .model-card { border: 1px solid var(--color-divider); background: var(--color-bg); padding: 28px 24px; display: flex; flex-direction: column; }
   .model-card .bar { height: 3px; width: 44px; background: var(--color-accent); margin-bottom: 16px; }
   .model-card h2 { font-size: 1.6rem; line-height: 1.02; margin: 0 0 6px; }

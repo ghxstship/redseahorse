@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .lines { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
   .prod-grid { margin-top: clamp(28px, 4vw, 44px); }
   .prod { padding: 0; overflow: hidden; }

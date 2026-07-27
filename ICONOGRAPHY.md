@@ -1,8 +1,8 @@
-# ICONOGRAPHY — GHXSTSHIP
+# ICONOGRAPHY | GHXSTSHIP
 
 Two registers, used deliberately.
 
-## 1. System icons — Phosphor Icons (bold weight)
+## 1. System icons. Phosphor Icons (bold weight)
 The thick, even strokes of **Phosphor "bold"** read as comic-panel ink and sit naturally next to the
 display type. Use **fill** weight only inside solid badges. Load from CDN:
 
@@ -17,7 +17,7 @@ display type. Use **fill** weight only inside solid badges. Load from CDN:
 **Rules**
 - Default: `ph-bold`, color `--ink` on light / `--bone` on dark, size 20–28px in UI, larger for feature glyphs.
 - **Badge treatment:** drop an icon in a circle or square with a thick ink border + hard offset shadow
-  and a brass/nebula fill — the icon becomes a "sticker." This is the signature GHXSTSHIP icon look.
+  and a brass/nebula fill, the icon becomes a "sticker." This is the signature GHXSTSHIP icon look.
 - One accent color per icon cluster. Don't rainbow.
 - Stroke matching: never mix Phosphor with thin-line sets (Lucide/Feather). Bold only.
 
@@ -26,7 +26,7 @@ display type. Use **fill** weight only inside solid badges. Load from CDN:
 `ph-ticket` `ph-calendar-blank` `ph-users-three` `ph-wrench` `ph-broadcast` `ph-globe-hemisphere-west`
 `ph-shooting-star` `ph-flag-banner` `ph-binoculars` `ph-stack` `ph-waveform` `ph-sparkle`.
 
-## 2. Brand glyph — the pixel ghost-ship skull
+## 2. Brand glyph, the pixel ghost-ship skull
 The 8-bit skull is the hero mark, **not** a UI icon. Use it for loaders, empty states, favicons,
 watermark stamps, section punctuation, and the logo lockup.
 
@@ -41,5 +41,5 @@ watermark stamps, section punctuation, and the logo lockup.
   `◆` (coordinate stamp bullet), `✦ / ★` (rating / lead marker), `↗` (outbound / "go"), `//` (manifest separator).
 
 ## Substitution note
-Phosphor is an open-license CDN set chosen to match the aesthetic — flag if you have a licensed
+Phosphor is an open-license CDN set chosen to match the aesthetic, flag if you have a licensed
 brand icon library and I'll swap it in.

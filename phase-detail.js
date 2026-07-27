@@ -1,4 +1,4 @@
-/* GHXSTSHIP — interactive 8-Phase Course enhancer.
+/* GHXSTSHIP, interactive 8-Phase Course enhancer.
    Auto-upgrades any phase visualization on the page (.smap, .gx-smap, .seven):
    each phase becomes hover/click/keyboard interactive and drives a detail panel.
    Self-contained: injects its own tokenized CSS. Safe to include on any kit page. */

@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .art-head { padding-block: clamp(36px, 5vw, 64px) 0; }
   .art-head h1 { max-width: 20ch; }
   .byline { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 18px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); }

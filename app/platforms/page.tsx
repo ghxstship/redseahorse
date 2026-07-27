@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .plat-sec { padding-block: clamp(40px, 6vw, 80px); }
   .plat-name { font-size: clamp(34px, 4.6vw, 56px); line-height: 0.98; letter-spacing: -0.02em; margin-bottom: 12px; }
   .plat-aud { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }

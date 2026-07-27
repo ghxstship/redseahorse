@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .hero { padding-block: clamp(48px, 8vw, 110px) clamp(40px, 6vw, 80px); }
   .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }

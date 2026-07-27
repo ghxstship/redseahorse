@@ -283,7 +283,7 @@ def js_string_literal(s: str) -> str:
 
 
 def escape_jsx_text(s: str) -> str:
-    """JSX text node — only `{` and `}` are dangerous in text. Replace with HTML entities."""
+    """JSX text node, only `{` and `}` are dangerous in text. Replace with HTML entities."""
     # Preserve HTML entity references; just escape raw braces.
     return s.replace("{", "&#123;").replace("}", "&#125;")
 
@@ -383,7 +383,7 @@ def emit_attrs(tag: str, attrs: list[tuple[str, str | None]], *, internal_link: 
         # Drop inline event handlers; they don't work via React JSX without rewrites.
         if name.startswith("on"):
             continue
-        # Drop stale stylesheet links — the kit CSS is loaded in app/layout.tsx.
+        # Drop stale stylesheet links, the kit CSS is loaded in app/layout.tsx.
         if tag == "link" and name == "href" and raw_value and (
             raw_value.endswith(("colors_and_type.css", "components.css", "terminal.css", "polish.css"))
         ):
@@ -489,7 +489,7 @@ def emit_node(node: Node, ctx: EmitContext, depth: int = 0) -> str:
             ctx.needs_script = True
         return ""
 
-    # <style> in head/body — preserve content via dangerouslySetInnerHTML.
+    # <style> in head/body, preserve content via dangerouslySetInnerHTML.
     if tag == "style":
         css = "".join(c.text for c in node.children if c.kind == "text")
         return (
@@ -638,7 +638,7 @@ def emit_page(src_rel: Path) -> None:
             continue
         # Drop everything else (meta, link, title, doctype, whitespace).
 
-    # Body: full JSX. Drop the per-page nav/footer — the root layout renders a
+    # Body: full JSX. Drop the per-page nav/footer, the root layout renders a
     # single shared <Nav>/<Footer> (persists across navigation, no flicker).
     body_tree = parse(body)
     body_jsx_parts: list[str] = [emit_node(child, ctx) for child in body_tree.children if not _is_site_chrome(child)]

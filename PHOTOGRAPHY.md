@@ -1,12 +1,12 @@
-# PHOTOGRAPHY & IMAGE TREATMENT — GHXSTSHIP
+# PHOTOGRAPHY & IMAGE TREATMENT | GHXSTSHIP
 
-Photography is the proof. The Museum is built on real production imagery — festival mainstages,
+Photography is the proof. The Museum is built on real production imagery, festival mainstages,
 activations mid-build, crews on headset, packed crowds at golden hour. Treat it boldly so it sits
 inside the pop art world instead of fighting it.
 
 ## Subject & art direction
 - **Real productions only.** No generic stock, no clip art, no AI-obvious composites. The work is the
-  flex — show the scale, the rigging, the crowd, the crew.
+  flex, show the scale, the rigging, the crowd, the crew.
 - **Energy + scale.** Wide shots that show ambition (50,000-cap stages); tight shots that show craft
   (hands on a console, a scenic detail). Motion blur and crowd energy are welcome.
 - **People at work.** The crew is a character. Show competence under pressure.
@@ -47,7 +47,7 @@ inside the pop art world instead of fighting it.
 ```
 
 ## Don'ts
-- Don't drop full-color photos onto a busy halftone background — pick one texture source.
+- Don't drop full-color photos onto a busy halftone background, pick one texture source.
 - Don't round photo corners heavily (max `--r-2`).
 - Don't desaturate into greige. GHXSTSHIP imagery is warm and loud.
 

@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .nf { min-height: 58vh; display: grid; place-items: center; text-align: center; padding-block: clamp(56px, 9vw, 120px); }
   .nf .code { font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 16px; }
   .nf h1 { margin-bottom: 18px; }

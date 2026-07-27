@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout only, every component comes from modernist.css */
+  /* page-specific layout only; every component comes from modernist.css */
   .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
   .hero-fig { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--color-divider); margin-top: clamp(24px, 4vw, 40px); }
   .hero-fig img { width: 100%; height: 100%; object-fit: cover; }

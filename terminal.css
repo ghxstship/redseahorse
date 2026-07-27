@@ -1,6 +1,6 @@
 /* ============================================================================
-   GHXSTSHIP DESIGN SYSTEM — terminal.css
-   "The Spaceport" — the transit terminal where our solar galleons
+   GHXSTSHIP DESIGN SYSTEM, terminal.css
+   "The Spaceport", the transit terminal where our solar galleons
    (flying pirate ships, Treasure Planet–style) dock. Transit signage as the brand's STRUCTURAL
    layer. Requires colors_and_type.css. Pop art (components.css) stays the EXPRESSIVE layer.
    Vessel = solar galleon (never a plane). Verbs: voyage / set sail / all aboard / anchors aweigh /
@@ -46,7 +46,7 @@
 .gx-status--scheduled{background:rgba(110,225,118,.14);color:var(--plasma);border:var(--stroke-1) solid rgba(110,225,118,.4)}
 @keyframes gx-blink{50%{opacity:.45}}
 
-/* ---- FLIGHT PATH — the 8-Phase Production Lifecycle tracker --------------- */
+/* ---- FLIGHT PATH, the 8-Phase Production Lifecycle tracker --------------- */
 /* Horizontal route line with 8 nodes. Add .is-done / .is-active to a node.   */
 .gx-flightpath{display:flex;align-items:flex-start;gap:0;position:relative}
 .gx-leg{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:var(--space-32)}

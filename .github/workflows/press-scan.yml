@@ -45,7 +45,7 @@ jobs:
           KEY: ${{ secrets.PRESS_SEARCH_KEY }}
         run: |
           if [ -z "$KEY" ]; then
-            echo "PRESS_SEARCH_KEY is not set — skipping." >> "$GITHUB_STEP_SUMMARY"
+            echo "PRESS_SEARCH_KEY is not set, skipping." >> "$GITHUB_STEP_SUMMARY"
             echo "Add it under Settings → Secrets and variables → Actions." >> "$GITHUB_STEP_SUMMARY"
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else

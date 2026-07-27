@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .feat { display: block; border: 1px solid var(--color-divider); border-left: 4px solid var(--color-accent); background: var(--color-bg); padding: clamp(24px, 4vw, 40px); text-decoration: none; color: inherit; margin-top: 28px; }
   .feat:hover { border-color: var(--color-text); border-left-color: var(--color-accent); color: inherit; }
   .feat .cat { font-size: 0.733rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 8px; }

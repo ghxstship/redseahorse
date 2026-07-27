@@ -1,11 +1,11 @@
-/* The GHXSTSHIP flag, inline so it can take currentColor — white in the black
+/* The GHXSTSHIP flag, inline so it can take currentColor, white in the black
  * header, page ink in the footer, correct in either theme without a second
  * asset. viewBox 40 54 120 92 is skull-bone-mark.svg: the mark cropped to its
  * own ink, because the original 0 0 200 200 frame is ~47% empty padding and
  * made every nominal size render about half as large as it read.
  *
- * Sizing belongs to .brand-mark in modernist.css — 0.72em, the cap height of
- * Bebas Neue — so the flag always matches the letters beside it. */
+ * Sizing belongs to .brand-mark in modernist.css. 0.72em, the cap height of
+ * Bebas Neue, so the flag always matches the letters beside it. */
 
 export default function BrandMark() {
   return (

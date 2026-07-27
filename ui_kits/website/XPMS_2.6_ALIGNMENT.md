@@ -1,10 +1,10 @@
-# XPMS 2.6 Alignment + Industries Rename — Sweep Brief
+# XPMS 2.6 Alignment + Industries Rename: Sweep Brief
 
 Two sitewide corrections. Apply BOTH to every file you are assigned. The
 REBUILD_GUIDE.md conventions still apply; do not restructure pages beyond
 what these corrections require.
 
-## 1 · XPMS 2.6 — nine gated phases (supersedes every 8-phase reference)
+## 1 · XPMS 2.6, nine gated phases (supersedes every 8-phase reference)
 
 The canonical lifecycle is the **XPMS 2.6** standard (GHXSTSHIP's
 Experiential Production Management Standard, effective July 2026). NINE
@@ -25,9 +25,9 @@ gated phases, verb-consistent names, in this exact order:
 - **Amplify is new** (gate 8, before Close): content capture, media and
   press, broadcast and livestream delivery, social amplification,
   post-event campaigns.
-- **Strike lives inside Operate** — never a phase of its own.
+- **Strike lives inside Operate**, never a phase of its own.
 - Old names are retired in copy: "Discovery" → "Discover",
-  "Procurement" → "Procure". Never "eight phases" / "8-phase" — always
+  "Procurement" → "Procure". Never "eight phases" / "8-phase", always
   "nine phases" / "9-phase" / "the nine-phase XPMS lifecycle".
 - Phase strips (the `.phases` / `.phase` component): add the ninth stop
   `Amplify` between Operate and Close and rename per the table. Keep the
@@ -43,7 +43,7 @@ gated phases, verb-consistent names, in this exact order:
 
 ## 2 · Markets → Industries (label change only; slugs unchanged)
 
-"Market" implies a region — the section is about INDUSTRIES. URLs stay
+"Market" implies a region, the section is about INDUSTRIES. URLs stay
 `/destinations/...`; only the words change:
 
 - Kickers/headings/labels: "Markets" → "Industries", "All Markets" →
@@ -53,7 +53,7 @@ gated phases, verb-consistent names, in this exact order:
 - Body copy: "markets we serve", "across markets", "market" (meaning a
   vertical like festivals) → industry/industries. Do NOT change uses
   where "market" genuinely means commerce (e.g. "experiences marketplace",
-  "market rate") — read the sentence.
+  "market rate"), read the sentence.
 - Nav chrome copy in source pages: the header link labeled "Markets"
   becomes "Industries" (href unchanged: destinations/index.html). Footer
   column link "Markets" → "Industries" likewise.

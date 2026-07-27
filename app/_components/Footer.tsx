@@ -1,4 +1,4 @@
-/* Shared site footer — Modernist chrome (greyscale + GHXSTSHIP Green).
+/* Shared site footer. Modernist chrome (greyscale + GHXSTSHIP Green).
  * Rendered once in the root layout. Internal links use next/link; external
  * (atlvs.pro) and social links use plain anchors with inline Lucide-style
  * SVGs (no icon-font dependency). Styles live in modernist.css. */

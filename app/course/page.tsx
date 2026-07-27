@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .ph { border-top: 2px solid var(--color-divider); padding: clamp(24px, 4vw, 44px) 0; display: grid; grid-template-columns: 110px 1fr; gap: clamp(16px, 3vw, 48px); align-items: start; }
   .ph:last-of-type { border-bottom: 2px solid var(--color-divider); }
   .ph .num { font-family: var(--font-heading); font-weight: 800; font-size: clamp(34px, 4vw, 56px); line-height: 1; letter-spacing: -0.02em; color: var(--color-accent-700); }

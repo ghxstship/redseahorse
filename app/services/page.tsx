@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .who-card { border-left: 3px solid var(--color-accent); background: var(--color-bg); border-top: 1px solid var(--color-divider); border-right: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 22px; }
   .who-card h3 { font-size: 1.133rem; margin: 0 0 6px; }
   .who-card p { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }

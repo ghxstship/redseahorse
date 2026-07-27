@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .stats-in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 28px; }
   @media (max-width: 720px) { .stats-in { grid-template-columns: repeat(2, 1fr); } }
   .story-fig { aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--color-divider); }

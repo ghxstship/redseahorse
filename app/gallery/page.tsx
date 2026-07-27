@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .masonry { columns: 3; column-gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
   @media (max-width: 960px) { .masonry { columns: 2; } }
   @media (max-width: 480px) { .masonry { columns: 1; } }

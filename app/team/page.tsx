@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .tier {
     font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600;
     color: var(--color-accent-700); margin: clamp(28px, 4vw, 44px) 0 14px;

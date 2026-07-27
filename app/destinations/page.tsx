@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .mcard { border: 1px solid var(--color-divider); background: var(--color-bg); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
   .mcard .media { aspect-ratio: 4 / 3; overflow: hidden; }
   .mcard .media img { width: 100%; height: 100%; object-fit: cover; }

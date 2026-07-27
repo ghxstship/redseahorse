@@ -1,4 +1,4 @@
-# COMPETITIVE POSITIONING — how GHXSTSHIP exceeds the field
+# COMPETITIVE POSITIONING: how GHXSTSHIP exceeds the field
 
 Goal: out-perform experiential/brand-activation competitors (e.g., Corso Marketing Group / CMG, and
 the broader agency set) on **both content depth and SEO/GEO** in every vertical.
@@ -18,13 +18,13 @@ integrated campaigns, and culture marketing. They are **creative-led agencies**.
 2. **No named, ownable methodology.** Competitors describe process generically. → We own the
    **8-Phase Production Lifecycle** (Discovery→Strike), schema-encoded as `HowTo`. Nameable, citable, repeatable.
 3. **No proprietary technology.** Agencies buy/rent tools. → We **build** ATLVS (Atlas), COMPVSS
-   (Compass), GVTEWAY (Gateway). Almost unique in the category — lead with it everywhere.
+   (Compass), GVTEWAY (Gateway). Almost unique in the category, lead with it everywhere.
 4. **Operations is an afterthought.** Creative-led shops are thinner on logistics/crew/compliance. →
    **Operations is a full vertical** for us. Reliability + scale story.
 
-## The three hard differentiators (use on every page — "The Difference")
-- **End to end, one accountable crew.** We own all eight phases — not just creative. (vs. fragmented vendor chains.)
-- **We implement the technology.** ATLVS · COMPVSS · GVTEWAY power the work at scale — the Procore of experiential. (Few competitors build software.)
+## The three hard differentiators (use on every page, "The Difference")
+- **End to end, one accountable crew.** We own all eight phases, not just creative. (vs. fragmented vendor chains.)
+- **We implement the technology.** ATLVS · COMPVSS · GVTEWAY power the work at scale, the Procore of experiential. (Few competitors build software.)
 - **Operations as a discipline.** Logistics, crew, compliance, and analytics are a vertical, not a line item.
 Plus the mission edge: **we train the next generation** (the Crew / Crew Call).
 
@@ -41,14 +41,14 @@ then **out-depth** it:
   agency", "best festival production company", "vs traditional agency").
 - `Service` + `BreadcrumbList` + `FAQPage` JSON-LD.
 
-## SEO/GEO mandate (already ahead — keep extending)
+## SEO/GEO mandate (already ahead, keep extending)
 - One canonical entity definition everywhere (see BRAND_ARCHITECTURE.md).
 - Per-service pages at `/destinations/<slug>` with keyword-first titles.
 - Answer-first opening sentences (GEO extraction).
 - Comparison FAQ entries to capture "vs" and "best <service>" queries.
-- Plain, consistent facts (founded 2022, Miami HQ + NY/Chicago/LA). **No fabricated stats or reviews** —
+- Plain, consistent facts (founded 2022, Miami HQ + NY/Chicago/LA). **No fabricated stats or reviews**
   swap in real case studies, outcomes, and (when available) `Review`/`AggregateRating` schema.
 
-> Note: don't invent client logos, metrics, or testimonials to "beat" competitors — supply the real
+> Note: don't invent client logos, metrics, or testimonials to "beat" competitors, supply the real
 > proof and we'll wire it into copy + schema. Our structural + methodology + technology edge already
 > exceeds the typical competitor page today.

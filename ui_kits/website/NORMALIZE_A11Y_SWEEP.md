@@ -1,13 +1,13 @@
-# DS Normalization + WCAG 2.2 AA Sweep — Per-Page Spec
+# DS Normalization + WCAG 2.2 AA Sweep: Per-Page Spec
 
 Apply ALL sections to every assigned file in ui_kits/website/. The design
-system source of truth is /Users/julianclarkson/claude-code/redseahorse/modernist.css —
+system source of truth is /Users/julianclarkson/claude-code/redseahorse/modernist.css
 read it first; the reference page ui_kits/website/index.html is already
 normalized and shows the target shape.
 
 ## 1 · Normalization (dedupe against modernist.css)
 
-These components are now GLOBAL in modernist.css — delete any per-page
+These components are now GLOBAL in modernist.css, delete any per-page
 <style> rules that redefine them (identical or near-identical copies):
 `.svc-card` (+.bar/.role/.more), `.phases`/`.phase` (incl. its 720px media
 query), `.wcard` (+.media/.body/.meta), `.close-cta`, `.cta-row`,
@@ -31,11 +31,11 @@ with --color-text, and NOT in mask/gradient utility values).
 ## 2 · Accessibility (WCAG 2.2 AA)
 
 - Exactly one `<h1>`; heading levels never skip (h2 then h3 …). Fix by
-  re-leveling, not restyling — visual size comes from classes.
+  re-leveling, not restyling, visual size comes from classes.
 - Images: meaningful images keep descriptive alt; purely decorative images
   get `alt=""`. No alt text that starts "image of"/"photo of".
 - Tables: `<th>` gets `scope="col"` (or `scope="row"` for row headers).
-- All external links (http…) carry `target="_blank" rel="noopener"` —
+- All external links (http…) carry `target="_blank" rel="noopener"`
   add `rel` if missing; do NOT add target to internal links.
 - Small accent-colored text must use `var(--color-accent-700)`; base green
   `var(--color-accent)` only as fill or on the dark band. Fix violations.
@@ -43,7 +43,7 @@ with --color-text, and NOT in mask/gradient utility values).
   `required`. Do not rename ids/names (site-form.js contract).
 - No positive `tabindex`, no `autofocus`.
 - Any per-page animation must sit behind the global reduced-motion kill
-  (it does automatically via modernist.css) — but remove page-level
+  (it does automatically via modernist.css), but remove page-level
   `@media (prefers-reduced-motion)` blocks ONLY if redundant.
 - Language: `<html lang="en">` present (already standard).
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Press scanner — sweeps the web for coverage of every case study in
+ * Press scanner, sweeps the web for coverage of every case study in
  * data/press/entries.json and merges what it finds into
  * data/press/inventory.json, ranked.
  *
@@ -8,7 +8,7 @@
  *   node scripts/press-scan.mjs --entry=slug # scan one
  *   node scripts/press-scan.mjs --dry-run    # print, do not write
  *
- * Requires a search provider. There is no way to do this without one — a
+ * Requires a search provider. There is no way to do this without one, a
  * plain fetch of a search engine gets blocked, and scraping SERPs violates
  * their terms. Set both:
  *
@@ -19,7 +19,7 @@
  * 3 per entry, so a monthly full sweep of nine entries costs ~27.
  *
  * Sentiment is the one thing a keyword heuristic gets wrong in exactly the
- * cases that matter — a piece can be entirely negative without using a
+ * cases that matter, a piece can be entirely negative without using a
  * negative word about the product. So the heuristic only ever downgrades to
  * "review", never promotes to "positive". If ANTHROPIC_API_KEY is set, new
  * items get a real read instead.
@@ -40,7 +40,7 @@ const ONLY = (args.find((a) => a.startsWith("--entry=")) || "").split("=")[1];
 /* ── scoring ──────────────────────────────────────────────────────────────
  * 0-100. Deliberately weighted so that a nobody blog saying our name beats a
  * national outlet that does not: attribution is the whole point of the
- * inventory. Negative sentiment zeroes the score and sets usable:false — it
+ * inventory. Negative sentiment zeroes the score and sets usable:false, it
  * stays in the file so we are never surprised by it, and never cite it.
  */
 const TIER_SCORE = {
@@ -68,7 +68,7 @@ const SENTIMENT_SCORE = {
 };
 
 // Outlets we have already placed on the ladder. Anything unseen lands in
-// "unknown" and gets flagged for a human to tier — guessing authority from a
+// "unknown" and gets flagged for a human to tier, guessing authority from a
 // domain name is how a content farm ends up cited as a national.
 const OUTLET_TIERS = {
   "newsweek.com": ["Newsweek", "national"],
@@ -182,7 +182,7 @@ function provider() {
       "  PRESS_SEARCH_PROVIDER=brave|serper\n" +
       "  PRESS_SEARCH_KEY=...\n\n" +
       "Brave: https://brave.com/search/api/ (free tier 2,000 queries/month;\n" +
-      "this scan uses about 3 per entry). The scanner cannot run without one —\n" +
+      "this scan uses about 3 per entry). The scanner cannot run without one:\n" +
       "search engines block unkeyed automated queries, and scraping their\n" +
       "results pages is against their terms."
     );
@@ -190,7 +190,7 @@ function provider() {
   }
   if (name === "brave") return (q) => searchBrave(q, key);
   if (name === "serper") return (q) => searchSerper(q, key);
-  console.error(`Unknown PRESS_SEARCH_PROVIDER "${name}" — expected brave or serper.`);
+  console.error(`Unknown PRESS_SEARCH_PROVIDER "${name}", expected brave or serper.`);
   process.exit(2);
 }
 
@@ -255,8 +255,8 @@ for (const entry of entries) {
 
   for (const q of entry.queries) {
     let hits = [];
-    try { hits = await search(q); } catch (e) { console.log(`  ! ${q} — ${e.message}`); continue; }
-    console.log(`  ? ${q} — ${hits.length} results`);
+    try { hits = await search(q); } catch (e) { console.log(`  ! ${q}, ${e.message}`); continue; }
+    console.log(`  ? ${q}, ${hits.length} results`);
     for (const hit of hits) {
       seen++;
       const url = hit.url.replace(/\/$/, "");
@@ -279,7 +279,7 @@ for (const entry of entries) {
       if (item.sentiment === "negative" || item.sentiment === "mixed") item.usable = false;
       bucket.items.push(item);
       added++;
-      console.log(`    + [${item.score}] ${outlet} — ${hit.title?.slice(0, 64)}`);
+      console.log(`    + [${item.score}] ${outlet}, ${hit.title?.slice(0, 64)}`);
     }
   }
 
@@ -304,6 +304,6 @@ inv.summary = {
 };
 
 console.log(`\n${added} new of ${seen} results seen · ${inv.summary.itemsTotal} in inventory · ${inv.summary.itemsAttributedToGhxstship} name ${cfg.brand.name}`);
-if (DRY) { console.log("(dry run — nothing written)"); process.exit(0); }
+if (DRY) { console.log("(dry run, nothing written)"); process.exit(0); }
 await writeFile(INVENTORY, JSON.stringify(inv, null, 2) + "\n");
 console.log(`wrote ${INVENTORY.replace(ROOT + "/", "")}`);

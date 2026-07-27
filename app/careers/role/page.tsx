@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 14px; }
   .jd { display: grid; grid-template-columns: 1.6fr 0.8fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
   @media (max-width: 960px) { .jd { grid-template-columns: 1fr; } }

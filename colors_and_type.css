@@ -1,6 +1,6 @@
 /* ============================================================================
-   GHXSTSHIP DESIGN SYSTEM — colors_and_type.css
-   "Vintage Reef" — premium vintage-tropical system
+   GHXSTSHIP DESIGN SYSTEM, colors_and_type.css
+   "Vintage Reef", premium vintage-tropical system
    GC, Foreman & Procore of experiential project management · jade/pineapple/sapphire
    ----------------------------------------------------------------------------
    Single source of truth for color + type tokens. Import this in any artifact:
@@ -9,11 +9,11 @@
    files in fonts/ and swap the @import for @font-face (see README).
    ========================================================================== */
 
-/* MONUMENT type — Anton (display, ALL-CAPS), Hanken Grotesk (body/UI),
+/* MONUMENT type. Anton (display, ALL-CAPS), Hanken Grotesk (body/UI),
    Space Mono (eyebrows/IDs/coords), Jost (wordmark lockup only). */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Jost:wght@300;400;500&display=swap');
 
-/* Anton (display) ships a SINGLE 400 weight — it is already a black display
+/* Anton (display) ships a SINGLE 400 weight, it is already a black display
    face. Heading rules carry font-weight:700–900 (legacy from Big Shoulders),
    which makes the browser SYNTHESIZE faux-bold and smear Anton into a "melted"
    blob. Disable weight synthesis globally so Anton renders crisp at its real
@@ -25,54 +25,54 @@ html {
 
 :root {
   /* ---------------------------------------------------------------------
-     CORE PALETTE — GHXSTSHIP house green on a PURE-GRAYSCALE neutral ramp
+     CORE PALETTE, GHXSTSHIP house green on a PURE-GRAYSCALE neutral ramp
      (client-specified, no blue tint). The five swatches: Background #fcfcfc ·
      Foreground #000000 · Accent 1 #2a2a2a · Accent 2 #545454 · Accent 3 #7e7e7e.
      Dark orientation kept: #000 ground, #fcfcfc text, grays as surfaces /
      borders / muted text. Two intermediate steps (--ink #181818, fg-2 #b3b3b3)
      derived so the ramp stays usable and AA-tuned. House accent #2edb3a and the
-     product accents are unchanged — only the neutrals changed.
+     product accents are unchanged, only the neutrals changed.
      Token NAMES are retained so every page keeps working; only values changed.
      --------------------------------------------------------------------- */
-  --void:        #000000;  /* Foreground swatch — primary dark ground          */
-  --ink:         #181818;  /* derived — base dark surface (alt bands / footer) */
-  --ink-2:       #2A2A2A;  /* Accent 1 — raised surface / cards                */
-  --ink-3:       #545454;  /* Accent 2 — hairlines / borders on dark           */
+  --void:        #000000;  /* Foreground swatch, primary dark ground          */
+  --ink:         #181818;  /* derived, base dark surface (alt bands / footer) */
+  --ink-2:       #2A2A2A;  /* Accent 1, raised surface / cards                */
+  --ink-3:       #545454;  /* Accent 2, hairlines / borders on dark           */
 
-  --bone:        #FCFCFC;  /* Background swatch — light text on dark           */
-  --parchment:   #FCFCFC;  /* Background swatch — light surface                */
-  --parchment-2: #E6E6E6;  /* derived — dividers / edge on light               */
+  --bone:        #FCFCFC;  /* Background swatch, light text on dark           */
+  --parchment:   #FCFCFC;  /* Background swatch, light surface                */
+  --parchment-2: #E6E6E6;  /* derived, dividers / edge on light               */
 
-  /* SIGNALS — GHXSTSHIP house green roles (v2 brand.css ghxstship-*) */
-  --brass:       #2EDB3A;  /* house base — primary brand fill (bright)        */
-  --on-brass:    #001800;  /* v2 -on — dark ink that sits ON the green        */
-  --brass-deep:  #00CA22;  /* v2 -hover — one step darker, shadow/hover       */
-  --nebula:      #43E94B;  /* v2 -lift — bright dark-mode green highlight      */
-  --plasma:      #7DCE7B;  /* v2 -lift-text — AA green link/secondary on dark */
+  /* SIGNALS, GHXSTSHIP house green roles (v2 brand.css ghxstship-*) */
+  --brass:       #2EDB3A;  /* house base, primary brand fill (bright)        */
+  --on-brass:    #001800;  /* v2 -on, dark ink that sits ON the green        */
+  --brass-deep:  #00CA22;  /* v2 -hover, one step darker, shadow/hover       */
+  --nebula:      #43E94B;  /* v2 -lift, bright dark-mode green highlight      */
+  --plasma:      #7DCE7B;  /* v2 -lift-text. AA green link/secondary on dark */
   --flare:       #E5484D;  /* functional alert/danger (multi-hue signal)      */
   --aurora:      #00CA22;  /* deep green accent (v2 -hover)                    */
-  /* Product accents — each product owns its OWN accent (per ATLVS kit v2
+  /* Product accents, each product owns its OWN accent (per ATLVS kit v2
      brand.css). GHXSTSHIP green (--brass) is the HOUSE brand only; the
      products differentiate by hue here. base = bright fill · -deep = hover. */
-  --atlvs:       #E23414;  /* ATLVS — volcanic red    */ --atlvs-deep:   #C92C10;
-  --compvss:     #FFC400;  /* COMPVSS — signal yellow */ --compvss-deep: #EEB400;
-  --gvteway:     #2563EB;  /* GVTEWAY — blue          */ --gvteway-deep: #1F57D6;
-  --legend:      #ED6A1E;  /* LEG3ND — molten orange  */ --legend-deep:  #DB5A00;
+  --atlvs:       #E23414;  /* ATLVS, volcanic red    */ --atlvs-deep:   #C92C10;
+  --compvss:     #FFC400;  /* COMPVSS, signal yellow */ --compvss-deep: #EEB400;
+  --gvteway:     #2563EB;  /* GVTEWAY, blue          */ --gvteway-deep: #1F57D6;
+  --legend:      #ED6A1E;  /* LEG3ND, molten orange  */ --legend-deep:  #DB5A00;
 
-  /* GREEN-on-light variants (AA text-safe on light grounds — v2 -text) */
-  --jade-ink:    #1F8425;  /* v2 ghxstship -text — AA green on light grounds */
+  /* GREEN-on-light variants (AA text-safe on light grounds, v2 -text) */
+  --jade-ink:    #1F8425;  /* v2 ghxstship -text, AA green on light grounds */
   --pineapple-deep:#1F8425;/* green text/UI on light                         */
   --sapphire-ink:#1F8425;  /* green link/UI on light                         */
 
-  /* TEXT RAMPS — on dark / on light (v2 neutral ramp, AA-tuned) */
-  --fg-on-dark-1: #FCFCFC; /* Background swatch — primary text on dark         */
-  --fg-on-dark-2: #B3B3B3; /* derived — secondary text on dark (AA ~9:1)       */
-  --fg-on-dark-3: #7E7E7E; /* Accent 3 — tertiary / muted on dark             */
-  --fg-on-light-1:#000000; /* Foreground swatch — primary text on light        */
-  --fg-on-light-2:#2A2A2A; /* Accent 1 — secondary text on light              */
-  --fg-on-light-3:#545454; /* Accent 2 — tertiary on light                    */
+  /* TEXT RAMPS, on dark / on light (v2 neutral ramp, AA-tuned) */
+  --fg-on-dark-1: #FCFCFC; /* Background swatch, primary text on dark         */
+  --fg-on-dark-2: #B3B3B3; /* derived, secondary text on dark (AA ~9:1)       */
+  --fg-on-dark-3: #7E7E7E; /* Accent 3, tertiary / muted on dark             */
+  --fg-on-light-1:#000000; /* Foreground swatch, primary text on light        */
+  --fg-on-light-2:#2A2A2A; /* Accent 1, secondary text on light              */
+  --fg-on-light-3:#545454; /* Accent 2, tertiary on light                    */
 
-  /* SEMANTIC — functional signals, intentionally multi-hue */
+  /* SEMANTIC, functional signals, intentionally multi-hue */
   --success:   #2FA968;
   --warning:   #C8841A;
   --danger:    #E5484D;
@@ -86,15 +86,15 @@ html {
   /* ---------------------------------------------------------------------
      TYPE FAMILIES
      --------------------------------------------------------------------- */
-  --font-display: "Anton", "Arial Narrow", "Hanken Grotesk", system-ui, sans-serif; /* display/hero/headlines — single black weight, ALL-CAPS */
+  --font-display: "Anton", "Arial Narrow", "Hanken Grotesk", system-ui, sans-serif; /* display/hero/headlines, single black weight, ALL-CAPS */
   --font-body:    "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; /* UI + body copy */
   --font-pixel:   "Space Mono", ui-monospace, monospace;               /* mono eyebrows / labels   */
   --font-mono:    "Space Mono", "SF Mono", ui-monospace, monospace;    /* coordinates, specs, data */
   --font-wordmark:"Jost", "Hanken Grotesk", system-ui, sans-serif;     /* wordmark lockup only      */
 
-  /* TYPE SCALE — modular, ratio 1.25 (major third) anchored at 16px body.
+  /* TYPE SCALE, modular, ratio 1.25 (major third) anchored at 16px body.
      Poster-led; display is condensed so it can run large. Override per artifact.
-     16 · 20 · 24 · 31 · 39 · 49 · 78 · 112 — one ratio = one consistent system. */
+     16 · 20 · 24 · 31 · 39 · 49 · 78 · 112, one ratio = one consistent system. */
   /* Fluid scale: clamp(mobile-min, linear ramp 360->1280px, desktop-max).
      At >=1280px every value equals the original 16·20·24·31·39·49·78·112
      scale exactly, so desktop is unchanged; below that each size ramps down
@@ -116,7 +116,7 @@ html {
   --tracking-body:    0.005em;
 
   /* ---------------------------------------------------------------------
-     SPACING — px-keyed scale (--space-N == N px). The kit hand-tunes between
+     SPACING, px-keyed scale (--space-N == N px). The kit hand-tunes between
      the coarse 4px steps, so the scale is dense enough to absorb every value
      without drift. --sp-* are the legacy ordinal aliases (kept for back-compat).
      --------------------------------------------------------------------- */
@@ -134,7 +134,7 @@ html {
   --sp-7: var(--space-48); --sp-8: var(--space-64); --sp-9: var(--space-96);
   --sp-10: var(--space-128);
 
-  /* LAYOUT DIMENSIONS — recurring component/page measures. */
+  /* LAYOUT DIMENSIONS, recurring component/page measures. */
   --container: 1180px;       /* page content max-width                          */
   --measure: 760px;          /* readable text column                            */
   --measure-wide: 840px;     /* wide content column                             */
@@ -142,14 +142,14 @@ html {
   --nav-h: 72px;             /* sticky nav bar height                           */
 
   /* ---------------------------------------------------------------------
-     RADII — Vintage Reef is SOFT-premium. Gentle rounding; pills for tags.
+     RADII, Vintage Reef is SOFT-premium. Gentle rounding; pills for tags.
      --------------------------------------------------------------------- */
   --r-xs: 2px;  --r-0: 0px;   --r-1: 4px;   --r-2: 8px;   --r-3: 12px;  --r-pill: 999px;
 
   /* ---------------------------------------------------------------------
      STROKES + REFINED ELEVATION (premium vintage-tropical)
      Dual elevation: hard-offset "sticker" shadows (the signature) + soft blurred shadows
-     for dark surfaces. Real stroke scale 1–4px. Motion tokens below — use for ALL transitions.
+     for dark surfaces. Real stroke scale 1–4px. Motion tokens below, use for ALL transitions.
      --------------------------------------------------------------------- */
   --stroke-1: 1px;  --stroke-2: 2px;  --stroke-3: 3px;  --stroke-4: 4px;
   --shadow-pop-sm: 0 1px 2px rgba(6,12,12,0.18), 0 1px 3px rgba(6,12,12,0.12);
@@ -157,12 +157,12 @@ html {
   --shadow-pop-lg: 0 8px 28px rgba(6,12,12,0.30);
   --shadow-pop-brass: 0 6px 18px rgba(46,219,58,0.30);
   --shadow-pop-nebula: 0 6px 18px rgba(110,225,118,0.28);
-  /* hard offset — the pop-art "sticker" signature (zero blur). Canonical hard elevation. */
+  /* hard offset, the pop-art "sticker" signature (zero blur). Canonical hard elevation. */
   --shadow-hard-sm: 3px 3px 0 var(--ink);
   --shadow-hard:    6px 6px 0 var(--ink);
   --shadow-hard-lg: 8px 8px 0 var(--ink);
   --shadow-hard-brass: 6px 6px 0 var(--brass-deep);
-  /* MOTION — durations + easings. Every transition/animation references these. */
+  /* MOTION, durations + easings. Every transition/animation references these. */
   --dur-1: 80ms; --dur-2: 120ms; --dur-3: 160ms; --dur-4: 240ms;
   --ease-pop: cubic-bezier(.2,.7,.2,1); --ease-snap: ease;
   /* soft glow for dark surfaces (use rarely) */
@@ -188,7 +188,7 @@ html {
 }
 
 /* ============================================================================
-   SEMANTIC TYPE CLASSES — apply directly or copy the rules.
+   SEMANTIC TYPE CLASSES, apply directly or copy the rules.
    Defaults assume DARK ground (the GHXSTSHIP default). Use .on-light to flip.
    ========================================================================== */
 .gx-display-xl, .gx-display-l, .gx-display-m, .gx-h1, .gx-h2, .gx-h3 {

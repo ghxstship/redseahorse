@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .loc { border: 1px solid var(--color-divider); background: var(--color-bg); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
   .loc .tag { align-self: flex-start; }
   .loc h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1; margin: 4px 0 2px; }

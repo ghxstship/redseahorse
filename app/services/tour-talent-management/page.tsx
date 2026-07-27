@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-  /* page-specific layout, components come from modernist.css */
+  /* page-specific layout; components come from modernist.css */
   .svc-fig { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--color-divider); }
   .svc-fig img { width: 100%; height: 100%; object-fit: cover; }
   .aud-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }

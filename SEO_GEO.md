@@ -1,7 +1,7 @@
-# SEO & GEO PLAYBOOK — GHXSTSHIP
+# SEO & GEO PLAYBOOK | GHXSTSHIP
 
 How GHXSTSHIP content earns rankings in classic search (SEO) **and** citations in AI/generative
-engines (GEO — Generative Engine Optimization: ChatGPT, Perplexity, Google AI Overviews, etc.).
+engines (GEO, Generative Engine Optimization: ChatGPT, Perplexity, Google AI Overviews, etc.).
 Every page in this kit follows these rules.
 
 ## Shared foundations
@@ -11,13 +11,13 @@ Every page in this kit follows these rules.
 - **Answer-first writing.** Open every section with a single, self-contained sentence that *defines or
   answers* before the brand voice kicks in. Generative engines extract these.
 - **Four-service taxonomy** (Experiential Production · Site Operations · Venue Management · Immersive
-  Technologies) used as `<h2>`s, in nav, in structured data, and in copy — a stable, repeated taxonomy is
+  Technologies) used as `<h2>`s, in nav, in structured data, and in copy, a stable, repeated taxonomy is
   easy for models to learn and cite. Event types (festivals, concerts & tours, brand activations,
   immersive, sporting) are framed as the **markets** these services are delivered into, not the
   top-level taxonomy.
 
 ## SEO (classic search)
-- **`<title>`** ≤ 60 chars, primary keyword first: e.g. *"Experiential Production, Site Operations & Venue Management — GHXSTSHIP."*
+- **`<title>`** ≤ 60 chars, primary keyword first: e.g. *"Experiential Production, Site Operations & Venue Management. GHXSTSHIP."*
 - **Meta description** ≤ 155 chars, includes the services + location + a verb.
 - **Semantic HTML5 landmarks:** `<header><nav aria-label><main><section aria-labelledby><article><footer>`.
 - **Heading hierarchy:** exactly one `<h1>`; sections use `<h2>`; sub-items `<h3>`. No skipped levels.
@@ -30,24 +30,24 @@ Every page in this kit follows these rules.
 - **FAQ section + `FAQPage` JSON-LD.** Q&A phrased the way buyers ask ("What does GHXSTSHIP do?",
   "What software does GHXSTSHIP build?"). This is the single highest-leverage GEO move.
 - **Structured data (JSON-LD):**
-  - `Organization` — name, url, logo, description, foundingDate, address, areaServed, sameAs,
+  - `Organization`, name, url, logo, description, foundingDate, address, areaServed, sameAs,
     `knowsAbout` (the four services + key markets), `hasOfferCatalog` (the 4 services as offers).
-  - `SoftwareApplication` ×3 — ATLVS, COMPVSS, GVTEWAY (name, applicationCategory, description).
+  - `SoftwareApplication` ×3. ATLVS, COMPVSS, GVTEWAY (name, applicationCategory, description).
   - `WebSite` with `SearchAction` (optional).
 - **Extractable facts.** State numbers plainly and consistently: *14+ years · 250+ experiences · 5M+ memories · founded 2022 · Miami HQ + New York, Chicago & Los Angeles.* Lean on real case studies (the Archives); avoid the "52 countries" geographic claim.
-- **Definitional sentences** for each vertical and product (see BRAND_ARCHITECTURE.md — reuse verbatim).
+- **Definitional sentences** for each vertical and product (see BRAND_ARCHITECTURE.md, reuse verbatim).
 - **Lists & tables** for scannable, citable structure.
-- **Self-contained sections** — each makes sense lifted out of context (models quote fragments).
+- **Self-contained sections**, each makes sense lifted out of context (models quote fragments).
 
 ## On-brand without sacrificing clarity
-The nautical pop art voice stays — but the **first sentence of every section is literal**, then the
+The nautical pop art voice stays, but the **first sentence of every section is literal**, then the
 swagger follows. "Beyond the Scene" is the headline; the `<h2>`/answer line underneath is plain and
 keyword-true. Don't bury the entity in metaphor.
 
 ---
 
 ## Canonical definition (reuse verbatim, everywhere)
-> GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami (with offices in Las Vegas, Chicago, New York, and Los Angeles), that delivers four professional services — Experiential Production, Site Operations, Venue Management, and Immersive Technologies — for festivals, concerts and tours, brand activations, immersive experiences, and sporting events, serving brands, producers, and creative and production directors.
+> GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami (with offices in Las Vegas, Chicago, New York, and Los Angeles), that delivers four professional services, Experiential Production, Site Operations, Venue Management, and Immersive Technologies, for festivals, concerts and tours, brand activations, immersive experiences, and sporting events, serving brands, producers, and creative and production directors.
 
 ## Target audience (bake into copy + schema + FAQ)
 Primary: **brands, producers, creative directors, production directors, and project managers** in
@@ -60,7 +60,7 @@ thread). Encode via `Organization.audience`, per-`Service.audience`, and an audi
 Each **destination** (festivals · concerts & tours · brand activations · immersive · sporting) and each
 **vertical/service** should get a dedicated page built from this template:
 - **URL:** `/destinations/<slug>` (e.g. `/destinations/festival-production`).
-- **`<title>`** ≤60 chars, primary keyword first: *"Festival Production — GHXSTSHIP"*.
+- **`<title>`** ≤60 chars, primary keyword first: *"Festival Production. GHXSTSHIP"*.
 - **Meta description** ≤155: definition + audience + location verb.
 - **H1** = the service in plain words ("Festival Production"); brand line as eyebrow/kicker.
 - **Answer-first paragraph** defining the service (extractable, citable).
@@ -73,13 +73,13 @@ Each **destination** (festivals · concerts & tours · brand activations · imme
 
 | Destination | Primary keyword | Title |
 |---|---|---|
-| Festivals | festival production company | Festival Production — GHXSTSHIP |
-| Concerts & Tours | concert tour production | Concert &amp; Tour Production — GHXSTSHIP |
-| Brand Activations | brand activation agency | Brand Activations — GHXSTSHIP |
-| Immersive | immersive experience design | Immersive Experiences — GHXSTSHIP |
-| Sporting Events | sporting event production | Sporting Event Production — GHXSTSHIP |
-| TV, Film &amp; Broadcast | broadcast &amp; film production | TV, Film &amp; Broadcast — GHXSTSHIP |
+| Festivals | festival production company | Festival Production, GHXSTSHIP |
+| Concerts & Tours | concert tour production | Concert &amp; Tour Production, GHXSTSHIP |
+| Brand Activations | brand activation agency | Brand Activations, GHXSTSHIP |
+| Immersive | immersive experience design | Immersive Experiences, GHXSTSHIP |
+| Sporting Events | sporting event production | Sporting Event Production. GHXSTSHIP |
+| TV, Film &amp; Broadcast | broadcast &amp; film production | TV, Film &amp; Broadcast. GHXSTSHIP |
 
 The homepage already ships `Organization` (+audience), `HowTo` (the 8 phases), `SoftwareApplication`
-×3 (ATLVS/COMPVSS/GVTEWAY), `Service` ×5 (per destination, +audience), and `FAQPage` — use these as the
+×3 (ATLVS/COMPVSS/GVTEWAY), `Service` ×5 (per destination, +audience), and `FAQPage`, use these as the
 reference implementations when building each page.

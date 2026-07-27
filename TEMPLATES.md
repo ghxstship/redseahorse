@@ -1,4 +1,4 @@
-# TEMPLATES — brandable assets across the production lifecycle
+# TEMPLATES: brandable assets across the production lifecycle
 
 The full map of what GHXSTSHIP can brand end-to-end. ✓ = built. Build priority noted at bottom.
 
@@ -25,14 +25,14 @@ buttons ✓ · inputs/forms ✓ · selects · toggles/checkboxes/radios · date 
 modals/drawers · toasts/alerts · status pills ✓ · progress · tooltips · pagination · **empty states + pixel-skull
 loader** · **auth (login/signup)** · **404/500** · settings · onboarding · charts.
 
-- **ATLVS — The Atlas:** dashboard ✓ · kanban ✓ · **gantt/timeline** (= strip-map) · project list & detail ·
+- **ATLVS, The Atlas:** dashboard ✓ · kanban ✓ · **gantt/timeline** (= strip-map) · project list & detail ·
   budget/finance tables · resource-allocation grid · asset/document vault.
-- **COMPVSS — The Compass:** roster · schedule grid ✓ · shift cards · certifications/compliance · timesheets ·
+- **COMPVSS, The Compass:** roster · schedule grid ✓ · shift cards · certifications/compliance · timesheets ·
   open-calls job board · crew profile · messaging.
-- **GVTEWAY — The Gateway:** event list ✓ · event detail · checkout/cart · boarding-pass ticket + QR ✓ ·
+- **GVTEWAY, The Gateway:** event list ✓ · event detail · checkout/cart · boarding-pass ticket + QR ✓ ·
   seat maps · fan profile & tiers · community feed ✓ · merch drops · campaigns · sales/analytics dashboards.
 
 ## Build priority
-1. **Shared product-UI component library** (`ui_kits/products/components.html`) — brands all three apps at once. ← building now
-2. **Proposal/SOW · Run-of-Show · Recap deck** — highest-frequency client documents.
+1. **Shared product-UI component library** (`ui_kits/products/components.html`), brands all three apps at once. ← building now
+2. **Proposal/SOW · Run-of-Show · Recap deck**, highest-frequency client documents.
 3. Each app's signature screens (ATLVS gantt, COMPVSS certifications, GVTEWAY checkout/seat map).

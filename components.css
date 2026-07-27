@@ -1,8 +1,8 @@
 /* ============================================================================
-   GHXSTSHIP DESIGN SYSTEM — components.css
-   "Vintage Reef" — premium vintage-tropical building blocks. Requires
+   GHXSTSHIP DESIGN SYSTEM, components.css
+   "Vintage Reef", premium vintage-tropical building blocks. Requires
    colors_and_type.css. Refined elevation, thin borders, soft corners.
-   Prefix: .gx-*  — copy rules freely into artifacts.
+   Prefix: .gx-*. Copy rules freely into artifacts.
    (Class names retained from the prior pop-art system so all artifacts keep
    working; the register is now premium, not comic.)
    ========================================================================== */
@@ -19,7 +19,7 @@
 .gx-panel--dark { background: var(--ink-2); color: var(--fg-on-dark-1); border-color: var(--ink-3); box-shadow: var(--shadow-pop); }
 .gx-panel--parchment { background: var(--parchment); }
 
-/* ---- BUTTONS — solid, refined, subtle lift ------------------------------- */
+/* ---- BUTTONS, solid, refined, subtle lift ------------------------------- */
 .gx-btn {
   display: inline-flex; align-items: center; gap: var(--sp-2);
   font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
@@ -40,7 +40,7 @@
 .gx-btn--sm { font-size:var(--fs-small); padding:var(--space-9) var(--sp-4); }
 .gx-btn--lg { font-size:var(--fs-h3); padding:var(--space-18) var(--space-32); }
 
-/* ---- TAGS / BADGES / CHIPS — soft pill, hairline -------------------------- */
+/* ---- TAGS / BADGES / CHIPS, soft pill, hairline -------------------------- */
 .gx-tag {
   display: inline-flex; align-items: center; gap:var(--space-6);
   font-family: var(--font-mono); font-weight: 600; font-size:var(--fs-label);
@@ -53,7 +53,7 @@
 .gx-tag--plasma { background: rgba(110,225,118,0.14); color: var(--sapphire-ink); border-color: rgba(110,225,118,0.35); }
 .gx-tag--ghost  { background: transparent; color: var(--fg-on-dark-2); border-color: var(--ink-3); }
 
-/* Mono chip — replaces the old 8-bit pixel chip; vintage manifest tag */
+/* Mono chip, replaces the old 8-bit pixel chip; vintage manifest tag */
 .gx-chip-pixel {
   display: inline-block; font-family: var(--font-mono); font-weight: 700; font-size:var(--fs-label);
   text-transform: uppercase; letter-spacing: 0.08em;
@@ -61,7 +61,7 @@
   border:var(--stroke-1) solid var(--ink-3); border-radius: var(--r-2);
 }
 
-/* ---- SEAL BADGE — replaces the comic starburst; vintage emblem ----------- */
+/* ---- SEAL BADGE, replaces the comic starburst; vintage emblem ----------- */
 .gx-burst {
   display: grid; place-items: center; text-align: center;
   width: 116px; height: 116px; color: var(--ink);
@@ -71,7 +71,7 @@
   box-shadow: var(--shadow-pop);
 }
 
-/* ---- TEXTURE LAYERS — subtle, premium ------------------------------------ */
+/* ---- TEXTURE LAYERS, subtle, premium ------------------------------------ */
 .gx-halftone { background-image: var(--halftone-ink); opacity: .5; }
 .gx-halftone-brass { background-image: var(--halftone-brass); opacity: .5; }
 .gx-halftone-fade {
@@ -80,7 +80,7 @@
           mask-image: linear-gradient(180deg, #000, transparent);
 }
 
-/* ---- INPUTS — clean, hairline, focus ring -------------------------------- */
+/* ---- INPUTS, clean, hairline, focus ring -------------------------------- */
 .gx-input {
   font-family: var(--font-body); font-size:var(--fs-body); color: var(--ink);
   background: var(--bone); border:var(--stroke-1) solid var(--parchment-2);
@@ -104,7 +104,7 @@
 }
 .gx-coords::before { content: "◆"; color: var(--brass); }
 
-/* ---- CARD (case-study) — soft elevation, lift on hover ------------------- */
+/* ---- CARD (case-study), soft elevation, lift on hover ------------------- */
 .gx-card {
   background: var(--ink-2); border:var(--stroke-1) solid var(--ink-3);
   border-radius: var(--r-3); overflow: hidden; box-shadow: var(--shadow-pop);
@@ -121,7 +121,7 @@
 
 /* ---- PRODUCT-NAME ACCENTS ------------------------------------------------- */
 /* The four platform sub-brands always render in their OWN accent color
-   whenever mentioned in copy — never the house green. Inherits font-weight
+   whenever mentioned in copy, never the house green. Inherits font-weight
    from context (kept semibold so the name reads as a branded token). When a
    product name sits inside a link/button that already sets a color, the .pn-*
    color still wins via specificity, which is intended. */
