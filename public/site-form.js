@@ -262,14 +262,24 @@
             body: JSON.stringify(payload),
           })
             .then(function (res) {
-              if (res.ok) {
-                done(true, "Sent. We'll be in touch.");
-              } else {
-                // Server unreachable/misconfigured (e.g. a static mirror with no
-                // function) — degrade gracefully to the user's mail client.
+              if (res.ok) { done(true, "Sent. We'll be in touch."); return; }
+              // 404 means there is no function behind this origin (e.g. a static
+              // mirror) — that is the case the mailto fallback exists for.
+              if (res.status === 404) {
                 done(false, "Opening your mail client…");
                 window.location.href = buildMailto(form, data);
+                return;
               }
+              // Our own API answered with an error. Surface it instead of
+              // silently bouncing the visitor into a mail client they may not
+              // have — a swallowed 4xx/5xx is a lost lead.
+              return res.json().catch(function () { return {}; }).then(function (b) {
+                if (res.status >= 400 && res.status < 500 && b && b.error) {
+                  done(false, b.error);
+                } else {
+                  done(false, "Something went wrong on our end. Email us directly and we'll pick it up.");
+                }
+              });
             })
             .catch(function () {
               done(false, "Opening your mail client…");

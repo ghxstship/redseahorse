@@ -16,6 +16,8 @@
  */
 
 var RESEND_ENDPOINT = "https://api.resend.com/emails";
+// bare address, or display name + <address>
+var FROM_RE = /^(?:[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+|[^<>]{1,64}<\s*[^<>@\s]+@[^<>@\s.]+\.[^<>@\s]+\s*>)$/;
 var DEFAULT_FROM = "GHXSTSHIP <onboarding@resend.dev>";
 var DEFAULT_TO = "julian.clarkson@ghxstship.pro";
 var SITE = "https://ghxstship.tours";
@@ -274,7 +276,16 @@ module.exports = async function handler(req, res) {
       return { label: k.replace(/[-_]/g, " ").replace(/\b\w/g, function (m) { return m.toUpperCase(); }), value: String(body[k]).slice(0, 5000) };
     });
 
-  var from = process.env.RESEND_FROM || DEFAULT_FROM;
+  // RESEND_FROM must be "email@example.com" or "Name <email@example.com>".
+  // A malformed value makes Resend 422 every send, which silently takes the
+  // whole form down, so validate it and fall back to the known-good default
+  // rather than trusting the environment.
+  var rawFrom = String(process.env.RESEND_FROM || "").trim().replace(/^["']|["']$/g, "");
+  var customFrom = FROM_RE.test(rawFrom) ? rawFrom : "";
+  if (rawFrom && !customFrom) {
+    console.error("RESEND_FROM is malformed; falling back to the default sender. Value:", JSON.stringify(rawFrom));
+  }
+  var from = customFrom || DEFAULT_FROM;
   var to = process.env.CONTACT_TO || DEFAULT_TO;
 
   // Branch: a careers application vs a general/contact inquiry.
@@ -320,7 +331,7 @@ module.exports = async function handler(req, res) {
     // Auto-reply receipt to the submitter. Requires a verified domain
     // (RESEND_FROM); skipped on the shared onboarding sender, which can't
     // deliver to arbitrary addresses. Best-effort — never fails the request.
-    if (process.env.RESEND_FROM) {
+    if (customFrom) {
       try {
         await send(key, {
           from: from, to: [email], reply_to: to,
