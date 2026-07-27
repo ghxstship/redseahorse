@@ -80,7 +80,9 @@ export default function Footer() {
               accountable partner from first drawing to final load-out.
             </p>
             <p className="foot-tag" style={{ marginTop: 6 }}>
-              Miami &middot; Las Vegas &middot; Chicago &middot; New York &middot; Los Angeles
+              <b>Primary</b> Miami &middot; Chicago &middot; Los Angeles &middot; New York City
+              <br />
+              <b>Satellite</b> Nashville &middot; Denver &middot; Las Vegas &middot; Phoenix
             </p>
             <div className="foot-social">
               {SOCIAL.map((s) => (

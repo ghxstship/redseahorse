@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Festivals</p>
     <h1 className="page-h1">Festival <span style={{color: 'var(--color-accent-700)'}}>Production.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service festival production company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We deliver multi-stage festival infrastructure, staging, technical production, and headliner experiences at scale — for promoters, brands, and production directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a full-service festival production company headquartered in Miami, with primary offices in Chicago, Los Angeles, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver multi-stage festival infrastructure, staging, technical production, and headliner experiences at scale — for promoters, brands, and production directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

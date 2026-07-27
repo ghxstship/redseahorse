@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Immersive</p>
     <h1 className="page-h1">Immersive <span style={{color: 'var(--color-accent-700)'}}>Experiences.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service immersive experience design studio headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We build narrative installations and immersive worlds audiences step inside — for brands, museums, and cultural institutions — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a full-service immersive experience design studio headquartered in Miami, with primary offices in Chicago, Los Angeles, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We build narrative installations and immersive worlds audiences step inside — for brands, museums, and cultural institutions — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

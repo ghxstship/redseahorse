@@ -63,7 +63,7 @@ export default function Page() {
 <div className="band"><div className="wrap stats-in">
   <div className="stat"><div className="v">14+</div><div className="k">Years</div></div>
   <div className="stat"><div className="v">250+</div><div className="k">Experiences</div></div>
-  <div className="stat"><div className="v">5</div><div className="k">Offices</div></div>
+  <div className="stat"><div className="v">8</div><div className="k">Locations</div></div>
   <div className="stat"><div className="v">4</div><div className="k">In-House Platforms</div></div>
 </div></div>
 
