@@ -63,7 +63,7 @@ export default function Page() {
     </article>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=800&q=80&auto=format&fit=crop" alt="Crowd in a warehouse venue under structural lighting" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><span className="tag tag-neutral">Venue &amp; Site Operations</span><h2>Factory Town</h2><p className="meta">Miami · 2023</p></div>
+      <div className="body"><span className="tag tag-neutral">Venue &amp; Site Operations</span><h2>Factory Town</h2><p className="meta">Miami · 2023–25</p></div>
     </article>
     <article className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" alt="Red Bull Unforeseen Motel" loading="lazy" width="800" height="600"/></figure>
