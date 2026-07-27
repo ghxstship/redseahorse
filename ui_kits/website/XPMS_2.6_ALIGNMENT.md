@@ -1,26 +1,26 @@
-# XPMS 2.5 Alignment + Industries Rename — Sweep Brief
+# XPMS 2.6 Alignment + Industries Rename — Sweep Brief
 
 Two sitewide corrections. Apply BOTH to every file you are assigned. The
 REBUILD_GUIDE.md conventions still apply; do not restructure pages beyond
 what these corrections require.
 
-## 1 · XPMS 2.5 — nine gated phases (supersedes every 8-phase reference)
+## 1 · XPMS 2.6 — nine gated phases (supersedes every 8-phase reference)
 
-The canonical lifecycle is the **XPMS 2.5** standard (GHXSTSHIP's
+The canonical lifecycle is the **XPMS 2.6** standard (GHXSTSHIP's
 Experiential Production Management Standard, effective July 2026). NINE
 gated phases, verb-consistent names, in this exact order:
 
 | Gate | Code | Phase | Act |
 |---|---|---|---|
-| 1 | DIS | Discover | Depart |
-| 2 | DSN | Design | Depart |
-| 3 | ADV | Advance | Depart |
-| 4 | PRC | Procure | Sail |
-| 5 | BLD | Build | Sail |
-| 6 | INS | Install | Sail |
-| 7 | OPR | Operate | Return |
-| 8 | AMP | Amplify | Return |
-| 9 | CLS | Close | Return |
+| 1 | DIS | Discover | Plan |
+| 2 | DSN | Design | Plan |
+| 3 | ADV | Advance | Plan |
+| 4 | PRC | Procure | Build |
+| 5 | BLD | Build | Build |
+| 6 | INS | Install | Build |
+| 7 | OPR | Operate | Show |
+| 8 | AMP | Amplify | Show |
+| 9 | CLS | Close | Show |
 
 - **Amplify is new** (gate 8, before Close): content capture, media and
   press, broadcast and livestream delivery, social amplification,
@@ -35,7 +35,7 @@ gated phases, verb-consistent names, in this exact order:
 - Where a page walks phase-by-phase involvement (services verticals,
   course), Amplify's one-liner for a service page: capture, media,
   broadcast, and post-event campaign delivery relevant to that discipline.
-- "XPMS" citations: the standard is cited as **XPMS 2.5**. If a page
+- "XPMS" citations: the standard is cited as **XPMS 2.6**. If a page
   explains XPMS, it may also mention the ATLVS Coordinate Matrix: every
   work item resolves to one of 90 coordinates, ten department classes
   across nine phases.

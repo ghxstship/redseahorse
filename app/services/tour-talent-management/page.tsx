@@ -42,7 +42,7 @@ export default function Page() {
   <div>
     <p className="kicker">What We Run</p>
     <h2 className="sec-h2-sm">The Whole Run, One Sheet.</h2>
-    <p className="lede">Like every GHXSTSHIP service, the tour runs on XPMS 2.5, our Experiential Production Management Standard: ten department classes crossed with nine gated production phases, so every deliverable has an address and nothing falls between the bus and the office. Here is what the road work covers.</p>
+    <p className="lede">Like every GHXSTSHIP service, the tour runs on XPMS 2.6, our Experiential Production Management Standard: ten department classes crossed with nine gated production phases, so every deliverable has an address and nothing falls between the bus and the office. Here is what the road work covers.</p>
     <div style={{marginTop: '20px'}}>
       <div className="row-line"><span className="row-title">Routing &amp; Advancing</span><span className="row-sub">The run itself: dates, holds, routing, and the master advance for the whole tour</span></div>
       <div className="row-line"><span className="row-title">Artist &amp; Talent Relations</span><span className="row-sub">The artist party, the riders, the day sheet, and the logistics around the people on the marquee</span></div>

@@ -36,5 +36,5 @@ The rewritten `platforms.html` is the reference implementation — mirror it.
 7. Do not name the engineering repo nickname anywhere in copy.
 8. Keep the four platform links: https://atlvs.pro · /compvss · /gvteway ·
    /legend. Do not add extension products (CVRGO/OPVS/GVLLEY/Vault).
-9. XPMS 2.5 (nine phases) remains our standard — unchanged by this pass.
+9. XPMS 2.6 (nine phases in three acts: Plan, Build, Show) is the current standard.
 10. Trademark line in terms.html is unchanged — do not edit it.

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Log \u2014 Dispatches on Experiential Production",
-  description: "The GHXSTSHIP Log \u2014 field notes on experiential production management, operations leadership, event technology, and the nine-phase XPMS 2.5 production lifecycle.",
+  description: "The GHXSTSHIP Log \u2014 field notes on experiential production management, operations leadership, event technology, and the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["experiential production blog", "event production field notes", "production lifecycle", "venue operations", "event technology"],
   alternates: { canonical: "https://ghxstship.tours/resources/blog" },
 };
@@ -55,7 +55,7 @@ export default function Page() {
       <span className="row-title">The 9-Phase Production Lifecycle, Explained</span>
       <span className="tag tag-neutral">Operations</span>
       <span className="d">May 2026</span>
-      <span className="ex">Discover to Close. How the XPMS 2.5 course keeps a build on schedule and on budget when every phase wants to slip.</span>
+      <span className="ex">Discover to Close. How the XPMS 2.6 course keeps a build on schedule and on budget when every phase wants to slip.</span>
     </a>
     <a className="row-line post-row" href="#">
       <span className="row-title">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND: The Instruments</span>
@@ -99,7 +99,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Blog","name":"GHXSTSHIP Log","url":"https://ghxstship.tours/resources/blog","description":"Field notes on experiential production management, operations leadership, event technology, and the nine-phase XPMS 2.5 production lifecycle."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Blog","name":"GHXSTSHIP Log","url":"https://ghxstship.tours/resources/blog","description":"Field notes on experiential production management, operations leadership, event technology, and the nine-phase XPMS 2.6 production lifecycle."}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://ghxstship.tours/resources"},{"@type":"ListItem","position":3,"name":"The Log","item":"https://ghxstship.tours/resources/blog"}]}` }} />
     </>
   );

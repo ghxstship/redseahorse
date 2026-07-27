@@ -95,7 +95,7 @@ export default function Page() {
 <section className="wrap sec-pad" id="course">
   <p className="kicker">The Process</p>
   <h2 className="sec-h2">9 Phases, First Line to Wrap.</h2>
-  <p className="lede">Every engagement walks the same nine-phase XPMS 2.5 production lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
+  <p className="lede">Every engagement walks the same nine-phase XPMS 2.6 production lifecycle, Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>

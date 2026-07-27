@@ -97,8 +97,8 @@ export default function Page() {
     <dl className="gl-terms">
       <div className="gl-term">
         <dt>Production Lifecycle</dt>
-        <dd>The structured, repeatable phases a live experience moves through from start to finish. GHXSTSHIP uses the nine-phase XPMS 2.5 lifecycle: Discover, Design, Advance, Procure, Build, Install, Operate, Amplify, and Close. Under XPMS 2.5, every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix — ten department classes across the nine phases.
-        <span className="x">The GHXSTSHIP methodology · XPMS 2.5</span></dd>
+        <dd>The structured, repeatable phases a live experience moves through from start to finish. GHXSTSHIP uses the nine-phase XPMS 2.6 lifecycle: Discover, Design, Advance, Procure, Build, Install, Operate, Amplify, and Close. Under XPMS 2.6, every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix — ten department classes across the nine phases.
+        <span className="x">The GHXSTSHIP methodology · XPMS 2.6</span></dd>
       </div>
     </dl>
   </div>
@@ -122,7 +122,7 @@ export default function Page() {
       </div>
       <div className="gl-term">
         <dt>Strike</dt>
-        <dd>The controlled teardown, removal, and load-out of all production elements after a live event concludes, including reconciliation and site restoration. In the XPMS 2.5 lifecycle, strike lives inside the Operate phase — it is never a phase of its own.</dd>
+        <dd>The controlled teardown, removal, and load-out of all production elements after a live event concludes, including reconciliation and site restoration. In the XPMS 2.6 lifecycle, strike lives inside the Operate phase — it is never a phase of its own.</dd>
       </div>
     </dl>
   </div>
@@ -145,7 +145,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"DefinedTermSet","name":"GHXSTSHIP Experiential Production Glossary","url":"https://ghxstship.tours/resources/glossary","hasDefinedTerm":[
  {"@type":"DefinedTerm","name":"Experiential Production","description":"The end-to-end creative and physical production of live experiences — festivals, concerts and tours, brand activations, immersive experiences, and sporting events — from concept through strike."},
- {"@type":"DefinedTerm","name":"Production Lifecycle","description":"The structured, repeatable phases a live experience moves through from start to finish. GHXSTSHIP uses the nine-phase XPMS 2.5 lifecycle: Discover, Design, Advance, Procure, Build, Install, Operate, Amplify, and Close. Under XPMS 2.5, every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix — ten department classes across the nine phases."},
+ {"@type":"DefinedTerm","name":"Production Lifecycle","description":"The structured, repeatable phases a live experience moves through from start to finish. GHXSTSHIP uses the nine-phase XPMS 2.6 lifecycle: Discover, Design, Advance, Procure, Build, Install, Operate, Amplify, and Close. Under XPMS 2.6, every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix — ten department classes across the nine phases."},
  {"@type":"DefinedTerm","name":"Brand Activation","description":"A live, experiential marketing engagement that brings a brand to life through physical or immersive interaction with an audience, designed to drive awareness, affinity, and measurable action."},
  {"@type":"DefinedTerm","name":"Load-In","description":"The scheduled process of transporting, installing, and assembling all production elements — staging, scenic, audio, lighting, video, and rigging — at a venue ahead of a live event."},
  {"@type":"DefinedTerm","name":"Run of Show","description":"The minute-by-minute master document that sequences every cue, transition, and responsibility across departments during a live event, used by the show caller to run the event."},
