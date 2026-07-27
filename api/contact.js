@@ -49,7 +49,12 @@ var C = {
 // One family, as on the site. Email clients broadly ignore @font-face, so the
 // grotesque fallback is what most recipients actually see.
 var FONT = "'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif";
-var LOGO = SITE + "/assets/skull-bone.png"; // PNG — most clients won't render SVG
+// Images must be served from a host that answers 200 directly. The apex
+// 308-redirects to www, and email image proxies commonly refuse to follow
+// redirects — which renders the mark as a broken image. Links can keep the
+// apex (browsers follow the hop); assets cannot.
+var ASSET_BASE = "https://www.ghxstship.tours";
+var LOGO = ASSET_BASE + "/assets/skull-bone.png"; // PNG — most clients won't render SVG
 
 function esc(s) {
   return String(s).replace(/[&<>"]/g, function (c) {
