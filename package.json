@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "python3 scripts/generate-pages.py",
-    "predev": "python3 scripts/generate-pages.py",
+    "prebuild": "python3 scripts/check-assets.py && python3 scripts/normalize-copy.py --check && python3 scripts/build-case-studies.py && node scripts/render-emails.js && python3 scripts/generate-pages.py",
+    "predev": "python3 scripts/check-assets.py && python3 scripts/normalize-copy.py --check && python3 scripts/build-case-studies.py && node scripts/render-emails.js && python3 scripts/generate-pages.py",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

@@ -693,7 +693,7 @@ footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp
 .foot-loc dt:first-of-type { margin-top: 0; }
 .foot-loc dd { margin: 2px 0 0; font-size: 0.867rem; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
 .foot-tag { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 34ch; margin-top: 12px; }
-.foot-col h6 { font-size: 0.733rem; letter-spacing: 0.14em; color: var(--color-accent-700); margin-bottom: 12px; }
+.foot-col h2 { font-size: 0.733rem; letter-spacing: 0.14em; color: var(--color-accent-700); margin-bottom: 12px; }
 /* footer links are BODY register per the kit canon, never the heading font */
 .foot-col a { display: block; padding: 5px 0; font-size: 0.933rem; font-family: var(--font-body); font-weight: 400; text-decoration: none; color: var(--color-text); }
 .foot-col a:hover { color: var(--color-accent-700); }

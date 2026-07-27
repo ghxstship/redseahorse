@@ -96,7 +96,7 @@ export default function Footer() {
             </div>
           </div>
           <nav className="foot-col" aria-label="Services">
-            <h6>Services</h6>
+            <h2>Services</h2>
             {SERVICES.map((l) => (
               <Link key={l.label} href={l.href}>
                 {l.label}
@@ -104,7 +104,7 @@ export default function Footer() {
             ))}
           </nav>
           <nav className="foot-col" aria-label="Company">
-            <h6>Company</h6>
+            <h2>Company</h2>
             {COMPANY.map((l) => (
               <Link key={l.label} href={l.href}>
                 {l.label}
@@ -112,13 +112,13 @@ export default function Footer() {
             ))}
           </nav>
           <nav className="foot-col" aria-label="Resources and platforms">
-            <h6>Resources</h6>
+            <h2>Resources</h2>
             {RESOURCES.map((l) => (
               <Link key={l.label} href={l.href}>
                 {l.label}
               </Link>
             ))}
-            <h6 style={{ marginTop: 20 }}>Platforms</h6>
+            <h2 style={{ marginTop: 20 }}>Platforms</h2>
             {PLATFORMS.map((l) => (
               <a key={l.label} href={l.href} target="_blank" rel="noopener">
                 {l.label}
