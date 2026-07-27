@@ -8,11 +8,16 @@
  * Env (Vercel → Project → Settings → Environment Variables):
  *   RESEND_API_KEY  (required)  Resend key, re_...
  *   RESEND_FROM     (optional)  overrides the sender; must be on a Resend-verified
- *                               domain. Defaults to "GHXSTSHIP <ghxstship@atlvs.pro>".
- *                               Defaults to onboarding@resend.dev (delivers only to the
- *                               Resend account owner — fine for the studio notification;
- *                               the submitter auto-reply requires a verified domain, so it
- *                               is only sent when RESEND_FROM is set).
+ *                               domain. Defaults to "GHXSTSHIP <ghxstship@atlvs.pro>" —
+ *                               deliberately atlvs.pro, not ghxstship.tours: an inquiry
+ *                               becomes a project tracked in ATLVS, so the sending identity
+ *                               matches the system that owns the record. atlvs.pro is the
+ *                               verified domain in Resend; ghxstship.tours is NOT verified
+ *                               there, so do not "correct" this to a .tours address —
+ *                               Resend would reject every send. Must be bare
+ *                               "email@example.com" or "Name <email@example.com>", with no
+ *                               surrounding quotes (Vercel stores the value literally, and
+ *                               a stray quote or newline 422s every send).
  *   CONTACT_TO      (optional)  recipient, defaults to julian.clarkson@ghxstship.pro
  */
 
@@ -54,11 +59,12 @@ var FONT = "'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif";
 // honour the webfont link get it; the rest fall back to a condensed face so
 // the lockup keeps its proportions rather than collapsing into body text.
 var FONT_WORDMARK = "'Bebas Neue','Arial Narrow','Helvetica Neue',Arial,sans-serif";
-// Images must be served from a host that answers 200 directly. The apex
-// 308-redirects to www, and email image proxies commonly refuse to follow
-// redirects — which renders the mark as a broken image. Links can keep the
-// apex (browsers follow the hop); assets cannot.
-var ASSET_BASE = "https://www.ghxstship.tours";
+// Images must be served from a host that answers 200 directly: email image
+// proxies commonly refuse to follow redirects, and a redirected asset renders
+// as a broken image. Since D1 landed (2026-07-27) the apex IS canonical and
+// www 308s to it, so assets and links share one host. If the canonical host
+// ever flips again, this is the line that has to move with it.
+var ASSET_BASE = SITE;
 // Tight-cropped master of the white flag: 480x368 transparent PNG whose artwork
 // touches all four edges. The older skull-bone.png sits on a 64x64 canvas with
 // ~47% empty padding, so every nominal size rendered about half as large as it

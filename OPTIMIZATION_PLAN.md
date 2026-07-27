@@ -21,7 +21,7 @@ This architecture is sound for a marketing site. Nothing below proposes changing
 
 | # | Decision | Status |
 |---|---|---|
-| D1 | **Canonical domain** → apex is canonical. | **Approved — needs one dashboard action:** Vercel → Project → Settings → Domains → set `ghxstship.tours` as the primary domain (www then 308s → apex). No code change; all code already points at the apex. |
+| D1 | **Canonical domain** → apex is canonical. | **Done (2026-07-27).** Vercel → Project → Settings → Domains: `ghxstship.tours` now connects to Production, and `www.ghxstship.tours` 308s → apex (previously the reverse, so every canonical URL and sitemap entry pointed at a redirecting host). No code change; all code already pointed at the apex. Verified live: apex `200`, www `308 → https://ghxstship.tours/`. |
 | D2 | **Résumé uploads** → real Resend attachments. | **Done.** `site-form.js` validates (PDF/Word, ≤3 MB), base64-encodes, and sends `attachments`; `api/contact.js` re-validates (type, size, filename, base64, max 2) and forwards to Resend on the studio notification. Apply form shows a "PDF or Word · up to 3 MB" hint. Also fixed a pre-existing validation deadlock: stale `setCustomValidity` errors blocked all resubmission; custom validity now clears on input/change. Verified: mocked-handler tests (valid/bogus/oversize/traversal) + in-browser end-to-end on /careers/apply/ and regression on /contact/. |
 | D3 | **GitHub Pages mirror** → killed. | **Done.** `.github/workflows/deploy.yml` removed (mirror added no value over Vercel). Optionally also disable Pages in the GitHub repo settings. |
 
