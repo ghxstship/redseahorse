@@ -1,13 +1,13 @@
 {
   "$comment": "Ranked press inventory. Machine-written by scripts/press-scan.mjs, human-correctable. Anything with \"locked\": true survives a rescan untouched — that is how you keep a hand-written verdict. See README.md for the scoring model and the attribution tiers. Every url here returned a live response when it was added; `http` records what it returned.",
   "generated": "2026-07-27",
-  "generatedBy": "manual seed (verified by hand; scanner not yet keyed)",
+  "generatedBy": "manual seed + hand-verified follow-up sweep",
   "schemaVersion": 1,
   "summary": {
     "entriesTracked": 9,
-    "entriesWithCoverage": 6,
-    "entriesWithNoCoverageFound": 3,
-    "itemsTotal": 27,
+    "entriesWithCoverage": 8,
+    "entriesWithNoCoverageFound": 1,
+    "itemsTotal": 59,
     "itemsAttributedToGhxstship": 0,
     "note": "No third-party article names GHXSTSHIP. Searches for the brand return only our own site. Everything below is coverage OF THE WORK, not of us — useful as proof the projects are real and notable, not as a citation that we delivered them. Read the attribution field before quoting anything."
   },
@@ -128,17 +128,6 @@
           "why": "WWD is the authority for this audience and it is a photo gallery — the strongest single asset in the whole inventory."
         },
         {
-          "url": "https://theknockturnal.com/becky-g-lights-up-stage/",
-          "outlet": "The Knockturnal",
-          "tier": "niche-lifestyle",
-          "sentiment": "positive",
-          "attribution": "project-only",
-          "date": "2024-09",
-          "http": 200,
-          "score": 56,
-          "why": "On-the-night write-up with performance detail. Quotable."
-        },
-        {
           "url": "https://www.hola.com/us/entertainment/20240916718613/becky-g-pays-tribute-to-selena-quintanilla-in-los-angeles/",
           "outlet": "¡HOLA! US",
           "tier": "national",
@@ -148,6 +137,17 @@
           "http": 200,
           "score": 62,
           "why": "Reaches the Latin-market audience the activation was built for."
+        },
+        {
+          "url": "https://theknockturnal.com/becky-g-lights-up-stage/",
+          "outlet": "The Knockturnal",
+          "tier": "niche-lifestyle",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09",
+          "http": 200,
+          "score": 56,
+          "why": "On-the-night write-up with performance detail. Quotable."
         },
         {
           "url": "https://loopmag.co/becky-g-gabito-ballesteros-more-celebrate-the-launch-of-patron-cristalino/",
@@ -203,17 +203,6 @@
       "note": "Thin on true press but strong on primary sources, and it is the one entry with a live case study to point the coverage at.",
       "items": [
         {
-          "url": "https://gayety.com/salvage-city-edc-immersive-dinner-show",
-          "outlet": "Gayety",
-          "tier": "niche-lifestyle",
-          "sentiment": "positive",
-          "attribution": "project-only",
-          "date": "2025",
-          "http": 200,
-          "score": 52,
-          "why": "The only real editorial feature on the experience. Describes the show, not just the ticket."
-        },
-        {
           "url": "https://lasvegas.electricdaisycarnival.com/tickets/salvage-city/",
           "outlet": "Insomniac / EDC Las Vegas",
           "tier": "primary-partner",
@@ -223,6 +212,17 @@
           "http": 200,
           "score": 58,
           "why": "The client's own page for the experience. Strongest available proof it is a sanctioned part of EDC."
+        },
+        {
+          "url": "https://gayety.com/salvage-city-edc-immersive-dinner-show",
+          "outlet": "Gayety",
+          "tier": "niche-lifestyle",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2025",
+          "http": 200,
+          "score": 52,
+          "why": "The only real editorial feature on the experience. Describes the show, not just the ticket."
         },
         {
           "url": "https://whatnow.com/las-vegas/restaurants/salvage-city-supper-club-returns-to-edc-las-vegas/",
@@ -321,6 +321,28 @@
           "why": "A full feature on the activation — build, curation and intent, not just a set time. Credits III Points' David Sinopoli and creative director Veronica Gessa; we are not named."
         },
         {
+          "url": "https://worldredeye.com/2024/10/iii-points-2024/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "context-only",
+          "date": "2024-10",
+          "http": 200,
+          "score": 48,
+          "why": "Gallery of III Points 2024, the edition the Unforeseen Motel was built for."
+        },
+        {
+          "url": "https://worldredeye.com/2025/10/qa-how-iii-points-became-miamis-cultural-pulse/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "context-only",
+          "date": "2025-10",
+          "http": 200,
+          "score": 44,
+          "why": "Q&A on how III Points became Miami's cultural pulse. Background for any III Points case study."
+        },
+        {
           "url": "https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/",
           "outlet": "Miami New Times",
           "tier": "regional-alt-weekly",
@@ -346,10 +368,54 @@
     },
     "factory-town": {
       "title": "Factory Town",
-      "coverageStrength": "venue-reference",
+      "coverageStrength": "photo-archive-plus-reference",
       "sentimentOverall": "positive",
-      "note": "Plenty exists about the venue; none of it about who runs its site operations. Reference material for the venue's scale and history, not proof of our role.",
+      "note": "Plenty exists about the venue; none of it about who runs its site operations. But World Red Eye has shot Factory Town for years and keeps a standing archive of it, which covers exactly our 2023-25 window — that is the real asset here, not the reference pages.",
       "items": [
+        {
+          "url": "https://worldredeye.com/factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": null,
+          "http": 200,
+          "score": 60,
+          "why": "the standing Factory Town archive — every gallery they have shot there, and it keeps growing on its own"
+        },
+        {
+          "url": "https://magneticmag.com/2026/04/miami-music-week-2026-recap/",
+          "outlet": "Magnetic Magazine",
+          "tier": "niche-vertical",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-04",
+          "http": 200,
+          "score": 52,
+          "why": "MMW 2026 recap leading with Factory Town."
+        },
+        {
+          "url": "https://worldredeye.com/2024/12/factory-basel-at-factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-12",
+          "http": 200,
+          "score": 46,
+          "why": "GOLFOS, Carlita & Ben Sterling, Art Basel 2024"
+        },
+        {
+          "url": "https://worldredeye.com/2024/03/dom-dolla-green-velvet-mau-p-at-factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-03",
+          "http": 200,
+          "score": 46,
+          "why": "Dom Dolla, Green Velvet & Mau P, Miami Music Week 2024"
+        },
         {
           "url": "https://en.wikipedia.org/wiki/Factory_Town",
           "outlet": "Wikipedia",
@@ -360,6 +426,61 @@
           "http": 200,
           "score": 44,
           "why": "History and ownership: the 1946 Dixie Bedding factory, operated by Link Miami Rebels alongside Club Space. Good for the seven-acre framing."
+        },
+        {
+          "url": "https://worldredeye.com/2023/12/zhu-hayden-james-at-factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2023-12",
+          "http": 200,
+          "score": 42,
+          "why": "ZHU & Hayden James, Art Basel 2023"
+        },
+        {
+          "url": "https://worldredeye.com/2023/12/factory-town-basel/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2023-12",
+          "http": 200,
+          "score": 42,
+          "why": "Factory Town at Art Basel 2023"
+        },
+        {
+          "url": "https://worldredeye.com/2023/03/black-coffee-at-factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2023-03",
+          "http": 200,
+          "score": 42,
+          "why": "Black Coffee at Factory Town, 2023 — same artist, earlier venue"
+        },
+        {
+          "url": "https://worldredeye.com/2023/03/elrow-at-factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2023-03",
+          "http": 200,
+          "score": 42,
+          "why": "Elrow at Factory Town, 2023"
+        },
+        {
+          "url": "https://worldredeye.com/2023/01/solomun-at-factory-town/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2023-01",
+          "http": 200,
+          "score": 42,
+          "why": "Solomun at Factory Town, 2023"
         },
         {
           "url": "https://www.factorytown.com/",
@@ -396,8 +517,229 @@
         }
       ]
     },
-    "l-acoustics-dj": { "title": "L-Acoustics DJ", "coverageStrength": "none-found", "sentimentOverall": null, "note": "No coverage found tying an L-Acoustics install at III Points to a named integrator. If the install is public, an L-Acoustics case study or a trade placement in Mix / ProSoundWeb / Live Design is the realistic first placement.", "items": [] },
-    "black-coffee-race-track": { "title": "Black Coffee at the Race Track", "coverageStrength": "none-found", "sentimentOverall": null, "note": "Nothing found. If this is a 2026 date that has not happened yet, re-run after it does.", "items": [] },
-    "fifa-world-cup-brazil-base-camp": { "title": "FIFA World Cup Brazil Base Camp", "coverageStrength": "none-found", "sentimentOverall": null, "note": "Nothing found tying a New Jersey Brazil base camp to a named hospitality or operations partner. High-visibility subject — worth a standing alert rather than a monthly sweep.", "items": [] }
+    "l-acoustics-dj": {
+      "title": "L-Acoustics DJ",
+      "coverageStrength": "trade",
+      "sentimentOverall": "positive",
+      "note": "Was 'none-found' on the first sweep because the queries said 'sound system install'. The trades cover it as L-Acoustics DJ, spatial audio and the S3QU3NC3 stage, and there is a lot of it. Best-covered entry for the Technology vertical, and the closest the inventory gets to trade-press proof — but no piece names an integrator, only L-Acoustics and III Points.",
+      "items": [
+        {
+          "url": "https://fohonline.com/featured/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points-festival/",
+          "outlet": "FOH (Front of House)",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026",
+          "http": 200,
+          "score": 78,
+          "why": "Live-sound trade of record. The single best link for this entry: right outlet, right audience, right deployment."
+        },
+        {
+          "url": "https://www.mixonline.com/the-wire/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points",
+          "outlet": "Mix",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026",
+          "http": 200,
+          "score": 76,
+          "why": "Mix carried it too. Two independent trades on the same install is the strongest technical credibility we have anywhere."
+        },
+        {
+          "url": "https://www.avnation.tv/2026/03/06/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points/",
+          "outlet": "AVNation",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 70,
+          "why": "AV trade pickup."
+        },
+        {
+          "url": "https://www.l-acoustics.com/stories/live-sound-innovation-at-iii-points-festival-2025-in-miami/",
+          "outlet": "L-Acoustics",
+          "tier": "primary-partner",
+          "sentiment": "positive",
+          "attribution": "partner-primary",
+          "date": "2025-10",
+          "http": 200,
+          "score": 62,
+          "why": "The manufacturer's own case study on the exact deployment: III Points 2025, Oct 17-18, Mana Wynwood, L-Acoustics DJ on S3QU3NC3. Read in full — GHXSTSHIP is not named, and no integrator is credited at all.",
+          "verifiedBy": "rendered in-browser 2026-07-27; page is JS-built and returns only nav chrome to a plain fetch"
+        },
+        {
+          "url": "https://www.l-acoustics.com/press-releases/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points/",
+          "outlet": "L-Acoustics",
+          "tier": "primary-partner",
+          "sentiment": "positive",
+          "attribution": "partner-primary",
+          "date": "2026",
+          "http": 200,
+          "score": 58,
+          "why": "The press release the trades ran from. Source of the S3QU3NC3 spec: eight hangs of L2D in 8.1, four frontal stacks of three KS28 cardioid, six X12 plus two KS21i overhead."
+        },
+        {
+          "url": "https://magneticmag.com/2025/12/kujo-interview/",
+          "outlet": "Magnetic Magazine",
+          "tier": "niche-vertical",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2025-12",
+          "http": 200,
+          "score": 56,
+          "why": "Third-party editorial rather than vendor marketing, and it is artist testimony from the stage itself. Also dates the arc: L-ISA on the 444 stage in 2024, L-Acoustics DJ on S3QU3NC3 in 2025, L-Acoustics on every stage for eight straight years.",
+          "quote": "For nearly a decade, III Points has treated sound system design as a core part of its identity, not an afterthought."
+        },
+        {
+          "url": "https://www.usitt.org/news/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points",
+          "outlet": "USITT",
+          "tier": "reference",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026",
+          "http": 200,
+          "score": 48,
+          "why": "Institute for Theatre Technology carried it — useful when the audience is institutional rather than commercial."
+        },
+        {
+          "url": "https://exronmusic.com/2025/11/14/how-l-acoustics-new-technology-redefining-listening-music/",
+          "outlet": "Exron Music",
+          "tier": "blog",
+          "sentiment": "positive",
+          "attribution": "context-only",
+          "date": "2025-11",
+          "http": 200,
+          "score": 28,
+          "why": "Explainer on the technology rather than the deployment."
+        },
+        {
+          "url": "https://soundforums.net/news/live-sound/l-acoustics-dj-makes-its-us-festival-debut-at-miamis-iii-points-246239/",
+          "outlet": "Sound Forums",
+          "tier": "blog",
+          "sentiment": "neutral",
+          "attribution": "project-only",
+          "date": "2026",
+          "http": 200,
+          "score": 26,
+          "why": "Forum repost of the release. Low value; logged for completeness."
+        }
+      ]
+    },
+    "black-coffee-race-track": {
+      "title": "Black Coffee at the Race Track",
+      "coverageStrength": "regional-plus-trade",
+      "sentimentOverall": "positive",
+      "note": "Was 'none-found' because the queries said Club Space. The event was at HIALEAH PARK RACETRACK on 28 March 2026, presented by Club Space, with Black Coffee, Carlita and Kaz James — first dance-music event ever held at the 1922 track. The site's card currently names Club Space as the venue, which is wrong; see the flag on the work page.",
+      "items": [
+        {
+          "url": "https://www.bizbash.com/event-production-planning/miami-music-week-2026-inside-wmc-ultra-edm-marathons-and-standout-activations",
+          "outlet": "BizBash",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026",
+          "http": 200,
+          "score": 76,
+          "why": "Event-production trade covering Miami Music Week 2026 activations. Same outlet that carried Heineken Turn 4 — the pattern worth leaning into."
+        },
+        {
+          "url": "https://worldredeye.com/2026/03/miami-music-week-2026-black-coffee-carlita-at-the-racetrack/",
+          "outlet": "World Red Eye",
+          "tier": "photo-agency",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 62,
+          "why": "~30-photo gallery of the night. Miami's society and nightlife photo agency — for this kind of work their galleries are the most reusable asset in the inventory, not just a citation.",
+          "quote": "The historic Hialeah Park racetrack came to life last night Black Coffee, Carlita, and Kaz James, presented by Club Space."
+        },
+        {
+          "url": "https://www.miaminewtimes.com/music/black-coffee-will-turn-hialeah-race-track-into-dance-floor-40532738/",
+          "outlet": "Miami New Times",
+          "tier": "regional-alt-weekly",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 60,
+          "why": "The city's alt-weekly, with the 'first time the track has hosted dance music' framing."
+        },
+        {
+          "url": "https://www.timeout.com/miami/things-to-do/black-coffee-at-hialeah-racetrack",
+          "outlet": "Time Out Miami",
+          "tier": "regional",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 54,
+          "why": "Time Out listing/preview."
+        },
+        {
+          "url": "https://magneticmag.com/2026/04/miami-music-week-2026-recap/",
+          "outlet": "Magnetic Magazine",
+          "tier": "niche-vertical",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-04",
+          "http": 200,
+          "score": 52,
+          "why": "MMW 2026 recap covering this AND Factory Town — one link, two entries."
+        },
+        {
+          "url": "https://www.edmtunes.com/2026/03/black-coffee-hialeah-park-racetrack-mmw/",
+          "outlet": "EDMTunes",
+          "tier": "niche-vertical",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 50,
+          "why": "'Brings Open Air Show to Historic Hialeah Racetrack' — good headline language to borrow."
+        },
+        {
+          "url": "https://www.miamiandbeaches.com/event/black-coffee-at-the-racetrack-mmw/36984",
+          "outlet": "Greater Miami CVB",
+          "tier": "listing",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 38,
+          "why": "The official destination marketing org listed it. Carries institutional weight a blog does not."
+        },
+        {
+          "url": "https://iedm.com/blogs/onblast-edm-blog/black-coffee-hialeah-park-racetrack",
+          "outlet": "iEDM",
+          "tier": "blog",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 30,
+          "why": "Blog pickup."
+        },
+        {
+          "url": "https://exronmusic.com/2026/03/25/club-space-black-coffee-hialeah-park-202/",
+          "outlet": "Exron Music",
+          "tier": "blog",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-03",
+          "http": 200,
+          "score": 30,
+          "why": "Preview piece."
+        }
+      ]
+    },
+    "fifa-world-cup-brazil-base-camp": {
+      "title": "FIFA World Cup Brazil Base Camp",
+      "coverageStrength": "none-found",
+      "sentimentOverall": null,
+      "note": "Nothing found tying a New Jersey Brazil base camp to a named hospitality or operations partner. High-visibility subject — worth a standing alert rather than a monthly sweep.",
+      "items": []
+    }
   }
 }

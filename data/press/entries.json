@@ -1,16 +1,23 @@
 {
-  "$comment": "The things we scan for. One entry per case study / portfolio item. Keep the slug stable — inventory.json keys off it. `queries` are the literal search strings; write them the way a journalist would name the thing, not the way we name it internally, and include the partner brand, the venue and the year, because that is what actually appears in a headline. `aliases` catch the names the press uses that we do not.",
+  "$comment": "The things we scan for. One entry per case study / portfolio item. Keep the slug stable — inventory.json keys off it. `queries` are the literal search strings; write them the way a journalist would name the thing, not the way we name it internally, and include the partner brand, the venue and the year, because that is what actually appears in a headline. `aliases` catch the names the press uses that we do not. LESSON, learned the hard way: two entries came back empty on the first sweep because the queries were written in our vocabulary rather than the vocabulary of the people who write about the work. Black Coffee was filed by us under Club Space and covered by everyone else as Hialeah Park racetrack; the L-Acoustics install was filed by us as a sound-system implementation and covered by the trades as L-Acoustics DJ / spatial audio / the S3QU3NC3 stage. Write queries the way a journalist would.",
   "brand": {
     "name": "GHXSTSHIP",
     "legal": "GHXSTSHIP Industries LLC",
     "site": "ghxstship.tours",
-    "ownDomains": ["ghxstship.tours", "atlvs.pro", "ghxstship.pro"]
+    "ownDomains": [
+      "ghxstship.tours",
+      "atlvs.pro",
+      "ghxstship.pro"
+    ]
   },
   "entries": [
     {
       "slug": "polymarket-free-grocery-store",
       "title": "The Polymarket",
-      "aliases": ["The Polymarket Free Grocery Store", "New York's First Free Grocery Store"],
+      "aliases": [
+        "The Polymarket Free Grocery Store",
+        "New York's First Free Grocery Store"
+      ],
       "partner": "Polymarket",
       "venue": "West Village, Manhattan",
       "city": "New York City",
@@ -25,7 +32,9 @@
     {
       "slug": "salvage-city-supper-club",
       "title": "Salvage City Supper Club",
-      "aliases": ["Salvage City"],
+      "aliases": [
+        "Salvage City"
+      ],
       "partner": "Insomniac / EDC Las Vegas",
       "venue": "EDC Las Vegas, Las Vegas Motor Speedway",
       "city": "Las Vegas",
@@ -41,7 +50,10 @@
     {
       "slug": "patron-cristalino-becky-g",
       "title": "PATRÓN Cristalino x Becky G",
-      "aliases": ["PATRON CRISTALINO launch", "Patrón Cristalino Becky G"],
+      "aliases": [
+        "PATRON CRISTALINO launch",
+        "Patrón Cristalino Becky G"
+      ],
       "partner": "PATRÓN",
       "venue": "Olvera Street",
       "city": "Los Angeles",
@@ -56,7 +68,10 @@
     {
       "slug": "red-bull-unforeseen-motel",
       "title": "Red Bull Unforeseen Motel",
-      "aliases": ["Red Bull Unforeseen", "Red Bull Unforeseen Full Moon Motel"],
+      "aliases": [
+        "Red Bull Unforeseen",
+        "Red Bull Unforeseen Full Moon Motel"
+      ],
       "partner": "Red Bull",
       "venue": "III Points, Mana Wynwood",
       "city": "Miami",
@@ -71,7 +86,10 @@
     {
       "slug": "heineken-turn-4-nightclub",
       "title": "Heineken Turn 4 Nightclub",
-      "aliases": ["Heineken Turn 4 Club", "Heineken Silver Stage"],
+      "aliases": [
+        "Heineken Turn 4 Club",
+        "Heineken Silver Stage"
+      ],
       "partner": "Heineken / Formula 1",
       "venue": "Formula 1 Las Vegas Grand Prix, Turn 4",
       "city": "Las Vegas",
@@ -86,52 +104,66 @@
     {
       "slug": "factory-town",
       "title": "Factory Town",
-      "aliases": ["Factory Town Miami", "Factory Town Hialeah"],
+      "aliases": [
+        "Factory Town Miami",
+        "Factory Town Hialeah"
+      ],
       "partner": "Link Miami Rebels",
       "venue": "Factory Town",
       "city": "Miami",
       "year": "2023-25",
       "tag": "Venue & Site Operations",
       "queries": [
-        "Factory Town Miami venue",
-        "Factory Town Hialeah Miami Music Week",
-        "Factory Town Miami site operations"
+        "Factory Town Miami event gallery",
+        "Factory Town Hialeah Miami Music Week recap",
+        "\"at Factory Town\" Miami 2024 2025"
       ]
     },
     {
       "slug": "l-acoustics-dj",
       "title": "L-Acoustics DJ",
-      "aliases": ["L-Acoustics III Points", "L-Acoustics K Series III Points"],
-      "partner": "L-Acoustics",
-      "venue": "III Points",
+      "aliases": [
+        "L-Acoustics DJ",
+        "S3QU3NC3 stage",
+        "L-ISA 444 stage"
+      ],
+      "partner": "L-Acoustics / III Points",
+      "venue": "III Points, Mana Wynwood",
       "city": "Miami",
       "year": "2025-present",
       "tag": "Technology Implementation",
       "queries": [
-        "L-Acoustics III Points Miami sound system",
-        "\"L-Acoustics\" III Points install",
-        "III Points Miami audio system L-Acoustics"
+        "\"L-Acoustics DJ\" III Points festival spatial audio",
+        "S3QU3NC3 stage III Points L-Acoustics immersive",
+        "L-Acoustics DJ US festival debut Miami"
       ]
     },
     {
       "slug": "black-coffee-race-track",
       "title": "Black Coffee at the Race Track",
-      "aliases": ["Black Coffee Club Space Miami"],
+      "aliases": [
+        "Black Coffee at the Racetrack",
+        "Black Coffee Hialeah Park",
+        "Black Coffee Carlita Kaz James"
+      ],
       "partner": "Club Space",
-      "venue": "Club Space",
+      "venue": "Hialeah Park racetrack",
       "city": "Miami",
       "year": "2026",
       "tag": "Concert & Tour Production",
       "queries": [
-        "Black Coffee Club Space Miami 2026",
-        "\"Black Coffee\" \"Race Track\" Miami",
-        "Club Space Miami Black Coffee residency"
+        "Black Coffee Hialeah Park racetrack Miami Music Week",
+        "\"Black Coffee at the Racetrack\" Club Space",
+        "Black Coffee Carlita Hialeah Park 2026"
       ]
     },
     {
       "slug": "fifa-world-cup-brazil-base-camp",
       "title": "FIFA World Cup Brazil Base Camp",
-      "aliases": ["Brazil base camp World Cup 2026", "Selecao base camp New Jersey"],
+      "aliases": [
+        "Brazil base camp World Cup 2026",
+        "Selecao base camp New Jersey"
+      ],
       "partner": "CBF / FIFA World Cup 26",
       "venue": "Base camp",
       "city": "New Jersey",

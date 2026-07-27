@@ -104,14 +104,37 @@ and without the alias the sweep misses its one real feature.
 
 Pushing that change to `main` triggers a scan of everything.
 
+## Write the queries in their words, not ours
+
+The first sweep reported three entries with no coverage. Two of them were
+well covered; the queries were just wrong, and wrong in the same way both
+times — written from our internal vocabulary instead of the vocabulary of the
+people who publish.
+
+| entry | we filed it as | the press calls it |
+|---|---|---|
+| Black Coffee at the Race Track | Club Space, Miami | **Hialeah Park racetrack**, presented by Club Space |
+| L-Acoustics DJ | a sound-system implementation at III Points | **L-Acoustics DJ**, spatial audio, the **S3QU3NC3 stage** |
+
+Corrected, those two went from zero items to nine each, including FOH and Mix
+— the two live-sound trades that matter most for the Technology vertical.
+
+So when adding an entry: search the venue's real name, the product's real
+name, and the stage's real name. Search what a journalist would type. If a
+sweep comes back empty, assume the query is wrong before assuming the
+coverage does not exist.
+
 ## Where the gaps are
 
-Three entries returned nothing: `l-acoustics-dj`, `black-coffee-race-track`,
-`fifa-world-cup-brazil-base-camp`. For the L-Acoustics install, the realistic
-first placement is an L-Acoustics case study or a trade slot in Mix,
-ProSoundWeb or Live Design rather than consumer press. The other two may
-simply not have happened yet.
+One entry still returns nothing: `fifa-world-cup-brazil-base-camp`. It may
+not have happened yet.
 
-The wider gap is the one at the top of this file: nine projects, zero
-attributed mentions. The fix is not a better scanner — it is being named in
-the release when the next one ships.
+The wider gap is the one at the top of this file: nine projects, **zero**
+attributed mentions. It is worth seeing how close some of them get. The
+L-Acoustics case study describes the exact deployment on the exact stage and
+credits nobody but L-Acoustics and III Points. The EDM Identity feature on
+Red Bull Unforeseen credits the festival's co-founder and its creative
+director. The work is being written about; the name just is not in the copy.
+
+The fix is not a better scanner — it is a line in the release when the next
+one ships.

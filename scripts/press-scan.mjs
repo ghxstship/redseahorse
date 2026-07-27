@@ -47,6 +47,10 @@ const TIER_SCORE = {
   "national": 40, "national-trade": 40, "regional-broadcast": 30,
   "regional-alt-weekly": 28, "regional": 26, "niche-vertical": 24,
   "niche-lifestyle": 22, "primary-partner": 22, "reference": 20,
+  // A photo agency is not authority, it is ASSETS. World Red Eye galleries
+  // are the most reusable thing in the inventory for this kind of work, so
+  // they rank above their editorial weight on purpose.
+  "photo-agency": 26,
   "primary-project": 16, "listing": 10, "blog": 10, "student-press": 8,
   "reviews": 6, "unknown": 12,
 };
@@ -95,6 +99,18 @@ const OUTLET_TIERS = {
   "en.wikipedia.org": ["Wikipedia", "reference"],
   "yelp.com": ["Yelp", "reviews"],
   "nyunews.com": ["Washington Square News", "student-press"],
+  "worldredeye.com": ["World Red Eye", "photo-agency"],
+  "fohonline.com": ["FOH (Front of House)", "national-trade"],
+  "avnation.tv": ["AVNation", "national-trade"],
+  "usitt.org": ["USITT", "reference"],
+  "l-acoustics.com": ["L-Acoustics", "primary-partner"],
+  "magneticmag.com": ["Magnetic Magazine", "niche-vertical"],
+  "edmtunes.com": ["EDMTunes", "niche-vertical"],
+  "timeout.com": ["Time Out", "regional"],
+  "miamiandbeaches.com": ["Greater Miami CVB", "listing"],
+  "iedm.com": ["iEDM", "blog"],
+  "soundforums.net": ["Sound Forums", "blog"],
+  "exronmusic.com": ["Exron Music", "blog"],
 };
 
 // Never inventory ourselves, and never inventory a SERP wrapper.
