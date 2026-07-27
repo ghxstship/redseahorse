@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The Course",
   description: "The GHXSTSHIP Course is the nine-phase XPMS 2.6 experiential production lifecycle: Discover, Design, Advance, Procure, Build, Install, Operate, Amplify, and Close, the same nine gated phases every build runs, from the first conversation to archive handover.",
-  keywords: ["production lifecycle", "XPMS 2.6", "nine-phase production lifecycle", "event production process", "experiential production phases", "production management methodology", "live event production planning"],
+  keywords: ["production lifecycle", "XPMS 2.6", "nine-phase production lifecycle", "event production process", "experiential production phases", "production management methodology", "live event production planning", "ATLVS Coordinate Matrix", "department classes", "90 coordinates"],
   alternates: { canonical: "https://ghxstship.tours/course" },
 };
 
@@ -23,7 +23,18 @@ export default function Page() {
   .ph .exit { margin-top: 12px; font-size: 0.867rem; line-height: 1.6; max-width: 62ch; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
   .ph .exit b { font-size: 0.733rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text); }
   .ph .dels { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  @media (max-width: 720px) { .ph { grid-template-columns: 1fr; gap: 8px; } }
+  .cls { margin-top: clamp(20px, 3vw, 32px); border-top: 2px solid var(--color-divider); max-width: 72rem; }
+  .cl { display: grid; grid-template-columns: 84px 172px 1fr; gap: 2px 20px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--color-divider); }
+  .cl b { font-family: var(--font-heading); font-weight: 800; font-size: 1.07rem; letter-spacing: 0.02em; color: var(--color-accent-700); }
+  .cl h3 { font-size: 1.2rem; margin: 0; }
+  .cl p { margin: 0; font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent); }
+  .clnote { margin-top: 16px; font-size: 0.867rem; color: color-mix(in srgb, var(--color-text) 70%, transparent); }
+  @media (max-width: 720px) {
+    .ph { grid-template-columns: 1fr; gap: 8px; }
+    .cl { grid-template-columns: 84px 1fr; gap: 4px 20px; }
+    .cl p { grid-column: 2; }
+  }
+  @media (max-width: 480px) { .cl { grid-template-columns: 1fr; } .cl p { grid-column: 1; } }
 ` }} />
       
 
@@ -159,6 +170,19 @@ export default function Page() {
   <p className="kicker">The Chart · ATLVS Coordinate Matrix</p>
   <h2 className="sec-h2">90 Coordinates. Nothing Off the Map.</h2>
   <p className="lede">XPMS 2.6 formalizes the ATLVS Coordinate Matrix, the task-management lens over the lifecycle. Every task and work item on a build resolves to exactly one of 90 coordinates: ten department classes (latitude) crossed with the nine gated phases (longitude), written class-by-phase, like 3000xAMP for Marketing × Amplify. Project workspaces own gates 1–4, Discover through Procure; an oversight grid runs gates 5–9, Build through Close. So there is always one cell, one owner, and one place to look.</p>
+  <div className="cls">
+    <div className="cl"><b>0000</b><h3>Executive</h3><p>Leadership and strategy, finance and accounting, legal and risk, insurance and permitting, people, partnerships.</p></div>
+    <div className="cl"><b>1000</b><h3>Creative</h3><p>Creative direction, experiential and environment design, brand and identity, content production, copy.</p></div>
+    <div className="cl"><b>2000</b><h3>Talent</h3><p>Booking and programming, advancing and riders, casting, talent travel and hospitality, settlement.</p></div>
+    <div className="cl"><b>3000</b><h3>Marketing</h3><p>Campaign and brand marketing, social and community, press, sponsorship sales, audience data, media buying.</p></div>
+    <div className="cl"><b>4000</b><h3>Build</h3><p>Temporary structures, scenic and set, custom fabrication, signage and environmental graphics, FF&amp;E, install and de-install.</p></div>
+    <div className="cl"><b>5000</b><h3>Production</h3><p>Audio, lighting, video and LED, rigging and motors, staging, power and distribution, show control, broadcast and capture.</p></div>
+    <div className="cl"><b>6000</b><h3>Operations</h3><p>Crewing and labor, logistics and transport, site and event operations, medical and safety, security, credentialing, waste.</p></div>
+    <div className="cl"><b>7000</b><h3>Experience</h3><p>Guest journey, activations, interactive and immersive, retail and merchandise, sensory and atmosphere, sponsorship fulfillment.</p></div>
+    <div className="cl"><b>8000</b><h3>Hospitality</h3><p>Catering and culinary, bar and beverage, VIP services, lodging, concessions, front of house and guest services.</p></div>
+    <div className="cl"><b>9000</b><h3>Technology</h3><p>IT and networking, connectivity, RF and communications, ticketing and access, point of sale, data and analytics, cybersecurity.</p></div>
+  </div>
+  <p className="clnote">Class is the latitude, phase is the longitude. Every class, phase, and gate is defined in the <Link href="/resources/glossary#department-class">glossary</Link>.</p>
 </section>
 
 <section className="wrap sec-pad">
@@ -168,6 +192,10 @@ export default function Page() {
     <details className="faq-item">
       <summary className="faq-q">How many phases are in the GHXSTSHIP production lifecycle?</summary>
       <div className="faq-a">Nine. The Course follows the XPMS 2.6 standard, nine gated phases in three acts: Plan (Discover, Design, Advance), Build (Procure, Build, Install), and Show (Operate, Amplify, Close). Strike lives inside Operate, and every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix, ten department classes across the nine phases.</div>
+    </details>
+    <details className="faq-item">
+      <summary className="faq-q">What are the ten department classes on the ATLVS Coordinate Matrix?</summary>
+      <div className="faq-a">0000 Executive, 1000 Creative, 2000 Talent, 3000 Marketing, 4000 Build, 5000 Production, 6000 Operations, 7000 Experience, 8000 Hospitality, and 9000 Technology. Each class crosses the nine gated phases to give 90 coordinates, written class-by-phase, like 3000xAMP for Marketing × Amplify.</div>
     </details>
     <details className="faq-item">
       <summary className="faq-q">Can GHXSTSHIP act as the lead producer for an experiential or entertainment project?</summary>
@@ -203,7 +231,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Venue and site operations","name":"Venue and Site Operations","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Venue and site operations, programming, bookings, logistics, crew and workforce, compliance, facility and vendor operations, and day-of operations for events, venues, and activations."}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Tour and talent management","name":"Tour and Talent Management","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Tour and talent management, routing, advancing, artist relations, travel, settlement, and the run of show, city after city."}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","serviceType":"Technology and systems engineering","name":"Technology and Systems Engineering","provider":{"@type":"Organization","name":"GHXSTSHIP"},"areaServed":"Worldwide","description":"Technology and systems engineering, the ATLVS operator console, COMPVSS site and venue operations, the GVTEWAY public interface and marketplace, and the LEG3ND knowledge layer, plus the show technology we specify and install, third-party integrations, data, and analytics."}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many phases are in the GHXSTSHIP production lifecycle?","acceptedAnswer":{"@type":"Answer","text":"Nine. The Course follows the XPMS 2.6 standard, nine gated phases in three acts: Plan (Discover, Design, Advance), Build (Procure, Build, Install), and Show (Operate, Amplify, Close). Strike lives inside Operate, and every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix, ten department classes across the nine phases."}},{"@type":"Question","name":"Can GHXSTSHIP act as the lead producer for an experiential or entertainment project?","acceptedAnswer":{"@type":"Answer","text":"Yes. GHXSTSHIP operates as the lead producer and accountable management team for experiential and entertainment production, owning scope, schedule, budget, crew, vendors, and technology across all nine phases of the XPMS 2.6 lifecycle."}},{"@type":"Question","name":"Do you provide operations leadership?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide venue and site operations leadership: logistics, workforce and crew management, vendor coordination, health, safety and compliance, programming, and day-of operations."}},{"@type":"Question","name":"Do you handle event technology integrations and installs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We implement and integrate event technology: the ATLVS operator console, COMPVSS site and venue operations, the GVTEWAY public interface and marketplace, and the LEG3ND knowledge layer of standard, courses, certifications, and catalog, plus the show technology we specify and install, third-party integrations, on-site installs, data, and analytics. You get the platforms that are live today and the rest as they ship."}}]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many phases are in the GHXSTSHIP production lifecycle?","acceptedAnswer":{"@type":"Answer","text":"Nine. The Course follows the XPMS 2.6 standard, nine gated phases in three acts: Plan (Discover, Design, Advance), Build (Procure, Build, Install), and Show (Operate, Amplify, Close). Strike lives inside Operate, and every work item resolves to one of 90 coordinates on the ATLVS Coordinate Matrix, ten department classes across the nine phases."}},{"@type":"Question","name":"What are the ten department classes on the ATLVS Coordinate Matrix?","acceptedAnswer":{"@type":"Answer","text":"0000 Executive, 1000 Creative, 2000 Talent, 3000 Marketing, 4000 Build, 5000 Production, 6000 Operations, 7000 Experience, 8000 Hospitality, and 9000 Technology. Each class crosses the nine gated phases to give 90 coordinates, written class-by-phase, like 3000xAMP for Marketing × Amplify."}},{"@type":"Question","name":"Can GHXSTSHIP act as the lead producer for an experiential or entertainment project?","acceptedAnswer":{"@type":"Answer","text":"Yes. GHXSTSHIP operates as the lead producer and accountable management team for experiential and entertainment production, owning scope, schedule, budget, crew, vendors, and technology across all nine phases of the XPMS 2.6 lifecycle."}},{"@type":"Question","name":"Do you provide operations leadership?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide venue and site operations leadership: logistics, workforce and crew management, vendor coordination, health, safety and compliance, programming, and day-of operations."}},{"@type":"Question","name":"Do you handle event technology integrations and installs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We implement and integrate event technology: the ATLVS operator console, COMPVSS site and venue operations, the GVTEWAY public interface and marketplace, and the LEG3ND knowledge layer of standard, courses, certifications, and catalog, plus the show technology we specify and install, third-party integrations, on-site installs, data, and analytics. You get the platforms that are live today and the rest as they ship."}}]}` }} />
     </>
   );
 }
