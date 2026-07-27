@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "TV, Film & Broadcast",
-  description: "GHXSTSHIP is a broadcast, film &amp; television production company in Miami \u2014 Las Vegas, Chicago, NY, LA for networks, studios, streamers &amp; brands \u2014 live broadcast, content capture &amp; on-air activations, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Live broadcast, content capture and on-air activations, for networks, studios, streamers and brands. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["broadcast production company", "tv production", "film production", "live broadcast", "content capture", "on-air activations", "set design", "broadcast production Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/tv-film-broadcast" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · TV · Film · Broadcast</p>
     <h1 className="page-h1">TV, Film <span style={{color: 'var(--color-accent-700)'}}>&amp; Broadcast.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service broadcast, film, and television production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For TV, Film &amp; Broadcast, we deliver live broadcast, content capture, and on-air activations — for networks, studios, streamers, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

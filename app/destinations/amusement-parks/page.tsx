@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Amusement Parks",
-  description: "GHXSTSHIP is an amusement park and attraction production company headquartered in Miami \u2014 seasonal overlays, ride and attraction theming, live shows, and park-wide events for parks, operators, and IP holders, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Seasonal overlays, ride and attraction theming, live shows and park-wide events, for parks, operators and IP holders. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["amusement park production company", "theme park seasonal overlay", "attraction theming", "park live show production", "haunt event production", "themed entertainment Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/amusement-parks" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Amusement Parks</p>
     <h1 className="page-h1">Amusement <span style={{color: 'var(--color-accent-700)'}}>Parks.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service sporting event production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver seasonal overlays, attraction theming, live shows, and park-wide events — for parks, operators, and IP holders — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Amusement Parks, we deliver seasonal overlays, attraction theming, live shows, and park-wide events — for parks, operators, and IP holders — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

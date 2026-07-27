@@ -49,42 +49,42 @@ export default function Page() {
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Site Coverall" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Sitewear · GX-SW-AP-001</p><h2>Site Coverall</h2>
-      <div className="row"><span className="price">$148</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Site%20Coverall">Order</a></div></div>
+      <div className="row"><span className="price">$148</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Site%20Coverall">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Hi-Vis Crew Tee" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Sitewear · GX-SW-AP-002</p><h2>Hi-Vis Crew Tee</h2>
-      <div className="row"><span className="price">$44</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Hi-Vis%20Crew%20Tee">Order</a></div></div>
+      <div className="row"><span className="price">$44</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Hi-Vis%20Crew%20Tee">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Skull Flag Tee" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-001</p><h2>Skull Flag Tee</h2>
-      <div className="row"><span className="price">$38</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Skull%20Flag%20Tee">Order</a></div></div>
+      <div className="row"><span className="price">$38</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Skull%20Flag%20Tee">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Reef Night Hoodie" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-002</p><h2>Reef Night Hoodie</h2>
-      <div className="row"><span className="price">$74</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Reef%20Night%20Hoodie">Order</a></div></div>
+      <div className="row"><span className="price">$74</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Reef%20Night%20Hoodie">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Voyage Dad Cap" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Streetwear · GX-ST-AP-004</p><h2>Voyage Dad Cap</h2>
-      <div className="row"><span className="price">$32</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Voyage%20Dad%20Cap">Order</a></div></div>
+      <div className="row"><span className="price">$32</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Voyage%20Dad%20Cap">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Performance Tee" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Performance · GX-PW-AP-001</p><h2>Performance Tee</h2>
-      <div className="row"><span className="price">$42</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Performance%20Tee">Order</a></div></div>
+      <div className="row"><span className="price">$42</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Performance%20Tee">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Track Jacket" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Performance · GX-PW-AP-003</p><h2>Track Jacket</h2>
-      <div className="row"><span className="price">$88</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Track%20Jacket">Order</a></div></div>
+      <div className="row"><span className="price">$88</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Track%20Jacket">Order</a></div></div>
     </article>
     <article className="card prod">
       <figure className="media grayscale"><svg className="ph-mark" role="img" aria-label="GHXSTSHIP skull mark on the Enamel Skull Pin" focusable="false"><use href="#gx-flag"></use></svg></figure>
       <div className="body"><p className="card-kicker">Streetwear · GX-ST-AC-002</p><h2>Enamel Skull Pin</h2>
-      <div className="row"><span className="price">$14</span><a className="btn btn-secondary" href="mailto:hello@ghxstship.tours?subject=Store%20order%20-%20Enamel%20Skull%20Pin">Order</a></div></div>
+      <div className="row"><span className="price">$14</span><a className="btn btn-secondary" href="mailto:sos@ghxstship.pro?subject=Store%20order%20-%20Enamel%20Skull%20Pin">Order</a></div></div>
     </article>
   </div>
   <p className="store-note text-muted">Secure checkout powered by GVTEWAY · Complimentary crew shipping over $100 · Product photography drops in as the line ships</p>

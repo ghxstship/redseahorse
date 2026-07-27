@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Immersive Experiences",
-  description: "GHXSTSHIP is an immersive experience design studio in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, museums &amp; cultural institutions \u2014 narrative installations and immersive worlds audiences step inside, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Narrative installations and immersive worlds audiences step inside, for brands, museums and cultural institutions. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["immersive experience design", "narrative installations", "immersive worlds", "interactive technology", "projection design", "spatial design", "immersive production Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/immersive-experiences" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Immersive</p>
     <h1 className="page-h1">Immersive <span style={{color: 'var(--color-accent-700)'}}>Experiences.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service immersive experience design studio headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We build narrative installations and immersive worlds audiences step inside — for brands, museums, and cultural institutions — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Immersive Experiences, we build narrative installations and immersive worlds audiences step inside — for brands, museums, and cultural institutions — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

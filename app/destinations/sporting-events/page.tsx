@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sporting Events",
-  description: "GHXSTSHIP is a sporting event production company in Miami \u2014 Las Vegas, Chicago, NY, LA for leagues, teams, brands &amp; venues \u2014 stadium activations, fan experiences &amp; game-day production, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Stadium activations, fan experiences and game-day production, for leagues, teams, brands and venues. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["sporting event production company", "stadium activations", "fan experience design", "game-day production", "broadcast-ready staging", "sponsorship integration", "sports production Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/sporting-events" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Sporting Events</p>
     <h1 className="page-h1">Sporting <span style={{color: 'var(--color-accent-700)'}}>Events.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service sporting event production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver stadium activations, fan experiences, and game-day production — for leagues, teams, brands, and venues — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Sporting Events, we deliver stadium activations, fan experiences, and game-day production — for leagues, teams, brands, and venues — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

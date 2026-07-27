@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Brand Activations",
-  description: "GHXSTSHIP is a brand activation agency in Miami \u2014 Las Vegas, Chicago, NY, LA for brands, agencies &amp; creative directors \u2014 experiential marketing, pop-ups &amp; brand environments that convert, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Experiential marketing, pop-ups and brand environments that convert attention, for brands, agencies and creative directors. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["brand activation agency", "experiential marketing", "brand pop-ups", "brand environments", "activation fabrication", "experiential production", "brand activation Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/brand-activations" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Brand Activations</p>
     <h1 className="page-h1">Brand <span style={{color: 'var(--color-accent-700)'}}>Activations.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service brand activation agency headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We design and build experiential marketing, pop-ups, and brand environments that convert attention — for brands, agencies, and creative directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Brand Activations, we design and build experiential marketing, pop-ups, and brand environments that convert attention — for brands, agencies, and creative directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Festival Production",
-  description: "GHXSTSHIP is a festival production company in Miami \u2014 Las Vegas, Chicago, NY, LA for promoters, brands &amp; production directors \u2014 multi-stage infrastructure, staging, technical production &amp; headliner experiences, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Multi-stage festival infrastructure, staging, technical production and headliner experiences, for promoters, brands and production directors. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["festival production company", "multi-stage festival production", "festival infrastructure", "festival staging", "technical production", "headliner experiences", "festival production Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/festival-production" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Festivals</p>
     <h1 className="page-h1">Festival <span style={{color: 'var(--color-accent-700)'}}>Production.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service festival production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver multi-stage festival infrastructure, staging, technical production, and headliner experiences at scale — for promoters, brands, and production directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Festival Production, we deliver multi-stage festival infrastructure, staging, technical production, and headliner experiences at scale — for promoters, brands, and production directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

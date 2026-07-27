@@ -31,7 +31,8 @@ export default function Page() {
 
 <section className="wrap sec-pad-sm"><div className="read">
   <h2>Our Standard</h2>
-  <p>ghxstship.tours targets conformance with the Web Content Accessibility Guidelines, WCAG 2.2, Level AA. This aligns with the accessibility requirements referenced by the Americans with Disabilities Act in the United States, EN 301 549 in the European Union, and comparable standards internationally.</p>
+  <p>ghxstship.tours targets conformance with the <strong>Web Content Accessibility Guidelines (WCAG) 2.2, Level AA</strong>. That single standard is what the rules in most of our markets point at: the Americans with Disabilities Act and Section 508 in the United States, the <strong>European Accessibility Act</strong> and EN 301 549 across the EU, the Accessibility for Ontarians with Disabilities Act in Canada, and comparable law elsewhere.</p>
+  <p><strong>Conformance status: partially conformant.</strong> Partially conformant means most of the site meets the standard and the exceptions are named below rather than hidden. This is a self-assessment, carried out by the team that built the site; we have not yet commissioned an independent audit.</p>
 
   <h2>What We've Built</h2>
   <ul>
@@ -51,8 +52,10 @@ export default function Page() {
   </ul>
 
   <h2>Tell Us</h2>
-  <p>If any part of this site is hard to use with assistive technology, or you need content in another format, email <a href="mailto:hello@ghxstship.tours">hello@ghxstship.tours</a> with the page address and what went wrong. A human reads every message, and access issues go to the front of the line.</p>
-  <p>This statement was last reviewed on July 24, 2026.</p>
+  <p>If any part of this site is hard to use with assistive technology, or you need content in another format, email <a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a> with the page address and what went wrong. A human reads every message and we aim to reply within <strong>five business days</strong>. Access issues go to the front of the line, ahead of feature work.</p>
+  <p>If our answer does not resolve it, say so and it escalates to the person who owns the site rather than going quiet. You also keep whatever right of complaint your national law gives you.</p>
+  <p>Assessed against WCAG 2.2 Level AA by self-evaluation, using automated contrast measurement across every route in both themes, keyboard-only walkthroughs, and manual inspection of headings, landmarks, labels, and target sizes.</p>
+  <p>This statement was prepared and last reviewed on <strong>27 July 2026</strong>, following the addition of light, dark, and system theming.</p>
 </div></section>
 
 <section className="band-dark close-cta"><div className="wrap">

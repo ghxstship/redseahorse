@@ -29,7 +29,7 @@
 
   function getMailto() {
     var m = document.querySelector('meta[name="ghxst-form-mailto"]');
-    return (m && m.getAttribute("content")) || "hello@ghxstship.tours";
+    return (m && m.getAttribute("content")) || "sos@ghxstship.pro";
   }
 
   function labelText(field) {

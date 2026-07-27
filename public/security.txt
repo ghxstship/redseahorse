@@ -1,0 +1,8 @@
+# Coordinated disclosure for ghxstship.tours (RFC 9116).
+# We answer security reports the same way we answer access reports: a person
+# reads them, and they go to the front of the line.
+Contact: mailto:sos@ghxstship.pro
+Expires: 2027-07-27T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://ghxstship.tours/.well-known/security.txt
+Policy: https://ghxstship.tours/terms/

@@ -51,10 +51,10 @@ export default function Page() {
     <aside className="rail">
       <div className="blk"><p className="lbl">Email</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
       <div className="blk"><p className="lbl">Headquarters &amp; Regional</p>
-        <div className="office"><p className="city">Miami HQ</p><a href="mailto:miami@ghxstship.pro">miami@ghxstship.pro</a></div>
-        <div className="office"><p className="city">Chicago</p><a href="mailto:chicago@ghxstship.pro">chicago@ghxstship.pro</a></div>
-        <div className="office"><p className="city">Los Angeles</p><a href="mailto:losangeles@ghxstship.pro">losangeles@ghxstship.pro</a></div>
-        <div className="office"><p className="city">New York City</p><a href="mailto:newyork@ghxstship.pro">newyork@ghxstship.pro</a></div>
+        <div className="office"><p className="city">Miami HQ</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
+        <div className="office"><p className="city">Chicago</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
+        <div className="office"><p className="city">Los Angeles</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
+        <div className="office"><p className="city">New York City</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>
       </div>
       <div className="blk"><p className="lbl">Satellite Offices</p>
         <div className="office"><p className="city">Nashville · Denver · Las Vegas · Phoenix</p><a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a></div>

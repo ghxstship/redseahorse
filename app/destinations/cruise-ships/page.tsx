@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cruise Ships",
-  description: "GHXSTSHIP is a cruise ship entertainment production company headquartered in Miami \u2014 onboard venue production, production shows, dry-dock installs, and embarkation activations for cruise lines, shipyards, and brands, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Onboard venue production, production shows, dry-dock installs and embarkation activations, for cruise lines, shipyards and brands. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["cruise ship entertainment production", "onboard venue production", "cruise production shows", "dry-dock install", "shipboard AV integration", "embarkation activation", "cruise line entertainment Miami"],
   alternates: { canonical: "https://ghxstship.tours/destinations/cruise-ships" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Cruise Ships</p>
     <h1 className="page-h1">Cruise <span style={{color: 'var(--color-accent-700)'}}>Ships.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service sporting event production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver onboard venue production, production shows, dry-dock installs, and embarkation activations — for cruise lines, shipyards, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Cruise Ships, we deliver onboard venue production, production shows, dry-dock installs, and embarkation activations — for cruise lines, shipyards, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

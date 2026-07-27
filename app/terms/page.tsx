@@ -28,7 +28,7 @@ export default function Page() {
   <p className="kicker">Legal</p>
   <h1 className="page-h1">Terms of Use.</h1>
   <p className="lede">These terms govern your use of this website. Reading a website shouldn't require a law degree, so we've kept them short and in plain language. By using the site, you agree to them.</p>
-  <p className="eff" style={{marginTop: '16px'}}>Effective July 24, 2026</p>
+  <p className="eff" style={{marginTop: '16px'}}>Effective July 27, 2026</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -68,8 +68,14 @@ export default function Page() {
   <h2>Governing Law</h2>
   <p>These terms are governed by the laws of the State of Florida, without regard to its conflict of law rules. Any dispute arising from these terms or your use of the site will be brought in the state or federal courts located in Miami-Dade County, Florida, and you consent to their jurisdiction.</p>
 
+  <h2>If You Are a Consumer in the UK, EU, or Elsewhere</h2>
+  <p>Consumer protection law in your country may give you rights that a contract cannot take away. Nothing on this page removes them. Where local mandatory law conflicts with the governing-law and venue clause above, local law wins for you, and the rest of these terms stay in force. The limitations of liability apply only as far as your law permits.</p>
+
+  <h2>Reporting a Security Issue</h2>
+  <p>If you find a vulnerability in this site, tell us at <a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a> and give us reasonable time to fix it before disclosing it publicly. Our machine-readable policy is at <span>/.well-known/security.txt</span>. Testing that stays within the acceptable-use rules above, does not touch other people's data, and does not degrade the service for anyone else is welcome, and we will not pursue you for it.</p>
+
   <h2>Contact</h2>
-  <p>Questions about these terms go to <a href="mailto:hello@ghxstship.tours">hello@ghxstship.tours</a>.<br/>
+  <p>Questions about these terms go to <a href="mailto:sos@ghxstship.pro">sos@ghxstship.pro</a>.<br/>
   GHXSTSHIP Industries LLC · Miami, Florida</p>
 
 </div></section>

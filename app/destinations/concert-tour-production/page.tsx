@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Concert & Tour Production",
-  description: "GHXSTSHIP is a concert &amp; tour production company in Miami \u2014 Las Vegas, Chicago, NY, LA for artists, tour managers &amp; promoters \u2014 show design, multi-city routing, technical production &amp; backline, via our 9-phase XPMS 2.6 lifecycle.",
+  description: "Show design, technical production and multi-city routing for live music, for artists, tour managers and promoters. From GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami, running the nine-phase XPMS 2.6 production lifecycle.",
   keywords: ["concert tour production company", "tour production", "show design", "multi-city routing", "tour management", "backline", "concert production Miami", "tour and talent management"],
   alternates: { canonical: "https://ghxstship.tours/destinations/concert-tour-production" },
 };
@@ -30,7 +30,7 @@ export default function Page() {
   <div>
     <p className="kicker">Industry · Concerts &amp; Tours</p>
     <h1 className="page-h1">Concerts <span style={{color: 'var(--color-accent-700)'}}>&amp; Tours.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service concert and tour production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our nine-phase XPMS 2.6 production lifecycle, with the road itself run by our <Link href="/services/tour-talent-management">Tour &amp; Talent Management</Link> vertical.</p>
+    <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. For Concert &amp; Tour Production, we deliver show design, technical production, and multi-city routing for live music — for artists, tour managers, and promoters — through our nine-phase XPMS 2.6 production lifecycle, with the road itself run by our Tour &amp; Talent Management vertical.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>

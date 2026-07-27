@@ -1,0 +1,75 @@
+{
+  "$comment": "Who we are, stated once. Every industry page opens by naming the company, and before this file each one named a DIFFERENT company: an agency on brand-activations, a studio on immersive-experiences, a production company on five more, and — on cruise-ships and amusement-parks — a sporting event production company, which is neither true nor tailored, just copy-paste. The rule is: the identity clause never changes, the delivery clause always does. scripts/normalize-copy.py enforces it.",
+
+  "identity": {
+    "long": "GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix.",
+    "short": "GHXSTSHIP, a professional services firm for live and experiential projects, headquartered in Miami",
+    "$why": "Matches about.html and the root layout metadata verbatim. One entity description sitewide is also what search and answer engines need to resolve us to a single thing — eight descriptions is eight weaker entities."
+  },
+
+  "offices": {
+    "headquarters": "Miami",
+    "regional": ["Los Angeles", "Chicago", "New York City"],
+    "satellite": ["Nashville", "Denver", "Las Vegas", "Phoenix"],
+    "$why": "The old meta descriptions read 'in Miami — Las Vegas, Chicago, NY, LA', which is the pre-2026 hierarchy: it promotes Las Vegas to the front and drops the four satellites. Kept here so the tiers cannot drift apart again."
+  },
+
+  "industries": {
+    "festival-production": {
+      "label": "Festival Production",
+      "delivers": "multi-stage festival infrastructure, staging, technical production, and headliner experiences at scale",
+      "audiences": "promoters, brands, and production directors",
+      "metaLead": "Multi-stage festival infrastructure, staging, technical production and headliner experiences, for promoters, brands and production directors"
+    },
+    "concert-tour-production": {
+      "label": "Concert & Tour Production",
+      "delivers": "show design, technical production, and multi-city routing for live music",
+      "audiences": "artists, tour managers, and promoters",
+      "tailPlus": ", with the road itself run by our Tour &amp; Talent Management vertical",
+      "metaLead": "Show design, technical production and multi-city routing for live music, for artists, tour managers and promoters"
+    },
+    "brand-activations": {
+      "label": "Brand Activations",
+      "delivers": "experiential marketing, pop-ups, and brand environments that convert attention",
+      "audiences": "brands, agencies, and creative directors",
+      "verb": "design and build",
+      "metaLead": "Experiential marketing, pop-ups and brand environments that convert attention, for brands, agencies and creative directors"
+    },
+    "immersive-experiences": {
+      "label": "Immersive Experiences",
+      "delivers": "narrative installations and immersive worlds audiences step inside",
+      "audiences": "brands, museums, and cultural institutions",
+      "verb": "build",
+      "metaLead": "Narrative installations and immersive worlds audiences step inside, for brands, museums and cultural institutions"
+    },
+    "cruise-ships": {
+      "label": "Cruise Ships",
+      "delivers": "onboard venue production, production shows, dry-dock installs, and embarkation activations",
+      "audiences": "cruise lines, shipyards, and brands",
+      "metaLead": "Onboard venue production, production shows, dry-dock installs and embarkation activations, for cruise lines, shipyards and brands"
+    },
+    "amusement-parks": {
+      "label": "Amusement Parks",
+      "delivers": "seasonal overlays, attraction theming, live shows, and park-wide events",
+      "audiences": "parks, operators, and IP holders",
+      "metaLead": "Seasonal overlays, ride and attraction theming, live shows and park-wide events, for parks, operators and IP holders"
+    },
+    "sporting-events": {
+      "label": "Sporting Events",
+      "delivers": "stadium activations, fan experiences, and game-day production",
+      "audiences": "leagues, teams, brands, and venues",
+      "metaLead": "Stadium activations, fan experiences and game-day production, for leagues, teams, brands and venues"
+    },
+    "tv-film-broadcast": {
+      "label": "TV, Film & Broadcast",
+      "delivers": "live broadcast, content capture, and on-air activations",
+      "audiences": "networks, studios, streamers, and brands",
+      "metaLead": "Live broadcast, content capture and on-air activations, for networks, studios, streamers and brands"
+    }
+  },
+
+  "contact": {
+    "primary": "sos@ghxstship.pro",
+    "$why": "One address. The city mailboxes (miami@, chicago@, losangeles@, newyork@) and hello@ghxstship.tours were published across 38 places and none of them exist — every one was a lead with nowhere to land. .pro is the mail domain; .tours is the website only."
+  }
+}
