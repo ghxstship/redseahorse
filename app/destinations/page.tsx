@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Industries",
-  description: "The industries GHXSTSHIP serves: festivals and cultural moments, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast \u2014 plus health and wellness, hospitality, luxury retail, and motorsports.",
+  description: "The industries GHXSTSHIP serves: festivals and cultural moments, concerts and tours, brand activations, immersive experiences, sporting events, and TV, film and broadcast \u2014 plus premium hospitality, luxury retail, health and wellness, auto and motorsports, corporate and private, and philanthropy.",
   keywords: ["festival production company", "concert tour production", "brand activation agency", "immersive experience design", "sporting event production", "broadcast production company", "experiential production industries"],
   alternates: { canonical: "https://ghxstship.tours/destinations" },
 };
@@ -76,11 +76,12 @@ export default function Page() {
   <p className="kicker">Also Where We Work</p>
   <h2 style={{fontSize: 'clamp(24px,3vw,34px)'}}>Beyond the Featured Eight.</h2>
   <div className="also-tags">
-    <span className="tag tag-neutral">Health &amp; Wellness</span>
     <span className="tag tag-neutral">Premium Hospitality</span>
     <span className="tag tag-neutral">Luxury Retail</span>
-    <span className="tag tag-neutral">Water &amp; Motorsports</span>
+    <span className="tag tag-neutral">Health &amp; Wellness</span>
+    <span className="tag tag-neutral">Auto &amp; Motorsports</span>
     <span className="tag tag-neutral">Corporate &amp; Private</span>
+    <span className="tag tag-neutral">Philanthropy</span>
   </div>
 </div></section>
 
