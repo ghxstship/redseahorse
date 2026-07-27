@@ -44,7 +44,7 @@ export default function Page() {
 <section className="wrap sec-pad-sm">
   <p className="kicker">The Route</p>
   <h2 className="sec-h2">The 9-Phase Lifecycle.</h2>
-  <p className="lede">Discover to Close — the XPMS 2.6 standard, one way of working across festivals, tours, activations, immersive, sporting, and broadcast. Nine gates in three acts: Plan runs gates 1–3, Build runs 4–6, Show runs 7–9.</p>
+  <p className="lede">Discover to Close — the XPMS 2.6 standard, one way of working across festivals, tours, activations, immersive, cruise, parks, sporting, and broadcast. Nine gates in three acts: Plan runs gates 1–3, Build runs 4–6, Show runs 7–9.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>

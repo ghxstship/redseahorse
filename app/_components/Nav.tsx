@@ -35,6 +35,8 @@ const LINKS: NavLink[] = [
       { href: "/destinations/concert-tour-production/", label: "Concert & Tour Production" },
       { href: "/destinations/brand-activations/", label: "Brand Activations" },
       { href: "/destinations/immersive-experiences/", label: "Immersive Experiences" },
+      { href: "/destinations/cruise-ships/", label: "Cruise Ships" },
+      { href: "/destinations/amusement-parks/", label: "Amusement Parks" },
       { href: "/destinations/sporting-events/", label: "Sporting Events" },
       { href: "/destinations/tv-film-broadcast/", label: "TV, Film & Broadcast" },
     ],

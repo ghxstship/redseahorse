@@ -128,7 +128,8 @@ index, about, team, locations, contact, platforms, pricing, store, gallery,
 course, privacy, terms, accessibility, 404, services/{index, experiential-design-production,
 venue-site-operations, tour-talent-management, technology-systems-implementation},
 destinations/{index, festival-production, concert-tour-production,
-brand-activations, immersive-experiences, sporting-events, tv-film-broadcast},
+brand-activations, immersive-experiences, cruise-ships, amusement-parks,
+sporting-events, tv-film-broadcast},
 work/{index, salvage-city-supper-club}, careers/{index, role, apply},
 resources/{index, blog, glossary, the-experiential-producer}.
 

@@ -53,6 +53,14 @@ export default function Page() {
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=700&q=80&auto=format&fit=crop" alt="Immersive light installation surrounding an audience" loading="lazy" width="700" height="525"/></figure>
       <div className="body"><div className="bar"></div><h2>Immersive Experiences</h2><p>Narrative installations and immersive worlds audiences step inside.</p><span className="more">View industry →</span></div>
     </Link>
+    <Link href="/destinations/cruise-ships" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=700&q=80&auto=format&fit=crop" alt="Cruise ships docked at a port terminal" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Cruise Ships</h2><p>Onboard venue production, production shows, dry-dock installs, and embarkation activations.</p><span className="more">View industry →</span></div>
+    </Link>
+    <Link href="/destinations/amusement-parks" className="mcard">
+      <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=700&q=80&auto=format&fit=crop" alt="Swing carousel ride turning above an amusement park midway" loading="lazy" width="700" height="525"/></figure>
+      <div className="body"><div className="bar"></div><h2>Amusement Parks</h2><p>Seasonal overlays, attraction theming, live shows, and park-wide events.</p><span className="more">View industry →</span></div>
+    </Link>
     <Link href="/destinations/sporting-events" className="mcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=700&q=80&auto=format&fit=crop" alt="Stadium crowd on game day" loading="lazy" width="700" height="525"/></figure>
       <div className="body"><div className="bar"></div><h2>Sporting Events</h2><p>Stadium activations, fan experiences, and game-day production.</p><span className="more">View industry →</span></div>
@@ -66,7 +74,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad-sm">
   <p className="kicker">Also Where We Work</p>
-  <h2 style={{fontSize: 'clamp(24px,3vw,34px)'}}>Beyond the Big Six.</h2>
+  <h2 style={{fontSize: 'clamp(24px,3vw,34px)'}}>Beyond the Featured Eight.</h2>
   <div className="also-tags">
     <span className="tag tag-neutral">Health &amp; Wellness</span>
     <span className="tag tag-neutral">Premium Hospitality</span>

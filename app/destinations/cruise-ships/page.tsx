@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Festival Production",
-  description: "GHXSTSHIP is a festival production company in Miami \u2014 Las Vegas, Chicago, NY, LA for promoters, brands &amp; production directors \u2014 multi-stage infrastructure, staging, technical production &amp; headliner experiences, via our 9-phase XPMS 2.6 lifecycle.",
-  keywords: ["festival production company", "multi-stage festival production", "festival infrastructure", "festival staging", "technical production", "headliner experiences", "festival production Miami"],
-  alternates: { canonical: "https://ghxstship.tours/destinations/festival-production" },
+  title: "Cruise Ships",
+  description: "GHXSTSHIP is a cruise ship entertainment production company headquartered in Miami \u2014 onboard venue production, production shows, dry-dock installs, and embarkation activations for cruise lines, shipyards, and brands, via our 9-phase XPMS 2.6 lifecycle.",
+  keywords: ["cruise ship entertainment production", "onboard venue production", "cruise production shows", "dry-dock install", "shipboard AV integration", "embarkation activation", "cruise line entertainment Miami"],
+  alternates: { canonical: "https://ghxstship.tours/destinations/cruise-ships" },
 };
 
 export default function Page() {
@@ -28,36 +28,36 @@ export default function Page() {
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) clamp(40px,6vw,72px)'}}><div className="hero-grid">
   <div>
-    <p className="kicker">Industry · Festivals</p>
-    <h1 className="page-h1">Festival <span style={{color: 'var(--color-accent-700)'}}>Production.</span></h1>
-    <p className="lede">GHXSTSHIP is a full-service festival production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver multi-stage festival infrastructure, staging, technical production, and headliner experiences at scale — for promoters, brands, and production directors — through our nine-phase XPMS 2.6 production lifecycle.</p>
+    <p className="kicker">Industry · Cruise Ships</p>
+    <h1 className="page-h1">Cruise <span style={{color: 'var(--color-accent-700)'}}>Ships.</span></h1>
+    <p className="lede">GHXSTSHIP is a full-service sporting event production company headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver onboard venue production, production shows, dry-dock installs, and embarkation activations — for cruise lines, shipyards, and brands — through our nine-phase XPMS 2.6 production lifecycle.</p>
     <div className="cta-row" style={{marginTop: '22px'}}>
       <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
       <Link href="/destinations" className="btn btn-secondary btn-lg">All Industries</Link>
     </div>
   </div>
   <figure className="hero-fig grayscale">
-    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80&auto=format&fit=crop" alt="Festival crowd under multi-stage production lighting" width="720" height="900"/>
+    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=900&q=80&auto=format&fit=crop" alt="Cruise ships docked at a port terminal" width="720" height="900"/>
   </figure>
 </div></section>
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">What We Build</p>
-  <h2 className="sec-h2">Everything a Festival Needs.</h2>
+  <h2 className="sec-h2">Entertainment at Sea.</h2>
   <div className="grid3" style={{marginTop: '24px'}}>
-    <div className="cap">Site Design &amp; Infrastructure</div>
-    <div className="cap">Multi-Stage Design &amp; Scenic Build</div>
-    <div className="cap">Audio, Lighting, Video &amp; Rigging</div>
-    <div className="cap">Power &amp; Distribution</div>
-    <div className="cap">Headliner &amp; Talent Experiences</div>
-    <div className="cap">Permits, Safety &amp; Compliance</div>
+    <div className="cap">Onboard Venue Production</div>
+    <div className="cap">Production Shows &amp; Revues</div>
+    <div className="cap">Dry-Dock &amp; Refit Installs</div>
+    <div className="cap">Audio, Lighting &amp; Video</div>
+    <div className="cap">Embarkation &amp; Terminal Activations</div>
+    <div className="cap">Marine Safety &amp; Compliance</div>
   </div>
 </div></section>
 
 <section className="wrap sec-pad">
   <p className="kicker">The Process</p>
-  <h2 className="sec-h2">Your Festival, Nine Phases.</h2>
-  <p className="lede">Every festival runs the same nine phases — from first consultation to load-out and analytics.</p>
+  <h2 className="sec-h2">Cruise, Nine Phases.</h2>
+  <p className="lede">Same nine phases on every project, Discover to Close. You watch each one happen.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
@@ -74,35 +74,36 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Who We Build For</p>
-  <h2 className="sec-h2">Built for the People Who Build Festivals.</h2>
-  <p className="lede">Festival production at GHXSTSHIP is built for the producers and partners accountable for the show.</p>
+  <h2 className="sec-h2">Built for Lines, Yards &amp; Brands.</h2>
+  <p className="lede">Cruise production at GHXSTSHIP is built for the partners accountable for what happens onboard.</p>
   <div className="aud-tags">
-    <span className="tag tag-neutral">Festival Promoters</span>
-    <span className="tag tag-neutral">Brands &amp; Sponsors</span>
-    <span className="tag tag-neutral">Talent Buyers</span>
-    <span className="tag tag-neutral">Production Directors</span>
-    <span className="tag tag-neutral">Venue &amp; City Partners</span>
+    <span className="tag tag-neutral">Cruise Lines</span>
+    <span className="tag tag-neutral">Shipyards &amp; Refit</span>
+    <span className="tag tag-neutral">Entertainment Directors</span>
+    <span className="tag tag-neutral">Charter Operators</span>
+    <span className="tag tag-neutral">Brands</span>
   </div>
 </div></section>
 
 <section className="wrap sec-pad">
   <p className="kicker">Selected Work</p>
-  <h2 className="sec-h2">Festivals We've Built.</h2>
+  <h2 className="sec-h2">Sailings We've Built.</h2>
   <div style={{border: '1px solid var(--color-divider)', padding: 'clamp(28px,4vw,48px)', textAlign: 'center', marginTop: '24px'}}>
     <h3 style={{fontSize: '21px'}}>In Production</h3>
-    <p className="text-muted" style={{maxWidth: '44ch', marginInline: 'auto'}}>New festival work is underway. Want to be the first case study? Start a project.</p>
+    <p className="text-muted" style={{maxWidth: '44ch', marginInline: 'auto'}}>New cruise work is underway. Want to be the first case study? Start a project.</p>
     <Link href="/contact" className="btn btn-secondary" style={{marginTop: '8px'}}>Start a Project</Link>
   </div>
+  <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all work →</Link></p>
 </section>
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">The Services</p>
-  <h2 className="sec-h2">Four Verticals Behind Every Festival.</h2>
-  <p className="lede">One accountable partner, four services carrying the site: the experience designed and produced, the grounds operated, the talent managed, and the systems wired to run it all.</p>
+  <h2 className="sec-h2">Four Verticals Behind Every Sailing.</h2>
+  <p className="lede">One accountable partner, four services carrying the ship: the venue designed and produced, the shipboard footprint operated, the cast and guest talent managed, and the systems wired to run it all.</p>
   <div className="grid4" style={{marginTop: '28px'}}>
-    <article className="svc-card"><div className="bar"></div><p className="role">The Experiential Producer</p><h3>Experiential Design &amp; Production</h3><p>Concept, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
-    <article className="svc-card"><div className="bar"></div><p className="role">The Operations Director</p><h3>Venue &amp; Site Operations</h3><p>Site logistics, staffing, safety, facility and vendor operations, clockwork at festival scale.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
-    <article className="svc-card"><div className="bar"></div><p className="role">The Tour Manager</p><h3>Tour &amp; Talent Management</h3><p>Headliner advancing, artist relations, travel, and the run of show across every stage.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Experiential Producer</p><h3>Experiential Design &amp; Production</h3><p>Theatres, lounges, and deck venues designed, fabricated, and finished to marine spec.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Operations Director</p><h3>Venue &amp; Site Operations</h3><p>Shipboard logistics, crew, safety, and turnaround-day operations at full occupancy.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Tour Manager</p><h3>Tour &amp; Talent Management</h3><p>Resident casts, guest headliners, and rotation logistics across the sailing calendar.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Implementation</h3><p>ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, live and in build, so the plan, the crew, and the public side live in one place.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
   </div>
 </div></section>
@@ -110,7 +111,7 @@ export default function Page() {
 <section className="wrap sec-pad">
   <p className="kicker">Why GHXSTSHIP</p>
   <h2 className="sec-h2">The Difference.</h2>
-  <p className="lede">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all nine phases ourselves, and we build the technology that powers it.</p>
+  <p className="lede">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all nine phases ourselves, and we build the technology that runs them.</p>
   <div className="grid3" style={{marginTop: '24px'}}>
     <div className="card"><p className="card-title">End to End</p><p className="card-body">All nine phases, one accountable crew running the whole build.</p></div>
     <div className="card"><p className="card-title">We Implement the Tech</p><p className="card-body">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, built in-house, live and in build, and implemented through <Link href="/services/technology-systems-implementation">Technology &amp; Systems Implementation</Link>.</p></div>
@@ -120,22 +121,22 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Answers</p>
-  <h2 className="sec-h2">Festival Production FAQ.</h2>
+  <h2 className="sec-h2">Cruise FAQ.</h2>
   <div style={{marginTop: '16px', borderTop: '1px solid var(--color-divider)'}}>
     <details className="faq-item" open><summary className="faq-q">How is GHXSTSHIP different from a traditional agency?</summary><div className="faq-a">Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>, with logistics, crew, compliance, and analytics run by its own team.</div></details>
-    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for festivals?</summary><div className="faq-a">End-to-end festival production: site and infrastructure, multi-stage design and build, technical production across audio, lighting, video, rigging, and power, and headliner experiences — managed through our nine-phase XPMS 2.6 production lifecycle.</div></details>
-    <details className="faq-item"><summary className="faq-q">Who is festival production for?</summary><div className="faq-a">Festival promoters, brands, talent buyers, and production directors who need one accountable partner from first consultation to load-out.</div></details>
-    <details className="faq-item"><summary className="faq-q">What size festivals can you produce?</summary><div className="faq-a">From boutique single-stage events to 50,000-plus-capacity multi-stage festivals, with full infrastructure and logistics.</div></details>
+    <details className="faq-item"><summary className="faq-q">What does GHXSTSHIP do for cruise ships?</summary><div className="faq-a">End-to-end shipboard entertainment production: onboard venue and theatre production, production shows and revues, audio, lighting and video integration, dry-dock and refit installs, embarkation and terminal activations, and at-sea operations — on our nine-phase XPMS 2.6 lifecycle.</div></details>
+    <details className="faq-item"><summary className="faq-q">Who is cruise production for?</summary><div className="faq-a">Cruise lines, shipyards and refit yards, onboard entertainment directors, charter operators, and brands taking an activation to sea.</div></details>
+    <details className="faq-item"><summary className="faq-q">Can you work to a dry-dock window?</summary><div className="faq-a">Yes. Dry dock is a fixed window with no slippage, so the schedule is built backward from the undocking date and the long-lead items are ordered in Procure, well ahead of the yard period.</div></details>
   </div>
 </div></section>
 
 <section className="wrap sec-pad-sm">
   <p className="kicker">More Industries</p>
   <div className="more-mkts">
+    <Link href="/destinations/festival-production" className="chip">Festival Production</Link>
     <Link href="/destinations/concert-tour-production" className="chip">Concerts &amp; Tours</Link>
     <Link href="/destinations/brand-activations" className="chip">Brand Activations</Link>
     <Link href="/destinations/immersive-experiences" className="chip">Immersive Experiences</Link>
-    <Link href="/destinations/cruise-ships" className="chip">Cruise Ships</Link>
     <Link href="/destinations/amusement-parks" className="chip">Amusement Parks</Link>
     <Link href="/destinations/sporting-events" className="chip">Sporting Events</Link>
     <Link href="/destinations/tv-film-broadcast" className="chip">TV, Film &amp; Broadcast</Link>
@@ -144,7 +145,7 @@ export default function Page() {
 
 <section className="band-dark close-cta"><div className="wrap">
   <p className="kicker">Ready When You Are</p>
-  <h2>Build Your <span className="a">Festival.</span></h2>
+  <h2>Build Your <span className="a">Game Day.</span></h2>
   <p className="lede" style={{marginInline: 'auto'}}>Tell us what you're building. We scope it, crew it, run the nine phases, and go live, on time and on budget.</p>
   <div className="cta-row" style={{justifyContent: 'center', marginTop: '22px'}}>
     <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>
@@ -156,13 +157,13 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Festival Production","serviceType":"Festival production","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Multi-stage festival production, infrastructure, staging, technical production, and headliner experiences at scale, delivered through the GHXSTSHIP nine-phase XPMS 2.6 production lifecycle.","audience":{"@type":"Audience","audienceType":"Festival promoters, brands, and production directors"},"url":"https://ghxstship.tours/destinations/festival-production"}` }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"Festival Production","item":"https://ghxstship.tours/destinations/festival-production"}]}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"Service","name":"Cruise Ships","serviceType":"Cruise ship entertainment production","provider":{"@type":"Organization","name":"GHXSTSHIP","url":"https://ghxstship.tours/"},"areaServed":"Worldwide","description":"Onboard venue production, production shows, dry-dock installs, and embarkation activations, delivered through the GHXSTSHIP nine-phase XPMS 2.6 production lifecycle.","audience":{"@type":"Audience","audienceType":"Cruise lines, shipyards, entertainment directors, and brands"},"url":"https://ghxstship.tours/destinations/cruise-ships"}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ghxstship.tours/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://ghxstship.tours/destinations"},{"@type":"ListItem","position":3,"name":"Cruise Ships","item":"https://ghxstship.tours/destinations/cruise-ships"}]}` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
  {"@type":"Question","name":"How is GHXSTSHIP different from a traditional experiential or brand activation agency?","acceptedAnswer":{"@type":"Answer","text":"Three ways: we own the full nine-phase XPMS 2.6 production lifecycle end to end, not just creative. We build and implement our own technology: ATLVS the operator console, COMPVSS for site and venue operations, GVTEWAY the public interface and marketplace, and LEG3ND the knowledge layer that holds the standard, the courses, and the catalog. Some are live today and some are in build. And operations is a dedicated vertical, Venue & Site Operations, with logistics, crew, compliance, and analytics run by its own team."}},
- {"@type":"Question","name":"What does GHXSTSHIP do for festivals?","acceptedAnswer":{"@type":"Answer","text":"GHXSTSHIP provides end-to-end festival production: site and infrastructure, multi-stage design and build, technical production across audio, lighting, video, rigging, and power, and headliner experiences — managed through our nine-phase XPMS 2.6 production lifecycle."}},
- {"@type":"Question","name":"Who is festival production for?","acceptedAnswer":{"@type":"Answer","text":"Festival promoters, brands, talent buyers, and production directors who need a single accountable partner from first consultation to load-out."}},
- {"@type":"Question","name":"What size festivals can GHXSTSHIP produce?","acceptedAnswer":{"@type":"Answer","text":"From boutique single-stage events to 50,000-plus-capacity multi-stage festivals, with full infrastructure and logistics."}}
+ {"@type":"Question","name":"What does GHXSTSHIP do for cruise ships?","acceptedAnswer":{"@type":"Answer","text":"End-to-end shipboard entertainment production: onboard venue and theatre production, production shows and revues, audio, lighting and video integration, dry-dock and refit installs, embarkation and terminal activations, and at-sea operations — on our nine-phase XPMS 2.6 lifecycle."}},
+ {"@type":"Question","name":"Who is cruise production for?","acceptedAnswer":{"@type":"Answer","text":"Cruise lines, shipyards and refit yards, onboard entertainment directors, charter operators, and brands taking an activation to sea."}},
+ {"@type":"Question","name":"Can you work to a dry-dock window?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dry dock is a fixed window with no slippage, so the schedule is built backward from the undocking date and the long-lead items are ordered in Procure, well ahead of the yard period."}}
 ]}` }} />
     </>
   );

@@ -136,6 +136,8 @@ export default function Page() {
     <Link href="/destinations/concert-tour-production" className="chip">Concerts &amp; Tours</Link>
     <Link href="/destinations/brand-activations" className="chip">Brand Activations</Link>
     <Link href="/destinations/immersive-experiences" className="chip">Immersive Experiences</Link>
+    <Link href="/destinations/cruise-ships" className="chip">Cruise Ships</Link>
+    <Link href="/destinations/amusement-parks" className="chip">Amusement Parks</Link>
     <Link href="/destinations/tv-film-broadcast" className="chip">TV, Film &amp; Broadcast</Link>
   </div>
 </section>
