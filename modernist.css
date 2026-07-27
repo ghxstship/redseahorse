@@ -295,6 +295,10 @@ details.faq-item[open] > summary.faq-q::after { content: "–"; }
   .phases { flex-direction: column; gap: 10px; }
   .phase { text-align: left; padding: 0 0 0 30px; }
   .phase::before { top: 0; left: 9px; width: 2px; height: 100%; }
+  /* the horizontal end-caps above out-specify .phase::before, so they must be
+     restated vertically here or they paint half-width blocks down the column */
+  .phase:first-child::before { top: 10px; left: 9px; width: 2px; height: calc(100% - 10px); }
+  .phase:last-child::before { top: 0; left: 9px; width: 2px; height: 10px; }
   .phase .dot { left: 0; transform: none; }
 }
 
