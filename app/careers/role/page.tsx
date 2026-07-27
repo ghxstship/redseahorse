@@ -69,7 +69,7 @@ export default function Page() {
       <li>A network of trusted freelance crew</li>
     </ul>
     <h2>About GHXSTSHIP</h2>
-    <p>GHXSTSHIP is a professional services firm for live and experiential projects — experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation — headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
+    <p>GHXSTSHIP is a professional services firm for live and experiential projects — experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering — headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We build festivals, tours, activations, immersive worlds, and sporting events end to end.</p>
     <div className="cta-row">
       <Link href="/careers/apply" className="btn btn-primary btn-lg">Apply for This Role</Link>
       <Link href="/careers" className="btn btn-secondary btn-lg">All Open Roles</Link>

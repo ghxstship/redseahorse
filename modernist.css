@@ -539,12 +539,25 @@ header.nav {
      previews in ui_kits/website/ do not, so there the links wrap instead of
      disappearing and leaving the page with no navigation at all. */
   .nav-inner:has(.burger) .desk-nav { display: none; }
-  .nav-inner:not(:has(.burger)) .desk-nav { flex-wrap: wrap; row-gap: 8px; padding-block: 10px; }
   /* the theme control lives outside .desk-nav so collapsing the links never
      takes it with them — it takes over the right-edge push from the burger */
   .nav-inner:has(.burger) .theme-toggle { margin-left: auto; }
   .burger { display: inline-flex; }
-  .nav-inner:not(:has(.burger)) .theme-toggle { margin-left: auto; }
+
+  /* The standalone previews in ui_kits/website/ carry no burger and no JS, so
+     their links cannot collapse into a drawer. Left on one line they fought
+     the theme control for the space — two competing `margin-left: auto` — and
+     lost: a 126px-wide column of wrapped links at phone widths, a 319px-tall
+     header, and 36px of horizontal overflow at 320. So the bar itself wraps
+     instead: brand and control on the first row, the full link set across the
+     second. Production never takes this branch. */
+  .nav-inner:not(:has(.burger)) { flex-wrap: wrap; row-gap: 0; }
+  .nav-inner:not(:has(.burger)) .theme-toggle { order: 1; margin-left: auto; }
+  .nav-inner:not(:has(.burger)) .desk-nav {
+    order: 2; flex-basis: 100%; margin-left: 0;
+    flex-wrap: wrap; row-gap: 8px; column-gap: 18px;
+    padding-block: 0 12px;
+  }
 }
 
 /* footer */

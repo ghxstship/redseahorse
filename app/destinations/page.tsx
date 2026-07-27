@@ -93,7 +93,7 @@ export default function Page() {
     <Link href="/services/experiential-design-production" className="btn btn-secondary btn-block">Experiential Design &amp; Production</Link>
     <Link href="/services/venue-site-operations" className="btn btn-secondary btn-block">Venue &amp; Site Operations</Link>
     <Link href="/services/tour-talent-management" className="btn btn-secondary btn-block">Tour &amp; Talent Management</Link>
-    <Link href="/services/technology-systems-implementation" className="btn btn-secondary btn-block">Technology &amp; Systems Implementation</Link>
+    <Link href="/services/technology-systems-engineering" className="btn btn-secondary btn-block">Technology &amp; Systems Engineering</Link>
   </div>
 </section>
 

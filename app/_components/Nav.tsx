@@ -24,7 +24,7 @@ const LINKS: NavLink[] = [
       { href: "/services/experiential-design-production/", label: "Experiential Design & Production" },
       { href: "/services/venue-site-operations/", label: "Venue & Site Operations" },
       { href: "/services/tour-talent-management/", label: "Tour & Talent Management" },
-      { href: "/services/technology-systems-implementation/", label: "Technology & Systems Implementation" },
+      { href: "/services/technology-systems-engineering/", label: "Technology & Systems Engineering" },
       { href: "/pricing/", label: "Engagement Models" },
     ],
   },

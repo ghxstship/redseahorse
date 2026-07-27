@@ -97,7 +97,7 @@ export default function Page() {
         <tr><th scope="row">Experiential Design &amp; Production</th><td><span className="yes">Included</span></td><td>If chosen</td><td>By phase or role</td></tr>
         <tr><th scope="row">Venue &amp; Site Operations</th><td><span className="yes">Included</span></td><td>If chosen</td><td>By phase or role</td></tr>
         <tr><th scope="row">Tour &amp; Talent Management</th><td><span className="yes">Included</span></td><td>If chosen</td><td>By phase or role</td></tr>
-        <tr><th scope="row">Technology &amp; Systems Implementation</th><td><span className="yes">Included</span></td><td>If chosen</td><td>By phase or role</td></tr>
+        <tr><th scope="row">Technology &amp; Systems Engineering</th><td><span className="yes">Included</span></td><td>If chosen</td><td>By phase or role</td></tr>
         <tr><th scope="row">9-Phase Lifecycle Coverage</th><td>All nine phases</td><td>Phases in your scope</td><td>The phase you hire</td></tr>
         <tr><th scope="row">Accountable Lead</th><td>Executive producer</td><td>Discipline lead</td><td>Phase or seat lead</td></tr>
         <tr><th scope="row">Platform Access</th><td>Every platform that's live</td><td>Discipline-relevant</td><td>Scope-relevant</td></tr>

@@ -134,7 +134,7 @@ export default function Page() {
     <div className="fit"><span className="n">03</span><h3>Public</h3><p className="sys">GVTEWAY</p><p>The outward face. Gigs, directories, RFQs, and commerce run against the same record.</p></div>
     <div className="fit"><span className="n">04</span><h3>Standard</h3><p className="sys">LEG3ND</p><p>The standard, the catalog, and the certifications every other surface is measured against.</p></div>
   </div>
-  <p style={{marginTop: '28px'}}><Link href="/services/technology-systems-implementation" className="btn btn-ghost">See how we implement them →</Link></p>
+  <p style={{marginTop: '28px'}}><Link href="/services/technology-systems-engineering" className="btn btn-ghost">See how we implement them →</Link></p>
 </section>
 
 <section className="band-dark close-cta"><div className="wrap">

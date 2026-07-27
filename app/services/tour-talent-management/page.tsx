@@ -113,7 +113,7 @@ export default function Page() {
   <div style={{marginTop: '12px'}}>
     <Link href="/services/experiential-design-production" className="row-line"><span className="row-title">Experiential Design &amp; Production</span><span className="row-sub">The Experiential Producer</span><span className="arrow">→</span></Link>
     <Link href="/services/venue-site-operations" className="row-line"><span className="row-title">Venue &amp; Site Operations</span><span className="row-sub">The Operations Director</span><span className="arrow">→</span></Link>
-    <Link href="/services/technology-systems-implementation" className="row-line"><span className="row-title">Technology &amp; Systems Implementation</span><span className="row-sub">The Production OS</span><span className="arrow">→</span></Link>
+    <Link href="/services/technology-systems-engineering" className="row-line"><span className="row-title">Technology &amp; Systems Engineering</span><span className="row-sub">The Production OS</span><span className="arrow">→</span></Link>
   </div>
 </section>
 

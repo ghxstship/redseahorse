@@ -71,7 +71,7 @@ export default function Page() {
   <p>Salvage City is now a repeatable GHXSTSHIP format — proof that an immersive world can be delivered to a working venue without compromise.</p>
 
   <h2>The Credits</h2>
-  <p><strong>Client</strong> Insomniac · <strong>Venue</strong> EDC Las Vegas · <strong>Year</strong> 2025–26 · <strong>Scope</strong> Full build across the entire production lifecycle · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations, and Technology &amp; Systems Implementation.</p>
+  <p><strong>Client</strong> Insomniac · <strong>Venue</strong> EDC Las Vegas · <strong>Year</strong> 2025–26 · <strong>Scope</strong> Full build across the entire production lifecycle · <strong>Services</strong> Experiential Design &amp; Production, Venue &amp; Site Operations, and Technology &amp; Systems Engineering.</p>
 
 </div></section>
 
@@ -81,7 +81,7 @@ export default function Page() {
   <div className="grid3 more-grid">
     <Link href="/work" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80&auto=format&fit=crop" alt="Audio control surface in a live sound control room" loading="lazy" width="800" height="600"/></figure>
-      <div className="body"><h3>L-Acoustics DJ</h3><p className="meta">Technology Implementation · III Points Miami · 2025–present</p></div>
+      <div className="body"><h3>L-Acoustics DJ</h3><p className="meta">Technology Engineering · III Points Miami · 2025–present</p></div>
     </Link>
     <Link href="/work" className="wcard">
       <figure className="media grayscale"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80&auto=format&fit=crop" alt="Black Coffee at the Race Track" loading="lazy" width="800" height="600"/></figure>

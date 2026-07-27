@@ -14,7 +14,7 @@ no other hues. All tokens/components live in `modernist.css` at repo root.
 1. **Experiential Design & Production** — `services/experiential-design-production.html` — "The Experiential Producer"
 2. **Venue & Site Operations** — `services/venue-site-operations.html` — "The Operations Director"
 3. **Tour & Talent Management** — `services/tour-talent-management.html` — "The Tour Manager"
-4. **Technology & Systems Implementation** — `services/technology-systems-implementation.html` — "The Production OS"
+4. **Technology & Systems Engineering** — `services/technology-systems-engineering.html` — "The Production OS"
 
 Never reference the old vertical set (Experiential Production / Site
 Operations / Venue Management / Immersive Technologies) as the service names.
@@ -173,7 +173,7 @@ standalone. Do not invent variant chrome.
 ## Routes that will exist (link only to these)
 index, about, team, locations, contact, platforms, pricing, store, gallery,
 course, privacy, terms, accessibility, 404, services/{index, experiential-design-production,
-venue-site-operations, tour-talent-management, technology-systems-implementation},
+venue-site-operations, tour-talent-management, technology-systems-engineering},
 destinations/{index, festival-production, concert-tour-production,
 brand-activations, immersive-experiences, cruise-ships, amusement-parks,
 sporting-events, tv-film-broadcast},

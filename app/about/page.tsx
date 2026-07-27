@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Story",
-  description: "GHXSTSHIP is a professional services firm for live and experiential projects \u2014 experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation \u2014 in Miami, Chicago, Los Angeles, New York City, Nashville, Denver, Las Vegas, and Phoenix.",
-  keywords: ["about GHXSTSHIP", "experiential production company", "experiential design and production", "venue and site operations", "tour and talent management", "technology and systems implementation"],
+  description: "GHXSTSHIP is a professional services firm for live and experiential projects \u2014 experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering \u2014 in Miami, Chicago, Los Angeles, New York City, Nashville, Denver, Las Vegas, and Phoenix.",
+  keywords: ["about GHXSTSHIP", "experiential production company", "experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering"],
   alternates: { canonical: "https://ghxstship.tours/about" },
 };
 
@@ -26,7 +26,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">The Company</p>
   <h1 className="page-h1">We Build the Whole Thing.</h1>
-  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver four services, Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Implementation, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
+  <p className="lede">GHXSTSHIP is a professional services firm for live and experiential projects, headquartered in Miami, with regional offices in Los Angeles, Chicago, and New York City, and satellite offices in Nashville, Denver, Las Vegas, and Phoenix. We deliver four services, Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering, as one team you can hold accountable for scope, schedule, budget, crew, and technology, from the first line to the night it opens.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 
@@ -50,7 +50,7 @@ export default function Page() {
     <article className="svc-card"><div className="bar"></div><p className="role">The Experiential Producer</p><h3>Experiential Design &amp; Production</h3><p>We design and build the experience: concept, scope, schedule, budget, fabrication, staging, and the finish, owned end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Operations Director</p><h3>Venue &amp; Site Operations</h3><p>We run the room and the ground: programming, bookings, logistics, staffing, safety, facility and vendor operations, clockwork at any scale.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Tour Manager</p><h3>Tour &amp; Talent Management</h3><p>We move the show and the people in it: routing, advancing, artist relations, travel, settlement, and the run of show, city after city.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
-    <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Implementation</h3><p>We give the team its instruments: ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, the console, the field app, the public interface, and the knowledge layer, plus the show technology we specify and install.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Engineering</h3><p>We give the team its instruments: ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, the console, the field app, the public interface, and the knowledge layer, plus the show technology we specify and install.</p><Link href="/services/technology-systems-engineering" className="more">Explore the service →</Link></article>
   </div>
 </div></section>
 
@@ -79,7 +79,7 @@ export default function Page() {
 
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story — GHXSTSHIP","url":"https://ghxstship.tours/about","description":"GHXSTSHIP is a professional services firm for live and experiential projects: experiential design and production, venue and site operations, tour and talent management, and technology and systems implementation."}` }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"AboutPage","name":"The Story — GHXSTSHIP","url":"https://ghxstship.tours/about","description":"GHXSTSHIP is a professional services firm for live and experiential projects: experiential design and production, venue and site operations, tour and talent management, and technology and systems engineering."}` }} />
     </>
   );
 }

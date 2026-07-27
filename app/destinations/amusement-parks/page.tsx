@@ -104,7 +104,7 @@ export default function Page() {
     <article className="svc-card"><div className="bar"></div><p className="role">The Experiential Producer</p><h3>Experiential Design &amp; Production</h3><p>Overlays, scenic, and themed environments designed, fabricated, and installed end to end.</p><Link href="/services/experiential-design-production" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Operations Director</p><h3>Venue &amp; Site Operations</h3><p>Park logistics, staffing, safety, and guest flow across a full operating season.</p><Link href="/services/venue-site-operations" className="more">Explore the service →</Link></article>
     <article className="svc-card"><div className="bar"></div><p className="role">The Tour Manager</p><h3>Tour &amp; Talent Management</h3><p>Performer casts, character talent, and rehearsal and rotation logistics all season.</p><Link href="/services/tour-talent-management" className="more">Explore the service →</Link></article>
-    <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Implementation</h3><p>ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, live and in build, so the plan, the crew, and the public side live in one place.</p><Link href="/services/technology-systems-implementation" className="more">Explore the service →</Link></article>
+    <article className="svc-card"><div className="bar"></div><p className="role">The Production OS</p><h3>Technology &amp; Systems Engineering</h3><p>ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, live and in build, so the plan, the crew, and the public side live in one place.</p><Link href="/services/technology-systems-engineering" className="more">Explore the service →</Link></article>
   </div>
 </div></section>
 
@@ -114,7 +114,7 @@ export default function Page() {
   <p className="lede">Most experiential and brand-activation agencies stop at creative and hand you off to a chain of vendors. We run all nine phases ourselves, and we build the technology that runs them.</p>
   <div className="grid3" style={{marginTop: '24px'}}>
     <div className="card"><p className="card-title">End to End</p><p className="card-body">All nine phases, one accountable crew running the whole build.</p></div>
-    <div className="card"><p className="card-title">We Implement the Tech</p><p className="card-body">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, built in-house, live and in build, and implemented through <Link href="/services/technology-systems-implementation">Technology &amp; Systems Implementation</Link>.</p></div>
+    <div className="card"><p className="card-title">We Engineer the Tech</p><p className="card-body">ATLVS, COMPVSS, GVTEWAY &amp; LEG3ND, built in-house, live and in build, and delivered through <Link href="/services/technology-systems-engineering">Technology &amp; Systems Engineering</Link>.</p></div>
     <div className="card"><p className="card-title">Ops as a Discipline</p><p className="card-body">Logistics, crew, and compliance run as a full vertical: <Link href="/services/venue-site-operations">Venue &amp; Site Operations</Link>.</p></div>
   </div>
 </section>
