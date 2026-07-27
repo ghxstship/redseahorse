@@ -14,7 +14,7 @@ inside the pop art world instead of fighting it.
 ## Color & grade
 - **Warm, high-contrast, slightly posterized.** Crush blacks toward `--ink`, push highlights warm.
   Think concert-poster, not flat documentary.
-- **Duotone for texture / backgrounds.** Map shadows→`--ink`, highlights→`--brass` (or →`--nebula`
+- **Duotone for texture / backgrounds.** Map shadows→`--ink`, highlights→`--color-accent` (or →`--nebula`
   / →`--plasma` for variety). Use duotone where photography is decorative or behind type; keep one or
   two "hero" images full-color for impact.
 - Avoid cool, clinical, desaturated grades. Avoid heavy purple/teal Instagram filters.
@@ -32,7 +32,7 @@ inside the pop art world instead of fighting it.
 /* Duotone: ink shadows → brass highlights */
 .gx-duotone{ position:relative; filter:grayscale(1) contrast(1.15) brightness(1.05); }
 .gx-duotone::after{ content:""; position:absolute; inset:0;
-  background:linear-gradient(var(--brass), var(--ink)); mix-blend-mode:lighten; }
+  background:linear-gradient(var(--color-accent), var(--ink)); mix-blend-mode:lighten; }
 /* or wrap the img and use background-blend on a colored layer */
 
 /* Posterize-ish punch without duotone */

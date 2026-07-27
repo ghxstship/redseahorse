@@ -2,7 +2,7 @@
 
 The full map of what GHXSTSHIP can brand end-to-end. ✓ = built. Build priority noted at bottom.
 
-## A. Lifecycle collateral (the 8 phases)
+## A. Lifecycle collateral (the nine phases)
 | Phase | Templates |
 |---|---|
 | 01 Discovery | Capabilities deck ✓ · intake / RFP response · discovery questionnaire · **Proposal / SOW** · boarding-pass kickoff email ✓ |

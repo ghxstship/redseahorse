@@ -1,6 +1,6 @@
 # PROPRIETARY IP: how GHXSTSHIP bakes frameworks into the brand kit
 
-GHXSTSHIP's proprietary frameworks (the **8-Phase Production Lifecycle**, **XPMS**, and others) are a
+GHXSTSHIP's proprietary frameworks (the **nine-phase XPMS 2.6 production lifecycle**, **XPMS**, and others) are a
 competitive moat *and* a major SEO/GEO asset, named, ownable methodologies are exactly what search and
 generative engines cite. This file is the **system for turning that IP into branded, reusable assets.**
 It currently holds **placeholders**, paste the real content (or share the source Claude artifacts) and
@@ -30,7 +30,7 @@ When we "bake in" a framework, it shows up consistently across five layers:
 For each IP, paste or share:
 - **Name** + preferred casing/abbreviation (e.g. "XPMS", and what it expands to).
 - **One-sentence definition.**
-- **The components** in order (the 8 phases; XPMS modules) with a ~1-line description each.
+- **The components** in order (the nine phases; XPMS modules) with a ~1-line description each.
 - **Where it belongs** (which vertical) and **audience** (internal / B2B / B2C).
 - Any **trademark status** (™ / ® / pending) and claims we can/can't make.
 
@@ -39,7 +39,7 @@ slide, the FAQ + JSON-LD, and a Design System preview card.
 
 ---
 
-## Framework 1. The 8-Phase Production Lifecycle  *(LOCKED · the "Flight Path")*
+## Framework 1. The nine-phase XPMS 2.6 production lifecycle  *(LOCKED · the "Flight Path")*
 > **Status:** active. **Home:** Operations (methodology), visualized brand-wide as the **Flight Path /
 > Itinerary** in the Terminal system. **Replaces** the old 7-D methodology entirely.
 
@@ -48,7 +48,7 @@ methodology for delivering live experiences, every project is a flight from Disc
 moving through Research & Development, Creative Design, Compliance & Risk Management, Production &
 Build, Operations & Logistics, Live Activation, and Strike & Post-Production.*
 
-**The 8 phases (in order), each is a leg of the Flight Path:**
+**The nine phases (in order), each is a leg of the Flight Path:**
 | # | Phase | Short | One-liner |
 |---|---|---|---|
 | 01 | Project Discovery (Consultation) | DISCOVERY | Goals, scope, vision, the consult that sets the route. |
@@ -82,7 +82,7 @@ R&D, DESIGN, COMPLIANCE, BUILD, OPERATIONS, ACTIVATION, STRIKE) for compact UI; 
 | Asset | What gets added |
 |---|---|
 | `ui_kits/website/` | A framework section (definition + diagram), an FAQ entry, and `DefinedTerm`/`HowTo` JSON-LD. |
-| `slides/` | One slide per framework (lifecycle ring / module grid). |
+| `ui_kits/website/` | One slide per framework (lifecycle ring / module grid). |
 | `social/` | A "What is XPMS?" explainer card + a lifecycle carousel. |
 | `preview/` | A Design System card per framework (locked diagram + colors). |
 | `README.md` / `SKILL.md` | The canonical definition + governance rules. |

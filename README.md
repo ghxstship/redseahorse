@@ -1,170 +1,137 @@
-# GHXSTSHIP Design System
-### "Venture Beyond", a premium vintage-tropical system
+# GHXSTSHIP
 
-> **The GC, Foreman, and Procore of experiential production.**
-> Vintage Reef: charcoal-graphite reef night, jade, pineapple & sapphire, coastal-vintage, premium-forward.
-> (Color logic: Jade = Production, Pineapple = Operations, Sapphire = Technology; green = yellow + blue.)
+The marketing site for GHXSTSHIP, a professional services firm for live and
+experiential projects. Static Next.js export, deployed on Vercel at
+[ghxstship.tours](https://ghxstship.tours).
 
-GHXSTSHIP ("Ghost Ship") is a full-service **experiential production & technology company**
-headquartered in **Miami**, with offices in **Las Vegas, Chicago, New York, and Los Angeles**, operating globally.
-We **disrupt the industry with innovative solutions, resources, and technologies that redefine what's
-possible in experiential environments.** This design system gives any agent (or designer) the tools to
-produce on-brand interfaces, decks, social, and collateral that feel loud, fearless, and credible to a
-professional B2B audience.
+## How the site is built
 
-**Audience:** brands, producers, creative directors, production directors, and project managers for
-live entertainment, experiential marketing, and arts/culture institutions, plus a real emphasis on
-**educating the next generation of experiential producers.**
+Pages are **authored as plain HTML** in `ui_kits/website/` and **generated**
+into `app/**/page.tsx` on every build. The HTML files are the source; the
+`app/` tree is output and gets overwritten every time.
 
-**Sources referenced**
-- Live site: https://ghxstship.tours/ (brand voice, IA, product names, copy)
-- Uploaded brand mark: pixel-art ghost-ship skull → `assets/logo-ghostship-skull.svg`
+```
+ui_kits/website/*.html      author here
+scripts/generate-pages.py   → app/**/page.tsx
+modernist.css               every token and component, one file
+app/_components/            shared chrome: Nav, Footer, BrandMark, ThemeToggle
+```
 
----
+Read **`ui_kits/website/REBUILD_GUIDE.md`** before authoring a page. It is the
+contract: components, breakpoints, accent discipline, theming, voice.
 
-## BRAND ARCHITECTURE, three verticals
+### The build chain
 
-GHXSTSHIP is organized as **three integrated verticals**. This taxonomy drives the nav, the site IA,
-the deck, and every SEO/GEO entity definition. See `BRAND_ARCHITECTURE.md` for the full spec.
+`prebuild` and `predev` run five steps. Two are checks that fail the build
+rather than fixing anything silently.
 
-> **Master definition (reuse verbatim):** *GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles, that produces festivals, concerts and tours, brand activations, immersive experiences, and sporting events, for brands, producers, and creative and production directors, across three verticals: Production, Operations, and Technology.*
+```
+check-assets.py            assets/ and public/assets/ must match
+normalize-copy.py --check  copy must match data/copy-canon.json
+build-case-studies.py      data/case-studies.json → work/*.html + press.html
+render-emails.js           api/contact.js → ui_kits/email/*.html
+generate-pages.py          ui_kits/website/*.html → app/**/page.tsx
+```
 
-1. **Production Management**, *The General Contractor.* End-to-end production: festivals, activations,
-   scenic, staging, technical production, show calling. Serves 5 destinations (festivals, concerts & tours, activations, immersive, sporting).
-2. **Operations Leadership**, *The Foreman.* Management + delivery: logistics, crew & workforce,
-   budgets, compliance, analytics. Home of the 8-Phase Production Lifecycle.
-3. **Technology Innovations**, *The Procore.* Proprietary software: **ATLVS** (production/resource mgmt),
-   **COMPVSS** (workforce/crew), **GVTEWAY** (ticketing/fan).
+```bash
+pnpm install
+pnpm dev      # localhost:3000
+pnpm build    # → out/
+```
 
-Nav order (site): `The Fleet · The Destinations · The Course · The Crew · The Archives · The Log · Start a Project`.
+## Data is the source of truth
 
----
+Four files drive generated content. Edit these, never the output.
 
-## INDEX, what's in this folder
-
-| File / folder | What it is |
+| file | drives |
 |---|---|
-| `BRAND_ARCHITECTURE.md` | **The 3-vertical spec**, definitions, services, keywords, old→new IA map. |
-| `PROPRIETARY_IP.md` | **System for baking in your IP** (8-Phase Lifecycle, XPMS, …). 5-layer treatment + intake. |
-| `SEO_GEO.md` | SEO + GEO (generative-engine optimization) playbook every page follows. |
-| `colors_and_type.css` | **Start here.** All color + type + spacing + shadow + halftone tokens, and semantic type classes (`.gx-*`). |
-| `components.css` | Pop art components: buttons, tags, panels, bursts, halftone layers, inputs, cards. |
-| `terminal.css` | **Structural component layer** (legacy Terminal system): the 8-phase **Course** strip-map tracker, departures-style boards, placards, and pictograms. Still linked for the Course tracker; the Terminal/wayfinding *metaphor* is retired in favor of the journey×GC model. |
-| `assets/` | Logos, wordmark, icon set, textures. |
-| `preview/` | Small spec cards rendered in the **Design System** tab (Type, Colors, Spacing, Components, Brand). |
-| `ui_kits/website/` | High-fidelity recreation/elevation of the marketing site. |
-| `ui_kits/products/` | ATLVS · COMPVSS · GVTEWAY platform UI kit. |
-| `slides/` | Pitch-deck / slide template (16:9). |
-| `social/` | Instagram + LinkedIn templates. |
-| `ICONOGRAPHY.md` | Icon approach + the pixel/pop icon set. |
-| `PHOTOGRAPHY.md` | Image treatment & art-direction guidelines. |
-| `SKILL.md` | Agent Skill manifest (for use in Claude Code). |
+| `data/copy-canon.json` | the identity sentence and the one contact address, enforced across every industry page |
+| `data/case-studies.json` | the nine case-study pages |
+| `data/press/inventory.json` | press blocks on case studies, and `/press/` |
+| `data/press/entries.json` | what the press scanner searches for |
 
----
+## The design system
 
-## CONTENT FUNDAMENTALS, how GHXSTSHIP writes
+**Modernist**, recoloured to GHXSTSHIP: pure-grayscale neutrals on a `#fcfcfc`
+ground, GHXSTSHIP Green `#2edb3a` as the only accent, Archivo 400/600/800,
+Bebas Neue for the wordmark, radius 0, structure drawn with 2px rules and 1px
+borders. No shadows, no gradients, no second hue.
 
-The voice is a **confident expedition log**: nautical/adventure metaphors, swagger backed by receipts,
-zero corporate hedging. Every section reads like a leg of a voyage.
+It all lives in `modernist.css`. **Never write a colour literal.** A theme is
+a token swap on `:root`, and one hex in a page style block is one thing that
+will be wrong in the other theme.
 
-**Positioning (the core idea, reuse verbatim):** GHXSTSHIP **disrupts the experiential industry with
-innovative solutions, resources, and technologies that redefine what's possible.** We are about
-*invention and transformation*, not about heroically surviving deadlines.
+Light, dark and system themes are all supported, and contrast is measured
+across every route in both themes rather than eyeballed.
 
-> ⛔ **Banned framing.** Never describe GHXSTSHIP as "turning impossible deadlines into legendary
-> productions" or any deadline-survival / "we don't do can't" bravado. That is **not** who we are.
-> Lead with disruption, innovation, and redefining what's possible instead.
+## The four services
 
-- **Person:** Second person to the client ("Your vision, redefined"), first-person plural for the
-  company ("We redefine what's possible").
-- **Casing:** Display headlines are **UPPERCASE**. Eyebrows/labels are uppercase mono or pixel.
-  Body is sentence case.
-- **Vertical-first, then flavor (SEO/GEO rule):** lead with the literal vertical name
-  **Production / Operations / Technology**, as `<h2>`s, nav, and structured data; the GC/Foreman/Procore
-  line is secondary color. The first sentence of every section is a plain,
-  self-contained definition that search + generative engines can extract; *then* the swagger.
-- **Journey×GC lexicon**, reuse as supporting color *over* the plain vertical names; the site is a **journey×GC flow** with a sticky journey rail (see `BRAND_ARCHITECTURE.md`):
-  - **The Destination** = the client's vision / the **experience type** we produce (Festivals · Concerts & Tours · Brand Activations · Immersive · Sporting · TV, Film & Broadcast), the "where" · **The Ship** = the **scope / engagement** (full build, by vertical, or à la carte) · **The Course** = the **8-Phase Production Lifecycle** (Discovery→Close) · **The Crew** = the **team** matched to the charted route · **The Manifest** = pre-launch checklist / FAQs · **Launch** = anchors away, go live · **The Archives** = past work / case studies (real projects only) · **The Log** = articles, news & dispatches (the blog) · **The Instruments / Technology** = ATLVS (atlas) · COMPVSS (compass) · GVTEWAY (gateway) · **Venture Beyond** = tagline. Journey sequence: **Destination → Ship → Course → Crew → Manifest → Launch.** Primary CTA: **Start a Project**. See `BRAND_ARCHITECTURE.md` for locked referents. *(Retired, do not reuse: the Spaceport/Terminal wayfinding, Engagements / Ways to Sail, the Itinerary, the Archives, the Skeleton Crew, Set Sail / Book Your Voyage.)*
-- **8-Phase Production Lifecycle (the Course):** Project Discovery · Research & Development · Creative Design · Compliance & Risk Management · Production & Build · Operations & Logistics · Live Activation · Strike & Post-Production. (Replaces the old 7 D's.)
-- **Tone:** punchy, short, declarative. Confident not arrogant. Numbers stated plainly
-  (14+ years · 250+ experiences · 5M+ memories). Miami HQ // global. Showcase only real projects from the Archives, no geographic vanity stats.
-- **Locations:** **Miami** (Headquarters) · **New York** · **Chicago** · **Los Angeles**.
-- **Stamps:** locations and metadata are written like coordinates/manifests:
-  `MIAMI // LAS VEGAS // CHICAGO // NEW YORK // LOS ANGELES`, `MIAMI HQ`, `EST. 2022`, `CLIENT: RED BULL // YEAR: 2024`.
-- **Emoji:** none. Use the icon set or unicode marks (◆ ✦ ↗) sparingly.
-- **Education angle:** when speaking to emerging producers, warm the tone slightly, mentor, not
-  recruiter. "Join the Crew," "learn the ropes," apprenticeship framing. Keep the swagger; add generosity.
+1. **Experiential Design & Production** — "The Experiential Producer"
+2. **Venue & Site Operations** — "The Operations Director"
+3. **Tour & Talent Management** — "The Tour Manager"
+4. **Technology & Systems Engineering** — "The Production OS"
 
-**Example lines (in-voice):** "Beyond the Scene." (hero, a B·T·S / behind-the-scenes wink) · "Venture Beyond." ·
-"We don't meet the brief. We redefine what's possible." · "We came to disrupt the expected." ·
-"Innovative solutions, resources, and technologies that redefine what's possible in experiential."
+Never the retired set: Experiential Production, Site Operations, Venue
+Management, Immersive Technologies. Never the retired construction framing
+either. GHXSTSHIP is not a general contractor, a foreman, or a Procore.
 
----
+## Locations
 
-## VISUAL FOUNDATIONS
+Headquarters **Miami**. Regional **Los Angeles · Chicago · New York City**.
+Satellite **Nashville · Denver · Las Vegas · Phoenix**. Eight in total, and
+the tiers matter: Las Vegas is a satellite, not a primary office.
 
-**The big idea:** GHXSTSHIP is the **General Contractor, Foreman, and Procore of experiential production**
-Production Management, Operations Leadership, and Technology Innovations for experiential project management. The
-look is **premium vintage-tropical ("Vintage Reef")**: charcoal-graphite reef-night grounds; **jade** is
-the brand's lead (Production); **pineapple** (Operations) and **sapphire** (Technology) are the high-signal
-accents. Texture shows up as **Ben-Day halftone dots, thick ink outlines, hard offset "sticker"
-shadows, and starburst POW badges.** The **pixel ghost-ship skull** seeds an 8-bit motif that
-recurs as labels, dividers, and loading/empty states.
+## XPMS 2.6
 
-> 🔒 **Logo color lock.** The mark is **always white flag + black skull**, exactly as submitted, the
-> flag is `--bone` (#FBFAF6, the palette's white), the skull reads black as negative space on a dark
-> field. **Never recolor the mark** (no brass, nebula, etc.). On dark grounds use `assets/skull-bone.svg`
-> (white glyph). On light grounds place it inside a **black square lozenge** so the skull stays black,
-> or use the original tile `assets/logo-ghostship-skull.svg`. See `preview/logo-variations.html`.
+Every engagement runs the same **nine gated phases** in three acts:
 
-> 🔤 **Wordmark spacing.** The legal/brand name carries spaces between every letter:
-> **`G H X S T S H I P`**, use this spaced form for the visible wordmark/lockups (set `white-space:nowrap`
-> so it never breaks; drop extra `letter-spacing`). Keep the **unspaced `GHXSTSHIP`** as the
-> machine-readable/searchable token: URLs (`ghxstship.tours`), schema `name`, and handles. In running body
-> prose use `GHXSTSHIP` for readability. Schema carries `alternateName` + `legalName` as the spaced form.
->
-> **Voyage codes** (project IDs in the Archives) use the prefix **`RRR`**, e.g. `RRR 052`
-> a subtle pirate nod (“Arrr”). Format: `RRR ` + a three-digit number.
+| act | phases |
+|---|---|
+| **Plan** | Discover · Design · Advance |
+| **Build** | Procure · Build · Install |
+| **Show** | Operate · Amplify · Close |
 
-- **Color vibe:** dark-first. Most surfaces are `--void`/`--ink` navy-black; light surfaces are
-  warm `--parchment` (aged chart paper) or `--bone` off-white, never pure clinical white. Accents are
-  loud but **rationed**: one dominant signal per composition.
-- **Type:** poster-led. `Big Shoulders Display` (condensed, monumental) for anything that should hit
-  hard; `Space Grotesk` for UI/body; `Silkscreen` for pixel/8-bit labels; `Space Mono` for coordinates,
-  specs, and manifest metadata.
-- **Backgrounds:** flat ink fields + **halftone dot textures** (CSS radial-gradients, no images) used
-  as fades and accents; occasional 45° **rigging stripes**. Full-bleed production photography with a
-  duotone/posterized treatment (see PHOTOGRAPHY.md). Avoid soft purple web gradients.
-- **Borders:** thick **ink outlines** (2–4px) like comic panels. Default border color is `--ink` on
-  light, `--bone` on dark.
-- **Corner radii:** **sharp.** 0–4px on nearly everything; pills (`--r-pill`) only for tags/buttons.
-  Pop art is angular, resist rounding.
-- **Shadows:** **hard offset, zero blur** (`6px 6px 0`), the sticker/comic signature. Color the
-  shadow with `--ink`, `--brass-deep`, or a deep nebula. Soft glows (`--glow-*`) exist for dark
-  surfaces but are used rarely.
-- **Animation:** snappy and physical. Buttons translate on hover (−2px,−2px) and "press in" on active
-  (+3px,+3px) with the shadow collapsing, like pressing a real button. Easing is quick `ease`
-  (80–150ms). Marquees/tickers scroll for energy. No long fades; no parallax mush.
-- **Hover states:** lift + shadow shift (buttons), color jump to a louder signal (links: plasma→nebula),
-  or a halftone reveal. **Press states:** translate into the shadow (collapse).
-- **Transparency / blur:** minimal. Pop art is flat and opaque. Slight inset shadow on inputs; the
-  only blur is occasional backdrop on sticky nav over photography.
-- **Cards:** ink-outlined, hard-shadowed, square-ish corners. Media on top, body below; mono eyebrow +
-  display title + small body. No soft drop shadows.
-- **Layout:** bold modular grid, generous gutters, big type, lots of contrast. Section headers get an
-  eyebrow (mono/pixel) + huge display headline. Coordinate/manifest stamps anchor corners. Diagonal
-  energy and starbursts break the grid intentionally.
-- **Imagery color:** warm, high-contrast, slightly posterized; duotone in brand colors for texture.
-  Real production photos (festival stages, activations, crews), never clip-art or generic stock.
+Strike lives inside Operate; it is never a phase of its own. Every work item
+resolves to one of **90 coordinates** on the ATLVS Coordinate Matrix: ten
+department classes across the nine phases.
 
-See `colors_and_type.css` for exact token names before using any `var(--*)`.
+## The platforms
 
----
+ATLVS the operator console, COMPVSS site and venue operations, GVTEWAY the
+public interface and marketplace, LEG3ND the knowledge layer. State their real
+status, which is in `ui_kits/website/ATLVS_CANON.md` and changes as they ship.
 
-## CAVEATS / SUBSTITUTIONS
-- **Fonts** load from Google Fonts CDN (`Big Shoulders Display`, `Space Grotesk`, `Space Mono`,
-  `Silkscreen`), all open-license, no upload needed. If you have licensed brand faces, drop the
-  woff2 in `fonts/` and swap the `@import` in `colors_and_type.css` for `@font-face`.
-- **Photography** in previews uses solid/halftone placeholders, drop real production photos into
-  `assets/` and they'll inherit the treatment.
-- **Lead color world:** Vintage Reef (charcoal/jade/pineapple/sapphire), light + dark.
+## Voice
+
+Confident and plainspoken. Full rules in `VOICE_SAMPLE.md`. The ones broken
+most often:
+
+- **No em dashes.** Use the punctuation the dash was standing in for.
+- **Nautical language only when it also works on land.** "Chart the course"
+  passes because charting a course is ordinary business English. "Walk the
+  course" is the wrong verb and was replaced everywhere.
+- **"Complimentary"**, never "free" or "no charge".
+- No parentheses in body copy. No emoji.
+- Section labels are literal: Services, Work, Team.
+
+## The forms
+
+`api/contact.js` is a Vercel function that emails through Resend. One mailbox,
+`sos@ghxstship.pro`. The sender is `ghxstship@atlvs.pro` deliberately: atlvs.pro
+is the domain verified in Resend and ghxstship.tours is not, so a "correction"
+to a .tours sender breaks every send.
+
+`scripts/test-contact.mjs` delivers real mail and bills the account. It refuses
+to run without `CONFIRM_LIVE_SEND=yes`.
+
+## Reference
+
+| doc | what it holds |
+|---|---|
+| `ui_kits/website/REBUILD_GUIDE.md` | page authoring contract |
+| `ui_kits/website/ATLVS_CANON.md` | what the four platforms are, and their real status |
+| `data/press/README.md` | the press inventory, its ranking model, its scanner |
+| `OPTIMIZATION_PLAN.md` | architecture decisions log |
+| `BRAND_ARCHITECTURE.md` | the verticals and how they relate |
+| `VOICE_SAMPLE.md` · `PHOTOGRAPHY.md` · `ICONOGRAPHY.md` | brand reference |
+| `SEO_GEO.md` · `COMPETITIVE.md` · `PROPRIETARY_IP.md` | positioning and search |

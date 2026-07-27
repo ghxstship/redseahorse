@@ -16,14 +16,14 @@ integrated campaigns, and culture marketing. They are **creative-led agencies**.
    `Organization`+`audience`, `Service`×6 (+audience/areaServed), `HowTo` (the lifecycle), `FAQPage`,
    and `BreadcrumbList`, plus a dedicated, keyword-true page per vertical. **We win the machine-readable layer.**
 2. **No named, ownable methodology.** Competitors describe process generically. → We own the
-   **8-Phase Production Lifecycle** (Discovery→Strike), schema-encoded as `HowTo`. Nameable, citable, repeatable.
+   **nine-phase XPMS 2.6 production lifecycle** (Discovery→Strike), schema-encoded as `HowTo`. Nameable, citable, repeatable.
 3. **No proprietary technology.** Agencies buy/rent tools. → We **build** ATLVS (Atlas), COMPVSS
    (Compass), GVTEWAY (Gateway). Almost unique in the category, lead with it everywhere.
 4. **Operations is an afterthought.** Creative-led shops are thinner on logistics/crew/compliance. →
    **Operations is a full vertical** for us. Reliability + scale story.
 
 ## The three hard differentiators (use on every page, "The Difference")
-- **End to end, one accountable crew.** We own all eight phases, not just creative. (vs. fragmented vendor chains.)
+- **End to end, one accountable crew.** We own all nine phases, not just creative. (vs. fragmented vendor chains.)
 - **We implement the technology.** ATLVS · COMPVSS · GVTEWAY power the work at scale, the Procore of experiential. (Few competitors build software.)
 - **Operations as a discipline.** Logistics, crew, compliance, and analytics are a vertical, not a line item.
 Plus the mission edge: **we train the next generation** (the Crew / Crew Call).
@@ -33,7 +33,7 @@ For each destination page, ensure we **cover the competitor's full service bread
 then **out-depth** it:
 - Capabilities grid that meets-or-beats their menu (e.g., add sponsorships, staffing/ambassadors,
   sampling, environmental/retail where relevant to that vertical).
-- The 8-phase Itinerary applied (named methodology they lack).
+- The nine-phase Itinerary applied (named methodology they lack).
 - Audience block (named buyer roles → audience schema).
 - Proof (Archives case studies) with real outcomes once supplied.
 - A "Why GHXSTSHIP" differentiator block.

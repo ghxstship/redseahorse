@@ -32,7 +32,7 @@ export default function Page() {
 
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">The Course · The Production Lifecycle</p>
-  <h1 className="page-h1">9 Phases, from First Call to Close.</h1>
+  <h1 className="page-h1">From Concept to Close.</h1>
   <p className="lede">The Course is the GHXSTSHIP production lifecycle, the nine gated phases of the XPMS 2.6 standard that take an experiential or entertainment project from the first consultation to archive handover. Every build runs the same nine phases in three acts: Plan, Build, Show, with clear deliverables, a gate to clear, and one accountable owner at each, so the budget and the schedule never go quiet on you between Discover and Close.</p>
   <div className="cta-row" style={{marginTop: '24px'}}>
     <Link href="/contact" className="btn btn-primary btn-lg">Start a Project</Link>

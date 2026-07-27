@@ -11,6 +11,36 @@ without ever sounding like a brochure.
 > user-facing copy. We keep a few nautical **IA labels** (Crew, Logs, Museum, Archives, Home
 > Ports, The Course, The Fleet) as light brand flavor, but the prose reads like a person now.
 
+
+## Hard rules
+
+These are the ones that get broken. All four are enforced across the site.
+
+- **No em dashes.** Not as a separator, not as a parenthetical. Use the
+  punctuation the dash was standing in for: a comma for an aside, a colon
+  before a list or a restatement, a full stop when it was two sentences, a
+  semicolon when it was a splice. Titles use a pipe: `Page | GHXSTSHIP`.
+  En dashes stay in ranges, `2025–26`.
+- **Nautical language only when it also works on land.** The test is whether
+  the phrase carries meaning for someone who has never been on a boat.
+  *Chart the course* passes, because charting a course is ordinary business
+  English. *Walk the course* is the wrong verb for The Course. *Reached the
+  bridge*, *set the course* and *prepare for the journey* all failed and were
+  removed. Literal industry terms are not metaphors: a cruise page says
+  embarkation, sailing and dry-dock because that is what the work is called.
+- **"Complimentary"**, never "free", "no charge", or "no cost".
+- **No parentheses in body copy. No emoji.** Section labels are literal:
+  Services, Work, Team, not nautical substitutes.
+
+## Verbs that belong to specific nouns
+
+- The Course is **charted**.
+- A lifecycle or a set of phases is **run**: "every engagement runs the same
+  nine-phase XPMS 2.6 production lifecycle".
+- A venue or a site is **operated**. A tour is **routed** and **advanced**.
+- A build is **crewed**, and a room is **held to the standard**.
+
+
 ## Voice DNA: a 40 / 35 / 25 blend
 
 - **MCU Spider-Man. 40%, the public lead.** Friendly, fast, a little self-deprecating,

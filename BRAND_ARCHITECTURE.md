@@ -1,27 +1,27 @@
 # BRAND ARCHITECTURE | GHXSTSHIP
 
-GHXSTSHIP is organized around **three integrated verticals** that mirror how construction's biggest
-projects get built: a **General Contractor**, a **Foreman/Superintendent**, and a **Procore**. GHXSTSHIP
+GHXSTSHIP is organized around **four services** that mirror how construction's biggest
+projects get built: a **lead producer**, a **operations lead**, and a **Procore**. GHXSTSHIP
 is the GC, Foreman, and Procore of experiential production. This is the master structure for navigation,
 messaging, the site IA, and all SEO/GEO entity definitions. Lead with the plain-language vertical name.
 
 > **One-line definition (use verbatim for SEO/GEO):**
-> *GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We are the general contractor, foreman, and Procore equivalents for experiential project management, delivering Production Management, Operations Leadership, and Technology Innovations for festivals, concerts and tours, brand activations, immersive experiences, and sporting events.*
+> *GHXSTSHIP is a full-service experiential production, operations, and technology company headquartered in Miami, with offices in Las Vegas, Chicago, New York, and Los Angeles. We are the lead producer, foreman, and Procore equivalents for experiential project management, delivering Production Management, Operations Leadership, and Technology Innovations for festivals, concerts and tours, brand activations, immersive experiences, and sporting events.*
 
-> **Positioning (the category claim):** GHXSTSHIP is building the undisputed General Contractor, Foreman,
+> **Positioning (the category claim):** GHXSTSHIP is building the undisputed lead producer, Foreman,
 > and Procore of the experiential production industries, the accountable system the whole project runs on.
 
 ---
 
-## 1, PRODUCTION MANAGEMENT  ·  *The General Contractor*
+## 1, PRODUCTION MANAGEMENT  ·  *The lead producer*
 **Definition:** End-to-end production management of live experiences, owning scope, schedule, budget,
-and the build, the way a general contractor owns a project from ground-break to delivery.
+and the build, the way a lead producer owns a project from the ground-break to delivery.
 **Includes:** experiential design & creative direction · festival and concert production · brand
 activations & immersive installations · scenic fabrication, staging & set design · technical
 production (audio, lighting, video, rigging, power) · show calling & live direction.
 **Industries served:** Concerts/Festivals/Tours · Sports & Entertainment · Retail ·
 Hospitality · Corporate & Private.
-**Primary keywords:** experiential production management, general contractor for events, event production company,
+**Primary keywords:** experiential production management, lead producer for live and experiential projects, event production company,
 festival production, scenic fabrication, immersive experience design.
 
 ## 2. OPERATIONS LEADERSHIP  ·  *The Foreman / Superintendent*
@@ -30,7 +30,7 @@ foreman who makes complex productions predictable, on time, on budget, at any sc
 **Includes:** production & project management · logistics & load-in/out · crew staffing &
 coordination · workforce management · budgeting & cost control · vendor & procurement management ·
 hospitality operations · global tour & multi-city coordination · on-site operations · health,
-safety & compliance · post-event analytics. The **8-Phase Production Lifecycle**
+safety & compliance · post-event analytics. The **nine-phase XPMS 2.6 production lifecycle**
 (Discovery → Close) is the methodology that governs this work, see PROPRIETARY_IP.md.
 **Primary keywords:** event operations leadership, event production management, event logistics, crew management, workforce
 management for events, tour management, experiential project management.
@@ -81,7 +81,7 @@ GHXSTSHIP is presented as **the GHXSTSHIP Spaceport**, a transit terminal, where
 our **solar galleons** (flying pirate ships, Treasure Planet–style) dock before "boarding" an experience.
 Keep the structural nouns clear and credible (Terminal, Concourse, Gate, Departures); weave the
 spaceport + flying-galleon idea through **vocabulary, vessels, and icons**, not by renaming the structure.
-This is the structural spine across the whole kit (see `terminal.css`).
+This is the structural spine across the whole kit (see `modernist.css`).
 
 **Vessel & vocabulary:** the vessel is a **solar galleon** (never an airplane). Use sailing/voyage verbs
 for flavor, *voyage* (a project), *set sail / all aboard* (begin), *anchors aweigh* (kick-off / wheels-up),
@@ -92,9 +92,9 @@ for flavor, *voyage* (a project), *set sail / all aboard* (begin), *anchors awei
 | Term | Means exactly | Notes |
 |---|---|---|
 | **Destinations** | The **experience types** we produce | Festivals · Concerts & Tours · Brand Activations · Immersive · Sporting Events. Top-nav section, the "where." Service keywords live in the card body for SEO. |
-| **Engagements (Ways to Sail)** | **How** a client buys | Full Voyage (all 8 phases) · By Vertical (Production / Operations / Technology) · À La Carte (pick phases/services). Absorbs the 3 verticals. |
+| **Engagements (Ways to Sail)** | **How** a client buys | Full Voyage (all nine phases) · By Vertical (Production / Operations / Technology) · À La Carte (pick phases/services). Absorbs the 3 verticals. |
 | **Voyage** | A **project / engagement** | A single job, end to end. |
-| **Itinerary / Flight Path** | The **8-Phase Production Lifecycle (XPMS)** | Discovery→Close. |
+| **Itinerary / Flight Path** | The **nine-phase XPMS 2.6 production lifecycle (XPMS)** | Discovery→Close. |
 | **The Instruments** | **ATLVS = Atlas** (resource mgmt) · **COMPVSS = Compass** (crew/workforce) · **GVTEWAY = Gateway** (ticketing/fans) | The proprietary software, the navigator's kit. Its own section; surface the pun. |
 | **The Skeleton Crew** | The **team** | Captain=Exec Producer, First Mate=Production Dir, Navigator=PM, Quartermaster=Logistics, Bosun=Technical Dir. |
 | **The Archives** | **Past voyages / case studies** | Real projects only, no geographic vanity stats. |
@@ -107,7 +107,7 @@ trends/foresight · **Cargo & Manifest** = scope/deliverables · **Maiden Voyage
 | Terminal concept | Maps to | Used for |
 |---|---|---|
 | **Destinations** | **Industry verticals** we produce for | What we sell / the departures board "flights" |
-| **Flight Path / Itinerary** | The **8-Phase Production Lifecycle** (Discovery→Close) | How every project travels, process |
+| **Flight Path / Itinerary** | The **nine-phase XPMS 2.6 production lifecycle** (Discovery→Close) | How every project travels, process |
 | **Departures board (FIDS)** | Live & upcoming projects | "What's boarding now", portfolio + proof |
 | **Concourses / Gates** | The 3 business verticals (Production/Operations/Technology) | Wayfinding / nav |
 | **Boarding pass** | The client engagement | CTAs, tickets (GVTEWAY), proposals |
@@ -120,7 +120,7 @@ is a *flight* to one of them.
 **Keywords:** festival production, concert touring production, brand activation agency, immersive
 experience design, sporting event production, broadcast and film production.
 
-### The Flight Path. 8-Phase Production Lifecycle (the "how")
+### The Flight Path. nine-phase XPMS 2.6 production lifecycle (the "how")
 01 Discovery · 02 Design · 03 Advance · 04 Procurement · 05 Build · 06 Install · 07 Operate · 08 Close.
 This is the XPMS production lifecycle, full spec in `PROPRIETARY_IP.md`.
 
@@ -131,19 +131,19 @@ This is the XPMS production lifecycle, full spec in `PROPRIETARY_IP.md`.
 |---|---|
 | The Fleet (industries) | **Destinations** (departures board) under the Terminal |
 | The Destinations (6 platforms) | Folded into delivery capabilities under the 3 verticals |
-| The Itinerary (7 D's) | **Replaced** by the 8-Phase Flight Path (Operations methodology) |
+| The Itinerary (7 D's) | **Replaced** by the nine-phase XPMS 2.6 lifecycle (Operations methodology) |
 | The Tools (ATLVS/COMPVSS/GVTEWAY) | **Technology** concourse |
 | The Museum / History / Crew | Unchanged (proof + people) |
 
 ## Nav / journey sequence (site), current model
 The homepage is a journey×GC flow with a sticky journey rail:
 **01 The Destination** (share your vision, the project goal/experience) → **02 The Ship** (build your
-vessel, scope) → **03 The Course** (chart the course, the 8-phase XPMS lifecycle) → **04 The Crew**
+vessel, scope) → **03 The Course** (chart the course, the nine-phase XPMS lifecycle) → **04 The Crew**
 (meet the team, assigned to the charted route) → **05 The Manifest** (pack your bags, pre-launch
 checklist / FAQs) → **06 Launch** (anchors away). Supporting sections: the capability stack
 (GC/Foreman/Procore), Selected Work (**The Archives**), numbers band, trust band. Primary CTA: **Start a
-Project**. Positioning: the General Contractor, Foreman & Procore of experiential project management. Aesthetic:
-Vintage Reef. Voice: Yacht Builder + Expedition Creator (light texture, never corny).
+Project**. Positioning: the lead producer and accountable management team of experiential project management. Aesthetic:
+Modernist. Voice: Yacht Builder + Expedition Creator (light texture, never corny).
 
 > Earlier framings (space-cruise booking, the Terminal/concourse wayfinding, Engagements / Ways to Sail,
 > the Itinerary, the Archives, Set Sail / Book Your Voyage) are **retired**, superseded by the
