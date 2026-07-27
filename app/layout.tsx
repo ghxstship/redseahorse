@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: {
     // Short on purpose: search shows ~60 characters, and the four services
     // read better in the description than truncated out of a title.
-    default: "Experiential Production & Technology, Miami | GHXSTSHIP",
+    default: "GHXSTSHIP | Experiential Production | Miami, FL",
     template: "%s | GHXSTSHIP",
   },
   description:
