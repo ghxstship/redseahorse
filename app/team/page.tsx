@@ -26,6 +26,15 @@ export default function Page() {
   .tm .role { margin: 0; }
   .tm h3 { font-size: 1.2rem; line-height: 1.05; margin: 0; }
   .tm p { font-size: 0.867rem; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; }
+  /* open-role cards link to the live listing; the avatar band carries the flag */
+  a.tm { text-decoration: none; color: inherit; }
+  a.tm:hover { border-color: var(--color-text); }
+  .tm.is-open .av { background: var(--color-accent-100); border-bottom-color: var(--color-accent); }
+  .open-mark {
+    font-family: var(--font-heading); font-weight: 600; font-size: 0.733rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-700);
+  }
+  .tm .go { margin-top: auto; padding-top: 8px; font-family: var(--font-heading); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-700); }
 ` }} />
       
 
@@ -44,31 +53,32 @@ export default function Page() {
   <h2 className="sec-h2">Who Runs What.</h2>
 
   <p className="tier">Level 01 · Command</p>
-  <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Executive Producer</h3><p>Owns the production end to end: vision, budget, and the standard the whole build holds to.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Senior Producer</h3><p>Leads the production day to day: scope, schedule, vendors, and the build.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Associate Producer</h3><p>Supports the production across phases: coordination, tracking, and delivery.</p></div></article>
-  </div>
-
-  <p className="tier">Level 02 · Direction</p>
-  <div className="grid3">
+  <div className="grid4">
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Executive</p><h3>Executive Producer</h3><p>Owns the production end to end: vision, budget, and the standard the whole build holds to.</p></div></article>
     <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Production Director</h3><p>Runs the build: creative, scenic, staging, and technical production.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Operations</p><h3>Operations Director</h3><p>Runs the day-of: logistics, crew, safety, and compliance.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Hospitality</p><h3>Hospitality Director</h3><p>Owns guest experience, VIP, and hospitality operations.</p></div></article>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Operations</p><h3>Operations Director</h3><p>Runs the day-of: logistics, crew, safety, and compliance.</p><span className="go">View the listing →</span></div></Link>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Support</p><h3>Executive Assistant</h3><p>Keeps the command tier moving: schedules, travel, approvals, and client coordination.</p></div></article>
   </div>
-
+  <p className="tier">Level 02 · Direction</p>
+  <div className="grid4">
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Executive</p><h3>Senior Producer</h3><p>Leads the production day to day: scope, schedule, vendors, and the build.</p></div></article>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Production</p><h3>Technical Director</h3><p>Owns the technical design and delivery: systems, rigging, power, and signal.</p><span className="go">View the listing →</span></div></Link>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Operations</p><h3>Hospitality Director</h3><p>Owns guest experience, VIP, and hospitality operations.</p></div></article>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Support</p><h3>Project Manager</h3><p>Holds the plan: scope, schedule, deliverables, and owners.</p></div></article>
+  </div>
   <p className="tier">Level 03 · Management</p>
-  <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Project</p><h3>Project Manager</h3><p>Holds the plan: scope, schedule, deliverables, and owners.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Project</p><h3>Project Coordinator</h3><p>Keeps the plan moving: documents, comms, and tracking.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Logistics</p><h3>Logistics Manager</h3><p>Moves freight and crew: load-in and out, transport, and vendors.</p></div></article>
+  <div className="grid4">
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Executive</p><h3>Producer</h3><p>Carries a project from advance to settlement under the senior producer.</p></div></article>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Production</p><h3>Production Manager</h3><p>Runs the floor build and the technical package on site.</p><span className="go">View the listing →</span></div></Link>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Operations</p><h3>Logistics Manager</h3><p>Moves freight and crew: load-in and out, transport, and vendors.</p><span className="go">View the listing →</span></div></Link>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Support</p><h3>Project Coordinator</h3><p>Keeps the plan moving: documents, comms, and tracking.</p><span className="go">View the listing →</span></div></Link>
   </div>
-
-  <p className="tier">Level 04 · On Site</p>
-  <div className="grid3">
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Production</p><h3>Production Manager</h3><p>Runs the floor build and the technical package on site.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Crew</p><h3>Production Crew</h3><p>The hands that build, rig, run, and strike.</p></div></article>
-    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Support</p><h3>Production Assistant</h3><p>Supports every department, and learns the ropes.</p></div></article>
+  <p className="tier">Level 04 · Delivery</p>
+  <div className="grid4">
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Executive</p><h3>Associate Producer</h3><p>Supports the production across phases: coordination, tracking, and delivery.</p></div></article>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Production</p><h3>Production Crew</h3><p>The hands that build, rig, run, and strike.</p><span className="go">View the listing →</span></div></Link>
+    <article className="tm"><figure className="av grayscale"><img src="/assets/skull-bone.svg" alt="" width="48" height="48" loading="lazy"/></figure><div className="body"><p className="role">Operations</p><h3>Site Coordinator</h3><p>Holds the site day: check-ins, credentials, day sheets, and the radio.</p></div></article>
+    <Link href="/careers" className="tm is-open"><figure className="av"><span className="open-mark">Open Role</span></figure><div className="body"><p className="role">Support</p><h3>Production Assistant</h3><p>Supports every department, and learns the ropes.</p><span className="go">View the listing →</span></div></Link>
   </div>
 </section>
 
