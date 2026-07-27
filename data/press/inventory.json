@@ -1,0 +1,403 @@
+{
+  "$comment": "Ranked press inventory. Machine-written by scripts/press-scan.mjs, human-correctable. Anything with \"locked\": true survives a rescan untouched — that is how you keep a hand-written verdict. See README.md for the scoring model and the attribution tiers. Every url here returned a live response when it was added; `http` records what it returned.",
+  "generated": "2026-07-27",
+  "generatedBy": "manual seed (verified by hand; scanner not yet keyed)",
+  "schemaVersion": 1,
+  "summary": {
+    "entriesTracked": 9,
+    "entriesWithCoverage": 6,
+    "entriesWithNoCoverageFound": 3,
+    "itemsTotal": 27,
+    "itemsAttributedToGhxstship": 0,
+    "note": "No third-party article names GHXSTSHIP. Searches for the brand return only our own site. Everything below is coverage OF THE WORK, not of us — useful as proof the projects are real and notable, not as a citation that we delivered them. Read the attribution field before quoting anything."
+  },
+  "entries": {
+    "polymarket-free-grocery-store": {
+      "title": "The Polymarket",
+      "coverageStrength": "national",
+      "sentimentOverall": "mixed",
+      "note": "By far the most-covered entry, and the most careful to use. The activation itself drew national pickup, but a meaningful slice of it is politically framed or skeptical. Quote the service and the donation, not the crowd scenes.",
+      "items": [
+        {
+          "url": "https://www.newsweek.com/new-york-city-opens-first-free-grocery-store-11523713",
+          "outlet": "Newsweek",
+          "tier": "national",
+          "sentiment": "neutral-positive",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 74,
+          "why": "National outlet, straight reporting on the opening. Best single link for 'this was real and it was big'."
+        },
+        {
+          "url": "https://www.newsweek.com/new-york-city-gets-first-free-grocery-store-polymarket-11460498",
+          "outlet": "Newsweek",
+          "tier": "national",
+          "sentiment": "neutral-positive",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 71,
+          "why": "Announcement piece; pairs with the opening story as a before/after."
+        },
+        {
+          "url": "https://www.foxbusiness.com/markets/betting-company-polymarket-opens-nycs-first-free-grocery-store-downtown-manhattan",
+          "outlet": "Fox Business",
+          "tier": "national",
+          "sentiment": "neutral",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 68,
+          "why": "Business-desk framing; useful when the audience is a brand-side buyer rather than a fan."
+        },
+        {
+          "url": "https://www.fox5ny.com/news/polymarket-free-grocery-store-opens-nyc-heres-how-work",
+          "outlet": "FOX 5 New York",
+          "tier": "regional-broadcast",
+          "sentiment": "neutral-positive",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 61,
+          "why": "Local broadcast, service-piece tone. Has b-roll value."
+        },
+        {
+          "url": "https://www.vice.com/en/article/cryptocurrency-firm-launches-free-supermarket/",
+          "outlet": "Vice",
+          "tier": "national",
+          "sentiment": "neutral",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 58,
+          "why": "Explainer format, culture audience."
+        },
+        {
+          "url": "https://www.nycforfree.co/events/the-polymarket-free-grocery-store",
+          "outlet": "NYC for Free",
+          "tier": "listing",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 34,
+          "why": "Listing, not press. Confirms dates and location."
+        },
+        {
+          "url": "https://nyunews.com/culture/food/2026/02/18/polymarket-free-grocery-store/",
+          "outlet": "Washington Square News",
+          "tier": "student-press",
+          "sentiment": "mixed",
+          "attribution": "project-only",
+          "date": "2026-02-18",
+          "http": 200,
+          "score": 22,
+          "usable": false,
+          "why": "Explicitly frames the store as possibly-publicity-over-philanthropy. Logged so we know it exists and are not surprised by it. Do not cite."
+        },
+        {
+          "url": "https://www.foxnews.com/politics/strapped-new-yorkers-swarm-chaotic-mamdani-inspired-free-grocery-store-pop-up-were-in-pain",
+          "outlet": "Fox News",
+          "tier": "national",
+          "sentiment": "negative",
+          "attribution": "project-only",
+          "date": "2026-02",
+          "http": 200,
+          "score": 0,
+          "usable": false,
+          "why": "Politically framed, leads on chaos and hardship. Logged for awareness only. Never cite."
+        }
+      ]
+    },
+    "patron-cristalino-becky-g": {
+      "title": "PATRÓN Cristalino x Becky G",
+      "coverageStrength": "strong-trade-and-lifestyle",
+      "sentimentOverall": "positive",
+      "note": "The cleanest inventory of the set: uniformly positive, image-rich, and all of it about the event itself. Best entry to build a case study around.",
+      "items": [
+        {
+          "url": "https://wwd.com/pop-culture/culture-news/gallery/becky-g-bryan-hearns-custom-sequins-outfit-patron-photos-1236615778/",
+          "outlet": "WWD",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09",
+          "http": 200,
+          "score": 78,
+          "why": "WWD is the authority for this audience and it is a photo gallery — the strongest single asset in the whole inventory."
+        },
+        {
+          "url": "https://theknockturnal.com/becky-g-lights-up-stage/",
+          "outlet": "The Knockturnal",
+          "tier": "niche-lifestyle",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09",
+          "http": 200,
+          "score": 56,
+          "why": "On-the-night write-up with performance detail. Quotable."
+        },
+        {
+          "url": "https://www.hola.com/us/entertainment/20240916718613/becky-g-pays-tribute-to-selena-quintanilla-in-los-angeles/",
+          "outlet": "¡HOLA! US",
+          "tier": "national",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09-16",
+          "http": 200,
+          "score": 62,
+          "why": "Reaches the Latin-market audience the activation was built for."
+        },
+        {
+          "url": "https://loopmag.co/becky-g-gabito-ballesteros-more-celebrate-the-launch-of-patron-cristalino/",
+          "outlet": "Loop",
+          "tier": "niche-lifestyle",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09",
+          "http": 200,
+          "score": 48,
+          "why": "Covers the room and the guest list."
+        },
+        {
+          "url": "https://www.identifyla.com/thelatest/becky-g-patron-cristalino-launch",
+          "outlet": "identify LA",
+          "tier": "regional",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09",
+          "http": 200,
+          "score": 44,
+          "why": "Local LA pickup."
+        },
+        {
+          "url": "https://laguestlist.com/becky-g-gabito-ballesteros-tito-double-p-perform-at-patron-cristalino-launch/",
+          "outlet": "LA Guestlist",
+          "tier": "regional",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-09",
+          "http": 403,
+          "httpNote": "bot-blocked to automated clients; loads in a browser",
+          "score": 41,
+          "why": "Local LA pickup with the full performer list."
+        },
+        {
+          "url": "https://www.maxim.com/food-drink/patron-silver-becky-g-launch-limited-edition-tequila-bottle/",
+          "outlet": "Maxim",
+          "tier": "national",
+          "sentiment": "positive",
+          "attribution": "adjacent",
+          "date": "2024",
+          "http": 200,
+          "score": 30,
+          "why": "About the Rainwater Project limited-edition Silver bottle, not the Cristalino launch night. Same partner, different moment — verify before using it as proof of this project."
+        }
+      ]
+    },
+    "salvage-city-supper-club": {
+      "title": "Salvage City Supper Club",
+      "coverageStrength": "niche-plus-primary",
+      "sentimentOverall": "positive",
+      "note": "Thin on true press but strong on primary sources, and it is the one entry with a live case study to point the coverage at.",
+      "items": [
+        {
+          "url": "https://gayety.com/salvage-city-edc-immersive-dinner-show",
+          "outlet": "Gayety",
+          "tier": "niche-lifestyle",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2025",
+          "http": 200,
+          "score": 52,
+          "why": "The only real editorial feature on the experience. Describes the show, not just the ticket."
+        },
+        {
+          "url": "https://lasvegas.electricdaisycarnival.com/tickets/salvage-city/",
+          "outlet": "Insomniac / EDC Las Vegas",
+          "tier": "primary-partner",
+          "sentiment": "positive",
+          "attribution": "partner-primary",
+          "date": "2026",
+          "http": 200,
+          "score": 58,
+          "why": "The client's own page for the experience. Strongest available proof it is a sanctioned part of EDC."
+        },
+        {
+          "url": "https://whatnow.com/las-vegas/restaurants/salvage-city-supper-club-returns-to-edc-las-vegas/",
+          "outlet": "What Now Las Vegas",
+          "tier": "regional",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2025",
+          "http": 200,
+          "score": 45,
+          "why": "\"Returns to\" framing is useful: it establishes the thing ran more than once."
+        },
+        {
+          "url": "https://www.salvagecitysupperclub.com/",
+          "outlet": "Salvage City Supper Club",
+          "tier": "primary-project",
+          "sentiment": "positive",
+          "attribution": "project-primary",
+          "date": "current",
+          "http": 200,
+          "score": 40,
+          "why": "The project's own site. Source of truth for menu, chef and format."
+        },
+        {
+          "url": "https://www.yelp.com/biz/salvage-city-supper-club-las-vegas",
+          "outlet": "Yelp",
+          "tier": "reviews",
+          "sentiment": "unreviewed",
+          "attribution": "project-only",
+          "date": "current",
+          "http": 200,
+          "score": 18,
+          "usable": false,
+          "why": "Guest reviews, unvetted and mixed by nature. Monitor, do not cite."
+        }
+      ]
+    },
+    "heineken-turn-4-nightclub": {
+      "title": "Heineken Turn 4 Nightclub",
+      "coverageStrength": "trade",
+      "sentimentOverall": "positive",
+      "note": "The trade coverage is the valuable part here — BizBash is read by exactly the people who hire this work.",
+      "items": [
+        {
+          "url": "https://www.bizbash.com/sporting-events/40-adrenaline-filled-event-moments-from-2024-s-formula-1-las-vegas-grand-prix",
+          "outlet": "BizBash",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2024-11",
+          "http": 200,
+          "score": 76,
+          "why": "The single most on-target link in the inventory: an event-production trade rounding up the activations at this exact race."
+        },
+        {
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/what-to-do-las-vegas-f1-grand-prix-best-events-2024-1236062087/",
+          "outlet": "The Hollywood Reporter",
+          "tier": "national-trade",
+          "sentiment": "positive",
+          "attribution": "context-only",
+          "date": "2024-11",
+          "http": 200,
+          "score": 49,
+          "why": "Establishes the weekend's profile. Does not name the Turn 4 club — context, not proof."
+        },
+        {
+          "url": "https://www.f1lasvegasgp.com/2024/11/formula-1-heineken-silver-las-vegas-grand-prix-sets-new-standard-with-2024-race/",
+          "outlet": "Formula 1 Las Vegas Grand Prix",
+          "tier": "primary-partner",
+          "sentiment": "positive",
+          "attribution": "partner-primary",
+          "date": "2024-11",
+          "http": 475,
+          "httpNote": "WAF-blocked to automated clients; loads in a browser",
+          "score": 47,
+          "why": "Promoter's own wrap-up. Good for figures and official language."
+        }
+      ]
+    },
+    "red-bull-unforeseen-motel": {
+      "title": "Red Bull Unforeseen Motel",
+      "coverageStrength": "niche",
+      "sentimentOverall": "positive",
+      "note": "The press calls it Red Bull Unforeseen FULL MOON Motel. Worth deciding whether our card should match the name the coverage uses.",
+      "items": [
+        {
+          "url": "https://edmidentity.com/2025/10/31/red-bull-unforeseen-iii-points-festival-miami/",
+          "outlet": "EDM Identity",
+          "tier": "niche-vertical",
+          "sentiment": "positive",
+          "attribution": "project-only",
+          "date": "2025-10-31",
+          "http": 403,
+          "httpNote": "bot-blocked to automated clients; loads in a browser",
+          "score": 57,
+          "why": "A full feature on the activation — build, curation and intent, not just a set time. Credits III Points' David Sinopoli and creative director Veronica Gessa; we are not named."
+        },
+        {
+          "url": "https://www.miaminewtimes.com/music/iii-points-lineup-and-set-times-15491232/",
+          "outlet": "Miami New Times",
+          "tier": "regional-alt-weekly",
+          "sentiment": "neutral",
+          "attribution": "context-only",
+          "date": "2024-10",
+          "http": 200,
+          "score": 43,
+          "why": "Set times only. Confirms the Red Bull Unforeseen slot existed on the 2024 bill."
+        },
+        {
+          "url": "https://www.iiipoints.com/2024-lineup/",
+          "outlet": "III Points",
+          "tier": "primary-partner",
+          "sentiment": "neutral",
+          "attribution": "partner-primary",
+          "date": "2024",
+          "http": 200,
+          "score": 38,
+          "why": "Festival's own lineup page."
+        }
+      ]
+    },
+    "factory-town": {
+      "title": "Factory Town",
+      "coverageStrength": "venue-reference",
+      "sentimentOverall": "positive",
+      "note": "Plenty exists about the venue; none of it about who runs its site operations. Reference material for the venue's scale and history, not proof of our role.",
+      "items": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Factory_Town",
+          "outlet": "Wikipedia",
+          "tier": "reference",
+          "sentiment": "neutral",
+          "attribution": "context-only",
+          "date": "current",
+          "http": 200,
+          "score": 44,
+          "why": "History and ownership: the 1946 Dixie Bedding factory, operated by Link Miami Rebels alongside Club Space. Good for the seven-acre framing."
+        },
+        {
+          "url": "https://www.factorytown.com/",
+          "outlet": "Factory Town",
+          "tier": "primary-partner",
+          "sentiment": "positive",
+          "attribution": "partner-primary",
+          "date": "current",
+          "http": 200,
+          "score": 40,
+          "why": "The venue's own site."
+        },
+        {
+          "url": "https://grayarea.co/venues/factory-town-miami",
+          "outlet": "Gray Area",
+          "tier": "niche-vertical",
+          "sentiment": "positive",
+          "attribution": "context-only",
+          "date": "current",
+          "http": 200,
+          "score": 33,
+          "why": "Venue profile."
+        },
+        {
+          "url": "https://www.thehouseofrave.com/blogs/rave-gear/factory-town-guide",
+          "outlet": "House of Rave",
+          "tier": "blog",
+          "sentiment": "positive",
+          "attribution": "context-only",
+          "date": "2025",
+          "http": 200,
+          "score": 21,
+          "why": "Miami Music Week guide. Low authority; useful only for atmosphere."
+        }
+      ]
+    },
+    "l-acoustics-dj": { "title": "L-Acoustics DJ", "coverageStrength": "none-found", "sentimentOverall": null, "note": "No coverage found tying an L-Acoustics install at III Points to a named integrator. If the install is public, an L-Acoustics case study or a trade placement in Mix / ProSoundWeb / Live Design is the realistic first placement.", "items": [] },
+    "black-coffee-race-track": { "title": "Black Coffee at the Race Track", "coverageStrength": "none-found", "sentimentOverall": null, "note": "Nothing found. If this is a 2026 date that has not happened yet, re-run after it does.", "items": [] },
+    "fifa-world-cup-brazil-base-camp": { "title": "FIFA World Cup Brazil Base Camp", "coverageStrength": "none-found", "sentimentOverall": null, "note": "Nothing found tying a New Jersey Brazil base camp to a named hospitality or operations partner. High-visibility subject — worth a standing alert rather than a monthly sweep.", "items": [] }
+  }
+}

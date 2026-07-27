@@ -1,0 +1,93 @@
+name: Press scan
+
+# Three triggers, matching the three times the answer can change:
+#   - the 1st of each month, for coverage that appeared on its own
+#   - any push that touches the case studies, i.e. a new entry was added
+#   - manually, when something just ran and you want to catch the pickup
+on:
+  schedule:
+    - cron: "0 9 1 * *"
+  push:
+    branches: [main]
+    paths:
+      - "data/press/entries.json"
+      - "ui_kits/website/work/**"
+  workflow_dispatch:
+    inputs:
+      entry:
+        description: "Single entry slug to scan (blank = all)"
+        required: false
+        type: string
+
+concurrency:
+  group: press-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    # Without a key the scanner exits 2 and the run would fail every month
+    # for no reason, so the job simply does not start until one is set.
+    if: ${{ github.repository_owner != '' }}
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check for a search key
+        id: gate
+        env:
+          KEY: ${{ secrets.PRESS_SEARCH_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "PRESS_SEARCH_KEY is not set — skipping." >> "$GITHUB_STEP_SUMMARY"
+            echo "Add it under Settings → Secrets and variables → Actions." >> "$GITHUB_STEP_SUMMARY"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Scan
+        if: steps.gate.outputs.ok == 'true'
+        env:
+          PRESS_SEARCH_PROVIDER: ${{ vars.PRESS_SEARCH_PROVIDER || 'brave' }}
+          PRESS_SEARCH_KEY: ${{ secrets.PRESS_SEARCH_KEY }}
+          # Optional. Without it every new item lands as needsReview and a
+          # human tiers it; with it, each one gets read and classified.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node scripts/press-scan.mjs ${{ inputs.entry && format('--entry={0}', inputs.entry) || '' }} | tee scan.log
+          {
+            echo '### Press scan'
+            echo '```'
+            tail -40 scan.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # A PR, not a direct commit: new coverage is editorial input, and the
+      # sentiment call on anything the classifier is unsure about should be
+      # made by a person before it is quotable anywhere.
+      - name: Open a PR if anything changed
+        if: steps.gate.outputs.ok == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          add-paths: data/press/inventory.json
+          branch: press/scan-update
+          delete-branch: true
+          title: "Press scan: new coverage found"
+          commit-message: "Press scan: refresh data/press/inventory.json"
+          body: |
+            Automated sweep of `data/press/entries.json`.
+
+            Check before merging:
+            - anything with `"needsReview": true` needs an outlet tier and a
+              sentiment call from a person
+            - anything with `"usable": false` stays in the file for awareness
+              and must never be cited
+            - `"attribution": "named"` is the only tier that proves we did the
+              work; everything else proves only that the work happened
