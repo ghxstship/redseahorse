@@ -86,6 +86,14 @@ standalone. Do not invent variant chrome.
 - Global page components (never redefine per page): `.svc-card`, `.phases`
   9-stop strip, `.wcard`, `.close-cta`, `.cta-row`. Page CSS holds only
   genuine overrides.
+- **Breakpoint scale is closed: 1080 · 960 · 720 · 480.** 1080 = nav
+  collapses to the burger; 960 = two-col splits stack; 720 = grids halve;
+  480 = grids single-column and display headings compress. Do not invent
+  intermediate breakpoints — five pages still carry legacy 820/640/560
+  values that should migrate to the nearest scale step.
+- **Tap targets: 24×24 minimum** for anything not inline in a sentence
+  (WCAG 2.2 SC 2.5.8). A clickable chip must BE the anchor, not a span
+  wrapping one.
 - **One closing CTA per page.** The canonical closer is
   `<section class="band-dark close-cta">` with kicker + h2 + centered
   `.cta-row` of two `.btn-lg`. Never place another CTA section

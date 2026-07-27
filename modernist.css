@@ -301,7 +301,7 @@ a.phase:hover .nm { color: var(--color-accent-700); }
 a.phase:hover .dot { background: var(--color-accent-600); border-color: var(--color-accent-600); }
 @media (max-width: 720px) {
   .phases { flex-direction: column; gap: 10px; }
-  .phase { text-align: left; padding: 0 0 0 30px; }
+  .phase { text-align: left; padding: 0 0 0 30px; min-height: 24px; display: flex; flex-direction: column; justify-content: center; }
   .phase::before { top: 0; left: 9px; width: 2px; height: 100%; }
   /* the horizontal end-caps above out-specify .phase::before, so they must be
      restated vertically here or they paint half-width blocks down the column */
@@ -395,7 +395,11 @@ header.nav {
 .mob-menu a:hover { color: var(--color-accent-700); }
 
 @media (max-width: 1080px) {
-  .desk-nav { display: none; }
+  /* production chrome has a burger — collapse to it. The standalone source
+     previews in ui_kits/website/ do not, so there the links wrap instead of
+     disappearing and leaving the page with no navigation at all. */
+  .nav-inner:has(.burger) .desk-nav { display: none; }
+  .nav-inner:not(:has(.burger)) .desk-nav { flex-wrap: wrap; row-gap: 8px; padding-block: 10px; }
   .burger { display: inline-flex; margin-left: auto; }
 }
 

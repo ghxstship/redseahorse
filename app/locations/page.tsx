@@ -18,7 +18,7 @@ export default function Page() {
   .loc h2 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1; margin: 4px 0 2px; }
   .loc p { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0; flex: none; }
   .loc .area { font-size: 0.733rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin-top: auto; padding-top: 10px; flex: none; }
-  .loc .mail { font-size: 0.867rem; font-weight: 600; text-decoration: none; margin-top: 2px; }
+  .loc .mail { font-size: 0.867rem; font-weight: 600; text-decoration: none; margin-top: 2px; min-height: 24px; display: inline-flex; align-items: center; align-self: flex-start; }
 ` }} />
       
 

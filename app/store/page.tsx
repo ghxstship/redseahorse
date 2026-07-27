@@ -37,7 +37,7 @@ export default function Page() {
     <span className="tag tag-neutral">Sitewear</span>
     <span className="tag tag-neutral">Streetwear</span>
     <span className="tag tag-neutral">Performancewear</span>
-    <span className="tag tag-outline"><Link href="/contact" style={{color: 'inherit', textDecoration: 'none'}}>Wholesale &amp; custom crew kit</Link></span>
+    <Link href="/contact" className="tag tag-outline" style={{color: 'inherit', textDecoration: 'none', minHeight: '24px'}}>Wholesale &amp; custom crew kit</Link>
   </div>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
