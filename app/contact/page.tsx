@@ -72,7 +72,7 @@ export default function Page() {
     <details className="faq-item"><summary className="faq-q">What services do you provide?</summary><div className="faq-a">Four: Experiential Design &amp; Production, Venue &amp; Site Operations, Tour &amp; Talent Management, and Technology &amp; Systems Engineering. Engage one, or all four as one accountable partner.</div></details>
     <details className="faq-item"><summary className="faq-q">What kinds of projects do you take on?</summary><div className="faq-a">Festivals, concerts and tours, brand activations, immersive experiences, cruise ships, amusement parks, sporting events, and TV, film &amp; broadcast, from single-night shows to multi-weekend builds.</div></details>
     <details className="faq-item"><summary className="faq-q">Where do you operate?</summary><div className="faq-a">Nationwide, from eight locations. The headquarters is Miami, with regional offices in Los Angeles, Chicago, and New York City; satellite offices are Nashville, Denver, Las Vegas, and Phoenix. Someone local in the room, the same standard everywhere.</div></details>
-    <details className="faq-item"><summary className="faq-q">How do engagements run?</summary><div className="faq-a">Every engagement walks the same nine-phase XPMS 2.6 lifecycle: Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</div></details>
+    <details className="faq-item"><summary className="faq-q">How do engagements run?</summary><div className="faq-a">Every engagement runs the same nine-phase XPMS 2.6 lifecycle: Discover through Close. Every phase has deliverables and a name next to them, so you always know who owns what.</div></details>
   </div>
 </div></section>
 

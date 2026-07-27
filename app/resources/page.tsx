@@ -58,8 +58,8 @@ export default function Page() {
       <div className="bar"></div>
       <p className="role">The Process</p>
       <h2>The Course</h2>
-      <p>The nine-phase XPMS 2.6 production lifecycle every engagement walks, Discover through Close. Every phase has deliverables and a name next to them.</p>
-      <span className="more">Walk the course →</span>
+      <p>The nine-phase XPMS 2.6 production lifecycle every engagement runs, Discover through Close. Every phase has deliverables and a name next to them.</p>
+      <span className="more">Chart the course →</span>
     </Link>
     <Link href="/platforms" className="svc-card">
       <div className="bar"></div>

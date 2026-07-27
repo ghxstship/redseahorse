@@ -84,7 +84,7 @@ export default function Page() {
     <div className="phase done"><div className="dot">8</div><div className="nm">Amplify</div></div>
     <div className="phase done"><div className="dot">9</div><div className="nm">Close</div></div>
   </div>
-  <p style={{marginTop: '24px'}}><Link href="/course" className="btn btn-ghost">Walk the full course →</Link></p>
+  <p style={{marginTop: '24px'}}><Link href="/course" className="btn btn-ghost">Chart the full course →</Link></p>
 </section>
 
 <section className="band"><div className="wrap sec-pad">

@@ -132,10 +132,10 @@ export default function Page() {
 <section className="band-dark close-cta"><div className="wrap">
   <p className="kicker">Keep Learning</p>
   <h2>Learn the <span className="a">Ropes.</span></h2>
-  <p className="lede" style={{marginInline: 'auto'}}>We train the next generation of experiential producers on real builds. Walk the nine-phase course or join the crew.</p>
+  <p className="lede" style={{marginInline: 'auto'}}>We train the next generation of experiential producers on real builds. Chart the nine-phase course or join the crew.</p>
   <div className="cta-row" style={{marginTop: '22px'}}>
     <Link href="/careers" className="btn btn-primary btn-lg">Join the Crew</Link>
-    <Link href="/course" className="btn btn-secondary btn-lg">Walk the Course</Link>
+    <Link href="/course" className="btn btn-secondary btn-lg">Chart the Course</Link>
   </div>
 </div></section>
 

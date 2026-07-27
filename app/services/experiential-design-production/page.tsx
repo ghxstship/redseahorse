@@ -58,7 +58,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">The Process</p>
   <h2 className="sec-h2">Your Build, Nine Phases.</h2>
-  <p className="lede">Experiential design &amp; production walks all nine phases, from the first Discover call through Close-out and the final invoice. In Amplify, we lead the capture and coordinate content delivery, media, broadcast, and the post-event campaign, before the books close.</p>
+  <p className="lede">Experiential design &amp; production runs all nine phases, from the first Discover call through Close-out and the final invoice. In Amplify, we lead the capture and coordinate content delivery, media, broadcast, and the post-event campaign, before the books close.</p>
   <div className="phases">
     <div className="phase done"><div className="dot">1</div><div className="nm">Discover</div></div>
     <div className="phase done"><div className="dot">2</div><div className="nm">Design</div></div>
@@ -70,7 +70,7 @@ export default function Page() {
     <div className="phase done"><div className="dot">8</div><div className="nm">Amplify</div></div>
     <div className="phase done"><div className="dot">9</div><div className="nm">Close</div></div>
   </div>
-  <p style={{marginTop: '24px'}}><Link href="/course" className="btn btn-ghost">Walk the full course →</Link></p>
+  <p style={{marginTop: '24px'}}><Link href="/course" className="btn btn-ghost">Chart the full course →</Link></p>
 </div></section>
 
 <section className="wrap sec-pad">

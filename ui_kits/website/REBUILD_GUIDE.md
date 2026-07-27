@@ -167,6 +167,17 @@ standalone. Do not invent variant chrome.
 - No parentheses in copy. No emoji. Em-dash sparingly. Confident, plainspoken.
 - Premium register for cost language: "Complimentary", never "free", "no charge", or "no cost".
 - Nav/section labels are literal (Services, Work, Team), not nautical.
+- **Nautical language is allowed only when it also works on land.** The test
+  is whether the phrase carries meaning for someone who has never been on a
+  boat. "Chart the course" passes — charting a course is ordinary business
+  English. "Walk the course" is the wrong verb for The Course and was
+  replaced everywhere. Phrases that fail the test, and have all been removed:
+  "reached the bridge", "set the course", "prepare for the journey".
+  Literal industry terms are not metaphors and are fine: a cruise page says
+  *embarkation*, *sailing* and *dry-dock* because that is what the work is
+  called.
+- The Course is **charted**, never walked. A lifecycle or a set of phases is
+  **run**, not walked — "every engagement runs the same nine-phase lifecycle".
 - Keep every internal link pointing at a real page (see route list below).
   Relative `.html` hrefs — the generator rewrites them to routes.
 

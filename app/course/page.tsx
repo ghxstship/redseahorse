@@ -60,7 +60,7 @@ export default function Page() {
 
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Phase by Phase</p>
-  <h2 className="sec-h2">Every Build Walks the Same Course.</h2>
+  <h2 className="sec-h2">Every Build Charts the Same Course.</h2>
   <div style={{marginTop: '28px'}}>
     <article className="ph" id="phase-1">
       <div className="num">01</div>
