@@ -82,7 +82,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://wwd.com/pop-culture/culture-news/gallery/becky-g-bryan-hearns-custom-sequins-outfit-patron-photos-1236615778/" target="_blank" rel="noopener"><span className="row-title">Becky G Sparkles in Silver Sequins With Custom Look &amp; More Arrivals for Patrón Cristalino Launch</span><span className="row-sub">WWD</span><span className="row-sub">2024-09</span></a>
     <a className="row-line" href="https://www.hola.com/us/entertainment/20240916718613/becky-g-pays-tribute-to-selena-quintanilla-in-los-angeles/" target="_blank" rel="noopener"><span className="row-title">Becky G pays tribute to Selena Quintanilla in Los Angeles</span><span className="row-sub">¡HOLA! US</span><span className="row-sub">2024-09-16</span></a>

@@ -93,7 +93,7 @@ def press_block(s):
 <section class="band"><div class="wrap sec-pad">
   <p class="kicker">Press &amp; Media</p>
   <h2 class="sec-h2-sm">What Was Written.</h2>
-  <p class="lede" style="max-width:64ch;">Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p class="lede" style="max-width:64ch;">Independent coverage of the project — the public record of what was built.</p>
   <div class="press-rows">
 {chr(10).join(rows)}
   </div>
@@ -315,7 +315,7 @@ def press_page():
 <section class="wrap" style="padding-block:clamp(36px,5vw,64px) 0;">
   <p class="kicker">Press &amp; Media</p>
   <h1 class="page-h1">What Was Written.</h1>
-  <p class="lede">Independent coverage of the projects we have worked on — {total} articles, features and galleries, catalogued by project. These outlets wrote about the work rather than about us; we are not credited in them. They are here as the public record of what was built.</p>
+  <p class="lede">Independent coverage of the projects we have worked on — {total} articles, features and galleries, catalogued by project. The public record of what was built.</p>
   <hr class="hr" style="margin-top:clamp(24px,4vw,40px);">
 </section>
 {body}

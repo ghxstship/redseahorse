@@ -83,7 +83,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://www.newsweek.com/new-york-city-opens-first-free-grocery-store-11523713" target="_blank" rel="noopener"><span className="row-title">New York City opens first free grocery store</span><span className="row-sub">Newsweek</span><span className="row-sub">2026-02</span></a>
     <a className="row-line" href="https://www.newsweek.com/new-york-city-gets-first-free-grocery-store-polymarket-11460498" target="_blank" rel="noopener"><span className="row-title">New York City gets first free grocery store</span><span className="row-sub">Newsweek</span><span className="row-sub">2026-02</span></a>

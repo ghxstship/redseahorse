@@ -82,7 +82,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://worldredeye.com/factory-town/" target="_blank" rel="noopener"><span className="row-title">Factory Town — the World Red Eye archive</span><span className="row-sub">World Red Eye</span><span className="row-sub"></span></a>
     <a className="row-line" href="https://magneticmag.com/2026/04/miami-music-week-2026-recap/" target="_blank" rel="noopener"><span className="row-title">Miami Music Week 2026 Recap: Factory Town, WMC, Club Space + More</span><span className="row-sub">Magnetic Magazine</span><span className="row-sub">2026-04</span></a>

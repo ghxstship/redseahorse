@@ -81,7 +81,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://lasvegas.electricdaisycarnival.com/tickets/salvage-city/" target="_blank" rel="noopener"><span className="row-title">Salvage City Supper Club — EDC Las Vegas</span><span className="row-sub">Insomniac / EDC Las Vegas · primary source</span><span className="row-sub">2026</span></a>
     <a className="row-line" href="https://gayety.com/salvage-city-edc-immersive-dinner-show" target="_blank" rel="noopener"><span className="row-title">Salvage City: EDC&#x27;s Decadent Post-Apocalyptic Dinner Show</span><span className="row-sub">Gayety</span><span className="row-sub">2025</span></a>

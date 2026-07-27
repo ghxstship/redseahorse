@@ -82,7 +82,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://edmidentity.com/2025/10/31/red-bull-unforeseen-iii-points-festival-miami/" target="_blank" rel="noopener"><span className="row-title">Red Bull Unforeseen Put Miami&#x27;s Vibrant Dance Music Culture On Display At III Points Festival</span><span className="row-sub">EDM Identity</span><span className="row-sub">2025-10-31</span></a>
     <a className="row-line" href="https://worldredeye.com/2024/10/iii-points-2024/" target="_blank" rel="noopener"><span className="row-title">III Points 2024</span><span className="row-sub">World Red Eye</span><span className="row-sub">2024-10</span></a>

@@ -25,7 +25,7 @@ export default function Page() {
 <section className="wrap" style={{paddingBlock: 'clamp(36px,5vw,64px) 0'}}>
   <p className="kicker">Press &amp; Media</p>
   <h1 className="page-h1">What Was Written.</h1>
-  <p className="lede">Independent coverage of the projects we have worked on — 49 articles, features and galleries, catalogued by project. These outlets wrote about the work rather than about us; we are not credited in them. They are here as the public record of what was built.</p>
+  <p className="lede">Independent coverage of the projects we have worked on — 49 articles, features and galleries, catalogued by project. The public record of what was built.</p>
   <hr className="hr" style={{marginTop: 'clamp(24px,4vw,40px)'}}/>
 </section>
 

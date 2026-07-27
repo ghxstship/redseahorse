@@ -81,7 +81,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://www.bizbash.com/event-production-planning/miami-music-week-2026-inside-wmc-ultra-edm-marathons-and-standout-activations" target="_blank" rel="noopener"><span className="row-title">Inside Miami Music Week 2026</span><span className="row-sub">BizBash</span><span className="row-sub">2026</span></a>
     <a className="row-line" href="https://worldredeye.com/2026/03/miami-music-week-2026-black-coffee-carlita-at-the-racetrack/" target="_blank" rel="noopener"><span className="row-title">Miami Music Week 2026: Black Coffee &amp; Carlita at the Racetrack</span><span className="row-sub">World Red Eye</span><span className="row-sub">2026-03</span></a>

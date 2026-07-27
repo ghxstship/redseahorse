@@ -81,7 +81,7 @@ export default function Page() {
 <section className="band"><div className="wrap sec-pad">
   <p className="kicker">Press &amp; Media</p>
   <h2 className="sec-h2-sm">What Was Written.</h2>
-  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project. These outlets wrote about the work, not about us — we are not credited in them, and they are listed here as the public record of what was built.</p>
+  <p className="lede" style={{maxWidth: '64ch'}}>Independent coverage of the project — the public record of what was built.</p>
   <div className="press-rows">
     <a className="row-line" href="https://www.bizbash.com/sporting-events/40-adrenaline-filled-event-moments-from-2024-s-formula-1-las-vegas-grand-prix" target="_blank" rel="noopener"><span className="row-title">Formula 1 Las Vegas Grand Prix 2024&#x27;s Biggest Events and Activations</span><span className="row-sub">BizBash</span><span className="row-sub">2024-11</span></a>
     <a className="row-line" href="https://www.hollywoodreporter.com/lifestyle/lifestyle-news/what-to-do-las-vegas-f1-grand-prix-best-events-2024-1236062087/" target="_blank" rel="noopener"><span className="row-title">F1 Las Vegas Grand Prix 2024: Best Ticket Deals, Parties, Events</span><span className="row-sub">The Hollywood Reporter</span><span className="row-sub">2024-11</span></a>
