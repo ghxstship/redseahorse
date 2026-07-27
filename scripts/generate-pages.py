@@ -559,11 +559,16 @@ def parse_meta(head: str) -> dict[str, str]:
         attrs = dict(re.findall(r'(\w[\w:-]*)\s*=\s*"([^"]*)"', m.group(1)))
         name = attrs.get("name") or attrs.get("property")
         if name and "content" in attrs:
-            out[name.lower()] = attrs["content"]
+            # Unescape: the value goes into a TS string that Next re-escapes
+            # on output. Without this, "&amp;" in a source description ships
+            # as "&amp;amp;" and renders the entity literally in a search
+            # result. The title path has always unescaped; this one did not.
+            out[name.lower()] = html_lib.unescape(attrs["content"])
     return out
 
 
-def ts_metadata_object(title: str | None, description: str | None, canonical: str | None, keywords: str | None) -> str:
+def ts_metadata_object(title: str | None, description: str | None, canonical: str | None,
+                       keywords: str | None, og: dict[str, str] | None = None) -> str:
     parts: list[str] = []
     if title:
         parts.append(f"  title: {json.dumps(title)},")
@@ -574,6 +579,31 @@ def ts_metadata_object(title: str | None, description: str | None, canonical: st
         parts.append(f"  keywords: {json.dumps(kw)},")
     if canonical:
         parts.append(f"  alternates: {{ canonical: {json.dumps(canonical)} }},")
+    # A page that declares its own og:image gets its own social card; the rest
+    # inherit the branded default from the root layout. Both openGraph and
+    # twitter have to be set: Next does not copy one into the other once a
+    # page overrides either.
+    og = og or {}
+    # Next merges metadata SHALLOWLY: a page that sets openGraph replaces the
+    # layout's whole object, so siteName, type, locale and the default image
+    # all vanish unless they are restated here. Emit the complete object or
+    # none at all.
+    if og.get("og:title") or og.get("og:image"):
+        ogobj: dict[str, object] = {
+            "siteName": "GHXSTSHIP", "type": "website", "locale": "en_US",
+        }
+        if og.get("og:title"):
+            ogobj["title"] = og["og:title"]
+        image: dict[str, object] = {
+            "url": og.get("og:image", "/og/default.png"), "width": 1200, "height": 630,
+            "alt": og.get("og:image:alt", "The GHXSTSHIP flag, white on black"),
+        }
+        ogobj["images"] = [image]
+        parts.append(f"  openGraph: {json.dumps(ogobj)},")
+        parts.append("  twitter: " + json.dumps({
+            "card": "summary_large_image",
+            "images": [og.get("og:image", "/og/default.png")],
+        }) + ",")
     return "{\n" + "\n".join(parts) + "\n}"
 
 
@@ -667,7 +697,7 @@ def emit_page(src_rel: Path) -> None:
     lines: list[str] = imports[:]
     lines.append("")
     if export_metadata:
-        lines.append(f"export const metadata: Metadata = {ts_metadata_object(title, description, canonical, keywords)};")
+        lines.append(f"export const metadata: Metadata = {ts_metadata_object(title, description, canonical, keywords, meta)};")
         lines.append("")
     lines.append(f"export default function {component}() {{")
     lines.append("  return (")

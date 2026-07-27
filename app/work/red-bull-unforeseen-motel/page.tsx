@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Red Bull Unforeseen Motel, a motel-world brand environment built inside III Points at Mana Wynwood, Miami, 2024, programmed with Club Space residents and local artists rather than a logo on a stage.",
   keywords: ["Red Bull Unforeseen", "III Points Miami 2024", "Mana Wynwood", "brand activation case study", "festival brand environment", "Club Space residents"],
   alternates: { canonical: "https://ghxstship.tours/work/red-bull-unforeseen-motel" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1727842568394-f7b5f2db1e90?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Weathered neon MOTEL sign lit at dusk"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1727842568394-f7b5f2db1e90?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

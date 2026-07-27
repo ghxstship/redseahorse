@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Venue & Site Operations",
-  description: "GHXSTSHIP Venue &amp; Site Operations runs the room and the ground: logistics, staffing, safety, and day-of operations on the site, plus programming, bookings, facility and vendor operations in the venue.",
+  description: "GHXSTSHIP Venue & Site Operations runs the room and the ground: logistics, staffing, safety, and day-of operations on the site, plus programming, bookings, facility and vendor operations in the venue.",
   keywords: ["venue and site operations", "venue management", "site operations", "event logistics", "day-of operations", "show calling", "venue programming", "facility operations", "event staffing", "health and safety compliance"],
   alternates: { canonical: "https://ghxstship.tours/services/venue-site-operations" },
 };

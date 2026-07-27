@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Technology & Systems Engineering",
-  description: "GHXSTSHIP Technology &amp; Systems Engineering delivers the four in-house platforms. ATLVS the operator console, COMPVSS site and venue operations, GVTEWAY the public interface and marketplace, LEG3ND the knowledge layer, plus show technology, systems integration, and implementation and training.",
+  description: "GHXSTSHIP Technology & Systems Engineering delivers the four in-house platforms. ATLVS the operator console, COMPVSS site and venue operations, GVTEWAY the public interface and marketplace, LEG3ND the knowledge layer, plus show technology, systems integration, and implementation and training.",
   keywords: ["technology and systems engineering", "event technology platforms: ATLVS", "COMPVSS", "GVTEWAY", "LEG3ND", "show control", "systems integration", "immersive show technology", "production software engineering"],
   alternates: { canonical: "https://ghxstship.tours/services/technology-systems-engineering" },
 };

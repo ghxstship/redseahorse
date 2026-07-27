@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tour & Talent Management",
-  description: "GHXSTSHIP Tour &amp; Talent Management moves the show and the people in it: tour routing and advancing, artist relations and logistics, travel, crew rostering, per-city venue advance, settlement, and the run of show.",
+  description: "GHXSTSHIP Tour & Talent Management moves the show and the people in it: tour routing and advancing, artist relations and logistics, travel, crew rostering, per-city venue advance, settlement, and the run of show.",
   keywords: ["tour management company", "tour and talent management", "tour routing", "tour advancing", "artist logistics", "road manager", "crew rostering", "venue advance", "tour settlement", "run of show"],
   alternates: { canonical: "https://ghxstship.tours/services/tour-talent-management" },
 };

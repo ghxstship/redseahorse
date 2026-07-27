@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "PATR\u00d3N Cristalino x Becky G, the US launch of PATR\u00d3N Cristalino on Olvera Street, Los Angeles, September 2024, with Becky G, Gabito Ballesteros and Tito Double P.",
   keywords: ["PATRON Cristalino launch", "Becky G", "Olvera Street Los Angeles", "product launch event production", "spirits launch activation", "Musica Mexicana event"],
   alternates: { canonical: "https://ghxstship.tours/work/patron-cristalino-becky-g" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Spirit poured over ice in a rocks glass"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "L-Acoustics DJ | Case Study",
-  description: "L-Acoustics DJ at III Points, Miami, the first US festival deployment of L-Acoustics&#x27; spatial audio system for DJs, on the S3QU3NC3 stage at Mana Wynwood, October 2025.",
+  description: "L-Acoustics DJ at III Points, Miami, the first US festival deployment of L-Acoustics' spatial audio system for DJs, on the S3QU3NC3 stage at Mana Wynwood, October 2025.",
   keywords: ["L-Acoustics DJ", "spatial audio festival", "S3QU3NC3 stage", "III Points Miami", "immersive audio implementation", "L-ISA", "event technology implementation"],
   alternates: { canonical: "https://ghxstship.tours/work/l-acoustics-dj" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Audio control surface in a live sound control room"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

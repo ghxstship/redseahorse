@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "FIFA World Cup Brazil Base Camp, team base camp operations in New Jersey for the 2026 FIFA World Cup.",
   keywords: ["World Cup 2026 base camp", "team base camp operations", "New Jersey", "sporting event operations", "tournament hospitality production"],
   alternates: { canonical: "https://ghxstship.tours/work/fifa-world-cup-brazil-base-camp" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Football stadium pitch under floodlights"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

@@ -21,9 +21,16 @@ export const metadata: Metadata = {
     siteName: "GHXSTSHIP",
     type: "website",
     locale: "en_US",
+    images: [{ url: "/og/default.png", width: 1200, height: 630,
+               alt: "The GHXSTSHIP flag, white on black" }],
   },
   twitter: {
-    card: "summary",
+    // summary renders a grey box about the size of a tweet; the large card
+    // takes roughly four times the feed space and is the single biggest
+    // difference between a link that looks like a company and one that
+    // looks like a URL.
+    card: "summary_large_image",
+    images: ["/og/default.png"],
   },
 };
 

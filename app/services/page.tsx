@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "GHXSTSHIP runs four professional services as one team, experiential design &amp; production, venue &amp; site operations, tour &amp; talent management, and technology &amp; systems engineering, for festivals, tours, activations, and live events.",
+  description: "GHXSTSHIP runs four professional services as one team, experiential design & production, venue & site operations, tour & talent management, and technology & systems engineering, for festivals, tours, activations, and live events.",
   keywords: ["experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering", "event production services", "live event operations", "experiential production company"],
   alternates: { canonical: "https://ghxstship.tours/services" },
 };

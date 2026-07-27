@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Polymarket | Case Study",
-  description: "The Polymarket: New York&#x27;s first free grocery store, a fully stocked five-day retail activation in the West Village where every shopper filled a tote at no cost, alongside a $1M donation to Food Bank For New York City.",
+  description: "The Polymarket: New York's first free grocery store, a fully stocked five-day retail activation in the West Village where every shopper filled a tote at no cost, alongside a $1M donation to Food Bank For New York City.",
   keywords: ["Polymarket free grocery store", "West Village pop-up", "retail activation New York", "brand activation case study", "experiential retail production"],
   alternates: { canonical: "https://ghxstship.tours/work/polymarket-free-grocery-store" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Produce aisle stocked in a grocery store"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

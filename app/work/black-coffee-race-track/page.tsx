@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Black Coffee at the Race Track, the first dance music event ever staged at Hialeah Park, the 1922 racetrack, presented by Club Space for Miami Music Week 2026 with Carlita and Kaz James.",
   keywords: ["Hialeah Park racetrack event", "Black Coffee Miami", "Miami Music Week 2026", "Club Space", "open-air festival production", "racetrack event production"],
   alternates: { canonical: "https://ghxstship.tours/work/black-coffee-race-track" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Open-air crowd at a racetrack show at dusk"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

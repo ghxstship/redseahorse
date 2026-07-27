@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Factory Town, Hialeah, venue and site operations across a seven-acre open-air entertainment district built in a 1946 mattress factory, run season after season through Miami Music Week and Art Basel.",
   keywords: ["Factory Town Miami", "Hialeah venue operations", "warehouse venue production", "Miami Music Week", "Art Basel Miami events", "multi-stage site operations"],
   alternates: { canonical: "https://ghxstship.tours/work/factory-town" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Crowd in a warehouse venue under structural lighting"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

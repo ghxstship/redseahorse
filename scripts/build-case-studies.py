@@ -120,6 +120,8 @@ PAGE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{description}">
 <meta name="keywords" content="{keywords}">
+<meta property="og:image" content="{image}?w=1200&amp;h=630&amp;fit=crop&amp;crop=entropy&amp;q=80&amp;auto=format">
+<meta property="og:image:alt" content="{alt}">
 <link rel="canonical" href="{site}/work/{slug}">
 <title>{title} | Case Study | GHXSTSHIP</title>
 <link rel="stylesheet" href="../../../modernist.css">

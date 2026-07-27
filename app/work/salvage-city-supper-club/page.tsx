@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Salvage City Supper Club, a post-apocalyptic immersive dinner show inside EDC Las Vegas: a 60-minute, five-course seated experience with a dozen performers, run inside a working festival footprint.",
   keywords: ["premium hospitality case study", "festival hospitality production", "immersive dinner show", "EDC Las Vegas", "Nomads Land", "supper club production"],
   alternates: { canonical: "https://ghxstship.tours/work/salvage-city-supper-club" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Supper club table set for service"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Heineken Turn 4 Nightclub, a nightclub-format hospitality space built trackside at Turn 4 for the 2024 Formula 1 Las Vegas Grand Prix, running across the full race weekend.",
   keywords: ["F1 Las Vegas Grand Prix hospitality", "Turn 4 club", "Heineken activation", "motorsport hospitality production", "trackside nightclub build"],
   alternates: { canonical: "https://ghxstship.tours/work/heineken-turn-4-nightclub" },
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "images": [{"url": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format", "width": 1200, "height": 630, "alt": "Nightclub crowd under stage lighting"}]},
+  twitter: {"card": "summary_large_image", "images": ["https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=630&fit=crop&crop=entropy&q=80&auto=format"]},
 };
 
 export default function Page() {

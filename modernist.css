@@ -616,6 +616,21 @@ header.nav {
 .nav-cta { margin-left: 2px; }
 .burger { display: none; background: none; border: 1px solid var(--color-divider); }
 
+/* Header icon controls carry no box. SC 1.4.11 wants 3:1 on whatever
+   identifies a control; here that is the glyph itself, white on black at
+   about 19:1, so the boundary is decoration rather than affordance and a
+   black bar reads better without two outlined squares parked in it. The
+   36x36 hit area is unchanged, and because the border was doing some of the
+   work on hover, the wash goes from 7% to 14% to compensate. The outlined
+   .btn-secondary elsewhere keeps its border: on a text button the outline IS
+   the affordance. */
+header.nav .theme-toggle,
+header.nav .burger { border-color: transparent; background: transparent; }
+header.nav .theme-toggle:hover,
+header.nav .burger:hover { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+header.nav .theme-toggle:active,
+header.nav .burger:active { background: color-mix(in srgb, var(--color-text) 22%, transparent); }
+
 /* theme control, one button cycling system → light → dark. Only the glyph
    for the current state is in the box; the other two are display:none, so
    there is nothing to swap at runtime and nothing to flash before theme.js

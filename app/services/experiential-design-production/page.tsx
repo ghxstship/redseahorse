@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Experiential Design & Production",
-  description: "GHXSTSHIP Experiential Design &amp; Production builds branded environments end to end: concept, creative development, spatial design, scenic fabrication, technical production, talent, and an accountable producer.",
+  description: "GHXSTSHIP Experiential Design & Production builds branded environments end to end: concept, creative development, spatial design, scenic fabrication, technical production, talent, and an accountable producer.",
   keywords: ["experiential design and production", "experiential production company", "branded environments", "scenic fabrication", "spatial design", "show design", "technical production", "event production management"],
   alternates: { canonical: "https://ghxstship.tours/services/experiential-design-production" },
 };
