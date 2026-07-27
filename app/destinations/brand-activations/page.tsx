@@ -90,7 +90,7 @@ export default function Page() {
   <h2 className="sec-h2">Activations We've Built.</h2>
   <div style={{marginTop: '8px', borderTop: '1px solid var(--color-divider)'}}>
     <div className="row-line"><span className="row-title">The Polymarket: New York's First Free Grocery Store</span><span className="row-sub">Brand Activation · New York City</span><span className="row-sub">2026</span></div>
-    <div className="row-line"><span className="row-title">Red Bull Unforeseen Motel</span><span className="row-sub">Brand Activation · III Points · Miami</span><span className="row-sub">2023</span></div>
+    <div className="row-line"><span className="row-title">Red Bull Unforeseen Motel</span><span className="row-sub">Brand Activation · III Points · Miami</span><span className="row-sub">2024</span></div>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See all work →</Link></p>
 </section>

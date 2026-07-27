@@ -48,7 +48,7 @@ export default function Page() {
       <div className="field"><label htmlFor="ph">Phone</label><input className="input" id="ph" type="tel" autoComplete="tel" name="phone"/></div>
     </div>
     <div className="frow">
-      <div className="field"><label htmlFor="ro">Role</label><select className="input" id="ro" name="role"><option>Production Manager</option><option>Project Coordinator</option><option>Logistics Manager</option><option>Technical Director</option><option>Production Crew</option><option>Production Assistant</option><option>Operations Director</option><option>Hospitality Manager</option><option>General Application</option></select></div>
+      <div className="field"><label htmlFor="ro">Role</label><select className="input" id="ro" name="role"><option>Production Manager</option><option>Project Coordinator</option><option>Logistics Manager</option><option>Technical Director</option><option>Production Crew</option><option>Production Assistant</option><option>Operations Director</option><option>Hospitality Director</option><option>General Application</option></select></div>
       <div className="field"><label htmlFor="lo">Based In</label><input className="input" id="lo" type="text" placeholder="City, State" name="based-in"/></div>
     </div>
     <div className="field"><label htmlFor="pf">Portfolio / LinkedIn URL</label><input className="input" id="pf" type="url" placeholder="https://" name="portfolio-linkedin-url"/></div>

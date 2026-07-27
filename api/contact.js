@@ -70,8 +70,34 @@ var ASSET_BASE = SITE;
 // ~47% empty padding, so every nominal size rendered about half as large as it
 // read on paper. Cropping the frame is what actually fixes "the logo looks small".
 var LOGO = ASSET_BASE + "/assets/skull-bone-mark.png"; // PNG — most clients won't render SVG
-var LOGO_W = 44; // display size; native 480x368 keeps it crisp on retina
-var LOGO_H = 34;
+// The flag matches the cap height of the letters beside it, as it does in the
+// site chrome: Bebas Neue caps are 0.72em, so 30px wordmark → 22px mark, and
+// the width follows the 1.304:1 crop. Native 480x368 keeps it crisp on retina.
+var WORDMARK_PX = 30;
+var LOGO_H = Math.round(WORDMARK_PX * 0.72); // 22
+var LOGO_W = Math.round(LOGO_H * 1.3043); // 29
+
+/* Dark mode. Email has no custom properties and no color-mix, and every style
+   here is inline, so the only lever is a <style> block of !important overrides
+   keyed to a class on each element. Apple Mail, iOS Mail, Outlook.com and
+   Outlook for Mac honour prefers-color-scheme this way. Gmail does not — it
+   runs its own partial inversion on the light palette, which the black
+   masthead and the green button already survive. The values mirror the dark
+   tokens in modernist.css. */
+var EMAIL_CSS =
+  ":root{color-scheme:light dark;supported-color-schemes:light dark}" +
+  "@media (prefers-color-scheme:dark){" +
+  ".e-outer{background:#0b0b0b!important}" +
+  ".e-card{background:#131313!important;border-color:#3a3a3a!important}" +
+  ".e-ink{color:#f2f2f2!important}" +
+  ".e-copy{color:#d4d4d4!important}" +
+  ".e-muted{color:#a8a8a8!important}" +
+  ".e-faint{color:#8f8f8f!important}" +
+  ".e-accent{color:#2edb3a!important}" +
+  ".e-hair{border-color:#333!important}" +
+  ".e-foot{background:#1a1a1a!important;border-color:#3a3a3a!important}" +
+  ".e-step{background:#131313!important;border-color:#5a5a5a!important;color:#8f8f8f!important}" +
+  "}";
 
 /* The wordmark is always Bebas — in the masthead and in the footer signature.
    Everything around it stays in the body face, so only the mark switches. */
@@ -91,52 +117,63 @@ function esc(s) {
   });
 }
 
-/* Shared shell — Modernist in email-safe form: light ground, 600px column,
-   2px rules instead of shadows, radius 0 everywhere, uppercase headings. */
+/* Shared shell — Modernist in email-safe form: 600px column, 2px rules
+   instead of shadows, radius 0 everywhere, uppercase headings. The masthead
+   is black in both schemes, exactly as the site header is. */
 function shell(opts) {
   return (
     '<!DOCTYPE html><html><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-    '<meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light">' +
-    '<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></head>' +
-    '<body style="margin:0;padding:0;background:' + C.surface + ';">' +
+    '<meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark">' +
+    '<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">' +
+    "<style>" + EMAIL_CSS + "</style></head>" +
+    '<body class="e-outer" style="margin:0;padding:0;background:' + C.surface + ';">' +
     '<div style="display:none;max-height:0;overflow:hidden;opacity:0">' + esc(opts.preheader || "") + "</div>" +
-    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:' + C.surface + ';padding:24px 12px">' +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="e-outer" style="background:' + C.surface + ';padding:24px 12px">' +
     "<tr><td align=\"center\">" +
-    '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:100%;background:' + C.bg + ';border:1px solid ' + C.rule + '">' +
+    '<table role="presentation" width="600" cellpadding="0" cellspacing="0" class="e-card" style="width:600px;max-width:100%;background:' + C.bg + ';border:1px solid ' + C.rule + '">' +
 
     // masthead: solid black band carrying the white mark and wordmark. No tile —
-    // the mark is transparent, so the band itself is its ground.
+    // the mark is transparent, so the band itself is its ground. The flag is
+    // set to the cap height of the letters and both cells align on that box.
     '<tr><td style="background:' + C.ink + ';padding:20px 28px">' +
     '<table role="presentation" cellpadding="0" cellspacing="0"><tr>' +
-    '<td style="vertical-align:middle" width="' + LOGO_W + '">' +
+    '<td style="vertical-align:middle;line-height:' + LOGO_H + 'px" width="' + LOGO_W + '">' +
     '<img src="' + LOGO + '" width="' + LOGO_W + '" height="' + LOGO_H + '" alt="GHXSTSHIP" style="display:block;border:0"></td>' +
-    '<td style="padding-left:12px;font-family:' + FONT_WORDMARK + ';font-size:30px;line-height:34px;letter-spacing:2px;color:' + C.bg + ';text-transform:uppercase;vertical-align:middle">GHXSTSHIP</td>' +
+    '<td style="padding-left:12px;font-family:' + FONT_WORDMARK + ";font-size:" + WORDMARK_PX + "px;line-height:" + LOGO_H + 'px;letter-spacing:2px;color:' + C.bg + ';text-transform:uppercase;vertical-align:middle">GHXSTSHIP</td>' +
     "</tr></table></td></tr>" +
 
     // body
     '<tr><td style="padding:30px 28px 26px">' +
     (opts.eyebrow
-      ? '<p style="margin:0 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(opts.eyebrow) + "</p>"
+      ? '<p class="e-accent" style="margin:0 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(opts.eyebrow) + "</p>"
       : "") +
-    '<h1 style="margin:0 0 14px;font-family:' + FONT + ';font-weight:800;font-size:32px;line-height:1.02;letter-spacing:-0.5px;color:' + C.ink + ';text-transform:uppercase">' + opts.headline + "</h1>" +
+    '<h1 class="e-ink" style="margin:0 0 14px;font-family:' + FONT + ';font-weight:800;font-size:32px;line-height:1.02;letter-spacing:-0.5px;color:' + C.ink + ';text-transform:uppercase">' + opts.headline + "</h1>" +
     opts.body +
     "</td></tr>" +
 
     // footer
-    '<tr><td style="background:' + C.surface + ';padding:18px 28px;border-top:2px solid ' + C.rule + ';font-family:' + FONT + ';font-size:12px;line-height:1.6;color:' + C.faint + ';text-align:center">' +
+    '<tr><td class="e-foot e-faint" style="background:' + C.surface + ';padding:18px 28px;border-top:2px solid ' + C.rule + ';font-family:' + FONT + ';font-size:12px;line-height:1.6;color:' + C.faint + ';text-align:center">' +
     wordmark(opts.footer || "") + "</td></tr>" +
 
     "</table></td></tr></table></body></html>"
   );
 }
 
+/* Headline in the site's shape: plain lead, green tail. Green is the accent
+   text role, so it flips to base green in dark exactly like .kicker does. */
+function accentWord(lead, tail) {
+  return (
+    esc(lead) + ' <span class="e-accent" style="color:' + C.accentText + '">' + esc(tail) + "</span>"
+  );
+}
+
 function para(text) {
-  return '<p style="margin:0 0 16px;font-family:' + FONT + ';font-size:15px;line-height:1.65;color:' + C.body + '">' + text + "</p>";
+  return '<p class="e-copy" style="margin:0 0 16px;font-family:' + FONT + ';font-size:15px;line-height:1.65;color:' + C.body + '">' + text + "</p>";
 }
 
 function label(text) {
-  return '<p style="margin:22px 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(text) + "</p>";
+  return '<p class="e-accent" style="margin:22px 0 10px;font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:2px;color:' + C.accentText + ';text-transform:uppercase">' + esc(text) + "</p>";
 }
 
 /* Primary button — green fill, dark ink, square. Matches .btn-primary. */
@@ -160,11 +197,11 @@ function steps(rows) {
         return (
           "<tr>" +
           '<td style="padding:0 14px 14px 0;vertical-align:top;width:30px">' +
-          '<span style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:' + (done ? C.accent : C.bg) + ';border:2px solid ' + (done ? C.accent : C.rule) + ';font-family:' + FONT + ';font-size:12px;font-weight:800;color:' + (done ? C.onAccent : C.faint) + '">' + s[0] + "</span></td>" +
+          '<span' + (done ? "" : ' class="e-step"') + ' style="display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;background:' + (done ? C.accent : C.bg) + ';border:2px solid ' + (done ? C.accent : C.rule) + ';font-family:' + FONT + ';font-size:12px;font-weight:800;color:' + (done ? C.onAccent : C.faint) + '">' + s[0] + "</span></td>" +
           '<td style="padding:0 0 14px;vertical-align:top">' +
-          '<div style="font-family:' + FONT + ';font-weight:800;font-size:15px;color:' + C.ink + ';text-transform:uppercase">' + esc(s[1]) +
-          (done ? ' <span style="font-weight:600;font-size:11px;letter-spacing:1px;color:' + C.accentText + '">— you are here</span>' : "") + "</div>" +
-          '<div style="font-family:' + FONT + ';font-size:14px;line-height:1.55;color:' + C.muted + ';margin-top:3px">' + esc(s[2]) + "</div>" +
+          '<div class="e-ink" style="font-family:' + FONT + ';font-weight:800;font-size:15px;color:' + C.ink + ';text-transform:uppercase">' + esc(s[1]) +
+          (done ? ' <span class="e-accent" style="font-weight:600;font-size:11px;letter-spacing:1px;color:' + C.accentText + '">— you are here</span>' : "") + "</div>" +
+          '<div class="e-muted" style="font-family:' + FONT + ';font-size:14px;line-height:1.55;color:' + C.muted + ';margin-top:3px">' + esc(s[2]) + "</div>" +
           "</td></tr>"
         );
       })
@@ -185,7 +222,7 @@ function social() {
       ["TikTok", "https://www.tiktok.com/@ghxstship.tours"],
     ]
       .map(function (s) {
-        return '<a href="' + s[1] + '" style="font-family:' + FONT + ';font-weight:600;font-size:13px;color:' + C.accentText + ';text-decoration:none;margin-right:18px">' + s[0] + "</a>";
+        return '<a class="e-accent" href="' + s[1] + '" style="font-family:' + FONT + ';font-weight:600;font-size:13px;color:' + C.accentText + ';text-decoration:none;margin-right:18px">' + s[0] + "</a>";
       })
       .join("") +
     "</p>"
@@ -201,18 +238,18 @@ function notificationEmail(fields, name, email, opts) {
   var rows = fields
     .map(function (f) {
       return (
-        '<tr><td style="padding:9px 16px 9px 0;border-top:1px solid ' + C.hair + ';font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:1px;color:' + C.faint + ';text-transform:uppercase;vertical-align:top;white-space:nowrap">' + esc(f.label) + "</td>" +
-        '<td style="padding:9px 0;border-top:1px solid ' + C.hair + ';font-family:' + FONT + ';font-size:15px;line-height:1.55;color:' + C.ink + '">' + esc(f.value).replace(/\n/g, "<br>") + "</td></tr>"
+        '<tr><td class="e-hair e-faint" style="padding:9px 16px 9px 0;border-top:1px solid ' + C.hair + ';font-family:' + FONT + ';font-weight:600;font-size:12px;letter-spacing:1px;color:' + C.faint + ';text-transform:uppercase;vertical-align:top;white-space:nowrap">' + esc(f.label) + "</td>" +
+        '<td class="e-hair e-ink" style="padding:9px 0;border-top:1px solid ' + C.hair + ';font-family:' + FONT + ';font-size:15px;line-height:1.55;color:' + C.ink + '">' + esc(f.value).replace(/\n/g, "<br>") + "</td></tr>"
       );
     })
     .join("");
   var body =
     para(opts.intro || "A new inquiry came in through the site.") +
-    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 20px;border-bottom:1px solid ' + C.hair + '">' + rows + "</table>" +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="e-hair" style="margin:6px 0 20px;border-bottom:1px solid ' + C.hair + '">' + rows + "</table>" +
     button("mailto:" + esc(email), "Reply to " + (name ? esc(name.split(" ")[0]) : "sender"));
   return shell({
     eyebrow: opts.eyebrow || "New Inquiry",
-    headline: opts.headline || 'New <span style="color:' + C.accentText + '">Inquiry.</span>',
+    headline: opts.headline || accentWord("New", "Inquiry."),
     preheader: (name ? name + " — " : "") + (opts.preheader || "new inquiry from the site"),
     body: body,
     footer: FOOT_TAG + " · Sent from the site contact form",
@@ -223,47 +260,50 @@ function notificationEmail(fields, name, email, opts) {
 function applicationReceiptEmail(name, role) {
   var first = name ? name.split(" ")[0] : "there";
   var body =
-    para("Thanks, " + esc(first) + " — your application" + (role ? ' for <strong style="color:' + C.ink + '">' + esc(role) + "</strong>" : "") + " reached the team. A person reads every one, and if there is a fit we will be in touch.") +
+    para("Thanks, " + esc(first) + " — your application" + (role ? ' for <strong class="e-ink" style="color:' + C.ink + '">' + esc(role) + "</strong>" : "") + " is in. A person reads every one, and if there is a fit you will hear from us directly.") +
     label("How hiring works") +
     steps([
-      ["1", "A team lead reviews it", "A human on the team, not a filter, reads every application.", false],
-      ["2", "A short intro call", "If it is a fit, we set up a twenty-minute call to hear what you want to build.", false],
-      ["3", "A working conversation", "A practical session with the department lead. The real work, not trivia.", false],
-      ["4", "References and offer", "A quick reference check, then we get you started.", false],
+      ["1", "The Read", "A lead on the team reads it. Not a filter, not a keyword match — the person you would actually work for.", false],
+      ["2", "The Call", "Twenty minutes to hear what you want to build and to tell you honestly what the work is like.", false],
+      ["3", "The Working Session", "A practical conversation with the department lead about real problems from real builds. No trivia, no whiteboard theatre.", false],
+      ["4", "The Offer", "References, terms, a start date, and the name of the person you report to.", false],
     ]) +
-    para("No experience yet? We train the next generation. Apply to Production Assistant and learn on real builds.") +
+    para("No experience yet? We train the next generation. Apply to Production Assistant and learn it on a live build.") +
     button(SITE + "/team/", "Meet the Team") +
     social();
   return shell({
     eyebrow: "Application Received",
-    headline: 'Application <span style="color:' + C.accentText + '">Received.</span>',
-    preheader: "We got your application — here is how hiring works.",
+    headline: accentWord("Application", "Received."),
+    preheader: "Your application is with the team. Here is how hiring works.",
     body: body,
     footer: FOOT_TAG + " · You are receiving this because you applied",
   });
 }
 
 /* Inquiry auto-reply. The four steps are what actually happens next, matching
-   the process described on the contact page. */
+   the process described on the contact page. Named as the four things rather
+   than described as four actions — the site labels sections literally, and a
+   noun the reader can hold ("The Proposal") beats a verb phrase they have to
+   parse. The last step is the work itself, so it carries the work's name. */
 function receiptEmail(name) {
   var first = name ? name.split(" ")[0] : "there";
   var body =
-    para("Thanks, " + esc(first) + " — your brief is in. A producer will come back to you within one business day.") +
+    para("Thanks, " + esc(first) + " — your brief is in, and a producer has it now. You will hear back within one business day.") +
     label("What happens next") +
     steps([
-      ["1", "We read the brief", "Your brief is logged and with a producer now.", true],
-      ["2", "A consultation", "A real conversation about what you are building, who it is for, and when it has to happen.", false],
-      ["3", "Scope and proposal", "Services, schedule, budget, and the named lead who owns the build.", false],
-      ["4", "The nine phases", "Discover through Close on the XPMS 2.6 lifecycle, with a gate to clear at each.", false],
+      ["1", "The Brief", "What you just sent. It is logged, it is read by a person, and it is already with the producer who will own it.", true],
+      ["2", "The Consultation", "A real conversation, not a pitch. What you are building, who it is for, what it has to do, and the date it cannot move.", false],
+      ["3", "The Proposal", "Scope, schedule, budget, and the name of the lead who is accountable for the build. Written down, nothing implied.", false],
+      ["4", "The Production", "Nine gated phases, Discover through Close, each with deliverables to hand over and a gate to clear before the next one opens.", false],
     ]) +
-    para("In the meantime, see the work and the industries we build in:") +
+    para("Until then, the work speaks for itself:") +
     button(SITE + "/work/", "See the Work") +
-    '<p style="margin:4px 0 0"><a href="' + SITE + '/destinations/" style="font-family:' + FONT + ';font-weight:600;font-size:13px;color:' + C.accentText + ';text-decoration:none">Explore the industries</a></p>' +
+    '<p style="margin:4px 0 0"><a class="e-accent" href="' + SITE + '/destinations/" style="font-family:' + FONT + ';font-weight:600;font-size:13px;color:' + C.accentText + ';text-decoration:none">Explore the industries</a></p>' +
     social();
   return shell({
     eyebrow: "Brief Received",
-    headline: 'We Got Your <span style="color:' + C.accentText + '">Brief.</span>',
-    preheader: "We have your brief — here is what happens next.",
+    headline: accentWord("We Have Your", "Brief."),
+    preheader: "Your brief is with a producer. Here is what happens next.",
     body: body,
     footer: FOOT_TAG + " · You are receiving this because you contacted us",
   });
@@ -347,23 +387,45 @@ module.exports = async function handler(req, res) {
   var role = String(body.role || "").trim();
   var inquiryType = String(body["inquiry-type"] || "").trim();
 
+  /* Subjects. The two auto-replies are deliberately parallel and short — the
+     From line already says GHXSTSHIP, so repeating it in the subject spends
+     the only characters a phone will show. Plain, confident, no filler and no
+     travel metaphor: the reader wants to know we have the thing. The two
+     studio notifications stay front-loaded for scanning in a full inbox. */
   var notifSubject, notifOpts, receiptSubject, receiptText, receiptHtml;
   if (isApplication) {
     notifSubject = "New application — " + (role || "General") + " — " + (name || email);
     notifOpts = {
-      stamp: "New Application", eyebrow: "Crew Manifest",
-      headline: 'New <span style="color:' + C.brass + '">Application.</span>',
+      eyebrow: "New Application",
+      headline: accentWord("New", "Application."),
       preheader: "New application" + (role ? " for " + role : "") + " from " + (name || email),
       intro: "A new application just came in" + (role ? " for " + esc(role) : "") + ". Reply directly to reach " + esc(name || "them") + ".",
     };
-    receiptSubject = "Application received — GHXSTSHIP";
-    receiptText = "Thanks, " + (name || "there") + " — your application" + (role ? " for " + role : "") + " reached the crew. A human reads every one; if there's a fit we'll be in touch.";
+    receiptSubject = "We have your application.";
+    receiptText =
+      "Thanks, " + (name || "there") + " — your application" + (role ? " for " + role : "") + " is in.\n\n" +
+      "How hiring works:\n" +
+      "1. The Read — a lead on the team reads it. Not a filter, not a keyword match.\n" +
+      "2. The Call — twenty minutes to hear what you want to build.\n" +
+      "3. The Working Session — a practical conversation with the department lead.\n" +
+      "4. The Offer — references, terms, a start date, and who you report to.\n\n" +
+      "GHXSTSHIP · Venture Beyond.";
     receiptHtml = applicationReceiptEmail(name, role);
   } else {
-    notifSubject = "New " + (inquiryType || "inquiry").toLowerCase() + " — " + (name || email);
-    notifOpts = inquiryType ? { stamp: inquiryType, preheader: inquiryType + " from " + (name || email) } : {};
-    receiptSubject = "Prepare for the journey — we've logged your brief";
-    receiptText = "Thanks, " + (name || "there") + " — your vision reached the bridge. We've logged your brief; a producer will reach out within one business day to set the course.";
+    notifSubject = "New brief — " + (inquiryType ? inquiryType + " — " : "") + (name || email);
+    notifOpts = inquiryType
+      ? { eyebrow: inquiryType, preheader: inquiryType + " from " + (name || email) }
+      : {};
+    receiptSubject = "We have your brief.";
+    receiptText =
+      "Thanks, " + (name || "there") + " — your brief is in, and a producer has it now. " +
+      "You will hear back within one business day.\n\n" +
+      "What happens next:\n" +
+      "1. The Brief — logged, read by a person, already with the producer who will own it.\n" +
+      "2. The Consultation — a real conversation, not a pitch.\n" +
+      "3. The Proposal — scope, schedule, budget, and the lead accountable for the build.\n" +
+      "4. The Production — nine gated phases, Discover through Close.\n\n" +
+      "GHXSTSHIP · Venture Beyond.";
     receiptHtml = receiptEmail(name);
   }
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "../modernist.css";
 import Nav from "./_components/Nav";
 import Footer from "./_components/Footer";
@@ -26,12 +26,28 @@ export const metadata: Metadata = {
   },
 };
 
+/* The sticky header is black in every theme, so the browser chrome that abuts
+   it is too — one value, no per-scheme split. */
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  colorScheme: "light dark",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* Pin the stored theme before the body paints. Deferring this to
+            theme.js would flash the wrong ground on every load. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('gx-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}",
+          }}
+        />
+        <script src="/theme.js" defer />
         <script src="/site-form.js" defer />
       </head>
       <body>

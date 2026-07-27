@@ -36,22 +36,27 @@ Platforms are ATLVS, COMPVSS, GVTEWAY, LEG3ND (all four, always).
 
 ## Canonical chrome (copy VERBATIM, adjust ../ for subdirs)
 Header (root-level hrefs shown; from `services/`, `work/`, `careers/`,
-`resources/`, `destinations/` prefix `../`):
+`resources/`, `destinations/` prefix `../`). The brand mark is **inline SVG**,
+not an `<img>` — it takes `currentColor`, which is what lets one asset be
+white in the black header and page ink in the footer. Copy the `<svg
+class="brand-mark">` and the `.theme-toggle` button verbatim from
+`index.html`; they are long but they are literal.
 
 ```html
 <header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="index.html" aria-label="GHXSTSHIP home"><img src="../../assets/logo-ghostship-skull.svg" alt="" width="28" height="28"><b>GHXSTSHIP</b></a>
+  <a class="brand" href="index.html" aria-label="GHXSTSHIP home"><svg class="brand-mark" viewBox="40 54 120 92" fill="currentColor" aria-hidden="true" focusable="false"><path d="…"></path></svg><b>GHXSTSHIP</b></a>
   <nav class="desk-nav" aria-label="Primary">
-    <a href="services/experiential-design-production.html">Services</a>
-    <a href="destinations/index.html">Industries</a>
-    <a href="work/index.html">Work</a>
-    <a href="platforms.html">Platforms</a>
-    <a href="about.html">Company</a>
-    <a href="resources/index.html">Resources</a>
+    …links…
     <a class="btn btn-primary nav-cta" href="contact.html">Start a Project</a>
   </nav>
+  <button class="theme-toggle btn btn-icon btn-secondary" type="button" data-theme-toggle aria-label="Theme">…three glyphs…</button>
 </div></header>
 ```
+
+The theme control sits **outside** `.desk-nav` so collapsing the links at
+1080 does not take it with them. In the standalone previews it is inert —
+`public/theme.js` is only loaded by the production layout — but the page
+still follows the OS theme, which is the part that matters.
 
 Footer: copy the entire `<footer class="site-foot">…</footer>` block from
 index.html verbatim (again adjusting `../`). The generator DROPS both
@@ -120,6 +125,33 @@ standalone. Do not invent variant chrome.
 - Images: ALWAYS wrap in a `.grayscale` figure with a fixed `aspect-ratio`
   (via a small page class), `width`/`height` attrs, `loading="lazy"` below
   the fold. Keep existing Unsplash URLs from the old pages when porting.
+
+## Theme (light · dark · system) — hard rules
+- **Never write a colour literal.** Not a hex, not `rgb()`, not a named
+  colour. Every colour comes from a token, and a theme is nothing but a token
+  swap on `:root`. One literal in a page style block is one thing that will be
+  wrong in the other theme. (`#000` inside a `mask` gradient is fine — masks
+  carry alpha, not colour.)
+- Three states: no `data-theme` follows the OS, `data-theme="light"` and
+  `data-theme="dark"` pin it. `public/theme.js` writes that attribute and
+  nothing else; a blocking inline snippet in `app/layout.tsx` applies the
+  stored choice before first paint.
+- The dark token block is declared **twice** in `modernist.css` — once under
+  `prefers-color-scheme`, once under `[data-theme="dark"]`. CSS cannot share
+  one body between a media query and a selector. Change both or neither.
+- `header.nav`, `.band-dark` and `.nav-drawer-panel` are **black in every
+  theme**. They get there by re-declaring the ground tokens in their own
+  scope, so everything nested in them is correct with zero component
+  overrides. Never add a `.band-dark .thing { color: … }` rule — if something
+  looks wrong in there, the token is wrong.
+- A scope that re-declares `--color-text` **must also declare `color`**.
+  Descendants inherit the computed colour from `<body>`, not the declaration,
+  so `color: inherit` would otherwise keep page ink. This is exactly how the
+  desktop nav links once ended up black on black.
+- Images: wrap in `.grayscale`, which reads `--img-filter` — dark mode pulls
+  the whites back. Where a placeholder mark stands in for a photo, use
+  `.ph-mark` with a `<use href="#gx-flag">`, never a coloured asset.
+- Contrast is verified, not assumed. Both themes clear WCAG AA on every route.
 
 ## Accent discipline (hard rules)
 - Green is spent sparingly: primary button, kickers, stat figures, small

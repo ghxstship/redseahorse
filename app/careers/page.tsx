@@ -42,7 +42,7 @@ export default function Page() {
     <Link href="/careers/role" className="row-line"><span className="row-title">Production Crew</span><span className="row-sub">Production · Multiple</span><span className="row-sub">Freelance</span></Link>
     <Link href="/careers/role" className="row-line"><span className="row-title">Production Assistant</span><span className="row-sub">Production · Miami, FL</span><span className="row-sub">Internship</span></Link>
     <Link href="/careers/role" className="row-line"><span className="row-title">Operations Director</span><span className="row-sub">Operations · New York, NY</span><span className="row-sub">Full-time</span></Link>
-    <Link href="/careers/role" className="row-line"><span className="row-title">Hospitality Manager</span><span className="row-sub">Operations · Miami, FL</span><span className="row-sub">Full-time</span></Link>
+    <Link href="/careers/role" className="row-line"><span className="row-title">Hospitality Director</span><span className="row-sub">Operations · Miami, FL</span><span className="row-sub">Full-time</span></Link>
   </div>
   <p className="lede" style={{marginTop: '20px'}}>Don't see your role? <Link href="/careers/apply">Send a general application</Link>.</p>
 </section>

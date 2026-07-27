@@ -4,6 +4,7 @@
  * SVGs (no icon-font dependency). Styles live in modernist.css. */
 
 import Link from "next/link";
+import BrandMark from "./BrandMark";
 
 const SERVICES = [
   { href: "/services/experiential-design-production/", label: "Experiential Design & Production" },
@@ -71,7 +72,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div>
             <Link className="foot-brand-name" href="/">
-              <img src="/assets/logo-ghostship-skull.svg" alt="" width={26} height={26} />
+              <BrandMark />
               GHXSTSHIP
             </Link>
             <p className="foot-lede">Venture Beyond.</p>

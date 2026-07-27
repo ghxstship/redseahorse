@@ -9,6 +9,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import BrandMark from "./BrandMark";
+import ThemeToggle from "./ThemeToggle";
 
 type NavChild = { href: string; label: string };
 type NavLink = { href: string; label: string; children?: NavChild[] };
@@ -103,7 +105,7 @@ export default function Nav() {
       <header className="nav">
         <div className="wrap nav-inner">
           <Link className="brand" href="/" aria-label="GHXSTSHIP home">
-            <img src="/assets/logo-ghostship-skull.svg" alt="" width={28} height={28} />
+            <BrandMark />
             <b>GHXSTSHIP</b>
           </Link>
           <nav className="desk-nav" aria-label="Primary">
@@ -132,6 +134,7 @@ export default function Nav() {
               Start a Project
             </Link>
           </nav>
+          <ThemeToggle />
           <button
             className={"burger btn btn-icon" + (open ? " is-open" : "")}
             type="button"

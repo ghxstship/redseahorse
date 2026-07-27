@@ -89,9 +89,9 @@ export default function Page() {
   <h2 className="sec-h2">Experiences We've Built.</h2>
   <p className="lede">A few of the worlds we've designed, built, and run, from a sold-out immersive supper club to brand takeovers on the festival floor.</p>
   <div className="more-svc" style={{marginTop: '16px'}}>
+    <Link href="/work" className="row-line"><span className="row-title">The Polymarket: New York's First Free Grocery Store</span><span className="row-sub">Brand Activation · New York City</span><span className="arrow">→</span></Link>
     <Link href="/work/salvage-city-supper-club" className="row-line"><span className="row-title">Salvage City Supper Club</span><span className="row-sub">Premium Hospitality · EDC Las Vegas</span><span className="arrow">→</span></Link>
     <Link href="/work" className="row-line"><span className="row-title">Red Bull Unforeseen Motel</span><span className="row-sub">Brand Activation · Built &amp; Run</span><span className="arrow">→</span></Link>
-    <Link href="/work" className="row-line"><span className="row-title">The Polymarket: New York's First Free Grocery Store</span><span className="row-sub">Brand Activation · New York City</span><span className="arrow">→</span></Link>
   </div>
   <p style={{marginTop: '24px'}}><Link href="/work" className="btn btn-ghost">See the work →</Link></p>
 </div></section>

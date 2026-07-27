@@ -74,6 +74,121 @@
   --shadow-sm: 0 1px 2px color-mix(in srgb, #2a2a2a 14%, transparent);
   --shadow-md: 0 3px 10px color-mix(in srgb, #2a2a2a 16%, transparent);
   --shadow-lg: 0 12px 32px color-mix(in srgb, #2a2a2a 22%, transparent);
+
+  /* image treatment — a token so dark mode can pull the whites back without
+     any page knowing that grayscale figures are filtered at all */
+  --img-filter: grayscale(1) contrast(1.08);
+  /* edge between a fixed-black surface (header, closing band) and the page.
+     Invisible on a light page — black against #fcfcfc is its own edge — and a
+     faint hairline in dark mode, where black meets near-black. */
+  --color-chrome-edge: transparent;
+
+  color-scheme: light;
+}
+
+/* ── theme: light · dark · system ───────────────────────────────────────────
+   No page and no component hard-codes a colour — the whole surface reads
+   tokens — so a theme is nothing but a swap on :root. Three states: no
+   data-theme follows the OS, data-theme="light"/"dark" pins it. The dark
+   block is declared twice on purpose (system preference, then explicit
+   choice); CSS has no way to share one body between a media query and a
+   selector, so keep the two identical. public/theme.js writes the attribute
+   and nothing else.
+
+   Contrast, dark: text 16.7:1 on bg · accent-700 #2edb3a 10.1:1 on bg and
+   9.0:1 on surface · muted text at 55% ≈ 5.8:1 · faintest at 45% ≈ 4.6:1.
+   ────────────────────────────────────────────────────────────────────────── */
+:root[data-theme="light"] { color-scheme: light; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #131313;
+    --color-surface: #1e1e1e;
+    --color-text: #f2f2f2;
+    --color-divider: color-mix(in srgb, #ffffff 34%, transparent);
+    --color-neutral-100: #171717;
+    --color-neutral-200: #242424;
+    --color-neutral-300: #303030;
+    --color-neutral-400: #4a4a4a;
+    --color-neutral-500: #6e6e6e;
+    --color-neutral-600: #8a8a8a;
+    --color-neutral-700: #a8a8a8;
+    --color-neutral-800: #c9c9c9;
+    --color-neutral-900: #ededed;
+    /* the green flips role, not hue: on dark the base green IS the AA text
+       green (10.1:1), and the ramp steps lighter for hover instead of darker */
+    --color-accent-600: #67e274;
+    --color-accent-700: #2edb3a;
+    --color-accent-800: #67e274;
+    --color-accent-100: #14320f;
+    --shadow-sm: 0 1px 2px color-mix(in srgb, #000000 50%, transparent);
+    --shadow-md: 0 3px 10px color-mix(in srgb, #000000 55%, transparent);
+    --shadow-lg: 0 12px 32px color-mix(in srgb, #000000 60%, transparent);
+    --img-filter: grayscale(1) contrast(1.02) brightness(0.84);
+    --color-chrome-edge: color-mix(in srgb, #ffffff 20%, transparent);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #131313;
+  --color-surface: #1e1e1e;
+  --color-text: #f2f2f2;
+  --color-divider: color-mix(in srgb, #ffffff 34%, transparent);
+  --color-neutral-100: #171717;
+  --color-neutral-200: #242424;
+  --color-neutral-300: #303030;
+  --color-neutral-400: #4a4a4a;
+  --color-neutral-500: #6e6e6e;
+  --color-neutral-600: #8a8a8a;
+  --color-neutral-700: #a8a8a8;
+  --color-neutral-800: #c9c9c9;
+  --color-neutral-900: #ededed;
+  --color-accent-600: #67e274;
+  --color-accent-700: #2edb3a;
+  --color-accent-800: #67e274;
+  --color-accent-100: #14320f;
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #000000 50%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #000000 55%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #000000 60%, transparent);
+  --img-filter: grayscale(1) contrast(1.02) brightness(0.84);
+  --color-chrome-edge: color-mix(in srgb, #ffffff 20%, transparent);
+}
+
+/* ── fixed-black surfaces ──────────────────────────────────────────────────
+   The sticky header and the closing CTA band are black in every theme — the
+   mark is a white flag and the wordmark is white with it, and that lockup
+   should not change identity when the OS does. Re-declaring the ground tokens
+   inside the scope is what makes everything nested in them correct with zero
+   component overrides: dropdowns, drawers, inputs, rules and secondary
+   buttons all read the same names they always read.
+   ────────────────────────────────────────────────────────────────────────── */
+header.nav, .band-dark, .nav-drawer-panel, .on-dark {
+  color-scheme: dark;
+  /* `color` must be restated, not just the token: descendants inherit the
+     computed colour from <body>, which resolved --color-text before this
+     scope changed it. Without this line every `color: inherit` in the header
+     stays page-ink — black on black in light mode. */
+  color: var(--color-text);
+  --color-bg: #000000;
+  --color-surface: #141414;
+  --color-text: #fcfcfc;
+  --color-divider: color-mix(in srgb, #ffffff 32%, transparent);
+  --color-neutral-100: #141414;
+  --color-neutral-200: #1f1f1f;
+  --color-neutral-300: #2b2b2b;
+  --color-neutral-400: #454545;
+  --color-neutral-500: #6b6b6b;
+  --color-neutral-600: #8a8a8a;
+  --color-neutral-700: #a8a8a8;
+  --color-neutral-800: #cfcfcf;
+  --color-neutral-900: #ededed;
+  --color-accent-600: #67e274;
+  --color-accent-700: #2edb3a;
+  --color-accent-800: #67e274;
+  --color-accent-100: #14320f;
+  --img-filter: grayscale(1) contrast(1.02) brightness(0.84);
 }
 
 /* ── base ──────────────────────────────────────────────────────────────── */
@@ -111,7 +226,13 @@ figcaption { font-size: 0.733rem; margin-top: var(--space-1); color: color-mix(i
 :focus { outline: none; }
 :focus-visible { outline: 2px solid var(--color-accent-700); outline-offset: 2px; }
 ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
-.grayscale { filter: grayscale(1) contrast(1.08); }
+.grayscale { filter: var(--img-filter); }
+/* Placeholder flag, where a real photograph has not been shot yet: team
+   avatars and store product tiles. A <use> of the page's inline symbol, so it
+   inherits currentColor and reads as a watermark in either theme. It used to
+   be the near-white skull-bone.svg on a near-white tile — invisible in light
+   mode and only legible in dark. Width comes from the page; height follows. */
+.ph-mark { display: block; aspect-ratio: 120 / 92; color: var(--color-text); opacity: 0.3; }
 
 /* ── layout primitives ─────────────────────────────────────────────────── */
 /* container: fluid to 1440 so desktop isn't pinned to a tablet-scale column */
@@ -345,16 +466,24 @@ summary { cursor: pointer; }
    ═══════════════════════════════════════════════════════════════════════ */
 header.nav {
   position: sticky; top: 0; z-index: 60; background: var(--color-bg);
-  border-bottom: 2px solid var(--color-divider); display: block; padding: 0;
+  border-bottom: 2px solid var(--color-chrome-edge); display: block; padding: 0;
 }
 .nav-inner { display: flex; align-items: center; gap: 26px; min-height: 74px; }
 .nav .brand {
-  display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text);
+  display: flex; align-items: baseline; gap: 0.34em; text-decoration: none; color: var(--color-text);
   font-family: var(--font-wordmark); font-weight: 400;
   font-size: 1.8rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
 }
-.nav .brand b { font-weight: 400; transform: translateY(1px); }
-.nav .brand img { width: 28px; height: 28px; }
+.nav .brand b { font-weight: 400; }
+
+/* The flag matches the cap height of the letters beside it, everywhere the
+   lockup appears. Bebas Neue caps are 0.72em, so the mark is 0.72em tall and
+   takes its width from the 1.304:1 crop in skull-bone-mark.svg; the lockup
+   aligns on the baseline, which puts the flag's foot on the letters' foot and
+   its top on their cap line. Both scale with the wordmark automatically.
+   The mark is inline SVG filled with currentColor, so it is white in the
+   black header and takes the page ink in the footer, light or dark. */
+.brand-mark { height: 0.72em; width: auto; flex: none; }
 .desk-nav { display: flex; gap: 24px; align-items: center; margin-left: auto; }
 .desk-nav > a:not(.btn), .nav-item > a {
   font-family: var(--font-heading); font-weight: 600; font-size: 0.867rem;
@@ -383,6 +512,17 @@ header.nav {
 .nav-cta { margin-left: 2px; }
 .burger { display: none; background: none; border: 1px solid var(--color-divider); }
 
+/* theme control — one button cycling system → light → dark. Only the glyph
+   for the current state is in the box; the other two are display:none, so
+   there is nothing to swap at runtime and nothing to flash before theme.js
+   loads. Without the script (the standalone source previews) the button is
+   inert and the page simply follows the OS. */
+.theme-toggle { flex: none; }
+.theme-toggle svg { display: none; width: 18px; height: 18px; }
+:root:not([data-theme]) .theme-toggle .ti-auto,
+:root[data-theme="light"] .theme-toggle .ti-light,
+:root[data-theme="dark"] .theme-toggle .ti-dark { display: block; }
+
 /* mobile menu (React drawer in prod; hidden stack in standalone preview) */
 .mob-menu { display: none; border-top: 1px solid var(--color-divider); background: var(--color-bg); }
 .mob-menu.open { display: block; }
@@ -400,18 +540,24 @@ header.nav {
      disappearing and leaving the page with no navigation at all. */
   .nav-inner:has(.burger) .desk-nav { display: none; }
   .nav-inner:not(:has(.burger)) .desk-nav { flex-wrap: wrap; row-gap: 8px; padding-block: 10px; }
-  .burger { display: inline-flex; margin-left: auto; }
+  /* the theme control lives outside .desk-nav so collapsing the links never
+     takes it with them — it takes over the right-edge push from the burger */
+  .nav-inner:has(.burger) .theme-toggle { margin-left: auto; }
+  .burger { display: inline-flex; }
+  .nav-inner:not(:has(.burger)) .theme-toggle { margin-left: auto; }
 }
 
 /* footer */
 footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp(48px, 7vw, 96px); background: var(--color-bg); padding: 0; }
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: clamp(24px, 4vw, 56px); padding-block: clamp(36px, 5vw, 64px) clamp(28px, 4vw, 48px); }
-.foot-brand-name { font-family: var(--font-wordmark); font-weight: 400; font-size: 1.733rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
-.foot-brand-name img { width: 26px; height: 26px; }
+.foot-brand-name { font-family: var(--font-wordmark); font-weight: 400; font-size: 1.733rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text); text-decoration: none; display: inline-flex; align-items: baseline; gap: 0.34em; }
 /* footer brand lockup: wordmark + tagline, then the quiet location table */
 .foot-lede { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 1.067rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-text); margin: 12px 0 0; }
 .foot-loc { margin: 16px 0 0; }
-.foot-loc dt { font-size: 0.667rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 45%, transparent); margin-top: 11px; }
+/* 62%, not 45%: at 45% this label was 3.34:1 on the light ground and 4.17:1
+   on the dark one — under AA in both. It is still the quietest thing in the
+   footer, just legible now. */
+.foot-loc dt { font-size: 0.667rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 62%, transparent); margin-top: 11px; }
 .foot-loc dt:first-of-type { margin-top: 0; }
 .foot-loc dd { margin: 2px 0 0; font-size: 0.867rem; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 72%, transparent); }
 .foot-tag { font-size: 0.867rem; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 34ch; margin-top: 12px; }
@@ -431,13 +577,14 @@ footer.site-foot { border-top: 2px solid var(--color-divider); margin-top: clamp
 .sec-pad { padding-block: clamp(40px, 6vw, 80px); }
 .sec-pad-sm { padding-block: clamp(28px, 4vw, 48px); }
 .band { background: var(--color-surface); border-top: 2px solid var(--color-divider); border-bottom: 2px solid var(--color-divider); }
-.band-dark { background: var(--color-text); color: var(--color-bg); }
-.band-dark .kicker { color: var(--color-accent); }
-.band-dark .stat .v { color: var(--color-accent); }
-.band-dark .stat .k { color: color-mix(in srgb, var(--color-bg) 60%, transparent); }
-.band-dark .lede { color: color-mix(in srgb, var(--color-bg) 78%, transparent); }
-.band-dark .btn-secondary { border-color: color-mix(in srgb, var(--color-bg) 40%, transparent); color: var(--color-bg); }
-.band-dark .btn-secondary:hover { background: color-mix(in srgb, var(--color-bg) 10%, transparent); }
+/* the closing band carries no colour rules of its own — the token scope above
+   already flipped the ground under it, so .kicker, .stat, .lede and
+   .btn-secondary land correctly with no per-band overrides */
+.band-dark {
+  background: var(--color-bg); color: var(--color-text);
+  border-top: 2px solid var(--color-chrome-edge);
+  border-bottom: 2px solid var(--color-chrome-edge);
+}
 
 /* ── responsive defaults (match kit breakpoints) ───────────────────────── */
 @media (max-width: 1080px) {
