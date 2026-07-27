@@ -15,7 +15,7 @@ export default function Page() {
   .ap-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
   @media (max-width: 960px) { .ap-grid { grid-template-columns: 1fr; } }
   .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 560px) { .frow { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .frow { grid-template-columns: 1fr; } }
   .field { margin-bottom: 16px; }
   .field .hint { font-size: 0.733rem; letter-spacing: 0.04em; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 6px 0 0; }
   .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.867rem; line-height: 1.55; font-weight: 400; letter-spacing: 0; text-transform: none; color: color-mix(in srgb, var(--color-text) 72%, transparent); cursor: pointer; }

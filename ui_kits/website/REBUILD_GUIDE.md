@@ -89,8 +89,8 @@ standalone. Do not invent variant chrome.
 - **Breakpoint scale is closed: 1080 · 960 · 720 · 480.** 1080 = nav
   collapses to the burger; 960 = two-col splits stack; 720 = grids halve;
   480 = grids single-column and display headings compress. Do not invent
-  intermediate breakpoints — five pages still carry legacy 820/640/560
-  values that should migrate to the nearest scale step.
+  intermediate breakpoints — the scale is closed and the whole site now
+  uses only these values.
 - **Tap targets: 24×24 minimum** for anything not inline in a sentence
   (WCAG 2.2 SC 2.5.8). A clickable chip must BE the anchor, not a span
   wrapping one.

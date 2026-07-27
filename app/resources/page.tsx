@@ -15,7 +15,7 @@ export default function Page() {
   /* page-specific layout — components come from modernist.css */
   .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
   @media (max-width: 960px) { .res-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px) { .res-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .res-grid { grid-template-columns: 1fr; } }
   a.svc-card { text-decoration: none; color: inherit; }
   a.svc-card:hover { border-color: var(--color-text); }
 ` }} />

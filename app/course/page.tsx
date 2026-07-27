@@ -23,7 +23,7 @@ export default function Page() {
   .ph .exit { margin-top: 12px; font-size: 0.867rem; line-height: 1.6; max-width: 62ch; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
   .ph .exit b { font-size: 0.733rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text); }
   .ph .dels { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  @media (max-width: 640px) { .ph { grid-template-columns: 1fr; gap: 8px; } }
+  @media (max-width: 720px) { .ph { grid-template-columns: 1fr; gap: 8px; } }
 ` }} />
       
 

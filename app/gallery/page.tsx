@@ -15,7 +15,7 @@ export default function Page() {
   /* page-specific layout — components come from modernist.css */
   .masonry { columns: 3; column-gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
   @media (max-width: 960px) { .masonry { columns: 2; } }
-  @media (max-width: 560px) { .masonry { columns: 1; } }
+  @media (max-width: 480px) { .masonry { columns: 1; } }
   .tile { display: block; text-decoration: none; color: inherit; break-inside: avoid; margin: 0 0 16px; border: 1px solid var(--color-divider); background: var(--color-bg); }
   .tile figure { overflow: hidden; }
   .tile img { width: 100%; height: 100%; object-fit: cover; }
