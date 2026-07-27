@@ -7,6 +7,11 @@ dist/
 *.log
 next-env.d.ts
 
+# Extracted chat attachments. This is where the app unpacks uploaded archives;
+# the site consumes nothing from it, and letting it back in is how 221 files
+# of reference material ended up tracked in the first place.
+uploads/
+
 # Secrets — never commit. Set RESEND_API_KEY in Vercel env vars instead.
 .env
 .env.*
