@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "One accountable partner for live and experiential projects: design and production, venue and site operations, tour and talent management, and technology. Miami HQ.",
   keywords: ["experiential design and production", "venue and site operations", "tour and talent management", "technology and systems engineering", "event production company", "live event operations", "tour management company", "experiential technology"],
   alternates: { canonical: "https://ghxstship.tours/" },
-  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "title": "One accountable partner for live and experiential projects", "images": [{"url": "/og/default.png", "width": 1200, "height": 630, "alt": "The GHXSTSHIP flag, white on black"}]},
+  openGraph: {"siteName": "GHXSTSHIP", "type": "website", "locale": "en_US", "title": "GHXSTSHIP | Experiential Production | Miami, FL", "images": [{"url": "/og/default.png", "width": 1200, "height": 630, "alt": "The GHXSTSHIP flag, white on black"}]},
   twitter: {"card": "summary_large_image", "images": ["/og/default.png"]},
 };
 
